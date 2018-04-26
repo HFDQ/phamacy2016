@@ -1,0 +1,95 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#> 
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Common.dll" #>  
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Application.Core.dll" #>  
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Repository\\BugsBox.Pharmacy.Repository.dll" #>  
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.BusinessHandlers\\BugsBox.Pharmacy.BusinessHandlers.dll" #> 
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.InteropServices" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data.Entity" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #> 
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="BugsBox.Pharmacy.Models" #>   
+<#@ import namespace="BugsBox.Pharmacy.BusinessHandlers" #>   
+<#@ import namespace="BugsBox.Application.Core" #>   
+<#@ output extension=".cs" #>
+<# 
+List<Type> businessHandlerTypes=typeof(BusinessHandlerFactory)
+.GetProperties()
+.Where(p => p.CanRead && !p.CanWrite)
+.Select(p => p.PropertyType).ToList();
+#>
+using System;
+using System.Collections.Generic;
+using System.ServiceModel;
+using System.Xml.Linq;
+using BugsBox.Application.Core;
+using BugsBox.Pharmacy.Business.Models;
+using BugsBox.Pharmacy.Models;
+using BugsBox.Pharmacy.Service.Models; 
+using BugsBox.Pharmacy.Business.Models.QueryModelExtesion; 
+namespace BugsBox.Pharmacy.IServices
+{ 
+		/// <summary>
+		/// 系统wcf数据库服务接口IPharmacyDatabaseService
+		/// 所有数据库实体业务逻辑 
+		/// </summary>  
+	partial interface IPharmacyDatabaseService
+	{  
+		<#foreach(Type handlerType in businessHandlerTypes)
+		{
+			Type entityType=handlerType.BaseType.GetGenericArguments().FirstOrDefault();
+			var MethodInfos=handlerType.GetMethods().Where(m=>!m.IsConstructor&&m.DeclaringType==handlerType&&!m.IsVirtual);
+		#> 
+		#region <#=EntityExtensions.GetDescription(entityType)#>(<#=handlerType.Name#>)的自定义逻辑
+			<#foreach (MethodInfo methodInfo in MethodInfos){#>  
+			<#
+			Type returnType = methodInfo.ReturnType;
+				string parameterInfosString = string.Empty;
+				string parameterInfosCallString = string.Empty;
+				string returnTypeString = string.Empty;
+                ParameterInfo[] parameterInfos=methodInfo.GetParameters();
+                if (parameterInfos.Length>0)
+                {
+                    for (int i = 0; i < parameterInfos.Length; i++)
+                    {
+                        var parameterInfo = parameterInfos[i];
+						if(parameterInfo.IsOut)
+						{
+							parameterInfosString += "out "+EntityQueryFunctionBuilder.GetTypeCodeString(parameterInfo.ParameterType).Replace("&","") + " " + parameterInfo.Name;
+
+
+							parameterInfosCallString+= "out "+parameterInfo.Name;
+						}
+						else
+						{
+							parameterInfosString += EntityQueryFunctionBuilder.GetTypeCodeString(parameterInfo.ParameterType) + " " + parameterInfo.Name;
+							parameterInfosCallString+= parameterInfo.Name;
+						}
+                        if (i < parameterInfos.Length - 1)
+                        {
+                            parameterInfosString += ",";
+							parameterInfosCallString +=",";
+                        }
+                        else
+                        {
+                            parameterInfosString += ",";
+                        }
+                    }
+                }
+				returnTypeString=EntityQueryFunctionBuilder.GetTypeCodeString(returnType);				
+			#>
+[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		<#= returnTypeString #> <#= methodInfo.Name #>(<#= parameterInfosString #>out string message);
+			<#}#> 
+		#endregion 
+		<#}#>
+	}
+}

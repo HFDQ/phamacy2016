@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextBoxExtend</name>
+    </assembly>
+    <members>
+        <member name="T:BugsBox.Windows.Forms.ComboBoxExtend">
+            <summary>
+            文本框扩展控件
+            当文本框获得焦点时，文本框背景色为亮黄色；当文本框失去焦点时，背景色还原。
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.RichTextBoxExtend">
+            <summary>
+            文本框扩展控件
+            当文本框获得焦点时，文本框背景色为亮黄色；当文本框失去焦点时，背景色还原。
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.TextBoxExtend">
+            <summary>
+            文本框扩展控件
+            当文本框获得焦点时，文本框背景色为亮黄色；当文本框失去焦点时，背景色还原。
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.AutoCompleteEntry">
+            <summary>
+            Summary description for AutoCompleteDictionaryEntry.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.AutoCompleteEntryCollection">
+            <summary>
+            Summary description for AutoCompleteDictionary.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.AutoCompleteTextBox">
+            <summary>
+            Summary description for AutoCompleteTextBox.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.AutoCompleteTextBox.WinHook">
+            <summary>
+            This is the class we will use to hook mouse events.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.Input.AutoCompleteTextBox.WinHook.#ctor(BugsBox.Windows.Forms.Input.AutoCompleteTextBox)">
+            <summary>
+            Initializes a new instance of <see cref="T:BugsBox.Windows.Forms.Input.AutoCompleteTextBox.WinHook"/>
+            </summary>
+            <param name="tbox">The <see cref="T:BugsBox.Windows.Forms.Input.AutoCompleteTextBox"/> the hook is running for.</param>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.Input.AutoCompleteTextBox.WinHook.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Look for any kind of mouse activity that is not in the
+            text box itself, and hide the popup if it is visible.
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.AutoCompleteTrigger">
+            <summary>
+            Summary description for AutoCompleteTrigger.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.AutoCompleteTriggerCollection">
+            <summary>
+            Summary description for AutoCompleteTriggerCollection.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.CoolTextBox">
+            <summary>
+            Summary description for CoolTextBox.
+            </summary>
+        </member>
+        <member name="F:BugsBox.Windows.Forms.Input.CoolTextBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.Input.CoolTextBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.Input.CoolTextBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.IAutoCompleteEntry">
+            <summary>
+            Summary description for IAutoCompleteEntry.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.ShortCutTrigger">
+            <summary>
+            Summary description for TextLengthTrigger.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.TextLengthTrigger">
+            <summary>
+            Summary description for TextLengthTrigger.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Input.TriggerState">
+            <summary>
+            Summary description for TriggerState.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.Win32.Messages">
+            <summary>
+            Summary description for Messages.
+            </summary>
+        </member>
+        <member name="T:OutlookStyleControls.DataSourceRowComparer">
+            <summary>
+            because the DataSourceRow class is a wrapper class around the real data,
+            the compared object used to sort the real data is wrapped by this DataSourceRowComparer class.
+            </summary>
+        </member>
+        <member name="T:OutlookStyleControls.DataSourceRow">
+            <summary>
+            The DataSourceRow is a wrapper row class around the real bound data. This row is an abstraction
+            so different types of data can be encaptulated in this class, although for the OutlookGrid it will
+            simply look as one type of data. 
+            Note: this class does not implement all row wrappers optimally. It is merely used for demonstration purposes
+            </summary>
+        </member>
+        <member name="T:OutlookStyleControls.DataSourceManager">
+            <summary>
+            the DataDourceManager class is a wrapper class around different types of datasources.
+            in this case the DataSet, object list using reflection and the OutlooGridRow objects are supported
+            by this class. Basically the DataDourceManager works like a facade that provides access in a uniform
+            way to the datasource.
+            Note: this class is not implemented optimally. It is merely used for demonstration purposes
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.DataSourceManager.DataMember">
+            <summary>
+            datamember readonly for now
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.DataSourceManager.DataSource">
+            <summary>
+            datasource is readonly for now
+            </summary>
+        </member>
+        <member name="M:OutlookStyleControls.DataSourceManager.InitManager">
+            <summary>
+            this function initializes the DataSourceManager's internal state.
+            it will analyse the datasource taking the following source into account:
+            - DataSet
+            - Object array (must implement IList)
+            - OutlookGrid
+            </summary>
+        </member>
+        <member name="M:OutlookStyleControls.OutlookGrid.FillGrid(OutlookStyleControls.IOutlookGridGroup)">
+            <summary>
+            the fill grid method fills the grid with the data from the DataSourceManager
+            It takes the grouping style into account, if it is set.
+            </summary>
+        </member>
+        <member name="F:OutlookStyleControls.OutlookGrid.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:OutlookStyleControls.OutlookGrid.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:OutlookStyleControls.OutlookGrid.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OutlookStyleControls.IOutlookGridGroup">
+            <summary>
+            IOutlookGridGroup specifies the interface of any implementation of a OutlookGridGroup class
+            Each implementation of the IOutlookGridGroup can override the behaviour of the grouping mechanism
+            Notice also that ICloneable must be implemented. The OutlookGrid makes use of the Clone method of the Group
+            to create new Group clones. Related to this is the OutlookGrid.GroupTemplate property, which determines what
+            type of Group must be cloned.
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.IOutlookGridGroup.Text">
+            <summary>
+            the text to be displayed in the group row
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.IOutlookGridGroup.Value">
+            <summary>
+            determines the value of the current group. this is used to compare the group value
+            against each item's value.
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.IOutlookGridGroup.Collapsed">
+            <summary>
+            indicates whether the group is collapsed. If it is collapsed, it group items (rows) will
+            not be displayed.
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.IOutlookGridGroup.Column">
+            <summary>
+            specifies which column is associated with this group
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.IOutlookGridGroup.ItemCount">
+            <summary>
+            specifies the number of items that are part of the current group
+            this value is automatically filled each time the grid is re-drawn
+            e.g. after sorting the grid.
+            </summary>
+        </member>
+        <member name="P:OutlookStyleControls.IOutlookGridGroup.Height">
+            <summary>
+            specifies the default height of the group
+            each group is cloned from the GroupStyle object. Setting the height of this object
+            will also set the default height of each group.
+            </summary>
+        </member>
+        <member name="T:OutlookStyleControls.OutlookgGridDefaultGroup">
+            <summary>
+            each arrange/grouping class must implement the IOutlookGridGroup interface
+            the Group object will determine for each object in the grid, whether it
+            falls in or outside its group.
+            It uses the IComparable.CompareTo function to determine if the item is in the group.
+            </summary>
+        </member>
+        <member name="M:OutlookStyleControls.OutlookgGridDefaultGroup.CompareTo(System.Object)">
+            <summary>
+            this is a basic string comparison operation. 
+            all items are grouped and categorised based on their string-appearance.
+            </summary>
+            <param name="obj">the value in the related column of the item to compare to</param>
+            <returns></returns>
+        </member>
+        <member name="T:OutlookStyleControls.OutlookGridAlphabeticGroup">
+            <summary>
+            this group simple example of an implementation which groups the items into Alphabetic categories
+            based only on the first letter of each item
+            
+            for this we need to override the Value property (used for comparison)
+            and the CompareTo function.
+            Also the Clone method must be overriden, so this Group object can create clones of itself.
+            Cloning of the group is used by the OutlookGrid
+            </summary>
+        </member>
+        <member name="M:OutlookStyleControls.OutlookGridAlphabeticGroup.Clone">
+            <summary>
+            each group class must implement the clone function
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OutlookStyleControls.OutlookGridAlphabeticGroup.CompareTo(System.Object)">
+            <summary>
+            overide the CompareTo, so only the first character is compared, instead of the whole string
+            this will result in classifying each item into a letter of the Alphabet.
+            for instance, this is usefull when grouping names, they will be categorized under the letters A, B, C etc..
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:OutlookStyleControls.OutlookGridRow”忽略有格式错误的 XML 注释 -->
+        <member name="M:OutlookStyleControls.OutlookGridRow.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Boolean,System.Boolean)">
+            <summary>
+            the main difference with a Group row and a regular row is the way it is painted on the control.
+            the Paint method is therefore overridden and specifies how the Group row is painted.
+            Note: this method is not implemented optimally. It is merely used for demonstration purposes
+            </summary>
+            <param name="graphics"></param>
+            <param name="clipBounds"></param>
+            <param name="rowBounds"></param>
+            <param name="rowIndex"></param>
+            <param name="rowState"></param>
+            <param name="isFirstDisplayedRow"></param>
+            <param name="isLastVisibleRow"></param>
+        </member>
+        <member name="M:OutlookStyleControls.OutlookGridRow.IsIconHit(System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            this function checks if the user hit the expand (+) or collapse (-) icon.
+            if it was hit it will return true
+            </summary>
+            <param name="e">mouse click event arguments</param>
+            <returns>returns true if the icon was hit, false otherwise</returns>
+        </member>
+        <member name="T:OutlookStyleControls.OutlookGridRowComparer">
+            <summary>
+            the OutlookGridRowComparer object is used to sort unbound data in the OutlookGrid.
+            currently the comparison is only done for string values. 
+            therefore dates or numbers may not be sorted correctly.
+            Note: this class is not implemented optimally. It is merely used for demonstration purposes
+            </summary>
+        </member>
+    </members>
+</doc>

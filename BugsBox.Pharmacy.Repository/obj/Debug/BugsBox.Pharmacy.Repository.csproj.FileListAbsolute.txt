@@ -1,0 +1,16 @@
+D:\work\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.dll.config
+D:\work\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.XML
+D:\work\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.dll
+D:\work\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.pdb
+D:\work\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.dll
+D:\work\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.pdb
+D:\DQ\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.dll.config
+D:\DQ\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.XML
+D:\DQ\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.dll
+D:\DQ\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.pdb
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csprojResolveAssemblyReference.cache
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csproj.CoreCompileInputs.cache
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csproj.CopyComplete
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.dll
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.pdb

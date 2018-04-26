@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5ff9eacf-67f7-43c3-87e0-c603bc09d143" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="BugsBox.Application.Core" />
+      <ReferencedAssembly AssemblyName="BugsBox.Pharmacy.Business.Models" />
+      <ReferencedAssembly AssemblyName="BugsBox.Pharmacy.Models" />
+      <ReferencedAssembly AssemblyName="BugsBox.Pharmacy.Service.Models" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5570/PharmacyNotification" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PharmacyNotification.xsd" MetadataType="Schema" ID="9e178be4-29de-4dcf-adb8-aa4bf640b916" SourceId="1" SourceUrl="http://localhost:5570/PharmacyNotification?xsd=xsd1" />
+    <MetadataFile FileName="PharmacyNotification.wsdl" MetadataType="Wsdl" ID="e3753dec-92d3-4560-a2ea-c02a05cefd93" SourceId="1" SourceUrl="http://localhost:5570/PharmacyNotification?wsdl=wsdl0" />
+    <MetadataFile FileName="PharmacyNotification1.xsd" MetadataType="Schema" ID="f0b61fa4-118e-436c-9cf2-bd4b2bf99de2" SourceId="1" SourceUrl="http://localhost:5570/PharmacyNotification?xsd=xsd0" />
+    <MetadataFile FileName="PharmacyNotification.disco" MetadataType="Disco" ID="7c30ebe0-2bb5-416a-9fc2-0f02b3362fe3" SourceId="1" SourceUrl="http://localhost:5570/PharmacyNotification?disco" />
+    <MetadataFile FileName="PharmacyNotification2.xsd" MetadataType="Schema" ID="750bcebb-bda2-4f99-9ad3-6687f38b5e9c" SourceId="1" SourceUrl="http://localhost:5570/PharmacyNotification?xsd=xsd2" />
+    <MetadataFile FileName="PharmacyNotification3.xsd" MetadataType="Schema" ID="9d5d5391-304f-4b5f-94bb-88f61de8c540" SourceId="1" SourceUrl="http://localhost:5570/PharmacyNotification?xsd=xsd3" />
+    <MetadataFile FileName="PharmacyNotification1.wsdl" MetadataType="Wsdl" ID="8750c0ef-59f2-444c-b3f9-dd1c329f2977" SourceId="1" SourceUrl="http://localhost:5570/PharmacyNotification?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,2826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5560/PharmacyService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfWarehouse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Warehouse" nillable="true" type="tns:Warehouse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWarehouse" nillable="true" type="tns:ArrayOfWarehouse" />
+  <xs:complexType name="Warehouse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MnemonicCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ManagementCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RentCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RentYear" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RentStartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RentEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShadeArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NormalArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColdArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="YPFZArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="YHYSSArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PHCArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TYZQArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DWArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="WarehouseZones" nillable="true" type="tns:ArrayOfWarehouseZone" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Warehouse" nillable="true" type="tns:Warehouse" />
+  <xs:complexType name="Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeleteTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Entity" nillable="true" type="tns:Entity" />
+  <xs:complexType name="ArrayOfWarehouseZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WarehouseZone" nillable="true" type="tns:WarehouseZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWarehouseZone" nillable="true" type="tns:ArrayOfWarehouseZone" />
+  <xs:complexType name="WarehouseZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DrugInventoryRecords" nillable="true" type="tns:ArrayOfDrugInventoryRecord" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MnemonicCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="WarehouseZoneTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="WarehouseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Warehouse" nillable="true" type="tns:Warehouse" />
+          <xs:element minOccurs="0" name="DictionaryStorageTypeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="DictionaryStorageType" nillable="true" type="tns:DictionaryStorageType" />
+          <xs:element minOccurs="0" name="DictionaryMeasurementUnitId" type="ser:guid" />
+          <xs:element minOccurs="0" name="DictionaryMeasurementUnit" nillable="true" type="tns:DictionaryMeasurementUnit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WarehouseZone" nillable="true" type="tns:WarehouseZone" />
+  <xs:complexType name="ArrayOfDrugInventoryRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugInventoryRecord" nillable="true" type="tns:DrugInventoryRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugInventoryRecord" nillable="true" type="tns:ArrayOfDrugInventoryRecord" />
+  <xs:complexType name="DrugInventoryRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CanSaleNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrentInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="DismantingAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="DoubtDrugs" nillable="true" type="tns:ArrayOfDoubtDrug" />
+          <xs:element minOccurs="0" name="DrugInfo" nillable="true" type="tns:DrugInfo" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="DurgInventoryTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="InInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="OnRetailCount" type="xs:int" />
+          <xs:element minOccurs="0" name="OnSalesOrderCount" type="xs:int" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PurchaseInInventeryOrderDetailId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RetailCount" type="xs:int" />
+          <xs:element minOccurs="0" name="RetailDismantingAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesOrderDetails" nillable="true" type="tns:ArrayOfSalesOrderDetail" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WarehouseZone" nillable="true" type="tns:WarehouseZone" />
+          <xs:element minOccurs="0" name="WarehouseZoneId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsOutValidDate" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugInventoryRecord" nillable="true" type="tns:DrugInventoryRecord" />
+  <xs:complexType name="ArrayOfDoubtDrug">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DoubtDrug" nillable="true" type="tns:DoubtDrug" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDoubtDrug" nillable="true" type="tns:ArrayOfDoubtDrug" />
+  <xs:complexType name="DoubtDrug">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DrugInventoryRecord" nillable="true" type="tns:DrugInventoryRecord" />
+          <xs:element minOccurs="0" name="DrugInventoryRecordId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Handled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HandleDecription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DoubtDrug" nillable="true" type="tns:DoubtDrug" />
+  <xs:complexType name="DrugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ApprovalStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessScopeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionaryMeasurementUnitCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionaryPiecemealUnitCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionarySpecificationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionaryUserDefinedTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugCategoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugClinicalCategoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInventoryRecords" nillable="true" type="tns:ArrayOfDrugInventoryRecord" />
+          <xs:element minOccurs="0" name="DrugStorageTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactoryNameAbbreviation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlowID" type="ser:guid" />
+          <xs:element minOccurs="0" name="GoodsTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="IsApproval" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsImport" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMainMaintenance" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMedicalInsurance" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPrescription" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSpecialDrugCategory" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LicensePermissionNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LimitedLowPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LimitedUpPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LockRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LowSalePrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MaxInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="MedicalCategoryDetailCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MinInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="NationalSalePrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Package" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackageAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="PerformanceStandards" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermitDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PermitLicenseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermitOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PiecemealNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="PiecemealSpecification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProductEnglishName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductGeneralName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductOtherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseManageCategoryDetailCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchasePrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RetailPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalePrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SpecialDrugCategoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StandardCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TagPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="ValidRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WholeSalePrice" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugInfo" nillable="true" type="tns:DrugInfo" />
+  <xs:complexType name="ArrayOfSalesOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesOrderDetail" nillable="true" type="tns:SalesOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesOrderDetail" nillable="true" type="tns:ArrayOfSalesOrderDetail" />
+  <xs:complexType name="SalesOrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangeAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReturnAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesOrderID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OutInventoryDetailID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrder" nillable="true" type="tns:SalesOrder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SalesOrderDetail" nillable="true" type="tns:SalesOrderDetail" />
+  <xs:complexType name="SalesOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ApprovaledTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BalanceReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BalanceTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BalanceUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CancelReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CancelTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CancelUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderBalanceCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderCancelCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderDirectReturnCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderDirectReturnTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderDirectReturnUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderOutInventoryCheckCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderOutInventoryCheckTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderOutInventoryCheckUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderOutInventoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderOutInventoryTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderOutInventoryUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderReturnCancelCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnCancelReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnCancelTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderReturnCancelUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderReturnCheckCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnCheckTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderReturnCheckUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderReturnCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnInInventoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnInInventoryTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderReturnInInventoryUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderReturnReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderReturnUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="PickUpGoodTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesDrugTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="payMentMethodID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SaleDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllDelivered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllDeliverTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OutInventoryId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseUnitId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseUnit" nillable="true" type="tns:PurchaseUnit" />
+          <xs:element minOccurs="0" name="SalesOrderDetails" nillable="true" type="tns:ArrayOfSalesOrderDetail" />
+          <xs:element minOccurs="0" name="SalesOrderDeliverRecords" nillable="true" type="tns:ArrayOfSalesOrderDeliverRecord" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SalesOrder" nillable="true" type="tns:SalesOrder" />
+  <xs:complexType name="PurchaseUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseUnit">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FlowID" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceiveAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DistrictId" type="ser:guid" />
+          <xs:element minOccurs="0" name="District" nillable="true" type="tns:District" />
+          <xs:element minOccurs="0" name="SalesOrders" nillable="true" type="tns:ArrayOfSalesOrder" />
+          <xs:element minOccurs="0" name="PurchaseUnitDeliverers" nillable="true" type="tns:ArrayOfPurchaseUnitDeliverer" />
+          <xs:element minOccurs="0" name="PurchaseUnitBuyers" nillable="true" type="tns:ArrayOfPurchaseUnitBuyer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseUnit" nillable="true" type="tns:PurchaseUnit" />
+  <xs:complexType name="BaseUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="BusinessLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="BusinessLicenseeOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GMPLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="GMPLicenseOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GSPLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="GSPLicenseOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InstrumentsBusinessLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="InstrumentsBusinessLicenseOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InstrumentsProductionLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="InstrumentsProductionLicenseOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsBusinessLicenseOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsGMPLicenseOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsGSPLicenseOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsInstrumentsBusinessLicenseOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsInstrumentsProductionLicenseOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMedicineBusinessLicenseOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsMedicineProductionLicenseOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MedicineBusinessLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="MedicineBusinessLicenseOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MedicineProductionLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="MedicineProductionLicenseOutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UnitType" nillable="true" type="tns:UnitType" />
+          <xs:element minOccurs="0" name="UnitTypeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PinyinCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactTel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TaxRegistrationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRegistrationFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="AnnualFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="LastAnnualDte" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsApproval" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseUnit" nillable="true" type="tns:BaseUnit" />
+  <xs:complexType name="UnitType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PurchaseUnits" nillable="true" type="tns:ArrayOfPurchaseUnit" />
+          <xs:element minOccurs="0" name="SupplyUnits" nillable="true" type="tns:ArrayOfSupplyUnit" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnitType" nillable="true" type="tns:UnitType" />
+  <xs:complexType name="ArrayOfPurchaseUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseUnit" nillable="true" type="tns:PurchaseUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseUnit" nillable="true" type="tns:ArrayOfPurchaseUnit" />
+  <xs:complexType name="ArrayOfSupplyUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupplyUnit" nillable="true" type="tns:SupplyUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupplyUnit" nillable="true" type="tns:ArrayOfSupplyUnit" />
+  <xs:complexType name="SupplyUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseUnit">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FlowID" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsLock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsQualityAgreementOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="QualityAgreementFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="QualityAgreementOutdate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsAttorneyAattorneyOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AttorneyAattorneyFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="AttorneyAattorneyOutdate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SupplyProductClass" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QualityCharger" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SealFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="SingleTicketFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProofFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="BankAccountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bank" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SupplyUnitSalesmans" nillable="true" type="tns:ArrayOfSupplyUnitSalesman" />
+          <xs:element minOccurs="0" name="PurchaseAgreements" nillable="true" type="tns:ArrayOfPurchaseAgreement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SupplyUnit" nillable="true" type="tns:SupplyUnit" />
+  <xs:complexType name="ArrayOfSupplyUnitSalesman">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupplyUnitSalesman" nillable="true" type="tns:SupplyUnitSalesman" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSupplyUnitSalesman" nillable="true" type="tns:ArrayOfSupplyUnitSalesman" />
+  <xs:complexType name="SupplyUnitSalesman">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsOutDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IDCheckType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDCheckUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsChecked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AuthorizationDocId" type="ser:guid" />
+          <xs:element minOccurs="0" name="AuthorizedDistrictId" type="ser:guid" />
+          <xs:element minOccurs="0" name="BusinessScopes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SupplyUnitId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SupplyUnit" nillable="true" type="tns:SupplyUnit" />
+          <xs:element minOccurs="0" name="PurchaseAgreements" nillable="true" type="tns:ArrayOfPurchaseAgreement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SupplyUnitSalesman" nillable="true" type="tns:SupplyUnitSalesman" />
+  <xs:complexType name="ArrayOfPurchaseAgreement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseAgreement" nillable="true" type="tns:PurchaseAgreement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseAgreement" nillable="true" type="tns:ArrayOfPurchaseAgreement" />
+  <xs:complexType name="PurchaseAgreement">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseAgreement" nillable="true" type="tns:PurchaseAgreement" />
+  <xs:complexType name="District">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuthorizationDocs" nillable="true" type="tns:ArrayOfAuthorizationDoc" />
+          <xs:element minOccurs="0" name="PurchaseUnits" nillable="true" type="tns:ArrayOfPurchaseUnit" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="District" nillable="true" type="tns:District" />
+  <xs:complexType name="ArrayOfAuthorizationDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AuthorizationDoc" nillable="true" type="tns:AuthorizationDoc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAuthorizationDoc" nillable="true" type="tns:ArrayOfAuthorizationDoc" />
+  <xs:complexType name="AuthorizationDoc">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AuthorizationDoc" nillable="true" type="tns:AuthorizationDoc" />
+  <xs:complexType name="ArrayOfSalesOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesOrder" nillable="true" type="tns:SalesOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesOrder" nillable="true" type="tns:ArrayOfSalesOrder" />
+  <xs:complexType name="ArrayOfPurchaseUnitDeliverer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseUnitDeliverer" nillable="true" type="tns:PurchaseUnitDeliverer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseUnitDeliverer" nillable="true" type="tns:ArrayOfPurchaseUnitDeliverer" />
+  <xs:complexType name="PurchaseUnitDeliverer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDFile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PurchaseUnitId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseUnit" nillable="true" type="tns:PurchaseUnit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseUnitDeliverer" nillable="true" type="tns:PurchaseUnitDeliverer" />
+  <xs:complexType name="ArrayOfPurchaseUnitBuyer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseUnitBuyer" nillable="true" type="tns:PurchaseUnitBuyer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseUnitBuyer" nillable="true" type="tns:ArrayOfPurchaseUnitBuyer" />
+  <xs:complexType name="PurchaseUnitBuyer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PurchaseLimitTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDFile" type="ser:guid" />
+          <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IDCheckType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDCheckUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsChecked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PurchaseUnitId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseUnit" nillable="true" type="tns:PurchaseUnit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseUnitBuyer" nillable="true" type="tns:PurchaseUnitBuyer" />
+  <xs:complexType name="ArrayOfSalesOrderDeliverRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesOrderDeliverRecord" nillable="true" type="tns:SalesOrderDeliverRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesOrderDeliverRecord" nillable="true" type="tns:ArrayOfSalesOrderDeliverRecord" />
+  <xs:complexType name="SalesOrderDeliverRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SalesOrderDeliverDetails" nillable="true" type="tns:ArrayOfSalesOrderDeliverDetail" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ApprovaledTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="HadDelivered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DeliverTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OutInventoryId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrder" nillable="true" type="tns:SalesOrder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SalesOrderDeliverRecord" nillable="true" type="tns:SalesOrderDeliverRecord" />
+  <xs:complexType name="ArrayOfSalesOrderDeliverDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesOrderDeliverDetail" nillable="true" type="tns:SalesOrderDeliverDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesOrderDeliverDetail" nillable="true" type="tns:ArrayOfSalesOrderDeliverDetail" />
+  <xs:complexType name="SalesOrderDeliverDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SalesOrderDeliverRecord" nillable="true" type="tns:SalesOrderDeliverRecord" />
+          <xs:element minOccurs="0" name="SalesOrderDetailId" type="ser:guid" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SalesOrderDeliverDetail" nillable="true" type="tns:SalesOrderDeliverDetail" />
+  <xs:complexType name="DictionaryStorageType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WarehouseZone" nillable="true" type="tns:ArrayOfWarehouseZone" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DictionaryStorageType" nillable="true" type="tns:DictionaryStorageType" />
+  <xs:complexType name="DictionaryMeasurementUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DictionaryMeasurementUnit" nillable="true" type="tns:DictionaryMeasurementUnit" />
+  <xs:complexType name="WaringSet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SetValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WaringSet" nillable="true" type="tns:WaringSet" />
+  <xs:complexType name="ArrayOfWaringSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WaringSet" nillable="true" type="tns:WaringSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWaringSet" nillable="true" type="tns:ArrayOfWaringSet" />
+  <xs:complexType name="OutInventoryDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CanSaleNum" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SalesOrderDetailId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderDetailReturnId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderReturnId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOutInventory" nillable="true" type="tns:OutInventory" />
+          <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseZoneCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseZoneName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOutInventoryID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OutInventoryDetail" nillable="true" type="tns:OutInventoryDetail" />
+  <xs:complexType name="OutInventory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderOutInventoryCheckNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderOutInventoryCheckTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderOutInventoryCheckUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderOutInventoryTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderOutInventoryUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OutInventoryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OutInventoryNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutInventoryStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="OutInventoryTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="ReviewerId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderReturnID" type="ser:guid" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TotalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="storekeeperId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TotalMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SalesOutInventoryDetails" nillable="true" type="tns:ArrayOfOutInventoryDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OutInventory" nillable="true" type="tns:OutInventory" />
+  <xs:complexType name="ArrayOfOutInventoryDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutInventoryDetail" nillable="true" type="tns:OutInventoryDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutInventoryDetail" nillable="true" type="tns:ArrayOfOutInventoryDetail" />
+  <xs:complexType name="Store">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Head" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreTypeValue" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Store" nillable="true" type="tns:Store" />
+  <xs:complexType name="ArrayOfStore">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Store" nillable="true" type="tns:Store" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStore" nillable="true" type="tns:ArrayOfStore" />
+  <xs:complexType name="TaxRate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TaxRate" nillable="true" type="tns:TaxRate" />
+  <xs:complexType name="ArrayOfTaxRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxRate" nillable="true" type="tns:TaxRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaxRate" nillable="true" type="tns:ArrayOfTaxRate" />
+  <xs:complexType name="ArrayOfUnitType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnitType" nillable="true" type="tns:UnitType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnitType" nillable="true" type="tns:ArrayOfUnitType" />
+  <xs:complexType name="UploadRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UploadRecord" nillable="true" type="tns:UploadRecord" />
+  <xs:complexType name="ArrayOfUploadRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UploadRecord" nillable="true" type="tns:UploadRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUploadRecord" nillable="true" type="tns:ArrayOfUploadRecord" />
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pwd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="EmployeeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Employee" nillable="true" type="tns:Employee" />
+          <xs:element minOccurs="0" name="RoleWithUser" nillable="true" type="tns:ArrayOfRoleWithUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Employee">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pinyin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdentityNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Education" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Duty" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BirthDay" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Specility" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmployStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="OutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PharmacistsTitleTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PharmacistsQualificationValue" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="DepartmentId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Department" nillable="true" type="tns:Department" />
+          <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Employee" nillable="true" type="tns:Employee" />
+  <xs:complexType name="Department">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="DepartmentId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Employees" nillable="true" type="tns:ArrayOfEmployee" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Department" nillable="true" type="tns:Department" />
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployee" nillable="true" type="tns:ArrayOfEmployee" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="ArrayOfRoleWithUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleWithUser" nillable="true" type="tns:RoleWithUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleWithUser" nillable="true" type="tns:ArrayOfRoleWithUser" />
+  <xs:complexType name="RoleWithUser">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RoleId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="tns:Role" />
+          <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleWithUser" nillable="true" type="tns:RoleWithUser" />
+  <xs:complexType name="Role">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RoleWithUsers" nillable="true" type="tns:ArrayOfRoleWithUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="UserLog">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserLog" nillable="true" type="tns:UserLog" />
+  <xs:complexType name="ArrayOfUserLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserLog" nillable="true" type="tns:UserLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserLog" nillable="true" type="tns:ArrayOfUserLog" />
+  <xs:complexType name="Vehicle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VehicleCategoryValue" type="xs:int" />
+          <xs:element minOccurs="0" name="Cubage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LicensePlate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rule" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Other" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Driver" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsOutCheck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Vehicle" nillable="true" type="tns:Vehicle" />
+  <xs:complexType name="ArrayOfVehicle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vehicle" nillable="true" type="tns:Vehicle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicle" nillable="true" type="tns:ArrayOfVehicle" />
+  <xs:complexType name="SalesOrderReturn">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsReissue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrderReturnCancelCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnCancelReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnCancelTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderReturnCancelUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderReturnCheckCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnCheckTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderReturnCheckUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderReturnCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnInInventoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnInInventoryTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderReturnInInventoryUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderReturnReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderReturnStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderReturnTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OutInventoryID" type="ser:guid" />
+          <xs:element minOccurs="0" name="QualityMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QualityUpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="QualityUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SellerID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SellerMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellerUpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TradeMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TradeUpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TradeUserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OutInventory" nillable="true" type="tns:OutInventory" />
+          <xs:element minOccurs="0" name="SalesOrder" nillable="true" type="tns:SalesOrder" />
+          <xs:element minOccurs="0" name="SalesOrderReturnDetails" nillable="true" type="tns:ArrayOfSalesOrderReturnDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SalesOrderReturn" nillable="true" type="tns:SalesOrderReturn" />
+  <xs:complexType name="ArrayOfSalesOrderReturnDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesOrderReturnDetail" nillable="true" type="tns:SalesOrderReturnDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesOrderReturnDetail" nillable="true" type="tns:ArrayOfSalesOrderReturnDetail" />
+  <xs:complexType name="SalesOrderReturnDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CanInAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="CannotInAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="IsReissue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderReturnID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReissueAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="ReturnAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="ReturnHandledMethodMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReturnHandledMethodValue" type="xs:int" />
+          <xs:element minOccurs="0" name="ReturnReasonMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReturnReasonValue" type="xs:int" />
+          <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OutInventoryDetailID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SalesOrderDetailID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SalesOrderReturnDetail" nillable="true" type="tns:SalesOrderReturnDetail" />
+  <xs:complexType name="ArrayOfSalesOrderReturn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesOrderReturn" nillable="true" type="tns:SalesOrderReturn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesOrderReturn" nillable="true" type="tns:ArrayOfSalesOrderReturn" />
+  <xs:complexType name="ArrayOfOutInventory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutInventory" nillable="true" type="tns:OutInventory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOutInventory" nillable="true" type="tns:ArrayOfOutInventory" />
+  <xs:complexType name="SetSpeicalDrugRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DrugInventoryId" type="ser:guid" />
+          <xs:element minOccurs="0" name="MaintainDuetime" type="xs:int" />
+          <xs:element minOccurs="0" name="MaintainEmphasis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSpeicalDrugRecord" nillable="true" type="tns:SetSpeicalDrugRecord" />
+  <xs:complexType name="ArrayOfSetSpeicalDrugRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SetSpeicalDrugRecord" nillable="true" type="tns:SetSpeicalDrugRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSetSpeicalDrugRecord" nillable="true" type="tns:ArrayOfSetSpeicalDrugRecord" />
+  <xs:complexType name="SpecialDrugCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpecialDrugCategory" nillable="true" type="tns:SpecialDrugCategory" />
+  <xs:complexType name="ArrayOfSpecialDrugCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialDrugCategory" nillable="true" type="tns:SpecialDrugCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialDrugCategory" nillable="true" type="tns:ArrayOfSpecialDrugCategory" />
+  <xs:complexType name="PurchaseUnitType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseUnitType" nillable="true" type="tns:PurchaseUnitType" />
+  <xs:complexType name="ArrayOfPurchaseUnitType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseUnitType" nillable="true" type="tns:PurchaseUnitType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseUnitType" nillable="true" type="tns:ArrayOfPurchaseUnitType" />
+  <xs:complexType name="PurchasingPlan">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchasingPlan" nillable="true" type="tns:PurchasingPlan" />
+  <xs:complexType name="ArrayOfPurchasingPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchasingPlan" nillable="true" type="tns:PurchasingPlan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchasingPlan" nillable="true" type="tns:ArrayOfPurchasingPlan" />
+  <xs:complexType name="PurchasingPlanDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchasingPlanDetail" nillable="true" type="tns:PurchasingPlanDetail" />
+  <xs:complexType name="ArrayOfPurchasingPlanDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchasingPlanDetail" nillable="true" type="tns:PurchasingPlanDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchasingPlanDetail" nillable="true" type="tns:ArrayOfPurchasingPlanDetail" />
+  <xs:complexType name="Rareword">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PinYin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Word" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Parts" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Rareword" nillable="true" type="tns:Rareword" />
+  <xs:complexType name="ArrayOfRareword">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rareword" nillable="true" type="tns:Rareword" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRareword" nillable="true" type="tns:ArrayOfRareword" />
+  <xs:complexType name="RetailMember">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RetailCustomerTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="RetailOrders" nillable="true" type="tns:ArrayOfRetailOrder" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetailMember" nillable="true" type="tns:RetailMember" />
+  <xs:complexType name="ArrayOfRetailOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetailOrder" nillable="true" type="tns:RetailOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetailOrder" nillable="true" type="tns:ArrayOfRetailOrder" />
+  <xs:complexType name="RetailOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChangeMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GotMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RealPayMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReceivableMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReduceMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RetailCustomerTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="RetailOrderDetails" nillable="true" type="tns:ArrayOfRetailOrderDetail" />
+          <xs:element minOccurs="0" name="RetailPaymentMethodValue" type="xs:int" />
+          <xs:element minOccurs="0" name="ReturnRealReceiveMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReturnReceivableMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReturnReduceMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TotalMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalRefund" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetailOrder" nillable="true" type="tns:RetailOrder" />
+  <xs:complexType name="ArrayOfRetailOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetailOrderDetail" nillable="true" type="tns:RetailOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetailOrderDetail" nillable="true" type="tns:ArrayOfRetailOrderDetail" />
+  <xs:complexType name="RetailOrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualDismantingUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ActualUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Discount" type="xs:int" />
+          <xs:element minOccurs="0" name="DismantingAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="DismantingUnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="IsDiscount" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDismanting" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RetailOrder" nillable="true" type="tns:RetailOrder" />
+          <xs:element minOccurs="0" name="RetailOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ReturnAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TotalMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetailOrderDetail" nillable="true" type="tns:RetailOrderDetail" />
+  <xs:complexType name="ArrayOfRetailMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetailMember" nillable="true" type="tns:RetailMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetailMember" nillable="true" type="tns:ArrayOfRetailMember" />
+  <xs:complexType name="ArrayOfRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Role" nillable="true" type="tns:Role" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRole" nillable="true" type="tns:ArrayOfRole" />
+  <xs:complexType name="PurchaseManageCategoryDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessTypeManageCategoryDetails" nillable="true" type="tns:ArrayOfBusinessTypeManageCategoryDetail" />
+          <xs:element minOccurs="0" name="PurchaseManageCategory" nillable="true" type="tns:PurchaseManageCategory" />
+          <xs:element minOccurs="0" name="PurchaseManageCategoryId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseManageCategoryDetail" nillable="true" type="tns:PurchaseManageCategoryDetail" />
+  <xs:complexType name="ArrayOfBusinessTypeManageCategoryDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessTypeManageCategoryDetail" nillable="true" type="tns:BusinessTypeManageCategoryDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessTypeManageCategoryDetail" nillable="true" type="tns:ArrayOfBusinessTypeManageCategoryDetail" />
+  <xs:complexType name="BusinessTypeManageCategoryDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessType" nillable="true" type="tns:BusinessType" />
+          <xs:element minOccurs="0" name="BusinessTypeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseManageCategoryDetail" nillable="true" type="tns:PurchaseManageCategoryDetail" />
+          <xs:element minOccurs="0" name="PurchaseManageCategoryDetailId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessTypeManageCategoryDetail" nillable="true" type="tns:BusinessTypeManageCategoryDetail" />
+  <xs:complexType name="BusinessType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessTypeManageCategoryDetails" nillable="true" type="tns:ArrayOfBusinessTypeManageCategoryDetail" />
+          <xs:element minOccurs="0" name="GSPLicenses" nillable="true" type="tns:ArrayOfGSPLicense" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessType" nillable="true" type="tns:BusinessType" />
+  <xs:complexType name="ArrayOfGSPLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GSPLicense" nillable="true" type="tns:GSPLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGSPLicense" nillable="true" type="tns:ArrayOfGSPLicense" />
+  <xs:complexType name="GSPLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PharmacyLicense">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessType" nillable="true" type="tns:BusinessType" />
+          <xs:element minOccurs="0" name="BusinessTypeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="GMSPLicenseBusinessScopes" nillable="true" type="tns:ArrayOfGMSPLicenseBusinessScope" />
+          <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QualityHeader" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GSPLicense" nillable="true" type="tns:GSPLicense" />
+  <xs:complexType name="PharmacyLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IssuanceDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LicenseTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="OutDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PharmacyLicense" nillable="true" type="tns:PharmacyLicense" />
+  <xs:complexType name="ArrayOfGMSPLicenseBusinessScope">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GMSPLicenseBusinessScope" nillable="true" type="tns:GMSPLicenseBusinessScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGMSPLicenseBusinessScope" nillable="true" type="tns:ArrayOfGMSPLicenseBusinessScope" />
+  <xs:complexType name="GMSPLicenseBusinessScope">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="tns:BusinessScope" />
+          <xs:element minOccurs="0" name="BusinessScopeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="GSPLicense" nillable="true" type="tns:GSPLicense" />
+          <xs:element minOccurs="0" name="GSPLicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="LicenseId" type="ser:guid" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GMSPLicenseBusinessScope" nillable="true" type="tns:GMSPLicenseBusinessScope" />
+  <xs:complexType name="BusinessScope">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessScopeCategory" nillable="true" type="tns:BusinessScopeCategory" />
+          <xs:element minOccurs="0" name="BusinessScopeCategoryId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessScope" nillable="true" type="tns:BusinessScope" />
+  <xs:complexType name="BusinessScopeCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessScopes" nillable="true" type="tns:ArrayOfBusinessScope" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessScopeCategory" nillable="true" type="tns:BusinessScopeCategory" />
+  <xs:complexType name="ArrayOfBusinessScope">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessScope" nillable="true" type="tns:BusinessScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessScope" nillable="true" type="tns:ArrayOfBusinessScope" />
+  <xs:complexType name="PurchaseManageCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseManageCategory" nillable="true" type="tns:PurchaseManageCategory" />
+  <xs:complexType name="ArrayOfPurchaseManageCategoryDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseManageCategoryDetail" nillable="true" type="tns:PurchaseManageCategoryDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseManageCategoryDetail" nillable="true" type="tns:ArrayOfPurchaseManageCategoryDetail" />
+  <xs:complexType name="PurchaseOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllReceiptedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AmountApprovalDecription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AmountApprovalUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="AmountApprovaledTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AmountOfTaxMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ApprovalDecription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ApprovaledTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DirectMarketing" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InValidDays" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="PaymentDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PaymentForGoodsMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PurchaseCheckingOrders" nillable="true" type="tns:ArrayOfPurchaseCheckingOrder" />
+          <xs:element minOccurs="0" name="PurchaseInInventeryOrders" nillable="true" type="tns:ArrayOfPurchaseInInventeryOrder" />
+          <xs:element minOccurs="0" name="PurchaseOrderDetails" nillable="true" type="tns:ArrayOfPurchaseOrderDetail" />
+          <xs:element minOccurs="0" name="PurchaseOrderReturns" nillable="true" type="tns:ArrayOfPurchaseOrderReturn" />
+          <xs:element minOccurs="0" name="PurchaseReceivingOrders" nillable="true" type="tns:ArrayOfPurchaseReceivingOrder" />
+          <xs:element minOccurs="0" name="PurchasedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReleatedPurchaseOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ShippingMethod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SupplyUnit" nillable="true" type="tns:SupplyUnit" />
+          <xs:element minOccurs="0" name="SupplyUnitAccountExecutiveId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SupplyUnitId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TotalMoney" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+  <xs:complexType name="ArrayOfPurchaseCheckingOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseCheckingOrder" nillable="true" type="tns:PurchaseCheckingOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseCheckingOrder" nillable="true" type="tns:ArrayOfPurchaseCheckingOrder" />
+  <xs:complexType name="PurchaseCheckingOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RelatedOrderTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+          <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseCheckingOrder" nillable="true" type="tns:PurchaseCheckingOrder" />
+  <xs:complexType name="ArrayOfPurchaseInInventeryOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseInInventeryOrder" nillable="true" type="tns:PurchaseInInventeryOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseInInventeryOrder" nillable="true" type="tns:ArrayOfPurchaseInInventeryOrder" />
+  <xs:complexType name="PurchaseInInventeryOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RelatedOrderTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+          <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseInInventeryOrderDetails" nillable="true" type="tns:ArrayOfPurchaseInInventeryOrderDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseInInventeryOrder" nillable="true" type="tns:PurchaseInInventeryOrder" />
+  <xs:complexType name="ArrayOfPurchaseInInventeryOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseInInventeryOrderDetail" nillable="true" type="tns:PurchaseInInventeryOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseInInventeryOrderDetail" nillable="true" type="tns:ArrayOfPurchaseInInventeryOrderDetail" />
+  <xs:complexType name="PurchaseInInventeryOrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ArrivalAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="ArrivalDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PurchaseInInventeryOrder" nillable="true" type="tns:PurchaseInInventeryOrder" />
+          <xs:element minOccurs="0" name="PurchaseInInventeryOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="WarehouseZoneId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseInInventeryOrderDetail" nillable="true" type="tns:PurchaseInInventeryOrderDetail" />
+  <xs:complexType name="ArrayOfPurchaseOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseOrderDetail" nillable="true" type="tns:PurchaseOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseOrderDetail" nillable="true" type="tns:ArrayOfPurchaseOrderDetail" />
+  <xs:complexType name="PurchaseOrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="PurchasePrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AmountOfTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+          <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseOrderDetail" nillable="true" type="tns:PurchaseOrderDetail" />
+  <xs:complexType name="ArrayOfPurchaseOrderReturn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseOrderReturn" nillable="true" type="tns:PurchaseOrderReturn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseOrderReturn" nillable="true" type="tns:ArrayOfPurchaseOrderReturn" />
+  <xs:complexType name="PurchaseOrderReturn">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CheckerSuggest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckerUpdateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CheckerUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinanceDepartmentSuggest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinanceDepartmentUpdateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FinanceDepartmentUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="GeneralManagerSuggest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GeneralManagerUpdateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GeneralManagerUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+          <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseOrderReturnDetails" nillable="true" type="tns:ArrayOfPurchaseOrderReturnDetail" />
+          <xs:element minOccurs="0" name="QualitySuggest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QualityUpdateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="QualityUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RelatedOrderTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseOrderReturn" nillable="true" type="tns:PurchaseOrderReturn" />
+  <xs:complexType name="ArrayOfPurchaseOrderReturnDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseOrderReturnDetail" nillable="true" type="tns:PurchaseOrderReturnDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseOrderReturnDetail" nillable="true" type="tns:ArrayOfPurchaseOrderReturnDetail" />
+  <xs:complexType name="PurchaseOrderReturnDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsReissue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PurchaseOrderReturn" nillable="true" type="tns:PurchaseOrderReturn" />
+          <xs:element minOccurs="0" name="PurchaseOrderReturnId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseReturnSourceValue" type="xs:int" />
+          <xs:element minOccurs="0" name="ReissueAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ReturnAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="ReturnHandledMethodValue" type="xs:int" />
+          <xs:element minOccurs="0" name="ReturnReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseOrderReturnDetail" nillable="true" type="tns:PurchaseOrderReturnDetail" />
+  <xs:complexType name="ArrayOfPurchaseReceivingOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseReceivingOrder" nillable="true" type="tns:PurchaseReceivingOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseReceivingOrder" nillable="true" type="tns:ArrayOfPurchaseReceivingOrder" />
+  <xs:complexType name="PurchaseReceivingOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RelatedOrderTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="ShippingAdress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShippingTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ShippingUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TransportUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+          <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseReceivingOrderDetails" nillable="true" type="tns:ArrayOfPurchaseReceivingOrderDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseReceivingOrder" nillable="true" type="tns:PurchaseReceivingOrder" />
+  <xs:complexType name="ArrayOfPurchaseReceivingOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseReceivingOrderDetail" nillable="true" type="tns:PurchaseReceivingOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseReceivingOrderDetail" nillable="true" type="tns:ArrayOfPurchaseReceivingOrderDetail" />
+  <xs:complexType name="PurchaseReceivingOrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="CheckResult" type="xs:int" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsCompanyPurchase" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTransportMethod" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsTransportTemperature" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PurchaseReceivingOrder" nillable="true" type="tns:PurchaseReceivingOrder" />
+          <xs:element minOccurs="0" name="PurchaseReceivingOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ReceiveAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="RejectAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="RejectReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RejectTrace" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TemperatureStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransportMethod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransportTemperature" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseReceivingOrderDetail" nillable="true" type="tns:PurchaseReceivingOrderDetail" />
+  <xs:complexType name="ArrayOfPurchaseOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseOrder" nillable="true" type="tns:ArrayOfPurchaseOrder" />
+  <xs:complexType name="ArrayOfModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Module" nillable="true" type="tns:Module" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModule" nillable="true" type="tns:ArrayOfModule" />
+  <xs:complexType name="Module">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AuthKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModuleCatetoryId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ModuleCatetory" nillable="true" type="tns:ModuleCatetory" />
+          <xs:element minOccurs="0" name="ModuleWithRoles" nillable="true" type="tns:ArrayOfModuleWithRole" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Module" nillable="true" type="tns:Module" />
+  <xs:complexType name="ModuleCatetory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Modules" nillable="true" type="tns:ArrayOfModule" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModuleCatetory" nillable="true" type="tns:ModuleCatetory" />
+  <xs:complexType name="ArrayOfModuleWithRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuleWithRole" nillable="true" type="tns:ModuleWithRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuleWithRole" nillable="true" type="tns:ArrayOfModuleWithRole" />
+  <xs:complexType name="ModuleWithRole">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Module" nillable="true" type="tns:Module" />
+          <xs:element minOccurs="0" name="ModuleId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="tns:Role" />
+          <xs:element minOccurs="0" name="RoleId" type="ser:guid" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModuleWithRole" nillable="true" type="tns:ModuleWithRole" />
+  <xs:complexType name="ArrayOfModuleCatetory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuleCatetory" nillable="true" type="tns:ModuleCatetory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuleCatetory" nillable="true" type="tns:ArrayOfModuleCatetory" />
+  <xs:complexType name="PharmacyFile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileStream" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PharmacyFile" nillable="true" type="tns:PharmacyFile" />
+  <xs:complexType name="ArrayOfPharmacyFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PharmacyFile" nillable="true" type="tns:PharmacyFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPharmacyFile" nillable="true" type="tns:ArrayOfPharmacyFile" />
+  <xs:complexType name="PurchaseCheckingOrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ArrivalAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="ArrivalDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckResult" type="xs:int" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PurchaseCheckingOrder" nillable="true" type="tns:PurchaseCheckingOrder" />
+          <xs:element minOccurs="0" name="PurchaseCheckingOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="QualifiedAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseCheckingOrderDetail" nillable="true" type="tns:PurchaseCheckingOrderDetail" />
+  <xs:complexType name="ArrayOfPurchaseCheckingOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseCheckingOrderDetail" nillable="true" type="tns:PurchaseCheckingOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseCheckingOrderDetail" nillable="true" type="tns:ArrayOfPurchaseCheckingOrderDetail" />
+  <xs:complexType name="ArrayOfPurchaseManageCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseManageCategory" nillable="true" type="tns:PurchaseManageCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseManageCategory" nillable="true" type="tns:ArrayOfPurchaseManageCategory" />
+  <xs:complexType name="GMPLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PharmacyLicense">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CertificationScope" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GMPLicense" nillable="true" type="tns:GMPLicense" />
+  <xs:complexType name="ArrayOfGMPLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GMPLicense" nillable="true" type="tns:GMPLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGMPLicense" nillable="true" type="tns:ArrayOfGMPLicense" />
+  <xs:complexType name="BusinessLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PharmacyLicense">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorporateNature" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstablishmentDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="InspectionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaidinCapital" type="xs:int" />
+          <xs:element minOccurs="0" name="RegisteredCapital" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessLicense" nillable="true" type="tns:BusinessLicense" />
+  <xs:complexType name="ArrayOfBusinessLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessLicense" nillable="true" type="tns:BusinessLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessLicense" nillable="true" type="tns:ArrayOfBusinessLicense" />
+  <xs:complexType name="MedicineProductionLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PharmacyLicense">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorporateNature" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductScope" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MedicineProductionLicense" nillable="true" type="tns:MedicineProductionLicense" />
+  <xs:complexType name="ArrayOfMedicineProductionLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicineProductionLicense" nillable="true" type="tns:MedicineProductionLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicineProductionLicense" nillable="true" type="tns:ArrayOfMedicineProductionLicense" />
+  <xs:complexType name="MedicineBusinessLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PharmacyLicense">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QualityHeader" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MedicineBusinessLicense" nillable="true" type="tns:MedicineBusinessLicense" />
+  <xs:complexType name="ArrayOfMedicineBusinessLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicineBusinessLicense" nillable="true" type="tns:MedicineBusinessLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicineBusinessLicense" nillable="true" type="tns:ArrayOfMedicineBusinessLicense" />
+  <xs:complexType name="InstrumentsBusinessLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PharmacyLicense">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QualityHeader" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarehouseAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InstrumentsBusinessLicense" nillable="true" type="tns:InstrumentsBusinessLicense" />
+  <xs:complexType name="ArrayOfInstrumentsBusinessLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstrumentsBusinessLicense" nillable="true" type="tns:InstrumentsBusinessLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstrumentsBusinessLicense" nillable="true" type="tns:ArrayOfInstrumentsBusinessLicense" />
+  <xs:complexType name="InstrumentsProductionLicense">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PharmacyLicense">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductScope" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InstrumentsProductionLicense" nillable="true" type="tns:InstrumentsProductionLicense" />
+  <xs:complexType name="ArrayOfInstrumentsProductionLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstrumentsProductionLicense" nillable="true" type="tns:InstrumentsProductionLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstrumentsProductionLicense" nillable="true" type="tns:ArrayOfInstrumentsProductionLicense" />
+  <xs:complexType name="MedicalCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MedicalCategories" nillable="true" type="tns:ArrayOfMedicalCategoryDetail" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MedicalCategory" nillable="true" type="tns:MedicalCategory" />
+  <xs:complexType name="ArrayOfMedicalCategoryDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalCategoryDetail" nillable="true" type="tns:MedicalCategoryDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicalCategoryDetail" nillable="true" type="tns:ArrayOfMedicalCategoryDetail" />
+  <xs:complexType name="MedicalCategoryDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MedicalCategory" nillable="true" type="tns:MedicalCategory" />
+          <xs:element minOccurs="0" name="MedicalCategoryId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MedicalCategoryDetail" nillable="true" type="tns:MedicalCategoryDetail" />
+  <xs:complexType name="ArrayOfMedicalCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalCategory" nillable="true" type="tns:MedicalCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicalCategory" nillable="true" type="tns:ArrayOfMedicalCategory" />
+  <xs:complexType name="ArrayOfDictionaryUserDefinedType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DictionaryUserDefinedType" nillable="true" type="tns:DictionaryUserDefinedType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDictionaryUserDefinedType" nillable="true" type="tns:ArrayOfDictionaryUserDefinedType" />
+  <xs:complexType name="DictionaryUserDefinedType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DictionaryUserDefinedType" nillable="true" type="tns:DictionaryUserDefinedType" />
+  <xs:complexType name="DrugMaintainSet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DrugMaintainTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Day" type="xs:int" />
+          <xs:element minOccurs="0" name="MinPercent" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RemindBeforeDay" type="xs:int" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugMaintainSet" nillable="true" type="tns:DrugMaintainSet" />
+  <xs:complexType name="ArrayOfDrugMaintainSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugMaintainSet" nillable="true" type="tns:DrugMaintainSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugMaintainSet" nillable="true" type="tns:ArrayOfDrugMaintainSet" />
+  <xs:complexType name="InventoryRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="DismantingAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="DrugInfoCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="MaxInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="MinInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="OnRetailCount" type="xs:int" />
+          <xs:element minOccurs="0" name="OnSalesOrderCount" type="xs:int" />
+          <xs:element minOccurs="0" name="RetailCount" type="xs:int" />
+          <xs:element minOccurs="0" name="RetailDismantingAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventoryRecord" nillable="true" type="tns:InventoryRecord" />
+  <xs:complexType name="ArrayOfInventoryRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventoryRecord" nillable="true" type="tns:InventoryRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventoryRecord" nillable="true" type="tns:ArrayOfInventoryRecord" />
+  <xs:complexType name="Manufacturer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortPinYin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Manufacturer" nillable="true" type="tns:Manufacturer" />
+  <xs:complexType name="ArrayOfManufacturer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Manufacturer" nillable="true" type="tns:Manufacturer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfManufacturer" nillable="true" type="tns:ArrayOfManufacturer" />
+  <xs:complexType name="PackagingMaterial">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PackagingMaterial" nillable="true" type="tns:PackagingMaterial" />
+  <xs:complexType name="ArrayOfPackagingMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackagingMaterial" nillable="true" type="tns:PackagingMaterial" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackagingMaterial" nillable="true" type="tns:ArrayOfPackagingMaterial" />
+  <xs:complexType name="PackagingUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PackagingUnit" nillable="true" type="tns:PackagingUnit" />
+  <xs:complexType name="ArrayOfPackagingUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackagingUnit" nillable="true" type="tns:PackagingUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackagingUnit" nillable="true" type="tns:ArrayOfPackagingUnit" />
+  <xs:complexType name="PaymentMethod">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaymentMethod" nillable="true" type="tns:PaymentMethod" />
+  <xs:complexType name="ArrayOfPaymentMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentMethod" nillable="true" type="tns:PaymentMethod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentMethod" nillable="true" type="tns:ArrayOfPaymentMethod" />
+  <xs:complexType name="DictionaryDosage">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DictionaryDosage" nillable="true" type="tns:DictionaryDosage" />
+  <xs:complexType name="ArrayOfDictionaryDosage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DictionaryDosage" nillable="true" type="tns:DictionaryDosage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDictionaryDosage" nillable="true" type="tns:ArrayOfDictionaryDosage" />
+  <xs:complexType name="ArrayOfDrugInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugInfo" nillable="true" type="tns:DrugInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugInfo" nillable="true" type="tns:ArrayOfDrugInfo" />
+  <xs:complexType name="DrugMaintainRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BillDocumentNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompleteState" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="DrugMaintainTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugMaintainRecord" nillable="true" type="tns:DrugMaintainRecord" />
+  <xs:complexType name="ArrayOfDrugMaintainRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugMaintainRecord" nillable="true" type="tns:DrugMaintainRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugMaintainRecord" nillable="true" type="tns:ArrayOfDrugMaintainRecord" />
+  <xs:complexType name="DrugMaintainRecordDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BillDocumentNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CheckResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckqualifiedNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentInventoryCount" type="xs:int" />
+          <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DictionarySpecificationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LicensePermissionNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaintainCount" type="xs:int" />
+          <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutValidDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PruductDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DrugInventoryRecordId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugMaintainRecordDetail" nillable="true" type="tns:DrugMaintainRecordDetail" />
+  <xs:complexType name="ArrayOfDrugMaintainRecordDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugMaintainRecordDetail" nillable="true" type="tns:DrugMaintainRecordDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugMaintainRecordDetail" nillable="true" type="tns:ArrayOfDrugMaintainRecordDetail" />
+  <xs:complexType name="ArrayOfDictionaryMeasurementUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DictionaryMeasurementUnit" nillable="true" type="tns:DictionaryMeasurementUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDictionaryMeasurementUnit" nillable="true" type="tns:ArrayOfDictionaryMeasurementUnit" />
+  <xs:complexType name="DictionaryPiecemealUnit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DictionaryPiecemealUnit" nillable="true" type="tns:DictionaryPiecemealUnit" />
+  <xs:complexType name="ArrayOfDictionaryPiecemealUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DictionaryPiecemealUnit" nillable="true" type="tns:DictionaryPiecemealUnit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDictionaryPiecemealUnit" nillable="true" type="tns:ArrayOfDictionaryPiecemealUnit" />
+  <xs:complexType name="DictionarySpecification">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DictionarySpecification" nillable="true" type="tns:DictionarySpecification" />
+  <xs:complexType name="ArrayOfDictionarySpecification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DictionarySpecification" nillable="true" type="tns:DictionarySpecification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDictionarySpecification" nillable="true" type="tns:ArrayOfDictionarySpecification" />
+  <xs:complexType name="ArrayOfDictionaryStorageType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DictionaryStorageType" nillable="true" type="tns:DictionaryStorageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDictionaryStorageType" nillable="true" type="tns:ArrayOfDictionaryStorageType" />
+  <xs:complexType name="GoodsAdditionalProperty">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CareFunction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+          <xs:element minOccurs="0" name="FactoryAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactoryAddressEnglish" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactoryNameEnglish" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HealthPermit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LandmarkIngredient" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LicensePermissionDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MainIngredient" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotSuitablePeople" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductAddressEnglish" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductCountryEnglish" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PutOnRecord" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PutOnRecordDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RegCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegProxyCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuitablePeople" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsageAndDosage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GoodsAdditionalProperty" nillable="true" type="tns:GoodsAdditionalProperty" />
+  <xs:complexType name="ArrayOfGoodsAdditionalProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GoodsAdditionalProperty" nillable="true" type="tns:GoodsAdditionalProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGoodsAdditionalProperty" nillable="true" type="tns:ArrayOfGoodsAdditionalProperty" />
+  <xs:complexType name="PurchaseCashOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalDecription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ApprovaledTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DealerMethodValue" type="xs:int" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="OrderStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="PaymentAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PaymentMethod" nillable="true" type="tns:PaymentMethod" />
+          <xs:element minOccurs="0" name="PaymentMethodId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PaymentTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PaymentedAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PaymentingAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RelatedOrderTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PurchaseOrder" nillable="true" type="tns:PurchaseOrder" />
+          <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PurchaseCashOrder" nillable="true" type="tns:PurchaseCashOrder" />
+  <xs:complexType name="ArrayOfPurchaseCashOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseCashOrder" nillable="true" type="tns:PurchaseCashOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseCashOrder" nillable="true" type="tns:ArrayOfPurchaseCashOrder" />
+  <xs:complexType name="Delivery">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcceptedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AcceptedOperatorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="AcceptedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CanceledNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CanceledOperatorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CanceledTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="DeliveryAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryMethodValue" type="xs:int" />
+          <xs:element minOccurs="0" name="DeliveryStatusValue" type="xs:int" />
+          <xs:element minOccurs="0" name="DeliveryTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DrugsCount" type="xs:int" />
+          <xs:element minOccurs="0" name="IsOver" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ManifestNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderID" type="ser:guid" />
+          <xs:element minOccurs="0" name="OutInventoryID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Principal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrincipalPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceivingCompasnyID" type="ser:guid" />
+          <xs:element minOccurs="0" name="ReceivingCompasnyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReservationNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReservationOperatorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ReservationTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReturnNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReturnOperatorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ReturnTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ShippingAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SignedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SignedOperatorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SignedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="TransportCompany" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransportMethodValue" type="xs:int" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="VehicleID" type="ser:guid" />
+          <xs:element minOccurs="0" name="VehicleInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="outedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="outedOperatorId" type="ser:guid" />
+          <xs:element minOccurs="0" name="outedTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Delivery" nillable="true" type="tns:Delivery" />
+  <xs:complexType name="ArrayOfDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Delivery" nillable="true" type="tns:Delivery" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDelivery" nillable="true" type="tns:ArrayOfDelivery" />
+  <xs:complexType name="ArrayOfDepartment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Department" nillable="true" type="tns:Department" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDepartment" nillable="true" type="tns:ArrayOfDepartment" />
+  <xs:complexType name="ArrayOfDistrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="District" nillable="true" type="tns:District" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDistrict" nillable="true" type="tns:ArrayOfDistrict" />
+  <xs:complexType name="DrugApprovalNumber">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugApprovalNumber" nillable="true" type="tns:DrugApprovalNumber" />
+  <xs:complexType name="ArrayOfDrugApprovalNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugApprovalNumber" nillable="true" type="tns:DrugApprovalNumber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugApprovalNumber" nillable="true" type="tns:ArrayOfDrugApprovalNumber" />
+  <xs:complexType name="DrugCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugCategory" nillable="true" type="tns:DrugCategory" />
+  <xs:complexType name="ArrayOfDrugCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugCategory" nillable="true" type="tns:DrugCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugCategory" nillable="true" type="tns:ArrayOfDrugCategory" />
+  <xs:complexType name="DrugClinicalCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DrugClinicalCategory" nillable="true" type="tns:DrugClinicalCategory" />
+  <xs:complexType name="ArrayOfDrugClinicalCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugClinicalCategory" nillable="true" type="tns:DrugClinicalCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugClinicalCategory" nillable="true" type="tns:ArrayOfDrugClinicalCategory" />
+  <xs:complexType name="ApprovalFlow">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalFlowTypeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ChangeNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="FlowId" type="ser:guid" />
+          <xs:element minOccurs="0" name="NextNodeID" type="ser:guid" />
+          <xs:element minOccurs="0" name="Status" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SubFlowId" type="xs:int" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ApprovalFlow" nillable="true" type="tns:ApprovalFlow" />
+  <xs:complexType name="ArrayOfApprovalFlow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovalFlow" nillable="true" type="tns:ApprovalFlow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApprovalFlow" nillable="true" type="tns:ArrayOfApprovalFlow" />
+  <xs:complexType name="ApprovalFlowNode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalFlowTypeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RoleId" type="ser:guid" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Order" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ApprovalFlowNode" nillable="true" type="tns:ApprovalFlowNode" />
+  <xs:complexType name="ArrayOfApprovalFlowNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovalFlowNode" nillable="true" type="tns:ApprovalFlowNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApprovalFlowNode" nillable="true" type="tns:ArrayOfApprovalFlowNode" />
+  <xs:complexType name="ApprovalFlowType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalFlowNodes" nillable="true" type="tns:ArrayOfApprovalFlowNode" />
+          <xs:element minOccurs="0" name="ApprovalTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ApprovalFlowType" nillable="true" type="tns:ApprovalFlowType" />
+  <xs:complexType name="ArrayOfApprovalFlowType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovalFlowType" nillable="true" type="tns:ApprovalFlowType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApprovalFlowType" nillable="true" type="tns:ArrayOfApprovalFlowType" />
+  <xs:complexType name="ApprovalFlowRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovalFlowNodeId" type="ser:guid" />
+          <xs:element minOccurs="0" name="ApproveUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="FlowId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SubFlowId" type="xs:int" />
+          <xs:element minOccurs="0" name="ApproveTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ApprovalFlowRecord" nillable="true" type="tns:ApprovalFlowRecord" />
+  <xs:complexType name="ArrayOfApprovalFlowRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovalFlowRecord" nillable="true" type="tns:ApprovalFlowRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApprovalFlowRecord" nillable="true" type="tns:ArrayOfApprovalFlowRecord" />
+  <xs:complexType name="BillDocumentCode">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BillDocumentTypeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="Canceled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Locked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+          <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Used" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UsedId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BillDocumentCode" nillable="true" type="tns:BillDocumentCode" />
+  <xs:complexType name="ArrayOfBillDocumentCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BillDocumentCode" nillable="true" type="tns:BillDocumentCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBillDocumentCode" nillable="true" type="tns:ArrayOfBillDocumentCode" />
+  <xs:complexType name="ArrayOfBusinessScopeCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessScopeCategory" nillable="true" type="tns:BusinessScopeCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessScopeCategory" nillable="true" type="tns:ArrayOfBusinessScopeCategory" />
+  <xs:complexType name="ArrayOfBusinessType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessType" nillable="true" type="tns:BusinessType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusinessType" nillable="true" type="tns:ArrayOfBusinessType" />
+  <xs:simpleType name="ApprovalType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SupplyUnitApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PurchaseUnitApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DrugInfoApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DrugInfoLockApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PurchaseUnitLockApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SupplyUnitLockApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DrugInfoEditApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PurchaseUnitEditApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SupplyUnitEditApproval">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ApprovalType" nillable="true" type="tns:ApprovalType" />
+  <xs:simpleType name="DeliveryStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Reservation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Accepted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Canceled">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Outed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Signed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Return">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DeliveryStatus" nillable="true" type="tns:DeliveryStatus" />
+  <xs:complexType name="ArrayOfPharmacyLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PharmacyLicense" nillable="true" type="tns:PharmacyLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPharmacyLicense" nillable="true" type="tns:ArrayOfPharmacyLicense" />
+</xs:schema>

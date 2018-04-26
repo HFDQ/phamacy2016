@@ -1,0 +1,144 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Application.Core.dll" #> 
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.InteropServices" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data.Entity" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #> 
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="BugsBox.Pharmacy.Models" #>   
+<#@ output extension=".cs" #>
+<#
+Type EntityType=typeof(Entity);
+//Type BaseUnitType=typeof(BaseUnit);
+Assembly assembly=EntityType.Assembly;
+string baseEntityTypeName="BugsBox.Pharmacy.Models";
+var entityTypes=assembly.GetTypes()
+.Where(t =>t!=typeof(PharmacyLicense)&& !t.IsAbstract&&(t.BaseType==EntityType||t.BaseType==typeof(BaseUnit)||t.BaseType==typeof(PharmacyLicense))).ToList(); 
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using BugsBox.Application.Core;
+using BugsBox.Common;
+using BugsBox.Pharmacy.Models;
+using BugsBox.Pharmacy.Repository;
+namespace BugsBox.Pharmacy.BusinessHandlers
+{
+	//此代码由ServiceContext.Handlers.tt自动生成 
+   public class BusinessHandlerFactory:IDisposable
+    {
+		public RepositoryProvider RepositoryProvider {get;private set;}
+        public IConnectedInfoProvider ConnectedInfoProvider {get;private set;}
+
+		  protected static readonly HashSet<BusinessHandlerFactory>  BusinessHandlerFactoryCache=
+            new HashSet<BusinessHandlerFactory>();
+
+        /// <summary>
+        /// 此方法由用户退出后调用
+        /// </summary>
+        /// <param name="businessHandlerFactory"></param>
+        public static void DisposeBusinessHandlerFactory(BusinessHandlerFactory businessHandlerFactory)
+        {
+            try
+            {
+                lock (BusinessHandlerFactoryCache)
+                {
+                    if (businessHandlerFactory != null)
+                    {
+                        if (BusinessHandlerFactoryCache.Contains(businessHandlerFactory))
+                        {
+                            BusinessHandlerFactoryCache.Remove(businessHandlerFactory);
+                        }
+                        businessHandlerFactory.Dispose();
+                    }
+                    else
+                    {
+                        LoggerHelper.Instance.Warning("DisposeBusinessHandlerFactory BusinessHandlerFactory 不可为null");
+                    }
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                ex = new Exception("销毁businessHandlerFactory失败", ex);
+                LoggerHelper.Instance.Error(ex);
+            }
+            
+        }
+        
+        /// <summary>
+        /// 此方法由程序退出之前或服务停止后调用
+        /// </summary>
+        public static void DisposeBusinessHandlerFactories()
+        {
+            try
+            {
+               // LoggerHelper.Instance.Information("开始销毁所有BusinessHandlerFactories");
+                foreach (var businessHandlerFactory in BusinessHandlerFactoryCache)
+                {
+                    DisposeBusinessHandlerFactory(businessHandlerFactory);
+                }
+               // LoggerHelper.Instance.Information("结束销毁所有BusinessHandlerFactories");
+            }
+            catch (Exception ex)
+            {
+                ex = new Exception("DisposeBusinessHandlerFactories失败", ex);
+                LoggerHelper.Instance.Error(ex);
+                LoggerHelper.Instance.Information("销毁所有BusinessHandlerFactories出错");
+            }
+        }
+
+		public BusinessHandlerFactory(Db db,IConnectedInfoProvider connectedInfoProvider)
+	    {
+            this.RepositoryProvider = new RepositoryProvider(db);
+            this.ConnectedInfoProvider = connectedInfoProvider;
+			//LoggerHelper.Instance.Warning("BusinessHandlerFactory 创建了");
+	    }
+	<#
+	foreach (Type handler in entityTypes)
+	{
+	#>  
+	    private <#=handler.Name #>BusinessHandler _<#= handler.Name #>BusinessHandler=null;
+		/// <summary> 
+		/// <#= EntityExtensions.GetDescription(handler)#>(<#= handler.Name #>)对象
+        /// </summary>
+		public <#=handler.Name #>BusinessHandler <#= handler.Name #>BusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_<#= handler.Name #>BusinessHandler==null)
+					{
+						_<#= handler.Name #>BusinessHandler=new <#=handler.Name #>BusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_<#= handler.Name #>BusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _<#= handler.Name #>BusinessHandler;
+			}
+		}
+    <#}#>  
+
+		public void Dispose()
+		{
+			
+			<#foreach (Type handler in entityTypes){
+			 
+			#> 
+			if(_<#= handler.Name #>BusinessHandler!=null)
+			{
+				_<#= handler.Name #>BusinessHandler.Dispose();
+			} 
+			<#}#>  
+		}
+	}
+}

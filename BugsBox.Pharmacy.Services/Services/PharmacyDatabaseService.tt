@@ -1,0 +1,185 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Application.Core.dll" #> 
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.InteropServices" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data.Entity" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #> 
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="BugsBox.Pharmacy.Models" #>   
+<#@ import namespace="BugsBox.Application.Core" #>   
+<#@ output extension=".cs" #>
+<#
+string entityAssemblyFullPath="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll";
+//public DbSet<Announcement> Announcements { get; set; }
+string  dbSetPropertyFormat="public DbSet<{0}> {0}s { get; set; }";
+Type EntityType=typeof(Entity);
+//Type BaseUnitType=typeof(BaseUnit);
+Assembly assembly=EntityType.Assembly;
+string baseEntityTypeName="BugsBox.Pharmacy.Models";
+var entityTypes=assembly.GetTypes()
+.Where(t => t!=typeof(PharmacyLicense)&&!t.IsAbstract&&(t.BaseType==EntityType||t.BaseType==typeof(BaseUnit)||t.BaseType==typeof(PharmacyLicense))).ToList(); 
+#> 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ServiceModel;
+using System.Xml.Linq;
+using BugsBox.Application.Core;
+using BugsBox.Pharmacy.Models;
+using BugsBox.Pharmacy.Service.Models; 
+using BugsBox.Pharmacy.Business.Models;
+using BugsBox.Pharmacy.Business.Models.QueryModelExtesion; 
+namespace BugsBox.Pharmacy.Services
+{ 
+		/// <summary>
+		/// 系统wcf数据库服务接口ServiceContract
+		/// 所有数据库实体基本的添、删、改、查就是与业务相关逻辑在由这个接口负责 
+		/// </summary>  
+	  partial class PharmacyService
+	  {
+	  	<#foreach (Type entity in entityTypes){
+				#>   
+		#region <#=EntityExtensions.GetDescription(entity)#>
+
+		/// <summary>
+        /// 获取实体<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns> 
+        public <#=entity.Name#> Get<#=entity.Name#>(Guid id,out string message)
+		{
+			message = string.Empty;
+            try
+            {
+                return HandlerFactory.<#=entity.Name#>BusinessHandler.Get(id);
+            }
+            catch (Exception ex)
+            {
+			    return this.HandleException<<#=entity.Name#>>("调用<#=EntityExtensions.GetDescription(entity)#>业务逻辑:根据编号获取实体(<#=EntityExtensions.GetDescription(entity)#>)失败", ex);
+            }
+		} 
+
+        /// <summary>
+        /// 统计<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns> 
+        public int Count<#=entity.Name#>(out string message)
+		{
+			message = string.Empty;
+            try
+            {
+                return HandlerFactory.<#=entity.Name#>BusinessHandler.Count();
+            }
+            catch (Exception ex)
+            {
+                message = "调用<#=EntityExtensions.GetDescription(entity)#>业务逻辑:统计所有(<#=EntityExtensions.GetDescription(entity)#>)数量失败";
+                return this.HandleException<int>(message, ex);
+            }
+		} 
+
+		/// <summary>
+        /// 添加<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        public bool Add<#=entity.Name#>(<#=entity.Name#> value,out string msg)
+		{
+			try
+            {
+                return HandlerFactory.<#=entity.Name#>BusinessHandler.Add(value, out msg);
+            }
+            catch (Exception ex)
+            {
+                msg = "调用<#=EntityExtensions.GetDescription(entity)#>业务逻辑:添加实体(<#=EntityExtensions.GetDescription(entity)#>)失败";
+                return this.HandleException<bool>(msg, ex);
+            }
+		}
+
+        /// <summary>
+        /// 删除<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        public bool Delete<#=entity.Name#>(Guid id, out string msg)
+		{
+			try
+            {
+                return HandlerFactory.<#=entity.Name#>BusinessHandler.Delete(id, out msg);
+            }
+            catch (Exception ex)
+            {
+                msg = "调用<#=EntityExtensions.GetDescription(entity)#>业务逻辑:删除实体(<#=EntityExtensions.GetDescription(entity)#>)失败";
+                return this.HandleException<bool>(msg, ex);
+            }
+		}
+
+        /// <summary>
+        /// 保存<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        public bool Save<#=entity.Name#>(<#=entity.Name#> value, out string msg)
+		{
+			try
+            {
+                return HandlerFactory.<#=entity.Name#>BusinessHandler.Save(value, out msg);
+            }
+            catch (Exception ex)
+            {
+                msg = "调用<#=EntityExtensions.GetDescription(entity)#>业务逻辑:保存实体(<#=EntityExtensions.GetDescription(entity)#>)失败";
+                return this.HandleException<bool>(msg, ex);
+            }
+		}
+
+		 /// <summary>
+        /// 所有记录<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns> 
+        public List<<#=entity.Name#>> All<#=entity.Name#>s(out string message)
+		{
+			message = string.Empty;
+            try
+            {
+                return HandlerFactory.<#=entity.Name#>BusinessHandler.Queryable
+				// .Where(t=>!t.Deleted)
+                              .ToList();
+            }
+            catch (Exception ex)
+            {
+                message = "调用<#=EntityExtensions.GetDescription(entity)#>业务逻辑:获取所有实体(<#=EntityExtensions.GetDescription(entity)#>)失败";
+                return this.HandleException<List<<#=entity.Name#>>>(message, ex);
+            }
+		}
+
+		<#=EntityQueryFunctionBuilder.BuildQueryFuctionString(entity)#> 
+		
+		<#=EntityQueryFunctionBuilder.BuildQueryPageFuctionString(entity)#> 
+ 
+        public List<<#=entity.Name#>> Search<#=entity.Name#>sByQueryModel(Query<#= entity.Name #>Model qModel,out string message)
+		{
+			<#=EntityQueryFunctionBuilder.BuildSearchEntitiesByQueryModelFunctionCode(entity)#>  
+		} 
+
+		 
+        public List<<#=entity.Name#>> SearchPaged<#=entity.Name#>sByQueryModel(Query<#= entity.Name #>Model qModel,int index,int size,out PagerInfo pager)
+		{
+			<#=EntityQueryFunctionBuilder.BuildSearchPagedEntitiesByQueryModelFunctionCode(entity)#>  
+		}
+
+		#endregion <#=EntityExtensions.GetDescription(entity)#> 
+		<#}#>
+	}
+}

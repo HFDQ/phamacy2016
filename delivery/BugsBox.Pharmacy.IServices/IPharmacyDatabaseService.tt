@@ -1,0 +1,111 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Application.Core.dll" #> 
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.InteropServices" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data.Entity" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #> 
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="BugsBox.Pharmacy.Models" #>   
+<#@ import namespace="BugsBox.Application.Core" #>   
+<#@ output extension=".cs" #>
+<#
+string entityAssemblyFullPath="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll";
+//public DbSet<Announcement> Announcements { get; set; }
+string  dbSetPropertyFormat="public DbSet<{0}> {0}s { get; set; }";
+Type EntityType=typeof(Entity);
+//Type BaseUnitType=typeof(BaseUnit);
+Assembly assembly=EntityType.Assembly;
+string baseEntityTypeName="BugsBox.Pharmacy.Models";
+var entityTypes=assembly.GetTypes()
+.Where(t => t!=typeof(PharmacyLicense)&&!t.IsAbstract&&(t.BaseType==EntityType||t.BaseType==typeof(BaseUnit)||t.BaseType==typeof(PharmacyLicense))).ToList(); 
+#>
+using System;
+using System.Collections.Generic;
+using System.ServiceModel;
+using System.Xml.Linq;
+using BugsBox.Application.Core;
+using BugsBox.Pharmacy.Business.Models;
+using BugsBox.Pharmacy.Models;
+using BugsBox.Pharmacy.Service.Models; 
+using BugsBox.Pharmacy.Business.Models.QueryModelExtesion; 
+namespace BugsBox.Pharmacy.IServices
+{ 
+      partial interface IPharmacyDatabaseService
+	  {
+	  	<#foreach (Type entity in entityTypes){
+		
+		#>   
+		#region <#=EntityExtensions.GetDescription(entity)#>
+
+		/// <summary>
+        /// 获取实体<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        <#=entity.Name#> Get<#=entity.Name#>(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool Add<#=entity.Name#>(<#=entity.Name#> value,out string msg);
+
+        /// <summary>
+        /// 删除<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool Delete<#=entity.Name#>(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool Save<#=entity.Name#>(<#=entity.Name#> value, out string msg);  
+
+		/// <summary>
+        /// 所有记录<#=EntityExtensions.GetDescription(entity)#>
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<<#=entity.Name#>> All<#=entity.Name#>s(out string message);  
+
+		<#=EntityQueryFunctionBuilder.BuildQueryInterfaceString(entity)#>;
+
+		<#=EntityQueryFunctionBuilder.BuildQueryPageInterfaceString(entity)#>; 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<<#=entity.Name#>> Search<#=entity.Name#>sByQueryModel(Query<#= entity.Name #>Model qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<<#=entity.Name#>> SearchPaged<#=entity.Name#>sByQueryModel(Query<#= entity.Name #>Model qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion <#=EntityExtensions.GetDescription(entity)#> 
+		<#}#>
+	}
+}

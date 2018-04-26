@@ -1,0 +1,6 @@
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\CustomValidatorsLibrary\bin\Debug\CustomValidatorsLibrary.XML
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\CustomValidatorsLibrary\bin\Debug\CustomValidatorsLibrary.dll
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\CustomValidatorsLibrary\bin\Debug\CustomValidatorsLibrary.pdb
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.dll
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.pdb

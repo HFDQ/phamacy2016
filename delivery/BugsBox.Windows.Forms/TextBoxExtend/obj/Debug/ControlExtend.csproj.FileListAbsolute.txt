@@ -1,0 +1,9 @@
+D:\work\phamacy2016\delivery\_output\_temp\TextBoxExtend\TextBoxExtend.XML
+D:\work\phamacy2016\delivery\_output\_temp\TextBoxExtend\TextBoxExtend.dll
+D:\work\phamacy2016\delivery\_output\_temp\TextBoxExtend\TextBoxExtend.pdb
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\ControlExtend.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\BugsBox.Windows.Forms.Input.AutoCompleteTextBox.resources
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\BugsBox.Windows.Forms.Input.CoolTextBox.resources
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\ControlExtend.csproj.GenerateResource.Cache
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\TextBoxExtend.dll
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\TextBoxExtend.pdb

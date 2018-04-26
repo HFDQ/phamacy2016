@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--//去掉的菜单-->
+<Menu id="1101" Title="1.采购单据查询" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+  <Menu id="110101" Title="1.采购记录查询" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderList" Image="" Params="Query" DockState="" ModuleKey="采购记录查询[窗体]">
+
+  </Menu>
+  <Menu id="110102" Title="2.收货记录查询" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseReceivingOrder,Query" DockState="" ModuleKey="收货记录查询[窗体]">
+
+  </Menu>
+  <Menu id="110103" Title="3.验收记录查询" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseCheckingOrder,Query" DockState="" ModuleKey="验收记录查询[窗体]">
+
+  </Menu>
+  <Menu id="110104" Title="4.入库记录查询" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseInInventeryOrder,Query" DockState="" ModuleKey="入库记录查询[窗体]">
+
+  </Menu>
+  <Menu id="110105" Title="5.退货记录查询" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseOrderReturn,Query" DockState="" ModuleKey="退货记录查询[窗体]">
+
+  </Menu>
+  <Menu id="110106" Title="6.采购记录汇总查询" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderList" Image="" Params="" DockState="" ModuleKey="采购记录汇总查询[窗体]">
+
+  </Menu>
+</Menu>

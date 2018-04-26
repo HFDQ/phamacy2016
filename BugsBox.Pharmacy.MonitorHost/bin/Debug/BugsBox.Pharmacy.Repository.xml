@@ -1,0 +1,2420 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugsBox.Pharmacy.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:BugsBox.Pharmacy.Repository.Db">
+            <summary>
+            数据仓储上下文
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.ApprovalFlows">
+            <summary>
+            审批结点s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.ApprovalFlowNodes">
+            <summary>
+            审批结点s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.ApprovalFlowTypes">
+            <summary>
+            审批流程类型s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.ApprovalFlowRecords">
+            <summary>
+            审批流程记录s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.BillDocumentCodes">
+            <summary>
+            单据编号s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.BusinessScopes">
+            <summary>
+            经营范围s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.BusinessScopeCategorys">
+            <summary>
+            经营范围分类s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.BusinessTypes">
+            <summary>
+            经营方式s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.BusinessTypeManageCategoryDetails">
+            <summary>
+            经营方式的管理要求分类详细s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DirectSalesOrders">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DirectSalesOrderDetails">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DocumentRefuses">
+            <summary>
+            收货拒收单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugsBreakages">
+            <summary>
+            报损药品s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugsInventoryMoves">
+            <summary>
+            移库s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugsUndeterminates">
+            <summary>
+            待处理药品s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.drugsUnqualications">
+            <summary>
+            不合格药品s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugsUnqualificationDestroys">
+            <summary>
+            不合格药品销毁情况s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.EduDetailss">
+            <summary>
+            培训档案细节s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.EduDocuments">
+            <summary>
+            培训档案s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.GoodsAdditionalPropertys">
+            <summary>
+            商品附加属性s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.HealthCheckDetails">
+            <summary>
+            体检档案细节s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.HealthCheckDocuments">
+            <summary>
+            体检档案s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseCashOrders">
+            <summary>
+            采购结算单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Deliverys">
+            <summary>
+            配送信息s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Departments">
+            <summary>
+            部门s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Districts">
+            <summary>
+            区域s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DoubtDrugs">
+            <summary>
+            疑问药品s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugApprovalNumbers">
+            <summary>
+            药品批准文号s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugCategorys">
+            <summary>
+            药物分类s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugClinicalCategorys">
+            <summary>
+            药物临床分类s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DictionaryDosages">
+            <summary>
+            剂型s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugInfos">
+            <summary>
+            药品信息s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugInventoryRecords">
+            <summary>
+            药物库存s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugMaintainRecords">
+            <summary>
+            药品养护记录s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugMaintainRecordDetails">
+            <summary>
+            药品养护记录明细s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DictionaryMeasurementUnits">
+            <summary>
+            计量单位s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DictionaryPiecemealUnits">
+            <summary>
+            拆零单位s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DictionarySpecifications">
+            <summary>
+            药物规格s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DictionaryStorageTypes">
+            <summary>
+            储藏方式s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DictionaryUserDefinedTypes">
+            <summary>
+            用户自定义药物类型s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.AuthorizationDocs">
+            <summary>
+            授权书s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.DrugMaintainSets">
+            <summary>
+            药品养护设置s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Employees">
+            <summary>
+            员工s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.GMSPLicenseBusinessScopes">
+            <summary>
+            GMSP证书规定的经营范围s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.InventoryRecords">
+            <summary>
+            库存s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Manufacturers">
+            <summary>
+            生产厂家 s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PackagingMaterials">
+            <summary>
+            包装材质s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PackagingUnits">
+            <summary>
+            包装s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PaymentMethods">
+            <summary>
+            付款方式s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.GSPLicenses">
+            <summary>
+            药品经营许可证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.GMPLicenses">
+            <summary>
+            GMP证书s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.BusinessLicenses">
+            <summary>
+            营业执照s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.MedicineProductionLicenses">
+            <summary>
+            药品生产许可证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.MedicineBusinessLicenses">
+            <summary>
+            GSP证书s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.InstrumentsBusinessLicenses">
+            <summary>
+            器械经营许可证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.InstrumentsProductionLicenses">
+            <summary>
+            器械生产许可证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.OrganizationCodeLicenses">
+            <summary>
+            组织机构代码证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.FoodCirculateLicenses">
+            <summary>
+            食品流通许可证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.HealthLicenses">
+            <summary>
+            卫生许可证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.TaxRegisterLicenses">
+            <summary>
+            税务登记证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.LnstitutionLegalPersonLicenses">
+            <summary>
+            事业单位法人证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.MmedicalInstitutionPermits">
+            <summary>
+            医疗机构执业许可证s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.MedicalCategorys">
+            <summary>
+            医疗分类s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.MedicalCategoryDetails">
+            <summary>
+            医疗详细分类s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Modules">
+            <summary>
+            功能模块s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.ModuleCatetorys">
+            <summary>
+            功能模块分类s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.ModuleWithRoles">
+            <summary>
+            功能模块与角色的关联s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PharmacyFiles">
+            <summary>
+            文件s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseAgreements">
+            <summary>
+            采购合同s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseCheckingOrders">
+            <summary>
+            验收记录s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseCheckingOrderDetails">
+            <summary>
+            采购到货验收s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseInInventeryOrders">
+            <summary>
+            库存记录s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseInInventeryOrderDetails">
+            <summary>
+            库存记录详细s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseManageCategorys">
+            <summary>
+            管理要求分类s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseManageCategoryDetails">
+            <summary>
+            管理要求分类详细s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseOrders">
+            <summary>
+            采购单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseOrderDetails">
+            <summary>
+            采购明细s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseOrderReturns">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseOrderReturnDetails">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseReceivingOrders">
+            <summary>
+            采购收货单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseReceivingOrderDetails">
+            <summary>
+            采购收货详细单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseUnits">
+            <summary>
+            购货单位s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseUnitBuyers">
+            <summary>
+            购货单位采购人员s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseUnitDeliverers">
+            <summary>
+            购货单位提货人员s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchaseUnitTypes">
+            <summary>
+            购货单位类型s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchasingPlans">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.PurchasingPlanDetails">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Rarewords">
+            <summary>
+            不常用字(生僻字)s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.RetailMembers">
+            <summary>
+            零售会员s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.RetailOrders">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.RetailOrderDetails">
+            <summary>
+            零售单明细s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Roles">
+            <summary>
+            系统角色s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.RoleWithUsers">
+            <summary>
+            角色与用户的关联s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SalesOrders">
+            <summary>
+            销售单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SalesOrderDeliverDetails">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SalesOrderDeliverRecords">
+            <summary>
+            销售发货记录s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SalesOrderDetails">
+            <summary>
+            销售单明细s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SalesOrderReturns">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SalesOrderReturnDetails">
+            <summary>
+            s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.OutInventorys">
+            <summary>
+            销售出库单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SetSpeicalDrugRecords">
+            <summary>
+            设置重点药品记录表s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SpecialDrugCategorys">
+            <summary>
+            特殊管理药物类型s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Stores">
+            <summary>
+            门店s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SupplyPersons">
+            <summary>
+            首营药材供货人管理s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SupplyUnits">
+            <summary>
+            供货单位s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.SupplyUnitSalesmans">
+            <summary>
+            供货商销售人员s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.TaxRates">
+            <summary>
+            税率s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.UnitTypes">
+            <summary>
+            企业类型s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.UploadRecords">
+            <summary>
+            数据上传记录s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Users">
+            <summary>
+            系统用户s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.UserLogs">
+            <summary>
+            用户日志s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Vehicles">
+            <summary>
+            车辆s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.Warehouses">
+            <summary>
+            仓库s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.WarehouseZones">
+            <summary>
+            库区s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.WarehouseZonePositions">
+            <summary>
+            库位
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.WaringSets">
+            <summary>
+            报警设置s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.OutInventoryDetails">
+            <summary>
+            销售出库单s
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.Db.IndustoryProductCertificate">
+            <summary>
+            全国工业产品生产许可证
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DefaultDbInitializer">
+            <summary>
+            默认数据库初始化器
+            ef创建数据库时自动调用
+            主要功能是给某些表添加数据了。
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildBusinessTypes(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            经营方式
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildDrugClinicalCategorys(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            临床分类
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildManufacturers(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            生产产商
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildPackagingUnits(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            包装单位
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildPackagingMaterials(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            包装材质
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildPaymentMethods(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            付款方式
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildUnitTypes(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            企业类型
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildModuleCatetoriesAndModules(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            创建系统功能分类与功能
+            理论上不允许更改
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:BugsBox.Pharmacy.Repository.DefaultDbInitializer.BuildUserLogs(BugsBox.Pharmacy.Repository.Db)">
+            <summary>
+            初始化UserLogs记录
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IApprovalFlowRepository">
+            <summary>
+            审批结点仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IApprovalFlowNodeRepository">
+            <summary>
+            审批结点仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IApprovalFlowTypeRepository">
+            <summary>
+            审批流程类型仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IApprovalFlowRecordRepository">
+            <summary>
+            审批流程记录仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IBillDocumentCodeRepository">
+            <summary>
+            单据编号仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IBusinessScopeRepository">
+            <summary>
+            经营范围仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IBusinessScopeCategoryRepository">
+            <summary>
+            经营范围分类仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IBusinessTypeRepository">
+            <summary>
+            经营方式仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IBusinessTypeManageCategoryDetailRepository">
+            <summary>
+            经营方式的管理要求分类详细仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDirectSalesOrderRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDirectSalesOrderDetailRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDocumentRefuseRepository">
+            <summary>
+            收货拒收单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugsBreakageRepository">
+            <summary>
+            报损药品仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugsInventoryMoveRepository">
+            <summary>
+            移库仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugsUndeterminateRepository">
+            <summary>
+            待处理药品仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IdrugsUnqualicationRepository">
+            <summary>
+            不合格药品仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugsUnqualificationDestroyRepository">
+            <summary>
+            不合格药品销毁情况仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IEduDetailsRepository">
+            <summary>
+            培训档案细节仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IEduDocumentRepository">
+            <summary>
+            培训档案仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IGoodsAdditionalPropertyRepository">
+            <summary>
+            商品附加属性仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IHealthCheckDetailRepository">
+            <summary>
+            体检档案细节仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IHealthCheckDocumentRepository">
+            <summary>
+            体检档案仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseCashOrderRepository">
+            <summary>
+            采购结算单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDeliveryRepository">
+            <summary>
+            配送信息仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDepartmentRepository">
+            <summary>
+            部门仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDistrictRepository">
+            <summary>
+            区域仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDoubtDrugRepository">
+            <summary>
+            疑问药品仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugApprovalNumberRepository">
+            <summary>
+            药品批准文号仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugCategoryRepository">
+            <summary>
+            药物分类仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugClinicalCategoryRepository">
+            <summary>
+            药物临床分类仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDictionaryDosageRepository">
+            <summary>
+            剂型仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugInfoRepository">
+            <summary>
+            药品信息仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugInventoryRecordRepository">
+            <summary>
+            药物库存仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugMaintainRecordRepository">
+            <summary>
+            药品养护记录仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugMaintainRecordDetailRepository">
+            <summary>
+            药品养护记录明细仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDictionaryMeasurementUnitRepository">
+            <summary>
+            计量单位仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDictionaryPiecemealUnitRepository">
+            <summary>
+            拆零单位仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDictionarySpecificationRepository">
+            <summary>
+            药物规格仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDictionaryStorageTypeRepository">
+            <summary>
+            储藏方式仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDictionaryUserDefinedTypeRepository">
+            <summary>
+            用户自定义药物类型仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IAuthorizationDocRepository">
+            <summary>
+            授权书仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IDrugMaintainSetRepository">
+            <summary>
+            药品养护设置仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IEmployeeRepository">
+            <summary>
+            员工仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IGMSPLicenseBusinessScopeRepository">
+            <summary>
+            GMSP证书规定的经营范围仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IInventoryRecordRepository">
+            <summary>
+            库存仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IManufacturerRepository">
+            <summary>
+            生产厂家 仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPackagingMaterialRepository">
+            <summary>
+            包装材质仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPackagingUnitRepository">
+            <summary>
+            包装仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPaymentMethodRepository">
+            <summary>
+            付款方式仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IGSPLicenseRepository">
+            <summary>
+            药品经营许可证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IGMPLicenseRepository">
+            <summary>
+            GMP证书仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IBusinessLicenseRepository">
+            <summary>
+            营业执照仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IMedicineProductionLicenseRepository">
+            <summary>
+            药品生产许可证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IMedicineBusinessLicenseRepository">
+            <summary>
+            GSP证书仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IInstrumentsBusinessLicenseRepository">
+            <summary>
+            器械经营许可证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IInstrumentsProductionLicenseRepository">
+            <summary>
+            器械生产许可证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IOrganizationCodeLicenseRepository">
+            <summary>
+            组织机构代码证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IFoodCirculateLicenseRepository">
+            <summary>
+            食品流通许可证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IHealthLicenseRepository">
+            <summary>
+            卫生许可证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ITaxRegisterLicenseRepository">
+            <summary>
+            税务登记证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ILnstitutionLegalPersonLicenseRepository">
+            <summary>
+            事业单位法人证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IMmedicalInstitutionPermitRepository">
+            <summary>
+            医疗机构执业许可证仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IMedicalCategoryRepository">
+            <summary>
+            医疗分类仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IMedicalCategoryDetailRepository">
+            <summary>
+            医疗详细分类仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IModuleRepository">
+            <summary>
+            功能模块仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IModuleCatetoryRepository">
+            <summary>
+            功能模块分类仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IModuleWithRoleRepository">
+            <summary>
+            功能模块与角色的关联仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPharmacyFileRepository">
+            <summary>
+            文件仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseAgreementRepository">
+            <summary>
+            采购合同仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseCheckingOrderRepository">
+            <summary>
+            验收记录仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseCheckingOrderDetailRepository">
+            <summary>
+            采购到货验收仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseInInventeryOrderRepository">
+            <summary>
+            库存记录仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseInInventeryOrderDetailRepository">
+            <summary>
+            库存记录详细仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseManageCategoryRepository">
+            <summary>
+            管理要求分类仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseManageCategoryDetailRepository">
+            <summary>
+            管理要求分类详细仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseOrderRepository">
+            <summary>
+            采购单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseOrderDetailRepository">
+            <summary>
+            采购明细仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseOrderReturnRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseOrderReturnDetailRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseReceivingOrderRepository">
+            <summary>
+            采购收货单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseReceivingOrderDetailRepository">
+            <summary>
+            采购收货详细单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseUnitRepository">
+            <summary>
+            购货单位仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseUnitBuyerRepository">
+            <summary>
+            购货单位采购人员仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseUnitDelivererRepository">
+            <summary>
+            购货单位提货人员仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchaseUnitTypeRepository">
+            <summary>
+            购货单位类型仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchasingPlanRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IPurchasingPlanDetailRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IRarewordRepository">
+            <summary>
+            不常用字(生僻字)仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IRetailMemberRepository">
+            <summary>
+            零售会员仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IRetailOrderRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IRetailOrderDetailRepository">
+            <summary>
+            零售单明细仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IRoleRepository">
+            <summary>
+            系统角色仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IRoleWithUserRepository">
+            <summary>
+            角色与用户的关联仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISalesOrderRepository">
+            <summary>
+            销售单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISalesOrderDeliverDetailRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISalesOrderDeliverRecordRepository">
+            <summary>
+            销售发货记录仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISalesOrderDetailRepository">
+            <summary>
+            销售单明细仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISalesOrderReturnRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISalesOrderReturnDetailRepository">
+            <summary>
+            仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IOutInventoryRepository">
+            <summary>
+            销售出库单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISetSpeicalDrugRecordRepository">
+            <summary>
+            设置重点药品记录表仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISpecialDrugCategoryRepository">
+            <summary>
+            特殊管理药物类型仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IStoreRepository">
+            <summary>
+            门店仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISupplyPersonRepository">
+            <summary>
+            首营药材供货人管理仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISupplyUnitRepository">
+            <summary>
+            供货单位仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ISupplyUnitSalesmanRepository">
+            <summary>
+            供货商销售人员仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ITaxRateRepository">
+            <summary>
+            税率仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IUnitTypeRepository">
+            <summary>
+            企业类型仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IUploadRecordRepository">
+            <summary>
+            数据上传记录仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IUserRepository">
+            <summary>
+            系统用户仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IUserLogRepository">
+            <summary>
+            用户日志仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IVehicleRepository">
+            <summary>
+            车辆仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IWarehouseRepository">
+            <summary>
+            仓库仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IWarehouseZoneRepository">
+            <summary>
+            库区仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IWarehouseZonePositionRepository">
+            <summary>
+            库位仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IWaringSetRepository">
+            <summary>
+            报警设置仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IOutInventoryDetailRepository">
+            <summary>
+            销售出库单仓储接口
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.IIndustoryProductCertificateRepository">
+            <summary>
+            全国工业产品生产许可证
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ApprovalFlowRepository">
+            <summary>
+            审批结点仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ApprovalFlowNodeRepository">
+            <summary>
+            审批结点仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ApprovalFlowTypeRepository">
+            <summary>
+            审批流程类型仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ApprovalFlowRecordRepository">
+            <summary>
+            审批流程记录仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.BillDocumentCodeRepository">
+            <summary>
+            单据编号仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.BusinessScopeRepository">
+            <summary>
+            经营范围仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.BusinessScopeCategoryRepository">
+            <summary>
+            经营范围分类仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.BusinessTypeRepository">
+            <summary>
+            经营方式仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.BusinessTypeManageCategoryDetailRepository">
+            <summary>
+            经营方式的管理要求分类详细仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DirectSalesOrderRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DirectSalesOrderDetailRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DocumentRefuseRepository">
+            <summary>
+            收货拒收单仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugsBreakageRepository">
+            <summary>
+            报损药品仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugsInventoryMoveRepository">
+            <summary>
+            移库仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugsUndeterminateRepository">
+            <summary>
+            待处理药品仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.drugsUnqualicationRepository">
+            <summary>
+            不合格药品仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugsUnqualificationDestroyRepository">
+            <summary>
+            不合格药品销毁情况仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.EduDetailsRepository">
+            <summary>
+            培训档案细节仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.EduDocumentRepository">
+            <summary>
+            培训档案仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.GoodsAdditionalPropertyRepository">
+            <summary>
+            商品附加属性仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.HealthCheckDetailRepository">
+            <summary>
+            体检档案细节仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.HealthCheckDocumentRepository">
+            <summary>
+            体检档案仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseCashOrderRepository">
+            <summary>
+            采购结算单仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DeliveryRepository">
+            <summary>
+            配送信息仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DepartmentRepository">
+            <summary>
+            部门仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DistrictRepository">
+            <summary>
+            区域仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DoubtDrugRepository">
+            <summary>
+            疑问药品仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugApprovalNumberRepository">
+            <summary>
+            药品批准文号仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugCategoryRepository">
+            <summary>
+            药物分类仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugClinicalCategoryRepository">
+            <summary>
+            药物临床分类仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DictionaryDosageRepository">
+            <summary>
+            剂型仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugInfoRepository">
+            <summary>
+            药品信息仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugInventoryRecordRepository">
+            <summary>
+            药物库存仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugMaintainRecordRepository">
+            <summary>
+            药品养护记录仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugMaintainRecordDetailRepository">
+            <summary>
+            药品养护记录明细仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DictionaryMeasurementUnitRepository">
+            <summary>
+            计量单位仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DictionaryPiecemealUnitRepository">
+            <summary>
+            拆零单位仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DictionarySpecificationRepository">
+            <summary>
+            药物规格仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DictionaryStorageTypeRepository">
+            <summary>
+            储藏方式仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DictionaryUserDefinedTypeRepository">
+            <summary>
+            用户自定义药物类型仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.AuthorizationDocRepository">
+            <summary>
+            授权书仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.DrugMaintainSetRepository">
+            <summary>
+            药品养护设置仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.EmployeeRepository">
+            <summary>
+            员工仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.GMSPLicenseBusinessScopeRepository">
+            <summary>
+            GMSP证书规定的经营范围仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.InventoryRecordRepository">
+            <summary>
+            库存仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ManufacturerRepository">
+            <summary>
+            生产厂家 仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PackagingMaterialRepository">
+            <summary>
+            包装材质仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PackagingUnitRepository">
+            <summary>
+            包装仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PaymentMethodRepository">
+            <summary>
+            付款方式仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.GSPLicenseRepository">
+            <summary>
+            药品经营许可证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.GMPLicenseRepository">
+            <summary>
+            GMP证书仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.BusinessLicenseRepository">
+            <summary>
+            营业执照仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.MedicineProductionLicenseRepository">
+            <summary>
+            药品生产许可证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.MedicineBusinessLicenseRepository">
+            <summary>
+            GSP证书仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.InstrumentsBusinessLicenseRepository">
+            <summary>
+            器械经营许可证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.InstrumentsProductionLicenseRepository">
+            <summary>
+            器械生产许可证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.OrganizationCodeLicenseRepository">
+            <summary>
+            组织机构代码证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.FoodCirculateLicenseRepository">
+            <summary>
+            食品流通许可证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.HealthLicenseRepository">
+            <summary>
+            卫生许可证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.TaxRegisterLicenseRepository">
+            <summary>
+            税务登记证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.LnstitutionLegalPersonLicenseRepository">
+            <summary>
+            事业单位法人证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.MmedicalInstitutionPermitRepository">
+            <summary>
+            医疗机构执业许可证仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.MedicalCategoryRepository">
+            <summary>
+            医疗分类仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.MedicalCategoryDetailRepository">
+            <summary>
+            医疗详细分类仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ModuleRepository">
+            <summary>
+            功能模块仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ModuleCatetoryRepository">
+            <summary>
+            功能模块分类仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.ModuleWithRoleRepository">
+            <summary>
+            功能模块与角色的关联仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PharmacyFileRepository">
+            <summary>
+            文件仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseAgreementRepository">
+            <summary>
+            采购合同仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseCheckingOrderRepository">
+            <summary>
+            验收记录仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseCheckingOrderDetailRepository">
+            <summary>
+            采购到货验收仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseInInventeryOrderRepository">
+            <summary>
+            库存记录仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseInInventeryOrderDetailRepository">
+            <summary>
+            库存记录详细仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseManageCategoryRepository">
+            <summary>
+            管理要求分类仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseManageCategoryDetailRepository">
+            <summary>
+            管理要求分类详细仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseOrderRepository">
+            <summary>
+            采购单仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseOrderDetailRepository">
+            <summary>
+            采购明细仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseOrderReturnRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseOrderReturnDetailRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseReceivingOrderRepository">
+            <summary>
+            采购收货单仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseReceivingOrderDetailRepository">
+            <summary>
+            采购收货详细单仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseUnitRepository">
+            <summary>
+            购货单位仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseUnitBuyerRepository">
+            <summary>
+            购货单位采购人员仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseUnitDelivererRepository">
+            <summary>
+            购货单位提货人员仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchaseUnitTypeRepository">
+            <summary>
+            购货单位类型仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchasingPlanRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.PurchasingPlanDetailRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.RarewordRepository">
+            <summary>
+            不常用字(生僻字)仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.RetailMemberRepository">
+            <summary>
+            零售会员仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.RetailOrderRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.RetailOrderDetailRepository">
+            <summary>
+            零售单明细仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.RoleRepository">
+            <summary>
+            系统角色仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.RoleWithUserRepository">
+            <summary>
+            角色与用户的关联仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SalesOrderRepository">
+            <summary>
+            销售单仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SalesOrderDeliverDetailRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SalesOrderDeliverRecordRepository">
+            <summary>
+            销售发货记录仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SalesOrderDetailRepository">
+            <summary>
+            销售单明细仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SalesOrderReturnRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SalesOrderReturnDetailRepository">
+            <summary>
+            仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.OutInventoryRepository">
+            <summary>
+            销售出库单仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SetSpeicalDrugRecordRepository">
+            <summary>
+            设置重点药品记录表仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SpecialDrugCategoryRepository">
+            <summary>
+            特殊管理药物类型仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.StoreRepository">
+            <summary>
+            门店仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SupplyPersonRepository">
+            <summary>
+            首营药材供货人管理仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SupplyUnitRepository">
+            <summary>
+            供货单位仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.SupplyUnitSalesmanRepository">
+            <summary>
+            供货商销售人员仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.TaxRateRepository">
+            <summary>
+            税率仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.UnitTypeRepository">
+            <summary>
+            企业类型仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.UploadRecordRepository">
+            <summary>
+            数据上传记录仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.UserRepository">
+            <summary>
+            系统用户仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.UserLogRepository">
+            <summary>
+            用户日志仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.VehicleRepository">
+            <summary>
+            车辆仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.WarehouseRepository">
+            <summary>
+            仓库仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.WarehouseZoneRepository">
+            <summary>
+            库区仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.WarehouseZonePositionRepository">
+            <summary>
+            库位仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.WaringSetRepository">
+            <summary>
+            报警设置仓储实现
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Repository.OutInventoryDetailRepository">
+            <summary>
+            销售出库单仓储实现
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ApprovalFlowRepository">
+            <summary> 
+            审批结点(ApprovalFlow) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ApprovalFlowNodeRepository">
+            <summary> 
+            审批结点(ApprovalFlowNode) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ApprovalFlowTypeRepository">
+            <summary> 
+            审批流程类型(ApprovalFlowType) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ApprovalFlowRecordRepository">
+            <summary> 
+            审批流程记录(ApprovalFlowRecord) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.BillDocumentCodeRepository">
+            <summary> 
+            单据编号(BillDocumentCode) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.BusinessScopeRepository">
+            <summary> 
+            经营范围(BusinessScope) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.BusinessScopeCategoryRepository">
+            <summary> 
+            经营范围分类(BusinessScopeCategory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.BusinessTypeRepository">
+            <summary> 
+            经营方式(BusinessType) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.BusinessTypeManageCategoryDetailRepository">
+            <summary> 
+            经营方式的管理要求分类详细(BusinessTypeManageCategoryDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DirectSalesOrderRepository">
+            <summary> 
+            (DirectSalesOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DirectSalesOrderDetailRepository">
+            <summary> 
+            (DirectSalesOrderDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DocumentRefuseRepository">
+            <summary> 
+            收货拒收单(DocumentRefuse) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugsBreakageRepository">
+            <summary> 
+            报损药品(DrugsBreakage) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugsInventoryMoveRepository">
+            <summary> 
+            移库(DrugsInventoryMove) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugsUndeterminateRepository">
+            <summary> 
+            待处理药品(DrugsUndeterminate) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.drugsUnqualicationRepository">
+            <summary> 
+            不合格药品(drugsUnqualication) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugsUnqualificationDestroyRepository">
+            <summary> 
+            不合格药品销毁情况(DrugsUnqualificationDestroy) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.EduDetailsRepository">
+            <summary> 
+            培训档案细节(EduDetails) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.EduDocumentRepository">
+            <summary> 
+            培训档案(EduDocument) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.GoodsAdditionalPropertyRepository">
+            <summary> 
+            商品附加属性(GoodsAdditionalProperty) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.HealthCheckDetailRepository">
+            <summary> 
+            体检档案细节(HealthCheckDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.HealthCheckDocumentRepository">
+            <summary> 
+            体检档案(HealthCheckDocument) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseCashOrderRepository">
+            <summary> 
+            采购结算单(PurchaseCashOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DeliveryRepository">
+            <summary> 
+            配送信息(Delivery) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DepartmentRepository">
+            <summary> 
+            部门(Department) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DistrictRepository">
+            <summary> 
+            区域(District) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DoubtDrugRepository">
+            <summary> 
+            疑问药品(DoubtDrug) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugApprovalNumberRepository">
+            <summary> 
+            药品批准文号(DrugApprovalNumber) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugCategoryRepository">
+            <summary> 
+            药物分类(DrugCategory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugClinicalCategoryRepository">
+            <summary> 
+            药物临床分类(DrugClinicalCategory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DictionaryDosageRepository">
+            <summary> 
+            剂型(DictionaryDosage) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugInfoRepository">
+            <summary> 
+            药品信息(DrugInfo) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugInventoryRecordRepository">
+            <summary> 
+            药物库存(DrugInventoryRecord) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugMaintainRecordRepository">
+            <summary> 
+            药品养护记录(DrugMaintainRecord) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugMaintainRecordDetailRepository">
+            <summary> 
+            药品养护记录明细(DrugMaintainRecordDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DictionaryMeasurementUnitRepository">
+            <summary> 
+            计量单位(DictionaryMeasurementUnit) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DictionaryPiecemealUnitRepository">
+            <summary> 
+            拆零单位(DictionaryPiecemealUnit) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DictionarySpecificationRepository">
+            <summary> 
+            药物规格(DictionarySpecification) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DictionaryStorageTypeRepository">
+            <summary> 
+            储藏方式(DictionaryStorageType) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DictionaryUserDefinedTypeRepository">
+            <summary> 
+            用户自定义药物类型(DictionaryUserDefinedType) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.AuthorizationDocRepository">
+            <summary> 
+            授权书(AuthorizationDoc) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.DrugMaintainSetRepository">
+            <summary> 
+            药品养护设置(DrugMaintainSet) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.EmployeeRepository">
+            <summary> 
+            员工(Employee) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.GMSPLicenseBusinessScopeRepository">
+            <summary> 
+            GMSP证书规定的经营范围(GMSPLicenseBusinessScope) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.InventoryRecordRepository">
+            <summary> 
+            库存(InventoryRecord) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ManufacturerRepository">
+            <summary> 
+            生产厂家 (Manufacturer) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PackagingMaterialRepository">
+            <summary> 
+            包装材质(PackagingMaterial) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PackagingUnitRepository">
+            <summary> 
+            包装(PackagingUnit) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PaymentMethodRepository">
+            <summary> 
+            付款方式(PaymentMethod) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.GSPLicenseRepository">
+            <summary> 
+            药品经营许可证(GSPLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.GMPLicenseRepository">
+            <summary> 
+            GMP证书(GMPLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.BusinessLicenseRepository">
+            <summary> 
+            营业执照(BusinessLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.MedicineProductionLicenseRepository">
+            <summary> 
+            药品生产许可证(MedicineProductionLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.MedicineBusinessLicenseRepository">
+            <summary> 
+            GSP证书(MedicineBusinessLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.InstrumentsBusinessLicenseRepository">
+            <summary> 
+            器械经营许可证(InstrumentsBusinessLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.InstrumentsProductionLicenseRepository">
+            <summary> 
+            器械生产许可证(InstrumentsProductionLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.OrganizationCodeLicenseRepository">
+            <summary> 
+            组织机构代码证(OrganizationCodeLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.FoodCirculateLicenseRepository">
+            <summary> 
+            食品流通许可证(FoodCirculateLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.HealthLicenseRepository">
+            <summary> 
+            卫生许可证(HealthLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.TaxRegisterLicenseRepository">
+            <summary> 
+            税务登记证(TaxRegisterLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.LnstitutionLegalPersonLicenseRepository">
+            <summary> 
+            事业单位法人证(LnstitutionLegalPersonLicense) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.MmedicalInstitutionPermitRepository">
+            <summary> 
+            医疗机构执业许可证(MmedicalInstitutionPermit) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.MedicalCategoryRepository">
+            <summary> 
+            医疗分类(MedicalCategory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.MedicalCategoryDetailRepository">
+            <summary> 
+            医疗详细分类(MedicalCategoryDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ModuleRepository">
+            <summary> 
+            功能模块(Module) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ModuleCatetoryRepository">
+            <summary> 
+            功能模块分类(ModuleCatetory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.ModuleWithRoleRepository">
+            <summary> 
+            功能模块与角色的关联(ModuleWithRole) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PharmacyFileRepository">
+            <summary> 
+            文件(PharmacyFile) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseAgreementRepository">
+            <summary> 
+            采购合同(PurchaseAgreement) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseCheckingOrderRepository">
+            <summary> 
+            验收记录(PurchaseCheckingOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseCheckingOrderDetailRepository">
+            <summary> 
+            采购到货验收(PurchaseCheckingOrderDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseInInventeryOrderRepository">
+            <summary> 
+            库存记录(PurchaseInInventeryOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseInInventeryOrderDetailRepository">
+            <summary> 
+            库存记录详细(PurchaseInInventeryOrderDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseManageCategoryRepository">
+            <summary> 
+            管理要求分类(PurchaseManageCategory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseManageCategoryDetailRepository">
+            <summary> 
+            管理要求分类详细(PurchaseManageCategoryDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseOrderRepository">
+            <summary> 
+            采购单(PurchaseOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseOrderDetailRepository">
+            <summary> 
+            采购明细(PurchaseOrderDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseOrderReturnRepository">
+            <summary> 
+            (PurchaseOrderReturn) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseOrderReturnDetailRepository">
+            <summary> 
+            (PurchaseOrderReturnDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseReceivingOrderRepository">
+            <summary> 
+            采购收货单(PurchaseReceivingOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseReceivingOrderDetailRepository">
+            <summary> 
+            采购收货详细单(PurchaseReceivingOrderDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseUnitRepository">
+            <summary> 
+            购货单位(PurchaseUnit) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseUnitBuyerRepository">
+            <summary> 
+            购货单位采购人员(PurchaseUnitBuyer) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseUnitDelivererRepository">
+            <summary> 
+            购货单位提货人员(PurchaseUnitDeliverer) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchaseUnitTypeRepository">
+            <summary> 
+            购货单位类型(PurchaseUnitType) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchasingPlanRepository">
+            <summary> 
+            (PurchasingPlan) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.PurchasingPlanDetailRepository">
+            <summary> 
+            (PurchasingPlanDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.RarewordRepository">
+            <summary> 
+            不常用字(生僻字)(Rareword) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.RetailMemberRepository">
+            <summary> 
+            零售会员(RetailMember) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.RetailOrderRepository">
+            <summary> 
+            (RetailOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.RetailOrderDetailRepository">
+            <summary> 
+            零售单明细(RetailOrderDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.RoleRepository">
+            <summary> 
+            系统角色(Role) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.RoleWithUserRepository">
+            <summary> 
+            角色与用户的关联(RoleWithUser) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SalesOrderRepository">
+            <summary> 
+            销售单(SalesOrder) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SalesOrderDeliverDetailRepository">
+            <summary> 
+            (SalesOrderDeliverDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SalesOrderDeliverRecordRepository">
+            <summary> 
+            销售发货记录(SalesOrderDeliverRecord) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SalesOrderDetailRepository">
+            <summary> 
+            销售单明细(SalesOrderDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SalesOrderReturnRepository">
+            <summary> 
+            (SalesOrderReturn) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SalesOrderReturnDetailRepository">
+            <summary> 
+            (SalesOrderReturnDetail) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.OutInventoryRepository">
+            <summary> 
+            销售出库单(OutInventory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SetSpeicalDrugRecordRepository">
+            <summary> 
+            设置重点药品记录表(SetSpeicalDrugRecord) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SpecialDrugCategoryRepository">
+            <summary> 
+            特殊管理药物类型(SpecialDrugCategory) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.StoreRepository">
+            <summary> 
+            门店(Store) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SupplyPersonRepository">
+            <summary> 
+            首营药材供货人管理(SupplyPerson) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SupplyUnitRepository">
+            <summary> 
+            供货单位(SupplyUnit) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.SupplyUnitSalesmanRepository">
+            <summary> 
+            供货商销售人员(SupplyUnitSalesman) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.TaxRateRepository">
+            <summary> 
+            税率(TaxRate) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.UnitTypeRepository">
+            <summary> 
+            企业类型(UnitType) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.UploadRecordRepository">
+            <summary> 
+            数据上传记录(UploadRecord) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.UserRepository">
+            <summary> 
+            系统用户(User) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.UserLogRepository">
+            <summary> 
+            用户日志(UserLog) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.VehicleRepository">
+            <summary> 
+            车辆(Vehicle) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.WarehouseRepository">
+            <summary> 
+            仓库(Warehouse) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.WarehouseZoneRepository">
+            <summary> 
+            库区(WarehouseZone) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.WaringSetRepository">
+            <summary> 
+            报警设置(WaringSet) 仓储对象
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Repository.RepositoryProvider.OutInventoryDetailRepository">
+            <summary> 
+            销售出库单(OutInventoryDetail) 仓储对象
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsSalesOrder" targetNamespace="http://tempuri.org/DsSalesOrder.xsd" xmlns:mstns="http://tempuri.org/DsSalesOrder.xsd" xmlns="http://tempuri.org/DsSalesOrder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="pharmacy_2013_08_14_2152ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="pharmacy_2013_08_14_2152ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BugsBox.Pharmacy.AppClient.Properties.Settings.GlobalReference.Default.pharmacy_2013_08_14_2152ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsSalesOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsSalesOrder" msprop:Generator_UserDSName="DsSalesOrder">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="table" msprop:Generator_TableClassName="tableDataTable" msprop:Generator_TableVarName="tabletable" msprop:Generator_TablePropName="table" msprop:Generator_RowDeletingName="tableRowDeleting" msprop:Generator_RowChangingName="tableRowChanging" msprop:Generator_RowEvHandlerName="tableRowChangeEventHandler" msprop:Generator_RowDeletedName="tableRowDeleted" msprop:Generator_UserTableName="table" msprop:Generator_RowChangedName="tableRowChanged" msprop:Generator_RowEvArgName="tableRowChangeEvent" msprop:Generator_RowClassName="tableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="商品名称" msprop:Generator_ColumnVarNameInTable="column商品名称" msprop:Generator_ColumnPropNameInRow="商品名称" msprop:Generator_ColumnPropNameInTable="商品名称Column" msprop:Generator_UserColumnName="商品名称" type="xs:string" minOccurs="0" />
+              <xs:element name="剂型" msprop:Generator_ColumnVarNameInTable="column剂型" msprop:Generator_ColumnPropNameInRow="剂型" msprop:Generator_ColumnPropNameInTable="剂型Column" msprop:Generator_UserColumnName="剂型" type="xs:string" minOccurs="0" />
+              <xs:element name="规格" msprop:Generator_ColumnVarNameInTable="column规格" msprop:Generator_ColumnPropNameInRow="规格" msprop:Generator_ColumnPropNameInTable="规格Column" msprop:Generator_UserColumnName="规格" type="xs:string" minOccurs="0" />
+              <xs:element name="生产厂商" msprop:Generator_ColumnVarNameInTable="column生产厂商" msprop:Generator_ColumnPropNameInRow="生产厂商" msprop:Generator_ColumnPropNameInTable="生产厂商Column" msprop:Generator_UserColumnName="生产厂商" type="xs:string" minOccurs="0" />
+              <xs:element name="批号" msprop:Generator_ColumnVarNameInTable="column批号" msprop:Generator_ColumnPropNameInRow="批号" msprop:Generator_ColumnPropNameInTable="批号Column" msprop:Generator_UserColumnName="批号" type="xs:string" minOccurs="0" />
+              <xs:element name="有效期至" msprop:Generator_ColumnVarNameInTable="column有效期至" msprop:Generator_ColumnPropNameInRow="有效期至" msprop:Generator_ColumnPropNameInTable="有效期至Column" msprop:Generator_UserColumnName="有效期至" type="xs:string" minOccurs="0" />
+              <xs:element name="单位" msprop:Generator_ColumnVarNameInTable="column单位" msprop:Generator_ColumnPropNameInRow="单位" msprop:Generator_ColumnPropNameInTable="单位Column" msprop:Generator_UserColumnName="单位" type="xs:string" minOccurs="0" />
+              <xs:element name="数量" msprop:Generator_ColumnVarNameInTable="column数量" msprop:Generator_ColumnPropNameInRow="数量" msprop:Generator_ColumnPropNameInTable="数量Column" msprop:Generator_UserColumnName="数量" type="xs:short" minOccurs="0" />
+              <xs:element name="单价" msprop:Generator_ColumnVarNameInTable="column单价" msprop:Generator_ColumnPropNameInRow="单价" msprop:Generator_ColumnPropNameInTable="单价Column" msprop:Generator_UserColumnName="单价" type="xs:decimal" minOccurs="0" />
+              <xs:element name="金额" msprop:Generator_ColumnVarNameInTable="column金额" msprop:Generator_ColumnPropNameInRow="金额" msprop:Generator_ColumnPropNameInTable="金额Column" msprop:Generator_UserColumnName="金额" type="xs:decimal" minOccurs="0" />
+              <xs:element name="质量状况" msprop:Generator_ColumnVarNameInTable="column质量状况" msprop:Generator_ColumnPropNameInRow="质量状况" msprop:Generator_ColumnPropNameInTable="质量状况Column" msprop:Generator_UserColumnName="质量状况" type="xs:string" minOccurs="0" />
+              <xs:element name="序号" msprop:Generator_ColumnVarNameInTable="column序号" msprop:Generator_ColumnPropNameInRow="序号" msprop:Generator_ColumnPropNameInTable="序号Column" msprop:Generator_UserColumnName="序号" type="xs:string" minOccurs="0" />
+              <xs:element name="通用名称" msprop:Generator_ColumnVarNameInTable="column通用名称" msprop:Generator_ColumnPropNameInRow="通用名称" msprop:Generator_ColumnPropNameInTable="通用名称Column" msprop:Generator_UserColumnName="通用名称" type="xs:string" minOccurs="0" />
+              <xs:element name="退货单位" msprop:Generator_ColumnVarNameInTable="column退货单位" msprop:Generator_ColumnPropNameInRow="退货单位" msprop:Generator_ColumnPropNameInTable="退货单位Column" msprop:Generator_UserColumnName="退货单位" type="xs:string" minOccurs="0" />
+              <xs:element name="销售单据号码" msprop:Generator_ColumnVarNameInTable="column销售单据号码" msprop:Generator_ColumnPropNameInRow="销售单据号码" msprop:Generator_ColumnPropNameInTable="销售单据号码Column" msprop:Generator_UserColumnName="销售单据号码" type="xs:string" minOccurs="0" />
+              <xs:element name="供货单位" msprop:Generator_ColumnVarNameInTable="column供货单位" msprop:Generator_ColumnPropNameInRow="供货单位" msprop:Generator_ColumnPropNameInTable="供货单位Column" msprop:Generator_UserColumnName="供货单位" type="xs:string" minOccurs="0" />
+              <xs:element name="供货日期" msprop:Generator_ColumnVarNameInTable="column供货日期" msprop:Generator_ColumnPropNameInRow="供货日期" msprop:Generator_ColumnPropNameInTable="供货日期Column" msprop:Generator_UserColumnName="供货日期" type="xs:string" minOccurs="0" />
+              <xs:element name="购货单位" msprop:Generator_ColumnVarNameInTable="column购货单位" msprop:Generator_ColumnPropNameInRow="购货单位" msprop:Generator_ColumnPropNameInTable="购货单位Column" msprop:Generator_UserColumnName="购货单位" type="xs:string" minOccurs="0" />
+              <xs:element name="销售日期" msprop:Generator_ColumnVarNameInTable="column销售日期" msprop:Generator_ColumnPropNameInRow="销售日期" msprop:Generator_ColumnPropNameInTable="销售日期Column" msprop:Generator_UserColumnName="销售日期" type="xs:string" minOccurs="0" />
+              <xs:element name="批准文号" msprop:Generator_ColumnVarNameInTable="column批准文号" msprop:Generator_ColumnPropNameInRow="批准文号" msprop:Generator_ColumnPropNameInTable="批准文号Column" msprop:Generator_UserColumnName="批准文号" type="xs:string" minOccurs="0" />
+              <xs:element name="验收结论" msprop:Generator_ColumnVarNameInTable="column验收结论" msprop:Generator_ColumnPropNameInRow="验收结论" msprop:Generator_ColumnPropNameInTable="验收结论Column" msprop:Generator_UserColumnName="验收结论" type="xs:string" minOccurs="0" />
+              <xs:element name="单据编号" msprop:Generator_ColumnVarNameInTable="column单据编号" msprop:Generator_ColumnPropNameInRow="单据编号" msprop:Generator_ColumnPropNameInTable="单据编号Column" msprop:Generator_UserColumnName="单据编号" type="xs:string" minOccurs="0" />
+              <xs:element name="验收日期" msprop:Generator_ColumnVarNameInTable="column验收日期" msprop:Generator_ColumnPropNameInRow="验收日期" msprop:Generator_ColumnPropNameInTable="验收日期Column" msprop:Generator_UserColumnName="验收日期" type="xs:string" minOccurs="0" />
+              <xs:element name="验收员" msprop:Generator_ColumnVarNameInTable="column验收员" msprop:Generator_ColumnPropNameInRow="验收员" msprop:Generator_ColumnPropNameInTable="验收员Column" msprop:Generator_UserColumnName="验收员" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

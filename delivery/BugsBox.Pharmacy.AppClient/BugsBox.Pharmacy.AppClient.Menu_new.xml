@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MenusGroup>
+  <!--DockState: left,right,top,bottom,中间则不填-->
+  <Menu id="0" Title="东青医药经营管理系统" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+    <Menu id="0101" Title="机构人员管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="010101" Title="部门设置" Hotkeys="" Name="UI.Forms.Sys.FormDepartment" Image="" Params="" DockState="" ModuleKey="部门设置[窗体]"></Menu>
+      <Menu id="010102" Title="企业员工档案" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="Employee,Number|Name" DockState="" ModuleKey="员工录入[窗体]"></Menu>
+      <Menu id="010103" Title="健康检查档案" Hotkeys="" Name="UI.Forms.DocumentManage.FormHealthCheckDoc" Image="" Params="" DockState="" ModuleKey="体检档案管理[窗体]"></Menu>
+      <Menu id="010104" Title="教育培训档案" Hotkeys="" Name="UI.Forms.DocumentManage.FormEduDoc" Image="" Params="" DockState="" ModuleKey="培训档案管理[窗体]"></Menu>
+    </Menu>
+    <Menu id="02" Title="锁定管理" Hotkeys="L" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="0201" Title="药品批次锁定" Hotkeys="" Name="UI.Forms.DrugBusiness.FormDoubtDrugManage" Image="" Params="" DockState="" ModuleKey="药品批次锁定管理[窗体]"></Menu>
+      <Menu id="0202" Title="品种锁定" Hotkeys="" Name="UI.Forms.BaseDataManage.FormDrugInfoUnlock" Image="" Params="" DockState="" ModuleKey="药品锁定[窗体]"></Menu>
+      <Menu id="0203" Title="供应商锁定" Hotkeys="" Name="UI.Forms.BaseDataManage.FormSupplyUnitUnlock" Image="" Params="" DockState="" ModuleKey="供应商锁定[窗体]"></Menu>
+      <Menu id="0204" Title="客户锁定" Hotkeys="" Name="UI.Forms.BaseDataManage.FormPurchaseUnitUnlock" Image="" Params="" DockState="" ModuleKey="客户锁定[窗体]"></Menu>
+    </Menu>
+    <Menu id="03" Title="业务管理" Hotkeys="P" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="0311" Title="首营信息管理" Hotkeys="P" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="01020101" Title="首营供货商录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormSupplyUnit" Image="" Params="0" DockState="" ModuleKey="首营供货商录入[窗体]"></Menu>
+        <Menu id="01020103" Title="首营药材供货人管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="SupplyPerson,Name|IDNumber" DockState="" ModuleKey="首营药材供货人管理[窗体]"></Menu>
+        <Menu id="01030101" Title="首营客户录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormPurchaseUnit" Image="" Params="0" DockState="" ModuleKey="首营客户录入[窗体]"></Menu>
+        <Menu id="0104011" Title="首营品种录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormDrugInfo" Image="" Params="0" DockState="" ModuleKey="首营药品录入[窗体]"></Menu>
+        <Menu id="010501" Title="首营医疗器械录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormInstrument" Image="" Params="" DockState="" ModuleKey="首营药品录入[窗体]"></Menu>
+        <Menu id="010601" Title="首营保健食品录入" Hotkeys="" Name="UI.Forms.BaseDataManage.FormFood" Image="" Params="" DockState="" ModuleKey="首营药品录入[窗体]"></Menu>
+      </Menu>
+      <Menu id="0300" Title="配送入库管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="0302" Title="配送入库订单" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderGenerator" Image="" Params="" DockState="" ModuleKey="药品采购[窗体]"></Menu>
+        <Menu id="0303" Title="配送入库审核" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderWaittingList" Image="" Params="" DockState="" ModuleKey="待审采购单[窗体]"></Menu>
+        <Menu id="0304" Title="配送入库记录修改通知" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderWaittingList" Image="" Params="" DockState="" ModuleKey="待审采购单[窗体]"></Menu>
+        <Menu id="0305" Title="配送入库记录修改审核" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderApprovaledList" Image="" Params="diff" DockState="" ModuleKey="采购记录[窗体]"></Menu>
+      </Menu>
+      <Menu id="0301" Title="配送出库管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="0501" Title="配送出库订单" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderEdit" Image="" Params="" DockState="" ModuleKey="新建销售单[窗体]"></Menu>
+        <Menu id="050601" Title="配送出库审核" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Image="" Params="Waitting" DockState="" ModuleKey="销售审核[窗体]"></Menu>
+        <Menu id="0502" Title="配送出库订单查询" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderIndex" Image="" Params="" DockState="" ModuleKey="销售订单查询[窗体]"></Menu>
+      </Menu>
+      <Menu id="0504" Title="商品其他信息设置及修改" Hotkeys="" Name="UI.Forms.BaseDataManage.FormDrugOtherInfor" Image="" Params="" DockState="" ModuleKey="商品其他信息设置及修改[窗体]"></Menu>
+    </Menu>
+    <Menu id="04" Title="仓储管理" Hotkeys="W" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="0303" Title="收货管理" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderApprovaledList" Image="" Params="" DockState="" ModuleKey="采购记录[窗体]"></Menu>
+      <Menu id="0305" Title="拒收报告审核" Hotkeys="" Name="UI.Forms.DrugsUndeterminte.PurchaseRefuse" Image="" Params="" DockState="" ModuleKey="拒收单审核[窗体]"></Menu>
+      <Menu id="0305" Title="入库管理" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseCheckingOrder" DockState="" ModuleKey="验收记录[窗体]"></Menu>
+      <Menu id="0306" Title="入库记录查询" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseInInventeryOrder" DockState="" ModuleKey="入库记录查询[窗体]"></Menu>
+      <Menu id="0401" Title="库存损溢处理" Hotkeys="" Name="UI.Forms.Storage.StorageQuery" Image="" Params="ProfitOrLoss" DockState="" ModuleKey="库存损溢处理[窗体]"></Menu>
+      <Menu id="0402" Title="可用库存" Hotkeys="" Name="UI.Forms.Storage.StorageQuery" Image="" Params="CanUse" DockState="" ModuleKey="可用库存[窗体]"></Menu>
+      <Menu id="050603" Title="出库拣货" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Image="" Params="Banlaced" DockState="" ModuleKey="出库拣货[窗体]"></Menu>
+      <Menu id="050604" Title="出库复核" Hotkeys="" Name="UI.Forms.SalesBusiness.FormOutInventoryCenter" Image="" Params="Outing" DockState="" ModuleKey="出库复核[窗体]"></Menu>
+      <Menu id="050604" Title="特殊管理药品二次复核" Hotkeys="" Name="UI.Forms.SalesBusiness.FormOutInventoryCenter" Image="" Params="important" DockState="" ModuleKey="特殊管理药品二次复核[窗体]"></Menu>
+      <Menu id="050605" Title="配送受理" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryCenter" Image="" Params="Reservation" DockState="" ModuleKey="配送受理[窗体]"></Menu>
+      <Menu id="050606" Title="配送出库" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryCenter" Image="" Params="Accepted" DockState="" ModuleKey="配送出库[窗体]"></Menu>
+      <Menu id="050607" Title="配送签收" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryCenter" Image="" Params="Outed" DockState="" ModuleKey="配送签收[窗体]"></Menu>
+      <Menu id="050612" Title="配送出库退货出入库处理" Hotkeys="" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Image="" Params="" DockState="" ModuleKey="销退出入库处理[窗体]"></Menu>
+      <Menu id="0505" Title="配送查询" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryIndex" Image="" Params="" DockState="" ModuleKey="配送查询[窗体]"></Menu>
+      <Menu id="05061666" Title="库存盘点" Hotkeys="" Name="UI.Forms.Storage.FormStorageChecking" Image="" Params="" DockState="" ModuleKey="库存盘点[窗体]"></Menu>
+      <Menu id="05056666" Title="电子监管码查询" Hotkeys="" Name="UI.Forms.BaseForm.FormDZJGM" Image="" Params="" DockState="" ModuleKey="电子监管码查询[窗体]"></Menu>
+      <Menu id="0403" Title="养护管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="040301" Title="养护设置" Hotkeys="" Name="UI.Forms.DrugMaintain.DrugMaintainSetForm" Image="" Params="" DockState="" ModuleKey="养护设置[窗体]"></Menu>
+        <Menu id="040302" Title="药品养护管理" Hotkeys="" Name="UI.Forms.DrugMaintain.DrugMaintainRecord" Image="" Params="" DockState="" ModuleKey="养护管理[窗体]"></Menu>
+        <Menu id="040304" Title="近效期品种查询" Hotkeys="" Name="UI.Forms.DrugMaintain.SignDrugAsSpecial" Image="" Params="" DockState="" ModuleKey="近效期品种查询[窗体]"></Menu>
+      </Menu>
+    </Menu>
+    <Menu id="05" Title="质量管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="060612" Title="首营信息质量管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="01020102" Title="首营企业审批" Hotkeys="" Name="UI.Forms.Approval.FormApprovalFlowCenter" Image="" Params="1,6,9" DockState="" ModuleKey="首营供货商审批[窗体]"></Menu>
+        <Menu id="010204" Title="货主单位查询与维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormSupplyUnit" Image="" Params="2" DockState="" ModuleKey="供货商查询[窗体]"></Menu>
+        <Menu id="01030102" Title="收货单位审批" Hotkeys="" Name="UI.Forms.Approval.FormApprovalFlowCenter" Image="" Params="2,5,8" DockState="" ModuleKey="首营客户审批[窗体]"></Menu>
+        <Menu id="010305" Title="收货单位查询与维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormPurchaseUnit" Image="" Params="2" DockState="" ModuleKey="客户查询[窗体]"></Menu>
+        <Menu id="010401" Title="首营品种审批" Hotkeys="" Name="UI.Forms.Approval.FormApprovalFlowCenter" Image="" Params="3,4,7" DockState="" ModuleKey="首营药品审批[窗体]"></Menu>
+        <Menu id="010404" Title="品种质量档案维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormDrugInfo" Image="" Params="2" DockState="" ModuleKey="药品信息查询[窗体]"></Menu>
+        <Menu id="010404" Title="医疗器械质量档案维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormInstrumentsQuery" Image="" Params="" DockState="" ModuleKey="药品信息查询[窗体]"></Menu>
+        <Menu id="010405" Title="保健食品质量档案维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormFoodQuery" Image="" Params="" DockState="" ModuleKey="药品信息查询[窗体]"></Menu>
+
+      </Menu>
+      <Menu id="060612" Title="验收与质量审核" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="0304" Title="验收管理" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseReceivingOrder" DockState="" ModuleKey="采购收货单[窗体]"></Menu>
+        <Menu id="100102" Title="不合格药品审核" Hotkeys="" Name="UI.Forms.Approval.FormApprovalFlowCenter" Image="" Params="10" DockState="" ModuleKey="不合格药品审核[窗体]"></Menu>
+        <Menu id="06061201" Title="待处理药品质管员复核" Hotkeys="" Name="UI.Forms.DrugsUndeterminte.DrugsUndeterminte" Image="" Params="0" DockState="" ModuleKey="待处理药品质管员复核[窗体]"></Menu>
+        <Menu id="06061202" Title="待处理药品质管部复核结论" Hotkeys="" Name="UI.Forms.DrugsUndeterminte.DrugsUndeterminte" Image="" Params="1" DockState="" ModuleKey="待处理药品质管部复核结论[窗体]"></Menu>
+      </Menu>
+    </Menu>
+    <Menu id="0107" Title="信息查询" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="010701" Title="日志查询" Hotkeys="" Name="UI.Forms.BaseDataManage.FormUserLogQuery" Image="" Params="" DockState="" ModuleKey="日志查询[窗体]"></Menu>
+      <Menu id="01070201" Title="证照过期查询" Hotkeys="" Name="UI.Forms.OutdateBusiness.FormPharmacyLicense" Image="" Params="" DockState="" ModuleKey="证照过期查询[窗体]"></Menu>
+      <Menu id="01070202" Title="人员过期查询" Hotkeys="" Name="UI.Forms.OutdateBusiness.FormPerson" Image="" Params="" DockState="" ModuleKey="人员过期查询[窗体]"></Menu>
+      <Menu id="0902" Title="配送入库记录" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="090201" Title="配送入库订单查询" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderList" Image="" Params="Search" DockState="" ModuleKey="采购记录[窗体]"></Menu>
+        <Menu id="090202" Title="配送入库记录查询" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="CGJL" DockState="" ModuleKey="采购记录[窗体]"></Menu>
+        <Menu id="090203" Title="中药材配送入库记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="ZYCCGJL" DockState="" ModuleKey="中药材采购记录[窗体]"></Menu>
+        <Menu id="090204" Title="中药饮片配送入库记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="ZYYPCGJL" DockState="" ModuleKey="中药饮片采购记录[窗体]"></Menu>
+        <Menu id="090204" Title="医疗器械配送入库记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="YLQXCGJL" DockState="" ModuleKey="采购记录[窗体]"></Menu>
+      </Menu>
+      <Menu id="0903" Title="收货与验收记录" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="090301" Title="收货记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="SHJL" DockState="" ModuleKey="收货记录[窗体]"></Menu>
+        <Menu id="090302" Title="拒收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="JSJL" DockState="" ModuleKey="拒收记录[窗体]"></Menu>
+        <Menu id="090303" Title="验收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="YSJL" DockState="" ModuleKey="验收记录[窗体]"></Menu>
+        <Menu id="090304" Title="中药材验收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="ZYCYSJL" DockState="" ModuleKey="中药材验收记录[窗体]"></Menu>
+        <Menu id="090305" Title="中药饮片验收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="ZYYPYSJL" DockState="" ModuleKey="中药饮片验收记录[窗体]"></Menu>
+        <Menu id="090204" Title="医疗器械验收记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="YLQXYSJL" DockState="" ModuleKey="验收记录[窗体]"></Menu>
+
+      </Menu>
+      <Menu id="0904" Title="配送出库查询" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="090400" Title="配送出库订单查询" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderCreateIndex" Image="" Params="" DockState="" ModuleKey="订单查询[窗体]"></Menu>
+        <Menu id="090401" Title="品种配送出库记录" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderRecordIndex" Image="" Params="" DockState="" ModuleKey="药品销售记录[窗体]"></Menu>
+        <Menu id="090401-1" Title="医疗器械配送出库记录" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderRecordIndex" Image="" Params="ylqx" DockState="" ModuleKey="药品销售记录[窗体]"></Menu>
+        <Menu id="090408" Title="出库拣货记录查询" Hotkeys="" Name="UI.Forms.SalesBusiness.FormOutInventorySearch" Image="" Params="Outing" DockState="" ModuleKey="出库记录查询[窗体]"></Menu>
+        <Menu id="090409" Title="出库复核记录查询" Hotkeys="" Name="UI.Forms.SalesBusiness.FormOutInventorySearch" Image="" Params="Outed" DockState="" ModuleKey="出库审核记录查询[窗体]"></Menu>
+        <Menu id="090410" Title="配送查询" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryIndex" Image="" Params="" DockState="" ModuleKey="配送查询[窗体]"></Menu>
+        <Menu id="090414" Title="配送销退记录查询" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliverySearch" Image="" Params="Return" DockState="" ModuleKey="配送销退记录查询[窗体]"></Menu>
+      </Menu>
+
+    </Menu>
+    <Menu id="08" Title="系统管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="0802" Title="用户管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="User,Account" DockState="" ModuleKey="用户管理[窗体]"></Menu>
+      <Menu id="0801" Title="岗位权限管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="080101" Title="岗位管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="Role" DockState="" ModuleKey="角色管理[窗体]"></Menu>
+        <Menu id="080103" Title="岗位权限管理" Hotkeys="" Name="UI.Forms.Sys.FormModuleWithRole" Image="" Params="" DockState="" ModuleKey="角色权限管理[窗体]"></Menu>
+        <Menu id="080102" Title="岗位关联用户" Hotkeys="" Name="UI.Forms.BaseDataManage.FormRoleWithUser" Image="" Params="" DockState="" ModuleKey="角色关联用户[窗体]"></Menu>
+      </Menu>
+      <Menu id="0803" Title="审批流程管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="080301" Title="流程管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="ApprovalFlowType,Name" DockState="" ModuleKey="流程管理[窗体]"></Menu>
+        <Menu id="080302" Title="流程节点管理" Hotkeys="" Name="UI.Forms.BaseDataManage.FormApprovalManager" Image="" Params="" DockState="" ModuleKey="流程节点管理[窗体]"></Menu>
+      </Menu>
+      <Menu id="0803" Title="系统信息管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+        <Menu id="0405000001" Title="运输工具管理" Hotkeys="" Name="UI.Forms.BaseDataManage.FormVehicle" Image="" Params="" DockState="" ModuleKey="运输工具[窗体]"></Menu>
+        <Menu id="010601" Title="仓库管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="Warehouse" DockState="" ModuleKey="仓库管理[窗体]"></Menu>
+        <Menu id="010602" Title="库区管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="WarehouseZone" DockState="" ModuleKey="库区管理[窗体]"></Menu>
+
+        <Menu id="01060201" Title="货位管理" Hotkeys="" Name="UI.Forms.BaseDataManage.FormWareHouseZonePosition" Image="" Params="" DockState="" ModuleKey="库区管理[窗体]"></Menu>
+
+        <Menu id="0805" Title="区域管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="District" DockState="" ModuleKey="区域管理[窗体]"></Menu>
+        <Menu id="0806" Title="不常用字管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="Rareword,PinYin" DockState="" ModuleKey="不常用字管理[窗体]"></Menu>
+        <Menu id="0815" Title="药品经营范围管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="BusinessScope,Name" DockState="" ModuleKey="药品经营范围管理[窗体]"></Menu>
+        <Menu id="0807" Title="经营方式" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="BusinessType,Name|UnitTypeId,Add|Search" DockState="" ModuleKey="经营方式[窗体]"></Menu>
+        <Menu id="0808" Title="企业类型" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="UnitType,Name,Add|Search" DockState="" ModuleKey="企业类型[窗体]"></Menu>
+        <Menu id="0809" Title="药物分类管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="DrugCategory,Name|Code,Add|Search" DockState="" ModuleKey="药物分类管理[窗体]"></Menu>
+        <Menu id="0810" Title="储藏方式管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="DictionaryStorageType,Name|Code,Add|Search" DockState="" ModuleKey="储藏方式管理[窗体]"></Menu>
+        <Menu id="0811" Title="药物规格管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="DictionarySpecification,Name,Add|Search" DockState="" ModuleKey="药物规格管理[窗体]"></Menu>
+        <Menu id="0812" Title="自定义药物类型" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="DictionaryUserDefinedType,Name|Code,Add|Edit|Search" DockState="" ModuleKey="自定义药物类型[窗体]"></Menu>
+        <Menu id="0813" Title="计量单位管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="DictionaryMeasurementUnit,Name,Add|Edit|Search" DockState="" ModuleKey="计量单位管理[窗体]"></Menu>
+        <Menu id="0814" Title="拆零单位管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="DictionaryPiecemealUnit,Name" DockState="" ModuleKey="拆零单位管理[窗体]"></Menu>
+        <Menu id="0815" Title="剂型管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="DictionaryDosage,Name" DockState="" ModuleKey="剂型管理[窗体]"></Menu>
+      </Menu>
+    </Menu>
+    <Menu id="10" Title="不合格药品管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
+      <Menu id="100101" Title="不合格药品新建" Hotkeys="" Name="UI.Forms.DrugsUnqualification.formDrugsUnqualification" Image="" Params="" DockState="" ModuleKey="不合格药品新建[窗体]"></Menu>
+      <Menu id="100102" Title="不合格药品审核" Hotkeys="" Name="UI.Forms.Approval.FormApprovalFlowCenter" Image="" Params="10" DockState="" ModuleKey="不合格药品审核[窗体]"></Menu>
+      <Menu id="100103" Title="不合格药品报损申请" Hotkeys="" Name="UI.Forms.DrugsUnqualification.formDrugsUnqualificationExecution" Image="" Params="" DockState="" ModuleKey="不合格药品处理[窗体]"></Menu>
+      <Menu id="100104" Title="药品报损审核" Hotkeys="" Name="UI.Forms.Approval.FormApprovalFlowCenter" Image="" Params="11" DockState="" ModuleKey="药品报损审核[窗体]"></Menu>
+      <Menu id="100105" Title="待销毁清单" Hotkeys="" Name="UI.Forms.DrugsUnqualification.DestroyApply" Image="" Params="" DockState="" ModuleKey="待销毁清单[窗体]"></Menu>
+      <Menu id="100106" Title="已销毁清单" Hotkeys="" Name="UI.Forms.DrugsUnqualification.FormDrugsDestroyDetails" Image="" Params="" DockState="" ModuleKey="已销毁清单[窗体]"></Menu>
+    </Menu>
+  </Menu>
+</MenusGroup>

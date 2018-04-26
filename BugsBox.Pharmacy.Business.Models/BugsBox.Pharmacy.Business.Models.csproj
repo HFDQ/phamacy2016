@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57236CF6-D8BD-4ECF-B622-79ABC8FDAF29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugsBox.Pharmacy.Business.Models</RootNamespace>
+    <AssemblyName>BugsBox.Pharmacy.Business.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.Business.Models\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AllTax.cs" />
+    <Compile Include="ApprovalDetailsModel.cs" />
+    <Compile Include="BaseQueryModel.cs" />
+    <Compile Include="BusinessPersonModel.cs" />
+    <Compile Include="DeliveryModel.cs" />
+    <Compile Include="DeliveryTrasactionModel.cs" />
+    <Compile Include="DirectSalesModel.cs" />
+    <Compile Include="DirectSalesOrderDetailModel.cs" />
+    <Compile Include="DirectSalesQueryModel.cs" />
+    <Compile Include="DrugInfoBaseModel.cs" />
+    <Compile Include="DrugInfoModel.cs" />
+    <Compile Include="DrugInventoryNearExpiration.cs" />
+    <Compile Include="DrugMaintainModel.cs" />
+    <Compile Include="DrugOutInventoryCheckModel.cs" />
+    <Compile Include="DrugPath.cs" />
+    <Compile Include="DrugQualityTraceModel.cs" />
+    <Compile Include="DrugsInventoryMoveRecordModel.cs" />
+    <Compile Include="DrugsUndeterminateCondition.cs" />
+    <Compile Include="drugsUnqualificationCondition.cs" />
+    <Compile Include="drugsUnqualificationQuery.cs" />
+    <Compile Include="EmployeeModel.cs" />
+    <Compile Include="FoodModel.cs" />
+    <Compile Include="GenericCommonClass.cs" />
+    <Compile Include="HistoryPurchase.cs" />
+    <Compile Include="InstrumentsModel.cs" />
+    <Compile Include="InventeryModel.cs" />
+    <Compile Include="Model_IdName.cs" />
+    <Compile Include="NotifyData.cs" />
+    <Compile Include="PurchaseCheckingOrderDetailEntity.cs" />
+    <Compile Include="PurchaseCommonEntity.cs" />
+    <Compile Include="PurchaseInInventeryOrderDetailEntity.cs" />
+    <Compile Include="PurchaseOrdeEntity.cs" />
+    <Compile Include="PurchaseOrderDetailEntity.cs" />
+    <Compile Include="PurchaseOrderImpt.cs" />
+    <Compile Include="PurchaseOrderReturnModel.cs" />
+    <Compile Include="PurchaseOrderReturnQueryModel.cs" />
+    <Compile Include="PurchaseOrderSetModel.cs" />
+    <Compile Include="PurchaseRCRecord.cs" />
+    <Compile Include="PurchaseRecord.cs" />
+    <Compile Include="PurchaseOrderReturnDetailEntity.cs" />
+    <Compile Include="PurchaseReceivingOrderDetailEntity.cs" />
+    <Compile Include="PurchaseTaxReturn.cs" />
+    <Compile Include="QualityEvaluationBySupplyer.cs" />
+    <Compile Include="QualityFilesWarningModel.cs" />
+    <Compile Include="QueryBusinessPersonModel.cs" />
+    <Compile Include="QueryDrugInventoryRecordBusinessModel.cs" />
+    <Compile Include="QueryModelExtesion\BooleanExp.cs" />
+    <Compile Include="QueryModelExtesion\DateTimeRange.cs" />
+    <Compile Include="QueryModelExtesion\DecimalRange.cs" />
+    <Compile Include="QueryModelExtesion\IntRange.cs" />
+    <Compile Include="QueryModelForDrugPath.cs" />
+    <Compile Include="QueryPharmacyLicenseModel.cs" />
+    <Compile Include="ReturnPurchaseOrderList.cs" />
+    <Compile Include="RoleWithModuleModel.cs" />
+    <Compile Include="SaleOrderModel.cs" />
+    <Compile Include="SalePriceControlRulesModel.cs" />
+    <Compile Include="SalerTaxManage.cs" />
+    <Compile Include="SalesOrderForVATModel.cs" />
+    <Compile Include="SalesOrderModelForSalesOrderReturn.cs" />
+    <Compile Include="SalesOrderOutInventoryModel.cs" />
+    <Compile Include="SalesOrderQueryModel.cs" />
+    <Compile Include="SalesOrderRecordModel.cs" />
+    <Compile Include="SalesOrderReturnModel.cs" />
+    <Compile Include="SalesOrderStatisticModel.cs" />
+    <Compile Include="LackDrugModel.cs" />
+    <Compile Include="OutInventoryMode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DeliveryIndexModel.cs" />
+    <Compile Include="SalesTaxRate.cs" />
+    <Compile Include="ServerInfo.cs" />
+    <Compile Include="SupplyUnitHistoryDrugList.cs" />
+    <Compile Include="UpdateFiles.cs" />
+    <Compile Include="UserLogModel.cs" />
+    <Compile Include="WareHouseZonePositionModel.cs" />
+    <Compile Include="WarningData.cs" />
+    <Compile Include="SalesCodeSearchInput.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugsBox.Application.Core\BugsBox.Application.Core.csproj">
+      <Project>{672aceaf-fed6-4df4-bf3c-72418251657b}</Project>
+      <Name>BugsBox.Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.csproj">
+      <Project>{28c37ac0-feac-45c7-94c2-b0515a3a8f9f}</Project>
+      <Name>BugsBox.Pharmacy.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

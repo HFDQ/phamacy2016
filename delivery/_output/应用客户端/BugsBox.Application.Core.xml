@@ -1,0 +1,788 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugsBox.Application.Core</name>
+    </assembly>
+    <members>
+        <member name="T:BugsBox.Application.Core.AppConfig">
+             <summary>
+            应用配置
+             </summary>
+        </member>
+        <member name="F:BugsBox.Application.Core.AppConfig.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="F:BugsBox.Application.Core.AppConfig.AutoCreateAndInitDatabase">
+            <summary>
+            是否自动创建数据库
+            此功能慎用!!
+            </summary>
+        </member>
+        <member name="F:BugsBox.Application.Core.AppConfig.InitDateTime">
+            <summary>
+            初始化时间
+            </summary>
+        </member>
+        <member name="T:BugsBox.Application.Core.AssemblyHelper">
+            <summary>
+            程序集助手
+            </summary>
+        </member>
+        <member name="T:BugsBox.Application.Core.DataValidateHelper">
+            <summary>
+            数据校验
+            INTEGER ,POSINTERGER, FLOAT 三种可传入AttributeDataType 进行校验
+            也可直接传入正则表达式进行校验
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.DataValidateHelper.DataValidate(System.String,System.String)">
+            <summary>
+            使用正则表达式进行校验
+            </summary>
+            <param name="attributeValue">待校验的数据</param>
+            <param name="strFormat">校验正则表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.DataValidateHelper.DataTypeValidate(System.String,BugsBox.Application.Core.AttributeDataType)">
+            <summary>
+            使用AttributeDataType数据类型进行校验
+            </summary>
+            <param name="attributeValue">待校验的数据</param>
+            <param name="formatType">AttributeDataType数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:BugsBox.Application.Core.IoC">
+            <summary>
+            控制反转注入工具
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.IoC.Resolve``1">
+            <summary>
+            获取某类型对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IoC.Resolve(System.Type)">
+            <summary>
+            获取某类型对象
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BugsBox.Application.Core.IEntity">
+            <summary>
+            数据库实体类接口
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.CF.CFRepository`1.#ctor(BugsBox.Application.Core.IQueryableUnitOfWork)">
+            <summary>
+            Create a new instance of repository
+            </summary>
+            <param name="unitOfWork">Associated Unit Of Work</param>
+        </member>
+        <member name="T:BugsBox.Application.Core.Repository.EnityImporter`1">
+            <summary>
+            实体导入
+            </summary>
+        </member>
+        <member name="P:BugsBox.Application.Core.Repository.EnityImporter`1.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="T:BugsBox.Application.Core.EntityConventionInjectionForSave">
+            <summary>
+            对象属性注入
+            </summary>
+        </member>
+        <member name="T:BugsBox.Application.Core.IQueryableUnitOfWork">
+            <summary>
+            The UnitOfWork contract for EF implementation
+            <remarks>
+            This contract extend IUnitOfWork for use with EF code
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.IQueryableUnitOfWork.CreateQueryable``1">
+            <summary>
+            Returns a IDbSet instance for access to entities of the given type in the context, 
+            the ObjectStateManager, and the underlying store. 
+            </summary>
+            <typeparam name="TValueObject"></typeparam>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:BugsBox.Application.Core.IQueryableUnitOfWork.Attach``1(``0)”忽略有格式错误的 XML 注释 -->
+        <member name="M:BugsBox.Application.Core.IQueryableUnitOfWork.SetModified``1(``0)">
+            <summary>
+            Set object as modified
+            </summary>
+            <typeparam name="TValueObject">The type of entity</typeparam>
+            <param name="item">The entity item to set as modifed</param>
+        </member>
+        <member name="M:BugsBox.Application.Core.IQueryableUnitOfWork.ApplyCurrentValues``1(``0,``0)">
+            <summary>
+            Apply current values in <paramref name="original"/>
+            </summary>
+            <typeparam name="TEntity">The type of entity</typeparam>
+            <param name="original">The original entity</param>
+            <param name="current">The current entity</param>
+        </member>
+        <member name="T:BugsBox.Application.Core.IRepository`1">
+            <summary>
+            仓储操作接口
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:BugsBox.Application.Core.IRepository`1.UnitOfWork">
+            <summary>
+            数据库上下文
+            </summary>
+        </member>
+        <member name="P:BugsBox.Application.Core.IRepository`1.Queryable">
+            <summary>
+            获取查询
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Add(`0)">
+            <summary>
+            添加实体
+            </summary>
+            <param name="item">Item to add to repository</param>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Remove(`0)">
+            <summary>
+            移除实体
+            </summary>
+            <param name="item">Item to delete</param>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Modify(`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="item">Item to modify</param>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.TrackItem(`0)">
+            <summary>
+            附加实体
+            </summary>
+            <param name="item">Item to attach</param>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Merge(`0,`0)">
+            <summary>
+            实体信息合并
+            </summary>
+            <param name="persisted">The persisted item</param>
+            <param name="current">The current item</param>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Get(System.Guid)">
+            <summary>
+            根据主键获取实体
+            </summary>
+            <param name="id">Entity key value</param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Exist(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            检查存在是否
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            统计
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Fetch(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查询
+            </summary>
+            <param name="predicate">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Fetch(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{BugsBox.Application.Core.Orderable{`0}})">
+            <summary>
+            查询
+            </summary>
+            <param name="predicate">条件</param>
+            <param name="order">排序</param>
+            <returns>查询结果集</returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IRepository`1.Fetch(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{BugsBox.Application.Core.Orderable{`0}},System.Int32,System.Int32)">
+            <summary>
+            查询
+            </summary>
+            <param name="predicate">条件</param>
+            <param name="order">排序</param>
+            <param name="skip">跳过条数</param>
+            <param name="count">取条数</param>
+            <returns>查询结果集</returns>
+        </member>
+        <member name="T:BugsBox.Application.Core.ISql">
+            <summary>
+            Base contract for support 'dialect specific queries'.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.ISql.ExecuteQuery``1(System.String,System.Object[])">
+            <summary>
+            Execute specific query with underliying persistence store
+            </summary>
+            <typeparam name="TEntity">Entity type to map query results</typeparam>
+            <param name="sqlQuery">
+            Dialect Query 
+            <example>
+            SELECT idCustomer,Name FROM dbo.[Customers] WHERE idCustomer > {0}
+            </example>
+            </param>
+            <param name="parameters">A vector of parameters values</param>
+            <returns>
+            Enumerable results 
+            </returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.ISql.ExecuteCommand(System.String,System.Object[])">
+             <summary>
+             Execute arbitrary command into underliying persistence store
+             </summary>
+             <param name="sqlCommand">
+             Command to execute
+             <example>
+             SELECT idCustomer,Name FROM dbo.[Customers] WHERE idCustomer > {0}
+             </example>
+            </param>
+             <param name="parameters">A vector of parameters values</param>
+             <returns>The number of affected records</returns>
+        </member>
+        <member name="T:BugsBox.Application.Core.IUnitOfWork">
+            <summary>
+            Contract for ‘UnitOfWork pattern’. For more
+            related info see http://martinfowler.com/eaaCatalog/unitOfWork.html or
+            http://msdn.microsoft.com/en-us/magazine/dd882510.aspx
+            In this solution, the Unit Of Work is implemented using the out-of-box 
+            Entity Framework Context (EF 4.1 DbContext) persistence engine. But in order to
+            comply the PI (Persistence Ignorant) principle in our Domain, we implement this interface/contract. 
+            This interface/contract should be complied by any UoW implementation to be used with this Domain.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.IUnitOfWork.Commit">
+             <summary>
+             Commit all changes made in a container.
+             </summary>
+            <remarks>
+             If the entity have fixed properties and any optimistic concurrency problem exists,  
+             then an exception is thrown
+            </remarks>
+        </member>
+        <member name="M:BugsBox.Application.Core.IUnitOfWork.CommitAndRefreshChanges">
+             <summary>
+             Commit all changes made in  a container.
+             </summary>
+            <remarks>
+             If the entity have fixed properties and any optimistic concurrency problem exists,
+             then 'client changes' are refreshed - Client wins
+            </remarks>
+        </member>
+        <member name="M:BugsBox.Application.Core.IUnitOfWork.RollbackChanges">
+            <summary>
+            Rollback tracked changes. See references of UnitOfWork pattern
+            </summary>
+        </member>
+        <member name="T:BugsBox.Application.Core.RepositoryException">
+            <summary>
+            仓储异常
+            </summary>
+        </member>
+        <member name="T:BugsBox.Application.Core.IService`1">
+            <summary>
+            逻辑接口
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:BugsBox.Application.Core.IService`1.UnitOfWork">
+            <summary>
+            Get the unit of work in this repository
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Save">
+            <summary>
+            提交
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Get(System.Guid)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查询
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Exist(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            存在
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Exist">
+            <summary>
+            存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            统计条数
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Count">
+            <summary>
+            统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Fetch(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{BugsBox.Application.Core.Orderable{`0}})">
+            <summary>
+            查询并排序
+            </summary>
+            <param name="predicate"></param>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Fetch(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{BugsBox.Application.Core.Orderable{`0}},BugsBox.Application.Core.PagerInfo)">
+            <summary>
+            查询
+            </summary>
+            <param name="predicate"></param>
+            <param name="order"></param>
+            <param name="pager"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Fetch(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{BugsBox.Application.Core.Orderable{`0}},System.Int32,System.Int32)">
+            <summary>
+            查询
+            </summary>
+            <param name="predicate"></param>
+            <param name="order"></param>
+            <param name="skip"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.ValidateAdd(`0)">
+            <summary>
+            验证添加实体对象
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.ValidateDelete(System.Guid,System.String@)">
+            <summary>
+            验证删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.ValidateSave(`0)">
+            <summary>
+            验证保存
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Add(`0,System.String@)">
+            <summary>
+            添加并提交
+            </summary>
+            <param name="value"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Delete(System.Guid,System.String@)">
+            <summary>
+            删除并提交
+            </summary>
+            <param name="id"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Save(`0,System.String@)">
+            <summary>
+            保存并提交
+            </summary>
+            <param name="value"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Add(`0)">
+            <summary>
+            添加不提交
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Delete(System.Guid)">
+            <summary>
+            删除不提交
+            </summary>
+            <param name="id"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.IService`1.Save(`0)">
+            <summary>
+            保存不提交
+            </summary>
+            <param name="value"></param> 
+            <returns></returns>
+        </member>
+        <member name="P:BugsBox.Application.Core.Service`1.Queryable">
+            <summary>
+            查询对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.PrepareEntityForAdd(`0)">
+            <summary>
+            为添加的数据作准备
+            目前主要于为店的店实体添加店的Guid
+            </summary>
+            <param name="enity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.Add(`0,System.String@)">
+            <summary>
+            添加并提交
+            </summary>
+            <param name="value"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.Delete(System.Guid,System.String@)">
+            <summary>
+            删除并提交
+            </summary>
+            <param name="id"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.Save(`0,System.String@)">
+            <summary>
+            保存并提交
+            </summary>
+            <param name="value"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.Save">
+            <summary>
+            提交
+            </summary>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.Add(`0)">
+            <summary>
+             添加不提交
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.Delete(System.Guid)">
+            <summary>
+             移除不提交
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:BugsBox.Application.Core.Service`1.Save(`0)">
+            <summary>
+            更新不提交
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:BugsBox.Application.Core.BusinessException">
+            <summary>
+            业务逻辑
+            </summary>
+        </member>
+        <member name="T:BugsBox.CMS.Infra.WindsorRegistrar">
+            <summary>
+            对象注入
+            </summary>
+        </member>
+        <member name="M:BugsBox.CMS.Infra.WindsorRegistrar.RegisterSingleton(System.Type,System.Type)">
+            <summary>
+            以单例方式注入
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="implementationType">实现接口的类型</param>
+        </member>
+        <member name="M:BugsBox.CMS.Infra.WindsorRegistrar.RegisterGenericSingleton(System.Type,System.Type)">
+            <summary>
+            以单例方式注入
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="implementationType">实现接口的类型</param>
+        </member>
+        <member name="M:BugsBox.CMS.Infra.WindsorRegistrar.Register(System.Type,System.Type)">
+            <summary>
+            一次调用一个对象
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="implementationType">实现了接口的类型</param>
+        </member>
+        <member name="M:BugsBox.CMS.Infra.WindsorRegistrar.RegisterGeneric(System.Type,System.Type)">
+            <summary>
+            一次调用一个对象
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="implementationType">实现了接口的类型</param>
+        </member>
+        <member name="M:BugsBox.CMS.Infra.WindsorRegistrar.RegisterAllFromAssemblies(System.String)">
+            <summary>
+            注入某程序集中所有接口与类
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="T:System.IHandleException">
+            <summary>
+            异常处理接口
+            </summary>
+        </member>
+        <member name="M:System.IHandleException.HandleException``1(System.String,System.Exception)">
+            <summary>
+            处理异常
+            </summary>
+            <typeparam name="TReturn"></typeparam>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IHandleException.HandleException(System.String,System.Exception)">
+            <summary>
+            处理异常
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:System.ExpressionBuilder">
+            <summary>
+            Extension methods for adding AND and OR with parameters rebinder
+            </summary>
+        </member>
+        <member name="M:System.ExpressionBuilder.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+            Compose two expressions and merge all in a new expression
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Expression instance</param>
+            <param name="second">Expression to merge</param>
+            <param name="merge">Function to merge</param>
+            <returns>New merged expression</returns>
+        </member>
+        <member name="M:System.ExpressionBuilder.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            And operator
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Right Expression in AND operation</param>
+            <param name="second">Left Expression in And operation</param>
+            <returns>New AND expression</returns>
+        </member>
+        <member name="M:System.ExpressionBuilder.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Or operator
+            </summary>
+            <typeparam name="T">Type of param in expression</typeparam>
+            <param name="first">Right expression in OR operation</param>
+            <param name="second">Left expression in OR operation</param>
+            <returns>New Or expressions</returns>
+        </member>
+        <member name="T:System.ParameterExpressionVisitor">
+            <summary>
+            ParameterExpressionVisitor
+            </summary>
+        </member>
+        <member name="M:System.LinqExtensions.GetNonNullableType(System.Type)">
+            <summary>
+            如果类型是Nullable&lt;T&gt;，则返回T，否则返回自身
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.LinqExtensions.IsNullableType(System.Type)">
+            <summary>
+            是否Nullable&lt;T&gt;类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.LinqExtensions.GetParameters``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            获取Lambda表达式的参数表达式
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="S"></typeparam>
+            <param name="expr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.QueryBuilder">
+            <summary>
+            查询器构建者
+            </summary>
+        </member>
+        <member name="T:System.IQueryBuilder`1">
+            <summary>
+            动态查询条件创建者
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:System.IQueryBuilderExtensions.Between``2(System.IQueryBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},``1,``1)">
+            <summary>
+            建立 Between 查询条件
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="q">动态查询条件创建者</param>
+            <param name="property">属性</param>
+            <param name="from">开始值</param>
+            <param name="to">结束值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IQueryBuilderExtensions.Between``1(System.IQueryBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,System.String}},System.String,System.String)">
+            <summary>
+            建立 Between 查询条件
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="q">动态查询条件创建者</param>
+            <param name="property">属性</param>
+            <param name="from">开始值</param>
+            <param name="to">结束值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IQueryBuilderExtensions.Like``1(System.IQueryBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,System.String}},System.String)">
+            <summary>
+            建立 Like ( 模糊 ) 查询条件
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="q">动态查询条件创建者</param>
+            <param name="property">属性</param>
+            <param name="value">查询值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IQueryBuilderExtensions.Equals``2(System.IQueryBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},``1,``1)">
+            <summary>
+            建立 Equals ( 相等 ) 查询条件
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="q">动态查询条件创建者</param>
+            <param name="property">属性</param>
+            <param name="value">查询值</param>
+            <param name="exclude">排除值（意味着如果value==exclude，则当前条件不被包含到查询中）</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IQueryBuilderExtensions.Equals``2(System.IQueryBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},``1)">
+            <summary>
+            建立 Equals ( 相等 ) 查询条件
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="q">动态查询条件创建者</param>
+            <param name="property">属性</param>
+            <param name="value">查询值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IQueryBuilderExtensions.In``2(System.IQueryBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},``1[])">
+            <summary>
+            建立 In 查询条件
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="q">动态查询条件创建者</param>
+            <param name="property">属性</param>
+            <param name="valuse">查询值</param> 
+            <returns></returns>
+        </member>
+        <member name="M:System.IQueryBuilderExtensions.Fuzzy``1(System.IQueryBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,System.String}},System.String)">
+            <summary>
+            建立 Fuzzy 查询条件
+            </summary>
+            <typeparam name="T">实体</typeparam>
+            <param name="q">动态查询条件创建者</param>
+            <param name="property">属性</param>
+            <param name="expression">查询表达式（支持：1,2,3 或 1-3；如果不符合前面规则，即认为模糊查询；忽略空格；）</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.ParameterRebinder">
+            <summary>
+            Helper for rebinder parameters without use Invoke method in expressions 
+            ( this methods is not supported in all linq query providers, 
+            for example in Linq2Entities is not supported)
+            </summary>
+        </member>
+        <member name="M:System.ParameterRebinder.#ctor(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression})">
+            <summary>
+            Default construcotr
+            </summary>
+            <param name="map">Map specification</param>
+        </member>
+        <member name="M:System.ParameterRebinder.ReplaceParameters(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+            Replate parameters in expression with a Map information
+            </summary>
+            <param name="map">Map information</param>
+            <param name="exp">Expression to replace parameters</param>
+            <returns>Expression with parameters replaced</returns>
+        </member>
+        <member name="M:System.ParameterRebinder.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Visit pattern method
+            </summary>
+            <param name="p">A Parameter expression</param>
+            <returns>New visited expression</returns>
+        </member>
+        <member name="T:System.EntityExtensions">
+            <summary>
+            实体类相关属性信息获取
+            </summary>
+        </member>
+        <member name="M:System.EntityExtensions.GetDescription``1">
+            <summary>
+            获取T类型的DescriptionAttribute的Description值
+            </summary>
+            <typeparam name="T">某类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:System.EntityExtensions.GetDescription(System.Type)">
+            <summary>
+            获取type类型的DescriptionAttribute的Description值
+            </summary>
+            <param name="type">type</param>
+            <returns>Description</returns>
+        </member>
+        <member name="M:System.EntityExtensions.GetDisplay``1(System.String)">
+            <summary>
+            获取T类型的propertyName的DisplayAttribute的Name值
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="propertyName">属性名</param>
+            <returns>Name</returns>
+        </member>
+        <member name="M:System.EntityExtensions.GetDisplay(System.Type,System.String)">
+            <summary>
+            获取type类型的propertyName的DisplayAttribute的Name值
+            </summary>
+            <param name="type">类型</param>
+            <param name="propertyName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.TodoException">
+            <summary>
+            待实现异常
+            </summary>
+        </member>
+    </members>
+</doc>

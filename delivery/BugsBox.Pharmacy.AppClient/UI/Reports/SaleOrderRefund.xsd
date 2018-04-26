@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SaleOrderRefund" targetNamespace="http://tempuri.org/SaleOrderRefund.xsd" xmlns:mstns="http://tempuri.org/SaleOrderRefund.xsd" xmlns="http://tempuri.org/SaleOrderRefund.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SaleOrderRefund" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SaleOrderRefund" msprop:Generator_UserDSName="SaleOrderRefund">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RefundTable" msprop:Generator_TableClassName="RefundTableDataTable" msprop:Generator_TableVarName="tableRefundTable" msprop:Generator_TablePropName="RefundTable" msprop:Generator_RowDeletingName="RefundTableRowDeleting" msprop:Generator_UserTableName="RefundTable" msprop:Generator_RowChangingName="RefundTableRowChanging" msprop:Generator_RowEvHandlerName="RefundTableRowChangeEventHandler" msprop:Generator_RowDeletedName="RefundTableRowDeleted" msprop:Generator_RowEvArgName="RefundTableRowChangeEvent" msprop:Generator_RowChangedName="RefundTableRowChanged" msprop:Generator_RowClassName="RefundTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="商品名称" msprop:Generator_ColumnVarNameInTable="column商品名称" msprop:Generator_ColumnPropNameInRow="商品名称" msprop:Generator_ColumnPropNameInTable="商品名称Column" msprop:Generator_UserColumnName="商品名称" type="xs:string" minOccurs="0" />
+              <xs:element name="剂型" msprop:Generator_ColumnVarNameInTable="column剂型" msprop:Generator_ColumnPropNameInRow="剂型" msprop:Generator_ColumnPropNameInTable="剂型Column" msprop:Generator_UserColumnName="剂型" type="xs:string" minOccurs="0" />
+              <xs:element name="规格" msprop:Generator_ColumnVarNameInTable="column规格" msprop:Generator_ColumnPropNameInRow="规格" msprop:Generator_ColumnPropNameInTable="规格Column" msprop:Generator_UserColumnName="规格" type="xs:string" minOccurs="0" />
+              <xs:element name="生产厂商" msprop:Generator_ColumnVarNameInTable="column生产厂商" msprop:Generator_ColumnPropNameInRow="生产厂商" msprop:Generator_ColumnPropNameInTable="生产厂商Column" msprop:Generator_UserColumnName="生产厂商" type="xs:string" minOccurs="0" />
+              <xs:element name="批号" msprop:Generator_ColumnVarNameInTable="column批号" msprop:Generator_ColumnPropNameInRow="批号" msprop:Generator_ColumnPropNameInTable="批号Column" msprop:Generator_UserColumnName="批号" type="xs:string" minOccurs="0" />
+              <xs:element name="有效期至" msprop:Generator_ColumnVarNameInTable="column有效期至" msprop:Generator_ColumnPropNameInRow="有效期至" msprop:Generator_ColumnPropNameInTable="有效期至Column" msprop:Generator_UserColumnName="有效期至" type="xs:string" minOccurs="0" />
+              <xs:element name="单位" msprop:Generator_ColumnVarNameInTable="column单位" msprop:Generator_ColumnPropNameInRow="单位" msprop:Generator_ColumnPropNameInTable="单位Column" msprop:Generator_UserColumnName="单位" type="xs:string" minOccurs="0" />
+              <xs:element name="数量" msprop:Generator_ColumnVarNameInTable="column数量" msprop:Generator_ColumnPropNameInRow="数量" msprop:Generator_ColumnPropNameInTable="数量Column" msprop:Generator_UserColumnName="数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="单价" msprop:Generator_ColumnVarNameInTable="column单价" msprop:Generator_ColumnPropNameInRow="单价" msprop:Generator_ColumnPropNameInTable="单价Column" msprop:Generator_UserColumnName="单价" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实际单价" msprop:Generator_ColumnVarNameInTable="column实际单价" msprop:Generator_ColumnPropNameInRow="实际单价" msprop:Generator_ColumnPropNameInTable="实际单价Column" msprop:Generator_UserColumnName="实际单价" type="xs:decimal" minOccurs="0" />
+              <xs:element name="原金额" msprop:Generator_ColumnVarNameInTable="column原金额" msprop:Generator_ColumnPropNameInRow="原金额" msprop:Generator_ColumnPropNameInTable="原金额Column" msprop:Generator_UserColumnName="原金额" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实际金额" msprop:Generator_ColumnVarNameInTable="column实际金额" msprop:Generator_ColumnPropNameInRow="实际金额" msprop:Generator_ColumnPropNameInTable="实际金额Column" msprop:Generator_UserColumnName="实际金额" type="xs:decimal" minOccurs="0" />
+              <xs:element name="差额" msprop:Generator_ColumnVarNameInTable="column差额" msprop:Generator_ColumnPropNameInRow="差额" msprop:Generator_ColumnPropNameInTable="差额Column" msprop:Generator_UserColumnName="差额" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

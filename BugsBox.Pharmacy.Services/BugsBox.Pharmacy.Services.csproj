@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49BA2561-A51D-400B-A7F8-6D3D2BD03A69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugsBox.Pharmacy</RootNamespace>
+    <AssemblyName>BugsBox.Pharmacy.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.Services\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Autofac.3.0.1\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\lib\Autofac.3.0.1\lib\net40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="BugsBox.Common">
+      <HintPath>..\lib\BugsBox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BugsBox.Common.Net">
+      <HintPath>..\lib\BugsBox.Common.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="BugsBox.Windows.Forms">
+      <HintPath>..\lib\BugsBox.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter, Version=2.3.3.0, Culture=neutral, PublicKeyToken=c7694541b0ac80e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartThreadPool">
+      <HintPath>..\lib\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedAssemblyInfo.log4net.cs">
+      <Link>Properties\SharedAssemblyInfo.log4net.cs</Link>
+    </Compile>
+    <Compile Include="AuthorizationManager.cs" />
+    <Compile Include="AuthorizationPolicy.cs" />
+    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\PingCmd.cs" />
+    <Compile Include="Commands\VerifyDrugSupplyUnitTypeCmd.cs" />
+    <Compile Include="ConnectedInfoProvider.cs" />
+    <Compile Include="DQService.cs" />
+    <Compile Include="Notification\NotificationController.cs" />
+    <Compile Include="Notification\NotificationHandler.cs" />
+    <Compile Include="Notification\NotificationClientContext.cs" />
+    <Compile Include="Services\PharmacyDatabaseService.Business.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmacyDatabaseService.Business.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PharmacyDatabaseService.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmacyDatabaseService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PharmacyNotification.cs" />
+    <Compile Include="PharmacyServiceToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContext.cs" />
+    <Compile Include="Services\EntityOrderDictionary.cs" />
+    <Compile Include="Services\PharmacyService.cs" />
+    <Compile Include="ValidateLoginAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugsBox.Application.Core\BugsBox.Application.Core.csproj">
+      <Project>{672ACEAF-FED6-4DF4-BF3C-72418251657B}</Project>
+      <Name>BugsBox.Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Common.Security\BugsBox.Common.Security.csproj">
+      <Project>{0E6E4A9E-D0D4-4656-A9A7-63A85F46C0A1}</Project>
+      <Name>BugsBox.Common.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Business.Models\BugsBox.Pharmacy.Business.Models.csproj">
+      <Project>{57236CF6-D8BD-4ECF-B622-79ABC8FDAF29}</Project>
+      <Name>BugsBox.Pharmacy.Business.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.csproj">
+      <Project>{D9276894-223E-400A-8955-F06979781F55}</Project>
+      <Name>BugsBox.Pharmacy.BusinessHandlers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.IServices\BugsBox.Pharmacy.IServices.csproj">
+      <Project>{EF64ED6B-DDED-4F5C-9B68-3A42AB001DE8}</Project>
+      <Name>BugsBox.Pharmacy.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.csproj">
+      <Project>{28C37AC0-FEAC-45C7-94C2-B0515A3A8F9F}</Project>
+      <Name>BugsBox.Pharmacy.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.csproj">
+      <Project>{7C681096-719C-4685-AC91-0E50EA97B5F1}</Project>
+      <Name>BugsBox.Pharmacy.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.csproj">
+      <Project>{1C0FFC46-B18C-4E36-8D7C-C3B5C3354612}</Project>
+      <Name>BugsBox.Pharmacy.Service.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Services\PharmacyDatabaseService.Business.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PharmacyDatabaseService.Business.cs</LastGenOutput>
+    </None>
+    <Compile Include="Services\PharmacyDatabaseService.ClientAuth.cs" />
+    <None Include="Services\PharmacyDatabaseService.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PharmacyDatabaseService.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

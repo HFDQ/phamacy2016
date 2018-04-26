@@ -1,0 +1,12 @@
+D:\work\_output\_temp\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.dll
+D:\work\_output\_temp\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.pdb
+D:\work\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.dll
+D:\work\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.pdb
+D:\DQ\_output\_temp\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.dll
+D:\DQ\_output\_temp\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.pdb
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.csprojResolveAssemblyReference.cache
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.csproj.CoreCompileInputs.cache
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.csproj.CopyComplete
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.dll
+D:\DQ\phamacy2016\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.pdb

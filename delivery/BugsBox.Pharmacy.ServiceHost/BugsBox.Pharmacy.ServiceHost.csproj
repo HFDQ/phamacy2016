@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7538EFA4-017B-4CA6-A7F3-80EA42A42BE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugsBox.Pharmacy.ServiceHost</RootNamespace>
+    <AssemblyName>BugsBox.Pharmacy.ServiceHost</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\_output\服务宿主\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>applications.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugsBox.Common">
+      <HintPath>..\lib\BugsBox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI">
+      <HintPath>..\lib\Microsoft.Data.ConnectionUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog">
+      <HintPath>..\lib\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog.resources">
+      <HintPath>..\lib\Microsoft.Data.ConnectionUI.Dialog.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\lib\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedAssemblyInfo.log4net.cs">
+      <Link>Properties\SharedAssemblyInfo.log4net.cs</Link>
+    </Compile>
+    <Compile Include="DataBaseMigrationDataModel.cs" />
+    <Compile Include="Forms\SystemConfigForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemConfigForm.Designer.cs">
+      <DependentUpon>SystemConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\IndexUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IndexUserControl.Designer.cs">
+      <DependentUpon>IndexUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RunTimeLogsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RunTimeLogsUserControl.Designer.cs">
+      <DependentUpon>RunTimeLogsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ServiceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ServiceControl.Designer.cs">
+      <DependentUpon>ServiceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ServiceControlButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ServiceControlButton.Designer.cs">
+      <DependentUpon>ServiceControlButton.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\SystemConfigForm.resx">
+      <DependentUpon>SystemConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\IndexUserControl.resx">
+      <DependentUpon>IndexUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RunTimeLogsUserControl.resx">
+      <DependentUpon>RunTimeLogsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ServiceControl.resx">
+      <DependentUpon>ServiceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ServiceControlButton.resx">
+      <DependentUpon>ServiceControlButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ApprovalFiles\3B0CF648-C0C5-4225-84CC-5B8B09B000C9" />
+    <None Include="ApprovalFiles\54C14EA2-7456-4A5B-BF39-C441F451C35B" />
+    <None Include="ApprovalFiles\9047DBCF-CD15-4904-8786-006A76DD4799" />
+    <None Include="ApprovalFiles\A0EAA274-889E-4B77-8C77-CC395FD991EF" />
+    <None Include="Config\BugsBox.Application.Core.AppConfig.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\BugsBox.Common.LoggerConfig.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\BugsBox.Pharmacy.Config.PharmacyServiceConfig.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugsBox.Application.Core\BugsBox.Application.Core.csproj">
+      <Project>{672ACEAF-FED6-4DF4-BF3C-72418251657B}</Project>
+      <Name>BugsBox.Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Common.Security\BugsBox.Common.Security.csproj">
+      <Project>{0E6E4A9E-D0D4-4656-A9A7-63A85F46C0A1}</Project>
+      <Name>BugsBox.Common.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Business.Models\BugsBox.Pharmacy.Business.Models.csproj">
+      <Project>{57236CF6-D8BD-4ECF-B622-79ABC8FDAF29}</Project>
+      <Name>BugsBox.Pharmacy.Business.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.csproj">
+      <Project>{D9276894-223E-400A-8955-F06979781F55}</Project>
+      <Name>BugsBox.Pharmacy.BusinessHandlers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.IServices\BugsBox.Pharmacy.IServices.csproj">
+      <Project>{EF64ED6B-DDED-4F5C-9B68-3A42AB001DE8}</Project>
+      <Name>BugsBox.Pharmacy.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.csproj">
+      <Project>{28C37AC0-FEAC-45C7-94C2-B0515A3A8F9F}</Project>
+      <Name>BugsBox.Pharmacy.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.MonitorHost\BugsBox.Pharmacy.MonitorHost.csproj">
+      <Project>{B46A1A9A-3BAC-40CA-A2A5-E7E133A83EA9}</Project>
+      <Name>BugsBox.Pharmacy.MonitorHost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.csproj">
+      <Project>{7C681096-719C-4685-AC91-0E50EA97B5F1}</Project>
+      <Name>BugsBox.Pharmacy.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Services\BugsBox.Pharmacy.Services.csproj">
+      <Project>{49BA2561-A51D-400B-A7F8-6D3D2BD03A69}</Project>
+      <Name>BugsBox.Pharmacy.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Windows.Forms\BugsBox.Windows.Forms.csproj">
+      <Project>{D525F934-34ED-4048-92F2-82877EF2F630}</Project>
+      <Name>BugsBox.Windows.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+    <Folder Include="应用客户端\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\run.png" />
+    <EmbeddedResource Include="Resources\Images\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="applications.ico" />
+    <Content Include="logo.ico" />
+    <EmbeddedResource Include="Resources\Icon\about.ico" />
+    <EmbeddedResource Include="Resources\Icon\accept.ico" />
+    <EmbeddedResource Include="Resources\Icon\add.ico" />
+    <EmbeddedResource Include="Resources\Icon\address_book.ico" />
+    <EmbeddedResource Include="Resources\Icon\admin.ico" />
+    <EmbeddedResource Include="Resources\Icon\alarm.ico" />
+    <EmbeddedResource Include="Resources\Icon\anchor.ico" />
+    <EmbeddedResource Include="Resources\Icon\announce.ico" />
+    <EmbeddedResource Include="Resources\Icon\applications.ico" />
+    <EmbeddedResource Include="Resources\Icon\back.ico" />
+    <EmbeddedResource Include="Resources\Icon\box_closed.ico" />
+    <EmbeddedResource Include="Resources\Icon\box_open.ico" />
+    <EmbeddedResource Include="Resources\Icon\briefcase.ico" />
+    <EmbeddedResource Include="Resources\Icon\calculator.ico" />
+    <EmbeddedResource Include="Resources\Icon\calendar.ico" />
+    <EmbeddedResource Include="Resources\Icon\camera.ico" />
+    <EmbeddedResource Include="Resources\Icon\cancel.ico" />
+    <EmbeddedResource Include="Resources\Icon\cd.ico" />
+    <EmbeddedResource Include="Resources\Icon\chart.ico" />
+    <EmbeddedResource Include="Resources\Icon\chat.ico" />
+    <EmbeddedResource Include="Resources\Icon\close.ico" />
+    <EmbeddedResource Include="Resources\Icon\configure.ico" />
+    <EmbeddedResource Include="Resources\Icon\copy.ico" />
+    <EmbeddedResource Include="Resources\Icon\cut.ico" />
+    <EmbeddedResource Include="Resources\Icon\delete.ico" />
+    <EmbeddedResource Include="Resources\Icon\documents.ico" />
+    <EmbeddedResource Include="Resources\Icon\down.ico" />
+    <EmbeddedResource Include="Resources\Icon\edit.ico" />
+    <EmbeddedResource Include="Resources\Icon\export.ico" />
+    <EmbeddedResource Include="Resources\Icon\fast_forward.ico" />
+    <EmbeddedResource Include="Resources\Icon\favorites.ico" />
+    <EmbeddedResource Include="Resources\Icon\favorites_add.ico" />
+    <EmbeddedResource Include="Resources\Icon\fax.ico" />
+    <EmbeddedResource Include="Resources\Icon\film.ico" />
+    <EmbeddedResource Include="Resources\Icon\finance.ico" />
+    <EmbeddedResource Include="Resources\Icon\folder.ico" />
+    <EmbeddedResource Include="Resources\Icon\forward.ico" />
+    <EmbeddedResource Include="Resources\Icon\games.ico" />
+    <EmbeddedResource Include="Resources\Icon\go.ico" />
+    <EmbeddedResource Include="Resources\Icon\hard_disk.ico" />
+    <EmbeddedResource Include="Resources\Icon\help.ico" />
+    <EmbeddedResource Include="Resources\Icon\history.ico" />
+    <EmbeddedResource Include="Resources\Icon\home.ico" />
+    <EmbeddedResource Include="Resources\Icon\image.ico" />
+    <EmbeddedResource Include="Resources\Icon\import.ico" />
+    <EmbeddedResource Include="Resources\Icon\lock.ico" />
+    <EmbeddedResource Include="Resources\Icon\mail.ico" />
+    <EmbeddedResource Include="Resources\Icon\move.ico" />
+    <EmbeddedResource Include="Resources\Icon\music.ico" />
+    <EmbeddedResource Include="Resources\Icon\network.ico" />
+    <EmbeddedResource Include="Resources\Icon\new.ico" />
+    <EmbeddedResource Include="Resources\Icon\news.ico" />
+    <EmbeddedResource Include="Resources\Icon\notepad.ico" />
+    <EmbeddedResource Include="Resources\Icon\open.ico" />
+    <EmbeddedResource Include="Resources\Icon\open_in_browser.ico" />
+    <EmbeddedResource Include="Resources\Icon\paste.ico" />
+    <EmbeddedResource Include="Resources\Icon\pause.ico" />
+    <EmbeddedResource Include="Resources\Icon\phone.ico" />
+    <EmbeddedResource Include="Resources\Icon\pictures.ico" />
+    <EmbeddedResource Include="Resources\Icon\play.ico" />
+    <EmbeddedResource Include="Resources\Icon\preferences.ico" />
+    <EmbeddedResource Include="Resources\Icon\print.ico" />
+    <EmbeddedResource Include="Resources\Icon\redo.ico" />
+    <EmbeddedResource Include="Resources\Icon\refresh.ico" />
+    <EmbeddedResource Include="Resources\Icon\remove.ico" />
+    <EmbeddedResource Include="Resources\Icon\rewind.ico" />
+    <EmbeddedResource Include="Resources\Icon\save.ico" />
+    <EmbeddedResource Include="Resources\Icon\save_as.ico" />
+    <EmbeddedResource Include="Resources\Icon\shopping_cart.ico" />
+    <EmbeddedResource Include="Resources\Icon\show_info.ico" />
+    <EmbeddedResource Include="Resources\Icon\skip_backward.ico" />
+    <EmbeddedResource Include="Resources\Icon\skip_forward.ico" />
+    <EmbeddedResource Include="Resources\Icon\sound.ico" />
+    <EmbeddedResource Include="Resources\Icon\stop.ico" />
+    <EmbeddedResource Include="Resources\Icon\stop_playing.ico" />
+    <EmbeddedResource Include="Resources\Icon\tools.ico" />
+    <EmbeddedResource Include="Resources\Icon\trash.ico" />
+    <EmbeddedResource Include="Resources\Icon\undo.ico" />
+    <EmbeddedResource Include="Resources\Icon\unlock.ico" />
+    <EmbeddedResource Include="Resources\Icon\up.ico" />
+    <EmbeddedResource Include="Resources\Icon\user.ico" />
+    <EmbeddedResource Include="Resources\Icon\users.ico" />
+    <EmbeddedResource Include="Resources\Icon\web.ico" />
+    <EmbeddedResource Include="Resources\Icon\zoom.ico" />
+    <EmbeddedResource Include="Resources\Icon\zoom_in.ico" />
+    <EmbeddedResource Include="Resources\Icon\zoom_out.ico" />
+    <Content Include="Resources\Images\logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

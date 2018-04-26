@@ -1,0 +1,6 @@
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.AppClient.ServicesProvider\BugsBox.Pharmacy.AppClient.ServicesProvider.dll.config
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.AppClient.ServicesProvider\BugsBox.Pharmacy.AppClient.ServicesProvider.dll
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.AppClient.ServicesProvider\BugsBox.Pharmacy.AppClient.ServicesProvider.pdb
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.AppClient.ServicesProvider\obj\Debug\BugsBox.Pharmacy.AppClient.ServicesProvider.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.AppClient.ServicesProvider\obj\Debug\BugsBox.Pharmacy.AppClient.ServicesProvider.dll
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.AppClient.ServicesProvider\obj\Debug\BugsBox.Pharmacy.AppClient.ServicesProvider.pdb

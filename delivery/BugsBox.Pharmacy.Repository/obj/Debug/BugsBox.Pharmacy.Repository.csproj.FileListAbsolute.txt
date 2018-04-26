@@ -1,0 +1,9 @@
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.dll.config
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.XML
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.dll
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.pdb
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.Migrations.AddPostAbstract.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csproj.GenerateResource.Cache
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.dll
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.pdb

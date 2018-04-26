@@ -1,0 +1,17 @@
+D:\work\phamacy2016\delivery\_output\服务宿主\Config\BugsBox.Application.Core.AppConfig.config
+D:\work\phamacy2016\delivery\_output\服务宿主\Config\BugsBox.Common.LoggerConfig.config
+D:\work\phamacy2016\delivery\_output\服务宿主\Config\BugsBox.Pharmacy.Config.PharmacyServiceConfig.config
+D:\work\phamacy2016\delivery\_output\服务宿主\BugsBox.Pharmacy.ServiceHost.exe.config
+D:\work\phamacy2016\delivery\_output\服务宿主\BugsBox.Pharmacy.ServiceHost.exe
+D:\work\phamacy2016\delivery\_output\服务宿主\BugsBox.Pharmacy.ServiceHost.pdb
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.Forms.SystemConfigForm.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.mainForm.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.Properties.Resources.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.UserControls.IndexUserControl.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.UserControls.RunTimeLogsUserControl.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.UserControls.ServiceControl.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.UserControls.ServiceControlButton.resources
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.csproj.GenerateResource.Cache
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.exe
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.pdb

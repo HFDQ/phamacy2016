@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BugsBox.Pharmacy.Models.AuthorizationDoc">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQEAAABgAQAAAAAAMAAAAAEAgAAAEAAABAgAAAA=</HashCode>
+      <FileName>AuthorizationDoc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Warehouse" Collapsed="true">
+    <Position X="18.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAAAAAAYIAAgAgMBQAEAEAgAACQEABIYgAEAA=</HashCode>
+      <FileName>Warehouse.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Department" Collapsed="true">
+    <Position X="32.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAgIAAAAAgEAQACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.District" Collapsed="true">
+    <Position X="41.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgEAQAAAAAAAAAAAAAIAAAABA=</HashCode>
+      <FileName>District.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DoubtDrug" Collapsed="true">
+    <Position X="48" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAgAAIAAAAQAAAAAAMAAAAAEAAAAEAAAAAAgAAEQ=</HashCode>
+      <FileName>DoubtDrug.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DrugApprovalNumber" Collapsed="true">
+    <Position X="59.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugApprovalNumber.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DrugCategory" Collapsed="true">
+    <Position X="72.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugCategory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DictionaryDosage" Collapsed="true">
+    <Position X="86.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugDosage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DrugInfo">
+    <Position X="97.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wgAAAYAgywAqMZQBGBjwIAgQiEUCnAoAKUipBIoYDYU=</HashCode>
+      <FileName>DrugInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DictionaryMeasurementUnit">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugMeasurementUnit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DictionaryPiecemealUnit" Collapsed="true">
+    <Position X="21" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugPiecemealUnit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DictionarySpecification" Collapsed="true">
+    <Position X="34.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugSpecification.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DictionaryStorageType" Collapsed="true">
+    <Position X="43.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAACAAAAIAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugStorageType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PackagingMaterial" Collapsed="true">
+    <Position X="50.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PackagingMaterial.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.DictionaryUserDefinedType" Collapsed="true">
+    <Position X="61.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrugUserDefinedType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Employee" Collapsed="true">
+    <Position X="75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBASEAACAAwcCAgEAAMSQQMAkYAJICAAEiKAgAAAA=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Entity" Collapsed="true">
+    <Position X="54.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.InInventoryRecord" Collapsed="true">
+    <Position X="52.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InInventoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.InventoryRecord" Collapsed="true">
+    <Position X="63.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAACIAIAAAIAAQAAAAAEAAAAAIAAACAAAAgAAAAEAE=</HashCode>
+      <FileName>InventoryRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Module" Collapsed="true">
+    <Position X="77.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAIAgAAAAAAAAECQAAAAAAAAAQAEAAAAAAAA=</HashCode>
+      <FileName>Module.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.ModuleCatetory" Collapsed="true">
+    <Position X="88.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAEAQQAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ModuleCatetory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.ModuleWithRole" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAQAAEAAAMAQAAAEAAAAAAAAACAgAAAA=</HashCode>
+      <FileName>ModuleWithRole.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.OutInventory" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAKAAAAgQQAIAAABMAAAEAEIAoAwAAEkAhhAAIA=</HashCode>
+      <FileName>OutInventory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.OutInventoryDetail" Collapsed="true">
+    <Position X="36.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAgAAAAAQAqAwACABCQMAGBBAMAAAgEABkgIAggAAA=</HashCode>
+      <FileName>OutInventoryDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseAgreement" Collapsed="true">
+    <Position X="45.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchaseAgreement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseDeliveryCheck" Collapsed="true">
+    <Position X="54.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchaseDeliveryCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseDeliveryRecord" Collapsed="true">
+    <Position X="66" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchaseDeliveryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseOrder" Collapsed="true">
+    <Position X="79.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIABAoAAYETAQCAAAACsQwQACUAYCAAAACAAAhACAA=</HashCode>
+      <FileName>PurchaseOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseOrderDetail" Collapsed="true">
+    <Position X="90.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAwAABABAMACAAAMAACAAAAAAAAgAAAA=</HashCode>
+      <FileName>PurchaseOrderDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseUnit" Collapsed="true">
+    <Position X="99.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQEAAARCIBABAIgwAIAQAAABEAAAECAABACAAAA=</HashCode>
+      <FileName>PurchaseUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseUnitBuyer">
+    <Position X="12" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACACAAkAACAAwYCAAAAAMAQAAAEIIAACAAEEBAgAAAQ=</HashCode>
+      <FileName>PurchaseUnitBuyer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseUnitDeliverer" Collapsed="true">
+    <Position X="25.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAwYCAAAAAMAQAAAEIAAACAAAEBAgAAAQ=</HashCode>
+      <FileName>PurchaseUnitDeliverer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchaseUnitType" Collapsed="true">
+    <Position X="39" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchaseUnitType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchasingPlan" Collapsed="true">
+    <Position X="106.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchasingPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.PurchasingPlanDetail" Collapsed="true">
+    <Position X="108.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchasingPlanDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Rareword" Collapsed="true">
+    <Position X="68.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMAAAAAAAAAAIAAIBAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rareword.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Role" Collapsed="true">
+    <Position X="81.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACQAAgAQAAAAAgMAQAAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Role.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.RoleWithUser">
+    <Position X="93" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIAAAAAAQAAEAAAMAgAAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>RoleWithUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.SalesOrder" Collapsed="true">
+    <Position X="102" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQDvABJgEaAjQQiIAACD8jQAACEQKIAQAIkEEBlAABA=</HashCode>
+      <FileName>SalesOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.SalesOrderDeliverRecord">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAABAQAAAAAA8EBAAAEAAAAAAAAgAAgQAAQ=</HashCode>
+      <FileName>SalesOrderDeliverRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.SalesOrderDetail" Collapsed="true">
+    <Position X="27.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgAAAIAQAoAQACAACAMAHABAEAAogEAAkgIAggAAA=</HashCode>
+      <FileName>SalesOrderDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.SalesOrderReturn" Collapsed="true">
+    <Position X="110.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEpQAJAAQCgIQAAAAAMcERIEAMAIAABIAhgAAhAAAA=</HashCode>
+      <FileName>SalesOrderReturn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.SalesOrderReturnDetail" Collapsed="true">
+    <Position X="106.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgAAgIkQgoAQACBECCMAEAFAEAAggEAAkIAAggAJA=</HashCode>
+      <FileName>SalesOrderReturnDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Store" Collapsed="true">
+    <Position X="57" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAgIAAAAAgAAQAAAAAAAICAAAAQAAAAAA=</HashCode>
+      <FileName>Store.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.SupplyUnit" Collapsed="true">
+    <Position X="70.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAQEAAgAYgIEABAAAAAIAAAAABAICQAEAABAAAwQA=</HashCode>
+      <FileName>SupplyUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.SupplyUnitSalesman" Collapsed="true">
+    <Position X="84" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAkAgCBAwcCAAAABsAQAEAEIQAACAAEABAgAAAQ=</HashCode>
+      <FileName>SupplyUnitSalesman.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.User">
+    <Position X="95.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAgAAAMAAACAEAAAAAIIAAAAgCAEA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.UserLog" Collapsed="true">
+    <Position X="104.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAQAAAAAAMAAAAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>UserLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.Vehicle">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAAAEAEAEAAAAAAAAAAEAAAAAAAgIAAAQAABAgAAAA=</HashCode>
+      <FileName>Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BugsBox.Pharmacy.Models.WarehouseZone" Collapsed="true">
+    <Position X="30" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAgABAAAAYAAEAAkMAQAAQEAAAAACEQAAQwAAAA=</HashCode>
+      <FileName>WarehouseZone.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="BugsBox.Pharmacy.Models.ILEntity" Collapsed="true">
+    <Position X="108.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAIAAAAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BugsBox.Pharmacy.Models.IDictionaryType">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BugsBox.Pharmacy.Models.IEnable">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BugsBox.Pharmacy.Models.IApproval" Collapsed="true">
+    <Position X="106.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BugsBox.Pharmacy.Models.IStore" Collapsed="true">
+    <Position X="106.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BugsBox.Pharmacy.Models.IValidation" Collapsed="true">
+    <Position X="108.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BugsBox.Pharmacy.Models.IOutDate" Collapsed="true">
+    <Position X="110.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="BugsBox.Pharmacy.Models.WarehouseZoneType" Collapsed="true">
+    <Position X="108.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BugsBox.Pharmacy.Models.StoreType" Collapsed="true">
+    <Position X="106.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAABAAAAAA=</HashCode>
+      <FileName>EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BugsBox.Pharmacy.Models.ApprovalStatus" Collapsed="true">
+    <Position X="106.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAgAAAAAAAAAQAAACAAAAAAAAAAIA=</HashCode>
+      <FileName>EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BugsBox.Pharmacy.Models.EmployStatus" Collapsed="true">
+    <Position X="108.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BugsBox.Pharmacy.Models.PharmacistsTitleType" Collapsed="true">
+    <Position X="110.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAAAACQAAAAAAAAAAAAAAAAIBAAAAAAAAAEAAAA=</HashCode>
+      <FileName>EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BugsBox.Pharmacy.Models.PharmacistsQualification" Collapsed="true">
+    <Position X="108.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BugsBox.Pharmacy.Models.OutInventoryType" Collapsed="true">
+    <Position X="106.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAEAAAAAAAAAAACAQAAACAAAAAAAAAAEAAAABA=</HashCode>
+      <FileName>EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BugsBox.Pharmacy.Models.ModuleKeys" Collapsed="true">
+    <Position X="110.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModuleKeys.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

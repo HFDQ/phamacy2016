@@ -1,0 +1,12 @@
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\MedicalInstruments.Infrastructure.dll.config
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\MedicalInstruments.Infrastructure.dll
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\MedicalInstruments.Infrastructure.pdb
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\EntityFramework.dll
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\log4net.dll
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\EntityFramework.xml
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\bin\Debug\log4net.xml
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\obj\Debug\MedicalInstruments.Infrastructure.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\obj\Debug\MedicalInstruments.Infrastructure.dll
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Common\obj\Debug\MedicalInstruments.Infrastructure.pdb

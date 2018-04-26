@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28C37AC0-FEAC-45C7-94C2-B0515A3A8F9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugsBox.Pharmacy.Models</RootNamespace>
+    <AssemblyName>BugsBox.Pharmacy.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.Models\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\_output\_temp\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugsBox.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\BugsBox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApprovalFlow.cs" />
+    <Compile Include="ApprovalFlowNode.cs" />
+    <Compile Include="ApprovalFlowType.cs" />
+    <Compile Include="ApprovalFlowRecord.cs" />
+    <Compile Include="BaseUnit.cs" />
+    <Compile Include="BillDocumentCode.cs" />
+    <Compile Include="BusinessScope.cs" />
+    <Compile Include="BusinessScopeCategory.cs" />
+    <Compile Include="BusinessType.cs" />
+    <Compile Include="BusinessTypeManageCategoryDetail.cs" />
+    <Compile Include="Config\PharmacyServiceConfig.cs" />
+    <Compile Include="Config\ResourceStrings.cs" />
+    <Compile Include="DirectSalesOrder.cs" />
+    <Compile Include="DirectSalesOrderDetail.cs" />
+    <Compile Include="DocumentRefuse.cs" />
+    <Compile Include="DrugsBreakage.cs" />
+    <Compile Include="DrugsInventoryMove.cs" />
+    <Compile Include="DrugsUndeterminate.cs" />
+    <Compile Include="drugsUnqualication.cs" />
+    <Compile Include="DrugsUnqualificationDestroy.cs" />
+    <Compile Include="drugsUnqualificationQuery.cs" />
+    <Compile Include="EduDetails.cs" />
+    <Compile Include="EduDocument.cs" />
+    <Compile Include="GoodsAdditionalProperty.cs" />
+    <Compile Include="HealthCheckDetail.cs" />
+    <Compile Include="HealthCheckDocument.cs" />
+    <Compile Include="PurchaseCashOrder.cs" />
+    <Compile Include="Delivery.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="District.cs" />
+    <Compile Include="DoubtDrug.cs" />
+    <Compile Include="DrugApprovalNumber.cs" />
+    <Compile Include="DrugCategory.cs" />
+    <Compile Include="DrugClinicalCategory.cs" />
+    <Compile Include="DrugDosage.cs" />
+    <Compile Include="DrugInfo.cs" />
+    <Compile Include="DrugInventoryRecord.cs" />
+    <Compile Include="DrugMaintainRecord.cs" />
+    <Compile Include="DrugMaintainRecordDetail.cs" />
+    <Compile Include="DrugMeasurementUnit.cs" />
+    <Compile Include="DrugPiecemealUnit.cs" />
+    <Compile Include="DrugSpecification.cs" />
+    <Compile Include="DrugStorageType.cs" />
+    <Compile Include="DrugType.cs" />
+    <Compile Include="DrugUserDefinedType.cs" />
+    <Compile Include="AuthorizationDoc.cs" />
+    <Compile Include="DrugMaintainSet.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="EnumType.cs" />
+    <Compile Include="Extend\RequiredAttribute.cs" />
+    <Compile Include="GMSPLicense.cs" />
+    <Compile Include="GMSPLicenseBusinessScope.cs" />
+    <Compile Include="InventoryRecord.cs" />
+    <Compile Include="Manufacturer.cs" />
+    <Compile Include="ModuleKeys.cs" />
+    <Compile Include="PackagingMaterial.cs" />
+    <Compile Include="PackagingUnit.cs" />
+    <Compile Include="PaymentMethod.cs" />
+    <Compile Include="PharmacyLicense.cs" />
+    <Compile Include="LicenseType.cs" />
+    <Compile Include="MedicalCategory.cs" />
+    <Compile Include="MedicalCategoryDetail.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="ModuleCatetory.cs" />
+    <Compile Include="ModuleWithRole.cs" />
+    <Compile Include="PharmacyFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseAgreement.cs" />
+    <Compile Include="PurchaseCheckingOrder.cs" />
+    <Compile Include="PurchaseCheckingOrderDetail.cs" />
+    <Compile Include="PurchaseInInventeryOrder.cs" />
+    <Compile Include="PurchaseInInventeryOrderDetail.cs" />
+    <Compile Include="PurchaseManageCategory.cs" />
+    <Compile Include="PurchaseManageCategoryDetail.cs" />
+    <Compile Include="PurchaseOrder.cs" />
+    <Compile Include="PurchaseOrderDetail.cs" />
+    <Compile Include="PurchaseOrderReturn.cs" />
+    <Compile Include="PurchaseOrderReturnDetail.cs" />
+    <Compile Include="PurchaseReceivingOrder.cs" />
+    <Compile Include="PurchaseReceivingOrderDetail.cs" />
+    <Compile Include="PurchaseUnit.cs" />
+    <Compile Include="PurchaseUnitBuyer.cs" />
+    <Compile Include="PurchaseUnitDeliverer.cs" />
+    <Compile Include="PurchaseUnitType.cs" />
+    <Compile Include="PurchasingPlan.cs" />
+    <Compile Include="PurchasingPlanDetail.cs" />
+    <Compile Include="Rareword.cs" />
+    <Compile Include="RetailMember.cs" />
+    <Compile Include="RetailOrder.cs" />
+    <Compile Include="RetailOrderDetail.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RoleWithUser.cs" />
+    <Compile Include="SalesOrder.cs" />
+    <Compile Include="SalesOrderDeliverDetail.cs" />
+    <Compile Include="SalesOrderDeliverRecord.cs" />
+    <Compile Include="SalesOrderDetail.cs" />
+    <Compile Include="SalesOrderReturn.cs" />
+    <Compile Include="SalesOrderReturnDetail.cs" />
+    <Compile Include="OutInventory.cs" />
+    <Compile Include="SetSpeicalDrugRecord.cs" />
+    <Compile Include="SpecialDrugCategory.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="SupplyPerson.cs" />
+    <Compile Include="SupplyUnit.cs" />
+    <Compile Include="SupplyUnitSalesman.cs" />
+    <Compile Include="TaxRate.cs" />
+    <Compile Include="UnitType.cs" />
+    <Compile Include="UploadRecord.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserLog.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="Warehouse.cs" />
+    <Compile Include="WarehouseZone.cs" />
+    <Compile Include="WareHouseZonePosition.cs" />
+    <Compile Include="WaringSet.cs" />
+    <Compile Include="OutInventoryDetail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugsBox.Application.Core\BugsBox.Application.Core.csproj">
+      <Project>{672ACEAF-FED6-4DF4-BF3C-72418251657B}</Project>
+      <Name>BugsBox.Application.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mapping\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Group>
+  <Works>
+    <Item id="SupplyUnitApproval" Title="首营供货单位审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="1" Image="1" ModuleKey="首营供货商审批[窗体]"></Item>
+    <Item id="PurchaseUnitApproval" Title="首营购货单位审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="2" Image="1" ModuleKey="首营客户审批[窗体]"></Item>
+    <Item id="DrugInfoApproval" Title="首营品种审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="3" Image="1" ModuleKey="首营药品审批[窗体]"></Item>
+    <Item id="DrugInfoLockApproval" Title="药品解锁审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="4" Image="1" ModuleKey="药品解锁审批[窗体]"></Item>
+    <Item id="PurchaseUnitLockApproval" Title="收货单位解锁审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="5" Image="1" ModuleKey="客户解锁审批[窗体]"></Item>
+    <Item id="SupplyUnitLockApproval" Title="供货单位解锁审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="6" Image="1" ModuleKey="供货商解锁审批[窗体]"></Item>
+    <Item id="DrugInfoEditApproval" Title="药品修改审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="7" Image="1" ModuleKey="药品修改审批[窗体]"></Item>
+    <Item id="PurchaseUnitEditApproval" Title="购货单位修改审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="8" Image="1" ModuleKey="客户修改审批[窗体]"></Item>
+    <Item id="SupplyUnitEditApproval" Title="供货单位修改审批" Name="UI.Forms.Approval.FormApprovalFlowCenter" Params="9" Image="1" ModuleKey="供货商修改审批[窗体]"></Item>
+
+
+    <Item id="销售单审核" Title="配送出库单审核" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Params="Waitting" Image="1" ModuleKey="销售审核[窗体]"></Item>
+    <Item id="拣货" Title="拣货" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Params="Banlaced" Image="1" ModuleKey="销售出库[窗体]"></Item>
+    <Item id="拣货核查" Title="拣货核查" Name="UI.Forms.SalesBusiness.FormOutInventoryCenter" Params="Outing" Image="1" ModuleKey="销售出库审核[窗体]"></Item>
+    <Item id="配送" Title="配送" Name="UI.Forms.DeliveryBusiness.FormDeliveryCenter" Params="Reservation" Image="1" ModuleKey="销售配送受理[窗体]"></Item>
+    <!--<Item id="销退销售员审核" Title="销退销售员审核" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Params="Waitting" Image="1" ModuleKey="销退销售员审核[窗体]"></Item>
+    <Item id="销退营业部审核" Title="销退营业部审核" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Params="SellerApproved" Image="1" ModuleKey="销退营业部审核[窗体]"></Item>
+    <Item id="销退质管部审核" Title="销退质管部审核" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Params="TradeApproved" Image="1" ModuleKey="销退质管部审核通过[窗体]"></Item>-->
+
+    <Item id="采购单审核" Title="配送入库单审核" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderWaittingList" Params="" Image="1" ModuleKey="待审采购单[窗体]"></Item>
+    <Item id="收货" Title="收货" Name="" Params="UI.Forms.PurchaseBusiness.FormPurchaseOrderApprovaledList" Image="1" ModuleKey="采购记录[窗体]"></Item>
+    <Item id="收货验收" Title="收货验收" Name="UI.Forms.BaseForm.FormOrderList" Params="PurchaseReceivingOrder" Image="1" ModuleKey="采购收货单[窗体]"></Item>
+    <Item id="入库" Title="入库" Name="UI.Forms.BaseForm.FormOrderList" Params="PurchaseCheckingOrder" Image="1" ModuleKey="验收记录[窗体]"></Item>
+    <!--<Item id="采购退货质管部审核" Title="采购退货质管部审核" Name="UI.Forms.BaseForm.FormOrderList" Params="PurchaseOrderReturn,1" Image="1" ModuleKey="采购退货单[窗体]"></Item>
+    <Item id="采购退货总经理审核" Title="采购退货总经理审核" Name="UI.Forms.BaseForm.FormOrderList" Params="PurchaseOrderReturn,4" Image="1" ModuleKey="采购退货单[窗体]"></Item>
+    <Item id="采购退货财务部审核" Title="采购退货财务部审核" Name="UI.Forms.BaseForm.FormOrderList" Params="PurchaseOrderReturn,7" Image="1" ModuleKey="采购退货单[窗体]"></Item>
+    <Item id="采购到货数不够" Title="采购到货数不够" Name="UI.Forms.PurchaseBusiness.FormPurchaseOrderApprovaledList" Params="diff" Image="1" ModuleKey="采购记录[窗体]"></Item>-->
+
+  </Works>
+  <Warns>
+    <Item id="药品被锁" Title="药品被锁" Name="UI.Forms.BaseDataManage.FormDrugInfoUnlock" Params="" Image="2" ModuleKey="药品锁定[窗体]"></Item>
+    <Item id="供应商被锁" Title="供应商被锁" Name="UI.Forms.BaseDataManage.FormSupplyUnitUnlock" Params="" Image="2" ModuleKey="供应商锁定[窗体]"></Item>
+    <Item id="客户被锁" Title="客户被锁" Name="UI.Forms.BaseDataManage.FormPurchaseUnitUnlock" Params="" Image="2" ModuleKey="客户锁定[窗体]"></Item>
+    <Item id="疑问药品" Title="疑问药品" Name="UI.Forms.DrugBusiness.FormDoubtDrugManage" Params="" Image="2" ModuleKey="疑问药品管理[窗体]"></Item>
+    <Item id="养护到期" Title="养护到期" Name="UI.Forms.DrugMaintain.DrugMaintainRecord" Params="" Image="2" ModuleKey="养护管理[窗体]"></Item>
+    <Item id="缺货报警" Title="缺货报警" Name="UI.Forms.Common.FormDrugForPurchaseSelector" Params="OutofStock" Image="2" ModuleKey="采购药品选择[窗体]"></Item>
+    <Item id="药品近效期报警" Title="药品近效期报警" Name="UI.Forms.DrugMaintain.SignDrugAsSpecial" Params="" Image="" ModuleKey="近效期品种查询[窗体]"></Item>
+  </Warns>
+</Group>

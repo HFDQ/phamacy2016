@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BugsBox.Pharmacy.AppClient.UI.Reports.DsSalesOrderReturn" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAABAAgCQBgAAAAAAAEABBA=</HashCode>
+      <FileName>UI\Reports\DsSalesOrderReturn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.AppClient.UI.Reports.DSPurchaseRefund" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Reports\DSPurchaseRefund.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BugsBox.Pharmacy.AppClient.UI.Report.DsSalesOrder" Collapsed="true">
+    <Position X="1" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAABAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

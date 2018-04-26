@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.bugsbox.bugsbox/PharmacyNotification" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.bugsbox.bugsbox/PharmacyNotification" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.bugsbox.bugsbox/PharmacyNotification/Imports">
+      <xsd:import schemaLocation="http://localhost:5570/PharmacyNotification?xsd=xsd0" namespace="http://www.bugsbox.bugsbox/PharmacyNotification" />
+      <xsd:import schemaLocation="http://localhost:5570/PharmacyNotification?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5570/PharmacyNotification?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Models" />
+      <xsd:import schemaLocation="http://localhost:5570/PharmacyNotification?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Business.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPharmacyNotification_RegisterClientNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterClientNotification" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_CloseClientNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseClientNotification" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_test_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_UserOnLine_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserOnLine" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_SayHello_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SayHello" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_RoleAuthorityChanged_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RoleAuthorityChanged" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_DrugLock_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:DrugLock" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_SupplyUnitLock_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SupplyUnitLock" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_PurchaseUnitLock_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseUnitLock" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_NeedApproval_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NeedApproval" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_NeedDrugMaintain_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NeedDrugMaintain" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_NeedHandledDoubtDrug_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NeedHandledDoubtDrug" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_NeedHandleSale_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NeedHandleSale" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_NeedHandlePurchase_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NeedHandlePurchase" />
+  </wsdl:message>
+  <wsdl:message name="IPharmacyNotification_DrugOutofStock_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:DrugOutofStock" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IPharmacyNotification">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegisterClientNotification">
+      <wsdl:input wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/RegisterClientNotification" message="tns:IPharmacyNotification_RegisterClientNotification_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="CloseClientNotification">
+      <wsdl:input wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/CloseClientNotification" message="tns:IPharmacyNotification_CloseClientNotification_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="test">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/test" message="tns:IPharmacyNotification_test_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UserOnLine">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/UserOnLine" message="tns:IPharmacyNotification_UserOnLine_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SayHello">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/SayHello" message="tns:IPharmacyNotification_SayHello_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RoleAuthorityChanged">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/RoleAuthorityChanged" message="tns:IPharmacyNotification_RoleAuthorityChanged_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DrugLock">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/DrugLock" message="tns:IPharmacyNotification_DrugLock_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SupplyUnitLock">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/SupplyUnitLock" message="tns:IPharmacyNotification_SupplyUnitLock_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="PurchaseUnitLock">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/PurchaseUnitLock" message="tns:IPharmacyNotification_PurchaseUnitLock_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NeedApproval">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/NeedApproval" message="tns:IPharmacyNotification_NeedApproval_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NeedDrugMaintain">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/NeedDrugMaintain" message="tns:IPharmacyNotification_NeedDrugMaintain_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NeedHandledDoubtDrug">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/NeedHandledDoubtDrug" message="tns:IPharmacyNotification_NeedHandledDoubtDrug_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NeedHandleSale">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/NeedHandleSale" message="tns:IPharmacyNotification_NeedHandleSale_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NeedHandlePurchase">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/NeedHandlePurchase" message="tns:IPharmacyNotification_NeedHandlePurchase_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DrugOutofStock">
+      <wsdl:output wsaw:Action="http://www.bugsbox.bugsbox/PharmacyNotification/IPharmacyNotification/DrugOutofStock" message="tns:IPharmacyNotification_DrugOutofStock_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

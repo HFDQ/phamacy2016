@@ -1,0 +1,221 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="System.ServiceModel.dll" #> 
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Common.dll" #>  
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Application.Core.dll" #>  
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.AppClient.ServicesProvider\\BugsBox.Pharmacy.AppClient.ServicesProvider.dll" #> 
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.InteropServices" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data.Entity" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #> 
+<#@ import namespace="System.Xml" #> 
+<#@ import namespace="System.Reflection" #> 
+<#@ import namespace="BugsBox.Pharmacy.AppClient.PS" #>  
+<#@ import namespace="BugsBox.Application.Core" #> 
+<#@ output extension=".cs" #>
+<#
+   Type IPharmacyServcieType=typeof(IPharmacyDatabaseService);
+            List<MethodInfo> MethodInfos = IPharmacyServcieType.GetMethods()
+                                                               .ToList();
+#> 
+using System.Net;
+using System.ServiceModel;
+using System.Xml;
+using BugsBox.Common;
+using BugsBox.Pharmacy.AppClient.PS;
+using System;  
+using System.Net.Sockets;
+using BugsBox.Pharmacy.Models;
+using BugsBox.Pharmacy.Service.Models;
+using BugsBox.Application.Core;
+using BugsBox.Pharmacy.Business.Models; 
+using BugsBox.Pharmacy.Business.Models.QueryModelExtesion; 
+namespace BugsBox.Pharmacy.AppClient.PS
+{
+	//此代码由PharmacyService.tt自动生成 
+    partial class PharmacyDatabaseService:IPharmacyDatabaseService
+    {
+		private PharmacyDatabaseServiceClient pharmacyServcie
+        {
+            get
+            {
+                return new PharmacyDatabaseServiceClient("NetTcpBinding_IPharmacyDatabaseService");
+            }
+        }
+         private ILogger Log = LoggerHelper.Instance; 
+
+ 
+
+
+        public PharmacyDatabaseService()
+        {
+            try
+            {
+                 //var factory = new ChannelFactory<IPharmacyDatabaseServiceChannel>("NetTcpBinding_IPharmacyDatabaseService");
+                //pharmacyServcie = new PharmacyDatabaseServiceClient("NetTcpBinding_IPharmacyDatabaseService");
+               
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+            }
+          
+        }
+
+				#region 错误处理
+
+        public TReturn HandleException<TReturn>(Exception ex = null)
+        {
+            HandleException(ex);
+            return default(TReturn);
+        }
+
+        public void HandleException(Exception ex = null)
+        {          
+            if (ex is TimeoutException)
+            {
+                //服务超时
+                ex = new Exception("服务超时", ex);
+                Log.Error(ex);
+                throw ex;
+            }
+            else if (ex is FaultException<ServiceExceptionDetail>)
+            {
+                //自定义Fault
+                FaultException<ServiceExceptionDetail> exDetail = ex as FaultException<ServiceExceptionDetail>;
+                if (exDetail != null)
+                {
+                    ServiceExceptionDetail detail = exDetail.Detail;
+                    if (detail != null)
+                    {
+                        ex = new Exception(detail.Message, ex);
+                    }
+                    else
+                    {
+                        ex = new Exception("未知自定义Fault", ex);
+                    }
+                }
+                else
+                {
+                    ex = new Exception( "未知自定义Fault", ex);
+                }
+                Log.Error(ex);
+                throw ex;
+            }
+            else if (ex is FaultException)
+            {
+                //Fault
+                ex = new Exception( "自定义Fault", ex);
+                Log.Error(ex);
+                throw ex;
+            }
+            else if (ex is EndpointNotFoundException || ex is CommunicationException)
+            {
+                //服务连接错误 
+                ex = new Exception( "服务连接错误", ex);
+                Log.Error(ex);
+                throw ex;
+            } 
+            else if (ex is ObjectDisposedException)
+            {
+                //服务已经释放 
+                ex = new Exception( "服务通道出错", ex);
+                Log.Error(ex);
+                throw ex;
+            }
+            ex = new Exception("未知错误", ex);
+            Log.Error(ex);
+            throw ex;
+               
+        }
+
+        #endregion 错误处理
+		      
+		<#foreach (MethodInfo methodInfo in MethodInfos){#> 
+		    <#
+				Type returnType = methodInfo.ReturnType;
+				string parameterInfosString = string.Empty;
+				string parameterInfosCallString = string.Empty;
+				string CallString = string.Empty;
+				string exHandleString = string.Empty;
+				string returnTypeString = string.Empty;
+                ParameterInfo[] parameterInfos=methodInfo.GetParameters();
+                if (parameterInfos.Length>0)
+                {
+                    for (int i = 0; i < parameterInfos.Length; i++)
+                    {
+                        var parameterInfo = parameterInfos[i];
+						if(parameterInfo.IsOut)
+						{
+							parameterInfosString += "out "+parameterInfo.ParameterType.Name.Replace("&","") + " " + parameterInfo.Name;
+							parameterInfosCallString+= "out "+parameterInfo.Name;
+						}
+						else
+						{
+							parameterInfosString += EntityQueryFunctionBuilder.GetTypeCodeString(parameterInfo.ParameterType)+ " " + parameterInfo.Name;
+							parameterInfosCallString+= parameterInfo.Name;
+						}
+                        if (i < parameterInfos.Length - 1)
+                        {
+                            parameterInfosString += ",";
+							parameterInfosCallString +=",";
+                        }
+                        else
+                        {
+                            parameterInfosString += "";
+                        }
+                    }
+                }
+				if(returnType==typeof(void))
+				{
+
+					returnTypeString="void";					 
+					CallString="pharmacyServcie."+methodInfo.Name+"("+parameterInfosCallString+");";
+				}
+				else if(returnType==typeof(bool))
+				{
+					returnTypeString="bool";				
+					CallString="return pharmacyServcie."+methodInfo.Name+"("+parameterInfosCallString+");";
+				}
+				else if(returnType==typeof(int))
+				{
+					returnTypeString="int";				
+					CallString="return pharmacyServcie."+methodInfo.Name+"("+parameterInfosCallString+");";
+				}
+				else if(returnType==typeof(decimal))
+				{
+					returnTypeString="decimal";				
+					CallString="return pharmacyServcie."+methodInfo.Name+"("+parameterInfosCallString+");";
+				}
+				else
+				{
+					returnTypeString=returnType.Name;					
+					CallString="return pharmacyServcie."+methodInfo.Name+"("+parameterInfosCallString+");";
+				}
+			#>  
+			public <#= returnTypeString #> <#= methodInfo.Name #>(<#= parameterInfosString #>)
+			{
+			    //Log.Warning(string.Format("开始调用服务方法:<#=methodInfo.Name#>....."));
+				try
+				{ 
+					<#=CallString#>
+				} 
+				catch(Exception ex)
+				{ 
+					 HandleException(ex);
+					 throw ex;
+				}
+				finally
+				{
+					 //Log.Warning(string.Format("结束调用服务方法:<#=methodInfo.Name#>."));
+				}
+			}
+		<#}#> 
+	}
+}

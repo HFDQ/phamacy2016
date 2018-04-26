@@ -1,0 +1,5 @@
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Service\bin\Debug\MedicalInstruments.Service.dll
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Service\bin\Debug\MedicalInstruments.Service.pdb
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Service\obj\Debug\MedicalInstruments.Service.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Service\obj\Debug\MedicalInstruments.Service.dll
+D:\work\phamacy2016\MedicalInstruments\MedicalInstruments.Service\obj\Debug\MedicalInstruments.Service.pdb

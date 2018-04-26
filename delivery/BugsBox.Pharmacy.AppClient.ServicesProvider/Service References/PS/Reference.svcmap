@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f7dbc8aa-9428-403d-8e11-4a8797c24bc6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="BugsBox.Application.Core" />
+      <ReferencedAssembly AssemblyName="BugsBox.Common" />
+      <ReferencedAssembly AssemblyName="BugsBox.Pharmacy.Business.Models" />
+      <ReferencedAssembly AssemblyName="BugsBox.Pharmacy.Models" />
+      <ReferencedAssembly AssemblyName="BugsBox.Pharmacy.Service.Models" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5560/PharmacyService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PharmacyService.xsd" MetadataType="Schema" ID="9c8fe434-5798-463a-a6be-f16dd708625b" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd0" />
+    <MetadataFile FileName="PharmacyService.disco" MetadataType="Disco" ID="831c76a5-a5c4-47e6-9be1-267fad168ad1" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?disco" />
+    <MetadataFile FileName="PharmacyService2.xsd" MetadataType="Schema" ID="ec2a0fa0-cc3f-420e-a929-6b3e5dc72f28" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd2" />
+    <MetadataFile FileName="PharmacyService3.xsd" MetadataType="Schema" ID="c5bdce8f-f5fe-450d-bde2-e81e16093247" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd3" />
+    <MetadataFile FileName="PharmacyService.wsdl" MetadataType="Wsdl" ID="b8514f3c-778d-472e-a1e8-7ed3bf96623f" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?wsdl=wsdl0" />
+    <MetadataFile FileName="PharmacyService5.xsd" MetadataType="Schema" ID="8183e2dc-5830-4046-9987-92f4d78e360a" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd5" />
+    <MetadataFile FileName="PharmacyService1.xsd" MetadataType="Schema" ID="84e419c5-a460-490e-ae78-e3946cca0f60" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd1" />
+    <MetadataFile FileName="PharmacyService7.xsd" MetadataType="Schema" ID="aa8afe98-dd08-41a9-a10c-5f96d0defcc4" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd7" />
+    <MetadataFile FileName="PharmacyService1.wsdl" MetadataType="Wsdl" ID="9ba4723c-7ed1-49d7-9c39-c18e8b41dfde" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?wsdl" />
+    <MetadataFile FileName="PharmacyService6.xsd" MetadataType="Schema" ID="a9f29c63-2eea-4b0d-8e6d-96df2b8884c7" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd6" />
+    <MetadataFile FileName="PharmacyService4.xsd" MetadataType="Schema" ID="b63e3ce5-d80e-483c-912e-e218e2fc2863" SourceId="1" SourceUrl="http://localhost:5560/PharmacyService?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

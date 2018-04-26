@@ -1,0 +1,73 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
+<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Application.Core.dll" #> 
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Runtime.InteropServices" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data.Entity" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #> 
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="BugsBox.Pharmacy.Models" #>  
+<#@ output extension=".cs" #>
+
+<#
+string entityAssemblyFullPath="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll";
+//public DbSet<Announcement> Announcements { get; set; }
+string  dbSetPropertyFormat="public DbSet<{0}> {0}s { get; set; }";
+Type EntityType=typeof(Entity);
+//Type BaseUnitType=typeof(BaseUnit);
+Assembly assembly=EntityType.Assembly;
+string baseEntityTypeName="BugsBox.Pharmacy.Models";
+//var entityTypes=assembly.GetTypes()
+//.Where(t => !t.IsAbstract&&!t.IsEnum && t.Namespace.Equals(baseEntityTypeName)&&!t.IsStatic).ToList();
+var entityTypes=assembly.GetTypes()
+.Where(t => !t.IsAbstract&&(t.BaseType==EntityType||t.BaseType==typeof(BaseUnit)||t.BaseType==typeof(PharmacyLicense))).ToList(); 
+#>
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Services;
+using BugsBox.Pharmacy.BusinessHandlers;
+using BugsBox.Pharmacy.Models;
+using System.ServiceModel;
+namespace BugsBox.Pharmacy.WebService
+{
+    public class UploadService : IUploadService
+    {
+	<#
+	foreach (Type entity in entityTypes)
+	{
+		if (entity.GetProperty("StoreId") == null)
+                    continue;
+	#> 
+        public bool Up<#= entity.Name #>(List<<#= entity.Name #>> items, Guid storeId,string token ,int i)
+        {
+            try
+            {
+                if (!Help.CheckToken(token, i))
+                    return false;
+                <#= entity.Name #>BusinessHandler handler = new <#= entity.Name #>BusinessHandler(new BugsBox.Pharmacy.Repository.RepositoryProvider(new Repository.Db()), null);
+                foreach (<#= entity.Name #> item in handler.Fetch(p => p.StoreId.Equals(storeId)))
+                {
+                    handler.Delete(item.Id);
+                }
+
+                items.ForEach(a => handler.Add(a));
+                return handler.Save();
+            }
+            catch { 
+                //do 写日志
+                return false; }
+        }
+<#
+		
+    }#>
+    }
+}

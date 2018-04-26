@@ -1,0 +1,19 @@
+
+2017-05-09 22:11:49,659 [1] ERROR BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 此通道已无法再用于发送消息，因为输出会话由于启动的服务器关机而自动关闭。通过将 DispatchRuntime.AutomaticInputSessionShutdown 设置为 false 来禁用自动关闭，或者考虑使用远程服务器修改关机协议。
+System.ServiceModel.ProtocolException: 此通道已无法再用于发送消息，因为输出会话由于启动的服务器关机而自动关闭。通过将 DispatchRuntime.AutomaticInputSessionShutdown 设置为 false 来禁用自动关闭，或者考虑使用远程服务器修改关机协议。
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.PrepareCall(ProxyOperationRuntime operation, Boolean oneway, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 BugsBox.Pharmacy.AppClient.NS.IPharmacyNotification.CloseClientNotification(User user)
+   在 BugsBox.Pharmacy.AppClient.ServicesProvider.DisconnectServer() 位置 D:\work\phamacy2016\delivery\BugsBox.Pharmacy.AppClient.Common\ServicesProvider.cs:行号 151
+2017-05-09 22:11:49,897 [1] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束DoStartup
+[###############- L O G   E N D -###############]

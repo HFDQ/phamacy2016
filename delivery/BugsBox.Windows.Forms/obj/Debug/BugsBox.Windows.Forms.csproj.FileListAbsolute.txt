@@ -1,0 +1,9 @@
+D:\work\phamacy2016\_output\_temp\BugsBox.Windows.Forms\BugsBox.Windows.Forms.XML
+D:\work\phamacy2016\_output\_temp\BugsBox.Windows.Forms\BugsBox.Windows.Forms.dll
+D:\work\phamacy2016\_output\_temp\BugsBox.Windows.Forms\BugsBox.Windows.Forms.pdb
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.FormExtend.resources
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.NumericUpDownEditingControl.resources
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.csproj.GenerateResource.Cache
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.dll
+D:\work\phamacy2016\delivery\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.pdb

@@ -1,0 +1,115 @@
+﻿获取当前用户ID
+AppClientContext.CurrentUser.Id;
+BugsBox.Pharmacy.AppClient.Common.AppClientContext.currentUser.Id;
+生成单据号:
+new BillDocumentCodeBusinessHandler(BusinessHandlerFactory.RepositoryProvider, null).GenerateBillDocumentCodeByTypeValue((int)BillDocumentType.PurchaseCheckingOrder).Code;
+绑定gridviewRow 到 model
+PurchaseReceivingOrderDetailEntity model = (PurchaseReceivingOrderDetailEntity)this.dataGridView1.Rows[i].DataBoundItem;
+//日期判断
+System.IFormatProvider format = new System.Globalization.CultureInfo("zh-CN", true);
+DateTime inputPruductDate = DateTime.ParseExact(cellPruductDate.Value.ToString(), "yyyyMMdd", format);
+门店ID
+d.StoreId = PharmacyServiceConfig.Config.CurrentStore.Id;
+PharmacyFileBusinessHandler.CurrentStore.Address;
+
+using System.ComponentModel.DataAnnotations.Schema;-->NotMapped
+
+from i in outRecord group i by new { i.FactoryName, i.ProductGeneralName, i.DictionarySpecificationCode };
+
+
+System.componentModel
+[DisplayName("XX")]
+字段名称可绑定GRIDVIEW
+Linq 左连接必须是new XXX｛｝;否则为Inner Join
+
+//为gridview加序号
+if (e.RowIndex > -1)
+{
+    this.dataGridView1.Rows[e.RowIndex].HeaderCell.Value = (e.RowIndex + 1).ToString();
+}
+
+图片标识值：
+证书：
+营业执照：1113；食品流通许可证：1103；GMP证书：1102；药品经营许可证：1101;药品卫生许1104;
+器械经营许可证：1105；器械生产许可证：1106；事业单位法人证书：1107；GSP证书：1108；
+药品生产许可证：1109；医疗机构执业许可证：1110；组织机构代码证：1111；税务登记证：1112；
+供货商：
+法人委托书：3；图片质量委托书:4;
+购货商：
+法人委托书：5；质量委托书：6；
+采购验收，供货企业随行单图片：32；
+药品基础信息外观图片：16;  保健食品包装图片：17
+
+
+
+反射获取状态值
+var statusList=new List<ListItem>();
+            foreach (var i in typeof(OrderReturnStatus).GetFields())
+            {
+                var attr = i.GetCustomAttributes(false);
+                if (attr.Length > 0 && attr[0] as System.ComponentModel.DataAnnotations.DisplayAttribute != null)
+                {
+                    var v = typeof(OrderReturnStatus).InvokeMember(i.Name, BindingFlags.GetField, null, null, null);
+                    var n = (attr[0] as System.ComponentModel.DataAnnotations.DisplayAttribute).Name; 
+                    ListItem li = new ListItem();
+                    li.Name = n;
+                    li.stateValue = (Int32)v;
+                    statusList.Add(li);
+                }
+            }
+let累加字符串
+			 var GroupListUser = from i in ListUser
+                    group i by i.Id into g
+                    let dutys=g.Select(b=>b.Duty)
+                    select new UserEm
+                    {
+                        name = g.FirstOrDefault().name,
+                        Duty = String.Join(",",dutys),
+                        Id = g.FirstOrDefault().Id,
+                        PurchaseTaxReturn = g.FirstOrDefault().PurchaseTaxReturn
+                    };
+报表单位转换：
+	1in = 2.54cm = 25.4 mm = 72pt = 6pc
+	//实体必填项提交前检查代码
+	var c = this.ucGoodsInfo1.GoodsAdditional.GetType().GetProperties();
+                    foreach (var i in c)
+                    {
+                        var p = i.GetCustomAttributes(typeof(System.ComponentModel.DataAnnotations.RequiredAttribute), false).FirstOrDefault();
+                        if (p == null) continue;
+                        var AttrDisPlayName = i.GetCustomAttributes(typeof(System.ComponentModel.DisplayNameAttribute), false);
+                        System.ComponentModel.DisplayNameAttribute DisPlayName = AttrDisPlayName.FirstOrDefault() as System.ComponentModel.DisplayNameAttribute;
+
+                        var v = i.GetValue(this.ucGoodsInfo1.GoodsAdditional, null);
+                        if (v==null||string.IsNullOrEmpty(v.ToString()))
+                        {
+                            MessageBox.Show("您选择的商品类型为非国产药品和进口药品，" + DisPlayName.DisplayName + ":为必填项，请点击“编辑”按钮填写完整信息!");
+                            return;
+                        }
+                    }
+
+
+
+///列表增加行号
+this.dgvMain.RowPostPaint += delegate(object o,DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o,ex);};
+
+
+
+			修改数据实体模型:
+			工具-库程序包管理器-》程序包管理器控制台：
+			默认项目选择：BugsBox.Pharmacy.Repository 将EF实体模型配置文件放在此目录下。shuju
+			Enable-Migrations -startupprojectname BugsBox.Pharmacy.ServiceHost -enableautomaticmigrations -force
+			Update-Database -StartUpProjectName BugsBox.Pharmacy.ServiceHost –Script生成SQL语句 
+			Update-Database -StartUpProjectName BugsBox.Pharmacy.ServiceHost –Verbose 
+
+			//医疗器械信息
+			if (this._listPurchaseOrderDetail.Count(r => r.SupplyBusinessScope.Contains("医疗器械")) == this._listPurchaseOrderDetail.Count)
+            {
+                this.GoogsTypeClass = GoodsTypeClass.医疗器械;
+                this.LicensePermissionNumber.HeaderText = "注册证或备案凭证编号";
+            }
+
+			//存储用户数据，存储在本地
+			var c = SearialiserHelper<CommonSetupFile>.DeSerializeFileToObj("UserData.dat");
+			SearialiserHelper<CommonSetupFile>.SerializeObjToFile(c, "UserData.dat");
+
+			 报表数据集扩展属性字符变量不能时空字符！比如：ds.ExtendedProperties.Add("PurchaseUnit", " "); 

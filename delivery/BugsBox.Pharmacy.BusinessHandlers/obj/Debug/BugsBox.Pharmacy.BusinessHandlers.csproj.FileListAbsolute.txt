@@ -1,0 +1,6 @@
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.XML
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.dll
+D:\work\phamacy2016\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.pdb
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.dll
+D:\work\phamacy2016\delivery\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.pdb

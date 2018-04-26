@@ -1,0 +1,6 @@
+D:\work\phamacy2016\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.XML
+D:\work\phamacy2016\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.dll
+D:\work\phamacy2016\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.pdb
+D:\work\phamacy2016\delivery\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.dll
+D:\work\phamacy2016\delivery\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.pdb

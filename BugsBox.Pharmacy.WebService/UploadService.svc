@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BugsBox.Pharmacy.WebService.UploadService" CodeBehind="UploadService.svc.cs" %>

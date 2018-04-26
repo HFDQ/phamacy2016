@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FBF2E05-EEA1-4583-97C4-C624052A809E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugsBox.Pharmacy.AppClient</RootNamespace>
+    <AssemblyName>BugsBox.Pharmacy.AppClient.ServicesProvider</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.AppClient.ServicesProvider\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugsBox.Common">
+      <HintPath>..\lib\BugsBox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\lib\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\NS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PS\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BugsBox.Application.Core.PagerInfo.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.ApprovalDetailsModel.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.BusinessPersonModel.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.InventeryModel.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.LackDrugModel.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseRCRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.PurchaseRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.datasource" />
+    <None Include="BugsBox.Pharmacy.Business.Models.SalesOrderStatisticOutput.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.ApprovalFlow.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.ApprovalFlowNode.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.ApprovalFlowRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.ApprovalFlowType.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.AuthorizationDoc.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.BillDocumentCode.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.BusinessLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.BusinessScope.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.BusinessScopeCategory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.BusinessType.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.BusinessTypeManageCategoryDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Delivery.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Department.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DictionaryDosage.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DictionaryMeasurementUnit.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DictionaryPiecemealUnit.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DictionarySpecification.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DictionaryStorageType.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DictionaryUserDefinedType.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.District.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DoubtDrug.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugApprovalNumber.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugCategory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugClinicalCategory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugInfo.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugInventoryRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugMaintainRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugMaintainRecordDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.DrugMaintainSet.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Employee.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.GMPLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.GMSPLicenseBusinessScope.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.GoodsAdditionalProperty.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.GSPLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.InstrumentsBusinessLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.InstrumentsProductionLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.InventoryRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Manufacturer.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.MedicalCategory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.MedicalCategoryDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.MedicineBusinessLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.MedicineProductionLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Module.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.ModuleCatetory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.ModuleWithRole.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.OutInventory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.OutInventoryDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PackagingMaterial.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PackagingUnit.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PaymentMethod.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PharmacyFile.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PharmacyLicense.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseAgreement.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseCashOrder.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseCheckingOrder.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseCheckingOrderDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseInInventeryOrder.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseInInventeryOrderDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseManageCategory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseManageCategoryDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseOrder.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseOrderDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseOrderReturn.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseOrderReturnDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseReceivingOrder.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseReceivingOrderDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseUnit.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseUnitBuyer.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseUnitDeliverer.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchaseUnitType.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchasingPlan.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.PurchasingPlanDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Rareword.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.RetailMember.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.RetailOrder.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.RetailOrderDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Role.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.RoleWithUser.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SalesOrder.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SalesOrderDeliverDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SalesOrderDeliverRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SalesOrderDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SalesOrderReturn.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SalesOrderReturnDetail.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SetSpeicalDrugRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SpecialDrugCategory.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Store.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SupplyUnit.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.SupplyUnitSalesman.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.TaxRate.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.UnitType.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.UploadRecord.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.User.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.UserLog.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Vehicle.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.Warehouse.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.WarehouseZone.datasource" />
+    <None Include="BugsBox.Pharmacy.Models.WaringSet.datasource" />
+    <None Include="Service References\NS\PharmacyNotification.wsdl" />
+    <None Include="Service References\NS\PharmacyNotification.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NS\PharmacyNotification1.wsdl" />
+    <None Include="Service References\NS\PharmacyNotification1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NS\PharmacyNotification2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NS\PharmacyNotification3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService1.wsdl" />
+    <None Include="Service References\PS\PharmacyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PS\PharmacyService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\NS\" />
+    <WCFMetadataStorage Include="Service References\PS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PS\PharmacyService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugsBox.Application.Core\BugsBox.Application.Core.csproj">
+      <Project>{672aceaf-fed6-4df4-bf3c-72418251657b}</Project>
+      <Name>BugsBox.Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Business.Models\BugsBox.Pharmacy.Business.Models.csproj">
+      <Project>{57236cf6-d8bd-4ecf-b622-79abc8fdaf29}</Project>
+      <Name>BugsBox.Pharmacy.Business.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.csproj">
+      <Project>{28c37ac0-feac-45c7-94c2-b0515a3a8f9f}</Project>
+      <Name>BugsBox.Pharmacy.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.csproj">
+      <Project>{1c0ffc46-b18c-4e36-8d7c-c3b5c3354612}</Project>
+      <Name>BugsBox.Pharmacy.Service.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NS\PharmacyNotification.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

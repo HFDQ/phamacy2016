@@ -1,0 +1,3385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7FE05460-586F-4C2D-B95D-5F6432D2BAC6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugsBox.Pharmacy.AppClient</RootNamespace>
+    <AssemblyName>BugsBox.Pharmacy.AppClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_output\应用客户端\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugsBox.Common">
+      <HintPath>..\lib\BugsBox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="ChnCharInfo">
+      <HintPath>..\lib\ChnCharInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="elelab">
+      <HintPath>..\lib\elelab.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.bpac">
+      <HintPath>..\lib\Interop.bpac.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <HintPath>..\..\..\医药管理信息系统1503\医药管理信息系统1503\lib\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Word">
+      <HintPath>..\lib\Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Model">
+      <HintPath>..\lib\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="MyLibs">
+      <HintPath>..\lib\MyLibs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\lib\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartThreadPool, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.4.0.16114, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedAssemblyInfo.log4net.cs">
+      <Link>Properties\SharedAssemblyInfo.log4net.cs</Link>
+    </Compile>
+    <Compile Include="AppSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSet.Designer.cs">
+      <DependentUpon>AppSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BugsBoxApplication.cs" />
+    <Compile Include="CreateWinWord.cs" />
+    <Compile Include="DataManger\Buyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManger\Buyer.designer.cs">
+      <DependentUpon>Buyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManger\Medicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManger\Medicine.designer.cs">
+      <DependentUpon>Medicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManger\MedicineType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManger\MedicineType.designer.cs">
+      <DependentUpon>MedicineType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManger\Parameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManger\Parameter.designer.cs">
+      <DependentUpon>Parameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManger\Saler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManger\Saler.designer.cs">
+      <DependentUpon>Saler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManger\SonPharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManger\SonPharmacy.designer.cs">
+      <DependentUpon>SonPharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManger\Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManger\Supplier.designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CommonEqualityComparer.cs" />
+    <Compile Include="UI\DistinctExtensions.cs" />
+    <Compile Include="UI\EnumToListHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sendMail.cs" />
+    <Compile Include="Side\Navigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side\Navigation.designer.cs">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side\Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side\Task.designer.cs">
+      <DependentUpon>Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Side\Warn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Side\Warn.designer.cs">
+      <DependentUpon>Warn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BindingCollection.cs" />
+    <Compile Include="UI\DataGridViewOperator.cs" />
+    <Compile Include="UI\ExportToExcel.cs" />
+    <Compile Include="UI\Forms\ApprovalFlow\FormApprovalFlowCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ApprovalFlow\FormApprovalFlowCenter.Designer.cs">
+      <DependentUpon>FormApprovalFlowCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\ApprovalFlow\FormDrugsUnqualificationApprovalSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ApprovalFlow\FormDrugsUnqualificationApprovalSelector.Designer.cs">
+      <DependentUpon>FormDrugsUnqualificationApprovalSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfo.Designer.cs">
+      <DependentUpon>FormDrugInfo.cs</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.AppClient.UI.Reports.DSPurchaseRefund.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.AppClient.UI.Reports.DsSalesOrder.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.AppClient.UI.Reports.SaleOrderRefund.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.DrugInfoForPurchaseSelectorQueryModel.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.DrugOutInventoryCheckQueryModel.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseOrderTaxRate.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.QualityFilesWarningModel.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.SalesOrderOutInventoryModel.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.SalesOrderReturnDetailModel.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Business.Models.SalesOrderReturnDetailQueryModel.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.DocumentRefuse.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.DrugInfo.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.DrugsUndeterminate.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.DrugsUnqualificationDestroy.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.GMPLicense.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.OutInventoryDetail.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.PurchaseOrder.datasource" />
+    <None Include="Properties\DataSources\BugsBox.Pharmacy.Models.SalesOrderDetail.datasource" />
+    <None Include="Resources\名称.lbx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UI\Forms\BaseDataManage\FormDrugInfo.old.1.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="UI\Forms\BaseDataManage\FormDrugInfo.old.1.Designer.cs">
+      <DependentUpon>FormDrugInfo.old.1.cs</DependentUpon>
+    </None>
+    <Compile Include="UI\Forms\ApprovalFlow\FormApprovalSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ApprovalFlow\FormApprovalSearch.Designer.cs">
+      <DependentUpon>FormApprovalSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormApprovalManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormApprovalManager.Designer.cs">
+      <DependentUpon>FormApprovalManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfoLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfoLock.Designer.cs">
+      <DependentUpon>FormDrugInfoLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfo_old.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfo_old.Designer.cs">
+      <DependentUpon>FormDrugInfo_old.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugOtherInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugOtherInfor.Designer.cs">
+      <DependentUpon>FormDrugOtherInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormEmployeeImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormEmployeeImport.Designer.cs">
+      <DependentUpon>FormEmployeeImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormFood.Designer.cs">
+      <DependentUpon>FormFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormInstrument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormInstrument.Designer.cs">
+      <DependentUpon>FormInstrument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormFoodQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormFoodQuery.Designer.cs">
+      <DependentUpon>FormFoodQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormInstrumentsQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormInstrumentsQuery.Designer.cs">
+      <DependentUpon>FormInstrumentsQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormInstrument_CategoryTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormInstrument_CategoryTable.Designer.cs">
+      <DependentUpon>FormInstrument_CategoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModule.Designer.cs">
+      <DependentUpon>FormModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModuleCategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModuleCategoryEdit.Designer.cs">
+      <DependentUpon>FormModuleCategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModuleCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModuleCategory.Designer.cs">
+      <DependentUpon>FormModuleCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnit.Designer.cs">
+      <DependentUpon>FormPurchaseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnitBuyerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnitBuyerEdit.Designer.cs">
+      <DependentUpon>FormPurchaseUnitBuyerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnitBuyerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnitBuyerList.Designer.cs">
+      <DependentUpon>FormPurchaseUnitBuyerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSalePriceControlRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSalePriceControlRules.Designer.cs">
+      <DependentUpon>FormSalePriceControlRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnitSalesmanEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnitSalesmanEdit.Designer.cs">
+      <DependentUpon>FormSupplyUnitSalesmanEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnitSalesmanList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnitSalesmanList.Designer.cs">
+      <DependentUpon>FormSupplyUnitSalesmanList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnitUnlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnitUnlock.Designer.cs">
+      <DependentUpon>FormSupplyUnitUnlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormRole.Designer.cs">
+      <DependentUpon>FormRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormRoleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormRoleEdit.Designer.cs">
+      <DependentUpon>FormRoleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormRoleWithUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormRoleWithUser.Designer.cs">
+      <DependentUpon>FormRoleWithUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormSupplyUnit.Designer.cs">
+      <DependentUpon>FormSupplyUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormUserEdit.Designer.cs">
+      <DependentUpon>FormUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormUserLogQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormUserLogQuery.Designer.cs">
+      <DependentUpon>FormUserLogQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormVehicle.Designer.cs">
+      <DependentUpon>FormVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModuleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormModuleEdit.Designer.cs">
+      <DependentUpon>FormModuleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormVehicleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormVehicleEdit.designer.cs">
+      <DependentUpon>FormVehicleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnitUnlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormPurchaseUnitUnlock.Designer.cs">
+      <DependentUpon>FormPurchaseUnitUnlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfoUnlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormDrugInfoUnlock.Designer.cs">
+      <DependentUpon>FormDrugInfoUnlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition.Designer.cs">
+      <DependentUpon>FormWareHouseZonePosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePositionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePositionEdit.Designer.cs">
+      <DependentUpon>FormWareHouseZonePositionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition_Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition_Editor.Designer.cs">
+      <DependentUpon>FormWareHouseZonePosition_Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition_EleLabSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition_EleLabSetup.Designer.cs">
+      <DependentUpon>FormWareHouseZonePosition_EleLabSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_DelegateDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_DelegateDocument.Designer.cs">
+      <DependentUpon>Form_DelegateDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_DrugQualityTrace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_DrugQualityTrace.Designer.cs">
+      <DependentUpon>Form_DrugQualityTrace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_Photo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_Photo.Designer.cs">
+      <DependentUpon>Form_Photo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_NearExpire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_NearExpire.Designer.cs">
+      <DependentUpon>Form_NearExpire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_QualityFileSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_QualityFileSetup.Designer.cs">
+      <DependentUpon>Form_QualityFileSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_WarningListShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\Form_WarningListShow.Designer.cs">
+      <DependentUpon>Form_WarningListShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\BasicInfoRightMenu.cs" />
+    <Compile Include="UI\Forms\BaseForm\FormDZJGM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\FormDZJGM.Designer.cs">
+      <DependentUpon>FormDZJGM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\Form_BussinessInvoiceProcessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\Form_BussinessInvoiceProcessor.Designer.cs">
+      <DependentUpon>Form_BussinessInvoiceProcessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\PurchaseRecordList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\PurchaseRecordList.Designer.cs">
+      <DependentUpon>PurchaseRecordList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\CRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\CRUDForm.Designer.cs">
+      <DependentUpon>CRUDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\FormOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseForm\FormOrderList.Designer.cs">
+      <DependentUpon>FormOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormFoodCirculateLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormFoodCirculateLicense.Designer.cs">
+      <DependentUpon>FormFoodCirculateLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormHealthLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormHealthLicense.Designer.cs">
+      <DependentUpon>FormHealthLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormLegalPersonLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormLegalPersonLicense.Designer.cs">
+      <DependentUpon>FormLegalPersonLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormMmedicalInstitutionPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormMmedicalInstitutionPermit.Designer.cs">
+      <DependentUpon>FormMmedicalInstitutionPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormSupplyUnitMansSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormSupplyUnitMansSelector.Designer.cs">
+      <DependentUpon>FormSupplyUnitMansSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormAllDrugInventoryRecordSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormAllDrugInventoryRecordSelector.Designer.cs">
+      <DependentUpon>FormAllDrugInventoryRecordSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormBusinessLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormBusinessLicense.Designer.cs">
+      <DependentUpon>FormBusinessLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGMPLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGMPLicense.Designer.cs">
+      <DependentUpon>FormGMPLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGoodsAdditionalProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGoodsAdditionalProperty.Designer.cs">
+      <DependentUpon>FormGoodsAdditionalProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGoodsInfoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGoodsInfoView.Designer.cs">
+      <DependentUpon>FormGoodsInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGSPLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormGSPLicense.Designer.cs">
+      <DependentUpon>FormGSPLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormInstrumentsBusinessLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormInstrumentsBusinessLicense.Designer.cs">
+      <DependentUpon>FormInstrumentsBusinessLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormInstrumentsProductionLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormInstrumentsProductionLicense.Designer.cs">
+      <DependentUpon>FormInstrumentsProductionLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormListDepartmentsEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormListDepartmentsEmployees.Designer.cs">
+      <DependentUpon>FormListDepartmentsEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormMedicineBusinessLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormMedicineBusinessLicense.Designer.cs">
+      <DependentUpon>FormMedicineBusinessLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormMedicineProductionLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormMedicineProductionLicense.Designer.cs">
+      <DependentUpon>FormMedicineProductionLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormTaxRegisterLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormTaxRegisterLicense.Designer.cs">
+      <DependentUpon>FormTaxRegisterLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormWarehouseZoneSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormWarehouseZoneSelector.Designer.cs">
+      <DependentUpon>FormWarehouseZoneSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugForPurchaseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugForPurchaseSelector.Designer.cs">
+      <DependentUpon>FormDrugForPurchaseSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugForSalesSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugForSalesSelector.Designer.cs">
+      <DependentUpon>FormDrugForSalesSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugsForSupplyUnitSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugsForSupplyUnitSelector.Designer.cs">
+      <DependentUpon>FormDrugsForSupplyUnitSelector.cs</DependentUpon>
+    </Compile>
+    <None Include="UI\Forms\Common\FormGMSPLicenseEdit.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="UI\Forms\Common\FormGMSPLicenseEdit.Designer.cs">
+      <DependentUpon>FormGMSPLicenseEdit.cs</DependentUpon>
+    </None>
+    <Compile Include="UI\Forms\Common\FormPurchaseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormPurchaseSelector.Designer.cs">
+      <DependentUpon>FormPurchaseSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormSupplyUnitsSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormSupplyUnitsSelector.Designer.cs">
+      <DependentUpon>FormSupplyUnitsSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\Form_HistoryPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\Form_HistoryPurchase.Designer.cs">
+      <DependentUpon>Form_HistoryPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\ManufacturerSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\ManufacturerSelector.Designer.cs">
+      <DependentUpon>ManufacturerSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\SelectMode.cs" />
+    <Compile Include="UI\Forms\Common\FormOrganizationCodeLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormOrganizationCodeLicense.Designer.cs">
+      <DependentUpon>FormOrganizationCodeLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\CreateChineseSpell.cs" />
+    <Compile Include="UI\Forms\DataDictionary\FormBusinessDictionaryIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormBusinessDictionaryIndex.Designer.cs">
+      <DependentUpon>FormBusinessDictionaryIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryDosage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryDosage.Designer.cs">
+      <DependentUpon>FormDictionaryDosage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryMeasurementUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryMeasurementUnit.Designer.cs">
+      <DependentUpon>FormDictionaryMeasurementUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryPiecemealUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryPiecemealUnit.Designer.cs">
+      <DependentUpon>FormDictionaryPiecemealUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionarySpecification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionarySpecification.Designer.cs">
+      <DependentUpon>FormDictionarySpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryStorageType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryStorageType.Designer.cs">
+      <DependentUpon>FormDictionaryStorageType.cs</DependentUpon>
+    </Compile>
+    <None Include="UI\Forms\DataDictionary\FormDictionaryType.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="UI\Forms\DataDictionary\FormDictionaryType.Designer.cs">
+      <DependentUpon>FormDictionaryType.cs</DependentUpon>
+    </None>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryUserDefinedType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDictionaryUserDefinedType.Designer.cs">
+      <DependentUpon>FormDictionaryUserDefinedType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDrugCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDrugCategory.Designer.cs">
+      <DependentUpon>FormDrugCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDrugDictionaryIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormDrugDictionaryIndex.Designer.cs">
+      <DependentUpon>FormDrugDictionaryIndex.cs</DependentUpon>
+    </Compile>
+    <None Include="UI\Forms\DataDictionary\FormDrugType.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="UI\Forms\DataDictionary\FormDrugType.Designer.cs">
+    </None>
+    <None Include="UI\Forms\DataDictionary\FormDrugType.Designer.cs">
+      <DependentUpon>FormDrugType.cs</DependentUpon>
+    </None>
+    <Compile Include="UI\Forms\DataDictionary\FormPurchaseUnitType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataDictionary\FormPurchaseUnitType.Designer.cs">
+      <DependentUpon>FormPurchaseUnitType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataGridViewDisableCheckBox.cs" />
+    <Compile Include="UI\Forms\DataImport\FormDrugInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataImport\FormDrugInfo.Designer.cs">
+      <DependentUpon>FormDrugInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataImport\FormPurchaseUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataImport\FormPurchaseUnit.Designer.cs">
+      <DependentUpon>FormPurchaseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DataImport\FormSupplyUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DataImport\FormSupplyUnit.Designer.cs">
+      <DependentUpon>FormSupplyUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryCenter.Designer.cs">
+      <DependentUpon>FormDeliveryCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryEdit.Designer.cs">
+      <DependentUpon>FormDeliveryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryIndex.Designer.cs">
+      <DependentUpon>FormDeliveryIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliverySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliverySearch.Designer.cs">
+      <DependentUpon>FormDeliverySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DeliveryBusiness\FormDeliveryStatistics.Designer.cs">
+      <DependentUpon>FormDeliveryStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\DirectSalesCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\DirectSalesCreate.Designer.cs">
+      <DependentUpon>DirectSalesCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_CheckingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_CheckingOrder.Designer.cs">
+      <DependentUpon>Form_CheckingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_DirectSalesIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_DirectSalesIndex.Designer.cs">
+      <DependentUpon>Form_DirectSalesIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_DrugInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_DrugInfo.Designer.cs">
+      <DependentUpon>Form_DrugInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_PurchaseUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_PurchaseUnits.Designer.cs">
+      <DependentUpon>Form_PurchaseUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_SupplyUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DirectSalesBusiness\Form_SupplyUnits.Designer.cs">
+      <DependentUpon>Form_SupplyUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormEduDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormEduDetail.Designer.cs">
+      <DependentUpon>FormEduDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormEduDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormEduDoc.Designer.cs">
+      <DependentUpon>FormEduDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormHealthCheckAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormHealthCheckAdd.Designer.cs">
+      <DependentUpon>FormHealthCheckAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormHealthCheckDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormHealthCheckDetail.Designer.cs">
+      <DependentUpon>FormHealthCheckDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormHealthCheckDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DocumentManage\FormHealthCheckDoc.Designer.cs">
+      <DependentUpon>FormHealthCheckDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugBusiness\FormDoubtDrugEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugBusiness\FormDoubtDrugEdit.Designer.cs">
+      <DependentUpon>FormDoubtDrugEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugBusiness\FormDoubtDrugManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugBusiness\FormDoubtDrugManage.Designer.cs">
+      <DependentUpon>FormDoubtDrugManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlanDetailEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlanDetailEdit.Designer.cs">
+      <DependentUpon>DrugMaintainRecordPlanDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlan.Designer.cs">
+      <DependentUpon>DrugMaintainRecordPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlanDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlanDetails.Designer.cs">
+      <DependentUpon>DrugMaintainRecordPlanDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\AddSpecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\AddSpecial.Designer.cs">
+      <DependentUpon>AddSpecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugInventoryMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugInventoryMove.Designer.cs">
+      <DependentUpon>DrugInventoryMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugMaintainRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugMaintainRecord.Designer.cs">
+      <DependentUpon>DrugMaintainRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecord.Designer.cs">
+      <DependentUpon>NormalDrugMaintainRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecordDetailEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecordDetailEdit.Designer.cs">
+      <DependentUpon>NormalDrugMaintainRecordDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugMaintainSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugMaintainSetForm.Designer.cs">
+      <DependentUpon>DrugMaintainSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugMaintainRecordDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugMaintainRecordDetails.Designer.cs">
+      <DependentUpon>DrugMaintainRecordDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecordDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecordDetails.Designer.cs">
+      <DependentUpon>NormalDrugMaintainRecordDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecord.Designer.cs">
+      <DependentUpon>SpecialDrugMaintainRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecordDetailEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecordDetailEdit.Designer.cs">
+      <DependentUpon>SpecialDrugMaintainRecordDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecordDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecordDetails.Designer.cs">
+      <DependentUpon>SpecialDrugMaintainRecordDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\DrugSearch.Designer.cs">
+      <DependentUpon>DrugSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\SignDrugAsSpecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugMaintain\SignDrugAsSpecial.Designer.cs">
+      <DependentUpon>SignDrugAsSpecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUndeterminte\DrugsUndeterminte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUndeterminte\DrugsUndeterminte.Designer.cs">
+      <DependentUpon>DrugsUndeterminte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUndeterminte\PurchaseRefuse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUndeterminte\PurchaseRefuse.Designer.cs">
+      <DependentUpon>PurchaseRefuse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\DestroyApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\DestroyApply.Designer.cs">
+      <DependentUpon>DestroyApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormDrugsDestroyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormDrugsDestroyDetails.Designer.cs">
+      <DependentUpon>FormDrugsDestroyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormDrugsDestroyTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormDrugsDestroyTable.Designer.cs">
+      <DependentUpon>FormDrugsDestroyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\formDrugsUnqualification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\formDrugsUnqualification.Designer.cs">
+      <DependentUpon>formDrugsUnqualification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\formDrugsUnqualificationExecution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\formDrugsUnqualificationExecution.Designer.cs">
+      <DependentUpon>formDrugsUnqualificationExecution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormDrugUnqualificationDestroy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormDrugUnqualificationDestroy.Designer.cs">
+      <DependentUpon>FormDrugUnqualificationDestroy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormUnqualificationApprovalDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DrugsUnqualification\FormUnqualificationApprovalDetail.Designer.cs">
+      <DependentUpon>FormUnqualificationApprovalDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\FormStatus.cs" />
+    <Compile Include="UI\Forms\Form_CheckUndeterminateConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Form_CheckUndeterminateConfirm.designer.cs">
+      <DependentUpon>Form_CheckUndeterminateConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\InventoryBusiness\FormDrugInventoryLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\InventoryBusiness\FormDrugInventoryLock.Designer.cs">
+      <DependentUpon>FormDrugInventoryLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\MyExcelUtls.cs" />
+    <Compile Include="UI\Forms\BaseDataManage\OutdateBusiness\FormPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\OutdateBusiness\FormPerson.Designer.cs">
+      <DependentUpon>FormPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\OutdateBusiness\FormPharmacyLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\OutdateBusiness\FormPharmacyLicense.Designer.cs">
+      <DependentUpon>FormPharmacyLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\NPOIHelper.cs" />
+    <Compile Include="UI\Forms\PurchaseBusiness\FormCashOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormCashOrder.Designer.cs">
+      <DependentUpon>FormCashOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormInInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormInInventory.Designer.cs">
+      <DependentUpon>FormInInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormOrderCheckingSecondCheckerLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormOrderCheckingSecondCheckerLogIn.Designer.cs">
+      <DependentUpon>FormOrderCheckingSecondCheckerLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormOrderReturnIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormOrderReturnIndex.Designer.cs">
+      <DependentUpon>FormOrderReturnIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormOrderReturnList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormOrderReturnList.Designer.cs">
+      <DependentUpon>FormOrderReturnList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseHistoryBySupplyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseHistoryBySupplyer.Designer.cs">
+      <DependentUpon>FormPurchaseHistoryBySupplyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderCreateBySupplyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderCreateBySupplyer.Designer.cs">
+      <DependentUpon>FormPurchaseOrderCreateBySupplyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseReturnOrderApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseReturnOrderApproval.Designer.cs">
+      <DependentUpon>FormPurchaseReturnOrderApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormReceivingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormReceivingOrder.Designer.cs">
+      <DependentUpon>FormReceivingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderApprovaledList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderApprovaledList.Designer.cs">
+      <DependentUpon>FormPurchaseOrderApprovaledList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormCheckOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormCheckOrder.Designer.cs">
+      <DependentUpon>FormCheckOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrder.Designer.cs">
+      <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderWaittingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderWaittingList.Designer.cs">
+      <DependentUpon>FormPurchaseOrderWaittingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderCanceledList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderCanceledList.Designer.cs">
+      <DependentUpon>FormPurchaseOrderCanceledList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderApproval.Designer.cs">
+      <DependentUpon>FormPurchaseOrderApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderEdit.Designer.cs">
+      <DependentUpon>FormPurchaseOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderGenerator.Designer.cs">
+      <DependentUpon>FormPurchaseOrderGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderList.Designer.cs">
+      <DependentUpon>FormPurchaseOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormReturnOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormReturnOrder.Designer.cs">
+      <DependentUpon>FormReturnOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormSupplyUnitLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\FormSupplyUnitLock.Designer.cs">
+      <DependentUpon>FormSupplyUnitLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_DrugInfoForPurchaseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_DrugInfoForPurchaseSelector.Designer.cs">
+      <DependentUpon>Form_DrugInfoForPurchaseSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_DrugSelectorForSupplyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_DrugSelectorForSupplyer.Designer.cs">
+      <DependentUpon>Form_DrugSelectorForSupplyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_FormPurchaseHistoryBySupplyer_Batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_FormPurchaseHistoryBySupplyer_Batch.Designer.cs">
+      <DependentUpon>Form_FormPurchaseHistoryBySupplyer_Batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseInvoiceProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseInvoiceProc.Designer.cs">
+      <DependentUpon>Form_PurchaseInvoiceProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrderGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrderGenerator.Designer.cs">
+      <DependentUpon>Form_PurchaseOrderGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrderImpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrderImpt.Designer.cs">
+      <DependentUpon>Form_PurchaseOrderImpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrder_Set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrder_Set.Designer.cs">
+      <DependentUpon>Form_PurchaseOrder_Set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_PurchaseRefund.Designer.cs">
+      <DependentUpon>Form_PurchaseRefund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_SalerTaxRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_SalerTaxRate.Designer.cs">
+      <DependentUpon>Form_SalerTaxRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_staticsChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_staticsChart.Designer.cs">
+      <DependentUpon>Form_staticsChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_staticsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_staticsTable.Designer.cs">
+      <DependentUpon>Form_staticsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_SupplyerQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_SupplyerQuest.Designer.cs">
+      <DependentUpon>Form_SupplyerQuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_WareHouseZonePositionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\Form_WareHouseZonePositionSelector.Designer.cs">
+      <DependentUpon>Form_WareHouseZonePositionSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\PurchaseOrderDetailModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\PurchaseBusiness\PurchaseOrderDetailModify.Designer.cs">
+      <DependentUpon>PurchaseOrderDetailModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderCenter.Designer.cs">
+      <DependentUpon>FormRetailOrderCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnCenter.Designer.cs">
+      <DependentUpon>FormOrderReturnCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnDetailIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnDetailIndex.Designer.cs">
+      <DependentUpon>FormOrderReturnDetailIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOutInventoryCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOutInventoryCenter.Designer.cs">
+      <DependentUpon>FormOutInventoryCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOutInventorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOutInventorySearch.Designer.cs">
+      <DependentUpon>FormOutInventorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormRewardList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormRewardList.Designer.cs">
+      <DependentUpon>FormRewardList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormRewardListDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormRewardListDetails.Designer.cs">
+      <DependentUpon>FormRewardListDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormRewardVATSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormRewardVATSet.Designer.cs">
+      <DependentUpon>FormRewardVATSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSaleOrderApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSaleOrderApproval.Designer.cs">
+      <DependentUpon>FormSaleOrderApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSaleReturnEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSaleReturnEdit.Designer.cs">
+      <DependentUpon>FormSaleReturnEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderCenter.Designer.cs">
+      <DependentUpon>FormSalesOrderCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnIndex.Designer.cs">
+      <DependentUpon>FormOrderReturnIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderRecordIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderRecordIndex.Designer.cs">
+      <DependentUpon>FormSalesOrderRecordIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderReturnBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderReturnBalance.Designer.cs">
+      <DependentUpon>FormSalesOrderReturnBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_DrugSelectForSalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_DrugSelectForSalesOrder.Designer.cs">
+      <DependentUpon>Form_DrugSelectForSalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_OutInventoryCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_OutInventoryCheck.Designer.cs">
+      <DependentUpon>Form_OutInventoryCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SaleOrderRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SaleOrderRefund.Designer.cs">
+      <DependentUpon>Form_SaleOrderRefund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SalerTaxRateManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SalerTaxRateManage.Designer.cs">
+      <DependentUpon>Form_SalerTaxRateManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SalesInvoiceProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SalesInvoiceProc.Designer.cs">
+      <DependentUpon>Form_SalesInvoiceProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SalesOrder.Designer.cs">
+      <DependentUpon>Form_SalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SaleTaxStatics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\Form_SaleTaxStatics.Designer.cs">
+      <DependentUpon>Form_SaleTaxStatics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\UCOutInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\UCOutInventory.Designer.cs">
+      <DependentUpon>UCOutInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnCheckIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnCheckIndex.Designer.cs">
+      <DependentUpon>FormOrderReturnCheckIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnInventoryIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnInventoryIndex.Designer.cs">
+      <DependentUpon>FormOrderReturnInventoryIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderCreateIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderCreateIndex.Designer.cs">
+      <DependentUpon>FormSalesOrderCreateIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderCancelIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderCancelIndex.Designer.cs">
+      <DependentUpon>FormSalesOrderCancelIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderBalanceIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderBalanceIndex.Designer.cs">
+      <DependentUpon>FormSalesOrderBalanceIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnCancelIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOrderReturnCancelIndex.Designer.cs">
+      <DependentUpon>FormOrderReturnCancelIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\FormHisInventeryChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\FormHisInventeryChecking.Designer.cs">
+      <DependentUpon>FormHisInventeryChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\Form_DrugInventoryMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\Form_DrugInventoryMove.Designer.cs">
+      <DependentUpon>Form_DrugInventoryMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\Form_DrugPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\Form_DrugPath.Designer.cs">
+      <DependentUpon>Form_DrugPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\Form_InventoryPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\Form_InventoryPL.Designer.cs">
+      <DependentUpon>Form_InventoryPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\StorageQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\StorageQuery.Designer.cs">
+      <DependentUpon>StorageQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\FormStorageChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Storage\FormStorageChecking.Designer.cs">
+      <DependentUpon>FormStorageChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormOnlineUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormOnlineUser.Designer.cs">
+      <DependentUpon>FormOnlineUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NewDataGridviewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ObjectPropertyCompare.cs" />
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderEdit.Designer.cs">
+      <DependentUpon>FormRetailOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderIndex.Designer.cs">
+      <DependentUpon>FormRetailOrderIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderReturn.Designer.cs">
+      <DependentUpon>FormRetailOrderReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\RetailBusiness\FormRetailOrderStatistics.Designer.cs">
+      <DependentUpon>FormRetailOrderStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormCancelOrderConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormCancelOrderConfirm.Designer.cs">
+      <DependentUpon>FormCancelOrderConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormDrugSelector.Designer.cs">
+      <DependentUpon>FormDrugSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormOperatorSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Common\FormOperatorSelector.Designer.cs">
+      <DependentUpon>FormOperatorSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOutInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormOutInventory.Designer.cs">
+      <DependentUpon>FormOutInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormPayConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormPayConfirm.Designer.cs">
+      <DependentUpon>FormPayConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormPurchaseUnitLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormPurchaseUnitLock.Designer.cs">
+      <DependentUpon>FormPurchaseUnitLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesIndex.Designer.cs">
+      <DependentUpon>FormSalesIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderEdit.Designer.cs">
+      <DependentUpon>FormSalesOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderIndex.Designer.cs">
+      <DependentUpon>FormSalesOrderIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderReturn.Designer.cs">
+      <DependentUpon>FormSalesOrderReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SalesBusiness\FormSalesOrderStatistics.Designer.cs">
+      <DependentUpon>FormSalesOrderStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormDepartment.Designer.cs">
+      <DependentUpon>FormDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormDepartmentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormDepartmentEdit.Designer.cs">
+      <DependentUpon>FormDepartmentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormModuleWithRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormModuleWithRole.Designer.cs">
+      <DependentUpon>FormModuleWithRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormUserLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormUserLog.Designer.cs">
+      <DependentUpon>FormUserLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormUserLogQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Sys\FormUserLogQuery.Designer.cs">
+      <DependentUpon>FormUserLogQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\DsSalesOrderReturn.cs">
+      <DependentUpon>DsSalesOrderReturn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\DsSalesOrderReturn.Designer.cs">
+      <DependentUpon>DsSalesOrderReturn.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="UI\Reports\DSSalesReturnInform.Designer.cs">
+      <DependentUpon>DSSalesReturnInform.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="UI\Reports\FormPurchaseOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\FormPurchaseOrderReport.Designer.cs">
+      <DependentUpon>FormPurchaseOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\PrintHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\PrintHelperExtention.cs" />
+    <Compile Include="UI\Reports\Report.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\SaleOrderRefund.cs">
+      <DependentUpon>SaleOrderRefund.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\SaleOrderRefund.Designer.cs">
+      <DependentUpon>SaleOrderRefund.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="UI\Reports\VATList.cs">
+      <DependentUpon>VATList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\VATList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VATList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\DsSalesOrder1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsSalesOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RequiredFieldsCheck.cs" />
+    <Compile Include="UI\SearialiserHelper.cs" />
+    <Compile Include="UI\UserControls\ucBusinessScopeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ucBusinessScopeEditor.Designer.cs">
+      <DependentUpon>ucBusinessScopeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UCDirectSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UCDirectSales.Designer.cs">
+      <DependentUpon>UCDirectSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\UcDrugBreakage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\UcDrugBreakage.Designer.cs">
+      <DependentUpon>UcDrugBreakage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\ucDrugsUnqualification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ucDrugsUnqualification.Designer.cs">
+      <DependentUpon>ucDrugsUnqualification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\ucGoodsAdditionalProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ucGoodsAdditionalProperty.Designer.cs">
+      <DependentUpon>ucGoodsAdditionalProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\ucGoodsInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ucGoodsInfo.Designer.cs">
+      <DependentUpon>ucGoodsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\ucPurchaseRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ucPurchaseRecord.Designer.cs">
+      <DependentUpon>ucPurchaseRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\ucPurchaseUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ucPurchaseUnit.Designer.cs">
+      <DependentUpon>ucPurchaseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\ucSupplyUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\ucSupplyUnit.Designer.cs">
+      <DependentUpon>ucSupplyUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControls\usSalesOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControls\usSalesOrder.Designer.cs">
+      <DependentUpon>usSalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\validDate.cs" />
+    <Compile Include="UserControl\NavBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\NavBar.Designer.cs">
+      <DependentUpon>NavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AppSet.resx">
+      <DependentUpon>AppSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManger\Buyer.resx">
+      <DependentUpon>Buyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManger\Medicine.resx">
+      <DependentUpon>Medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManger\MedicineType.resx">
+      <DependentUpon>MedicineType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManger\Parameter.resx">
+      <DependentUpon>Parameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManger\Saler.resx">
+      <DependentUpon>Saler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManger\SonPharmacy.resx">
+      <DependentUpon>SonPharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManger\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Side\Navigation.resx">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side\Task.resx">
+      <DependentUpon>Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Side\Warn.resx">
+      <DependentUpon>Warn.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="UI\Forms\BaseDataManage\FormDrugInfo.old.1.resx">
+      <DependentUpon>FormDrugInfo.old.1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="UI\Forms\ApprovalFlow\FormApprovalFlowCenter.resx">
+      <DependentUpon>FormApprovalFlowCenter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\ApprovalFlow\FormApprovalSearch.resx">
+      <DependentUpon>FormApprovalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="UI\Forms\BaseDataManage\FormDrugInfo.resx">
+      <DependentUpon>FormDrugInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="UI\Forms\ApprovalFlow\FormDrugsUnqualificationApprovalSelector.resx">
+      <DependentUpon>FormDrugsUnqualificationApprovalSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormApprovalManager.resx">
+      <DependentUpon>FormApprovalManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormDrugInfoLock.resx">
+      <DependentUpon>FormDrugInfoLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormDrugInfo_old.resx">
+      <DependentUpon>FormDrugInfo_old.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormDrugOtherInfor.resx">
+      <DependentUpon>FormDrugOtherInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormEmployeeImport.resx">
+      <DependentUpon>FormEmployeeImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormInstrument.resx">
+      <DependentUpon>FormInstrument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormInstrumentsQuery.resx">
+      <DependentUpon>FormInstrumentsQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormInstrument_CategoryTable.resx">
+      <DependentUpon>FormInstrument_CategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormModule.resx">
+      <DependentUpon>FormModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormModuleCategoryEdit.resx">
+      <DependentUpon>FormModuleCategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormModuleCategory.resx">
+      <DependentUpon>FormModuleCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormPurchaseUnit.resx">
+      <DependentUpon>FormPurchaseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormPurchaseUnitBuyerEdit.resx">
+      <DependentUpon>FormPurchaseUnitBuyerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormPurchaseUnitBuyerList.resx">
+      <DependentUpon>FormPurchaseUnitBuyerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormSalePriceControlRules.resx">
+      <DependentUpon>FormSalePriceControlRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormSupplyUnitSalesmanEdit.resx">
+      <DependentUpon>FormSupplyUnitSalesmanEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormSupplyUnitSalesmanList.resx">
+      <DependentUpon>FormSupplyUnitSalesmanList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormSupplyUnitUnlock.resx">
+      <DependentUpon>FormSupplyUnitUnlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormRole.resx">
+      <DependentUpon>FormRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormRoleEdit.resx">
+      <DependentUpon>FormRoleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormRoleWithUser.resx">
+      <DependentUpon>FormRoleWithUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormSupplyUnit.resx">
+      <DependentUpon>FormSupplyUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormUserEdit.resx">
+      <DependentUpon>FormUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormUserLogQuery.resx">
+      <DependentUpon>FormUserLogQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormVehicle.resx">
+      <DependentUpon>FormVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormModuleEdit.resx">
+      <DependentUpon>FormModuleEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormPurchaseUnitUnlock.resx">
+      <DependentUpon>FormPurchaseUnitUnlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormDrugInfoUnlock.resx">
+      <DependentUpon>FormDrugInfoUnlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormVehicleEdit.resx">
+      <DependentUpon>FormVehicleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition.resx">
+      <DependentUpon>FormWareHouseZonePosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormWareHouseZonePositionEdit.resx">
+      <DependentUpon>FormWareHouseZonePositionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition_Editor.resx">
+      <DependentUpon>FormWareHouseZonePosition_Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\FormWareHouseZonePosition_EleLabSetup.resx">
+      <DependentUpon>FormWareHouseZonePosition_EleLabSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\Form_DelegateDocument.resx">
+      <DependentUpon>Form_DelegateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\Form_DrugQualityTrace.resx">
+      <DependentUpon>Form_DrugQualityTrace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\Form_Photo.resx">
+      <DependentUpon>Form_Photo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\Form_NearExpire.resx">
+      <DependentUpon>Form_NearExpire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\Form_QualityFileSetup.resx">
+      <DependentUpon>Form_QualityFileSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\Form_WarningListShow.resx">
+      <DependentUpon>Form_WarningListShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseForm\FormDZJGM.resx">
+      <DependentUpon>FormDZJGM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseForm\Form_BussinessInvoiceProcessor.resx">
+      <DependentUpon>Form_BussinessInvoiceProcessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseForm\PurchaseRecordList.resx">
+      <DependentUpon>PurchaseRecordList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseForm\CRUDForm.resx">
+      <DependentUpon>CRUDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseForm\FormOrderList.resx">
+      <DependentUpon>FormOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormFoodCirculateLicense.resx">
+      <DependentUpon>FormFoodCirculateLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormHealthLicense.resx">
+      <DependentUpon>FormHealthLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormLegalPersonLicense.resx">
+      <DependentUpon>FormLegalPersonLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormMmedicalInstitutionPermit.resx">
+      <DependentUpon>FormMmedicalInstitutionPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormSupplyUnitMansSelector.resx">
+      <DependentUpon>FormSupplyUnitMansSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormAllDrugInventoryRecordSelector.resx">
+      <DependentUpon>FormAllDrugInventoryRecordSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormBusinessLicense.resx">
+      <DependentUpon>FormBusinessLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormGMPLicense.resx">
+      <DependentUpon>FormGMPLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormGoodsAdditionalProperty.resx">
+      <DependentUpon>FormGoodsAdditionalProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormGoodsInfoView.resx">
+      <DependentUpon>FormGoodsInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormGSPLicense.resx">
+      <DependentUpon>FormGSPLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormInstrumentsBusinessLicense.resx">
+      <DependentUpon>FormInstrumentsBusinessLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormInstrumentsProductionLicense.resx">
+      <DependentUpon>FormInstrumentsProductionLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormListDepartmentsEmployees.resx">
+      <DependentUpon>FormListDepartmentsEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormMedicineBusinessLicense.resx">
+      <DependentUpon>FormMedicineBusinessLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormMedicineProductionLicense.resx">
+      <DependentUpon>FormMedicineProductionLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormTaxRegisterLicense.resx">
+      <DependentUpon>FormTaxRegisterLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormWarehouseZoneSelector.resx">
+      <DependentUpon>FormWarehouseZoneSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormDrugForPurchaseSelector.resx">
+      <DependentUpon>FormDrugForPurchaseSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormDrugForSalesSelector.resx">
+      <DependentUpon>FormDrugForSalesSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormDrugsForSupplyUnitSelector.resx">
+      <DependentUpon>FormDrugsForSupplyUnitSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="UI\Forms\Common\FormGMSPLicenseEdit.resx">
+      <DependentUpon>FormGMSPLicenseEdit.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="UI\Forms\Common\FormPurchaseSelector.resx">
+      <DependentUpon>FormPurchaseSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormSupplyUnitsSelector.resx">
+      <DependentUpon>FormSupplyUnitsSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\Form_HistoryPurchase.resx">
+      <DependentUpon>Form_HistoryPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\ManufacturerSelector.resx">
+      <DependentUpon>ManufacturerSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormOrganizationCodeLicense.resx">
+      <DependentUpon>FormOrganizationCodeLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormBusinessDictionaryIndex.resx">
+      <DependentUpon>FormBusinessDictionaryIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDictionaryDosage.resx">
+      <DependentUpon>FormDictionaryDosage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDictionaryMeasurementUnit.resx">
+      <DependentUpon>FormDictionaryMeasurementUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDictionaryPiecemealUnit.resx">
+      <DependentUpon>FormDictionaryPiecemealUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDictionarySpecification.resx">
+      <DependentUpon>FormDictionarySpecification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDictionaryStorageType.resx">
+      <DependentUpon>FormDictionaryStorageType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDictionaryUserDefinedType.resx">
+      <DependentUpon>FormDictionaryUserDefinedType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDrugCategory.resx">
+      <DependentUpon>FormDrugCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormDrugDictionaryIndex.resx">
+      <DependentUpon>FormDrugDictionaryIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="UI\Forms\DataDictionary\FormDrugType.resx">
+      <DependentUpon>FormDrugType.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="UI\Forms\DataDictionary\FormPurchaseUnitType.resx">
+      <DependentUpon>FormPurchaseUnitType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataImport\FormDrugInfo.resx">
+      <DependentUpon>FormDrugInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataImport\FormPurchaseUnit.resx">
+      <DependentUpon>FormPurchaseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DataImport\FormSupplyUnit.resx">
+      <DependentUpon>FormSupplyUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DeliveryBusiness\FormDeliveryCenter.resx">
+      <DependentUpon>FormDeliveryCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DeliveryBusiness\FormDeliveryEdit.resx">
+      <DependentUpon>FormDeliveryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DeliveryBusiness\FormDeliveryIndex.resx">
+      <DependentUpon>FormDeliveryIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DeliveryBusiness\FormDeliverySearch.resx">
+      <DependentUpon>FormDeliverySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DeliveryBusiness\FormDeliveryStatistics.resx">
+      <DependentUpon>FormDeliveryStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DirectSalesBusiness\DirectSalesCreate.resx">
+      <DependentUpon>DirectSalesCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DirectSalesBusiness\Form_CheckingOrder.resx">
+      <DependentUpon>Form_CheckingOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DirectSalesBusiness\Form_DirectSalesIndex.resx">
+      <DependentUpon>Form_DirectSalesIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DocumentManage\FormEduDoc.resx">
+      <DependentUpon>FormEduDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DocumentManage\FormHealthCheckAdd.resx">
+      <DependentUpon>FormHealthCheckAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DocumentManage\FormHealthCheckDoc.resx">
+      <DependentUpon>FormHealthCheckDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugBusiness\FormDoubtDrugEdit.resx">
+      <DependentUpon>FormDoubtDrugEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugBusiness\FormDoubtDrugManage.resx">
+      <DependentUpon>FormDoubtDrugManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlanDetailEdit.resx">
+      <DependentUpon>DrugMaintainRecordPlanDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlan.resx">
+      <DependentUpon>DrugMaintainRecordPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\DrugMaintainRecordPlanDetails.resx">
+      <DependentUpon>DrugMaintainRecordPlanDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintain\AddSpecial.resx">
+      <DependentUpon>AddSpecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintain\DrugInventoryMove.resx">
+      <DependentUpon>DrugInventoryMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintain\DrugMaintainRecord.resx">
+      <DependentUpon>DrugMaintainRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecord.resx">
+      <DependentUpon>NormalDrugMaintainRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecordDetailEdit.resx">
+      <DependentUpon>NormalDrugMaintainRecordDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintain\DrugMaintainSetForm.resx">
+      <DependentUpon>DrugMaintainSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintain\DrugMaintainRecordDetails.resx">
+      <DependentUpon>DrugMaintainRecordDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\NormalDrugMaintainRecordDetails.resx">
+      <DependentUpon>NormalDrugMaintainRecordDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecord.resx">
+      <DependentUpon>SpecialDrugMaintainRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecordDetailEdit.resx">
+      <DependentUpon>SpecialDrugMaintainRecordDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintainView\SpecialDrugMaintainRecordDetails.resx">
+      <DependentUpon>SpecialDrugMaintainRecordDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintain\DrugSearch.resx">
+      <DependentUpon>DrugSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugMaintain\SignDrugAsSpecial.resx">
+      <DependentUpon>SignDrugAsSpecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUndeterminte\DrugsUndeterminte.resx">
+      <DependentUpon>DrugsUndeterminte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUndeterminte\PurchaseRefuse.resx">
+      <DependentUpon>PurchaseRefuse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\DestroyApply.resx">
+      <DependentUpon>DestroyApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\FormDrugsDestroyDetails.resx">
+      <DependentUpon>FormDrugsDestroyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\FormDrugsDestroyTable.resx">
+      <DependentUpon>FormDrugsDestroyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\formDrugsUnqualification.resx">
+      <DependentUpon>formDrugsUnqualification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\formDrugsUnqualificationExecution.resx">
+      <DependentUpon>formDrugsUnqualificationExecution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\FormDrugUnqualificationDestroy.resx">
+      <DependentUpon>FormDrugUnqualificationDestroy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DrugsUnqualification\FormUnqualificationApprovalDetail.resx">
+      <DependentUpon>FormUnqualificationApprovalDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormCashOrder.resx">
+      <DependentUpon>FormCashOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormInInventory.resx">
+      <DependentUpon>FormInInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormOrderReturnIndex.resx">
+      <DependentUpon>FormOrderReturnIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormOrderReturnList.resx">
+      <DependentUpon>FormOrderReturnList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseHistoryBySupplyer.resx">
+      <DependentUpon>FormPurchaseHistoryBySupplyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderCreateBySupplyer.resx">
+      <DependentUpon>FormPurchaseOrderCreateBySupplyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseReturnOrderApproval.resx">
+      <DependentUpon>FormPurchaseReturnOrderApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormReceivingOrder.resx">
+      <DependentUpon>FormReceivingOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderApprovaledList.resx">
+      <DependentUpon>FormPurchaseOrderApprovaledList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormCheckOrder.resx">
+      <DependentUpon>FormCheckOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrder.resx">
+      <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderWaittingList.resx">
+      <DependentUpon>FormPurchaseOrderWaittingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderCanceledList.resx">
+      <DependentUpon>FormPurchaseOrderCanceledList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderApproval.resx">
+      <DependentUpon>FormPurchaseOrderApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderEdit.resx">
+      <DependentUpon>FormPurchaseOrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderGenerator.resx">
+      <DependentUpon>FormPurchaseOrderGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormPurchaseOrderList.resx">
+      <DependentUpon>FormPurchaseOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormReturnOrder.resx">
+      <DependentUpon>FormReturnOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\FormSupplyUnitLock.resx">
+      <DependentUpon>FormSupplyUnitLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_DrugSelectorForSupplyer.resx">
+      <DependentUpon>Form_DrugSelectorForSupplyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_FormPurchaseHistoryBySupplyer_Batch.resx">
+      <DependentUpon>Form_FormPurchaseHistoryBySupplyer_Batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_PurchaseInvoiceProc.resx">
+      <DependentUpon>Form_PurchaseInvoiceProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrderGenerator.resx">
+      <DependentUpon>Form_PurchaseOrderGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrderImpt.resx">
+      <DependentUpon>Form_PurchaseOrderImpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_PurchaseRefund.resx">
+      <DependentUpon>Form_PurchaseRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_SalerTaxRate.resx">
+      <DependentUpon>Form_SalerTaxRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_staticsChart.resx">
+      <DependentUpon>Form_staticsChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_staticsTable.resx">
+      <DependentUpon>Form_staticsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_WareHouseZonePositionSelector.resx">
+      <DependentUpon>Form_WareHouseZonePositionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\PurchaseOrderDetailModify.resx">
+      <DependentUpon>PurchaseOrderDetailModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RetailBusiness\FormRetailOrderEdit.resx">
+      <DependentUpon>FormRetailOrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RetailBusiness\FormRetailOrderIndex.resx">
+      <DependentUpon>FormRetailOrderIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RetailBusiness\FormRetailOrderReturn.resx">
+      <DependentUpon>FormRetailOrderReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RetailBusiness\FormRetailOrderStatistics.resx">
+      <DependentUpon>FormRetailOrderStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\RetailBusiness\FormRetailOrderCenter.resx">
+      <DependentUpon>FormRetailOrderCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormCancelOrderConfirm.resx">
+      <DependentUpon>FormCancelOrderConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormDrugSelector.resx">
+      <DependentUpon>FormDrugSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Common\FormOperatorSelector.resx">
+      <DependentUpon>FormOperatorSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOrderReturnCenter.resx">
+      <DependentUpon>FormOrderReturnCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOutInventory.resx">
+      <DependentUpon>FormOutInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOutInventoryCenter.resx">
+      <DependentUpon>FormOutInventoryCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOutInventorySearch.resx">
+      <DependentUpon>FormOutInventorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormPayConfirm.resx">
+      <DependentUpon>FormPayConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormPurchaseUnitLock.resx">
+      <DependentUpon>FormPurchaseUnitLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSaleOrderApproval.resx">
+      <DependentUpon>FormSaleOrderApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSaleReturnEdit.resx">
+      <DependentUpon>FormSaleReturnEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesIndex.resx">
+      <DependentUpon>FormSalesIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderCenter.resx">
+      <DependentUpon>FormSalesOrderCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderEdit.resx">
+      <DependentUpon>FormSalesOrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderIndex.resx">
+      <DependentUpon>FormSalesOrderIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderRecordIndex.resx">
+      <DependentUpon>FormSalesOrderRecordIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderReturn.resx">
+      <DependentUpon>FormSalesOrderReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOrderReturnIndex.resx">
+      <DependentUpon>FormOrderReturnIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderReturnBalance.resx">
+      <DependentUpon>FormSalesOrderReturnBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderStatistics.resx">
+      <DependentUpon>FormSalesOrderStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\Form_SaleOrderRefund.resx">
+      <DependentUpon>Form_SaleOrderRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\Form_SalerTaxRateManage.resx">
+      <DependentUpon>Form_SalerTaxRateManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\Form_SalesInvoiceProc.resx">
+      <DependentUpon>Form_SalesInvoiceProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\Form_SalesOrder.resx">
+      <DependentUpon>Form_SalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\Form_SaleTaxStatics.resx">
+      <DependentUpon>Form_SaleTaxStatics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\UCOutInventory.resx">
+      <DependentUpon>UCOutInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOrderReturnCheckIndex.resx">
+      <DependentUpon>FormOrderReturnCheckIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOrderReturnInventoryIndex.resx">
+      <DependentUpon>FormOrderReturnInventoryIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderCreateIndex.resx">
+      <DependentUpon>FormSalesOrderCreateIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderCancelIndex.resx">
+      <DependentUpon>FormSalesOrderCancelIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSalesOrderBalanceIndex.resx">
+      <DependentUpon>FormSalesOrderBalanceIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormOrderReturnCancelIndex.resx">
+      <DependentUpon>FormOrderReturnCancelIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Storage\FormHisInventeryChecking.resx">
+      <DependentUpon>FormHisInventeryChecking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Storage\Form_DrugInventoryMove.resx">
+      <DependentUpon>Form_DrugInventoryMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Storage\Form_DrugPath.resx">
+      <DependentUpon>Form_DrugPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Storage\Form_InventoryPL.resx">
+      <DependentUpon>Form_InventoryPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Storage\StorageQuery.resx">
+      <DependentUpon>StorageQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Storage\FormStorageChecking.resx">
+      <DependentUpon>FormStorageChecking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Sys\FormDepartment.resx">
+      <DependentUpon>FormDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Sys\FormDepartmentEdit.resx">
+      <DependentUpon>FormDepartmentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Sys\FormModuleWithRole.resx">
+      <DependentUpon>FormModuleWithRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Sys\FormUserLog.resx">
+      <DependentUpon>FormUserLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Sys\FormUserLogQuery.resx">
+      <DependentUpon>FormUserLogQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\Report1.rdlc" />
+    <EmbeddedResource Include="UI\Reports\Reporttest.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptDrugsDestroyDetail.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\RptPurchaseCheckingOrderCS.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseCheckingOrderNoHeader.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseCheckingOrder.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseCheckingOrderYLQX.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseCheckingOrderZY.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseInInventoryOrder.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseOrder.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseOrderRefundList.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseReceivingOrder.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseRefuse.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseReturnList.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptPurchaseReturnOrder.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSaleOutInventory.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderList.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderList000.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderList111.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderListCS.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderListEmpty.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderListYLQX.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderRecord.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderRefundList.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderReturnApply.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderReturnCheck.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesReturnCheckRecord.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RPTSalesReturnInform.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesReturnInventoryInform.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesReturnList.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptUndeterminate.rdlc" />
+    <EmbeddedResource Include="UI\UserControls\ucBusinessScopeEditor.resx">
+      <DependentUpon>ucBusinessScopeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\UcDrugBreakage.resx">
+      <DependentUpon>UcDrugBreakage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ucDrugsUnqualification.resx">
+      <DependentUpon>ucDrugsUnqualification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ucGoodsAdditionalProperty.resx">
+      <DependentUpon>ucGoodsAdditionalProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ucGoodsInfo.resx">
+      <DependentUpon>ucGoodsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ucPurchaseRecord.resx">
+      <DependentUpon>ucPurchaseRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ucPurchaseUnit.resx">
+      <DependentUpon>ucPurchaseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\ucSupplyUnit.resx">
+      <DependentUpon>ucSupplyUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControls\usSalesOrder.resx">
+      <DependentUpon>usSalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\NavBar.resx">
+      <DependentUpon>NavBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DockPanel.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UI\Reports\DsSalesOrderReturn.xsc">
+      <DependentUpon>DsSalesOrderReturn.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reports\DsSalesOrderReturn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsSalesOrderReturn.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Reports\DsSalesOrderReturn.xss">
+      <DependentUpon>DsSalesOrderReturn.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reports\DSSalesReturnInform.xsc">
+      <DependentUpon>DSSalesReturnInform.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reports\DSSalesReturnInform.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSalesReturnInform.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Reports\DSSalesReturnInform.xss">
+      <DependentUpon>DSSalesReturnInform.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reports\SaleOrderRefund.xsc">
+      <DependentUpon>SaleOrderRefund.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reports\SaleOrderRefund.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SaleOrderRefund.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Reports\SaleOrderRefund.xss">
+      <DependentUpon>SaleOrderRefund.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reports\VATList.xsc">
+      <DependentUpon>VATList.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reports\VATList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VATList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Reports\VATList.xss">
+      <DependentUpon>VATList.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Report\DsSalesOrder.xsc">
+      <DependentUpon>DsSalesOrder.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Report\DsSalesOrder.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsSalesOrder1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UI\Report\DsSalesOrder.xss">
+      <DependentUpon>DsSalesOrder.xsd</DependentUpon>
+    </None>
+    <None Include="操作帮助.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugsBox.Application.Core\BugsBox.Application.Core.csproj">
+      <Project>{672ACEAF-FED6-4DF4-BF3C-72418251657B}</Project>
+      <Name>BugsBox.Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Common.Security\BugsBox.Common.Security.csproj">
+      <Project>{0E6E4A9E-D0D4-4656-A9A7-63A85F46C0A1}</Project>
+      <Name>BugsBox.Common.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.AppClient.Common\BugsBox.Pharmacy.AppClient.Common.csproj">
+      <Project>{936809AD-D2B1-47F7-A886-41C729979EE1}</Project>
+      <Name>BugsBox.Pharmacy.AppClient.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.AppClient.ServicesProvider\BugsBox.Pharmacy.AppClient.ServicesProvider.csproj">
+      <Project>{1FBF2E05-EEA1-4583-97C4-C624052A809E}</Project>
+      <Name>BugsBox.Pharmacy.AppClient.ServicesProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Business.Models\BugsBox.Pharmacy.Business.Models.csproj">
+      <Project>{57236cf6-d8bd-4ecf-b622-79abc8fdaf29}</Project>
+      <Name>BugsBox.Pharmacy.Business.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.csproj">
+      <Project>{28c37ac0-feac-45c7-94c2-b0515a3a8f9f}</Project>
+      <Name>BugsBox.Pharmacy.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.csproj">
+      <Project>{1c0ffc46-b18c-4e36-8d7c-c3b5c3354612}</Project>
+      <Name>BugsBox.Pharmacy.Service.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.UI.Common\BugsBox.Pharmacy.UI.Common.csproj">
+      <Project>{1DC71155-6A1D-4495-9E9C-15857E2A8B3C}</Project>
+      <Name>BugsBox.Pharmacy.UI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Windows.Forms\BugsBox.Windows.Forms.csproj">
+      <Project>{D525F934-34ED-4048-92F2-82877EF2F630}</Project>
+      <Name>BugsBox.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Windows.Forms\CustomValidatorsLibrary\CustomValidatorsLibrary.csproj">
+      <Project>{E83CF611-2465-4382-BE5C-B61F2B443E6B}</Project>
+      <Name>CustomValidatorsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Windows.Forms\PagerControl\PagerControl.csproj">
+      <Project>{B5A26518-2712-4415-B7DC-88B865F0EB66}</Project>
+      <Name>PagerControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Windows.Forms\TextBoxExtend\ControlExtend.csproj">
+      <Project>{26D587B4-7943-46FB-87F6-001A581A68AF}</Project>
+      <Name>ControlExtend</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BugsBox.Pharmacy.AppClient.Menu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\Exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Refresh.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\Save.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\ViewContent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="BugsBox.Pharmacy.AppClient.Menu_new.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="BugsBox.Pharmacy.AppClient.Warn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="BugsBox.Pharmacy.AppClient.SalePriceType.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\backPic1.jpg" />
+    <Content Include="Resources\backPic.jpg" />
+    <Content Include="Resources\mxplayer1.png" />
+    <None Include="Resources\Png\Add.png" />
+    <None Include="Resources\Png\Application.png" />
+    <None Include="Resources\Png\Application-add.png" />
+    <None Include="Resources\Png\Application-block.png" />
+    <None Include="Resources\Png\Application-cancel.png" />
+    <None Include="Resources\Png\Application-del.png" />
+    <None Include="Resources\Png\Application-edit.png" />
+    <None Include="Resources\Png\Application-info.png" />
+    <None Include="Resources\Png\Application-lock.png" />
+    <None Include="Resources\Png\Application-ok.png" />
+    <None Include="Resources\Png\Application-run.png" />
+    <None Include="Resources\Png\Application-warn.png" />
+    <None Include="Resources\Png\Cart.png" />
+    <None Include="Resources\Png\Cart-Add.png" />
+    <None Include="Resources\Png\Cart-Cancel.png" />
+    <None Include="Resources\Png\Cart-Del.png" />
+    <None Include="Resources\Png\Cart-Ok.png" />
+    <None Include="Resources\Png\Chart1.png" />
+    <None Include="Resources\Png\Chart1-Add.png" />
+    <None Include="Resources\Png\Chart1-Cancel.png" />
+    <None Include="Resources\Png\Chart1-Del.png" />
+    <None Include="Resources\Png\Chart1-Edit.png" />
+    <None Include="Resources\Png\Chart2.png" />
+    <None Include="Resources\Png\Chart2-Add.png" />
+    <None Include="Resources\Png\Chart2-Cancel.png" />
+    <None Include="Resources\Png\Chart2-Del.png" />
+    <None Include="Resources\Png\Chart2-Edit.png" />
+    <None Include="Resources\Png\Comments.png" />
+    <None Include="Resources\Png\Comments-add.png" />
+    <None Include="Resources\Png\Comments-cancel.png" />
+    <None Include="Resources\Png\Comments-del.png" />
+    <None Include="Resources\Png\Comments-edit.png" />
+    <None Include="Resources\Png\Comments-info.png" />
+    <None Include="Resources\Png\Comments-send.png" />
+    <None Include="Resources\Png\Comments-warn.png" />
+    <None Include="Resources\Png\Compile.png" />
+    <None Include="Resources\Png\Compile-Add.png" />
+    <None Include="Resources\Png\Compile-Cancel.png" />
+    <None Include="Resources\Png\Compile-Del.png" />
+    <None Include="Resources\Png\Compile-Edit.png" />
+    <None Include="Resources\Png\Compile-Ok.png" />
+    <None Include="Resources\Png\Compile-Run.png" />
+    <None Include="Resources\Png\Compile-Warn.png" />
+    <None Include="Resources\Png\Computer.png" />
+    <None Include="Resources\Png\Computer-Add.png" />
+    <None Include="Resources\Png\Computer-Block.png" />
+    <None Include="Resources\Png\Computer-Cancel.png" />
+    <None Include="Resources\Png\Computer-Del.png" />
+    <None Include="Resources\Png\Computer-Edit.png" />
+    <None Include="Resources\Png\Computer-Info.png" />
+    <None Include="Resources\Png\Computer-Lock.png" />
+    <None Include="Resources\Png\Computer-Ok.png" />
+    <None Include="Resources\Png\Computer-Warn.png" />
+    <None Include="Resources\Png\Copy.png" />
+    <None Include="Resources\Png\Cut.png" />
+    <None Include="Resources\Png\Datbase.png" />
+    <None Include="Resources\Png\Datbase-Add.png" />
+    <None Include="Resources\Png\Datbase-Cancel.png" />
+    <None Include="Resources\Png\Datbase-Del.png" />
+    <None Include="Resources\Png\Datbase-Lock.png" />
+    <None Include="Resources\Png\Datbase-Warn.png" />
+    <None Include="Resources\Png\Date.png" />
+    <None Include="Resources\Png\Date-Add.png" />
+    <None Include="Resources\Png\Date-Cancel.png" />
+    <None Include="Resources\Png\Date-Del.png" />
+    <None Include="Resources\Png\Date-Edit.png" />
+    <None Include="Resources\Png\Date-Ok.png" />
+    <None Include="Resources\Png\Date-Warn.png" />
+    <None Include="Resources\Png\Delete.png" />
+    <None Include="Resources\Png\Disc.png" />
+    <None Include="Resources\Png\Disc-Add.png" />
+    <None Include="Resources\Png\Disc-Block.png" />
+    <None Include="Resources\Png\Disc-Cancel.png" />
+    <None Include="Resources\Png\Disc-Del.png" />
+    <None Include="Resources\Png\Disc-Edit.png" />
+    <None Include="Resources\Png\Disc-Info.png" />
+    <None Include="Resources\Png\Disc-Lock.png" />
+    <None Include="Resources\Png\Disc-Ok.png" />
+    <None Include="Resources\Png\Disc-Play.png" />
+    <None Include="Resources\Png\Disc-Send.png" />
+    <None Include="Resources\Png\Disc-Warn.png" />
+    <None Include="Resources\Png\Disk.png" />
+    <None Include="Resources\Png\Disk-download.png" />
+    <None Include="Resources\Png\Doc.png" />
+    <None Include="Resources\Png\Doc-Add.png" />
+    <None Include="Resources\Png\Doc-Block.png" />
+    <None Include="Resources\Png\Doc-Cancel.png" />
+    <None Include="Resources\Png\Doc-Del.png" />
+    <None Include="Resources\Png\Doc-Download.png" />
+    <None Include="Resources\Png\Doc-Edit.png" />
+    <None Include="Resources\Png\Doc-Error.png" />
+    <None Include="Resources\Png\Doc-Info.png" />
+    <None Include="Resources\Png\Doc-Lock.png" />
+    <None Include="Resources\Png\Doc-Next.png" />
+    <None Include="Resources\Png\Doc-Ok.png" />
+    <None Include="Resources\Png\Doc-Previous.png" />
+    <None Include="Resources\Png\Doc-Warn.png" />
+    <None Include="Resources\Png\Error.png" />
+    <None Include="Resources\Png\Favorite.png" />
+    <None Include="Resources\Png\Favorite2.png" />
+    <None Include="Resources\Png\Favorite2-Add.png" />
+    <None Include="Resources\Png\Favorite2-Del.png" />
+    <None Include="Resources\Png\Favorite2-Edit.png" />
+    <None Include="Resources\Png\Favorite-Add.png" />
+    <None Include="Resources\Png\Favorite-Del.png" />
+    <None Include="Resources\Png\Flag-Blue.png" />
+    <None Include="Resources\Png\Flag-Cyan.png" />
+    <None Include="Resources\Png\Flag-Green.png" />
+    <None Include="Resources\Png\Flag-Purple.png" />
+    <None Include="Resources\Png\Flag-Red.png" />
+    <None Include="Resources\Png\Flag-Yellow.png" />
+    <None Include="Resources\Png\Folder.png" />
+    <None Include="Resources\Png\Folder-Add.png" />
+    <None Include="Resources\Png\Folder-Cancel.png" />
+    <None Include="Resources\Png\Folder-Del.png" />
+    <None Include="Resources\Png\Folder-Edit.png" />
+    <None Include="Resources\Png\Folder-Info.png" />
+    <None Include="Resources\Png\Folder-Lock.png" />
+    <None Include="Resources\Png\Folder-Ok.png" />
+    <None Include="Resources\Png\Folder-Open.png" />
+    <None Include="Resources\Png\Folder-Warn.png" />
+    <None Include="Resources\Png\Forbidden.png" />
+    <None Include="Resources\Png\Home.png" />
+    <None Include="Resources\Png\Image.png" />
+    <None Include="Resources\Png\Image-Add.png" />
+    <None Include="Resources\Png\Image-Block.png" />
+    <None Include="Resources\Png\Image-Cancel.png" />
+    <None Include="Resources\Png\Image-Del.png" />
+    <None Include="Resources\Png\Image-Edit.png" />
+    <None Include="Resources\Png\Image-Info.png" />
+    <None Include="Resources\Png\Image-Lock.png" />
+    <None Include="Resources\Png\Image-Ok.png" />
+    <None Include="Resources\Png\Image-Send.png" />
+    <None Include="Resources\Png\Image-Warn.png" />
+    <None Include="Resources\Png\Info.png" />
+    <None Include="Resources\Png\Key.png" />
+    <None Include="Resources\Png\Key-Add.png" />
+    <None Include="Resources\Png\Key-Block.png" />
+    <None Include="Resources\Png\Key-Cancel.png" />
+    <None Include="Resources\Png\Key-Del.png" />
+    <None Include="Resources\Png\Key-Info.png" />
+    <None Include="Resources\Png\Left.png" />
+    <None Include="Resources\Png\Link.png" />
+    <None Include="Resources\Png\Link-Broken.png" />
+    <None Include="Resources\Png\Lock.png" />
+    <None Include="Resources\Png\Mail.png" />
+    <None Include="Resources\Png\Mail-add.png" />
+    <None Include="Resources\Png\Mail-block.png" />
+    <None Include="Resources\Png\Mail-cancel.png" />
+    <None Include="Resources\Png\Mail-del.png" />
+    <None Include="Resources\Png\Mail-edit.png" />
+    <None Include="Resources\Png\Mail-info.png" />
+    <None Include="Resources\Png\Mail-lock.png" />
+    <None Include="Resources\Png\Mail-ok.png" />
+    <None Include="Resources\Png\Mail-reply.png" />
+    <None Include="Resources\Png\Mail-send.png" />
+    <None Include="Resources\Png\Mail-warn.png" />
+    <None Include="Resources\Png\News.png" />
+    <None Include="Resources\Png\News-Add.png" />
+    <None Include="Resources\Png\News-Block.png" />
+    <None Include="Resources\Png\News-Cancel.png" />
+    <None Include="Resources\Png\News-Del.png" />
+    <None Include="Resources\Png\News-Edit.png" />
+    <None Include="Resources\Png\News-Info.png" />
+    <None Include="Resources\Png\News-Lock.png" />
+    <None Include="Resources\Png\News-Ok.png" />
+    <None Include="Resources\Png\News-Send.png" />
+    <None Include="Resources\Png\News-Warn.png" />
+    <None Include="Resources\Png\Next.png" />
+    <None Include="Resources\Png\Note.png" />
+    <None Include="Resources\Png\Note-Add.png" />
+    <None Include="Resources\Png\Note-Block.png" />
+    <None Include="Resources\Png\Note-Cancel.png" />
+    <None Include="Resources\Png\Note-Del.png" />
+    <None Include="Resources\Png\Note-Ok.png" />
+    <None Include="Resources\Png\Ok.png" />
+    <None Include="Resources\Png\Overlay-add.png" />
+    <None Include="Resources\Png\Overlay-block.png" />
+    <None Include="Resources\Png\Overlay-cancel.png" />
+    <None Include="Resources\Png\Overlay-del.png" />
+    <None Include="Resources\Png\Overlay-edit.png" />
+    <None Include="Resources\Png\Overlay-info.png" />
+    <None Include="Resources\Png\Overlay-lock.png" />
+    <None Include="Resources\Png\Overlay-ok.png" />
+    <None Include="Resources\Png\Overlay-Warning.png" />
+    <None Include="Resources\Png\Paste.png" />
+    <None Include="Resources\Png\Previous.png" />
+    <None Include="Resources\Png\Printer.png" />
+    <None Include="Resources\Png\Printer-Add.png" />
+    <None Include="Resources\Png\Printer-Cancel.png" />
+    <None Include="Resources\Png\Printer-Del.png" />
+    <None Include="Resources\Png\Printer-Info.png" />
+    <None Include="Resources\Png\Printer-Ok.png" />
+    <None Include="Resources\Png\Printer-Warn.png" />
+    <None Include="Resources\Png\Right.png" />
+    <None Include="Resources\Png\Rss.png" />
+    <None Include="Resources\Png\Rss-Add.png" />
+    <None Include="Resources\Png\Rss-Block.png" />
+    <None Include="Resources\Png\Rss-Cancel.png" />
+    <None Include="Resources\Png\Rss-Del.png" />
+    <None Include="Resources\Png\Rss-Download.png" />
+    <None Include="Resources\Png\Rss-Edit.png" />
+    <None Include="Resources\Png\Rss-Info.png" />
+    <None Include="Resources\Png\Rss-Next.png" />
+    <None Include="Resources\Png\Rss-Ok.png" />
+    <None Include="Resources\Png\Rss-Prev.png" />
+    <None Include="Resources\Png\Rss-Upload.png" />
+    <None Include="Resources\Png\Rss-Warn.png" />
+    <None Include="Resources\Png\Save.png" />
+    <None Include="Resources\Png\Search.png" />
+    <None Include="Resources\Png\Search-Add.png" />
+    <None Include="Resources\Png\Search-Del.png" />
+    <None Include="Resources\Png\Tag-Add.png" />
+    <None Include="Resources\Png\Tag-Blue.png" />
+    <None Include="Resources\Png\Tag-Del.png" />
+    <None Include="Resources\Png\Tag-Green.png" />
+    <None Include="Resources\Png\Tag-Orange.png" />
+    <None Include="Resources\Png\Tag-Purple.png" />
+    <None Include="Resources\Png\Tag-Red.png" />
+    <None Include="Resources\Png\Tag-Yellow.png" />
+    <None Include="Resources\Png\Talk.png" />
+    <None Include="Resources\Png\Talk-Add.png" />
+    <None Include="Resources\Png\Talk-Block.png" />
+    <None Include="Resources\Png\Talk-Cancel.png" />
+    <None Include="Resources\Png\Talk-Del.png" />
+    <None Include="Resources\Png\Time.png" />
+    <None Include="Resources\Png\Time-add.png" />
+    <None Include="Resources\Png\Time-cancel.png" />
+    <None Include="Resources\Png\Time-del.png" />
+    <None Include="Resources\Png\Time-edit.png" />
+    <None Include="Resources\Png\Time-info.png" />
+    <None Include="Resources\Png\Time-ok.png" />
+    <None Include="Resources\Png\Time-warn.png" />
+    <None Include="Resources\Png\Trash.png" />
+    <None Include="Resources\Png\Trash-Add.png" />
+    <None Include="Resources\Png\Trash-Block.png" />
+    <None Include="Resources\Png\Trash-Cancel.png" />
+    <None Include="Resources\Png\Trash-Del.png" />
+    <None Include="Resources\Png\Trash-Info.png" />
+    <None Include="Resources\Png\Trend Down.png" />
+    <None Include="Resources\Png\Trend Up.png" />
+    <None Include="Resources\Png\Unlock.png" />
+    <None Include="Resources\Png\User %282%29.png" />
+    <None Include="Resources\Png\User.png" />
+    <None Include="Resources\Png\User-Block.png" />
+    <None Include="Resources\Png\User-Cancel.png" />
+    <None Include="Resources\Png\User-Del.png" />
+    <None Include="Resources\Png\User-Edit.png" />
+    <None Include="Resources\Png\User-Info.png" />
+    <None Include="Resources\Png\User-Lock.png" />
+    <None Include="Resources\Png\User-Ok.png" />
+    <None Include="Resources\Png\User-Warn.png" />
+    <None Include="Resources\Png\Warning.png" />
+    <None Include="Resources\Png\Web.png" />
+    <None Include="Resources\Png\Web-add.png" />
+    <None Include="Resources\Png\Web-block.png" />
+    <None Include="Resources\Png\Web-cancel.png" />
+    <None Include="Resources\Png\Web-del.png" />
+    <None Include="Resources\Png\Web-Download.png" />
+    <None Include="Resources\Png\Web-edit.png" />
+    <None Include="Resources\Png\Web-info.png" />
+    <None Include="Resources\Png\Web-link.png" />
+    <None Include="Resources\Png\Web-lock.png" />
+    <None Include="Resources\Png\Web-ok.png" />
+    <None Include="Resources\Png\Web-search.png" />
+    <None Include="Resources\Png\Web-warn.png" />
+    <None Include="Resources\Png\Wizard.png" />
+    <EmbeddedResource Include="Resources\RingBell.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="函数说明.txt" />
+    <Content Include="logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Menu_back.xml" />
+    <None Include="Resources\168_3335_e58511115ed994d.jpg" />
+    <None Include="Resources\data.png" />
+    <Content Include="BugsBox.Pharmacy.AppClient.printSet.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\007_PrintView_32x32_72.png" />
+    <Content Include="Resources\Ico16\Add.ico" />
+    <Content Include="Resources\Ico16\Application-add.ico" />
+    <Content Include="Resources\Ico16\Application-block.ico" />
+    <Content Include="Resources\Ico16\Application-cancel.ico" />
+    <Content Include="Resources\Ico16\Application-del.ico" />
+    <Content Include="Resources\Ico16\Application-edit.ico" />
+    <Content Include="Resources\Ico16\Application-info.ico" />
+    <Content Include="Resources\Ico16\Application-lock.ico" />
+    <Content Include="Resources\Ico16\Application-ok.ico" />
+    <Content Include="Resources\Ico16\Application-run.ico" />
+    <Content Include="Resources\Ico16\Application-warn.ico" />
+    <Content Include="Resources\Ico16\Application.ico" />
+    <Content Include="Resources\Ico16\Cart-Add.ico" />
+    <Content Include="Resources\Ico16\Cart-Cancel.ico" />
+    <Content Include="Resources\Ico16\Cart-Del.ico" />
+    <Content Include="Resources\Ico16\Cart-Ok.ico" />
+    <Content Include="Resources\Ico16\Cart.ico" />
+    <Content Include="Resources\Ico16\Chart1-Add.ico" />
+    <Content Include="Resources\Ico16\Chart1-Cancel.ico" />
+    <Content Include="Resources\Ico16\Chart1-Del.ico" />
+    <Content Include="Resources\Ico16\Chart1-Edit.ico" />
+    <Content Include="Resources\Ico16\Chart1.ico" />
+    <Content Include="Resources\Ico16\Chart2-Add.ico" />
+    <Content Include="Resources\Ico16\Chart2-Cancel.ico" />
+    <Content Include="Resources\Ico16\Chart2-Del.ico" />
+    <Content Include="Resources\Ico16\Chart2-Edit.ico" />
+    <Content Include="Resources\Ico16\Chart2.ico" />
+    <Content Include="Resources\Ico16\Comments-add.ico" />
+    <Content Include="Resources\Ico16\Comments-cancel.ico" />
+    <Content Include="Resources\Ico16\Comments-del.ico" />
+    <Content Include="Resources\Ico16\Comments-edit.ico" />
+    <Content Include="Resources\Ico16\Comments-info.ico" />
+    <Content Include="Resources\Ico16\Comments-send.ico" />
+    <Content Include="Resources\Ico16\Comments-warn.ico" />
+    <Content Include="Resources\Ico16\Comments.ico" />
+    <Content Include="Resources\Ico16\Compile-Add.ico" />
+    <Content Include="Resources\Ico16\Compile-Cancel.ico" />
+    <Content Include="Resources\Ico16\Compile-Del.ico" />
+    <Content Include="Resources\Ico16\Compile-Edit.ico" />
+    <Content Include="Resources\Ico16\Compile-Ok.ico" />
+    <Content Include="Resources\Ico16\Compile-Run.ico" />
+    <Content Include="Resources\Ico16\Compile-Warn.ico" />
+    <Content Include="Resources\Ico16\Compile.ico" />
+    <Content Include="Resources\Ico16\Computer-Add.ico" />
+    <Content Include="Resources\Ico16\Computer-Block.ico" />
+    <Content Include="Resources\Ico16\Computer-Cancel.ico" />
+    <Content Include="Resources\Ico16\Computer-Del.ico" />
+    <Content Include="Resources\Ico16\Computer-Edit.ico" />
+    <Content Include="Resources\Ico16\Computer-Info.ico" />
+    <Content Include="Resources\Ico16\Computer-Lock.ico" />
+    <Content Include="Resources\Ico16\Computer-Ok.ico" />
+    <Content Include="Resources\Ico16\Computer-Warn.ico" />
+    <Content Include="Resources\Ico16\Computer.ico" />
+    <Content Include="Resources\Ico16\Copy.ico" />
+    <Content Include="Resources\Ico16\Cut.ico" />
+    <Content Include="Resources\Ico16\Datbase-Add.ico" />
+    <Content Include="Resources\Ico16\Datbase-Cancel.ico" />
+    <Content Include="Resources\Ico16\Datbase-Del.ico" />
+    <Content Include="Resources\Ico16\Datbase-Lock.ico" />
+    <Content Include="Resources\Ico16\Datbase-Warn.ico" />
+    <Content Include="Resources\Ico16\Datbase.ico" />
+    <Content Include="Resources\Ico16\Date-Add.ico" />
+    <Content Include="Resources\Ico16\Date-Cancel.ico" />
+    <Content Include="Resources\Ico16\Date-Del.ico" />
+    <Content Include="Resources\Ico16\Date-Edit.ico" />
+    <Content Include="Resources\Ico16\Date-Ok.ico" />
+    <Content Include="Resources\Ico16\Date-Warn.ico" />
+    <Content Include="Resources\Ico16\Date.ico" />
+    <Content Include="Resources\Ico16\Delete.ico" />
+    <Content Include="Resources\Ico16\Disc-Add.ico" />
+    <Content Include="Resources\Ico16\Disc-Block.ico" />
+    <Content Include="Resources\Ico16\Disc-Cancel.ico" />
+    <Content Include="Resources\Ico16\Disc-Del.ico" />
+    <Content Include="Resources\Ico16\Disc-Edit.ico" />
+    <Content Include="Resources\Ico16\Disc-Info.ico" />
+    <Content Include="Resources\Ico16\Disc-Lock.ico" />
+    <Content Include="Resources\Ico16\Disc-Ok.ico" />
+    <Content Include="Resources\Ico16\Disc-Play.ico" />
+    <Content Include="Resources\Ico16\Disc-Send.ico" />
+    <Content Include="Resources\Ico16\Disc-Warn.ico" />
+    <Content Include="Resources\Ico16\Disc.ico" />
+    <Content Include="Resources\Ico16\Disk-download.ico" />
+    <Content Include="Resources\Ico16\Disk.ico" />
+    <Content Include="Resources\Ico16\Doc-Add.ico" />
+    <Content Include="Resources\Ico16\Doc-Block.ico" />
+    <Content Include="Resources\Ico16\Doc-Cancel.ico" />
+    <Content Include="Resources\Ico16\Doc-Del.ico" />
+    <Content Include="Resources\Ico16\Doc-Download.ico" />
+    <Content Include="Resources\Ico16\Doc-Edit.ico" />
+    <Content Include="Resources\Ico16\Doc-Error.ico" />
+    <Content Include="Resources\Ico16\Doc-Info.ico" />
+    <Content Include="Resources\Ico16\Doc-Lock.ico" />
+    <Content Include="Resources\Ico16\Doc-Next.ico" />
+    <Content Include="Resources\Ico16\Doc-Ok.ico" />
+    <Content Include="Resources\Ico16\Doc-Previous.ico" />
+    <Content Include="Resources\Ico16\Doc-Warn.ico" />
+    <Content Include="Resources\Ico16\Doc.ico" />
+    <Content Include="Resources\Ico16\Error.ico" />
+    <Content Include="Resources\Ico16\Favorite-Add.ico" />
+    <Content Include="Resources\Ico16\Favorite-Del.ico" />
+    <Content Include="Resources\Ico16\Favorite.ico" />
+    <Content Include="Resources\Ico16\Favorite2-Add.ico" />
+    <Content Include="Resources\Ico16\Favorite2-Del.ico" />
+    <Content Include="Resources\Ico16\Favorite2-Edit.ico" />
+    <Content Include="Resources\Ico16\Favorite2.ico" />
+    <Content Include="Resources\Ico16\Flag-Blue.ico" />
+    <Content Include="Resources\Ico16\Flag-Cyan.ico" />
+    <Content Include="Resources\Ico16\Flag-Green.ico" />
+    <Content Include="Resources\Ico16\Flag-Purple.ico" />
+    <Content Include="Resources\Ico16\Flag-Red.ico" />
+    <Content Include="Resources\Ico16\Flag-Yellow.ico" />
+    <Content Include="Resources\Ico16\Folder-Add.ico" />
+    <Content Include="Resources\Ico16\Folder-Cancel.ico" />
+    <Content Include="Resources\Ico16\Folder-Del.ico" />
+    <Content Include="Resources\Ico16\Folder-Edit.ico" />
+    <Content Include="Resources\Ico16\Folder-Info.ico" />
+    <Content Include="Resources\Ico16\Folder-Lock.ico" />
+    <Content Include="Resources\Ico16\Folder-Ok.ico" />
+    <Content Include="Resources\Ico16\Folder-Open.ico" />
+    <Content Include="Resources\Ico16\Folder-Warn.ico" />
+    <Content Include="Resources\Ico16\Folder.ico" />
+    <Content Include="Resources\Ico16\Forbidden.ico" />
+    <Content Include="Resources\Ico16\Home.ico" />
+    <Content Include="Resources\Ico16\Image-Add.ico" />
+    <Content Include="Resources\Ico16\Image-Block.ico" />
+    <Content Include="Resources\Ico16\Image-Cancel.ico" />
+    <Content Include="Resources\Ico16\Image-Del.ico" />
+    <Content Include="Resources\Ico16\Image-Edit.ico" />
+    <Content Include="Resources\Ico16\Image-Info.ico" />
+    <Content Include="Resources\Ico16\Image-Lock.ico" />
+    <Content Include="Resources\Ico16\Image-Ok.ico" />
+    <Content Include="Resources\Ico16\Image-Send.ico" />
+    <Content Include="Resources\Ico16\Image-Warn.ico" />
+    <Content Include="Resources\Ico16\Image.ico" />
+    <Content Include="Resources\Ico16\Info.ico" />
+    <Content Include="Resources\Ico16\Key-Add.ico" />
+    <Content Include="Resources\Ico16\Key-Block.ico" />
+    <Content Include="Resources\Ico16\Key-Cancel.ico" />
+    <Content Include="Resources\Ico16\Key-Del.ico" />
+    <Content Include="Resources\Ico16\Key-Info.ico" />
+    <Content Include="Resources\Ico16\Key.ico" />
+    <Content Include="Resources\Ico16\Left.ico" />
+    <Content Include="Resources\Ico16\Link-Broken.ico" />
+    <Content Include="Resources\Ico16\Link.ico" />
+    <Content Include="Resources\Ico16\Lock.ico" />
+    <Content Include="Resources\Ico16\Mail-add.ico" />
+    <Content Include="Resources\Ico16\Mail-block.ico" />
+    <Content Include="Resources\Ico16\Mail-cancel.ico" />
+    <Content Include="Resources\Ico16\Mail-del.ico" />
+    <Content Include="Resources\Ico16\Mail-edit.ico" />
+    <Content Include="Resources\Ico16\Mail-info.ico" />
+    <Content Include="Resources\Ico16\Mail-lock.ico" />
+    <Content Include="Resources\Ico16\Mail-ok.ico" />
+    <Content Include="Resources\Ico16\Mail-reply.ico" />
+    <Content Include="Resources\Ico16\Mail-send.ico" />
+    <Content Include="Resources\Ico16\Mail-warn.ico" />
+    <Content Include="Resources\Ico16\Mail.ico" />
+    <Content Include="Resources\Ico16\News-Add.ico" />
+    <Content Include="Resources\Ico16\News-Block.ico" />
+    <Content Include="Resources\Ico16\News-Cancel.ico" />
+    <Content Include="Resources\Ico16\News-Del.ico" />
+    <Content Include="Resources\Ico16\News-Edit.ico" />
+    <Content Include="Resources\Ico16\News-Info.ico" />
+    <Content Include="Resources\Ico16\News-Lock.ico" />
+    <Content Include="Resources\Ico16\News-Ok.ico" />
+    <Content Include="Resources\Ico16\News-Send.ico" />
+    <Content Include="Resources\Ico16\News-Warn.ico" />
+    <Content Include="Resources\Ico16\News.ico" />
+    <Content Include="Resources\Ico16\Next.ico" />
+    <Content Include="Resources\Ico16\Note-Add.ico" />
+    <Content Include="Resources\Ico16\Note-Block.ico" />
+    <Content Include="Resources\Ico16\Note-Cancel.ico" />
+    <Content Include="Resources\Ico16\Note-Del.ico" />
+    <Content Include="Resources\Ico16\Note-Ok.ico" />
+    <Content Include="Resources\Ico16\Note.ico" />
+    <Content Include="Resources\Ico16\Ok.ico" />
+    <Content Include="Resources\Ico16\Overlay-add.ico" />
+    <Content Include="Resources\Ico16\Overlay-block.ico" />
+    <Content Include="Resources\Ico16\Overlay-cancel.ico" />
+    <Content Include="Resources\Ico16\Overlay-del.ico" />
+    <Content Include="Resources\Ico16\Overlay-edit.ico" />
+    <Content Include="Resources\Ico16\Overlay-info.ico" />
+    <Content Include="Resources\Ico16\Overlay-lock.ico" />
+    <Content Include="Resources\Ico16\Overlay-ok.ico" />
+    <Content Include="Resources\Ico16\Overlay-Warning.ico" />
+    <Content Include="Resources\Ico16\Paste.ico" />
+    <Content Include="Resources\Ico16\Previous.ico" />
+    <Content Include="Resources\Ico16\Printer-Add.ico" />
+    <Content Include="Resources\Ico16\Printer-Cancel.ico" />
+    <Content Include="Resources\Ico16\Printer-Del.ico" />
+    <Content Include="Resources\Ico16\Printer-Info.ico" />
+    <Content Include="Resources\Ico16\Printer-Ok.ico" />
+    <Content Include="Resources\Ico16\Printer-Warn.ico" />
+    <Content Include="Resources\Ico16\Printer.ico" />
+    <Content Include="Resources\Ico16\Right.ico" />
+    <Content Include="Resources\Ico16\Rss-Add.ico" />
+    <Content Include="Resources\Ico16\Rss-Block.ico" />
+    <Content Include="Resources\Ico16\Rss-Cancel.ico" />
+    <Content Include="Resources\Ico16\Rss-Del.ico" />
+    <Content Include="Resources\Ico16\Rss-Download.ico" />
+    <Content Include="Resources\Ico16\Rss-Edit.ico" />
+    <Content Include="Resources\Ico16\Rss-Info.ico" />
+    <Content Include="Resources\Ico16\Rss-Next.ico" />
+    <Content Include="Resources\Ico16\Rss-Ok.ico" />
+    <Content Include="Resources\Ico16\Rss-Prev.ico" />
+    <Content Include="Resources\Ico16\Rss-Upload.ico" />
+    <Content Include="Resources\Ico16\Rss-Warn.ico" />
+    <Content Include="Resources\Ico16\Rss.ico" />
+    <Content Include="Resources\Ico16\Save.ico" />
+    <Content Include="Resources\Ico16\Search-Add.ico" />
+    <Content Include="Resources\Ico16\Search-Del.ico" />
+    <Content Include="Resources\Ico16\Search.ico" />
+    <Content Include="Resources\Ico16\Tag-Add.ico" />
+    <Content Include="Resources\Ico16\Tag-Blue.ico" />
+    <Content Include="Resources\Ico16\Tag-Del.ico" />
+    <Content Include="Resources\Ico16\Tag-Green.ico" />
+    <Content Include="Resources\Ico16\Tag-Orange.ico" />
+    <Content Include="Resources\Ico16\Tag-Purple.ico" />
+    <Content Include="Resources\Ico16\Tag-Red.ico" />
+    <Content Include="Resources\Ico16\Tag-Yellow.ico" />
+    <Content Include="Resources\Ico16\Talk-Add.ico" />
+    <Content Include="Resources\Ico16\Talk-Block.ico" />
+    <Content Include="Resources\Ico16\Talk-Cancel.ico" />
+    <Content Include="Resources\Ico16\Talk-Del.ico" />
+    <Content Include="Resources\Ico16\Talk.ico" />
+    <Content Include="Resources\Ico16\Time-add.ico" />
+    <Content Include="Resources\Ico16\Time-cancel.ico" />
+    <Content Include="Resources\Ico16\Time-del.ico" />
+    <Content Include="Resources\Ico16\Time-edit.ico" />
+    <Content Include="Resources\Ico16\Time-info.ico" />
+    <Content Include="Resources\Ico16\Time-ok.ico" />
+    <Content Include="Resources\Ico16\Time-warn.ico" />
+    <Content Include="Resources\Ico16\Time.ico" />
+    <Content Include="Resources\Ico16\Trash-Add.ico" />
+    <Content Include="Resources\Ico16\Trash-Block.ico" />
+    <Content Include="Resources\Ico16\Trash-Cancel.ico" />
+    <Content Include="Resources\Ico16\Trash-Del.ico" />
+    <Content Include="Resources\Ico16\Trash-Info.ico" />
+    <Content Include="Resources\Ico16\Trash.ico" />
+    <Content Include="Resources\Ico16\Trend Down.ico" />
+    <Content Include="Resources\Ico16\Trend Up.ico" />
+    <Content Include="Resources\Ico16\Unlock.ico" />
+    <Content Include="Resources\Ico16\User %282%29.ico" />
+    <Content Include="Resources\Ico16\User-Block.ico" />
+    <Content Include="Resources\Ico16\User-Cancel.ico" />
+    <Content Include="Resources\Ico16\User-Del.ico" />
+    <Content Include="Resources\Ico16\User-Edit.ico" />
+    <Content Include="Resources\Ico16\User-Info.ico" />
+    <Content Include="Resources\Ico16\User-Lock.ico" />
+    <Content Include="Resources\Ico16\User-Ok.ico" />
+    <Content Include="Resources\Ico16\User-Warn.ico" />
+    <Content Include="Resources\Ico16\User.ico" />
+    <Content Include="Resources\Ico16\Warning.ico" />
+    <Content Include="Resources\Ico16\Web-add.ico" />
+    <Content Include="Resources\Ico16\Web-block.ico" />
+    <Content Include="Resources\Ico16\Web-cancel.ico" />
+    <Content Include="Resources\Ico16\Web-del.ico" />
+    <Content Include="Resources\Ico16\Web-Download.ico" />
+    <Content Include="Resources\Ico16\Web-edit.ico" />
+    <Content Include="Resources\Ico16\Web-info.ico" />
+    <Content Include="Resources\Ico16\Web-link.ico" />
+    <Content Include="Resources\Ico16\Web-lock.ico" />
+    <Content Include="Resources\Ico16\Web-ok.ico" />
+    <Content Include="Resources\Ico16\Web-search.ico" />
+    <Content Include="Resources\Ico16\Web-warn.ico" />
+    <Content Include="Resources\Ico16\Web.ico" />
+    <Content Include="Resources\Ico16\Wizard.ico" />
+    <Content Include="Resources\logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\run.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\stop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\SearchWebHS.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\PrintHS.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="UI\Forms\InventoryBusiness\readme.txt" />
+    <Content Include="UI\Forms\PurchaseBusiness\readme.txt" />
+    <Content Include="UI\Forms\RetailBusiness\readme.txt" />
+    <Content Include="UI\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBarBG01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBarBG02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBtnBG.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBtnMain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBtnManageLinkMan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBtnManageUser.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SideBarBG.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

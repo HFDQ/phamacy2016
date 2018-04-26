@@ -1,0 +1,16 @@
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.XML
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.dll
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.pdb
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.PagerControl.resources
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.csproj.GenerateResource.Cache
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.dll
+D:\work\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.pdb
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.XML
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.dll
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.pdb
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.PagerControl.resources
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.csproj.GenerateResource.cache
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.csproj.CoreCompileInputs.cache
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.dll
+D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.pdb

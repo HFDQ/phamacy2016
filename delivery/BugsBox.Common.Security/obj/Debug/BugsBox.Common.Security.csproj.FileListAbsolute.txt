@@ -1,0 +1,6 @@
+D:\work\phamacy2016\_output\_temp\BugsBox.Common.Security\BugsBox.Common.Security.XML
+D:\work\phamacy2016\_output\_temp\BugsBox.Common.Security\BugsBox.Common.Security.dll
+D:\work\phamacy2016\_output\_temp\BugsBox.Common.Security\BugsBox.Common.Security.pdb
+D:\work\phamacy2016\delivery\BugsBox.Common.Security\obj\Debug\BugsBox.Common.Security.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\delivery\BugsBox.Common.Security\obj\Debug\BugsBox.Common.Security.dll
+D:\work\phamacy2016\delivery\BugsBox.Common.Security\obj\Debug\BugsBox.Common.Security.pdb

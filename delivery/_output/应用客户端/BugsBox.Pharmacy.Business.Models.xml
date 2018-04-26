@@ -1,0 +1,2039 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugsBox.Pharmacy.Business.Models</name>
+    </assembly>
+    <members>
+        <member name="P:BugsBox.Pharmacy.Business.Models.ApprovalDetailsModel.ApproveUserId">
+            <summary>
+            流程提交者Id
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.ApprovalDetailsModel.ApproveUserName">
+            <summary>
+            流程提交者
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.ApprovalDetailsModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.ApprovalDetailsModel.ApproveTime">
+            <summary>
+            流程提交时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.ApprovalDetailsModel.Comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.BusinessPersonModel">
+            <summary>
+            人员-业务逻辑
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.IDNumber">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.OutDate">
+            <summary>
+            过期日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.PersonTypeValue">
+            <summary>
+            人员类型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.BusinessPersonModel.PersonType">
+            <summary>
+            人员类型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.ID">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.SalesOrderNumber">
+            <summary>
+            货单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.OrderType">
+            <summary>
+            单据类型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.SalesOrderID">
+            <summary>
+            订单ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.DrugsCount">
+            <summary>
+            药品件数
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.DrugsPrice">
+            <summary>
+            药品总价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.ShippingAddress">
+            <summary>
+            发货地址
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.ReceivingCompasnyID">
+            <summary>
+            收货公司id
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.ReceivingCompasnyName">
+            <summary>
+            收货公司
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.DeliveryAddress">
+            <summary>
+            收货地址
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.DeliveryMethod">
+            <summary>
+            配送方式
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.DeliveryStatus">
+            <summary>
+            配送状态
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.TransportMethod">
+            <summary>
+            运输方式
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.AcceptedOperator">
+            <summary>
+            受理人
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.AcceptedTime">
+            <summary>
+            受理时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.outedOperator">
+            <summary>
+            出库操作员
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.outedTime">
+            <summary>
+            出库时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.SignedOperator">
+            <summary>
+            签收操作员
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.SignedTime">
+            <summary>
+            签收时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.Principal">
+            <summary>
+            委托人
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.PrincipalPhone">
+            <summary>
+            委托人电话
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.TransportCompany">
+            <summary>
+            运输公司
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryModel.VehicleInfo">
+            <summary>
+            运输工具
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.Id">
+            <summary>
+            配送ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.SalesOrderId">
+            <summary>
+            销售单ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.SalesOrderDocumentNumber">
+            <summary>
+            销售单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.OutInvetoryId">
+            <summary>
+            捡货复核ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.OutInvetoryDocumentNumber">
+            <summary>
+            捡货复核ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.ReceivingCompasnyID">
+            <summary>
+            收货公司
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.ReceivingCompasnyName">
+            <summary>
+            收货公司名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.OutInventoryNumber">
+            <summary>
+            出库药品数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryTrasactionModel.Status">
+            <summary>
+            0表示销售，1、表示采购退货
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DirectSalesQueryModel.Sdt">
+            <summary>
+            查询时间起
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DirectSalesQueryModel.Edt">
+            <summary>
+            查询时间止
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugInventoryNearExpiration.Age">
+            <summary>
+            库龄
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugInventoryNearExpiration.ArrivalDate">
+            <summary>
+            到货日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugMaintainModel.DrugScope">
+            <summary>
+            经营范围
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.productName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.SpecificationCode">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.Dosage">
+            <summary>
+            剂型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.FactoryName">
+            <summary>
+            厂家全称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.Origin">
+            <summary>
+            产地
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.BatchNumber">
+            <summary>
+            生产批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.Amount">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.CanSaleNum">
+            <summary>
+            现库存数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.Price">
+            <summary>
+            销售金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.PruductDate">
+            <summary>
+            生产日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.OutValidDate">
+            <summary>
+            有效期至
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.WarehouseName">
+            <summary>
+            现仓库
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.OriginWarehouseName">
+            <summary>
+            原仓库
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.WarehouseZoneName">
+            <summary>
+            现库区
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.OriginWarehouseZoneName">
+            <summary>
+            原库区
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.Explain">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.Status">
+            <summary>
+            审批状态值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.StatusStr">
+            <summary>
+            审批状态
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DrugsInventoryMoveRecordModel.CreateTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.createTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.updateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.IsApproval">
+            <summary>
+            是否通过审核
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.Description">
+            <summary>
+            不合格描述
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.FlowID">
+            <summary>
+            审核ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.unqualificationType">
+            <summary>
+            不合格处理类型
+            0表示未提交
+            1表示已提交不合格药品报损
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.number">
+            <summary>
+            不合格数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.drugName">
+            <summary>
+            药品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition.batchNo">
+            <summary>
+            药品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.creater">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.createTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.updateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.IsApproval">
+            <summary>
+            审核状态
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.flowID">
+            <summary>
+            审核ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.Description">
+            <summary>
+            不合格描述
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.unqualificationType">
+            <summary>
+            不合格类型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.quantity">
+            <summary>
+            不合格数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.drugName">
+            <summary>
+            药品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.batchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.Dosage">
+            <summary>
+            剂型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.Specific">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.OutValidDate">
+            <summary>
+            有效期至
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.FactoryName">
+            <summary>
+            生产厂家
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.InInventoryDate">
+            <summary>
+            入库日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.InventoryDate">
+            <summary>
+            存库时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.SupplyUnitName">
+            <summary>
+            供货单位
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.CurrentInventoryCount">
+            <summary>
+            当前库存
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.WarehouseZone">
+            <summary>
+            存放库区
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.Warehouse">
+            <summary>
+            存放仓库
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.drugsUnqualificationQuery.ApprovalProc">
+            <summary>
+            审核流程
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.FoodModel.Contact">
+            <summary>
+            联系方式-映射到品种信息的厂家简称字段
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.GenericCommonClass`1">
+            <summary>
+            List中泛型比较器，
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="K"></typeparam>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.InstrumentsModel.Contact">
+            <summary>
+            联系方式-映射到品种信息的厂家简称字段
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.DrugInfoId">
+            <summary>
+            药物编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.PurchasePrice">
+            <summary>
+            采购价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.ArrivalAmount">
+            <summary>
+            到货数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.ArrivalDateTime">
+            <summary>
+            收货日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.ReceiveAmount">
+            <summary>
+            收货数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.QualifiedAmount">
+            <summary>
+            验收合格数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.UnQualifiedAmount">
+            <summary>
+            验收不合格数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.StorageType">
+            <summary>
+            存储方式
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.CheckResult">
+            <summary>
+            验收结果
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.BatchNumber">
+            <summary>
+            生产批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.PruductDate">
+            <summary>
+            生产日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.OutValidDate">
+            <summary>
+            有效期至
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCheckingOrderDetailEntity.Decription">
+            <summary>
+            备注(注明不合格事项及处置措施)
+            </summary> 
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.DocumentNumber">
+            <summary>
+            单据编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.OrderStatus">
+            <summary>
+            单据状态
+            </summary>  
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.OperateTime">
+            <summary>
+            操作日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.OperateUserId">
+            <summary>
+            操作员ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.SecondCheckerId">
+            <summary>
+            第二验收人ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.SecondCheckMemo">
+            <summary>
+            第二验收人意见
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.SecondCheckerName">
+            <summary>
+            第二验收人姓名
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.Description">
+            <summary>
+            操作备注
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.PurchaseOrderId">
+            <summary>
+            采购单Id
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.PurchaseOrderDocumentNumber">
+            <summary>
+            采购单编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.ApprovaledTime">
+            <summary>
+            审批日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.ApprovalEmployeeName">
+            <summary>
+            审指人ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.ApprovalDecription">
+            <summary>
+            审核备注
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.SupplyUnitId">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.SupplyUnitName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.StoreId">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.RecordCount">
+            <summary>
+            纪录总数
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.RelatedOrderId">
+            <summary>
+            关联单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.CheckerSuggest">
+            <summary>
+            检验员意见(过程检验员/进货检验员)
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.CheckerUpdateTime">
+            <summary>
+            检验员意见更新时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.QualitySuggest">
+            <summary>
+            质量管理部意见
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.QualityUpdateTime">
+            <summary>
+            质量管理部意见更新时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.GeneralManagerSuggest">
+            <summary>
+            总经理意见
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.GeneralManagerUpdateTime">
+            <summary>
+            总经理意见更新时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.FinanceDepartmentSuggest">
+            <summary>
+            财务部意见
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.FinanceDepartmentUpdateTime">
+            <summary>
+            财务部意见更新时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.PaymentTime">
+            <summary>
+            付款日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.PaymentMethod">
+            <summary>
+            结算方式
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.PaymentedAmount">
+            <summary>
+            已付金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.PaymentingAmount">
+            <summary>
+            本次应付金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.PaymentAmount">
+            <summary>
+            本次付款金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.DealerMethodValue">
+            <summary>
+            经销方式(采购入库,采购退货)
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.ShippingTime">
+            <summary>
+            发货日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.ShippingAdress">
+            <summary>
+            发货地点
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.ShippingUnit">
+            <summary>
+            发货单位
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseCommonEntity.TransportUnit">
+            <summary>
+            运输单位
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.DrugInfoId">
+            <summary>
+            药物编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.PurchasePrice">
+            <summary>
+            采购价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.ArrivalAmount">
+            <summary>
+            到货数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.ArrivalDateTime">
+            <summary>
+            到货日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.BatchNumber">
+            <summary>
+            生产批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.PruductDate">
+            <summary>
+            生产日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.OutValidDate">
+            <summary>
+            有效期至
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.WarehouseZoneId">
+            <summary>
+            库区ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.WarehouseZoneName">
+            <summary>
+            库区名
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.DictionaryStorageType">
+            <summary>
+            储藏方式
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.Decription">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.sequence">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseInInventeryOrderDetailEntity.BussinessScopeCode">
+            <summary>
+            经营范围
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.DocumentNumber">
+            <summary>
+            单据编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.TotalMoney">
+            <summary>
+            采购总额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.AllReceiptedDate">
+            <summary>
+            发货日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.SupplyUnitAccountExecutiveId">
+            <summary>
+            供货商销售人员/业务员编号,可以根据供应商找到关联的业务员
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.CreateTime">
+            <summary>
+            采购单创建日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.CreateUserId">
+            <summary>
+            创建用户ID(采购员)
+            采购员姓名
+            采购员姓名
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.Description">
+            <summary>
+            采购单备注
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.ApprovaledTime">
+            <summary>
+            审批日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.ApprovalUserId">
+            <summary>
+            审指人ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.ApprovalDecription">
+            <summary>
+            审核备注
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.AmountApprovaledTime">
+            <summary>
+            审批日期 “采购记录”中某种药品的采购数量与到货数量不同，需经过审批修改采购数量（仅数量能修改）
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.AmountApprovalUserId">
+            <summary>
+            审指人ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.AmountApprovalDecription">
+            <summary>
+            审核备注
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.OrderStatusValue">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.SupplyUnitId">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.SupplyUnitName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.ReceiveUnit">
+            <summary>
+            收货单位
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.Address">
+            <summary>
+            收货地址
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.DirectMarketing">
+            <summary>
+             是否为直销订单
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrdeEntity.RecordCount">
+            <summary>
+            纪录总数
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.Amount">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.PurchasePrice">
+            <summary>
+            采购价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.AmountOfTax">
+            <summary>
+            税额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.DrugInfoId">
+            <summary>
+            药物编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.PurchaseOrderId">
+            <summary>
+            采购单Id
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.SupplyUnitId">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.SupplyUnitName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.SupplyUnitCode">
+            <summary>
+            供应商编码
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.SupplyUnitContactName">
+            <summary>
+            供应商联系人
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.SupplyContactTel">
+            <summary>
+            供应商联系电话
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderDetailEntity.SupplyBusinessScope">
+            <summary>
+            供应商生产经营范围
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseRCRecord.RecordCount">
+            <summary>
+            纪录总数
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseRecord.RecordCount">
+            <summary>
+            纪录总数
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.DrugInfoId">
+            <summary>
+            药物编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.PurchasePrice">
+            <summary>
+            采购价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.ReturnAmount">
+            <summary>
+            退货数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.ReturnReason">
+            <summary>
+            退货原因
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.IsReissue">
+            <summary>
+            是否补发
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.ReissueAmount">
+            <summary>
+            补发数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.PurchaseOrderReturnId">
+            <summary>
+            采购退货单ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.PurchaseReturnSourceValue">
+            <summary>
+            采购退货来源
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.RelatedOrderId">
+            <summary>
+            采购退货来源关联单号ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.ReturnHandledMethodValue">
+            <summary>
+            退货处理方式
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.BatchNumber">
+            <summary>
+            生产批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.PruductDate">
+            <summary>
+            生产日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.OutValidDate">
+            <summary>
+            有效期至
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseOrderReturnDetailEntity.Decription">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.Amount">
+            <summary>
+            采购数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.ActualAmount">
+            <summary>
+            收货数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.IsCompanyPurchase">
+            <summary>
+            确认为本公司采购
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.TransportMethod">
+            <summary>
+            运输条件
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.Origin">
+            <summary>
+            产地
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.IsTransportMethod">
+            <summary>
+            运输条件是否符合
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.TransportTemperature">
+            <summary>
+            运输温度
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.TemperatureStatus">
+            <summary>
+            温控状况
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.IsTransportTemperature">
+            <summary>
+            运输温度是否符合
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.DrugInfoId">
+            <summary>
+            药物编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.PurchasePrice">
+            <summary>
+            采购价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.PurchaseReceivingOrderId">
+            <summary>
+            采购收货单ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.Decription">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.CheckResult">
+            <summary>
+            收货结果:确认收货/拒收
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.ReceiveAmount">
+            <summary>
+            实收数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.RejectAmount">
+            <summary>
+            拒收数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.RejectReason">
+            <summary>
+            拒收原因
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.RejectTrace">
+            <summary>
+            拒收去向
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseReceivingOrderDetailEntity.sequence">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.DocumentNumber">
+            <summary>
+            单据编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.TotalMoney">
+            <summary>
+            采购总额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.CreateTime">
+            <summary>
+            采购单创建日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.CreateUserId">
+            <summary>
+            创建用户ID(采购员)
+            采购员姓名
+            采购员姓名
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.OrderStatusValue">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.SupplyUnitId">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.SupplyUnitName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.RecordCount">
+            <summary>
+            纪录总数
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.TaxReturnUserName">
+            <summary>
+            返税人
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.TaxReturnUserId">
+            <summary>
+            返税人ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.IsInvoiceArrival">
+            <summary>
+            发票是否已到
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.InvoiceMoney">
+            <summary>
+            发票金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.IsPayed">
+            <summary>
+            是否已打款
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.PayMoney">
+            <summary>
+            实际付款金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.Diff">
+            <summary>
+            票面与实付金额的差额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.Rate">
+            <summary>
+            返税点
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.PurchaseTaxReturn.ReturnTax">
+            <summary>
+            返税额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QualityFilesWarningModel.QualityFileWarningTypeValue">
+            <summary>
+            资质类别
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QualityFilesWarningModel.Name">
+            <summary>
+            企业或者客户或药品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QualityFilesWarningModel.WarningDate">
+            <summary>
+            预警期限
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QualityFilesWarningModel.WarningDateSetUpMonth">
+            <summary>
+            预警设置-单位：月
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.NearExpireDateQualifiedFiles">
+            <summary>
+            资质近效期提示
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.NearExpireDateQualifiedFiles.WarningDate">
+            <summary>
+            供应商资质预警期限*个月
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.NearExpireDateQualifiedFiles.PurchaseWarningDate">
+            <summary>
+            客户资质预警期限
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.NearExpireDateQualifiedFiles.DrugInfoQualityWarningDate">
+            <summary>
+            药品许可证有效期预警期限
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.NearExpireDateQualifiedFiles.DrugWarningDate">
+            <summary>
+            库存药品近效期预警期限
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.NearExpireDateQualifiedFiles.ImpDrugWarningDate">
+            <summary>
+            库存重点养护药品近效期预警期限
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.CommonSetupFile">
+            <summary>
+            总配置文件，用于存储与本地硬盘
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.CommonSetupFile.o">
+            <summary>
+            过期资质对象
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel">
+            <summary>
+            查询对象作为条件
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.IDNumber">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.OutDate">
+            <summary>
+            过期日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessPersonModel.PersonTypeValue">
+            <summary>
+            人员类型
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel">
+            <summary>
+            药物库存逻辑查询实体
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel.StandardCode">
+            <summary>
+            药物本位码
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel.DrugInfoName">
+            <summary>
+            药物名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel.BatchNumber">
+            <summary>
+            生产批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel.ArrivalDateTime">
+            <summary>
+            入库时间范围
+            ArrivalDateTime
+            </summary>  
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel.PruductDate">
+            <summary>
+            生产日期范围
+            ArrivalDateTime
+            </summary>  
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel.OutValidDate">
+            <summary>
+            过期日期范围
+            ArrivalDateTime
+            </summary>  
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryDrugInventoryRecordBusinessModel.WarehouseZonesName">
+             <summary>
+            存放库区名称
+             </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.BooleanExp">
+            <summary>
+            布尔值查询
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.DateTimeRange">
+            <summary>
+            时间范围
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.DateTimeRange.Min">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.DateTimeRange.Max">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.DecimalRange.Min">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.DecimalRange.Max">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.IntRange">
+            <summary>
+            整数范围
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.IntRange.Min">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryModelExtesion.IntRange.Max">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.QueryPharmacyLicenseModel">
+            <summary>
+            证书查询模型
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.SalesOrderDetailModel">
+            <summary>
+            销售单细节模型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderDetailModel.DrugInfoId">
+            <summary>
+            药品id
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderDetailModel.DrugInventoryRecordId">
+            <summary>
+            库存ID
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.SalePriceControlRulesModel">
+            <summary>
+            销售价格控制规则模型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalePriceControlRulesModel.RuleType">
+            <summary>
+            销售价格控制id
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalePriceControlRulesModel.RuleName">
+            <summary>
+            销售价格控制名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalePriceControlRulesModel.RuleRate">
+            <summary>
+            销售价格控制描述
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalePriceControlRulesModel.SalesOrderPrintRuleValue">
+            <summary>
+            销售单打印控制规则
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.EnumSalesOrderPrintRule">
+            <summary>
+            销售单打印控制规则枚举
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput">
+            <summary>
+            销售记录检索条件
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.SalesFromDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.SalesToDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.productName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.productCode">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.BatchNumber">
+            <summary>
+            生产批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.Seller">
+            <summary>
+            销售员
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.GoodsTypeValue">
+            <summary>
+            药品经营范围
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.PurchaseUnitID">
+            <summary>
+            采购商
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.FactoryName">
+            <summary>
+            药品生产商
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordInput.IsSpecial">
+            <summary>
+            是否管理药品0-全部、1-是、2-否
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput">
+            <summary>
+            销售记录输出结果
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.ProductGeneralName">
+            <summary>
+            通用名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.productCode">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.permitCode">
+            <summary>
+            国药准字号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.drugType">
+            <summary>
+            剂型
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.BatchNumber">
+            <summary>
+            批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.PruductDate">
+            <summary>
+            生产日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.OutValidDate">
+            <summary>
+            有效期至
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.FactoryName">
+            <summary>
+            生产厂商
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.PurchaseUnit">
+            <summary>
+            购货单位
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.SalesOrderCode">
+            <summary>
+            销售单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.Amount">
+            <summary>
+            销售数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.ActualUnitPrice">
+            <summary>
+            实际销售单价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.Price">
+            <summary>
+            销售金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.SalesDate">
+            <summary>
+            销售日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderRecordOutput.Saler">
+            <summary>
+            销售员
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderReturnModel.SalesOrderId">
+            <summary>
+            退单相应销售单ID号
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticInput">
+            <summary>
+            销售订单统计检索条件
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticInput.FromDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticInput.ToDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticInput.TimeUnit">
+            <summary>
+            时间单位(StatisticTimeUnit)
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticInput.StatisticObject">
+            <summary>
+            统计对象(StatisticObject枚举)
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticOutput">
+            <summary>
+            销售订单统计结果
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticOutput.StatisticObject">
+            <summary>
+            统计对象名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesOrderStatisticOutput.RealMoney">
+            <summary>
+            实际金额=销售金额-销退金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.ProductGeneralName">
+            <summary>
+            药品通用名
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.StandardCode">
+            <summary>
+            药品本位码
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.pinyin">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.CurrentInventoryCount">
+            <summary>
+            当前库存数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.CurrentCanSaleCount">
+            <summary>
+            当前可售数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.MinInventoryCount">
+            <summary>
+            库存下限
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.dtime">
+            <summary>
+            最近采购时间
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.wholeSales">
+            <summary>
+            销量排行
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.LackDrugModel.wareHouse">
+            <summary>
+            所在仓库
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.productCode">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.productName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.BatchNumber">
+            <summary>
+            生产批号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.UnitPrice">
+            <summary>
+            销售单价
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.Amount">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.Price">
+            <summary>
+            销售金额
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.SpecificationCode">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.PruductDate">
+            <summary>
+            生产日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.OutValidDate">
+            <summary>
+            有效期至
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.WarehouseName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.WarehouseCode">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.WarehouseZoneName">
+            <summary>
+            库区名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.WarehouseZoneCode">
+            <summary>
+            库区编码
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.OutInventoryMode.Explain">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput">
+            <summary>
+            销售订单统计检索条件
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.DeliveryFromDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.DeliveryToDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.ManifestNumber">
+            <summary>
+            货单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.OrderNumber">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.ReceivingCompasnyID">
+            <summary>
+            收货公司
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.ReceivingCompasnyName">
+            <summary>
+            收货公司名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.TransportCompany">
+            <summary>
+            运输公司
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.TransportMethodValue">
+            <summary>
+            运输方式值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.DeliveryMethodValue">
+            <summary>
+            配送方式值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.DeliveryStatusValue">
+            <summary>
+            配送状态值
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.VehicleInfo">
+            <summary>
+            车辆信息
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.DeliveryIndexInput.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.UserLogModel">
+            <summary>
+            用户操作日志MODEL
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.QueryBusinessUserLogModel">
+            <summary>
+            查询条件实体
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessUserLogModel.Keyword">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessUserLogModel.DTF">
+            <summary>
+            查询时间 起
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.QueryBusinessUserLogModel.DTT">
+            <summary>
+            查询时间止
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.WareHouseName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.WareHouseZoneName">
+            <summary>
+            库区名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.WareHouseZonePIndex">
+            <summary>
+            库区标签ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.Id">
+            <summary>
+            货位ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.PIndex">
+            <summary>
+            顺序号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.Name">
+            <summary>
+            货位名称
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.Capacity">
+            <summary>
+            容量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.RowCol">
+            <summary>
+            行列
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionModel.Memo">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WarehouseZonePositionOutInventoryModel.PIndex">
+            <summary>
+            顺序号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WarehouseZonePositionOutInventoryModel.WareHouseZonePIndex">
+            <summary>
+            库区标签ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WarehouseZonePositionOutInventoryModel.OutAmount">
+            <summary>
+            标签上显示的出库数量
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WarehouseZonePositionOutInventoryModel.OrderNumber">
+            <summary>
+            销售订单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionQueryModel.Id">
+            <summary>
+            货位ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionQueryModel.WareHouseId">
+            <summary>
+            仓库ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionQueryModel.WareHouseZoneId">
+            <summary>
+            仓库货架ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionQueryModel.Keyword">
+            <summary>
+            货位查询的关键字
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionQueryModel.whKeyword">
+            <summary>
+            按仓库查询货位的关键字
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.WareHouseZonePositionQueryModel.whzKeyword">
+            <summary>
+            按仓库货架查询货位的关键字
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.WarningData">
+            <summary>
+            报警数据
+            </summary>
+        </member>
+        <member name="T:BugsBox.Pharmacy.Business.Models.SalesCodeSearchInput">
+            <summary>
+            销退单检索条件
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesCodeSearchInput.FromDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesCodeSearchInput.ToDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesCodeSearchInput.Code">
+            <summary>
+            单号
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesCodeSearchInput.OperatorID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:BugsBox.Pharmacy.Business.Models.SalesCodeSearchInput.OperatorName">
+            <summary>
+            用户名字
+            </summary>
+        </member>
+    </members>
+</doc>

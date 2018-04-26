@@ -1,0 +1,2213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5560/PharmacyService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="QueryWarehouseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColdArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DWArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManagementCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MnemonicCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormalArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PHCArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RentCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RentYear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShadeArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TYZQArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="YHYSSArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YPFZArea" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryWarehouseModel" nillable="true" type="tns:QueryWarehouseModel" />
+  <xs:complexType name="ServiceExceptionDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HelpLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InnerException" nillable="true" type="tns:ServiceExceptionDetail" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceExceptionDetail" nillable="true" type="tns:ServiceExceptionDetail" />
+  <xs:complexType name="QueryWarehouseZoneModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryMeasurementUnitId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DictionaryStorageTypeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MnemonicCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="WarehouseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="WarehouseZoneTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="WarehouseZoneTypeValueTo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryWarehouseZoneModel" nillable="true" type="tns:QueryWarehouseZoneModel" />
+  <xs:complexType name="QueryWaringSetModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SetValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryWaringSetModel" nillable="true" type="tns:QueryWaringSetModel" />
+  <xs:complexType name="QueryOutInventoryDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualUnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualUnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanSaleNumFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CanSaleNumTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+      <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndexFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexTo" type="xs:int" />
+      <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OutAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesOrderDetailId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalesOrderDetailReturnId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalesOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalesOrderReturnId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalesOutInventoryID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseZoneCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseZoneName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryOutInventoryDetailModel" nillable="true" type="tns:QueryOutInventoryDetailModel" />
+  <xs:complexType name="QueryStoreModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Head" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryStoreModel" nillable="true" type="tns:QueryStoreModel" />
+  <xs:complexType name="QuerySupplyUnitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnnualFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApprovalStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ApprovalStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="AttorneyAattorneyFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="AttorneyAattorneyOutdateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AttorneyAattorneyOutdateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Bank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="BusinessLicenseeOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BusinessLicenseeOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowID" type="ser:guid" />
+      <xs:element minOccurs="0" name="GMPLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="GMPLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GMPLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GSPLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="GSPLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GSPLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstrumentsBusinessLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstrumentsBusinessLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstrumentsBusinessLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstrumentsProductionLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstrumentsProductionLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstrumentsProductionLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAttorneyAattorneyOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGMPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGSPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInstrumentsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInstrumentsProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMedicineBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMedicineProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsQualityAgreementOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastAnnualDteFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastAnnualDteTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MedicineBusinessLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="MedicineBusinessLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MedicineBusinessLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MedicineProductionLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="MedicineProductionLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MedicineProductionLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PinyinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProofFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="QualityAgreementFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="QualityAgreementOutdateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QualityAgreementOutdateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QualityCharger" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsAttorneyAattorneyOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsGMPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsGSPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsInstrumentsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsInstrumentsProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsLock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsMedicineBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsMedicineProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsQualityAgreementOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SalesAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SealFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="SingleTicketFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SupplyProductClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxRegistrationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxRegistrationFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitTypeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValidRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySupplyUnitModel" nillable="true" type="tns:QuerySupplyUnitModel" />
+  <xs:complexType name="QuerySupplyUnitSalesmanModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuthorizationDocId" type="ser:guid" />
+      <xs:element minOccurs="0" name="AuthorizedDistrictId" type="ser:guid" />
+      <xs:element minOccurs="0" name="BirthdayFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BirthdayTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BusinessScopes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCheckType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCheckUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="IDFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SupplyUnitId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySupplyUnitSalesmanModel" nillable="true" type="tns:QuerySupplyUnitSalesmanModel" />
+  <xs:complexType name="QueryTaxRateModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryTaxRateModel" nillable="true" type="tns:QueryTaxRateModel" />
+  <xs:complexType name="QueryUnitTypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryUnitTypeModel" nillable="true" type="tns:QueryUnitTypeModel" />
+  <xs:complexType name="QueryUploadRecordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IndexFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexTo" type="xs:int" />
+      <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryUploadRecordModel" nillable="true" type="tns:QueryUploadRecordModel" />
+  <xs:complexType name="QueryUserModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="EmployeeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Pwd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryUserModel" nillable="true" type="tns:QueryUserModel" />
+  <xs:complexType name="QueryUserLogModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryUserLogModel" nillable="true" type="tns:QueryUserLogModel" />
+  <xs:complexType name="QueryVehicleModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cubage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Driver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsOutCheck" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LicensePlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Other" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryIsOutCheck" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Rule" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleCategoryValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="VehicleCategoryValueTo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryVehicleModel" nillable="true" type="tns:QueryVehicleModel" />
+  <xs:complexType name="QueryRoleWithUserModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryRoleWithUserModel" nillable="true" type="tns:QueryRoleWithUserModel" />
+  <xs:complexType name="QuerySalesOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllDelivered" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="BalanceReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BalanceUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="CancelReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CancelUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderBalanceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderCancelCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderDirectReturnCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderDirectReturnUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderOutInventoryCheckCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderOutInventoryCheckUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderOutInventoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderOutInventoryUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderReturnCancelCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnCancelReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnCancelUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderReturnCheckCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnCheckUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderReturnCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnInInventoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnInInventoryUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderReturnReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OutInventoryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PickUpGoodTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PickUpGoodTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PickUpMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseUnitId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchaseUnitMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseUnitManID" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryAllDelivered" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SaleDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SaleDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesDrugTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesDrugTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TotalMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="payMentMethodID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySalesOrderModel" nillable="true" type="tns:QuerySalesOrderModel" />
+  <xs:complexType name="QuerySalesOrderDeliverDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SalesOrderDeliverRecordId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalesOrderDetailId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySalesOrderDeliverDetailModel" nillable="true" type="tns:QuerySalesOrderDeliverDetailModel" />
+  <xs:complexType name="QuerySalesOrderDeliverRecordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="HadDelivered" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OutInventoryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryHadDelivered" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SalesOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySalesOrderDeliverRecordModel" nillable="true" type="tns:QuerySalesOrderDeliverRecordModel" />
+  <xs:complexType name="QuerySalesOrderDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualUnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualUnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChangeAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ChangeAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+      <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndexFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexTo" type="xs:int" />
+      <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OutAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OutInventoryDetailID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReturnAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesOrderID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySalesOrderDetailModel" nillable="true" type="tns:QuerySalesOrderDetailModel" />
+  <xs:complexType name="QuerySalesOrderReturnModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsReissue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OrderReturnCancelCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnCancelReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnCancelUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderReturnCheckCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnCheckUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderReturnCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnInInventoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnInInventoryUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderReturnReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderReturnStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderReturnStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderReturnTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderReturnTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutInventoryID" type="ser:guid" />
+      <xs:element minOccurs="0" name="QualityMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityUpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QualityUpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QualityUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryIsReissue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SalesOrderID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SellerID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SellerMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SellerUpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SellerUpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TradeMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradeUpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeUpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySalesOrderReturnModel" nillable="true" type="tns:QuerySalesOrderReturnModel" />
+  <xs:complexType name="QuerySalesOrderReturnDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualUnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualUnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanInAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CanInAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CannotInAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CannotInAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+      <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndexFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexTo" type="xs:int" />
+      <xs:element minOccurs="0" name="IsReissue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderReturnID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutInventoryDetailID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryIsReissue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReissueAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReissueAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnHandledMethodMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnHandledMethodValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnHandledMethodValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnReasonMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnReasonValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnReasonValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesOrderDetailID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySalesOrderReturnDetailModel" nillable="true" type="tns:QuerySalesOrderReturnDetailModel" />
+  <xs:complexType name="QueryOutInventoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderOutInventoryCheckNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderOutInventoryCheckUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderOutInventoryUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OutInventoryDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutInventoryDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutInventoryNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutInventoryStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OutInventoryStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OutInventoryTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OutInventoryTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ReviewerId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalesOrderID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SalesOrderReturnID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TotalMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalTaxFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalTaxTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="storekeeperId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryOutInventoryModel" nillable="true" type="tns:QueryOutInventoryModel" />
+  <xs:complexType name="QuerySetSpeicalDrugRecordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DrugInventoryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="MaintainDuetimeFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="MaintainDuetimeTo" type="xs:int" />
+      <xs:element minOccurs="0" name="MaintainEmphasis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySetSpeicalDrugRecordModel" nillable="true" type="tns:QuerySetSpeicalDrugRecordModel" />
+  <xs:complexType name="QuerySpecialDrugCategoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuerySpecialDrugCategoryModel" nillable="true" type="tns:QuerySpecialDrugCategoryModel" />
+  <xs:complexType name="QueryPurchaseUnitDelivererModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthdayFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BirthdayTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseUnitId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseUnitDelivererModel" nillable="true" type="tns:QueryPurchaseUnitDelivererModel" />
+  <xs:complexType name="QueryPurchaseUnitTypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseUnitTypeModel" nillable="true" type="tns:QueryPurchaseUnitTypeModel" />
+  <xs:complexType name="QueryPurchasingPlanModel">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="QueryPurchasingPlanModel" nillable="true" type="tns:QueryPurchasingPlanModel" />
+  <xs:complexType name="QueryPurchasingPlanDetailModel">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="QueryPurchasingPlanDetailModel" nillable="true" type="tns:QueryPurchasingPlanDetailModel" />
+  <xs:complexType name="QueryRarewordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PinYin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Word" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryRarewordModel" nillable="true" type="tns:QueryRarewordModel" />
+  <xs:complexType name="QueryRetailMemberModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RetailCustomerTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailCustomerTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryRetailMemberModel" nillable="true" type="tns:QueryRetailMemberModel" />
+  <xs:complexType name="QueryRetailOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ChangeMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GotMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GotMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RealPayMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RealPayMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReceivableMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReceivableMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReduceMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReduceMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RetailCustomerTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailCustomerTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailPaymentMethodValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailPaymentMethodValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnRealReceiveMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReturnRealReceiveMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReturnReceivableMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReturnReceivableMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReturnReduceMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReturnReduceMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TotalMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalRefundFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalRefundTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryRetailOrderModel" nillable="true" type="tns:QueryRetailOrderModel" />
+  <xs:complexType name="QueryRetailOrderDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualDismantingUnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualDismantingUnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualUnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualUnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DiscountPriceFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DiscountPriceTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DiscountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DismantingAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DismantingAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DismantingUnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DismantingUnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DrugInventoryRecordID" type="ser:guid" />
+      <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndexFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexTo" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDiscount" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDismanting" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MeasurementUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryIsDiscount" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsDismanting" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RetailOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ReturnAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="SpecificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TotalMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UnitPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UnitPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryRetailOrderDetailModel" nillable="true" type="tns:QueryRetailOrderDetailModel" />
+  <xs:complexType name="QueryRoleModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryRoleModel" nillable="true" type="tns:QueryRoleModel" />
+  <xs:complexType name="QueryPurchaseManageCategoryDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseManageCategoryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseManageCategoryDetailModel" nillable="true" type="tns:QueryPurchaseManageCategoryDetailModel" />
+  <xs:complexType name="QueryPurchaseOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountApprovalDecription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmountApprovalUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="AmountOfTaxMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountOfTaxMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ApprovalDecription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DirectMarketing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InValidDaysFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="InValidDaysTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentForGoodsMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentForGoodsMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasedDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PurchasedDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryDirectMarketing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReleatedPurchaseOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ShippingMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SupplyUnitAccountExecutiveId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SupplyUnitId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TotalMoneyFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalMoneyTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseOrderModel" nillable="true" type="tns:QueryPurchaseOrderModel" />
+  <xs:complexType name="QueryPurchaseOrderDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountOfTaxFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountOfTaxTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchasePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseOrderDetailModel" nillable="true" type="tns:QueryPurchaseOrderDetailModel" />
+  <xs:complexType name="QueryPurchaseOrderReturnModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckerSuggest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckerUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinanceDepartmentSuggest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinanceDepartmentUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="GeneralManagerSuggest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeneralManagerUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QualitySuggest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseOrderReturnModel" nillable="true" type="tns:QueryPurchaseOrderReturnModel" />
+  <xs:complexType name="QueryPurchaseOrderReturnDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsReissue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PurchaseOrderReturnId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchasePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaseReturnSourceValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseReturnSourceValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="QueryIsReissue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReissueAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReissueAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ReturnAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnHandledMethodValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnHandledMethodValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseOrderReturnDetailModel" nillable="true" type="tns:QueryPurchaseOrderReturnDetailModel" />
+  <xs:complexType name="QueryPurchaseReceivingOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ShippingAdress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShippingTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShippingUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TransportUnit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseReceivingOrderModel" nillable="true" type="tns:QueryPurchaseReceivingOrderModel" />
+  <xs:complexType name="QueryPurchaseReceivingOrderDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ActualAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="AmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckResultFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckResultTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsCompanyPurchase" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTransportMethod" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTransportTemperature" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PurchasePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaseReceivingOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryIsCompanyPurchase" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsTransportMethod" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsTransportTemperature" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReceiveAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ReceiveAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RejectAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RejectAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RejectReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RejectTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TemperatureStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportTemperature" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseReceivingOrderDetailModel" nillable="true" type="tns:QueryPurchaseReceivingOrderDetailModel" />
+  <xs:complexType name="QueryPurchaseUnitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnnualFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApprovalStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ApprovalStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="BusinessLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="BusinessLicenseeOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BusinessLicenseeOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistrictId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowID" type="ser:guid" />
+      <xs:element minOccurs="0" name="GMPLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="GMPLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GMPLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GSPLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="GSPLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GSPLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstrumentsBusinessLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstrumentsBusinessLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstrumentsBusinessLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstrumentsProductionLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstrumentsProductionLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstrumentsProductionLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGMPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGSPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInstrumentsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInstrumentsProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMedicineBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMedicineProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastAnnualDteFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastAnnualDteTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MedicineBusinessLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="MedicineBusinessLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MedicineBusinessLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MedicineProductionLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="MedicineProductionLicenseOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MedicineProductionLicenseOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PinyinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsGMPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsGSPLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsInstrumentsBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsInstrumentsProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsLock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsMedicineBusinessLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsMedicineProductionLicenseOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReceiveAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TaxRegistrationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxRegistrationFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitTypeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValidRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseUnitModel" nillable="true" type="tns:QueryPurchaseUnitModel" />
+  <xs:complexType name="QueryPurchaseUnitBuyerModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthdayFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BirthdayTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCheckType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCheckUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="IDFile" type="ser:guid" />
+      <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PurchaseLimitTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseLimitTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseUnitId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseUnitBuyerModel" nillable="true" type="tns:QueryPurchaseUnitBuyerModel" />
+  <xs:complexType name="QueryModuleModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndexFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuleCatetoryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryModuleModel" nillable="true" type="tns:QueryModuleModel" />
+  <xs:complexType name="QueryModuleCatetoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndexFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryModuleCatetoryModel" nillable="true" type="tns:QueryModuleCatetoryModel" />
+  <xs:complexType name="QueryModuleWithRoleModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ModuleId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryModuleWithRoleModel" nillable="true" type="tns:QueryModuleWithRoleModel" />
+  <xs:complexType name="QueryPharmacyFileModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPharmacyFileModel" nillable="true" type="tns:QueryPharmacyFileModel" />
+  <xs:complexType name="QueryPurchaseAgreementModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseAgreementModel" nillable="true" type="tns:QueryPurchaseAgreementModel" />
+  <xs:complexType name="QueryPurchaseCheckingOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseCheckingOrderModel" nillable="true" type="tns:QueryPurchaseCheckingOrderModel" />
+  <xs:complexType name="QueryPurchaseCheckingOrderDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArrivalAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ArrivalAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ArrivalDateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ArrivalDateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckResultFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckResultTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PurchaseCheckingOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchasePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QualifiedAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="QualifiedAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseCheckingOrderDetailModel" nillable="true" type="tns:QueryPurchaseCheckingOrderDetailModel" />
+  <xs:complexType name="QueryPurchaseInInventeryOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseInInventeryOrderModel" nillable="true" type="tns:QueryPurchaseInInventeryOrderModel" />
+  <xs:complexType name="QueryPurchaseInInventeryOrderDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArrivalAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ArrivalAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ArrivalDateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ArrivalDateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PurchaseInInventeryOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchasePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="WarehouseZoneId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseInInventeryOrderDetailModel" nillable="true" type="tns:QueryPurchaseInInventeryOrderDetailModel" />
+  <xs:complexType name="QueryPurchaseManageCategoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseManageCategoryModel" nillable="true" type="tns:QueryPurchaseManageCategoryModel" />
+  <xs:complexType name="QueryGSPLicenseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessTypeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssuanceDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QualityHeader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WarehouseAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryGSPLicenseModel" nillable="true" type="tns:QueryGSPLicenseModel" />
+  <xs:complexType name="QueryGMPLicenseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CertificationScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IssuanceDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryGMPLicenseModel" nillable="true" type="tns:QueryGMPLicenseModel" />
+  <xs:complexType name="QueryBusinessLicenseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateNature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EstablishmentDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EstablishmentDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InspectionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssuanceDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaidinCapitalFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PaidinCapitalTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegisteredCapitalFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RegisteredCapitalTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryBusinessLicenseModel" nillable="true" type="tns:QueryBusinessLicenseModel" />
+  <xs:complexType name="QueryMedicineProductionLicenseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorporateNature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssuanceDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryMedicineProductionLicenseModel" nillable="true" type="tns:QueryMedicineProductionLicenseModel" />
+  <xs:complexType name="QueryMedicineBusinessLicenseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssuanceDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QualityHeader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WarehouseAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryMedicineBusinessLicenseModel" nillable="true" type="tns:QueryMedicineBusinessLicenseModel" />
+  <xs:complexType name="QueryInstrumentsBusinessLicenseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssuanceDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="QualityHeader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WarehouseAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryInstrumentsBusinessLicenseModel" nillable="true" type="tns:QueryInstrumentsBusinessLicenseModel" />
+  <xs:complexType name="QueryInstrumentsProductionLicenseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssuanceDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssuanceOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LegalPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PharmacyFileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductScope" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryInstrumentsProductionLicenseModel" nillable="true" type="tns:QueryInstrumentsProductionLicenseModel" />
+  <xs:complexType name="QueryMedicalCategoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryMedicalCategoryModel" nillable="true" type="tns:QueryMedicalCategoryModel" />
+  <xs:complexType name="QueryMedicalCategoryDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MedicalCategoryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryMedicalCategoryDetailModel" nillable="true" type="tns:QueryMedicalCategoryDetailModel" />
+  <xs:complexType name="QueryDictionaryUserDefinedTypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDictionaryUserDefinedTypeModel" nillable="true" type="tns:QueryDictionaryUserDefinedTypeModel" />
+  <xs:complexType name="QueryAuthorizationDocModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistrictIdFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictIdTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DocFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QueryIsOutDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryAuthorizationDocModel" nillable="true" type="tns:QueryAuthorizationDocModel" />
+  <xs:complexType name="QueryDrugMaintainSetModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DayFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DayTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DrugMaintainTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DrugMaintainTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemindBeforeDayFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RemindBeforeDayTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDateTo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugMaintainSetModel" nillable="true" type="tns:QueryDrugMaintainSetModel" />
+  <xs:complexType name="QueryEmployeeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DepartmentId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Duty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Education" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="EmployStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PharmacistsQualificationValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PharmacistsQualificationValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PharmacistsTitleTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PharmacistsTitleTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pinyin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Specility" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryEmployeeModel" nillable="true" type="tns:QueryEmployeeModel" />
+  <xs:complexType name="QueryGMSPLicenseBusinessScopeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessScopeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="GSPLicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="LicenseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryGMSPLicenseBusinessScopeModel" nillable="true" type="tns:QueryGMSPLicenseBusinessScopeModel" />
+  <xs:complexType name="QueryInventoryRecordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DismantingAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DismantingAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DrugInfoCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="MaxInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="MinInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="MinInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OnRetailCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OnRetailCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OnSalesOrderCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OnSalesOrderCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailDismantingAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailDismantingAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryInventoryRecordModel" nillable="true" type="tns:QueryInventoryRecordModel" />
+  <xs:complexType name="QueryManufacturerModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShortPinYin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Tel" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryManufacturerModel" nillable="true" type="tns:QueryManufacturerModel" />
+  <xs:complexType name="QueryPackagingMaterialModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPackagingMaterialModel" nillable="true" type="tns:QueryPackagingMaterialModel" />
+  <xs:complexType name="QueryPackagingUnitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPackagingUnitModel" nillable="true" type="tns:QueryPackagingUnitModel" />
+  <xs:complexType name="QueryPaymentMethodModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPaymentMethodModel" nillable="true" type="tns:QueryPaymentMethodModel" />
+  <xs:complexType name="QueryDictionaryDosageModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDictionaryDosageModel" nillable="true" type="tns:QueryDictionaryDosageModel" />
+  <xs:complexType name="QueryDrugInfoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApprovalDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApprovalStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ApprovalStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessScopeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryMeasurementUnitCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryPiecemealUnitCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionarySpecificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionaryUserDefinedTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugCategoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugClinicalCategoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugStorageTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FactoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FactoryNameAbbreviation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowID" type="ser:guid" />
+      <xs:element minOccurs="0" name="GoodsTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="GoodsTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="IsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsImport" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMainMaintenance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMedicalInsurance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPrescription" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSpecialDrugCategory" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LicensePermissionNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LimitedLowPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LimitedLowPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LimitedUpPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LimitedUpPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LockRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LowSalePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LowSalePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaxInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="MedicalCategoryDetailCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="MinInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="NationalSalePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NationalSalePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Package" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PackageAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PerformanceStandards" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermitDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PermitDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PermitLicenseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermitOutDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PermitOutDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PiecemealNumberFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="PiecemealNumberTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PiecemealSpecification" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProductEnglishName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductGeneralName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductOtherName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseManageCategoryDetailCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchasePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsApproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsImport" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsLock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsMainMaintenance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsMedicalInsurance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsPrescription" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryIsSpecialDrugCategory" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RetailPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RetailPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalePriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SpecialDrugCategoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StandardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagPriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TagPriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValidPeriodFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidPeriodTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WholeSalePriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WholeSalePriceTo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugInfoModel" nillable="true" type="tns:QueryDrugInfoModel" />
+  <xs:complexType name="QueryDrugInventoryRecordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanSaleNumFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CanSaleNumTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DismantingAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DismantingAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DurgInventoryTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DurgInventoryTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="InInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="InInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="IsOutValidDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OnRetailCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OnRetailCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OnSalesOrderCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OnSalesOrderCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PurchaseInInventeryOrderDetailId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchasePricceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchasePricceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QueryIsOutValidDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RetailCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailDismantingAmountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RetailDismantingAmountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="SalesCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WarehouseZoneId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugInventoryRecordModel" nillable="true" type="tns:QueryDrugInventoryRecordModel" />
+  <xs:complexType name="QueryDrugMaintainRecordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillDocumentNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompleteStateFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CompleteStateTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DrugMaintainTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DrugMaintainTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ExpirationDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpirationDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugMaintainRecordModel" nillable="true" type="tns:QueryDrugMaintainRecordModel" />
+  <xs:complexType name="QueryDrugMaintainRecordDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillDocumentNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckqualifiedNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentInventoryCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentInventoryCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DictionaryDosageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DictionarySpecificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInventoryRecordId" type="ser:guid" />
+      <xs:element minOccurs="0" name="LicensePermissionNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaintainCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="MaintainCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutValidDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutValidDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PriceFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PruductDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PruductDateTo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugMaintainRecordDetailModel" nillable="true" type="tns:QueryDrugMaintainRecordDetailModel" />
+  <xs:complexType name="QueryDictionaryMeasurementUnitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDictionaryMeasurementUnitModel" nillable="true" type="tns:QueryDictionaryMeasurementUnitModel" />
+  <xs:complexType name="QueryDictionaryPiecemealUnitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDictionaryPiecemealUnitModel" nillable="true" type="tns:QueryDictionaryPiecemealUnitModel" />
+  <xs:complexType name="QueryDictionarySpecificationModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDictionarySpecificationModel" nillable="true" type="tns:QueryDictionarySpecificationModel" />
+  <xs:complexType name="QueryDictionaryStorageTypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDictionaryStorageTypeModel" nillable="true" type="tns:QueryDictionaryStorageTypeModel" />
+  <xs:complexType name="QueryBusinessTypeManageCategoryDetailModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessTypeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PurchaseManageCategoryDetailId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryBusinessTypeManageCategoryDetailModel" nillable="true" type="tns:QueryBusinessTypeManageCategoryDetailModel" />
+  <xs:complexType name="QueryGoodsAdditionalPropertyModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CareFunction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInfoId" type="ser:guid" />
+      <xs:element minOccurs="0" name="FactoryAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FactoryAddressEnglish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FactoryNameEnglish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HealthPermit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LandmarkIngredient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicensePermissionDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LicensePermissionDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MainIngredient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotSuitablePeople" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductAddressEnglish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCountryEnglish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PutOnRecord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PutOnRecordDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PutOnRecordDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RegCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegProxyCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuitablePeople" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsageAndDosage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryGoodsAdditionalPropertyModel" nillable="true" type="tns:QueryGoodsAdditionalPropertyModel" />
+  <xs:complexType name="QueryPurchaseCashOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalDecription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApprovalUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DealerMethodValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DealerMethodValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OperateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentAmountFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentAmountTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentMethodId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PaymentTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentedAmountFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentedAmountTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentingAmountFrom" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PaymentingAmountTo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderDocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelatedOrderId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedOrderTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryPurchaseCashOrderModel" nillable="true" type="tns:QueryPurchaseCashOrderModel" />
+  <xs:complexType name="QueryDeliveryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcceptedNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AcceptedOperatorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="AcceptedTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AcceptedTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CanceledNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanceledOperatorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CanceledTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CanceledTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeliveryAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryMethodValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryMethodValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryStatusValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryStatusValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DrugsCountFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="DrugsCountTo" type="xs:int" />
+      <xs:element minOccurs="0" name="IsOver" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManifestNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OutInventoryID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OwnVehicleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Principal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrincipalPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryIsOver" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReceivingCompasnyID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ReservationNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationOperatorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ReservationTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReservationTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReturnNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnOperatorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ReturnTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReturnTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShippingAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignedNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignedOperatorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SignedTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SignedTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TransportCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportMethodValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="TransportMethodValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="VehicleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="VehicleInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="outedNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="outedOperatorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="outedTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="outedTimeTo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDeliveryModel" nillable="true" type="tns:QueryDeliveryModel" />
+  <xs:complexType name="QueryDepartmentModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepartmentId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDepartmentModel" nillable="true" type="tns:QueryDepartmentModel" />
+  <xs:complexType name="QueryDistrictModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDistrictModel" nillable="true" type="tns:QueryDistrictModel" />
+  <xs:complexType name="QueryDoubtDrugModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugInventoryRecordId" type="ser:guid" />
+      <xs:element minOccurs="0" name="HandleDecription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Handled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JsonDrugInventoryRecord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryHandled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDoubtDrugModel" nillable="true" type="tns:QueryDoubtDrugModel" />
+  <xs:complexType name="QueryDrugApprovalNumberModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugApprovalNumberModel" nillable="true" type="tns:QueryDrugApprovalNumberModel" />
+  <xs:complexType name="QueryDrugCategoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugCategoryModel" nillable="true" type="tns:QueryDrugCategoryModel" />
+  <xs:complexType name="QueryDrugClinicalCategoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryDrugClinicalCategoryModel" nillable="true" type="tns:QueryDrugClinicalCategoryModel" />
+  <xs:complexType name="QueryApprovalFlowModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalFlowTypeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ChangeNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="FlowId" type="ser:guid" />
+      <xs:element minOccurs="0" name="NextNodeID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StatusFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusTo" type="xs:int" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SubFlowIdFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="SubFlowIdTo" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryApprovalFlowModel" nillable="true" type="tns:QueryApprovalFlowModel" />
+  <xs:complexType name="QueryApprovalFlowNodeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalFlowTypeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderTo" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryApprovalFlowNodeModel" nillable="true" type="tns:QueryApprovalFlowNodeModel" />
+  <xs:complexType name="QueryApprovalFlowTypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ApprovalTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryApprovalFlowTypeModel" nillable="true" type="tns:QueryApprovalFlowTypeModel" />
+  <xs:complexType name="QueryApprovalFlowRecordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalFlowId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApprovalFlowNodeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApproveTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApproveTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApproveUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="FlowId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SubFlowIdFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="SubFlowIdTo" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryApprovalFlowRecordModel" nillable="true" type="tns:QueryApprovalFlowRecordModel" />
+  <xs:complexType name="QueryBillDocumentCodeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillDocumentTypeValueFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="BillDocumentTypeValueTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Canceled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Locked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryCanceled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryLocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QueryUsed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StoreId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdateTimeFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateTimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateUserId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Used" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UsedId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryBillDocumentCodeModel" nillable="true" type="tns:QueryBillDocumentCodeModel" />
+  <xs:complexType name="QueryBusinessScopeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessScopeCategoryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryBusinessScopeModel" nillable="true" type="tns:QueryBusinessScopeModel" />
+  <xs:complexType name="QueryBusinessScopeCategoryModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryBusinessScopeCategoryModel" nillable="true" type="tns:QueryBusinessScopeCategoryModel" />
+  <xs:complexType name="QueryBusinessTypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QueryEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryBusinessTypeModel" nillable="true" type="tns:QueryBusinessTypeModel" />
+</xs:schema>

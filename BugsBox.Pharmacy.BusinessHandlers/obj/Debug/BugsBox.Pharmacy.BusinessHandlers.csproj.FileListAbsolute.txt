@@ -1,0 +1,14 @@
+D:\work\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.XML
+D:\work\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.dll
+D:\work\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.pdb
+D:\work\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.dll
+D:\work\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.pdb
+D:\DQ\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.XML
+D:\DQ\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.dll
+D:\DQ\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.pdb
+D:\DQ\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.csprojResolveAssemblyReference.cache
+D:\DQ\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.csproj.CoreCompileInputs.cache
+D:\DQ\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.csproj.CopyComplete
+D:\DQ\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.dll
+D:\DQ\phamacy2016\BugsBox.Pharmacy.BusinessHandlers\obj\Debug\BugsBox.Pharmacy.BusinessHandlers.pdb

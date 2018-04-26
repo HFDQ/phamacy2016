@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugsBox.Windows.Forms</name>
+    </assembly>
+    <members>
+        <member name="P:BugsBox.Windows.Forms.BugsBoxDataGridView.MsgText">
+            <summary>
+            当列表内容为空时，显示的文字信息内容
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Forms.BugsBoxDataGridView.IsShowMsgText">
+            <summary>
+            是否在没有数据的时候，DataGridView中显示提示信息
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.BugsBoxDataGridView.LoadingData">
+            <summary>
+            显示加载数据提示
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.BugsBoxDataGridView.LoadFinished">
+            <summary>
+            数据加载完后调用，如果没有任何数据，将显示无数据的提示信息
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.BugsBoxDataGridView.BeforeDataLoad">
+            <summary>
+            控件首次加载，未选择查询条件时，应当输出的提示信息
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.BugsBoxDataGridView.PropertiesProSet">
+            <summary>
+            预设属性
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.BugsBoxDataGridView.GetRoundedRectanglePath(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            画圆角边框
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="radius"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BugsBox.Windows.Forms.FormExtend">
+            <summary>
+            进行焦点切换的form类
+            Enter键跳转到下一个控件；Ctrl+B 回退到上一个控件
+            控件切换顺序由TabIndex决定
+            </summary>
+        </member>
+        <member name="F:BugsBox.Windows.Forms.FormExtend.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.FormExtend.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BugsBox.Windows.Forms.FormExtend.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Controls.HoverBalloon">
+            <summary>
+            A sample class to manipulate ballon tooltips.
+            Windows XP balloon-tips if used properly can 
+            be very helpful.
+            This class creates a balloon tooltip.
+            This becomes useful for showing important information 
+            quickly to the user.
+            For example in a data-entry form full of 
+            controls the most important
+            and used control is the Order Placement button.
+            Guide the user by using this hover balloon on it.
+            This helps in a shorter learning cycle of the 
+            application.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.HoverBalloon.MaximumTextWidth">
+            <summary>
+            Sets the maximum text width of the tooltip text.
+            At that length the tooltip will start wrapping text 
+            over to the next line. 
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.HoverBalloon.Title">
+            <summary>
+            Sets up the title of the tooltip.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.HoverBalloon.TitleIcon">
+            <summary>
+            Sets the icon for the tooltip.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Controls.EditBalloon">
+            <summary>
+            A sample class to manipulate ballon tooltips.
+            Windows XP balloon-tips if used properly can 
+            be very helpful.
+            This class creates a balloon tooltip in the form of a message.
+            This becomes useful for showing important information 
+            quickly to the user.
+            Ever so often we need to avoid certain invalid characters in 
+            input textboxes. Though we do a good job of filtering the characters,
+            we dont necessarily do a good job of informing the user.
+            This class helps immensely under such scenarios.
+            This also helps in a shorter learning cycle of the 
+            application.
+            NOTE: The difference between this and other balloon classes is 
+            that this is made specifically for the edit control and 
+            displays the balloon at the caret position within the textbox.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Controls.EditBalloon.Show">
+            <summary>
+            Show a balloon tooltip for edit control.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.EditBalloon.Title">
+            <summary>
+            Sets or gets the Title.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.EditBalloon.TitleIcon">
+            <summary>
+            Sets or gets the display icon.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.EditBalloon.Text">
+            <summary>
+            Sets or gets the display text.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.EditBalloon.Parent">
+            <summary>
+            Sets or gets the parent.
+            </summary>
+        </member>
+        <member name="F:BugsBox.Windows.Controls.BalloonPosition.Absolute">
+            <summary>
+            Positions using the exact co-ordinates.
+            So if the co-ordinates are outside the screen,
+            tip wont be shown.
+            </summary>
+        </member>
+        <member name="F:BugsBox.Windows.Controls.BalloonPosition.Track">
+            <summary>
+            Positions using the co-ordinates as a reference.
+            Regardless of the co-ordinates, the tip will 
+            always be shown on the screen.
+            </summary>
+        </member>
+        <member name="T:BugsBox.Windows.Controls.MessageBalloon">
+            <summary>
+            A sample class to manipulate ballon tooltips.
+            Windows XP balloon-tips if used properly can 
+            be very helpful.
+            This class creates a balloon tooltip in the form of a message.
+            This becomes useful for showing important information 
+            quickly to the user.
+            For example in a data-entry form full of 
+            controls if an error is made somewhere in entering data
+            use this to point the bad control.
+            This helps in a shorter learning cycle of the 
+            application.
+            NOTE: the difference between this and HoverBalloon class
+            is that this can be shown on demand.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Controls.MessageBalloon.#ctor">
+            <summary>
+            Creates a new instance of the MessageBalloon.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Controls.MessageBalloon.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Creates a new instance of the MessageBalloon.
+            </summary>
+            <param name="parent">Set the parent control which will display.</param>
+        </member>
+        <member name="M:BugsBox.Windows.Controls.MessageBalloon.Display(System.Int32)">
+            <summary>
+            Shows or hides the tool.
+            </summary>
+            <param name="show">0 to hide, -1 to show</param>
+        </member>
+        <member name="M:BugsBox.Windows.Controls.MessageBalloon.Hide">
+            <summary>
+            Hides the message if visible.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.MessageBalloon.Title">
+            <summary>
+            Sets or gets the Title.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.MessageBalloon.TitleIcon">
+            <summary>
+            Sets or gets the display icon.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.MessageBalloon.Text">
+            <summary>
+            Sets or get the display text.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.MessageBalloon.Parent">
+            <summary>
+            Sets or gets the parent.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.MessageBalloon.Align">
+            <summary>
+            Sets or gets the placement of the balloon.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.MessageBalloon.UseAbsolutePositioning">
+            <summary>
+            Sets or gets the positioning of the balloon.
+            TRUE : Positions using the exact co-ordinates,
+            if the co-ordinates are outside the screen, tip wont be shown.
+            FALSE : Positions using the co-ordinates as a reference.
+            Regardless of the co-ordinates, the tip will 
+            always be shown on the screen.
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.MessageBalloon.CenterStem">
+            <summary>
+            Sets or gets the stem position 
+            in the tip. 
+            TRUE : The stem of the tip is set to center.
+            An attempt is made to show the tip with the stem
+            centered, if that would make the tip to be 
+            hidden partly, stem is not centered.
+            FALSE: Stem is not centered.
+            </summary>
+        </member>
+        <member name="M:BugsBox.Windows.Controls.MessageBalloon.Show">
+            <summary>
+            Show the Message in a balloon tooltip.
+            </summary>        
+        </member>
+        <member name="P:BugsBox.Windows.Controls.ValidatorItemInfo.DataName">
+            <summary>
+            数据项名称
+            </summary>   
+        </member>
+        <member name="P:BugsBox.Windows.Controls.ValidatorItemInfo.DataType">
+            <summary>
+            数据类型
+            </summary>  
+        </member>
+        <member name="P:BugsBox.Windows.Controls.ValidatorItemInfo.AllowNullOrEmpty">
+            <summary>
+            是否允许为空OrNull
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.ValidatorItemInfo.MinLength">
+            <summary>
+            最小长度
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.ValidatorItemInfo.MaxLength">
+            <summary>
+            最大长度
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.ValidatorItemInfo.Regex">
+            <summary>
+            正则表达式
+            </summary>
+        </member>
+        <member name="P:BugsBox.Windows.Controls.ValidatorItemInfo.DataDescription">
+            <summary>
+            数据描述
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.ControlActionable.#ctor(System.Windows.Forms.Control,System.Action{System.Windows.Forms.Control},System.Action{System.Windows.Forms.Control})">
+            <summary>
+             
+            </summary>
+            <param name="control"></param>
+            <param name="preaction"></param>
+            <param name="endaction"></param>
+        </member>
+    </members>
+</doc>

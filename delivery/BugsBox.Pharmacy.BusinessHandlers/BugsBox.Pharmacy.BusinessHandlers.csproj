@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9276894-223E-400A-8955-F06979781F55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugsBox.Pharmacy</RootNamespace>
+    <AssemblyName>BugsBox.Pharmacy.BusinessHandlers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.XML</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\_output\_temp\BugsBox.Pharmacy.BusinessHandlers\BugsBox.Pharmacy.BusinessHandlers.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugsBox.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\BugsBox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter, Version=2.3.3.0, Culture=neutral, PublicKeyToken=c7694541b0ac80e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedAssemblyInfo.log4net.cs">
+      <Link>Properties\SharedAssemblyInfo.log4net.cs</Link>
+    </Compile>
+    <Compile Include="BusinessHandlers\ApprovalFlowBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\ApprovalFlowNodeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\ApprovalFlowRecordBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\ApprovalFlowTypeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\BaseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\BillDocumentCodeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\BusinessHandlerFactory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusinessHandlerFactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessHandlers\BusinessHandlers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusinessHandlers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessHandlers\BusinessLicenseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\BusinessScopeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\BusinessScopeCategoryBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\BusinessTypeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DeliveryBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DepartmentBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DirectSalesOrderBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DocumentRefuseBussinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DoubtDrugBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugDosageBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugInventoryRecordBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugMaintainRecordBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugMaintainRecordDetailBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugMeasurementUnitBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugPiecemealUnitBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\drugsBreakBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugsInventoryMoveBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugSpecificationBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugStorageTypeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugsUndeterminateHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugsUnqualificationDestroyHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugsUnqualificationHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugTypeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugUserDefinedTypeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DrugMaintainSetBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\EduDetailslHandler.cs" />
+    <Compile Include="BusinessHandlers\EduDocumentHandler.cs" />
+    <Compile Include="BusinessHandlers\EmployeeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\GMPLicenseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\GMSPLicenseBusinessScopeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\GSPLicenseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\HealthCheckDetailHandler.cs" />
+    <Compile Include="BusinessHandlers\HealthCheckDocumentHandler.cs" />
+    <Compile Include="BusinessHandlers\HealthLicenseHandler.cs" />
+    <Compile Include="BusinessHandlers\IndustoryProductCertificateBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\InstrumentsBusinessLicenseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\InstrumentsProductionLicenseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\MedicalCategoryBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\MedicalCategoryDetailBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\MedicineBusinessLicenseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\MedicineProductionLicenseBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\ModuleBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\ModuleCatetoryBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\ModuleWithRoleBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\OutInventoryBusinessHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessHandlers\PurchaseInInventeryOrderBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchaseManageCategoryBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchaseManageCategoryDetailBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchaseOrderBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchaseOrderDetailBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchaseUnitBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchaseUnitBuyerBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchaseUnitTypeBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\PurchasingPlanBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\RetailOrderBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\RetailOrderDetailBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\RoleBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\RoleWithUserBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SetSpeicalDrugRecordBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SupplyUnitBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SupplyUnitSalesmanBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\UserBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\UserLogBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\VehicleBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SalesOrderBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SalesOrderDetailBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SalesOutInventoryBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\InventoryRecordBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\OrganizationCodeLicenseHandler.cs" />
+    <Compile Include="BusinessHandlers\WareHouseZonePostionBusinessHandler.cs" />
+    <Compile Include="CommonEqualityComparer.cs" />
+    <Compile Include="DistinctExtensions.cs" />
+    <Compile Include="Expressions\IQueryBuilder.cs" />
+    <Compile Include="Expressions\PredicateBuilder.cs" />
+    <Compile Include="Notification\DefaultNotificationHandler.cs" />
+    <Compile Include="Notification\INotificationHandler.cs" />
+    <Compile Include="Notification\NotificationHandlerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HandlerWindsorConfigurator.cs" />
+    <Compile Include="SearialiserHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugsBox.Application.Core\BugsBox.Application.Core.csproj">
+      <Project>{672ACEAF-FED6-4DF4-BF3C-72418251657B}</Project>
+      <Name>BugsBox.Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Common.Security\BugsBox.Common.Security.csproj">
+      <Project>{0E6E4A9E-D0D4-4656-A9A7-63A85F46C0A1}</Project>
+      <Name>BugsBox.Common.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Business.Models\BugsBox.Pharmacy.Business.Models.csproj">
+      <Project>{57236CF6-D8BD-4ECF-B622-79ABC8FDAF29}</Project>
+      <Name>BugsBox.Pharmacy.Business.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.csproj">
+      <Project>{28C37AC0-FEAC-45C7-94C2-B0515A3A8F9F}</Project>
+      <Name>BugsBox.Pharmacy.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugsBox.Pharmacy.Repository\BugsBox.Pharmacy.Repository.csproj">
+      <Project>{7C681096-719C-4685-AC91-0E50EA97B5F1}</Project>
+      <Name>BugsBox.Pharmacy.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessHandlers\BusinessHandlers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BusinessHandlers.cs</LastGenOutput>
+    </None>
+    <None Include="BusinessHandlers\BusinessHandlerFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BusinessHandlerFactory.cs</LastGenOutput>
+    </None>
+    <Compile Include="BusinessHandlers\DrugInfoBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SalesOutInventoryDetailBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SalesOrderReturnBusinessHandler.cs" />
+    <Compile Include="BusinessHandlers\SalesOrderReturnDetailBusinessHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

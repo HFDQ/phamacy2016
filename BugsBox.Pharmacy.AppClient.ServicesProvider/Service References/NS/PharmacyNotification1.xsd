@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.bugsbox.bugsbox/PharmacyNotification" elementFormDefault="qualified" targetNamespace="http://www.bugsbox.bugsbox/PharmacyNotification" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5570/PharmacyNotification?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Models" />
+  <xs:import schemaLocation="http://localhost:5570/PharmacyNotification?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Business.Models" />
+  <xs:element name="RegisterClientNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Models" minOccurs="0" name="user" nillable="true" type="q1:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseClientNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Models" minOccurs="0" name="user" nillable="true" type="q2:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="test">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="a" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserOnLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Models" minOccurs="0" name="user" nillable="true" type="q3:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SayHello">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hello" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleAuthorityChanged">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrugLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupplyUnitLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseUnitLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeedApproval">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Business.Models" minOccurs="0" name="approvals" nillable="true" type="q4:ArrayOfWarningData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeedDrugMaintain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="day" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeedHandledDoubtDrug">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeedHandleSale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Business.Models" minOccurs="0" name="approvals" nillable="true" type="q5:ArrayOfWarningData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NeedHandlePurchase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Business.Models" minOccurs="0" name="approvals" nillable="true" type="q6:ArrayOfWarningData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DrugOutofStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="number" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

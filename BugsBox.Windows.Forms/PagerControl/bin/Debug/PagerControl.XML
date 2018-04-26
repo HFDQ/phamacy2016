@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PagerControl</name>
+    </assembly>
+    <members>
+        <member name="T:PagerControl.PagerControl">
+            <summary>
+            分页控件
+            RecordCount: 记录总数
+            PageSize: 每页显示，默认值为20
+            PageCount: 显示总页数
+            PageIndex: 当前显示页数
+            加载此控件时，需先设置RecordCount
+            在此控件的DataPaging 事件函数中 实现绑定刷新DataView功能
+            </summary>
+        </member>
+        <member name="P:PagerControl.PagerControl.PageSize">
+            <summary>
+            每页显示记录数
+            </summary>
+        </member>
+        <member name="P:PagerControl.PagerControl.PageIndex">
+            <summary>
+            当前页数
+            </summary>
+        </member>
+        <member name="P:PagerControl.PagerControl.RecordCount">
+            <summary>
+            记录总条数
+            </summary>
+        </member>
+        <member name="M:PagerControl.PagerControl.GetPageCount">
+            <summary>
+            计算获得总页数
+            </summary>
+        </member>
+        <member name="M:PagerControl.PagerControl.RefreshControlInfo">
+            <summary>
+            刷新显示分页控件的信息
+            </summary>
+        </member>
+        <member name="M:PagerControl.PagerControl.BindData">
+            <summary>
+            触发事件以便主界面获取，以便更新dataview数据
+            同时刷新显示分页控件的信息
+            控制button是否enable
+            </summary>
+        </member>
+        <member name="F:PagerControl.PagerControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PagerControl.PagerControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PagerControl.PagerControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

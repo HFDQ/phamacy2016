@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInstruments", "MedicalInstruments\MedicalInstruments.csproj", "{075331AB-4FC0-403A-8823-F73DC75E5BD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInstruments.Infrastructure", "MedicalInstruments.Common\MedicalInstruments.Infrastructure.csproj", "{A948F4FD-5CF9-489A-9A78-FC69E4FE5921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInstruments.Service", "MedicalInstruments.Service\MedicalInstruments.Service.csproj", "{742866E9-4844-4566-8BF2-19CF6848A96F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInstruments.Model", "MedicalInstruments.Model\MedicalInstruments.Model.csproj", "{6AF53576-CF16-4F19-94CB-93A99625BD84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInstrumentsTest", "MedicalInstrumentsTest\MedicalInstrumentsTest.csproj", "{C3D9F549-9930-4EE9-8C33-5A840E50562B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalInstrumentsService", "MedicalInstrumentsService\MedicalInstrumentsService.csproj", "{09F22770-0693-4B21-8343-854F33493FD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{075331AB-4FC0-403A-8823-F73DC75E5BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075331AB-4FC0-403A-8823-F73DC75E5BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075331AB-4FC0-403A-8823-F73DC75E5BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075331AB-4FC0-403A-8823-F73DC75E5BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A948F4FD-5CF9-489A-9A78-FC69E4FE5921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A948F4FD-5CF9-489A-9A78-FC69E4FE5921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A948F4FD-5CF9-489A-9A78-FC69E4FE5921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A948F4FD-5CF9-489A-9A78-FC69E4FE5921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742866E9-4844-4566-8BF2-19CF6848A96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742866E9-4844-4566-8BF2-19CF6848A96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742866E9-4844-4566-8BF2-19CF6848A96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742866E9-4844-4566-8BF2-19CF6848A96F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AF53576-CF16-4F19-94CB-93A99625BD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF53576-CF16-4F19-94CB-93A99625BD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF53576-CF16-4F19-94CB-93A99625BD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF53576-CF16-4F19-94CB-93A99625BD84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D9F549-9930-4EE9-8C33-5A840E50562B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D9F549-9930-4EE9-8C33-5A840E50562B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D9F549-9930-4EE9-8C33-5A840E50562B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D9F549-9930-4EE9-8C33-5A840E50562B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09F22770-0693-4B21-8343-854F33493FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F22770-0693-4B21-8343-854F33493FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F22770-0693-4B21-8343-854F33493FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F22770-0693-4B21-8343-854F33493FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

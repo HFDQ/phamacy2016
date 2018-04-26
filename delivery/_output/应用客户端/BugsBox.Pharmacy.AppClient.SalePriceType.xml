@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SalePriceType>
+  <priceType stype="1">0-控制销售价不得低于采购价；1-以销售价显示当前价格，可低于采购价销售，价格不限；2－以采购价的1.1倍显示当前价格，可低于采购价销售，但不能高于最高定价</priceType>
+  <SaleOutInventoryChecker FirstChecker="超级管理员" SecondChecker="超级管理员" inventoryKeeper="薛金远"></SaleOutInventoryChecker>
+  <photo Address="." database="photo" user="sa" pw="1111"></photo>
+   <DZJGMCX LinkURL=""></DZJGMCX>
+  <salerRoleName Name="销售员"></salerRoleName>
+  <TaxReturn enabled="1"></TaxReturn>
+</SalePriceType>

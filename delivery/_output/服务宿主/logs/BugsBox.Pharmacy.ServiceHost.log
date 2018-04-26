@@ -1,0 +1,131 @@
+
+2017-05-09 22:08:47,647 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始注册监控
+2017-05-09 22:08:47,663 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束注册监控
+2017-05-09 22:08:53,734 [6] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务门店配置信息：{"$id":"1","Name":"合肥富生生物科技有限公司","Id":"5125e3a9-a37a-47c8-812d-444477f05e6e","Decription":"默认MD","Deleted":false,"Code":"MD","DeleteTime":null,"Enabled":true,"Address":"地址","Tel":"13584197721","Head":"负责人","StoreTypeValue":1}
+2017-05-09 22:08:53,752 [6] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始检查门店配置与数据库是否一致!
+2017-05-09 22:08:58,640 [6] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 门店配置与数据库一致!
+2017-05-09 22:08:58,642 [6] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动服务.....
+2017-05-09 22:08:58,644 [6] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动[数据服务].....
+2017-05-09 22:09:15,719 [6] ERROR BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务出错了
+2017-05-09 22:09:15,729 [6] ERROR BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 启动服务失败！
+System.Exception: 启动服务失败！ ---> System.ServiceModel.AddressAccessDeniedException: HTTP 无法注册 URL http://+:5560/PharmacyService/。进程不具有此命名空间的访问权限(有关详细信息，请参见 http://go.microsoft.com/fwlink/?LinkId=70353)。 ---> System.Net.HttpListenerException: 拒绝访问。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   在 System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   在 System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   在 System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   在 System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   在 BugsBox.Pharmacy.Services.ServiceContext.StartService(String& message) 位置 D:\work\phamacy2016\delivery\BugsBox.Pharmacy.Services\ServiceContext.cs:行号 296
+   --- 内部异常堆栈跟踪的结尾 ---
+2017-05-09 22:09:15,738 [6] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束启动服务.....
+
+2017-05-09 22:10:00,637 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始注册监控
+2017-05-09 22:10:00,655 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束注册监控
+2017-05-09 22:10:02,627 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务门店配置信息：{"$id":"1","Name":"合肥富生生物科技有限公司","Id":"5125e3a9-a37a-47c8-812d-444477f05e6e","Decription":"默认MD","Deleted":false,"Code":"MD","DeleteTime":null,"Enabled":true,"Address":"地址","Tel":"13584197721","Head":"负责人","StoreTypeValue":1}
+2017-05-09 22:10:02,631 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始检查门店配置与数据库是否一致!
+2017-05-09 22:10:06,810 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 门店配置与数据库一致!
+2017-05-09 22:10:06,813 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动服务.....
+2017-05-09 22:10:06,814 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动[数据服务].....
+2017-05-09 22:10:22,514 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 成功启动[数据服务]
+2017-05-09 22:10:22,519 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动[通知服务].....
+2017-05-09 22:10:22,537 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 成功启动[通知服务]
+2017-05-09 22:10:22,543 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开启监控...
+2017-05-09 22:10:22,552 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开启监控成功
+2017-05-09 22:10:22,556 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务启动成功.
+2017-05-09 22:10:22,560 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束启动服务.....
+2017-05-09 22:10:28,101 [10] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 对门店客户端{"$id":"1","Name":"合肥富生生物科技有限公司","Id":"5125e3a9-a37a-47c8-812d-444477f05e6e","Decription":"默认MD","Deleted":false,"Code":"MD","DeleteTime":null,"Enabled":true,"Address":"地址","Tel":"13584197721","Head":"负责人","StoreTypeValue":1}的登录授权成功!
+
+2017-05-10 22:03:29,495 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始注册监控
+2017-05-10 22:03:29,511 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束注册监控
+2017-05-10 22:03:34,668 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务门店配置信息：{"$id":"1","Name":"合肥富生生物科技有限公司","Id":"5125e3a9-a37a-47c8-812d-444477f05e6e","Decription":"默认MD","Deleted":false,"Code":"MD","DeleteTime":null,"Enabled":true,"Address":"地址","Tel":"13584197721","Head":"负责人","StoreTypeValue":1}
+2017-05-10 22:03:34,674 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始检查门店配置与数据库是否一致!
+2017-05-10 22:03:39,604 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 门店配置与数据库一致!
+2017-05-10 22:03:39,606 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动服务.....
+2017-05-10 22:03:39,607 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动[数据服务].....
+2017-05-10 22:03:55,986 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 成功启动[数据服务]
+2017-05-10 22:03:56,016 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动[通知服务].....
+2017-05-10 22:03:56,041 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 成功启动[通知服务]
+2017-05-10 22:03:56,045 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开启监控...
+2017-05-10 22:03:56,050 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开启监控成功
+2017-05-10 22:03:56,053 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务启动成功.
+2017-05-10 22:03:56,055 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束启动服务.....
+2017-05-10 22:04:04,219 [9] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 对门店客户端{"$id":"1","Name":"合肥富生生物科技有限公司","Id":"5125e3a9-a37a-47c8-812d-444477f05e6e","Decription":"默认MD","Deleted":false,"Code":"MD","DeleteTime":null,"Enabled":true,"Address":"地址","Tel":"13584197721","Head":"负责人","StoreTypeValue":1}的登录授权成功!
+
+2017-05-10 22:05:26,495 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始注册监控
+2017-05-10 22:05:26,509 [1] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束注册监控
+2017-05-10 22:05:28,225 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务门店配置信息：{"$id":"1","Name":"合肥富生生物科技有限公司","Id":"5125e3a9-a37a-47c8-812d-444477f05e6e","Decription":"默认MD","Deleted":false,"Code":"MD","DeleteTime":null,"Enabled":true,"Address":"地址","Tel":"13584197721","Head":"负责人","StoreTypeValue":1}
+2017-05-10 22:05:28,231 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始检查门店配置与数据库是否一致!
+2017-05-10 22:05:32,398 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 门店配置与数据库一致!
+2017-05-10 22:05:32,401 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动服务.....
+2017-05-10 22:05:32,402 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动[数据服务].....
+2017-05-10 22:05:48,203 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 成功启动[数据服务]
+2017-05-10 22:05:48,207 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开始启动[通知服务].....
+2017-05-10 22:05:48,216 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 成功启动[通知服务]
+2017-05-10 22:05:48,218 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开启监控...
+2017-05-10 22:05:48,220 [4] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 开启监控成功
+2017-05-10 22:05:48,222 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 服务启动成功.
+2017-05-10 22:05:48,223 [4] INFO  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 结束启动服务.....
+2017-05-10 22:05:53,725 [9] WARN  BugsBox.Common.log4Logger [BugsBox.Common.log4Logger] 
+ 对门店客户端{"$id":"1","Name":"合肥富生生物科技有限公司","Id":"5125e3a9-a37a-47c8-812d-444477f05e6e","Decription":"默认MD","Deleted":false,"Code":"MD","DeleteTime":null,"Enabled":true,"Address":"地址","Tel":"13584197721","Head":"负责人","StoreTypeValue":1}的登录授权成功!

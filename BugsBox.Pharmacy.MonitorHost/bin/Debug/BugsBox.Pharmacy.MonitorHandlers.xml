@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BugsBox.Pharmacy.MonitorHandlers</name>
+    </assembly>
+    <members>
+        <member name="T:BugsBox.Pharmacy.MonitorHandlers.Drug">
+            <summary>
+            药品监控
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Drug.UpdateValid">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Drug.UpdateOutValidDate">
+            <summary>
+            更新过期状态
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Drug.NotValid">
+            <summary>
+            失效的数量(某种药)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Drug.OutValidDate">
+            <summary>
+            批次过期数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Drug.GetDrugInfoForOutofStockNumber">
+            <summary>
+            缺货药品数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain">
+            <summary>
+            药品养护
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain.CreateMaintainRecord">
+            <summary>
+            养护药品记录，品种类型值：0
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain.CreateDrugMantainImpt">
+            <summary>
+            重点养护，品种类型值：1
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain.CreateDrugMantainInst">
+            <summary>
+            医疗器械养护，品种类型值：2
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain.CreateFoodMantainInst">
+            <summary>
+            保健食品养护,品种类型值：5
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain.CreateDrugMantainZYYP">
+            <summary>
+            中药饮片养护，品种类型值：3
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain.CreateDrugMantainZYC">
+            <summary>
+            中药材养护，品种类型值：4
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.DrugMaintain.SetDrugInventoryRecordOutValid">
+            <summary>
+            品种过期设置
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Purchase.采购单审核">
+            <summary>
+            采购单审核
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Purchase.收货">
+            <summary>
+            收货
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Purchase.收货验收">
+            <summary>
+            收货验收
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BugsBox.Pharmacy.MonitorHandlers.PurchaseUnit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.PurchaseUnit.UpdateValid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.PurchaseUnit.NotValid">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BugsBox.Pharmacy.MonitorHandlers.Sale">
+            <summary>
+            销售方面监控
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Sale.GetNeedCheckOrder">
+            <summary>
+            需要审核的销售单数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Sale.GetNeedTake">
+            <summary>
+            需要拣货的销售单数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Sale.GetNeedCheckChuKu">
+            <summary>
+            需要出库审核的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Sale.GetNeedPeiSong">
+            <summary>
+            需要配送的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Sale.GetNeed_XT_XSY_Check">
+            <summary>
+            需要销退销售员审核的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Sale.GetNeed_XT_YYB_Check">
+            <summary>
+            需要销退营业部审核的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.Sale.GetNeed_XT_ZGB_Check">
+            <summary>
+            需要销退质管部审核的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BugsBox.Pharmacy.MonitorHandlers.SupplyUnit">
+            <summary>
+            供应商监控
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.SupplyUnit.UpdateValid">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="M:BugsBox.Pharmacy.MonitorHandlers.SupplyUnit.NotValid">
+            <summary>
+            失效的数量
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

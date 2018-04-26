@@ -1,0 +1,13 @@
+D:\work\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.XML
+D:\work\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.dll
+D:\work\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.pdb
+D:\work\phamacy2016\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.csprojResolveAssemblyReference.cache
+D:\work\phamacy2016\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.dll
+D:\work\phamacy2016\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.pdb
+D:\DQ\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.XML
+D:\DQ\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.dll
+D:\DQ\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.pdb
+D:\DQ\phamacy2016\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.csproj.CoreCompileInputs.cache
+D:\DQ\phamacy2016\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.csproj.CopyComplete
+D:\DQ\phamacy2016\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.dll
+D:\DQ\phamacy2016\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.pdb
