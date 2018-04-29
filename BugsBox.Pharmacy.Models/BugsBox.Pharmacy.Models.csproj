@@ -17,11 +17,12 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.Models\</OutputPath>
+    <OutputPath>..\_output\_temp\BugsBox.Pharmacy.Models\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\_output\_temp\BugsBox.Pharmacy.Models\BugsBox.Pharmacy.Models.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -72,11 +73,14 @@
     <Compile Include="BusinessScopeCategory.cs" />
     <Compile Include="BusinessType.cs" />
     <Compile Include="BusinessTypeManageCategoryDetail.cs" />
+    <Compile Include="ChinaDistrict.cs" />
     <Compile Include="Config\PharmacyServiceConfig.cs" />
     <Compile Include="Config\ResourceStrings.cs" />
     <Compile Include="DirectSalesOrder.cs" />
     <Compile Include="DirectSalesOrderDetail.cs" />
     <Compile Include="DocumentRefuse.cs" />
+    <Compile Include="DrugInventoryRecordHis.cs" />
+    <Compile Include="DrugMaintenanceRecord.cs" />
     <Compile Include="DrugsBreakage.cs" />
     <Compile Include="DrugsInventoryMove.cs" />
     <Compile Include="DrugsUndeterminate.cs" />

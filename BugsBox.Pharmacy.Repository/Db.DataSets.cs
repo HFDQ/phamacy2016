@@ -67,6 +67,11 @@ namespace BugsBox.Pharmacy.Repository
 		public DbSet<BusinessTypeManageCategoryDetail> BusinessTypeManageCategoryDetails { get; set; }
 	 
 		/// <summary>
+        /// 行政区域划分s
+        /// </summary>
+		public DbSet<ChinaDistrict> ChinaDistricts { get; set; }
+	 
+		/// <summary>
         /// s
         /// </summary>
 		public DbSet<DirectSalesOrder> DirectSalesOrders { get; set; }
@@ -80,6 +85,16 @@ namespace BugsBox.Pharmacy.Repository
         /// 收货拒收单s
         /// </summary>
 		public DbSet<DocumentRefuse> DocumentRefuses { get; set; }
+	 
+		/// <summary>
+        /// 药物库存变动历史s
+        /// </summary>
+		public DbSet<DrugInventoryRecordHis> DrugInventoryRecordHiss { get; set; }
+	 
+		/// <summary>
+        /// 药品养护记录s
+        /// </summary>
+		public DbSet<DrugMaintenanceRecord> DrugMaintenanceRecords { get; set; }
 	 
 		/// <summary>
         /// 报损药品s
@@ -330,6 +345,11 @@ namespace BugsBox.Pharmacy.Repository
         /// 医疗机构执业许可证s
         /// </summary>
 		public DbSet<MmedicalInstitutionPermit> MmedicalInstitutionPermits { get; set; }
+	 
+		/// <summary>
+        /// 全国工业产品生产许可证s
+        /// </summary>
+		public DbSet<IndustoryProductCertificate> IndustoryProductCertificates { get; set; }
 	 
 		/// <summary>
         /// 医疗分类s
@@ -590,11 +610,11 @@ namespace BugsBox.Pharmacy.Repository
         /// 库区s
         /// </summary>
 		public DbSet<WarehouseZone> WarehouseZones { get; set; }
-
-        /// <summary>
-        /// 库位
+	 
+		/// <summary>
+        /// s
         /// </summary>
-        public DbSet<WareHouseZonePosition> WarehouseZonePositions { get; set; }
+		public DbSet<WareHouseZonePosition> WarehouseZonePositions { get; set; }
 	 
 		/// <summary>
         /// 报警设置s
@@ -605,10 +625,6 @@ namespace BugsBox.Pharmacy.Repository
         /// 销售出库单s
         /// </summary>
 		public DbSet<OutInventoryDetail> OutInventoryDetails { get; set; }
-
-        /// <summary>
-        /// 全国工业产品生产许可证
-        /// </summary>
-        public DbSet<IndustoryProductCertificate> IndustoryProductCertificate { get; set; }
+	
 	}
 }

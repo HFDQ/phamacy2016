@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.Services\</OutputPath>
+    <OutputPath>..\_output\_temp\BugsBox.Pharmacy.Services\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -53,8 +53,11 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\lib\Castle.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\lib\log4net.dll</HintPath>
@@ -82,6 +85,7 @@
       <HintPath>..\lib\SmartThreadPool.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
@@ -107,6 +111,8 @@
     <Compile Include="AuthorizationManager.cs" />
     <Compile Include="AuthorizationPolicy.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\GetDrugInventoryRecordHisCmd.cs" />
+    <Compile Include="Commands\DrugInventoryRecordHisCmd.cs" />
     <Compile Include="Commands\PingCmd.cs" />
     <Compile Include="Commands\VerifyDrugSupplyUnitTypeCmd.cs" />
     <Compile Include="ConnectedInfoProvider.cs" />
@@ -170,6 +176,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Services\PharmacyDatabaseService.Business.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PharmacyDatabaseService.Business.cs</LastGenOutput>

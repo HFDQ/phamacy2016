@@ -15,3 +15,12 @@ D:\DQ\phamacy2016\UpdateBugBox\obj\x86\Debug\UpdateBugBox.csproj.GenerateResourc
 D:\DQ\phamacy2016\UpdateBugBox\obj\x86\Debug\UpdateBugBox.csproj.CoreCompileInputs.cache
 D:\DQ\phamacy2016\UpdateBugBox\obj\x86\Debug\UpdateBugBox.exe
 D:\DQ\phamacy2016\UpdateBugBox\obj\x86\Debug\UpdateBugBox.pdb
+D:\DQ\药品经营系统\_output\应用客户端\UpdateBugBox.exe
+D:\DQ\药品经营系统\_output\应用客户端\UpdateBugBox.pdb
+D:\DQ\药品经营系统\UpdateBugBox\obj\x86\Debug\UpdateBugBox.Form1.resources
+D:\DQ\药品经营系统\UpdateBugBox\obj\x86\Debug\UpdateBugBox.Properties.Resources.resources
+D:\DQ\药品经营系统\UpdateBugBox\obj\x86\Debug\UpdateBugBox.csproj.GenerateResource.cache
+D:\DQ\药品经营系统\UpdateBugBox\obj\x86\Debug\UpdateBugBox.csproj.CoreCompileInputs.cache
+D:\DQ\药品经营系统\UpdateBugBox\obj\x86\Debug\UpdateBugBox.exe
+D:\DQ\药品经营系统\UpdateBugBox\obj\x86\Debug\UpdateBugBox.pdb
+D:\DQ\药品经营系统\UpdateBugBox\obj\x86\Debug\UpdateBugBox.csprojResolveAssemblyReference.cache

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -162,6 +163,7 @@ namespace BugsBox.Pharmacy.Models
 
         #region 
 
+        [ForeignKey("DrugInfoId")]
         public virtual DrugInfo DrugInfo { get; set; }
 
         /// <summary>
@@ -169,6 +171,10 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public Guid DrugInfoId { get; set; }
+
+
+        //[InverseProperty("DrugInfoId")] // <- Navigation property name in EntityA
+        //public virtual ICollection<DrugInfo> DrugInfos { get; set; }
 
         #endregion
     }

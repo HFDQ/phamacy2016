@@ -1623,7 +1623,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
     public partial class WareHouseZonePostionBusinessHandler : BaseBusinessHandler<WareHouseZonePosition>
     {
         public WareHouseZonePostionBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.WarehouseZonePositionRepository, repositoryProvider, connectedInfoProvider)
+            : base(repositoryProvider.WareHouseZonePositionRepository, repositoryProvider, connectedInfoProvider)
         {
 
         }

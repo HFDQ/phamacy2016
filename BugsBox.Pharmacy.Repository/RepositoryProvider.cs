@@ -200,6 +200,25 @@ namespace BugsBox.Pharmacy.Repository
 				}
 			}
 		} 
+		private IChinaDistrictRepository _ChinaDistrictRepository=null;
+	    /// <summary> 
+		/// 行政区域划分(ChinaDistrict) 仓储对象
+        /// </summary>
+		public IChinaDistrictRepository ChinaDistrictRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _ChinaDistrictRepository==null)
+					{
+						_ChinaDistrictRepository=new ChinaDistrictRepository(Db);
+						_ChinaDistrictRepository.RepositoryProvider = this;
+					}
+					return _ChinaDistrictRepository;
+				}
+			}
+		} 
 		private IDirectSalesOrderRepository _DirectSalesOrderRepository=null;
 	    /// <summary> 
 		/// (DirectSalesOrder) 仓储对象
@@ -254,6 +273,44 @@ namespace BugsBox.Pharmacy.Repository
 						_DocumentRefuseRepository.RepositoryProvider = this;
 					}
 					return _DocumentRefuseRepository;
+				}
+			}
+		} 
+		private IDrugInventoryRecordHisRepository _DrugInventoryRecordHisRepository=null;
+	    /// <summary> 
+		/// 药物库存变动历史(DrugInventoryRecordHis) 仓储对象
+        /// </summary>
+		public IDrugInventoryRecordHisRepository DrugInventoryRecordHisRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _DrugInventoryRecordHisRepository==null)
+					{
+						_DrugInventoryRecordHisRepository=new DrugInventoryRecordHisRepository(Db);
+						_DrugInventoryRecordHisRepository.RepositoryProvider = this;
+					}
+					return _DrugInventoryRecordHisRepository;
+				}
+			}
+		} 
+		private IDrugMaintenanceRecordRepository _DrugMaintenanceRecordRepository=null;
+	    /// <summary> 
+		/// 药品养护记录(DrugMaintenanceRecord) 仓储对象
+        /// </summary>
+		public IDrugMaintenanceRecordRepository DrugMaintenanceRecordRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _DrugMaintenanceRecordRepository==null)
+					{
+						_DrugMaintenanceRecordRepository=new DrugMaintenanceRecordRepository(Db);
+						_DrugMaintenanceRecordRepository.RepositoryProvider = this;
+					}
+					return _DrugMaintenanceRecordRepository;
 				}
 			}
 		} 
@@ -1204,6 +1261,25 @@ namespace BugsBox.Pharmacy.Repository
 						_MmedicalInstitutionPermitRepository.RepositoryProvider = this;
 					}
 					return _MmedicalInstitutionPermitRepository;
+				}
+			}
+		} 
+		private IIndustoryProductCertificateRepository _IndustoryProductCertificateRepository=null;
+	    /// <summary> 
+		/// 全国工业产品生产许可证(IndustoryProductCertificate) 仓储对象
+        /// </summary>
+		public IIndustoryProductCertificateRepository IndustoryProductCertificateRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _IndustoryProductCertificateRepository==null)
+					{
+						_IndustoryProductCertificateRepository=new IndustoryProductCertificateRepository(Db);
+						_IndustoryProductCertificateRepository.RepositoryProvider = this;
+					}
+					return _IndustoryProductCertificateRepository;
 				}
 			}
 		} 
@@ -2194,26 +2270,26 @@ namespace BugsBox.Pharmacy.Repository
 					return _WarehouseZoneRepository;
 				}
 			}
-		}
-
-        private IWarehouseZonePositionRepository _WarehouseZonePositionRepository = null;
-        public IWarehouseZonePositionRepository WarehouseZonePositionRepository
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_WarehouseZonePositionRepository == null)
-                    {
-                        _WarehouseZonePositionRepository = new WarehouseZonePositionRepository(Db);
-                        _WarehouseZonePositionRepository.RepositoryProvider = this;
-                    }
-                    return _WarehouseZonePositionRepository;
-                }
-            }
-        }
-
-
+		} 
+		private IWareHouseZonePositionRepository _WareHouseZonePositionRepository=null;
+	    /// <summary> 
+		/// (WareHouseZonePosition) 仓储对象
+        /// </summary>
+		public IWareHouseZonePositionRepository WareHouseZonePositionRepository
+		{
+			get
+			{
+				lock(this)
+				{
+					if( _WareHouseZonePositionRepository==null)
+					{
+						_WareHouseZonePositionRepository=new WareHouseZonePositionRepository(Db);
+						_WareHouseZonePositionRepository.RepositoryProvider = this;
+					}
+					return _WareHouseZonePositionRepository;
+				}
+			}
+		} 
 		private IWaringSetRepository _WaringSetRepository=null;
 	    /// <summary> 
 		/// 报警设置(WaringSet) 仓储对象
@@ -2251,24 +2327,7 @@ namespace BugsBox.Pharmacy.Repository
 					return _OutInventoryDetailRepository;
 				}
 			}
-		}
-
-        private IIndustoryProductCertificateRepository _IndustoryProductCertificateRepository;
-        public IIndustoryProductCertificateRepository IndustoryProductCertificateRepository
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_IndustoryProductCertificateRepository == null)
-                    {
-                        _IndustoryProductCertificateRepository = new IndustoryProductCertificateRepository(Db);
-                        _IndustoryProductCertificateRepository.RepositoryProvider = this;
-                    }
-                    return _IndustoryProductCertificateRepository;
-                }
-            }
-        } 
+		} 
 		   
 		public void Dispose()
 		{ 
@@ -2309,6 +2368,10 @@ namespace BugsBox.Pharmacy.Repository
 			{
 				_BusinessTypeManageCategoryDetailRepository.Dispose();
 			}  
+			if( _ChinaDistrictRepository!=null)
+			{
+				_ChinaDistrictRepository.Dispose();
+			}  
 			if( _DirectSalesOrderRepository!=null)
 			{
 				_DirectSalesOrderRepository.Dispose();
@@ -2320,6 +2383,14 @@ namespace BugsBox.Pharmacy.Repository
 			if( _DocumentRefuseRepository!=null)
 			{
 				_DocumentRefuseRepository.Dispose();
+			}  
+			if( _DrugInventoryRecordHisRepository!=null)
+			{
+				_DrugInventoryRecordHisRepository.Dispose();
+			}  
+			if( _DrugMaintenanceRecordRepository!=null)
+			{
+				_DrugMaintenanceRecordRepository.Dispose();
 			}  
 			if( _DrugsBreakageRepository!=null)
 			{
@@ -2520,6 +2591,10 @@ namespace BugsBox.Pharmacy.Repository
 			if( _MmedicalInstitutionPermitRepository!=null)
 			{
 				_MmedicalInstitutionPermitRepository.Dispose();
+			}  
+			if( _IndustoryProductCertificateRepository!=null)
+			{
+				_IndustoryProductCertificateRepository.Dispose();
 			}  
 			if( _MedicalCategoryRepository!=null)
 			{
@@ -2729,6 +2804,10 @@ namespace BugsBox.Pharmacy.Repository
 			{
 				_WarehouseZoneRepository.Dispose();
 			}  
+			if( _WareHouseZonePositionRepository!=null)
+			{
+				_WareHouseZonePositionRepository.Dispose();
+			}  
 			if( _WaringSetRepository!=null)
 			{
 				_WaringSetRepository.Dispose();
@@ -2736,16 +2815,8 @@ namespace BugsBox.Pharmacy.Repository
 			if( _OutInventoryDetailRepository!=null)
 			{
 				_OutInventoryDetailRepository.Dispose();
-			}
-            if (_WarehouseZonePositionRepository != null)
-            {
-                _WarehouseZonePositionRepository.Dispose();
-            }
-
-            if (_IndustoryProductCertificateRepository != null)
-            {
-                _IndustoryProductCertificateRepository.Dispose();
-            }
+			}   
+			
 		}
 	}
 }

@@ -188,13 +188,13 @@ namespace BugsBox.Pharmacy.Repository
         public void Attach<TEntity>(TEntity item) where TEntity : class, IEntity, new()
         {
             //attach and set as unchanged
-            base.Entry<TEntity>(item).State = System.Data.EntityState.Unchanged;
+            base.Entry<TEntity>(item).State =EntityState.Unchanged;
         }
 
         public void SetModified<TEntity>(TEntity item) where TEntity : class, IEntity, new()
         {
             //this operation also attach item in object state manager
-            base.Entry<TEntity>(item).State = System.Data.EntityState.Modified;
+            base.Entry<TEntity>(item).State = EntityState.Modified;
         }
 
         public void ApplyCurrentValues<TEntity>(TEntity original, TEntity current) where TEntity : class, IEntity, new()
@@ -269,7 +269,7 @@ namespace BugsBox.Pharmacy.Repository
             // as 'unchanged state'
             base.ChangeTracker.Entries()
                               .ToList()
-                              .ForEach(entry => entry.State = System.Data.EntityState.Unchanged);
+                              .ForEach(entry => entry.State = EntityState.Unchanged);
         }
 
         public IEnumerable<TEntity> ExecuteQuery<TEntity>(string sqlQuery, params object[] parameters) where TEntity : class, IEntity, new()

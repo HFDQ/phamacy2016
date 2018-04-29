@@ -22,7 +22,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
 
             this.type = type;
             if (type == "ProfitOrLoss")
@@ -40,6 +40,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
                 this.button4.Visible = true;
                 this.button5.Left = button2.Left;
                 this.button4.Left = button5.Left + button5.Width + 5;
+                button6.Visible = true;
             }
             if (type == "Now")
             {
@@ -81,8 +82,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
             cms.Items.Add("表格操作");
             cms.Items[cms.Items.Count - 1].Enabled = false;
             cms.Items.Add("-");
-            cms.Items.Add("自动调整列宽", null, delegate(object sender, EventArgs e) { this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells; });
-            cms.Items.Add("取消自动调整列宽", null, delegate(object sender, EventArgs e) { this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None; });
+            cms.Items.Add("自动调整列宽", null, delegate (object sender, EventArgs e) { this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells; });
+            cms.Items.Add("取消自动调整列宽", null, delegate (object sender, EventArgs e) { this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None; });
             cms.Items.Add("-");
             cms.Items.Add("流向查看");
             cms.Items[cms.Items.Count - 1].Enabled = false;
@@ -95,7 +96,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
             cms.Items[cms.Items.Count - 1].Enabled = false;
             cms.Items.Add("-");
             cms.Items.Add(tsi);
-            cms.Items.Add("查看移库记录", null, delegate(object sender, EventArgs e)
+            cms.Items.Add("查看移库记录", null, delegate (object sender, EventArgs e)
                 {
                     Form_DrugInventoryMove frm = new Form_DrugInventoryMove();
                     frm.ShowDialog();
@@ -170,7 +171,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
 
                 bool combine = BatchCombineCheck.Checked;
 
-                storage = PharmacyDatabaseService.StorageQuery(out msg, this.textBox1.Text.Trim(), this.textBox2.Text.Trim(), this.textBox3.Text.Trim(), warehouseZonesIds, this.pagerControl1.PageIndex, this.pagerControl1.PageSize, new object[] { combine }).OrderBy(o=>o.ProductGeneralName).ToList();
+                storage = PharmacyDatabaseService.StorageQuery(out msg, this.textBox1.Text.Trim(), this.textBox2.Text.Trim(), this.textBox3.Text.Trim(), warehouseZonesIds, this.pagerControl1.PageIndex, this.pagerControl1.PageSize, new object[] { combine }).OrderBy(o => o.ProductGeneralName).ToList();
                 storage.ForEach(r => r.PruductDate = r.PruductDate.Date);
                 if (storage == null)
                 {
@@ -190,7 +191,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
                             ProductGeneralName = "统计",
                             RecordCount = storage.Count(r => r.isValid),
                             PriceCount = storage.Sum(r => r.CanSaleNum * r.PurchasePrice),
-                            OutValidDate=DateTime.Parse("2050-12-31")
+                            OutValidDate = DateTime.Parse("2050-12-31")
                         });
                     }
 
@@ -204,7 +205,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
 
                 this.dataGridView1.DataSource = storage;
 
-                
+
             }
             catch (Exception ex)
             {
@@ -251,7 +252,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
 
             MyExcelUtls.DataGridview2Sheet(this.dataGridView1, "可用库存表");
 
-            
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -393,6 +394,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
 
                 cms.Show(new Point(MousePosition.X, MousePosition.Y));
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form_InventoryPLRecord frm = new Form_InventoryPLRecord();
+            frm.Show();
         }
     }
 }

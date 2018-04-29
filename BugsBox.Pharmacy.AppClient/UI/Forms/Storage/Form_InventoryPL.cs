@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BugsBox.Pharmacy.AppClient.Common;
+using BugsBox.Pharmacy.AppClient.Common.Commands;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +11,7 @@ using System.Windows.Forms;
 
 namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
 {
-    public partial class Form_InventoryPL :BaseFunctionForm
+    public partial class Form_InventoryPL : BaseFunctionForm
     {
         string msg = string.Empty;
         public Form_InventoryPL()
@@ -23,17 +25,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
             var c = from i in this.PharmacyDatabaseService.GetDrugInventoryRecordPL(string.Empty, 1, out msg)
                     select new
                     {
-                        id=i.Id,
-                        productgeneralname=i.DrugInfo.ProductGeneralName,
+                        id = i.Id,
+                        productgeneralname = i.DrugInfo.ProductGeneralName,
                         DictionarySpecificationCode = i.DrugInfo.DictionarySpecificationCode,
                         DictionaryDosageCode = i.DrugInfo.DictionaryDosageCode,
                         BatchNumber = i.BatchNumber,
-                        factoryname=i.DrugInfo.FactoryName,
-                        cansalenum=i.CanSaleNum,
+                        factoryname = i.DrugInfo.FactoryName,
+                        cansalenum = i.CanSaleNum,
                         DismantingAmount = i.DismantingAmount,
-                        afterPL=i.CanSaleNum+i.DismantingAmount
+                        afterPL = i.CanSaleNum + i.DismantingAmount
                     };
-            this.dataGridView1.DataSource = c.OrderBy(r=>r.DictionaryDosageCode).ThenBy(r=>r.productgeneralname).ToList();
+            this.dataGridView1.DataSource = c.OrderBy(r => r.DictionaryDosageCode).ThenBy(r => r.productgeneralname).ToList();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -78,12 +80,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 || e.ColumnIndex<0) return;
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
             if (this.dataGridView1.CurrentCell.OwningColumn.Name == this.Column6.Name)
             {
                 if (MessageBox.Show("需要提交库存损溢调整吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel) return;
-                Models.DrugInventoryRecord dir = this.PharmacyDatabaseService.GetDrugInventoryRecord(out msg,Guid.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
-                var m=Convert.ToDecimal(this.dataGridView1.CurrentRow.Cells[Column7.Name].Value);
+                Models.DrugInventoryRecord dir = this.PharmacyDatabaseService.GetDrugInventoryRecord(out msg, Guid.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                var m = Convert.ToDecimal(this.dataGridView1.CurrentRow.Cells[Column7.Name].Value);
                 dir.InInventoryCount += m;
                 dir.CanSaleNum += m;
                 dir.CurrentInventoryCount += m;
@@ -91,6 +93,18 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
                 dir.DismantingAmount = 0;
                 if (this.PharmacyDatabaseService.SaveDrugInventoryRecord(out msg, dir))
                 {
+
+
+                    DrugInventoryRecordHisCmd cmd = new DrugInventoryRecordHisCmd
+                    {
+                        Diff = m,
+                        DrugInventoryRecord = dir,
+                        Operator = AppClientContext.CurrentUser.Account,
+                        OperatorID = AppClientContext.CurrentUser.Id
+                    };
+
+                    cmd.Execute();
+
                     MessageBox.Show("库存调整成功！");
                 }
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -101,7 +115,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
             {
                 if (MessageBox.Show("需要取消库存损溢调整吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel) return;
                 Models.DrugInventoryRecord dir = this.PharmacyDatabaseService.GetDrugInventoryRecord(out msg, Guid.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
-                
+
                 dir.DismantingAmount = 0;
                 dir.Valid = true;
                 if (this.PharmacyDatabaseService.SaveDrugInventoryRecord(out msg, dir))

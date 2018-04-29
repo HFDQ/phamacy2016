@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.AppClient.Common\</OutputPath>
+    <OutputPath>..\_output\_temp\BugsBox.Pharmacy.AppClient.Common\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -59,6 +59,8 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AppClientContext.cs" />
+    <Compile Include="Commands\GetDrugInventoryRecordHisCmd.cs" />
+    <Compile Include="Commands\DrugInventoryRecordHisCmd.cs" />
     <Compile Include="Notification\PharmacyNotificationCallback.cs" />
     <Compile Include="PharmacyAuthorize.cs" />
     <Compile Include="PharmacyClientConfig.cs" />
@@ -103,6 +105,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="PharmacyDatabaseService.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PharmacyDatabaseService.cs</LastGenOutput>

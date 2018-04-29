@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.IServices\</OutputPath>
+    <OutputPath>..\_output\_temp\BugsBox.Pharmacy.IServices\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -92,6 +92,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="IPharmacyDatabaseService.Business.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IPharmacyDatabaseService.Business.cs</LastGenOutput>

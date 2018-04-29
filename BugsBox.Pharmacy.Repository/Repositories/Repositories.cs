@@ -129,6 +129,18 @@ namespace BugsBox.Pharmacy.Repository
 	}
     
 	/// <summary>
+    /// 行政区域划分仓储实现
+    /// </summary>
+    public partial class ChinaDistrictRepository :CFRepository<ChinaDistrict>,IChinaDistrictRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public ChinaDistrictRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
     /// 仓储实现
     /// </summary>
     public partial class DirectSalesOrderRepository :CFRepository<DirectSalesOrder>,IDirectSalesOrderRepository
@@ -159,6 +171,30 @@ namespace BugsBox.Pharmacy.Repository
     { 
 		 public RepositoryProvider RepositoryProvider { get; set; }
 		 public DocumentRefuseRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
+    /// 药物库存变动历史仓储实现
+    /// </summary>
+    public partial class DrugInventoryRecordHisRepository :CFRepository<DrugInventoryRecordHis>,IDrugInventoryRecordHisRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public DrugInventoryRecordHisRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
+    /// 药品养护记录仓储实现
+    /// </summary>
+    public partial class DrugMaintenanceRecordRepository :CFRepository<DrugMaintenanceRecord>,IDrugMaintenanceRecordRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public DrugMaintenanceRecordRepository(Db db)
             : base(db)
         { 
         }
@@ -759,6 +795,18 @@ namespace BugsBox.Pharmacy.Repository
     { 
 		 public RepositoryProvider RepositoryProvider { get; set; }
 		 public MmedicalInstitutionPermitRepository(Db db)
+            : base(db)
+        { 
+        }
+	}
+    
+	/// <summary>
+    /// 全国工业产品生产许可证仓储实现
+    /// </summary>
+    public partial class IndustoryProductCertificateRepository :CFRepository<IndustoryProductCertificate>,IIndustoryProductCertificateRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public IndustoryProductCertificateRepository(Db db)
             : base(db)
         { 
         }
@@ -1387,18 +1435,18 @@ namespace BugsBox.Pharmacy.Repository
         { 
         }
 	}
-
-    /// <summary>
-    /// 库位仓储实现
+    
+	/// <summary>
+    /// 仓储实现
     /// </summary>
-    public partial class WarehouseZonePositionRepository : CFRepository<WareHouseZonePosition>, IWarehouseZonePositionRepository
-    {
-        public RepositoryProvider RepositoryProvider { get; set; }
-        public WarehouseZonePositionRepository(Db db)
+    public partial class WareHouseZonePositionRepository :CFRepository<WareHouseZonePosition>,IWareHouseZonePositionRepository
+    { 
+		 public RepositoryProvider RepositoryProvider { get; set; }
+		 public WareHouseZonePositionRepository(Db db)
             : base(db)
-        {
+        { 
         }
-    }
+	}
     
 	/// <summary>
     /// 报警设置仓储实现
@@ -1423,16 +1471,7 @@ namespace BugsBox.Pharmacy.Repository
         { 
         }
 	}
-
-
-    public partial class IndustoryProductCertificateRepository : CFRepository<IndustoryProductCertificate>, IIndustoryProductCertificateRepository
-    {
-        public RepositoryProvider RepositoryProvider { get; set; }
-        public IndustoryProductCertificateRepository(Db db)
-            : base(db)
-        {
-        }
-    }
+   
 }
  
  

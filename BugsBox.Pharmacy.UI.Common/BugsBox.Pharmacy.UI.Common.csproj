@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.UI.Common\</OutputPath>
+    <OutputPath>..\_output\_temp\BugsBox.Pharmacy.UI.Common\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -231,6 +231,7 @@
     <Content Include="Resources\Help.png" />
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\ViewContent.png" />
+    <None Include="app.config" />
     <None Include="Resources\Refresh.jpg" />
   </ItemGroup>
   <ItemGroup />

@@ -10,3 +10,8 @@ D:\DQ\phamacy2016\BugsBox.Windows.Forms\CustomValidatorsLibrary\bin\Debug\Custom
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.csproj.CoreCompileInputs.cache
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.dll
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\bin\Debug\CustomValidatorsLibrary.dll
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\bin\Debug\CustomValidatorsLibrary.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.csproj.CoreCompileInputs.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.dll
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.pdb

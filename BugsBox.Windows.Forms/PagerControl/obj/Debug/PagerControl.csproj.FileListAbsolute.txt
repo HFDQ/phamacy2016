@@ -14,3 +14,10 @@ D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.cspr
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.csproj.CoreCompileInputs.cache
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.dll
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.dll
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\PagerControl\bin\Debug\PagerControl.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.PagerControl.resources
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.csproj.GenerateResource.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.csproj.CoreCompileInputs.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.dll
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\PagerControl\obj\Debug\PagerControl.pdb

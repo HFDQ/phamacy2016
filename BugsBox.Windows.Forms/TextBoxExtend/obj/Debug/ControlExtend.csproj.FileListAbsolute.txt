@@ -17,3 +17,12 @@ D:\DQ\phamacy2016\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\ControlExtend.cs
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\TextBoxExtend.dll
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\TextBoxExtend.pdb
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\ControlExtend.csprojResolveAssemblyReference.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\_output\_temp\TextBoxExtend\TextBoxExtend.dll
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\_output\_temp\TextBoxExtend\TextBoxExtend.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\BugsBox.Windows.Forms.Input.AutoCompleteTextBox.resources
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\BugsBox.Windows.Forms.Input.CoolTextBox.resources
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\ControlExtend.csproj.GenerateResource.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\ControlExtend.csproj.CoreCompileInputs.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\TextBoxExtend.dll
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\TextBoxExtend.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\TextBoxExtend\obj\Debug\ControlExtend.csprojResolveAssemblyReference.cache

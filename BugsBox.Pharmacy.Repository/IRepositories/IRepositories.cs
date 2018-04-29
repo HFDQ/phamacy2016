@@ -92,6 +92,14 @@ namespace BugsBox.Pharmacy.Repository
 	}
     
 	/// <summary>
+    /// 行政区域划分仓储接口
+    /// </summary>
+    public partial interface IChinaDistrictRepository : IRepository<ChinaDistrict> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
     /// 仓储接口
     /// </summary>
     public partial interface IDirectSalesOrderRepository : IRepository<DirectSalesOrder> 
@@ -111,6 +119,22 @@ namespace BugsBox.Pharmacy.Repository
     /// 收货拒收单仓储接口
     /// </summary>
     public partial interface IDocumentRefuseRepository : IRepository<DocumentRefuse> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
+    /// 药物库存变动历史仓储接口
+    /// </summary>
+    public partial interface IDrugInventoryRecordHisRepository : IRepository<DrugInventoryRecordHis> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
+    /// 药品养护记录仓储接口
+    /// </summary>
+    public partial interface IDrugMaintenanceRecordRepository : IRepository<DrugMaintenanceRecord> 
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}
@@ -511,6 +535,14 @@ namespace BugsBox.Pharmacy.Repository
     /// 医疗机构执业许可证仓储接口
     /// </summary>
     public partial interface IMmedicalInstitutionPermitRepository : IRepository<MmedicalInstitutionPermit> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
+    
+	/// <summary>
+    /// 全国工业产品生产许可证仓储接口
+    /// </summary>
+    public partial interface IIndustoryProductCertificateRepository : IRepository<IndustoryProductCertificate> 
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}
@@ -930,14 +962,14 @@ namespace BugsBox.Pharmacy.Repository
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}
-
-    /// <summary>
-    /// 库位仓储接口
+    
+	/// <summary>
+    /// 仓储接口
     /// </summary>
-    public partial interface IWarehouseZonePositionRepository : IRepository<WareHouseZonePosition>
-    {
-        RepositoryProvider RepositoryProvider { get; set; }
-    }
+    public partial interface IWareHouseZonePositionRepository : IRepository<WareHouseZonePosition> 
+    { 
+		 RepositoryProvider RepositoryProvider { get; set; }
+	}
     
 	/// <summary>
     /// 报警设置仓储接口
@@ -954,14 +986,6 @@ namespace BugsBox.Pharmacy.Repository
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}
-
-    /// <summary>
-    /// 全国工业产品生产许可证
-    /// </summary>
-    public partial interface IIndustoryProductCertificateRepository : IRepository<IndustoryProductCertificate>
-    {
-        RepositoryProvider RepositoryProvider { get; set; }
-    }
    
 }
  

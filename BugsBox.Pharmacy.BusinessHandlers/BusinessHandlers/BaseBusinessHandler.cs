@@ -75,7 +75,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             try
             {
                 //LoggerHelper.Instance.Warning(string.Format("开始创建[{0}]BusinessHandler", EntityName));
-                IsStoreEntity = EType.GetInterfaces().Any(t => t == StoreInterfaceType);
+                 IsStoreEntity = EType.GetInterfaces().Any(t => t == StoreInterfaceType);
                 //log.Information(string.Format("检查实体[{0}]是否为门店相关实体：{1}", EntityName, IsStoreEntity));
                 //BusinessHandlerFactory = businessHandlerFactory; 
                 RepositoryProvider = repositoryProvider;

@@ -16,3 +16,12 @@ D:\DQ\phamacy2016\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.csproj.C
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.csproj.CopyComplete
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.dll
 D:\DQ\phamacy2016\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.pdb
+D:\DQ\药品经营系统\_output\_temp\BugsBox.Windows.Forms\BugsBox.Windows.Forms.dll
+D:\DQ\药品经营系统\_output\_temp\BugsBox.Windows.Forms\BugsBox.Windows.Forms.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.FormExtend.resources
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.NumericUpDownEditingControl.resources
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.csproj.GenerateResource.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.csproj.CoreCompileInputs.cache
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.csproj.CopyComplete
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.dll
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\obj\Debug\BugsBox.Windows.Forms.pdb

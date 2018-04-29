@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.clmDrugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSupplyUnitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +74,7 @@
             this.WarehouseZoneName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPLNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProcess = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -82,6 +83,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -102,6 +104,16 @@
             this.panel1.Size = new System.Drawing.Size(887, 59);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(707, 31);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(92, 23);
+            this.button6.TabIndex = 22;
+            this.button6.Text = "查看损益记录";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // textBox2
             // 
@@ -309,15 +321,6 @@
             this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 59);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(887, 322);
-            this.panel3.TabIndex = 14;
-            // 
             // clmDrugName
             // 
             this.clmDrugName.DataPropertyName = "ProductGeneralName";
@@ -478,6 +481,15 @@
             this.colProcess.Visible = false;
             this.colProcess.Width = 59;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 59);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(887, 322);
+            this.panel3.TabIndex = 14;
+            // 
             // StorageQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -540,5 +552,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn WarehouseZoneName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPLNum;
         private System.Windows.Forms.DataGridViewButtonColumn colProcess;
+        private System.Windows.Forms.Button button6;
     }
 }

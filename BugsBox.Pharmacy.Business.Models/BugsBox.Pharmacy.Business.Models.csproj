@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\_output\_temp\BugsBox.Pharmacy.Business.Models\</OutputPath>
+    <OutputPath>..\_output\_temp\BugsBox.Pharmacy.Business.Models\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -72,6 +72,7 @@
     <Compile Include="GenericCommonClass.cs" />
     <Compile Include="HistoryPurchase.cs" />
     <Compile Include="InstrumentsModel.cs" />
+    <Compile Include="InventeryChangeModel.cs" />
     <Compile Include="InventeryModel.cs" />
     <Compile Include="Model_IdName.cs" />
     <Compile Include="NotifyData.cs" />

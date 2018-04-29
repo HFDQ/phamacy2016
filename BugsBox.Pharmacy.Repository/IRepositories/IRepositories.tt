@@ -1,7 +1,7 @@
 ﻿<#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ include file="EF.Utility.CS.ttinclude"#>
-<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
-<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Application.Core.dll" #> 
+<#@ assembly name="$(SolutionDir)\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
+<#@ assembly name="$(SolutionDir)\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Application.Core.dll" #> 
 <#@ import namespace="System.IO" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
 <#@ import namespace="System.Reflection" #>
@@ -19,7 +19,7 @@
 
 <#@ output extension=".cs" #>
 <#
-string entityAssemblyFullPath="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll";
+string entityAssemblyFullPath="$(SolutionDir)\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll";
 //public DbSet<Announcement> Announcements { get; set; }
 string  dbSetPropertyFormat="public DbSet<{0}> {0}s { get; set; }";
 Type EntityType=typeof(Entity);
