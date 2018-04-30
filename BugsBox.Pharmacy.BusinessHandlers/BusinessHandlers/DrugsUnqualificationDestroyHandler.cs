@@ -11,7 +11,7 @@ using BugsBox.Pharmacy.Repository;
 
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
-    partial class DrugsUnqualificationDestroyHandler
+    partial class DrugsUnqualificationDestroyBusinessHandler
     {
         protected override IQueryable<DrugsUnqualificationDestroy> IncludeNavigationProperties(IQueryable<DrugsUnqualificationDestroy> queryable)
         {
@@ -27,7 +27,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         }
 
 
-        public DrugsUnqualificationDestroy[] getDrugsUnqualificationDestroysByCondition(DateTime dtFrom,DateTime dtTo,string keyword)
+        public DrugsUnqualificationDestroy[] getDrugsUnqualificationDestroysByCondition(DateTime dtFrom, DateTime dtTo, string keyword)
         {
             var all = this.Queryable;
             if (dtFrom != DateTime.MinValue)
@@ -35,22 +35,22 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 all = all.Where(c => c.DestroyTime >= dtFrom);
             }
             if (dtTo != DateTime.MaxValue)
-            {                
+            {
                 all = all.Where(c => c.DestroyTime <= dtTo);
             }
             if (!keyword.IsNullOrTrimEmpty())
             {
-                all = all.Where(c => c.drugName.Contains(keyword)||c.batchNo.Contains(keyword)||c.DestroyMan.Contains(keyword)||c.DestroyPlace.Contains(keyword)||c.wareHouseZone.Contains(keyword));
+                all = all.Where(c => c.drugName.Contains(keyword) || c.batchNo.Contains(keyword) || c.DestroyMan.Contains(keyword) || c.DestroyPlace.Contains(keyword) || c.wareHouseZone.Contains(keyword));
             }
 
             return all.ToArray();
         }
 
-        public bool CreateDestroyByDrugsBreakage(Models.DrugsBreakage[] dbs,Models.DrugsUnqualificationDestroy d)
+        public bool CreateDestroyByDrugsBreakage(Models.DrugsBreakage[] dbs, Models.DrugsUnqualificationDestroy d)
         {
             string msg = string.Empty;
             try
-            {                
+            {
                 foreach (var c in dbs)
                 {
                     c.ApprovalStatusValue = 32;
@@ -73,22 +73,23 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     dud.drugName = c.drugName;
                     dud.DrugsUnqualicationID = c.Id;
                     dud.ExpireDate = c.ExpireDate;
-                    dud.Id = Guid.NewGuid();                    
+                    dud.Id = Guid.NewGuid();
                     dud.price = c.quantity * c.PurchasePrice;
                     dud.produceDate = c.produceDate;
                     dud.Specific = c.Specific;
                     dud.SupervisorOpinion = d.SupervisorOpinion;
                     dud.updateTime = DateTime.Now;
                     dud.wareHouseZone = "不合格区";
-                    BusinessHandlerFactory.DrugsUnqualificationDestroyHandler.Add(dud);
+                    BusinessHandlerFactory.DrugsUnqualificationDestroyBusinessHandler.Add(dud);
                 }
                 
+
                 this.Save();
-                
+
                 return true;
             }
             catch (Exception ex)
-            {                
+            {
                 msg = "销毁报告写入失败！";
                 return false;
             }

@@ -371,22 +371,22 @@ namespace BugsBox.Pharmacy.Repository
 				}
 			}
 		} 
-		private IdrugsUnqualicationRepository _drugsUnqualicationRepository=null;
+		private IDrugsUnqualicationRepository _DrugsUnqualicationRepository=null;
 	    /// <summary> 
-		/// 不合格药品(drugsUnqualication) 仓储对象
+		/// 不合格药品(DrugsUnqualication) 仓储对象
         /// </summary>
-		public IdrugsUnqualicationRepository drugsUnqualicationRepository
+		public IDrugsUnqualicationRepository DrugsUnqualicationRepository
 		{
 			get
 			{
 				lock(this)
 				{
-					if( _drugsUnqualicationRepository==null)
+					if( _DrugsUnqualicationRepository==null)
 					{
-						_drugsUnqualicationRepository=new drugsUnqualicationRepository(Db);
-						_drugsUnqualicationRepository.RepositoryProvider = this;
+						_DrugsUnqualicationRepository=new DrugsUnqualicationRepository(Db);
+						_DrugsUnqualicationRepository.RepositoryProvider = this;
 					}
-					return _drugsUnqualicationRepository;
+					return _DrugsUnqualicationRepository;
 				}
 			}
 		} 
@@ -2271,22 +2271,22 @@ namespace BugsBox.Pharmacy.Repository
 				}
 			}
 		} 
-		private IWareHouseZonePositionRepository _WareHouseZonePositionRepository=null;
+		private IWarehouseZonePositionRepository _WarehouseZonePositionRepository=null;
 	    /// <summary> 
-		/// (WareHouseZonePosition) 仓储对象
+		/// (WarehouseZonePosition) 仓储对象
         /// </summary>
-		public IWareHouseZonePositionRepository WareHouseZonePositionRepository
+		public IWarehouseZonePositionRepository WarehouseZonePositionRepository
 		{
 			get
 			{
 				lock(this)
 				{
-					if( _WareHouseZonePositionRepository==null)
+					if( _WarehouseZonePositionRepository==null)
 					{
-						_WareHouseZonePositionRepository=new WareHouseZonePositionRepository(Db);
-						_WareHouseZonePositionRepository.RepositoryProvider = this;
+						_WarehouseZonePositionRepository=new WarehouseZonePositionRepository(Db);
+						_WarehouseZonePositionRepository.RepositoryProvider = this;
 					}
-					return _WareHouseZonePositionRepository;
+					return _WarehouseZonePositionRepository;
 				}
 			}
 		} 
@@ -2404,9 +2404,9 @@ namespace BugsBox.Pharmacy.Repository
 			{
 				_DrugsUndeterminateRepository.Dispose();
 			}  
-			if( _drugsUnqualicationRepository!=null)
+			if( _DrugsUnqualicationRepository!=null)
 			{
-				_drugsUnqualicationRepository.Dispose();
+				_DrugsUnqualicationRepository.Dispose();
 			}  
 			if( _DrugsUnqualificationDestroyRepository!=null)
 			{
@@ -2804,9 +2804,9 @@ namespace BugsBox.Pharmacy.Repository
 			{
 				_WarehouseZoneRepository.Dispose();
 			}  
-			if( _WareHouseZonePositionRepository!=null)
+			if( _WarehouseZonePositionRepository!=null)
 			{
-				_WareHouseZonePositionRepository.Dispose();
+				_WarehouseZonePositionRepository.Dispose();
 			}  
 			if( _WaringSetRepository!=null)
 			{

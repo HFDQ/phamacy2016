@@ -10,7 +10,7 @@ using System.Data.Entity;
 using BugsBox.Pharmacy.Repository;
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
-    partial class EduDocumentHandler
+    partial class EduDocumentBusinessHandler
     {
         protected override IQueryable<EduDocument> IncludeNavigationProperties(IQueryable<EduDocument> queryable)
         {

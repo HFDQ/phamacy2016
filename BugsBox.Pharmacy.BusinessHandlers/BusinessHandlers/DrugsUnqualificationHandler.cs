@@ -11,9 +11,9 @@ using BugsBox.Pharmacy.Repository;
 
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
-    partial class DrugsUnqualificationHandler
+    partial class DrugsUnqualicationBusinessHandler
     {
-        protected override IQueryable<drugsUnqualication> IncludeNavigationProperties(IQueryable<drugsUnqualication> queryable)
+        protected override IQueryable<DrugsUnqualication> IncludeNavigationProperties(IQueryable<DrugsUnqualication> queryable)
         {
             try
             {
@@ -22,21 +22,21 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             catch (Exception ex)
             {
                 ex = new BusinessException(string.Format("[{0}]导航属性处理出错", EntityName), ex);
-                return HandleException<IQueryable<drugsUnqualication>>(ex.Message, ex);
+                return HandleException<IQueryable<DrugsUnqualication>>(ex.Message, ex);
             }
         }
 
-        public drugsUnqualication GetDrugsUnqualificationByID(Guid ItemGUID)
+        public DrugsUnqualication GetDrugsUnqualificationByID(Guid ItemGUID)
         {
             try
             {
-                drugsUnqualication d=this.Fetch(r => r.Id == ItemGUID).FirstOrDefault();
+                DrugsUnqualication d=this.Fetch(r => r.Id == ItemGUID).FirstOrDefault();
                 
                 return d;
             }
             catch (Exception ex)
             {
-                return this.HandleException<drugsUnqualication>("获取实体药品不合格信息失败", ex);
+                return this.HandleException<DrugsUnqualication>("获取实体药品不合格信息失败", ex);
             }
         }
 
@@ -44,9 +44,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {
-                var queryBuilder = QueryBuilder.Create<drugsUnqualication>().Equals(p => p.flowID, flowID)
+                var queryBuilder = QueryBuilder.Create<DrugsUnqualication>().Equals(p => p.flowID, flowID)
                     .Equals(p => p.Deleted, false);
-                var all = BusinessHandlerFactory.RepositoryProvider.Db.drugsUnqualications.Where(queryBuilder.Expression);
+                var all = BusinessHandlerFactory.RepositoryProvider.Db.DrugsUnqualications.Where(queryBuilder.Expression);
                 if (all.Where(r => r.DrugInventoryRecordID.Equals(Guid.Empty)).Count() <= 0)
                 {
                     var c = from i in all
@@ -129,9 +129,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {                
-                var queryBuilder = QueryBuilder.Create<drugsUnqualication>().In(p=>p.createUID,createUID)
+                var queryBuilder = QueryBuilder.Create<DrugsUnqualication>().In(p=>p.createUID,createUID)
                     .Equals(p=>p.Deleted,false);                  
-                var all = BusinessHandlerFactory.RepositoryProvider.Db.drugsUnqualications.Where(queryBuilder.Expression);
+                var all = BusinessHandlerFactory.RepositoryProvider.Db.DrugsUnqualications.Where(queryBuilder.Expression);
                 var query = from i in all
                             join e in BusinessHandlerFactory.RepositoryProvider.Db.Users on i.createUID equals e.Id 
                             join f in BusinessHandlerFactory.RepositoryProvider.Db.Employees on e.EmployeeId equals f.Id
@@ -161,7 +161,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             }
         }
 
-        public List<drugsUnqualication> GetDrugsUnqualificationByCondition(drugsUnqualificationCondition Condition)
+        public List<DrugsUnqualication> GetDrugsUnqualificationByCondition(drugsUnqualificationCondition Condition)
         {
             try
             {
@@ -205,7 +205,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                         join j in RepositoryProvider.Db.DrugInventoryRecords 
                         on i.DrugInventoryRecordID equals j.Id into left
                         from iv in left.DefaultIfEmpty()
-                        select new drugsUnqualication
+                        select new DrugsUnqualication
                         {
                             DrugInventoryRecordID=i.DrugInventoryRecordID,
                             quantity=i.quantity,
@@ -239,7 +239,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             }
             catch (Exception ex)
             {
-                return this.HandleException<List<drugsUnqualication>>("不合格药品查询失败!", ex);
+                return this.HandleException<List<DrugsUnqualication>>("不合格药品查询失败!", ex);
             }
             finally
             {
@@ -247,7 +247,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             }
         }
 
-        public void addDrugsUnqualityApproval(drugsUnqualication value, Guid approvalFlowTypeID, Guid userID,string changeNote)
+        public void addDrugsUnqualityApproval(DrugsUnqualication value, Guid approvalFlowTypeID, Guid userID,string changeNote)
         {
             try
             {
@@ -275,7 +275,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         }
 
         //编辑不合格药品，以标志来区分：0->新增；1->修改；2->删除
-        public bool EditDrugUnqualification(Models.drugsUnqualication du,int flag)
+        public bool EditDrugUnqualification(Models.DrugsUnqualication du,int flag)
         {
             bool b=false;
             switch(flag)
@@ -294,7 +294,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             return b;
         }
 
-        private bool AddUnq(drugsUnqualication du)
+        private bool AddUnq(DrugsUnqualication du)
         {
             du.createTime = DateTime.Now;
             if(du.DrugInventoryRecordID!=Guid.Empty)
@@ -317,17 +317,17 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             }
 
             du.createTime = DateTime.Now;            
-            BusinessHandlerFactory.DrugsUnqualificationHandler.Add(du);
+            BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Add(du);
             du = null;
             return true;
         }
 
-        private bool ModUnq(drugsUnqualication du)
+        private bool ModUnq(DrugsUnqualication du)
         {
             du.updateTime = DateTime.Now;
             if (du.DrugInventoryRecordID != Guid.Empty)
             {
-                drugsUnqualication duOld = BusinessHandlerFactory.DrugsUnqualificationHandler.Get(du.Id);
+                DrugsUnqualication duOld = BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Get(du.Id);
                 DrugInventoryRecord dir = BusinessHandlerFactory.DrugInventoryRecordBusinessHandler.Get(du.DrugInventoryRecordID);
 
                 if (dir == null)
@@ -347,11 +347,11 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 dir.Valid = dir.CanSaleNum > 0 ? true : false;
                 BusinessHandlerFactory.DrugInventoryRecordBusinessHandler.Save(dir);
             }            
-            BusinessHandlerFactory.DrugsUnqualificationHandler.Save(du);
+            BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Save(du);
             return true;
         }
 
-        private bool delUnq(drugsUnqualication du)
+        private bool delUnq(DrugsUnqualication du)
         {
             du.DeleteTime = DateTime.Now;
             if (du.DrugInventoryRecordID != Guid.Empty)
@@ -369,7 +369,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
                 BusinessHandlerFactory.DrugInventoryRecordBusinessHandler.Save(dir);
             }
-            BusinessHandlerFactory.DrugsUnqualificationHandler.Delete(du.Id);
+            BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Delete(du.Id);
             return true;
         }
     }

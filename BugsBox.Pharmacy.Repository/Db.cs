@@ -7,9 +7,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Data.Entity;
-using BugsBox.Application.Core;  
+using BugsBox.Application.Core;
 using BugsBox.Common;
-using BugsBox.Common.Config; 
+using BugsBox.Common.Config;
 
 namespace BugsBox.Pharmacy.Repository
 {
@@ -28,7 +28,7 @@ namespace BugsBox.Pharmacy.Repository
             Configuration.LazyLoadingEnabled = true;
             //Log.Warning("LazyLoadingEnabled(延时加载模式)" + Configuration.LazyLoadingEnabled.ToString());
             //启动代理创建模式
-            Configuration.ProxyCreationEnabled = false;  
+            Configuration.ProxyCreationEnabled = false;
             //Log.Warning("ProxyCreationEnabled(代理创建模式)" + Configuration.ProxyCreationEnabled.ToString());
         }
 
@@ -41,13 +41,13 @@ namespace BugsBox.Pharmacy.Repository
                     LoggerHelper.Instance.Information("BEGIND INIT CREATEANDINITDATABASE");
                     Database.SetInitializer<Db>(new DropCreateDatabaseIfModelChanges<Db>());
                     Database.SetInitializer(new DefaultDbInitializer());
-                    LoggerHelper.Instance.Information("END INIT CREATEANDINITDATABASE"); 
-              
+                    LoggerHelper.Instance.Information("END INIT CREATEANDINITDATABASE");
+
                     new Db().Departments.Count();
                     AppConfig.Config.InitDateTime = DateTime.Now;
                     AppConfig.Config.AutoCreateAndInitDatabase = false;
-                    ConfigHelper<AppConfig>.SaveConfig(); 
-                  
+                    ConfigHelper<AppConfig>.SaveConfig();
+
                 }
                 return true;
             }
@@ -57,7 +57,7 @@ namespace BugsBox.Pharmacy.Repository
                 LoggerHelper.Instance.Error(ex);
                 return false;
             }
-        } 
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -90,7 +90,7 @@ namespace BugsBox.Pharmacy.Repository
                 modelBuilder.Entity<Models.OutInventoryDetail>().Property(p => p.Price),
                 modelBuilder.Entity<Models.OutInventoryDetail>().Property(p => p.UnitPrice),
                 modelBuilder.Entity<Models.DrugsUnqualificationDestroy>().Property(p => p.price),
-                
+
                 modelBuilder.Entity<Models.DrugsUndeterminate>().Property(p => p.PurchasePrice),
                 modelBuilder.Entity<Models.DrugMaintainRecordDetail>().Property(p => p.Price),
                 modelBuilder.Entity<Models.DrugInventoryRecord>().Property(p => p.PurchasePricce),
@@ -102,11 +102,11 @@ namespace BugsBox.Pharmacy.Repository
                 modelBuilder.Entity<Models.DrugInfo>().Property(p => p.RetailPrice),
                 modelBuilder.Entity<Models.DrugInfo>().Property(p => p.SalePrice),
                 modelBuilder.Entity<Models.DrugInfo>().Property(p => p.TagPrice),
-                modelBuilder.Entity<Models.DrugInfo>().Property(p => p.WholeSalePrice),                
+                modelBuilder.Entity<Models.DrugInfo>().Property(p => p.WholeSalePrice),
                 modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.DirectSaleDiff),
                 modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.SupplyPrice),
                 modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.SalePrice),
-                
+
             };
 
             properties.ToList().ForEach(property =>
@@ -114,7 +114,7 @@ namespace BugsBox.Pharmacy.Repository
                 property.HasPrecision(18, 4);
             });
 
-            var NumQuantityProperties =new[]
+            var NumQuantityProperties = new[]
             {
                 modelBuilder.Entity<Models.DrugInventoryRecord>().Property(so => so.CanSaleNum),
                 modelBuilder.Entity<Models.DrugInventoryRecord>().Property(so => so.CurrentInventoryCount),
@@ -133,9 +133,9 @@ namespace BugsBox.Pharmacy.Repository
                 modelBuilder.Entity<Models.DrugsInventoryMove>().Property(so => so.quantity),
                 modelBuilder.Entity<Models.DrugsUndeterminate>().Property(so => so.QualificationQuantity),
                 modelBuilder.Entity<Models.DrugsUndeterminate>().Property(so => so.quantity),
-                modelBuilder.Entity<Models.drugsUnqualication>().Property(so => so.quantity),
-                modelBuilder.Entity<Models.drugsUnqualificationQuery>().Property(so => so.CurrentInventoryCount),
-                modelBuilder.Entity<Models.drugsUnqualificationQuery>().Property(so => so.quantity),
+                modelBuilder.Entity<Models.DrugsUnqualication>().Property(so => so.quantity),
+                modelBuilder.Entity<Models.DrugsUnqualificationQuery>().Property(so => so.CurrentInventoryCount),
+                modelBuilder.Entity<Models.DrugsUnqualificationQuery>().Property(so => so.quantity),
                 modelBuilder.Entity<Models.InventoryRecord>().Property(so => so.DismantingAmount),
                 modelBuilder.Entity<Models.InventoryRecord>().Property(so => so.MaxInventoryCount),
                 modelBuilder.Entity<Models.InventoryRecord>().Property(so => so.MinInventoryCount),
@@ -175,7 +175,7 @@ namespace BugsBox.Pharmacy.Repository
                 modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.Amount),
             };
 
-            NumQuantityProperties.ToList().ForEach(r=>r.HasPrecision(14,4));
+            NumQuantityProperties.ToList().ForEach(r => r.HasPrecision(14, 4));
 
             base.OnModelCreating(modelBuilder);
         }
@@ -188,7 +188,7 @@ namespace BugsBox.Pharmacy.Repository
         public void Attach<TEntity>(TEntity item) where TEntity : class, IEntity, new()
         {
             //attach and set as unchanged
-            base.Entry<TEntity>(item).State =EntityState.Unchanged;
+            base.Entry<TEntity>(item).State = EntityState.Unchanged;
         }
 
         public void SetModified<TEntity>(TEntity item) where TEntity : class, IEntity, new()
@@ -220,7 +220,7 @@ namespace BugsBox.Pharmacy.Repository
                         var err = string.Format("实体[{0}]字段: {1} 错误: {2}", validationErrors.Entry.Entity.GetType().Name, validationError.PropertyName,
                                                validationError.ErrorMessage);
                         Log.Error(err);
-                        error+=err;
+                        error += err;
                     }
                 }
                 Exception iex = new Exception(error, dbEx);
@@ -229,7 +229,7 @@ namespace BugsBox.Pharmacy.Repository
             }
             catch (Exception ex)
             {
-                ex=new Exception("向数据库提交失败",ex);
+                ex = new Exception("向数据库提交失败", ex);
                 Log.Error(ex);
                 throw ex;
             }
@@ -238,17 +238,17 @@ namespace BugsBox.Pharmacy.Repository
         public void CommitAndRefreshChanges()
         {
             DbUpdateConcurrencyException oex = null;
-            bool saveFailed = false; 
+            bool saveFailed = false;
             do
             {
                 try
                 {
-                    base.SaveChanges(); 
-                    saveFailed = false; 
+                    base.SaveChanges();
+                    saveFailed = false;
                 }
                 catch (DbUpdateConcurrencyException ex)
                 {
-                    oex=ex;
+                    oex = ex;
                     saveFailed = true;
 
                     ex.Entries.ToList()
@@ -287,7 +287,7 @@ namespace BugsBox.Pharmacy.Repository
             {
                 throw ex;
             }
-            
+
         }
     }
 }

@@ -93,8 +93,6 @@ D:\DQ\phamacy2016\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.Monito
 D:\DQ\phamacy2016\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.csproj.CopyComplete
 D:\DQ\phamacy2016\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.dll
 D:\DQ\phamacy2016\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.pdb
-D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.csprojResolveAssemblyReference.cache
-D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.csproj.CoreCompileInputs.cache
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Pharmacy.MonitorHost.dll.config
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Pharmacy.MonitorHost.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Pharmacy.MonitorHost.pdb
@@ -141,6 +139,8 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\Autofac.xml
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\Omu.ValueInjecter.xml
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Common.Security.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Common.Security.xml
+D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.csprojResolveAssemblyReference.cache
+D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.csproj.CoreCompileInputs.cache
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.pdb

@@ -10,7 +10,7 @@ using System.Data.Entity;
 
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
-    public partial class WareHouseZonePostionBusinessHandler
+    public partial class WarehouseZonePositionBusinessHandler
     {
         object locker = new object();
 
@@ -19,7 +19,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         /// </summary>
         /// <param name="ListWareHouseZonePositions"></param>
         /// <returns></returns>
-        public bool AddWareHouseZonePositions(IEnumerable<WareHouseZonePosition> ListWareHouseZonePositions)
+        public bool AddWareHouseZonePositions(IEnumerable<WarehouseZonePosition> ListWareHouseZonePositions)
         {
             lock (locker)
             {
@@ -50,7 +50,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         /// </summary>
         /// <param name="ListWareHouseZonePositions"></param>
         /// <returns></returns>
-        public bool SaveWareHouseZonePosition(IEnumerable<WareHouseZonePosition> ListWareHouseZonePositions)
+        public bool SaveWareHouseZonePosition(IEnumerable<WarehouseZonePosition> ListWareHouseZonePositions)
         {
             lock (locker)
             {
@@ -59,7 +59,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     foreach (var r in ListWareHouseZonePositions)
                     {
                         r.UpdateTime = DateTime.Now;
-                        BusinessHandlerFactory.WareHouseZonePostionBusinessHandler.Save(r);
+                        BusinessHandlerFactory.WarehouseZonePositionBusinessHandler.Save(r);
                     }
                     this.Save();
                     return true;
@@ -92,7 +92,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                         var d = RepositoryProvider.Db.WarehouseZonePositions.FirstOrDefault(u => u.Id == r);
                         d.UpdateTime = DateTime.Now;
                         d.Deleted = true;
-                        BusinessHandlerFactory.WareHouseZonePostionBusinessHandler.Save(d);
+                        BusinessHandlerFactory.WarehouseZonePositionBusinessHandler.Save(d);
                     }
                     this.Save();
                     return true;
@@ -168,9 +168,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             return re.OrderBy(r => r.WareHouseName).ThenBy(r => r.WareHouseZoneName).ThenBy(r => r.PIndex);
         }
 
-        public Models.WareHouseZonePosition GetWarehouseZonePositionById(Guid Id)
+        public Models.WarehouseZonePosition GetWarehouseZonePositionById(Guid Id)
         {
-            var re = RepositoryProvider.Db.WarehouseZonePositions.Where(r => !r.Deleted && r.Id==Id).FirstOrDefault();
+            var re = RepositoryProvider.Db.WarehouseZonePositions.Where(r => !r.Deleted && r.Id == Id).FirstOrDefault();
             return re;
         }
     }

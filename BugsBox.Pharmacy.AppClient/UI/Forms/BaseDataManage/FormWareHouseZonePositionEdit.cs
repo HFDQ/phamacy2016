@@ -90,7 +90,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                 c.WareHouseZoneId = (Guid)this.comboBox2.SelectedValue;
                 c.Capacity = prc.Capacity;
 
-                var sub=new List<Models.WareHouseZonePosition>();
+                var sub=new List<Models.WarehouseZonePosition>();
                 sub.Add(c);
                 var b = this.PharmacyDatabaseService.SaveWareHouseZonePosition(sub,out msg);
 

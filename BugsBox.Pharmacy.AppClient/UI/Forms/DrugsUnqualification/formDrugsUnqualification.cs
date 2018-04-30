@@ -22,14 +22,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
     {
         DataTable dt = null;
         private bool flag;
-        drugsUnqualication item = null;
-        BindingList<drugsUnqualication> bList = new BindingList<drugsUnqualication>();
+        DrugsUnqualication item = null;
+        BindingList<DrugsUnqualication> bList = new BindingList<DrugsUnqualication>();
         double pageNum = 0.0;
         double pageSize=30.0;
         int recordCount = 0;
         decimal count;
         string msg=string.Empty;
-        drugsUnqualication currentDU = null;
+        DrugsUnqualication currentDU = null;
         InventeryModel CurrentIM = null;
 
         public formDrugsUnqualification()
@@ -258,7 +258,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
             {
                 if (MessageBox.Show("确定要提交至不合格审批流程吗？", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    drugsUnqualication du = bList[e.RowIndex];
+                    DrugsUnqualication du = bList[e.RowIndex];
                     du.ApprovalStatusValue = 0;
                     du.updateTime = DateTime.Now;
                     
@@ -339,7 +339,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
                             this.txtRemark.Text = "本品种：" + im.ProductGeneralName + ",未过期，但存在质量问题，需不合格审批后执行报损流程！";
                         }
 
-                        currentDU = new drugsUnqualication();
+                        currentDU = new DrugsUnqualication();
                         currentDU.ApprovalStatus = ApprovalStatus.NonApproval;
                         currentDU.ApprovalStatusValue = -1;
                         currentDU.batchNo = im.BatchNumber;
@@ -374,7 +374,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
 
         private void dgvDrugDetailList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.currentDU = this.dgvDrugDetailList.Rows[e.RowIndex].DataBoundItem as drugsUnqualication;;
+            this.currentDU = this.dgvDrugDetailList.Rows[e.RowIndex].DataBoundItem as DrugsUnqualication;;
             if (this.currentDU.source.Contains("质量复核"))
             {
                 MessageBox.Show("该单据已被质量复核，确定为不合格品，不得修改，请提交不合格审核！");

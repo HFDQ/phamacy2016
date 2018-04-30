@@ -354,7 +354,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         /// 药品缺货查询
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<LackDrugModel> GetDrugInfoForOutofStock(int stockLower)
+        public IEnumerable<LackDrugModel> GetDrugInfoForOutofStock(int stockLower, DateTime? begindate = null, DateTime? enddate = null)
         {
             try
             {
@@ -367,6 +367,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     wholePrice = c.Sum(n => n.CurrentInventoryCount * n.PurchasePricce),
                     wholeSales = c.Sum(n => n.InInventoryCount) - c.Sum(n => n.CanSaleNum),
                 });
+
+
+
 
 
                 var piids = RepositoryProvider.Db.PurchaseInInventeryOrderDetails.Where(r => !r.Deleted);

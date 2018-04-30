@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 
 namespace BugsBox.Pharmacy.Models
 {
-    public class drugsUnqualificationQuery
+    public class DrugsUnqualificationQuery
     {
         /// <summary>
         /// 编号

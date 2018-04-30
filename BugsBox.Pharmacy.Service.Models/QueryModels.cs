@@ -26,35 +26,35 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryApprovalFlowModel
     {
         [DataMember]
-        public Guid FlowId { get; set; }
+		public Guid FlowId;
         [DataMember]
-        public int SubFlowIdFrom { get; set; }
+		public int SubFlowIdFrom;
         [DataMember]
-        public int SubFlowIdTo { get; set; }
+		public int SubFlowIdTo;
         [DataMember]
-        public int StatusFrom = 1;
+		public int StatusFrom;
         [DataMember]
-        public int StatusTo = 16;
+		public int StatusTo;
         [DataMember]
-        public string ChangeNote { get; set; }
+		public string ChangeNote;
         [DataMember]
-        public Guid CreateUserId { get; set; }
+		public Guid CreateUserId;
         [DataMember]
-        public Guid UpdateUserId { get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-        public Guid ApprovalFlowTypeId { get; set; }
+		public Guid ApprovalFlowTypeId;
         [DataMember]
-        public Guid NextNodeID { get; set; }
+		public Guid NextNodeID;
         [DataMember]
-        public Guid StoreId { get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -69,30 +69,27 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int OrderTo;
         [DataMember]
-        public string Name { get; set; }
+		public string Name;
         [DataMember]
-        public string Decription { get; set; }
+		public string Decription;
         [DataMember]
-        public Guid CreateUserId { get; set; }
+		public Guid CreateUserId;
         [DataMember]
-        public Guid UpdateUserId { get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-        public Guid StoreId { get; set; }
+		public Guid StoreId;
         [DataMember]
-        public Guid RoleId { get; set; }
+		public Guid RoleId;
         [DataMember]
-        public Guid ApprovalFlowTypeId { get; set; }
-
-        [DataMember]
-        public Guid approvalFlowId { get; set; }
+		public Guid ApprovalFlowTypeId;
 
 	}
      
@@ -103,27 +100,27 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryApprovalFlowTypeModel
     {
         [DataMember]
-        public string Name { get; set; }
+		public string Name;
         [DataMember]
-        public string Decription { get; set; }
+		public string Decription;
         [DataMember]
-        public int ApprovalTypeValueFrom = 1;
+		public int ApprovalTypeValueFrom;
         [DataMember]
-        public int ApprovalTypeValueTo = 9;
+		public int ApprovalTypeValueTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -134,37 +131,37 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryApprovalFlowRecordModel
     {
         [DataMember]
-		public Guid FlowId{ get; set; }
+		public Guid FlowId;
         [DataMember]
 		public int SubFlowIdFrom;
         [DataMember]
 		public int SubFlowIdTo;
         [DataMember]
-		public Guid ApproveUserId{ get; set; }
+		public Guid ApproveUserId;
         [DataMember]
 		public DateTime ApproveTimeFrom;
         [DataMember]
 		public DateTime ApproveTimeTo;
         [DataMember]
-		public string Comment{ get; set; }
+		public string Comment;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid ApprovalFlowNodeId{ get; set; }
+		public Guid ApprovalFlowNodeId;
         [DataMember]
-		public Guid ApprovalFlowId{ get; set; }
+		public Guid ApprovalFlowId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -175,39 +172,39 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryBillDocumentCodeModel
     {
         [DataMember]
-		public bool Locked{ get; set; }
+		public bool Locked;
         [DataMember]
 		public bool QueryLocked=false;
         [DataMember]
-		public bool Used{ get; set; }
+		public bool Used;
         [DataMember]
 		public bool QueryUsed=false;
         [DataMember]
-		public Guid UsedId{ get; set; }
+		public Guid UsedId;
         [DataMember]
-		public bool Canceled{ get; set; }
+		public bool Canceled;
         [DataMember]
 		public bool QueryCanceled=false;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public int BillDocumentTypeValueFrom=0;
+		public int BillDocumentTypeValueFrom;
         [DataMember]
-		public int BillDocumentTypeValueTo=100;
+		public int BillDocumentTypeValueTo;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -218,17 +215,17 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryBusinessScopeModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid BusinessScopeCategoryId{ get; set; }
+		public Guid BusinessScopeCategoryId;
 
 	}
      
@@ -239,13 +236,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryBusinessScopeCategoryModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -258,13 +255,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryBusinessTypeModel
     {
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -277,9 +274,794 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryBusinessTypeManageCategoryDetailModel
     {
         [DataMember]
-		public Guid PurchaseManageCategoryDetailId{ get; set; }
+		public Guid PurchaseManageCategoryDetailId;
         [DataMember]
-		public Guid BusinessTypeId{ get; set; }
+		public Guid BusinessTypeId;
+
+	}
+     
+	/// <summary>
+    /// 行政区域划分服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryChinaDistrictModel
+    {
+        [DataMember]
+		public string Name;
+
+	}
+     
+	/// <summary>
+    /// 服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDirectSalesOrderModel
+    {
+        [DataMember]
+		public Guid CreateUserId;
+        [DataMember]
+		public DateTime CreateTimeFrom;
+        [DataMember]
+		public DateTime CreateTimeTo;
+        [DataMember]
+		public DateTime UpdateTimeFrom;
+        [DataMember]
+		public DateTime UpdateTimeTo;
+        [DataMember]
+		public Guid UpdateUserId;
+        [DataMember]
+		public string DocumentNumber;
+        [DataMember]
+		public Guid SupplyUnitId;
+        [DataMember]
+		public Guid PurchaseUnitId;
+        [DataMember]
+		public int ApprovalStatusValueFrom;
+        [DataMember]
+		public int ApprovalStatusValueTo;
+        [DataMember]
+		public Guid FlowId;
+        [DataMember]
+		public DateTime ApprovalDateTimeFrom;
+        [DataMember]
+		public DateTime ApprovalDateTimeTo;
+        [DataMember]
+		public Guid ApprovalUserId;
+        [DataMember]
+		public Guid CheckUserId;
+        [DataMember]
+		public string CheckUserName;
+        [DataMember]
+		public DateTime CheckTimeFrom;
+        [DataMember]
+		public DateTime CheckTimeTo;
+        [DataMember]
+		public string CheckAddress;
+        [DataMember]
+		public string CheckResulty;
+        [DataMember]
+		public int CheckStatusValueFrom;
+        [DataMember]
+		public int CheckStatusValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public string Memo;
+
+	}
+     
+	/// <summary>
+    /// 服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDirectSalesOrderDetailModel
+    {
+        [DataMember]
+		public Guid DrugInfoId;
+        [DataMember]
+		public decimal AmountFrom;
+        [DataMember]
+		public decimal AmountTo;
+        [DataMember]
+		public string BatchNumber;
+        [DataMember]
+		public string Origin;
+        [DataMember]
+		public DateTime ProductDateFrom;
+        [DataMember]
+		public DateTime ProductDateTo;
+        [DataMember]
+		public DateTime OutValidDateFrom;
+        [DataMember]
+		public DateTime OutValidDateTo;
+        [DataMember]
+		public decimal QualityAmountFrom;
+        [DataMember]
+		public decimal QualityAmountTo;
+        [DataMember]
+		public string QualityMemo;
+        [DataMember]
+		public decimal UnQualityAmountFrom;
+        [DataMember]
+		public decimal UnQualityAmountTo;
+        [DataMember]
+		public string UnqualityMemo;
+        [DataMember]
+		public string CheckMethod;
+        [DataMember]
+		public Guid DirectSalesOrderId;
+        [DataMember]
+		public decimal SupplyPriceFrom;
+        [DataMember]
+		public decimal SupplyPriceTo;
+        [DataMember]
+		public decimal SalePriceFrom;
+        [DataMember]
+		public decimal SalePriceTo;
+        [DataMember]
+		public decimal DirectSaleDiffFrom;
+        [DataMember]
+		public decimal DirectSaleDiffTo;
+        [DataMember]
+		public int SquenceFrom;
+        [DataMember]
+		public int SquenceTo;
+
+	}
+     
+	/// <summary>
+    /// 收货拒收单服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDocumentRefuseModel
+    {
+        [DataMember]
+		public string OrderDocumentID;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public string Creator;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public Guid DrugInfoID;
+        [DataMember]
+		public string Source;
+        [DataMember]
+		public string drugName;
+        [DataMember]
+		public string DocumentNumber;
+        [DataMember]
+		public decimal quantityFrom;
+        [DataMember]
+		public decimal quantityTo;
+        [DataMember]
+		public string BatchNumber;
+        [DataMember]
+		public string rsn;
+        [DataMember]
+		public string conclusion;
+        [DataMember]
+		public DateTime conclusionSignDateFrom;
+        [DataMember]
+		public DateTime conclusionSignDateTo;
+        [DataMember]
+		public string conclusionSigner;
+        [DataMember]
+		public int procFrom;
+        [DataMember]
+		public int procTo;
+        [DataMember]
+		public decimal RefuseQuantityFrom;
+        [DataMember]
+		public decimal RefuseQuantityTo;
+        [DataMember]
+		public decimal ReceiveQuantityFrom;
+        [DataMember]
+		public decimal ReceiveQuantityTo;
+        [DataMember]
+		public decimal PurchasePriceFrom;
+        [DataMember]
+		public decimal PurchasePriceTo;
+        [DataMember]
+		public string PurchaseUnitName;
+        [DataMember]
+		public Guid PurchaseOrderId;
+        [DataMember]
+		public string Specific;
+        [DataMember]
+		public string DosageType;
+
+	}
+     
+	/// <summary>
+    /// 药物库存变动历史服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDrugInventoryRecordHisModel
+    {
+        [DataMember]
+		public Guid DrugInventoryRecordId;
+        [DataMember]
+		public Guid OperatorId;
+        [DataMember]
+		public string OperatorName;
+        [DataMember]
+		public DateTime CreateDateFrom;
+        [DataMember]
+		public DateTime CreateDateTo;
+        [DataMember]
+		public decimal PurchasePricceFrom;
+        [DataMember]
+		public decimal PurchasePricceTo;
+        [DataMember]
+		public string BatchNumber;
+        [DataMember]
+		public DateTime PruductDateFrom;
+        [DataMember]
+		public DateTime PruductDateTo;
+        [DataMember]
+		public DateTime OutValidDateFrom;
+        [DataMember]
+		public DateTime OutValidDateTo;
+        [DataMember]
+		public bool IsOutValidDate;
+        [DataMember]
+		public bool QueryIsOutValidDate=false;
+        [DataMember]
+		public decimal InInventoryCountFrom;
+        [DataMember]
+		public decimal InInventoryCountTo;
+        [DataMember]
+		public decimal SalesCountFrom;
+        [DataMember]
+		public decimal SalesCountTo;
+        [DataMember]
+		public decimal OnSalesOrderCountFrom;
+        [DataMember]
+		public decimal OnSalesOrderCountTo;
+        [DataMember]
+		public decimal CurrentInventoryCountFrom;
+        [DataMember]
+		public decimal CurrentInventoryCountTo;
+        [DataMember]
+		public decimal RetailCountFrom;
+        [DataMember]
+		public decimal RetailCountTo;
+        [DataMember]
+		public decimal DismantingAmountFrom;
+        [DataMember]
+		public decimal DismantingAmountTo;
+        [DataMember]
+		public decimal ChangeAmountFrom;
+        [DataMember]
+		public decimal ChangeAmountTo;
+        [DataMember]
+		public decimal RetailDismantingAmountFrom;
+        [DataMember]
+		public decimal RetailDismantingAmountTo;
+        [DataMember]
+		public decimal OnRetailCountFrom;
+        [DataMember]
+		public decimal OnRetailCountTo;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public decimal CanSaleNumFrom;
+        [DataMember]
+		public decimal CanSaleNumTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public decimal DurgInventoryTypeValueFrom;
+        [DataMember]
+		public decimal DurgInventoryTypeValueTo;
+        [DataMember]
+		public Guid DrugInfoId;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public decimal PurchaseReturnNumberFrom;
+        [DataMember]
+		public decimal PurchaseReturnNumberTo;
+
+	}
+     
+	/// <summary>
+    /// 药品养护记录服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDrugMaintenanceRecordModel
+    {
+        [DataMember]
+		public Guid DrugInventoryRecordId;
+        [DataMember]
+		public Guid UserId;
+        [DataMember]
+		public DateTime MaintenanceTimeFrom;
+        [DataMember]
+		public DateTime MaintenanceTimeTo;
+        [DataMember]
+		public Guid LastUserId;
+        [DataMember]
+		public DateTime LastMaintenanceTimeFrom;
+        [DataMember]
+		public DateTime LastMaintenanceTimeTo;
+        [DataMember]
+		public string Memo;
+
+	}
+     
+	/// <summary>
+    /// 报损药品服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDrugsBreakageModel
+    {
+        [DataMember]
+		public Guid createUID;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public int ApprovalStatusValueFrom;
+        [DataMember]
+		public int ApprovalStatusValueTo;
+        [DataMember]
+		public Guid flowID;
+        [DataMember]
+		public string Description;
+        [DataMember]
+		public int unqualificationTypeFrom;
+        [DataMember]
+		public int unqualificationTypeTo;
+        [DataMember]
+		public decimal quantityFrom;
+        [DataMember]
+		public decimal quantityTo;
+        [DataMember]
+		public string drugName;
+        [DataMember]
+		public string batchNo;
+        [DataMember]
+		public Guid DrugInventoryRecordID;
+        [DataMember]
+		public string DocumentNumber;
+        [DataMember]
+		public string UnqualificationDocumentNumber;
+        [DataMember]
+		public string source;
+        [DataMember]
+		public string Specific;
+        [DataMember]
+		public string DosageType;
+        [DataMember]
+		public DateTime produceDateFrom;
+        [DataMember]
+		public DateTime produceDateTo;
+        [DataMember]
+		public DateTime ExpireDateFrom;
+        [DataMember]
+		public DateTime ExpireDateTo;
+        [DataMember]
+		public Guid DrugInfoId;
+        [DataMember]
+		public string Origin;
+        [DataMember]
+		public decimal PurchasePriceFrom;
+        [DataMember]
+		public decimal PurchasePriceTo;
+        [DataMember]
+		public Guid DrugUnqualityId;
+        [DataMember]
+		public string FactoryName;
+        [DataMember]
+		public string Supplyer;
+        [DataMember]
+		public string PurchaseOrderDocumentNumber;
+        [DataMember]
+		public Guid PurchaseOrderId;
+
+	}
+     
+	/// <summary>
+    /// 移库服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDrugsInventoryMoveModel
+    {
+        [DataMember]
+		public Guid createUID;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public int ApprovalStatusValueFrom;
+        [DataMember]
+		public int ApprovalStatusValueTo;
+        [DataMember]
+		public Guid flowID;
+        [DataMember]
+		public string Description;
+        [DataMember]
+		public Guid OriginWareHouseID;
+        [DataMember]
+		public Guid WareHouseID;
+        [DataMember]
+		public decimal quantityFrom;
+        [DataMember]
+		public decimal quantityTo;
+        [DataMember]
+		public string drugName;
+        [DataMember]
+		public string batchNo;
+        [DataMember]
+		public Guid inventoryRecordID;
+
+	}
+     
+	/// <summary>
+    /// 待处理药品服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDrugsUndeterminateModel
+    {
+        [DataMember]
+		public string OrderDocumentID;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public string creater;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public Guid DrugInfoID;
+        [DataMember]
+		public string Source;
+        [DataMember]
+		public string DocumentNumber;
+        [DataMember]
+		public decimal quantityFrom;
+        [DataMember]
+		public decimal quantityTo;
+        [DataMember]
+		public string drugName;
+        [DataMember]
+		public string BatchNumber;
+        [DataMember]
+		public string wareHouse;
+        [DataMember]
+		public string rsn;
+        [DataMember]
+		public string sta;
+        [DataMember]
+		public string staSigner;
+        [DataMember]
+		public DateTime staSignDateFrom;
+        [DataMember]
+		public DateTime staSignDateTo;
+        [DataMember]
+		public string conclusion;
+        [DataMember]
+		public string conclusionSigner;
+        [DataMember]
+		public DateTime conclusionDateFrom;
+        [DataMember]
+		public DateTime conclusionDateTo;
+        [DataMember]
+		public int procFrom;
+        [DataMember]
+		public int procTo;
+        [DataMember]
+		public decimal QualificationQuantityFrom;
+        [DataMember]
+		public decimal QualificationQuantityTo;
+        [DataMember]
+		public decimal UnqualificationQuantityFrom;
+        [DataMember]
+		public decimal UnqualificationQuantityTo;
+        [DataMember]
+		public DateTime produceDateFrom;
+        [DataMember]
+		public DateTime produceDateTo;
+        [DataMember]
+		public DateTime ExpireDateFrom;
+        [DataMember]
+		public DateTime ExpireDateTo;
+        [DataMember]
+		public string supplyer;
+        [DataMember]
+		public decimal PurchasePriceFrom;
+        [DataMember]
+		public decimal PurchasePriceTo;
+        [DataMember]
+		public Guid InventoryID;
+        [DataMember]
+		public Guid UnqualificationApprovalID;
+        [DataMember]
+		public Guid storeID;
+        [DataMember]
+		public string Specific;
+        [DataMember]
+		public string DosageType;
+        [DataMember]
+		public string Origin;
+
+	}
+     
+	/// <summary>
+    /// 不合格药品服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDrugsUnqualicationModel
+    {
+        [DataMember]
+		public Guid createUID;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public int ApprovalStatusValueFrom;
+        [DataMember]
+		public int ApprovalStatusValueTo;
+        [DataMember]
+		public Guid flowID;
+        [DataMember]
+		public string Description;
+        [DataMember]
+		public int unqualificationTypeFrom;
+        [DataMember]
+		public int unqualificationTypeTo;
+        [DataMember]
+		public decimal quantityFrom;
+        [DataMember]
+		public decimal quantityTo;
+        [DataMember]
+		public string drugName;
+        [DataMember]
+		public string batchNo;
+        [DataMember]
+		public Guid DrugInventoryRecordID;
+        [DataMember]
+		public string DocumentNumber;
+        [DataMember]
+		public string CheckDocumentNumber;
+        [DataMember]
+		public string source;
+        [DataMember]
+		public string Specific;
+        [DataMember]
+		public string DosageType;
+        [DataMember]
+		public DateTime produceDateFrom;
+        [DataMember]
+		public DateTime produceDateTo;
+        [DataMember]
+		public DateTime ExpireDateFrom;
+        [DataMember]
+		public DateTime ExpireDateTo;
+        [DataMember]
+		public decimal PurchasePriceFrom;
+        [DataMember]
+		public decimal PurchasePriceTo;
+        [DataMember]
+		public string factoryName;
+        [DataMember]
+		public string Origin;
+        [DataMember]
+		public Guid DrugInfo;
+        [DataMember]
+		public string Supplyer;
+        [DataMember]
+		public string PurchaseOrderDocumentNumber;
+        [DataMember]
+		public Guid PurchaseOrderId;
+
+	}
+     
+	/// <summary>
+    /// 不合格药品销毁情况服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryDrugsUnqualificationDestroyModel
+    {
+        [DataMember]
+		public Guid createUID;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public string drugName;
+        [DataMember]
+		public string batchNo;
+        [DataMember]
+		public string FactoryName;
+        [DataMember]
+		public decimal priceFrom;
+        [DataMember]
+		public decimal priceTo;
+        [DataMember]
+		public string wareHouseZone;
+        [DataMember]
+		public string DestroyMethod;
+        [DataMember]
+		public string DestroyReason;
+        [DataMember]
+		public string DestroyPlace;
+        [DataMember]
+		public DateTime DestroyTimeFrom;
+        [DataMember]
+		public DateTime DestroyTimeTo;
+        [DataMember]
+		public string DestroyCargo;
+        [DataMember]
+		public string DestroyMan;
+        [DataMember]
+		public string Destroyer;
+        [DataMember]
+		public string DestroyState;
+        [DataMember]
+		public string SupervisorOpinion;
+        [DataMember]
+		public Guid DrugsUnqualicationID;
+        [DataMember]
+		public string Specific;
+        [DataMember]
+		public string DosageType;
+        [DataMember]
+		public DateTime produceDateFrom;
+        [DataMember]
+		public DateTime produceDateTo;
+        [DataMember]
+		public DateTime ExpireDateFrom;
+        [DataMember]
+		public DateTime ExpireDateTo;
+        [DataMember]
+		public Guid DrugInfoId;
+        [DataMember]
+		public string Origin;
+        [DataMember]
+		public decimal PurchasePriceFrom;
+        [DataMember]
+		public decimal PurchasePriceTo;
+
+	}
+     
+	/// <summary>
+    /// 培训档案细节服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryEduDetailsModel
+    {
+        [DataMember]
+		public Guid DocumentId;
+        [DataMember]
+		public bool IsEduPass;
+        [DataMember]
+		public bool QueryIsEduPass=false;
+        [DataMember]
+		public string Memo;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public DateTime f1From;
+        [DataMember]
+		public DateTime f1To;
+        [DataMember]
+		public decimal f2From;
+        [DataMember]
+		public decimal f2To;
+        [DataMember]
+		public decimal f3From;
+        [DataMember]
+		public decimal f3To;
+        [DataMember]
+		public string f4;
+        [DataMember]
+		public string f5;
+        [DataMember]
+		public Guid EmployeeId;
+
+	}
+     
+	/// <summary>
+    /// 培训档案服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryEduDocumentModel
+    {
+        [DataMember]
+		public string eduDocumentNumber;
+        [DataMember]
+		public string eduDocumentName;
+        [DataMember]
+		public DateTime eduTimeStartFrom;
+        [DataMember]
+		public DateTime eduTimeStartTo;
+        [DataMember]
+		public DateTime eduTimeEndFrom;
+        [DataMember]
+		public DateTime eduTimeEndTo;
+        [DataMember]
+		public string eduContext;
+        [DataMember]
+		public string eduOrganize;
+        [DataMember]
+		public string eduTeacher;
+        [DataMember]
+		public string eduAdress;
+        [DataMember]
+		public string eduEployees;
+        [DataMember]
+		public decimal eduEployeesSumFrom;
+        [DataMember]
+		public decimal eduEployeesSumTo;
+        [DataMember]
+		public decimal eduEployeesPassNumberFrom;
+        [DataMember]
+		public decimal eduEployeesPassNumberTo;
+        [DataMember]
+		public string Memo;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public DateTime f1From;
+        [DataMember]
+		public DateTime f1To;
+        [DataMember]
+		public decimal f2From;
+        [DataMember]
+		public decimal f2To;
+        [DataMember]
+		public decimal f3From;
+        [DataMember]
+		public decimal f3To;
+        [DataMember]
+		public string f4;
+        [DataMember]
+		public string f5;
 
 	}
      
@@ -290,49 +1072,181 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryGoodsAdditionalPropertyModel
     {
         [DataMember]
-		public string CareFunction{ get; set; }
+		public string CareFunction;
         [DataMember]
-		public string PutOnRecord{ get; set; }
+		public string PutOnRecord;
         [DataMember]
 		public DateTime PutOnRecordDateFrom;
         [DataMember]
 		public DateTime PutOnRecordDateTo;
         [DataMember]
-		public string NotSuitablePeople{ get; set; }
+		public string NotSuitablePeople;
         [DataMember]
-		public string SuitablePeople{ get; set; }
+		public string SuitablePeople;
         [DataMember]
-		public string LandmarkIngredient{ get; set; }
+		public string LandmarkIngredient;
         [DataMember]
 		public DateTime LicensePermissionDateFrom;
         [DataMember]
 		public DateTime LicensePermissionDateTo;
         [DataMember]
-		public string UsageAndDosage{ get; set; }
+		public string UsageAndDosage;
         [DataMember]
-		public string MainIngredient{ get; set; }
+		public string MainIngredient;
         [DataMember]
-		public string ProductAddress{ get; set; }
+		public string ProductAddress;
         [DataMember]
-		public string ProductAddressEnglish{ get; set; }
+		public string ProductAddressEnglish;
         [DataMember]
-		public string ProductCountry{ get; set; }
+		public string ProductCountry;
         [DataMember]
-		public string ProductCountryEnglish{ get; set; }
+		public string ProductCountryEnglish;
         [DataMember]
-		public string HealthPermit{ get; set; }
+		public string HealthPermit;
         [DataMember]
-		public string RegCode{ get; set; }
+		public string RegCode;
         [DataMember]
-		public string RegProxyCompany{ get; set; }
+		public string RegProxyCompany;
         [DataMember]
-		public string FactoryNameEnglish{ get; set; }
+		public string FactoryNameEnglish;
         [DataMember]
-		public string FactoryAddress{ get; set; }
+		public string FactoryAddress;
         [DataMember]
-		public string FactoryAddressEnglish{ get; set; }
+		public string FactoryAddressEnglish;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
+
+	}
+     
+	/// <summary>
+    /// 体检档案细节服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryHealthCheckDetailModel
+    {
+        [DataMember]
+		public Guid DocumentId;
+        [DataMember]
+		public string CheckYear;
+        [DataMember]
+		public string Medicine;
+        [DataMember]
+		public string Skin;
+        [DataMember]
+		public string XCheck;
+        [DataMember]
+		public string Hepatitis;
+        [DataMember]
+		public string Optometry;
+        [DataMember]
+		public string CheckResult;
+        [DataMember]
+		public string Memo;
+        [DataMember]
+		public bool IsCheckPass;
+        [DataMember]
+		public bool QueryIsCheckPass=false;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public DateTime f1From;
+        [DataMember]
+		public DateTime f1To;
+        [DataMember]
+		public decimal f2From;
+        [DataMember]
+		public decimal f2To;
+        [DataMember]
+		public decimal f3From;
+        [DataMember]
+		public decimal f3To;
+        [DataMember]
+		public string f4;
+        [DataMember]
+		public string f5;
+        [DataMember]
+		public Guid EmployeeId;
+
+	}
+     
+	/// <summary>
+    /// 体检档案服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryHealthCheckDocumentModel
+    {
+        [DataMember]
+		public string DocumentNumber;
+        [DataMember]
+		public string DocumentName;
+        [DataMember]
+		public DateTime CheckTimeFrom;
+        [DataMember]
+		public DateTime CheckTimeTo;
+        [DataMember]
+		public string CheckContext;
+        [DataMember]
+		public string CheckOrganize;
+        [DataMember]
+		public string CheckAdress;
+        [DataMember]
+		public string MedicineDoctor;
+        [DataMember]
+		public string SkinDoctor;
+        [DataMember]
+		public string XCheckDoctor;
+        [DataMember]
+		public string HepatitisDoctor;
+        [DataMember]
+		public string OptometryDoctor;
+        [DataMember]
+		public string ChargeDoctor;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public string CheckEployees;
+        [DataMember]
+		public decimal CheckEployeesSumFrom;
+        [DataMember]
+		public decimal CheckEployeesSumTo;
+        [DataMember]
+		public decimal CheckPassNumberFrom;
+        [DataMember]
+		public decimal CheckPassNumberTo;
+        [DataMember]
+		public string Memo;
+        [DataMember]
+		public DateTime createTimeFrom;
+        [DataMember]
+		public DateTime createTimeTo;
+        [DataMember]
+		public DateTime updateTimeFrom;
+        [DataMember]
+		public DateTime updateTimeTo;
+        [DataMember]
+		public DateTime f1From;
+        [DataMember]
+		public DateTime f1To;
+        [DataMember]
+		public decimal f2From;
+        [DataMember]
+		public decimal f2To;
+        [DataMember]
+		public decimal f3From;
+        [DataMember]
+		public decimal f3To;
+        [DataMember]
+		public string f4;
+        [DataMember]
+		public string f5;
 
 	}
      
@@ -343,27 +1257,27 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseCashOrderModel
     {
         [DataMember]
-		public string DocumentNumber{ get; set; }
+		public string DocumentNumber;
         [DataMember]
-		public DateTime OperateTimeFrom{ get; set; }
+		public DateTime OperateTimeFrom;
         [DataMember]
-		public DateTime OperateTimeTo{ get; set; }
+		public DateTime OperateTimeTo;
         [DataMember]
-		public Guid OperateUserId{ get; set; }
+		public Guid OperateUserId;
         [DataMember]
-        public int OrderStatusValueFrom = 1;
+		public int OrderStatusValueFrom;
         [DataMember]
-        public int OrderStatusValueTo = 110;
+		public int OrderStatusValueTo;
         [DataMember]
-		public Guid ApprovalUserId{ get; set; }
+		public Guid ApprovalUserId;
         [DataMember]
-		public string ApprovalDecription{ get; set; }
+		public string ApprovalDecription;
         [DataMember]
 		public DateTime PaymentTimeFrom;
         [DataMember]
 		public DateTime PaymentTimeTo;
         [DataMember]
-		public Guid PaymentMethodId{ get; set; }
+		public Guid PaymentMethodId;
         [DataMember]
 		public decimal PaymentedAmountFrom;
         [DataMember]
@@ -381,19 +1295,19 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int DealerMethodValueTo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public Guid RelatedOrderId{ get; set; }
+		public Guid RelatedOrderId;
         [DataMember]
-		public string RelatedOrderDocumentNumber{ get; set; }
+		public string RelatedOrderDocumentNumber;
         [DataMember]
 		public int RelatedOrderTypeValueFrom;
         [DataMember]
 		public int RelatedOrderTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PurchaseOrderId{ get; set; }
+		public Guid PurchaseOrderId;
 
 	}
      
@@ -408,43 +1322,43 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime DeliveryTimeTo;
         [DataMember]
-		public string ShippingAddress{ get; set; }
+		public string ShippingAddress;
         [DataMember]
-		public Guid ReceivingCompasnyID{ get; set; }
+		public Guid ReceivingCompasnyID;
         [DataMember]
-		public string DeliveryAddress{ get; set; }
+		public string DeliveryAddress;
         [DataMember]
-		public string ManifestNumber{ get; set; }
+		public string ManifestNumber;
         [DataMember]
-		public int DrugsCountFrom;
+		public decimal DrugsCountFrom;
         [DataMember]
-		public int DrugsCountTo;
+		public decimal DrugsCountTo;
         [DataMember]
-        public int DeliveryMethodValueFrom = 1;
+		public int DeliveryMethodValueFrom;
         [DataMember]
-        public int DeliveryMethodValueTo = 2;
+		public int DeliveryMethodValueTo;
         [DataMember]
-        public int TransportMethodValueFrom = 1;
+		public int TransportMethodValueFrom;
         [DataMember]
-        public int TransportMethodValueTo = 3;
+		public int TransportMethodValueTo;
         [DataMember]
-		public string Principal{ get; set; }
+		public string Principal;
         [DataMember]
-		public string PrincipalPhone{ get; set; }
+		public string PrincipalPhone;
         [DataMember]
-		public string TransportCompany{ get; set; }
+		public string TransportCompany;
         [DataMember]
-		public string VehicleInfo{ get; set; }
+		public string VehicleInfo;
         [DataMember]
-		public Guid VehicleID{ get; set; }
+		public Guid VehicleID;
         [DataMember]
 		public int DeliveryStatusValueFrom;
         [DataMember]
 		public int DeliveryStatusValueTo;
         [DataMember]
-		public string Memo{ get; set; }
+		public string Memo;
         [DataMember]
-		public bool IsOver{ get; set; }
+		public bool IsOver;
         [DataMember]
 		public bool QueryIsOver=false;
         [DataMember]
@@ -452,69 +1366,69 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime ReservationTimeTo;
         [DataMember]
-		public Guid ReservationOperatorId{ get; set; }
+		public Guid ReservationOperatorId;
         [DataMember]
-		public string ReservationNo{ get; set; }
+		public string ReservationNo;
         [DataMember]
 		public DateTime AcceptedTimeFrom;
         [DataMember]
 		public DateTime AcceptedTimeTo;
         [DataMember]
-		public Guid AcceptedOperatorId{ get; set; }
+		public Guid AcceptedOperatorId;
         [DataMember]
-		public string AcceptedNo{ get; set; }
+		public string AcceptedNo;
         [DataMember]
 		public DateTime CanceledTimeFrom;
         [DataMember]
 		public DateTime CanceledTimeTo;
         [DataMember]
-		public Guid CanceledOperatorId{ get; set; }
+		public Guid CanceledOperatorId;
         [DataMember]
-		public string CanceledNo{ get; set; }
+		public string CanceledNo;
         [DataMember]
 		public DateTime outedTimeFrom;
         [DataMember]
 		public DateTime outedTimeTo;
         [DataMember]
-		public Guid outedOperatorId{ get; set; }
+		public Guid outedOperatorId;
         [DataMember]
-		public string outedNo{ get; set; }
+		public string outedNo;
         [DataMember]
 		public DateTime SignedTimeFrom;
         [DataMember]
 		public DateTime SignedTimeTo;
         [DataMember]
-		public Guid SignedOperatorId{ get; set; }
+		public Guid SignedOperatorId;
         [DataMember]
-		public string SignedNo{ get; set; }
+		public string SignedNo;
         [DataMember]
 		public DateTime ReturnTimeFrom;
         [DataMember]
 		public DateTime ReturnTimeTo;
         [DataMember]
-		public Guid ReturnOperatorId{ get; set; }
+		public Guid ReturnOperatorId;
         [DataMember]
-		public string ReturnNo{ get; set; }
+		public string ReturnNo;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid OrderID{ get; set; }
+		public Guid OrderID;
         [DataMember]
-		public Guid OutInventoryID{ get; set; }
+		public Guid OutInventoryID;
         [DataMember]
-		public Guid OwnVehicleID{ get; set; }
+		public Guid OwnVehicleID;
 
 	}
      
@@ -525,19 +1439,19 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDepartmentModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid DepartmentId{ get; set; }
+		public Guid DepartmentId;
 
 	}
      
@@ -548,17 +1462,17 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDistrictModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -569,31 +1483,31 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDoubtDrugModel
     {
         [DataMember]
-		public string JsonDrugInventoryRecord{ get; set; }
+		public string JsonDrugInventoryRecord;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public bool Handled{ get; set; }
+		public bool Handled;
         [DataMember]
 		public bool QueryHandled=false;
         [DataMember]
-		public string HandleDecription{ get; set; }
+		public string HandleDecription;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid DrugInventoryRecordId{ get; set; }
+		public Guid DrugInventoryRecordId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -604,13 +1518,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDrugApprovalNumberModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -621,17 +1535,17 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDrugCategoryModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -642,13 +1556,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDrugClinicalCategoryModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -661,13 +1575,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDictionaryDosageModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -680,37 +1594,33 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDrugInfoModel
     {
         [DataMember]
-		public string PermitLicenseCode{ get; set; }
+		public string PermitLicenseCode;
         [DataMember]
-		public DateTime PermitDateFrom;
+		public string Code;
         [DataMember]
-		public DateTime PermitDateTo;
+		public string DocCode;
         [DataMember]
-		public DateTime PermitOutDateFrom{ get; set; }
+		public string Pinyin;
         [DataMember]
-		public DateTime PermitOutDateTo{ get; set; }
+		public string Description;
         [DataMember]
-		public string Code{ get; set; }
+		public string BarCode;
         [DataMember]
-		public string Description{ get; set; }
+		public string StandardCode;
         [DataMember]
-		public string BarCode{ get; set; }
+		public string ProductName;
         [DataMember]
-		public string StandardCode{ get; set; }
+		public string ProductEnglishName;
         [DataMember]
-		public string ProductName{ get; set; }
+		public string ProductGeneralName;
         [DataMember]
-		public string ProductEnglishName{ get; set; }
+		public string ProductOtherName;
         [DataMember]
-		public string ProductGeneralName{ get; set; }
+		public string FactoryName;
         [DataMember]
-		public string ProductOtherName{ get; set; }
+		public string FactoryNameAbbreviation;
         [DataMember]
-		public string FactoryName{ get; set; }
-        [DataMember]
-		public string FactoryNameAbbreviation{ get; set; }
-        [DataMember]
-		public string PiecemealSpecification{ get; set; }
+		public string PiecemealSpecification;
         [DataMember]
 		public int PiecemealNumberFrom;
         [DataMember]
@@ -756,45 +1666,85 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal LimitedUpPriceTo;
         [DataMember]
-		public bool IsMedicalInsurance{ get; set; }
+		public bool IsMedicalInsurance;
         [DataMember]
 		public bool QueryIsMedicalInsurance=false;
         [DataMember]
-		public bool IsPrescription{ get; set; }
+		public bool IsPrescription;
         [DataMember]
 		public bool QueryIsPrescription=false;
         [DataMember]
-		public bool IsImport{ get; set; }
+		public bool IsImport;
         [DataMember]
 		public bool QueryIsImport=false;
         [DataMember]
-		public bool IsMainMaintenance{ get; set; }
+		public bool IsMainMaintenance;
         [DataMember]
 		public bool QueryIsMainMaintenance=false;
         [DataMember]
-		public bool IsSpecialDrugCategory{ get; set; }
+		public bool IsSpecialDrugCategory;
         [DataMember]
 		public bool QueryIsSpecialDrugCategory=false;
         [DataMember]
-		public string SpecialDrugCategoryCode{ get; set; }
+		public string SpecialDrugCategoryCode;
         [DataMember]
 		public int ValidPeriodFrom;
         [DataMember]
 		public int ValidPeriodTo;
         [DataMember]
-		public string LicensePermissionNumber{ get; set; }
+		public string LicensePermissionNumber;
         [DataMember]
-		public string PerformanceStandards{ get; set; }
+		public string PerformanceStandards;
         [DataMember]
-		public string Package{ get; set; }
+		public string Package;
         [DataMember]
 		public int PackageAmountFrom;
         [DataMember]
 		public int PackageAmountTo;
         [DataMember]
-		public bool IsApproval{ get; set; }
+		public Guid WareHouses;
+        [DataMember]
+		public string WareHouseZones;
+        [DataMember]
+		public decimal BigPackageFrom;
+        [DataMember]
+		public decimal BigPackageTo;
+        [DataMember]
+		public decimal MiddlePackageFrom;
+        [DataMember]
+		public decimal MiddlePackageTo;
+        [DataMember]
+		public int SmallPackageFrom;
+        [DataMember]
+		public int SmallPackageTo;
+        [DataMember]
+		public bool IsApproval;
         [DataMember]
 		public bool QueryIsApproval=false;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public string ValidRemark;
+        [DataMember]
+		public bool IsLock;
+        [DataMember]
+		public bool QueryIsLock=false;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string LockRemark;
+        [DataMember]
+		public DateTime PermitDateFrom;
+        [DataMember]
+		public DateTime PermitDateTo;
+        [DataMember]
+		public DateTime PermitOutDateFrom;
+        [DataMember]
+		public DateTime PermitOutDateTo;
         [DataMember]
 		public DateTime ApprovalDateFrom;
         [DataMember]
@@ -808,67 +1758,59 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int MinInventoryCountTo;
         [DataMember]
-		public string Origin{ get; set; }
+		public string Origin;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public bool Valid{ get; set; }
+		public string BusinessScopeCode;
         [DataMember]
-		public bool QueryValid=false;
+		public string PurchaseManageCategoryDetailCode;
         [DataMember]
-		public string ValidRemark{ get; set; }
+		public string DrugCategoryCode;
         [DataMember]
-		public bool IsLock{ get; set; }
+		public string MedicalCategoryDetailCode;
         [DataMember]
-		public bool QueryIsLock=false;
+		public string DrugClinicalCategoryCode;
         [DataMember]
-		public string LockRemark{ get; set; }
+		public string DictionaryUserDefinedTypeCode;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string DrugStorageTypeCode;
         [DataMember]
-		public bool QueryEnabled=false;
+		public string DictionaryMeasurementUnitCode;
         [DataMember]
-		public string BusinessScopeCode{ get; set; }
+		public string DictionaryDosageCode;
         [DataMember]
-		public string PurchaseManageCategoryDetailCode{ get; set; }
+		public string DictionarySpecificationCode;
         [DataMember]
-		public string DrugCategoryCode{ get; set; }
+		public string DictionaryPiecemealUnitCode;
         [DataMember]
-		public string MedicalCategoryDetailCode{ get; set; }
+		public Guid FlowID;
         [DataMember]
-		public string DrugClinicalCategoryCode{ get; set; }
+		public int GoodsTypeValueFrom;
         [DataMember]
-		public string DictionaryUserDefinedTypeCode{ get; set; }
+		public int GoodsTypeValueTo;
         [DataMember]
-		public string DrugStorageTypeCode{ get; set; }
+		public int ApprovalStatusValueFrom;
         [DataMember]
-		public string DictionaryMeasurementUnitCode{ get; set; }
+		public int ApprovalStatusValueTo;
         [DataMember]
-		public string DictionaryDosageCode{ get; set; }
+		public string Function;
         [DataMember]
-		public string DictionarySpecificationCode{ get; set; }
+		public string Ingredient;
         [DataMember]
-		public string DictionaryPiecemealUnitCode{ get; set; }
+		public string CommendedUser;
         [DataMember]
-		public Guid FlowID{ get; set; }
-        [DataMember]
-		public int GoodsTypeValueFrom=0;
-        [DataMember]
-		public int GoodsTypeValueTo=99999;
-        [DataMember]
-        public int ApprovalStatusValueFrom = 1;
-        [DataMember]
-        public int ApprovalStatusValueTo = 16;
+		public string InstEntProductLiscencePermitNumber;
 
 	}
      
@@ -883,7 +1825,7 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal PurchasePricceTo;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
 		public DateTime PruductDateFrom;
         [DataMember]
@@ -893,63 +1835,75 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime OutValidDateTo;
         [DataMember]
-		public bool IsOutValidDate{ get; set; }
+		public bool IsOutValidDate;
         [DataMember]
 		public bool QueryIsOutValidDate=false;
         [DataMember]
-		public int InInventoryCountFrom;
+		public decimal InInventoryCountFrom;
         [DataMember]
-		public int InInventoryCountTo;
+		public decimal InInventoryCountTo;
         [DataMember]
-		public int SalesCountFrom;
+		public decimal SalesCountFrom;
         [DataMember]
-		public int SalesCountTo;
+		public decimal SalesCountTo;
         [DataMember]
-		public int OnSalesOrderCountFrom;
+		public decimal OnSalesOrderCountFrom;
         [DataMember]
-		public int OnSalesOrderCountTo;
+		public decimal OnSalesOrderCountTo;
         [DataMember]
-		public int CurrentInventoryCountFrom;
+		public decimal CurrentInventoryCountFrom;
         [DataMember]
-		public int CurrentInventoryCountTo;
+		public decimal CurrentInventoryCountTo;
         [DataMember]
-		public int RetailCountFrom;
+		public decimal RetailCountFrom;
         [DataMember]
-		public int RetailCountTo;
+		public decimal RetailCountTo;
         [DataMember]
-		public int DismantingAmountFrom;
+		public decimal DismantingAmountFrom;
         [DataMember]
-		public int DismantingAmountTo;
+		public decimal DismantingAmountTo;
         [DataMember]
-		public int RetailDismantingAmountFrom;
+		public decimal RetailDismantingAmountFrom;
         [DataMember]
-		public int RetailDismantingAmountTo;
+		public decimal RetailDismantingAmountTo;
         [DataMember]
-		public int OnRetailCountFrom;
+		public decimal OnRetailCountFrom;
         [DataMember]
-		public int OnRetailCountTo;
+		public decimal OnRetailCountTo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public int CanSaleNumFrom;
+		public decimal CanSaleNumFrom;
         [DataMember]
-		public int CanSaleNumTo;
+		public decimal CanSaleNumTo;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-        public int DurgInventoryTypeValueFrom = 1;
+		public decimal DurgInventoryTypeValueFrom;
         [DataMember]
-        public int DurgInventoryTypeValueTo = 100;
+		public decimal DurgInventoryTypeValueTo;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
         [DataMember]
-		public Guid PurchaseInInventeryOrderDetailId{ get; set; }
+		public Guid PurchaseInInventeryOrderDetailId;
         [DataMember]
-		public Guid WarehouseZoneId{ get; set; }
+		public Guid WarehouseZoneId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
+        [DataMember]
+		public Guid drugsUnqualicationID;
+        [DataMember]
+		public decimal drugsUnqualicationNumFrom;
+        [DataMember]
+		public decimal drugsUnqualicationNumTo;
+        [DataMember]
+		public decimal PurchaseReturnNumberFrom;
+        [DataMember]
+		public decimal PurchaseReturnNumberTo;
+        [DataMember]
+		public Guid WareHouseZonePositionId;
 
 	}
      
@@ -960,31 +1914,31 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDrugMaintainRecordModel
     {
         [DataMember]
-		public string BillDocumentNo{ get; set; }
+		public string BillDocumentNo;
         [DataMember]
-		public DateTime ExpirationDateFrom{ get; set; }
+		public DateTime ExpirationDateFrom;
         [DataMember]
-        public DateTime ExpirationDateTo { get; set; }
+		public DateTime ExpirationDateTo;
         [DataMember]
-        public int DrugMaintainTypeValueFrom = 0;
+		public int DrugMaintainTypeValueFrom;
         [DataMember]
-        public int DrugMaintainTypeValueTo = 1;
+		public int DrugMaintainTypeValueTo;
         [DataMember]
-		public int CompleteStateFrom=0;
+		public int CompleteStateFrom;
         [DataMember]
-		public int CompleteStateTo=100;
+		public int CompleteStateTo;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-        public Guid CreateUserId { get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
 
 	}
      
@@ -995,47 +1949,53 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDrugMaintainRecordDetailModel
     {
         [DataMember]
-		public Guid DrugInventoryRecordId{ get; set; }
+		public Guid DrugInventoryRecordId;
         [DataMember]
-		public string BillDocumentNo{ get; set; }
+		public string BillDocumentNo;
         [DataMember]
-		public string ProductName{ get; set; }
+		public string ProductName;
         [DataMember]
-		public string DictionaryDosageCode{ get; set; }
+		public string DictionaryDosageCode;
         [DataMember]
-		public string DictionarySpecificationCode{ get; set; }
+		public string DictionarySpecificationCode;
         [DataMember]
-        public int CurrentInventoryCountFrom = 0;
+		public decimal CurrentInventoryCountFrom;
         [DataMember]
-		public int CurrentInventoryCountTo=999999;
+		public decimal CurrentInventoryCountTo;
         [DataMember]
-		public int MaintainCountFrom=0;
+		public decimal MaintainCountFrom;
         [DataMember]
-		public int MaintainCountTo=999999;
+		public decimal MaintainCountTo;
         [DataMember]
 		public decimal PriceFrom;
         [DataMember]
 		public decimal PriceTo;
         [DataMember]
-		public string Origin{ get; set; }
+		public string Origin;
         [DataMember]
-		public string LicensePermissionNumber{ get; set; }
+		public string LicensePermissionNumber;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
-        public DateTime PruductDateFrom { get; set; }
+		public DateTime PruductDateFrom;
         [DataMember]
-        public DateTime PruductDateTo { get; set; }
+		public DateTime PruductDateTo;
         [DataMember]
-        public DateTime OutValidDateFrom { get; set; }
+		public DateTime OutValidDateFrom;
         [DataMember]
-        public DateTime OutValidDateTo { get; set; }
+		public DateTime OutValidDateTo;
         [DataMember]
-		public string Manufacturer{ get; set; }
+		public string Manufacturer;
         [DataMember]
-		public string CheckqualifiedNumber{ get; set; }
+		public string DictionaryMeasurementUnitCode;
         [DataMember]
-		public string CheckResult{ get; set; }
+		public string QualitySituation;
+        [DataMember]
+		public string MaintainResult;
+        [DataMember]
+		public string CheckqualifiedNumber;
+        [DataMember]
+		public string CheckResult;
 
 	}
      
@@ -1046,11 +2006,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDictionaryMeasurementUnitModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -1063,11 +2023,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDictionaryPiecemealUnitModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -1080,9 +2040,9 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDictionarySpecificationModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
 
 	}
      
@@ -1093,11 +2053,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDictionaryStorageTypeModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -1110,17 +2070,17 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDictionaryUserDefinedTypeModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1131,35 +2091,35 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryAuthorizationDocModel
     {
         [DataMember]
-		public string DocFile{ get; set; }
+		public string DocFile;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-        public DateTime OutDateFrom { get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-        public DateTime OutDateTo { get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-		public bool IsOutDate{ get; set; }
+		public bool IsOutDate;
         [DataMember]
 		public bool QueryIsOutDate=false;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
 		public int DistrictIdFrom;
         [DataMember]
@@ -1174,23 +2134,23 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryDrugMaintainSetModel
     {
         [DataMember]
-		public int DrugMaintainTypeValueFrom=0;
+		public int DrugMaintainTypeValueFrom;
         [DataMember]
-		public int DrugMaintainTypeValueTo=100;
+		public int DrugMaintainTypeValueTo;
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public int DayFrom=0;
+		public int DayFrom;
         [DataMember]
-		public int DayTo=999999;
+		public int DayTo;
         [DataMember]
-        public DateTime StartDateFrom { get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-        public DateTime StartDateTo { get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-		public int RemindBeforeDayFrom=0;
+		public int RemindBeforeDayFrom;
         [DataMember]
-		public int RemindBeforeDayTo=100;
+		public int RemindBeforeDayTo;
 
 	}
      
@@ -1201,65 +2161,77 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryEmployeeModel
     {
         [DataMember]
-        public DateTime OutDateFrom { get; set; }
+		public string Number;
         [DataMember]
-        public DateTime OutDateTo { get; set; }
+		public string Name;
         [DataMember]
-		public string Number{ get; set; }
+		public string Pinyin;
         [DataMember]
-		public string Name{ get; set; }
+		public string Gender;
         [DataMember]
-		public string Pinyin{ get; set; }
+		public string Phone;
         [DataMember]
-		public string Gender{ get; set; }
+		public string Email;
         [DataMember]
-		public string Phone{ get; set; }
+		public string Address;
         [DataMember]
-		public string Email{ get; set; }
+		public string Rank;
         [DataMember]
-		public string Address{ get; set; }
+		public string Education;
         [DataMember]
-		public string Rank{ get; set; }
+		public string Specility;
         [DataMember]
-		public string Education{ get; set; }
+		public string Duty;
         [DataMember]
-		public string Duty{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public string Specility{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-        public int EmployStatusValueFrom = 0;
+		public int EmployStatusValueFrom;
         [DataMember]
-        public int EmployStatusValueTo = 1;
+		public int EmployStatusValueTo;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public int PharmacistsTitleTypeValueFrom;
+        [DataMember]
+		public int PharmacistsTitleTypeValueTo;
+        [DataMember]
+		public string CardNo;
+        [DataMember]
+		public DateTime CardDateFrom;
+        [DataMember]
+		public DateTime CardDateTo;
+        [DataMember]
+		public int PharmacistsQualificationValueFrom;
+        [DataMember]
+		public int PharmacistsQualificationValueTo;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-        public int PharmacistsTitleTypeValueFrom = 0;
+		public Guid CreateUserId;
         [DataMember]
-        public int PharmacistsTitleTypeValueTo = 6;
+		public Guid UpdateUserId;
         [DataMember]
-		public string CardNo{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-        public int PharmacistsQualificationValueFrom = 0;
+		public DateTime CreateTimeTo;
         [DataMember]
-        public int PharmacistsQualificationValueTo = 3;
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public Guid DepartmentId;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public bool Pro_work_exam;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public bool QueryPro_work_exam=false;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime Pro_work_exam_DateFrom;
         [DataMember]
-		public Guid StoreId{ get; set; }
-        [DataMember]
-		public Guid DepartmentId{ get; set; }
+		public DateTime Pro_work_exam_DateTo;
 
 	}
      
@@ -1270,13 +2242,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryGMSPLicenseBusinessScopeModel
     {
         [DataMember]
-		public Guid LicenseId{ get; set; }
+		public Guid LicenseId;
         [DataMember]
-		public Guid BusinessScopeId{ get; set; }
+		public Guid BusinessScopeId;
         [DataMember]
-		public Guid GSPLicenseId{ get; set; }
+		public Guid GSPLicenseId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1287,47 +2259,47 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryInventoryRecordModel
     {
         [DataMember]
-		public int MaxInventoryCountFrom;
+		public decimal MaxInventoryCountFrom;
         [DataMember]
-		public int MaxInventoryCountTo;
+		public decimal MaxInventoryCountTo;
         [DataMember]
-		public int MinInventoryCountFrom;
+		public decimal MinInventoryCountFrom;
         [DataMember]
-		public int MinInventoryCountTo;
+		public decimal MinInventoryCountTo;
         [DataMember]
-		public int CurrentInventoryCountFrom;
+		public decimal CurrentInventoryCountFrom;
         [DataMember]
-		public int CurrentInventoryCountTo;
+		public decimal CurrentInventoryCountTo;
         [DataMember]
-		public int SalesCountFrom;
+		public decimal SalesCountFrom;
         [DataMember]
-		public int SalesCountTo;
+		public decimal SalesCountTo;
         [DataMember]
-		public int OnSalesOrderCountFrom;
+		public decimal OnSalesOrderCountFrom;
         [DataMember]
-		public int OnSalesOrderCountTo;
+		public decimal OnSalesOrderCountTo;
         [DataMember]
-		public int RetailCountFrom;
+		public decimal RetailCountFrom;
         [DataMember]
-		public int RetailCountTo;
+		public decimal RetailCountTo;
         [DataMember]
-		public int OnRetailCountFrom;
+		public decimal OnRetailCountFrom;
         [DataMember]
-		public int OnRetailCountTo;
+		public decimal OnRetailCountTo;
         [DataMember]
-		public int DismantingAmountFrom;
+		public decimal DismantingAmountFrom;
         [DataMember]
-		public int DismantingAmountTo;
+		public decimal DismantingAmountTo;
         [DataMember]
-		public int RetailDismantingAmountFrom;
+		public decimal RetailDismantingAmountFrom;
         [DataMember]
-		public int RetailDismantingAmountTo;
+		public decimal RetailDismantingAmountTo;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
         [DataMember]
-		public string DrugInfoCode{ get; set; }
+		public string DrugInfoCode;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1338,25 +2310,25 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryManufacturerModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string ShortPinYin{ get; set; }
+		public string ShortPinYin;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string Address{ get; set; }
+		public string Address;
         [DataMember]
-		public string Tel{ get; set; }
+		public string Tel;
         [DataMember]
-		public string Contact{ get; set; }
+		public string Contact;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1367,11 +2339,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPackagingMaterialModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -1384,11 +2356,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPackagingUnitModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -1401,74 +2373,80 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPaymentMethodModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
 	}
      
 	/// <summary>
-    /// GSP证书服务查询实体
+    /// 药品经营许可证服务查询实体
     /// </summary>
 	[DataContract]
     public partial class QueryGSPLicenseModel
     {
         [DataMember]
-		public string LegalPerson{ get; set; }
+		public string LegalPerson;
         [DataMember]
-		public string Header{ get; set; }
+		public string Header;
         [DataMember]
-		public string QualityHeader{ get; set; }
+		public string QualityHeader;
         [DataMember]
-		public string WarehouseAddress{ get; set; }
+		public string WarehouseAddress;
         [DataMember]
-		public Guid BusinessTypeId{ get; set; }
+		public string ChangeRecord;
         [DataMember]
-		public string Name{ get; set; }
+		public Guid BusinessTypeId;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Decription;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string Code;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string UnitName{ get; set; }
+		public string UnitName;
         [DataMember]
-		public string RegAddress{ get; set; }
+		public string RegAddress;
         [DataMember]
-		public string LicenseCode{ get; set; }
+		public string LicenseCode;
         [DataMember]
-        public DateTime StartDateFrom { get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-        public DateTime StartDateTo { get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-        public DateTime OutDateFrom { get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-        public DateTime OutDateTo { get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-        public DateTime IssuanceDateFrom { get; set; }
+		public DateTime IssuanceDateFrom;
         [DataMember]
-        public DateTime IssuanceDateTo { get; set; }
+		public DateTime IssuanceDateTo;
         [DataMember]
-        public string IssuanceOrg { get; set; }
+		public string IssuanceOrg;
         [DataMember]
-		public bool Valid{ get; set; }
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-        public int LicenseTypeValueFrom = 0;
+		public int LicenseTypeValueFrom;
         [DataMember]
-        public int LicenseTypeValueTo = 50;
+		public int LicenseTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid PharmacyFileId;
 
 	}
      
@@ -1479,49 +2457,53 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryGMPLicenseModel
     {
         [DataMember]
-		public string CertificationScope{ get; set; }
+		public string CertificationScope;
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string UnitName{ get; set; }
+		public string UnitName;
         [DataMember]
-		public string RegAddress{ get; set; }
+		public string RegAddress;
         [DataMember]
-		public string LicenseCode{ get; set; }
+		public string LicenseCode;
         [DataMember]
-		public DateTime StartDateFrom{ get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-		public DateTime StartDateTo{ get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
+		public DateTime IssuanceDateFrom;
         [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
+		public DateTime IssuanceDateTo;
         [DataMember]
-		public string IssuanceOrg{ get; set; }
+		public string IssuanceOrg;
         [DataMember]
-		public bool Valid{ get; set; }
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-        public int LicenseTypeValueFrom = 0;
+		public int LicenseTypeValueFrom;
         [DataMember]
-        public int LicenseTypeValueTo=50;
+		public int LicenseTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid PharmacyFileId;
 
 	}
      
@@ -1540,47 +2522,51 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int PaidinCapitalTo;
         [DataMember]
-		public string CorporateNature{ get; set; }
+		public string CorporateNature;
         [DataMember]
-		public string BusinessScope{ get; set; }
+		public string BusinessScope;
         [DataMember]
 		public DateTime EstablishmentDateFrom;
         [DataMember]
 		public DateTime EstablishmentDateTo;
         [DataMember]
-		public string InspectionDate{ get; set; }
+		public string InspectionDate;
         [DataMember]
-		public string Name{ get; set; }
+		public string DocNumber;
         [DataMember]
-		public string Decription{ get; set; }
+		public string memo;
         [DataMember]
-		public string Code{ get; set; }
+		public string Name;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string UnitName{ get; set; }
+		public string UnitName;
         [DataMember]
-		public string RegAddress{ get; set; }
+		public string RegAddress;
         [DataMember]
-		public string LicenseCode{ get; set; }
+		public string LicenseCode;
         [DataMember]
-		public DateTime StartDateFrom{ get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-		public DateTime StartDateTo{ get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
+		public DateTime IssuanceDateFrom;
         [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
+		public DateTime IssuanceDateTo;
         [DataMember]
-		public string IssuanceOrg{ get; set; }
+		public string IssuanceOrg;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
@@ -1588,9 +2574,9 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int LicenseTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid PharmacyFileId;
 
 	}
      
@@ -1601,120 +2587,130 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryMedicineProductionLicenseModel
     {
         [DataMember]
-		public string LegalPerson{ get; set; }
+		public string LegalPerson;
         [DataMember]
-		public string Header{ get; set; }
+		public string Header;
         [DataMember]
-		public string ProductAddress{ get; set; }
+		public string ProductAddress;
         [DataMember]
-		public string CorporateNature{ get; set; }
+		public string CorporateNature;
         [DataMember]
-		public string CategoryCode{ get; set; }
+		public string CategoryCode;
         [DataMember]
-		public string ProductScope{ get; set; }
+		public string ProductScope;
         [DataMember]
-		public string Name{ get; set; }
+		public string DocNumber;
         [DataMember]
-		public string Decription{ get; set; }
+		public string memo;
         [DataMember]
-		public string Code{ get; set; }
+		public string Name;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string UnitName{ get; set; }
+		public string UnitName;
         [DataMember]
-		public string RegAddress{ get; set; }
+		public string RegAddress;
         [DataMember]
-		public string LicenseCode{ get; set; }
+		public string LicenseCode;
         [DataMember]
-		public DateTime StartDateFrom{ get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-		public DateTime StartDateTo{ get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
+		public DateTime IssuanceDateFrom;
         [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
+		public DateTime IssuanceDateTo;
         [DataMember]
-		public string IssuanceOrg{ get; set; }
+		public string IssuanceOrg;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-		public int LicenseTypeValueFrom=0;
+		public int LicenseTypeValueFrom;
         [DataMember]
-		public int LicenseTypeValueTo=100;
+		public int LicenseTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid PharmacyFileId;
 
 	}
      
 	/// <summary>
-    /// 药品经营许可证服务查询实体
+    /// GSP证书服务查询实体
     /// </summary>
 	[DataContract]
     public partial class QueryMedicineBusinessLicenseModel
     {
         [DataMember]
-		public string LegalPerson{ get; set; }
+		public string LegalPerson;
         [DataMember]
-		public string Header{ get; set; }
+		public string Header;
         [DataMember]
-		public string QualityHeader{ get; set; }
+		public string QualityHeader;
         [DataMember]
-		public string WarehouseAddress{ get; set; }
+		public string WarehouseAddress;
         [DataMember]
-		public string BusinessScope{ get; set; }
+		public string BusinessScope;
         [DataMember]
-		public string Name{ get; set; }
+		public string LicenseContain;
         [DataMember]
-		public string Decription{ get; set; }
+		public string DocNumber;
         [DataMember]
-		public string Code{ get; set; }
+		public string memo;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string Name;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string UnitName{ get; set; }
+		public string UnitName;
         [DataMember]
-		public string RegAddress{ get; set; }
+		public string RegAddress;
         [DataMember]
-		public string LicenseCode{ get; set; }
+		public string LicenseCode;
         [DataMember]
-		public DateTime StartDateFrom{ get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-		public DateTime StartDateTo{ get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
+		public DateTime IssuanceDateFrom;
         [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
+		public DateTime IssuanceDateTo;
         [DataMember]
-		public string IssuanceOrg{ get; set; }
+		public string IssuanceOrg;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-		public int LicenseTypeValueFrom=0;
+		public int LicenseTypeValueFrom;
         [DataMember]
-		public int LicenseTypeValueTo=100;
+		public int LicenseTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid PharmacyFileId;
 
 	}
      
@@ -1725,57 +2721,61 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryInstrumentsBusinessLicenseModel
     {
         [DataMember]
-		public string LegalPerson{ get; set; }
+		public string LegalPerson;
         [DataMember]
-		public string Header{ get; set; }
+		public string Header;
         [DataMember]
-		public string QualityHeader{ get; set; }
+		public string QualityHeader;
         [DataMember]
-		public string WarehouseAddress{ get; set; }
+		public string WarehouseAddress;
         [DataMember]
-		public string BusinessScope{ get; set; }
+		public string BusinessScope;
         [DataMember]
-		public string Name{ get; set; }
+		public string DocNumber;
         [DataMember]
-		public string Decription{ get; set; }
+		public string memo;
         [DataMember]
-		public string Code{ get; set; }
+		public string Name;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string UnitName{ get; set; }
+		public string UnitName;
         [DataMember]
-		public string RegAddress{ get; set; }
+		public string RegAddress;
         [DataMember]
-		public string LicenseCode{ get; set; }
+		public string LicenseCode;
         [DataMember]
-		public DateTime StartDateFrom{ get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-		public DateTime StartDateTo{ get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
+		public DateTime IssuanceDateFrom;
         [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
+		public DateTime IssuanceDateTo;
         [DataMember]
-		public string IssuanceOrg{ get; set; }
+		public string IssuanceOrg;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-        public int LicenseTypeValueFrom = 0;
+		public int LicenseTypeValueFrom;
         [DataMember]
-        public int LicenseTypeValueTo = 15;
+		public int LicenseTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid PharmacyFileId;
 
 	}
      
@@ -1786,55 +2786,518 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryInstrumentsProductionLicenseModel
     {
         [DataMember]
-		public string LegalPerson{ get; set; }
+		public string LegalPerson;
         [DataMember]
-		public string Header{ get; set; }
+		public string Header;
         [DataMember]
-		public string ProductAddress{ get; set; }
+		public string ProductAddress;
         [DataMember]
-		public string ProductScope{ get; set; }
+		public string ProductScope;
         [DataMember]
-		public string Name{ get; set; }
+		public string DocNumber;
         [DataMember]
-		public string Decription{ get; set; }
+		public string memo;
         [DataMember]
-		public string Code{ get; set; }
+		public string Name;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string UnitName{ get; set; }
+		public string UnitName;
         [DataMember]
-		public string RegAddress{ get; set; }
+		public string RegAddress;
         [DataMember]
-		public string LicenseCode{ get; set; }
+		public string LicenseCode;
         [DataMember]
-		public DateTime StartDateFrom{ get; set; }
+		public DateTime StartDateFrom;
         [DataMember]
-		public DateTime StartDateTo{ get; set; }
+		public DateTime StartDateTo;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
+		public DateTime IssuanceDateFrom;
         [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
+		public DateTime IssuanceDateTo;
         [DataMember]
-		public string IssuanceOrg{ get; set; }
+		public string IssuanceOrg;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-        public int LicenseTypeValueFrom = 0;
+		public int LicenseTypeValueFrom;
         [DataMember]
-        public int LicenseTypeValueTo = 15;
+		public int LicenseTypeValueTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid PharmacyFileId;
+
+	}
+     
+	/// <summary>
+    /// 组织机构代码证服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryOrganizationCodeLicenseModel
+    {
+        [DataMember]
+		public string OrgnizationType;
+        [DataMember]
+		public string LicenseNo;
+        [DataMember]
+		public string RegisterNo;
+        [DataMember]
+		public DateTime IssuanceDateFrom;
+        [DataMember]
+		public DateTime IssuanceDateTo;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public bool isCheck;
+        [DataMember]
+		public bool QueryisCheck=false;
+        [DataMember]
+		public DateTime YearCheckDateFrom;
+        [DataMember]
+		public DateTime YearCheckDateTo;
+        [DataMember]
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string UnitName;
+        [DataMember]
+		public string RegAddress;
+        [DataMember]
+		public string LicenseCode;
+        [DataMember]
+		public DateTime StartDateFrom;
+        [DataMember]
+		public DateTime StartDateTo;
+        [DataMember]
+		public DateTime OutDateFrom;
+        [DataMember]
+		public DateTime OutDateTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public int LicenseTypeValueFrom;
+        [DataMember]
+		public int LicenseTypeValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid PharmacyFileId;
+
+	}
+     
+	/// <summary>
+    /// 食品流通许可证服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryFoodCirculateLicenseModel
+    {
+        [DataMember]
+		public string OrgType;
+        [DataMember]
+		public string RegAddress;
+        [DataMember]
+		public string LicenseNo;
+        [DataMember]
+		public string Header;
+        [DataMember]
+		public DateTime LicenseRangeFrom;
+        [DataMember]
+		public DateTime LicenseRangeTo;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string UnitName;
+        [DataMember]
+		public string LicenseCode;
+        [DataMember]
+		public DateTime StartDateFrom;
+        [DataMember]
+		public DateTime StartDateTo;
+        [DataMember]
+		public DateTime OutDateFrom;
+        [DataMember]
+		public DateTime OutDateTo;
+        [DataMember]
+		public DateTime IssuanceDateFrom;
+        [DataMember]
+		public DateTime IssuanceDateTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public int LicenseTypeValueFrom;
+        [DataMember]
+		public int LicenseTypeValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid PharmacyFileId;
+
+	}
+     
+	/// <summary>
+    /// 卫生许可证服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryHealthLicenseModel
+    {
+        [DataMember]
+		public string HealthLicenseType;
+        [DataMember]
+		public string Header;
+        [DataMember]
+		public DateTime IssuanceDateFrom;
+        [DataMember]
+		public DateTime IssuanceDateTo;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public string LicenseContent;
+        [DataMember]
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string UnitName;
+        [DataMember]
+		public string RegAddress;
+        [DataMember]
+		public string LicenseCode;
+        [DataMember]
+		public DateTime StartDateFrom;
+        [DataMember]
+		public DateTime StartDateTo;
+        [DataMember]
+		public DateTime OutDateFrom;
+        [DataMember]
+		public DateTime OutDateTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public int LicenseTypeValueFrom;
+        [DataMember]
+		public int LicenseTypeValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid PharmacyFileId;
+
+	}
+     
+	/// <summary>
+    /// 税务登记证服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryTaxRegisterLicenseModel
+    {
+        [DataMember]
+		public string TaxRegisterLicenseType;
+        [DataMember]
+		public string taxpayerName;
+        [DataMember]
+		public string taxpayerNumber;
+        [DataMember]
+		public string LegalPerson;
+        [DataMember]
+		public string Address;
+        [DataMember]
+		public DateTime IssuanceDateFrom;
+        [DataMember]
+		public DateTime IssuanceDateTo;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public string BusinessScope;
+        [DataMember]
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string UnitName;
+        [DataMember]
+		public string RegAddress;
+        [DataMember]
+		public string LicenseCode;
+        [DataMember]
+		public DateTime StartDateFrom;
+        [DataMember]
+		public DateTime StartDateTo;
+        [DataMember]
+		public DateTime OutDateFrom;
+        [DataMember]
+		public DateTime OutDateTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public int LicenseTypeValueFrom;
+        [DataMember]
+		public int LicenseTypeValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid PharmacyFileId;
+
+	}
+     
+	/// <summary>
+    /// 事业单位法人证服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryLnstitutionLegalPersonLicenseModel
+    {
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string CertificateName;
+        [DataMember]
+		public string BussinessRange;
+        [DataMember]
+		public string LegalPerson;
+        [DataMember]
+		public string FundsSource;
+        [DataMember]
+		public string InitiaFund;
+        [DataMember]
+		public string Address;
+        [DataMember]
+		public DateTime IssuanceDateFrom;
+        [DataMember]
+		public DateTime IssuanceDateTo;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public string ManageOrg;
+        [DataMember]
+		public string UseMedicalScope;
+        [DataMember]
+		public DateTime OutDateFrom;
+        [DataMember]
+		public DateTime OutDateTo;
+        [DataMember]
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string UnitName;
+        [DataMember]
+		public string RegAddress;
+        [DataMember]
+		public string LicenseCode;
+        [DataMember]
+		public DateTime StartDateFrom;
+        [DataMember]
+		public DateTime StartDateTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public int LicenseTypeValueFrom;
+        [DataMember]
+		public int LicenseTypeValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid PharmacyFileId;
+
+	}
+     
+	/// <summary>
+    /// 医疗机构执业许可证服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryMmedicalInstitutionPermitModel
+    {
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string CertificateName;
+        [DataMember]
+		public string OgnTpye;
+        [DataMember]
+		public string LegalPerson;
+        [DataMember]
+		public string RegisterAddress;
+        [DataMember]
+		public string WarehouseAddress;
+        [DataMember]
+		public DateTime IssuanceDateFrom;
+        [DataMember]
+		public DateTime IssuanceDateTo;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public string UseMedicalScope;
+        [DataMember]
+		public DateTime OutDateFrom;
+        [DataMember]
+		public DateTime OutDateTo;
+        [DataMember]
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string UnitName;
+        [DataMember]
+		public string RegAddress;
+        [DataMember]
+		public string LicenseCode;
+        [DataMember]
+		public DateTime StartDateFrom;
+        [DataMember]
+		public DateTime StartDateTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public int LicenseTypeValueFrom;
+        [DataMember]
+		public int LicenseTypeValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid PharmacyFileId;
+
+	}
+     
+	/// <summary>
+    /// 全国工业产品生产许可证服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryIndustoryProductCertificateModel
+    {
+        [DataMember]
+		public string ProductAddress;
+        [DataMember]
+		public string CheckMethod;
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public string UnitName;
+        [DataMember]
+		public string RegAddress;
+        [DataMember]
+		public string LicenseCode;
+        [DataMember]
+		public DateTime StartDateFrom;
+        [DataMember]
+		public DateTime StartDateTo;
+        [DataMember]
+		public DateTime OutDateFrom;
+        [DataMember]
+		public DateTime OutDateTo;
+        [DataMember]
+		public DateTime IssuanceDateFrom;
+        [DataMember]
+		public DateTime IssuanceDateTo;
+        [DataMember]
+		public string IssuanceOrg;
+        [DataMember]
+		public string DocNumber;
+        [DataMember]
+		public string memo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public int LicenseTypeValueFrom;
+        [DataMember]
+		public int LicenseTypeValueTo;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid PharmacyFileId;
 
 	}
      
@@ -1845,13 +3308,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryMedicalCategoryModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -1864,17 +3327,17 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryMedicalCategoryDetailModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid MedicalCategoryId{ get; set; }
+		public Guid MedicalCategoryId;
 
 	}
      
@@ -1885,19 +3348,19 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryModuleModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-		public string AuthKey{ get; set; }
+		public string AuthKey;
         [DataMember]
 		public int IndexFrom;
         [DataMember]
 		public int IndexTo;
         [DataMember]
-		public Guid ModuleCatetoryId{ get; set; }
+		public Guid ModuleCatetoryId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1908,11 +3371,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryModuleCatetoryModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
 		public int IndexFrom;
         [DataMember]
@@ -1927,23 +3390,23 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryModuleWithRoleModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid ModuleId{ get; set; }
+		public Guid ModuleId;
         [DataMember]
-		public Guid RoleId{ get; set; }
+		public Guid RoleId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1954,23 +3417,23 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPharmacyFileModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public string FileName{ get; set; }
+		public string FileName;
         [DataMember]
-		public string Extension{ get; set; }
+		public string Extension;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1981,7 +3444,7 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseAgreementModel
     {
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -1992,27 +3455,33 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseCheckingOrderModel
     {
         [DataMember]
-		public string DocumentNumber{ get; set; }
+		public string DocumentNumber;
         [DataMember]
-		public DateTime OperateTimeFrom{ get; set; }
+		public DateTime OperateTimeFrom;
         [DataMember]
-		public DateTime OperateTimeTo{ get; set; }
+		public DateTime OperateTimeTo;
         [DataMember]
-		public Guid OperateUserId{ get; set; }
+		public Guid OperateUserId;
         [DataMember]
-        public int OrderStatusValueFrom = 0;
+		public Guid SecondCheckerId;
         [DataMember]
-        public int OrderStatusValueTo = 110;
+		public string SecondCheckMemo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string SecondCheckerName;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public int OrderStatusValueFrom;
         [DataMember]
-		public Guid PurchaseOrderId{ get; set; }
+		public int OrderStatusValueTo;
         [DataMember]
-		public Guid RelatedOrderId{ get; set; }
+		public string Decription;
         [DataMember]
-		public string RelatedOrderDocumentNumber{ get; set; }
+		public Guid StoreId;
+        [DataMember]
+		public Guid PurchaseOrderId;
+        [DataMember]
+		public Guid RelatedOrderId;
+        [DataMember]
+		public string RelatedOrderDocumentNumber;
         [DataMember]
 		public int RelatedOrderTypeValueFrom;
         [DataMember]
@@ -2027,33 +3496,41 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseCheckingOrderDetailModel
     {
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
         [DataMember]
 		public decimal PurchasePriceFrom;
         [DataMember]
 		public decimal PurchasePriceTo;
         [DataMember]
-		public int ArrivalAmountFrom;
+		public decimal ArrivalAmountFrom;
         [DataMember]
-		public int ArrivalAmountTo;
+		public decimal ArrivalAmountTo;
         [DataMember]
 		public DateTime ArrivalDateTimeFrom;
         [DataMember]
 		public DateTime ArrivalDateTimeTo;
         [DataMember]
-		public int QualifiedAmountFrom;
+		public decimal ReceivedAmountFrom;
         [DataMember]
-		public int QualifiedAmountTo;
+		public decimal ReceivedAmountTo;
+        [DataMember]
+		public decimal QualifiedAmountFrom;
+        [DataMember]
+		public decimal QualifiedAmountTo;
+        [DataMember]
+		public decimal UnQualifiedAmountFrom;
+        [DataMember]
+		public decimal UnQualifiedAmountTo;
         [DataMember]
 		public int CheckResultFrom;
         [DataMember]
 		public int CheckResultTo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
 		public DateTime PruductDateFrom;
         [DataMember]
@@ -2063,7 +3540,7 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime OutValidDateTo;
         [DataMember]
-		public Guid PurchaseCheckingOrderId{ get; set; }
+		public Guid PurchaseCheckingOrderId;
 
 	}
      
@@ -2074,27 +3551,27 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseInInventeryOrderModel
     {
         [DataMember]
-		public string DocumentNumber{ get; set; }
+		public string DocumentNumber;
         [DataMember]
-		public DateTime OperateTimeFrom{ get; set; }
+		public DateTime OperateTimeFrom;
         [DataMember]
-		public DateTime OperateTimeTo{ get; set; }
+		public DateTime OperateTimeTo;
         [DataMember]
-		public Guid OperateUserId{ get; set; }
+		public Guid OperateUserId;
         [DataMember]
-        public int OrderStatusValueFrom = 0;
+		public int OrderStatusValueFrom;
         [DataMember]
-        public int OrderStatusValueTo = 110;
+		public int OrderStatusValueTo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PurchaseOrderId{ get; set; }
+		public Guid PurchaseOrderId;
         [DataMember]
-		public Guid RelatedOrderId{ get; set; }
+		public Guid RelatedOrderId;
         [DataMember]
-		public string RelatedOrderDocumentNumber{ get; set; }
+		public string RelatedOrderDocumentNumber;
         [DataMember]
 		public int RelatedOrderTypeValueFrom;
         [DataMember]
@@ -2109,15 +3586,15 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseInInventeryOrderDetailModel
     {
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
         [DataMember]
 		public decimal PurchasePriceFrom;
         [DataMember]
 		public decimal PurchasePriceTo;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
 		public DateTime PruductDateFrom;
         [DataMember]
@@ -2127,19 +3604,21 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime OutValidDateTo;
         [DataMember]
-		public int ArrivalAmountFrom;
+		public decimal ArrivalAmountFrom;
         [DataMember]
-		public int ArrivalAmountTo;
+		public decimal ArrivalAmountTo;
         [DataMember]
 		public DateTime ArrivalDateTimeFrom;
         [DataMember]
 		public DateTime ArrivalDateTimeTo;
         [DataMember]
-		public Guid WarehouseZoneId{ get; set; }
+		public Guid WarehouseZoneId;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public Guid PurchaseInInventeryOrderId{ get; set; }
+		public Guid PurchaseInInventeryOrderId;
+        [DataMember]
+		public Guid WarehouseZonePositionId;
 
 	}
      
@@ -2150,11 +3629,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseManageCategoryModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -2167,15 +3646,15 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseManageCategoryDetailModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid PurchaseManageCategoryId{ get; set; }
+		public Guid PurchaseManageCategoryId;
 
 	}
      
@@ -2186,7 +3665,7 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseOrderModel
     {
         [DataMember]
-		public string DocumentNumber{ get; set; }
+		public string DocumentNumber;
         [DataMember]
 		public decimal TotalMoneyFrom;
         [DataMember]
@@ -2208,45 +3687,45 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime PurchasedDateTo;
         [DataMember]
-		public Guid SupplyUnitAccountExecutiveId{ get; set; }
+		public Guid SupplyUnitAccountExecutiveId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public Guid ApprovalUserId{ get; set; }
+		public Guid ApprovalUserId;
         [DataMember]
-		public string ApprovalDecription{ get; set; }
+		public string ApprovalDecription;
         [DataMember]
-		public Guid AmountApprovalUserId{ get; set; }
+		public Guid AmountApprovalUserId;
         [DataMember]
-		public string AmountApprovalDecription{ get; set; }
+		public string AmountApprovalDecription;
         [DataMember]
 		public int OrderStatusValueFrom;
         [DataMember]
 		public int OrderStatusValueTo;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public bool DirectMarketing{ get; set; }
+		public bool DirectMarketing;
         [DataMember]
 		public bool QueryDirectMarketing=false;
         [DataMember]
-		public string ShippingMethod{ get; set; }
+		public string ShippingMethod;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid SupplyUnitId{ get; set; }
+		public Guid SupplyUnitId;
         [DataMember]
-		public Guid ReleatedPurchaseOrderId{ get; set; }
+		public Guid ReleatedPurchaseOrderId;
 
 	}
      
@@ -2257,21 +3736,21 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseOrderDetailModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public int AmountFrom;
+		public decimal AmountFrom;
         [DataMember]
-		public int AmountTo;
+		public decimal AmountTo;
         [DataMember]
 		public decimal PurchasePriceFrom;
         [DataMember]
@@ -2281,11 +3760,11 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal AmountOfTaxTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
         [DataMember]
-		public Guid PurchaseOrderId{ get; set; }
+		public Guid PurchaseOrderId;
 
 	}
      
@@ -2296,49 +3775,49 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseOrderReturnModel
     {
         [DataMember]
-		public string DocumentNumber{ get; set; }
+		public string DocumentNumber;
         [DataMember]
-		public Guid CheckerUserId{ get; set; }
+		public Guid CheckerUserId;
         [DataMember]
-		public string CheckerSuggest{ get; set; }
+		public string CheckerSuggest;
         [DataMember]
-		public Guid QualityUserId{ get; set; }
+		public Guid QualityUserId;
         [DataMember]
-		public string QualitySuggest{ get; set; }
+		public string QualitySuggest;
         [DataMember]
-		public Guid GeneralManagerUserId{ get; set; }
+		public Guid GeneralManagerUserId;
         [DataMember]
-		public string GeneralManagerSuggest{ get; set; }
+		public string GeneralManagerSuggest;
         [DataMember]
-		public Guid FinanceDepartmentUserId{ get; set; }
+		public Guid FinanceDepartmentUserId;
         [DataMember]
-		public string FinanceDepartmentSuggest{ get; set; }
+		public string FinanceDepartmentSuggest;
         [DataMember]
 		public int OrderStatusValueFrom;
         [DataMember]
 		public int OrderStatusValueTo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PurchaseOrderId{ get; set; }
+		public Guid PurchaseOrderId;
         [DataMember]
-		public Guid RelatedOrderId{ get; set; }
+		public Guid RelatedOrderId;
         [DataMember]
-		public string RelatedOrderDocumentNumber{ get; set; }
+		public string RelatedOrderDocumentNumber;
         [DataMember]
 		public int RelatedOrderTypeValueFrom;
         [DataMember]
@@ -2353,11 +3832,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseOrderReturnDetailModel
     {
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
 		public DateTime PruductDateFrom;
         [DataMember]
@@ -2367,37 +3846,37 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime OutValidDateTo;
         [DataMember]
-		public int ReturnAmountFrom;
+		public decimal ReturnAmountFrom;
         [DataMember]
-		public int ReturnAmountTo;
+		public decimal ReturnAmountTo;
         [DataMember]
 		public decimal PurchasePriceFrom;
         [DataMember]
 		public decimal PurchasePriceTo;
         [DataMember]
-		public string ReturnReason{ get; set; }
+		public string ReturnReason;
         [DataMember]
-		public bool IsReissue{ get; set; }
+		public bool IsReissue;
         [DataMember]
 		public bool QueryIsReissue=false;
         [DataMember]
-		public int ReissueAmountFrom;
+		public decimal ReissueAmountFrom;
         [DataMember]
-		public int ReissueAmountTo;
+		public decimal ReissueAmountTo;
         [DataMember]
-		public Guid PurchaseOrderReturnId{ get; set; }
+		public Guid PurchaseOrderReturnId;
         [DataMember]
 		public int PurchaseReturnSourceValueFrom;
         [DataMember]
 		public int PurchaseReturnSourceValueTo;
         [DataMember]
-		public Guid RelatedOrderId{ get; set; }
+		public Guid RelatedOrderId;
         [DataMember]
 		public int ReturnHandledMethodValueFrom;
         [DataMember]
 		public int ReturnHandledMethodValueTo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
 
 	}
      
@@ -2408,41 +3887,41 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseReceivingOrderModel
     {
         [DataMember]
-		public string DocumentNumber{ get; set; }
+		public string DocumentNumber;
         [DataMember]
-		public DateTime OperateTimeFrom{ get; set; }
+		public DateTime OperateTimeFrom;
         [DataMember]
-		public DateTime OperateTimeTo{ get; set; }
+		public DateTime OperateTimeTo;
         [DataMember]
 		public DateTime ShippingTimeFrom;
         [DataMember]
 		public DateTime ShippingTimeTo;
         [DataMember]
-		public string ShippingAdress{ get; set; }
+		public string ShippingAdress;
         [DataMember]
-		public string ShippingUnit{ get; set; }
+		public string ShippingUnit;
         [DataMember]
-		public string TransportUnit{ get; set; }
+		public string TransportUnit;
         [DataMember]
-		public Guid OperateUserId{ get; set; }
+		public Guid OperateUserId;
         [DataMember]
-		public int OrderStatusValueFrom=0;
+		public int OrderStatusValueFrom;
         [DataMember]
-		public int OrderStatusValueTo=100;
+		public int OrderStatusValueTo;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid PurchaseOrderId{ get; set; }
+		public Guid PurchaseOrderId;
         [DataMember]
-		public Guid RelatedOrderId{ get; set; }
+		public Guid RelatedOrderId;
         [DataMember]
-		public string RelatedOrderDocumentNumber{ get; set; }
+		public string RelatedOrderDocumentNumber;
         [DataMember]
-		public int RelatedOrderTypeValueFrom=0;
+		public int RelatedOrderTypeValueFrom;
         [DataMember]
-		public int RelatedOrderTypeValueTo=100;
+		public int RelatedOrderTypeValueTo;
 
 	}
      
@@ -2453,47 +3932,47 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseReceivingOrderDetailModel
     {
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public int AmountFrom;
+		public decimal AmountFrom;
         [DataMember]
-		public int AmountTo;
+		public decimal AmountTo;
         [DataMember]
 		public decimal PurchasePriceFrom;
         [DataMember]
 		public decimal PurchasePriceTo;
         [DataMember]
-		public int ActualAmountFrom;
+		public decimal ActualAmountFrom;
         [DataMember]
-		public int ActualAmountTo;
+		public decimal ActualAmountTo;
         [DataMember]
-		public int ReceiveAmountFrom;
+		public decimal ReceiveAmountFrom;
         [DataMember]
-		public int ReceiveAmountTo;
+		public decimal ReceiveAmountTo;
         [DataMember]
-		public int RejectAmountFrom;
+		public decimal RejectAmountFrom;
         [DataMember]
-		public int RejectAmountTo;
+		public decimal RejectAmountTo;
         [DataMember]
-		public string RejectReason{ get; set; }
+		public string RejectReason;
         [DataMember]
-		public string RejectTrace{ get; set; }
+		public string RejectTrace;
         [DataMember]
-		public bool IsCompanyPurchase{ get; set; }
+		public bool IsCompanyPurchase;
         [DataMember]
 		public bool QueryIsCompanyPurchase=false;
         [DataMember]
-		public string TransportMethod{ get; set; }
+		public string TransportMethod;
         [DataMember]
-		public bool IsTransportMethod{ get; set; }
+		public bool IsTransportMethod;
         [DataMember]
 		public bool QueryIsTransportMethod=false;
         [DataMember]
-		public string TransportTemperature{ get; set; }
+		public string TransportTemperature;
         [DataMember]
-		public string TemperatureStatus{ get; set; }
+		public string TemperatureStatus;
         [DataMember]
-		public bool IsTransportTemperature{ get; set; }
+		public bool IsTransportTemperature;
         [DataMember]
 		public bool QueryIsTransportTemperature=false;
         [DataMember]
@@ -2501,11 +3980,11 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int CheckResultTo;
         [DataMember]
-		public Guid DrugInfoId{ get; set; }
+		public Guid DrugInfoId;
         [DataMember]
-		public Guid PurchaseReceivingOrderId{ get; set; }
+		public Guid PurchaseReceivingOrderId;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
 
 	}
      
@@ -2516,163 +3995,253 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseUnitModel
     {
         [DataMember]
-		public bool Valid{ get; set; }
+		public string DocNumber;
         [DataMember]
-		public bool QueryValid=false;
+		public string PinyinCode;
         [DataMember]
-		public string ValidRemark{ get; set; }
+		public string QualityAgreementDetail;
         [DataMember]
-		public bool IsLock{ get; set; }
+		public bool IsQualityAgreementOut;
         [DataMember]
-		public bool QueryIsLock=false;
+		public bool QueryIsQualityAgreementOut=false;
         [DataMember]
-		public string LockRemark{ get; set; }
+		public Guid QualityAgreementFile;
         [DataMember]
-		public string ReceiveAddress{ get; set; }
+		public DateTime QualityAgreemenStartdateFrom;
         [DataMember]
-		public Guid FlowID{ get; set; }
+		public DateTime QualityAgreemenStartdateTo;
         [DataMember]
-		public Guid DistrictId{ get; set; }
+		public DateTime QualityAgreementOutdateFrom;
         [DataMember]
-		public string Name{ get; set; }
+		public DateTime QualityAgreementOutdateTo;
         [DataMember]
-		public string Code{ get; set; }
+		public string QualityCharger;
         [DataMember]
-		public string PinyinCode{ get; set; }
+		public string AttorneyAattorneyDetail;
         [DataMember]
-		public string ContactName{ get; set; }
+		public Guid PurchaseDelegaterFile;
         [DataMember]
-		public string ContactTel{ get; set; }
+		public string PurchaseDelegater;
         [DataMember]
-		public string Description{ get; set; }
-        [DataMember]
-		public string LegalPerson{ get; set; }
-        [DataMember]
-		public string Header{ get; set; }
-        [DataMember]
-		public string BusinessScope{ get; set; }
-        [DataMember]
-		public string SalesAmount{ get; set; }
-        [DataMember]
-		public string Fax{ get; set; }
-        [DataMember]
-		public string Email{ get; set; }
-        [DataMember]
-		public string WebAddress{ get; set; }
-        [DataMember]
-		public bool IsOutDate{ get; set; }
+		public bool IsOutDate;
         [DataMember]
 		public bool QueryIsOutDate=false;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public Guid GSPLicenseId{ get; set; }
+		public bool Valid;
         [DataMember]
-		public bool IsGSPLicenseOutDate{ get; set; }
+		public bool QueryValid=false;
+        [DataMember]
+		public string ValidRemark;
+        [DataMember]
+		public bool IsLock;
+        [DataMember]
+		public bool QueryIsLock=false;
+        [DataMember]
+		public string LockRemark;
+        [DataMember]
+		public string ReceiveAddress;
+        [DataMember]
+		public string DetailedAddress;
+        [DataMember]
+		public Guid FlowID;
+        [DataMember]
+		public Guid DistrictId;
+        [DataMember]
+		public string Bank;
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string Code;
+        [DataMember]
+		public string ContactName;
+        [DataMember]
+		public string ContactTel;
+        [DataMember]
+		public string Description;
+        [DataMember]
+		public string LegalPerson;
+        [DataMember]
+		public string Header;
+        [DataMember]
+		public string BusinessScope;
+        [DataMember]
+		public string SalesAmount;
+        [DataMember]
+		public string Fax;
+        [DataMember]
+		public string Email;
+        [DataMember]
+		public string WebAddress;
+        [DataMember]
+		public Guid GSPLicenseId;
+        [DataMember]
+		public bool IsGSPLicenseOutDate;
         [DataMember]
 		public bool QueryIsGSPLicenseOutDate=false;
         [DataMember]
-		public DateTime GSPLicenseOutDateFrom{ get; set; }
+		public DateTime GSPLicenseOutDateFrom;
         [DataMember]
-		public DateTime GSPLicenseOutDateTo{ get; set; }
+		public DateTime GSPLicenseOutDateTo;
         [DataMember]
-		public Guid GMPLicenseId{ get; set; }
+		public Guid GMPLicenseId;
         [DataMember]
-		public bool IsGMPLicenseOutDate{ get; set; }
+		public bool IsGMPLicenseOutDate;
         [DataMember]
 		public bool QueryIsGMPLicenseOutDate=false;
         [DataMember]
-		public DateTime GMPLicenseOutDateFrom{ get; set; }
+		public DateTime GMPLicenseOutDateFrom;
         [DataMember]
-		public DateTime GMPLicenseOutDateTo{ get; set; }
+		public DateTime GMPLicenseOutDateTo;
         [DataMember]
-		public Guid BusinessLicenseId{ get; set; }
+		public Guid BusinessLicenseId;
         [DataMember]
-		public bool IsBusinessLicenseOutDate{ get; set; }
+		public bool IsBusinessLicenseOutDate;
         [DataMember]
 		public bool QueryIsBusinessLicenseOutDate=false;
         [DataMember]
-		public DateTime BusinessLicenseeOutDateFrom{ get; set; }
+		public DateTime BusinessLicenseeOutDateFrom;
         [DataMember]
-		public DateTime BusinessLicenseeOutDateTo{ get; set; }
+		public DateTime BusinessLicenseeOutDateTo;
         [DataMember]
-		public Guid MedicineProductionLicenseId{ get; set; }
+		public Guid MedicineProductionLicenseId;
         [DataMember]
-		public bool IsMedicineProductionLicenseOutDate{ get; set; }
+		public bool IsMedicineProductionLicenseOutDate;
         [DataMember]
 		public bool QueryIsMedicineProductionLicenseOutDate=false;
         [DataMember]
-		public DateTime MedicineProductionLicenseOutDateFrom{ get; set; }
+		public DateTime MedicineProductionLicenseOutDateFrom;
         [DataMember]
-		public DateTime MedicineProductionLicenseOutDateTo{ get; set; }
+		public DateTime MedicineProductionLicenseOutDateTo;
         [DataMember]
-		public Guid MedicineBusinessLicenseId{ get; set; }
+		public Guid MedicineBusinessLicenseId;
         [DataMember]
-		public bool IsMedicineBusinessLicenseOutDate{ get; set; }
+		public bool IsMedicineBusinessLicenseOutDate;
         [DataMember]
 		public bool QueryIsMedicineBusinessLicenseOutDate=false;
         [DataMember]
-		public DateTime MedicineBusinessLicenseOutDateFrom{ get; set; }
+		public DateTime MedicineBusinessLicenseOutDateFrom;
         [DataMember]
-		public DateTime MedicineBusinessLicenseOutDateTo{ get; set; }
+		public DateTime MedicineBusinessLicenseOutDateTo;
         [DataMember]
-		public Guid InstrumentsProductionLicenseId{ get; set; }
+		public Guid InstrumentsProductionLicenseId;
         [DataMember]
-		public bool IsInstrumentsProductionLicenseOutDate{ get; set; }
+		public bool IsInstrumentsProductionLicenseOutDate;
         [DataMember]
 		public bool QueryIsInstrumentsProductionLicenseOutDate=false;
         [DataMember]
-		public DateTime InstrumentsProductionLicenseOutDateFrom{ get; set; }
+		public DateTime InstrumentsProductionLicenseOutDateFrom;
         [DataMember]
-		public DateTime InstrumentsProductionLicenseOutDateTo{ get; set; }
+		public DateTime InstrumentsProductionLicenseOutDateTo;
         [DataMember]
-		public Guid InstrumentsBusinessLicenseId{ get; set; }
+		public Guid InstrumentsBusinessLicenseId;
         [DataMember]
 		public bool IsInstrumentsBusinessLicenseOutDate;
         [DataMember]
 		public bool QueryIsInstrumentsBusinessLicenseOutDate=false;
         [DataMember]
-		public DateTime InstrumentsBusinessLicenseOutDateFrom{ get; set; }
+		public DateTime InstrumentsBusinessLicenseOutDateFrom;
         [DataMember]
-		public DateTime InstrumentsBusinessLicenseOutDateTo{ get; set; }
+		public DateTime InstrumentsBusinessLicenseOutDateTo;
         [DataMember]
-		public string TaxRegistrationCode{ get; set; }
+		public Guid HealthLicenseId;
         [DataMember]
-		public Guid TaxRegistrationFile{ get; set; }
+		public bool IsHealthLicenseOutDate;
         [DataMember]
-		public Guid AnnualFile{ get; set; }
+		public bool QueryIsHealthLicenseOutDate=false;
         [DataMember]
-        public DateTime LastAnnualDteFrom { get; set; }
+		public DateTime HealthLicenseOutDateFrom;
         [DataMember]
-        public DateTime LastAnnualDteTo { get; set; }
+		public DateTime HealthLicenseOutDateTo;
         [DataMember]
-		public bool IsApproval{ get; set; }
+		public Guid TaxRegisterLicenseId;
+        [DataMember]
+		public bool IsTaxRegisterLicenseOutDate;
+        [DataMember]
+		public bool QueryIsTaxRegisterLicenseOutDate=false;
+        [DataMember]
+		public DateTime TaxRegisterLicenseOutDateFrom;
+        [DataMember]
+		public DateTime TaxRegisterLicenseOutDateTo;
+        [DataMember]
+		public Guid OrganizationCodeLicenseId;
+        [DataMember]
+		public bool IsOrganizationCodeLicenseOutDate;
+        [DataMember]
+		public bool QueryIsOrganizationCodeLicenseOutDate=false;
+        [DataMember]
+		public DateTime OrganizationCodeLicenseOutDateFrom;
+        [DataMember]
+		public DateTime OrganizationCodeLicenseOutDateTo;
+        [DataMember]
+		public Guid FoodCirculateLicenseId;
+        [DataMember]
+		public bool IsFoodCirculateLicenseOutDate;
+        [DataMember]
+		public bool QueryIsFoodCirculateLicenseOutDate=false;
+        [DataMember]
+		public DateTime FoodCirculateLicenseOutDateFrom;
+        [DataMember]
+		public DateTime FoodCirculateLicenseOutDateTo;
+        [DataMember]
+		public Guid MmedicalInstitutionPermitId;
+        [DataMember]
+		public bool IsMmedicalInstitutionPermitOutDate;
+        [DataMember]
+		public bool QueryIsMmedicalInstitutionPermitOutDate=false;
+        [DataMember]
+		public DateTime MmedicalInstitutionPermitOutDateFrom;
+        [DataMember]
+		public DateTime MmedicalInstitutionPermitOutDateTo;
+        [DataMember]
+		public Guid LnstitutionLegalPersonLicenseId;
+        [DataMember]
+		public bool IsLnstitutionLegalPersonLicenseOutDate;
+        [DataMember]
+		public bool QueryIsLnstitutionLegalPersonLicenseOutDate=false;
+        [DataMember]
+		public DateTime LnstitutionLegalPersonLicenseOutDateFrom;
+        [DataMember]
+		public DateTime LnstitutionLegalPersonLicenseOutDateTo;
+        [DataMember]
+		public string TaxRegistrationCode;
+        [DataMember]
+		public Guid TaxRegistrationFile;
+        [DataMember]
+		public Guid AnnualFile;
+        [DataMember]
+		public DateTime LastAnnualDteFrom;
+        [DataMember]
+		public DateTime LastAnnualDteTo;
+        [DataMember]
+		public bool IsApproval;
         [DataMember]
 		public bool QueryIsApproval=false;
         [DataMember]
-        public int ApprovalStatusValueFrom = 0;
+		public int ApprovalStatusValueFrom;
         [DataMember]
-        public int ApprovalStatusValueTo = 16;
+		public int ApprovalStatusValueTo;
         [DataMember]
-		public Guid UnitTypeId{ get; set; }
+		public Guid UnitTypeId;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -2685,61 +4254,61 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseUnitBuyerModel
     {
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-        public int PurchaseLimitTypeValueFrom = 0;
+		public int PurchaseLimitTypeValueFrom;
         [DataMember]
-		public int PurchaseLimitTypeValueTo =  1;
+		public int PurchaseLimitTypeValueTo;
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public Guid IDFile{ get; set; }
+		public Guid IDFile;
         [DataMember]
-		public string IDNumber{ get; set; }
+		public string IDNumber;
         [DataMember]
-		public string Tel{ get; set; }
+		public string Tel;
         [DataMember]
-		public string Address{ get; set; }
+		public string Address;
         [DataMember]
-        public DateTime BirthdayFrom { get; set; }
+		public DateTime BirthdayFrom;
         [DataMember]
-        public DateTime BirthdayTo { get; set; }
+		public DateTime BirthdayTo;
         [DataMember]
-		public string Gender{ get; set; }
+		public string Gender;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public bool IsChecked{ get; set; }
+		public bool IsChecked;
         [DataMember]
 		public bool QueryIsChecked=false;
         [DataMember]
-		public string IDCheckType{ get; set; }
+		public string IDCheckType;
         [DataMember]
-		public Guid IDCheckUserId{ get; set; }
+		public Guid IDCheckUserId;
         [DataMember]
-		public Guid PurchaseUnitId{ get; set; }
+		public Guid PurchaseUnitId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -2750,96 +4319,47 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseUnitDelivererModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string IDFile{ get; set; }
+		public string IDFile;
         [DataMember]
-		public string IDNumber{ get; set; }
+		public string IDNumber;
         [DataMember]
-		public string Tel{ get; set; }
+		public string Tel;
         [DataMember]
-		public string Address{ get; set; }
+		public string Address;
         [DataMember]
-        public DateTime BirthdayFrom { get; set; }
+		public DateTime BirthdayFrom;
         [DataMember]
-        public DateTime BirthdayTo { get; set; }
+		public DateTime BirthdayTo;
         [DataMember]
-		public string Gender{ get; set; }
+		public string Gender;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid PurchaseUnitId{ get; set; }
+		public Guid PurchaseUnitId;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
-
-    /// <summary>
-    /// 首营药材供货人员服务查询实体
-    /// </summary>
-    [DataContract]
-    public partial class QuerySupplyPersonModel
-    {
-        [DataMember]
-        public string Name { get; set; }
-        [DataMember]
-        public string IDFile { get; set; }
-        [DataMember]
-        public string IDNumber { get; set; }
-        [DataMember]
-        public string Tel { get; set; }
-        [DataMember]
-        public string Address { get; set; }
-        [DataMember]
-        public DateTime BirthdayFrom { get; set; }
-        [DataMember]
-        public DateTime BirthdayTo { get; set; }
-        [DataMember]
-        public string Gender { get; set; }
-        [DataMember]
-        public Guid CreateUserId { get; set; }
-        [DataMember]
-        public Guid UpdateUserId { get; set; }
-        [DataMember]
-        public DateTime CreateTimeFrom{ get; set; }
-        [DataMember]
-        public DateTime CreateTimeTo{ get; set; }
-        [DataMember]
-        public DateTime UpdateTimeFrom{ get; set; }
-        [DataMember]
-        public DateTime UpdateTimeTo{ get; set; }
-        [DataMember]
-        public bool Valid { get; set; }
-        [DataMember]
-        public bool QueryValid = false;
-        [DataMember]
-        public bool Enabled { get; set; }
-        [DataMember]
-        public bool QueryEnabled = false;
-        //[DataMember]
-        //public Guid PurchaseUnitId { get; set; }
-        [DataMember]
-        public Guid StoreId { get; set; }
-
-    }
      
 	/// <summary>
     /// 购货单位类型服务查询实体
@@ -2848,13 +4368,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryPurchaseUnitTypeModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -2866,6 +4386,68 @@ namespace BugsBox.Pharmacy.Service.Models
 	[DataContract]
     public partial class QueryPurchasingPlanModel
     {
+        [DataMember]
+		public string DocumentNumber;
+        [DataMember]
+		public decimal TotalMoneyFrom;
+        [DataMember]
+		public decimal TotalMoneyTo;
+        [DataMember]
+		public decimal PaymentForGoodsMoneyFrom;
+        [DataMember]
+		public decimal PaymentForGoodsMoneyTo;
+        [DataMember]
+		public decimal AmountOfTaxMoneyFrom;
+        [DataMember]
+		public decimal AmountOfTaxMoneyTo;
+        [DataMember]
+		public int InValidDaysFrom;
+        [DataMember]
+		public int InValidDaysTo;
+        [DataMember]
+		public DateTime PurchasedDateFrom;
+        [DataMember]
+		public DateTime PurchasedDateTo;
+        [DataMember]
+		public Guid SupplyUnitAccountExecutiveId;
+        [DataMember]
+		public DateTime CreateTimeFrom;
+        [DataMember]
+		public DateTime CreateTimeTo;
+        [DataMember]
+		public Guid CreateUserId;
+        [DataMember]
+		public string Decription;
+        [DataMember]
+		public Guid ApprovalUserId;
+        [DataMember]
+		public string ApprovalDecription;
+        [DataMember]
+		public Guid AmountApprovalUserId;
+        [DataMember]
+		public string AmountApprovalDecription;
+        [DataMember]
+		public int OrderStatusValueFrom;
+        [DataMember]
+		public int OrderStatusValueTo;
+        [DataMember]
+		public Guid UpdateUserId;
+        [DataMember]
+		public DateTime UpdateTimeFrom;
+        [DataMember]
+		public DateTime UpdateTimeTo;
+        [DataMember]
+		public bool DirectMarketing;
+        [DataMember]
+		public bool QueryDirectMarketing=false;
+        [DataMember]
+		public string ShippingMethod;
+        [DataMember]
+		public Guid StoreId;
+        [DataMember]
+		public Guid SupplyUnitId;
+        [DataMember]
+		public Guid ReleatedPurchaseOrderId;
 
 	}
      
@@ -2885,13 +4467,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryRarewordModel
     {
         [DataMember]
-		public string PinYin{ get; set; }
+		public string PinYin;
         [DataMember]
-		public string Word{ get; set; }
+		public string Word;
         [DataMember]
-		public string Parts{ get; set; }
+		public string Parts;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
 
 	}
      
@@ -2902,11 +4484,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryRetailMemberModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
@@ -2914,19 +4496,19 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int RetailCustomerTypeValueTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -2937,21 +4519,21 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryRetailOrderModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
 		public decimal TotalMoneyFrom;
         [DataMember]
@@ -3001,7 +4583,7 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal ReturnRealReceiveMoneyTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -3012,43 +4594,43 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryRetailOrderDetailModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
 		public int IndexFrom;
         [DataMember]
 		public int IndexTo;
         [DataMember]
-		public string productName{ get; set; }
+		public string productName;
         [DataMember]
-		public string productCode{ get; set; }
+		public string productCode;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
-		public int AmountFrom;
+		public decimal AmountFrom;
         [DataMember]
-		public int AmountTo;
+		public decimal AmountTo;
         [DataMember]
-		public int ReturnAmountFrom;
+		public decimal ReturnAmountFrom;
         [DataMember]
-		public int ReturnAmountTo;
+		public decimal ReturnAmountTo;
         [DataMember]
-		public bool IsDismanting{ get; set; }
+		public bool IsDismanting;
         [DataMember]
 		public bool QueryIsDismanting=false;
         [DataMember]
-		public int DismantingAmountFrom;
+		public decimal DismantingAmountFrom;
         [DataMember]
-		public int DismantingAmountTo;
+		public decimal DismantingAmountTo;
         [DataMember]
 		public decimal UnitPriceFrom;
         [DataMember]
@@ -3066,9 +4648,9 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal ActualDismantingUnitPriceTo;
         [DataMember]
-		public string MeasurementUnit{ get; set; }
+		public string MeasurementUnit;
         [DataMember]
-		public string SpecificationCode{ get; set; }
+		public string SpecificationCode;
         [DataMember]
 		public DateTime PruductDateFrom;
         [DataMember]
@@ -3078,31 +4660,31 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public DateTime OutValidDateTo;
         [DataMember]
-		public string FactoryName{ get; set; }
+		public string FactoryName;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-		public bool IsDiscount{ get; set; }
+		public bool IsDiscount;
         [DataMember]
 		public bool QueryIsDiscount=false;
         [DataMember]
-		public int DiscountFrom;
+		public decimal DiscountFrom;
         [DataMember]
-		public int DiscountTo;
+		public decimal DiscountTo;
         [DataMember]
-		public int DiscountPriceFrom;
+		public decimal DiscountPriceFrom;
         [DataMember]
-		public int DiscountPriceTo;
+		public decimal DiscountPriceTo;
         [DataMember]
 		public decimal TotalMoneyFrom;
         [DataMember]
 		public decimal TotalMoneyTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid RetailOrderId{ get; set; }
+		public Guid RetailOrderId;
         [DataMember]
-		public Guid DrugInventoryRecordID{ get; set; }
+		public Guid DrugInventoryRecordID;
 
 	}
      
@@ -3113,25 +4695,25 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryRoleModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -3142,23 +4724,23 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryRoleWithUserModel
     {
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid RoleId{ get; set; }
+		public Guid RoleId;
         [DataMember]
-		public Guid UserId{ get; set; }
+		public Guid UserId;
 
 	}
      
@@ -3169,107 +4751,116 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySalesOrderModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public string SalerName{ get; set; }
+		public string SalerName;
         [DataMember]
-        public DateTime SaleDateFrom { get; set; }
+		public DateTime SaleDateFrom;
         [DataMember]
-        public DateTime SaleDateTo { get; set; }
+		public DateTime SaleDateTo;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
 		public decimal TotalMoneyFrom;
         [DataMember]
 		public decimal TotalMoneyTo;
         [DataMember]
-		public string OrderCode{ get; set; }
+		public string OrderCode;
         [DataMember]
-		public bool AllDelivered{ get; set; }
+		public bool AllDelivered;
         [DataMember]
 		public bool QueryAllDelivered=false;
         [DataMember]
-        public int SalesDrugTypeValueFrom = 0;
+		public int SalesDrugTypeValueFrom;
         [DataMember]
-        public int SalesDrugTypeValueTo = 3;
+		public int SalesDrugTypeValueTo;
         [DataMember]
-        public int PickUpGoodTypeValueFrom = 0;
+		public int PickUpGoodTypeValueFrom;
         [DataMember]
-        public int PickUpGoodTypeValueTo = 3;
+		public int PickUpGoodTypeValueTo;
         [DataMember]
-		public string PickUpMan{ get; set; }
+		public string PickUpMan;
         [DataMember]
-		public string PurchaseUnitMan{ get; set; }
+		public string PurchaseUnitMan;
         [DataMember]
-		public Guid PurchaseUnitManID{ get; set; }
+		public Guid PurchaseUnitManID;
         [DataMember]
-        public int OrderStatusValueFrom = 0;
+		public int OrderStatusValueFrom;
         [DataMember]
-        public int OrderStatusValueTo = 110;
+		public int OrderStatusValueTo;
         [DataMember]
-		public Guid ApprovalUserId{ get; set; }
+		public Guid ApprovalUserId;
         [DataMember]
-		public Guid CancelUserID{ get; set; }
+		public Guid CancelUserID;
         [DataMember]
-		public string CancelReason{ get; set; }
+		public string CancelReason;
         [DataMember]
-		public string OrderCancelCode{ get; set; }
+		public string OrderCancelCode;
         [DataMember]
-		public string OrderBalanceCode{ get; set; }
+		public string OrderBalanceCode;
         [DataMember]
-		public Guid BalanceUserID{ get; set; }
+		public Guid BalanceUserID;
         [DataMember]
-		public string BalanceReason{ get; set; }
+		public string BalanceReason;
         [DataMember]
-		public Guid payMentMethodID{ get; set; }
+		public Guid payMentMethodID;
         [DataMember]
-		public string OrderOutInventoryCode{ get; set; }
+		public string OrderOutInventoryCode;
         [DataMember]
-		public Guid OrderOutInventoryUserID{ get; set; }
+		public Guid OrderOutInventoryUserID;
         [DataMember]
-		public string OrderOutInventoryCheckCode{ get; set; }
+		public string OrderOutInventoryCheckCode;
         [DataMember]
-		public Guid OrderOutInventoryCheckUserID{ get; set; }
+		public Guid OrderOutInventoryCheckUserID;
         [DataMember]
-		public string OrderReturnCode{ get; set; }
+		public string OrderReturnCode;
         [DataMember]
-		public Guid OrderReturnUserID{ get; set; }
+		public Guid OrderReturnUserID;
         [DataMember]
-		public string OrderReturnReason{ get; set; }
+		public string OrderReturnReason;
         [DataMember]
-		public string OrderReturnCancelCode{ get; set; }
+		public string OrderReturnCancelCode;
         [DataMember]
-		public Guid OrderReturnCancelUserID{ get; set; }
+		public Guid OrderReturnCancelUserID;
         [DataMember]
-		public string OrderReturnCancelReason{ get; set; }
+		public string OrderReturnCancelReason;
         [DataMember]
-		public string OrderReturnCheckCode{ get; set; }
+		public string OrderReturnCheckCode;
         [DataMember]
-		public Guid OrderReturnCheckUserID{ get; set; }
+		public Guid OrderReturnCheckUserID;
         [DataMember]
-		public string OrderReturnInInventoryCode{ get; set; }
+		public string OrderReturnInInventoryCode;
         [DataMember]
-		public Guid OrderReturnInInventoryUserID{ get; set; }
+		public Guid OrderReturnInInventoryUserID;
         [DataMember]
-		public string OrderDirectReturnCode{ get; set; }
+		public string OrderDirectReturnCode;
         [DataMember]
-		public Guid OrderDirectReturnUserID{ get; set; }
+		public Guid OrderDirectReturnUserID;
         [DataMember]
-		public Guid OutInventoryId{ get; set; }
+		public Guid OutInventoryId;
         [DataMember]
-		public Guid PurchaseUnitId{ get; set; }
+		public Guid PurchaseUnitId;
+        [DataMember]
+		public string VATCode;
+        [DataMember]
+		public string VATNumber;
+        [DataMember]
+		public decimal VATRateFrom;
+        [DataMember]
+		public decimal VATRateTo;
+
 	}
      
 	/// <summary>
@@ -3279,11 +4870,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySalesOrderDeliverDetailModel
     {
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid SalesOrderDeliverRecordId{ get; set; }
+		public Guid SalesOrderDeliverRecordId;
         [DataMember]
-		public Guid SalesOrderDetailId{ get; set; }
+		public Guid SalesOrderDetailId;
 
 	}
      
@@ -3294,29 +4885,29 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySalesOrderDeliverRecordModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid ApprovalUserId{ get; set; }
+		public Guid ApprovalUserId;
         [DataMember]
-		public bool HadDelivered{ get; set; }
+		public bool HadDelivered;
         [DataMember]
 		public bool QueryHadDelivered=false;
         [DataMember]
-		public Guid OutInventoryId{ get; set; }
+		public Guid OutInventoryId;
         [DataMember]
-		public Guid SalesOrderId{ get; set; }
+		public Guid SalesOrderId;
 
 	}
      
@@ -3331,29 +4922,29 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int IndexTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public string productName{ get; set; }
+		public string productName;
         [DataMember]
-		public string productCode{ get; set; }
+		public string productCode;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
-		public int AmountFrom;
+		public decimal AmountFrom;
         [DataMember]
-		public int AmountTo;
+		public decimal AmountTo;
         [DataMember]
 		public decimal UnitPriceFrom;
         [DataMember]
@@ -3367,43 +4958,47 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal PriceTo;
         [DataMember]
-		public string MeasurementUnit{ get; set; }
+		public string MeasurementUnit;
         [DataMember]
-		public string SpecificationCode{ get; set; }
+		public string SpecificationCode;
         [DataMember]
-		public string DictionaryDosageCode{ get; set; }
+		public string DictionaryDosageCode;
         [DataMember]
-		public string Origin{ get; set; }
+		public string Origin;
         [DataMember]
-        public DateTime PruductDateFrom { get; set; }
+		public DateTime PruductDateFrom;
         [DataMember]
-        public DateTime PruductDateTo { get; set; }
+		public DateTime PruductDateTo;
         [DataMember]
-        public DateTime OutValidDateFrom { get; set; }
+		public DateTime OutValidDateFrom;
         [DataMember]
-        public DateTime OutValidDateTo { get; set; }
+		public DateTime OutValidDateTo;
         [DataMember]
-		public string FactoryName{ get; set; }
+		public string FactoryName;
         [DataMember]
-		public string Description{ get; set; }
+		public decimal DiscountFrom;
         [DataMember]
-		public int ReturnAmountFrom;
+		public decimal DiscountTo;
         [DataMember]
-		public int ReturnAmountTo;
+		public string Description;
         [DataMember]
-		public int ChangeAmountFrom;
+		public decimal ReturnAmountFrom;
         [DataMember]
-		public int ChangeAmountTo;
+		public decimal ReturnAmountTo;
         [DataMember]
-		public int OutAmountFrom;
+		public decimal ChangeAmountFrom;
         [DataMember]
-		public int OutAmountTo;
+		public decimal ChangeAmountTo;
         [DataMember]
-		public Guid OutInventoryDetailID{ get; set; }
+		public decimal OutAmountFrom;
         [DataMember]
-		public Guid SalesOrderID{ get; set; }
+		public decimal OutAmountTo;
         [DataMember]
-		public Guid DrugInventoryRecordID{ get; set; }
+		public Guid OutInventoryDetailID;
+        [DataMember]
+		public Guid SalesOrderID;
+        [DataMember]
+		public Guid DrugInventoryRecordID;
 
 	}
      
@@ -3414,77 +5009,77 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySalesOrderReturnModel
     {
         [DataMember]
-		public string OrderReturnCode{ get; set; }
+		public string OrderReturnCode;
         [DataMember]
-		public string OrderReturnReason{ get; set; }
+		public string OrderReturnReason;
         [DataMember]
-        public DateTime OrderReturnTimeFrom { get; set; }
+		public DateTime OrderReturnTimeFrom;
         [DataMember]
-        public DateTime OrderReturnTimeTo { get; set; }
+		public DateTime OrderReturnTimeTo;
         [DataMember]
-		public bool IsReissue{ get; set; }
+		public bool IsReissue;
         [DataMember]
 		public bool QueryIsReissue=false;
         [DataMember]
-		public Guid SellerID{ get; set; }
+		public Guid SellerID;
         [DataMember]
-		public string SellerMemo{ get; set; }
+		public string SellerMemo;
         [DataMember]
-		public DateTime SellerUpdateTimeFrom{ get; set; }
+		public DateTime SellerUpdateTimeFrom;
         [DataMember]
-		public DateTime SellerUpdateTimeTo{ get; set; }
+		public DateTime SellerUpdateTimeTo;
         [DataMember]
-		public Guid TradeUserID{ get; set; }
+		public Guid TradeUserID;
         [DataMember]
-		public string TradeMemo{ get; set; }
+		public string TradeMemo;
         [DataMember]
-		public DateTime TradeUpdateTimeFrom{ get; set; }
+		public DateTime TradeUpdateTimeFrom;
         [DataMember]
-		public DateTime TradeUpdateTimeTo{ get; set; }
+		public DateTime TradeUpdateTimeTo;
         [DataMember]
-		public Guid QualityUserID{ get; set; }
+		public Guid QualityUserID;
         [DataMember]
-		public string QualityMemo{ get; set; }
+		public string QualityMemo;
         [DataMember]
-		public DateTime QualityUpdateTimeFrom{ get; set; }
+		public DateTime QualityUpdateTimeFrom;
         [DataMember]
-		public DateTime QualityUpdateTimeTo{ get; set; }
+		public DateTime QualityUpdateTimeTo;
         [DataMember]
-		public int OrderReturnStatusValueFrom=0;
+		public int OrderReturnStatusValueFrom;
         [DataMember]
-		public int OrderReturnStatusValueTo=100;
+		public int OrderReturnStatusValueTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public string OrderReturnInInventoryCode{ get; set; }
+		public string OrderReturnInInventoryCode;
         [DataMember]
-		public Guid OrderReturnInInventoryUserID{ get; set; }
+		public Guid OrderReturnInInventoryUserID;
         [DataMember]
-		public string OrderReturnCancelCode{ get; set; }
+		public string OrderReturnCancelCode;
         [DataMember]
-		public Guid OrderReturnCancelUserID{ get; set; }
+		public Guid OrderReturnCancelUserID;
         [DataMember]
-		public string OrderReturnCancelReason{ get; set; }
+		public string OrderReturnCancelReason;
         [DataMember]
-		public string OrderReturnCheckCode{ get; set; }
+		public string OrderReturnCheckCode;
         [DataMember]
-		public Guid OrderReturnCheckUserID{ get; set; }
+		public Guid OrderReturnCheckUserID;
         [DataMember]
-		public Guid SalesOrderID{ get; set; }
+		public Guid SalesOrderID;
         [DataMember]
-		public Guid OutInventoryID{ get; set; }
+		public Guid OutInventoryID;
 
 	}
      
@@ -3499,29 +5094,29 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int IndexTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public string productName{ get; set; }
+		public string productName;
         [DataMember]
-		public string productCode{ get; set; }
+		public string productCode;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
-		public int OrderAmountFrom;
+		public decimal OrderAmountFrom;
         [DataMember]
-		public int OrderAmountTo;
+		public decimal OrderAmountTo;
         [DataMember]
 		public decimal UnitPriceFrom;
         [DataMember]
@@ -3535,65 +5130,65 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal PriceTo;
         [DataMember]
-		public string MeasurementUnit{ get; set; }
+		public string MeasurementUnit;
         [DataMember]
-		public string SpecificationCode{ get; set; }
+		public string SpecificationCode;
         [DataMember]
-        public DateTime PruductDateFrom { get; set; }
+		public DateTime PruductDateFrom;
         [DataMember]
-        public DateTime PruductDateTo { get; set; }
+		public DateTime PruductDateTo;
         [DataMember]
-        public DateTime OutValidDateFrom { get; set; }
+		public DateTime OutValidDateFrom;
         [DataMember]
-        public DateTime OutValidDateTo { get; set; }
+		public DateTime OutValidDateTo;
         [DataMember]
-		public string FactoryName{ get; set; }
+		public string FactoryName;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-		public int ReturnAmountFrom;
+		public decimal ReturnAmountFrom;
         [DataMember]
-		public int ReturnAmountTo;
+		public decimal ReturnAmountTo;
         [DataMember]
 		public int ReturnReasonValueFrom;
         [DataMember]
 		public int ReturnReasonValueTo;
         [DataMember]
-		public string ReturnReasonMemo{ get; set; }
+		public string ReturnReasonMemo;
         [DataMember]
-		public int CanInAmountFrom;
+		public decimal CanInAmountFrom;
         [DataMember]
-		public int CanInAmountTo;
+		public decimal CanInAmountTo;
         [DataMember]
-		public int CannotInAmountFrom;
+		public decimal CannotInAmountFrom;
         [DataMember]
-		public int CannotInAmountTo;
+		public decimal CannotInAmountTo;
         [DataMember]
 		public int ReturnHandledMethodValueFrom;
         [DataMember]
 		public int ReturnHandledMethodValueTo;
         [DataMember]
-		public string ReturnHandledMethodMemo{ get; set; }
+		public string ReturnHandledMethodMemo;
         [DataMember]
-		public bool IsReissue{ get; set; }
+		public bool IsReissue;
         [DataMember]
 		public bool QueryIsReissue=false;
         [DataMember]
-		public int ReissueAmountFrom;
+		public decimal ReissueAmountFrom;
         [DataMember]
-		public int ReissueAmountTo;
+		public decimal ReissueAmountTo;
         [DataMember]
-		public Guid OutInventoryDetailID{ get; set; }
+		public Guid OutInventoryDetailID;
         [DataMember]
-		public Guid OrderReturnID{ get; set; }
+		public Guid OrderReturnID;
         [DataMember]
-		public Guid SalesOrderDetailID{ get; set; }
+		public Guid SalesOrderDetailID;
         [DataMember]
-		public Guid DrugInventoryRecordID{ get; set; }
+		public Guid DrugInventoryRecordID;
         [DataMember]
-		public string DictionaryDosageCode{ get; set; }
+		public string DictionaryDosageCode;
         [DataMember]
-		public string Origin{ get; set; }
+		public string Origin;
 
 	}
      
@@ -3604,35 +5199,35 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryOutInventoryModel
     {
         [DataMember]
-		public string OutInventoryNumber{ get; set; }
+		public string OutInventoryNumber;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid storekeeperId{ get; set; }
+		public Guid storekeeperId;
         [DataMember]
-		public Guid ReviewerId{ get; set; }
+		public Guid ReviewerId;
         [DataMember]
-		public DateTime OutInventoryDateFrom{ get; set; }
+		public DateTime OutInventoryDateFrom;
         [DataMember]
-        public DateTime OutInventoryDateTo { get; set; }
+		public DateTime OutInventoryDateTo;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-		public Guid OrderOutInventoryUserID{ get; set; }
+		public Guid OrderOutInventoryUserID;
         [DataMember]
-		public string OrderOutInventoryCheckNumber{ get; set; }
+		public string OrderOutInventoryCheckNumber;
         [DataMember]
-		public Guid OrderOutInventoryCheckUserID{ get; set; }
+		public Guid OrderOutInventoryCheckUserID;
         [DataMember]
 		public decimal TotalMoneyFrom;
         [DataMember]
@@ -3650,13 +5245,21 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int OutInventoryStatusValueTo;
         [DataMember]
-		public Guid SalesOrderID{ get; set; }
+		public Guid SalesOrderID;
         [DataMember]
-		public string OrderCode{ get; set; }
+		public string OrderCode;
         [DataMember]
-		public Guid SalesOrderReturnID{ get; set; }
+		public Guid SalesOrderReturnID;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
+        [DataMember]
+		public Guid SpecialDrugSecondChecker;
+        [DataMember]
+		public DateTime SecondCheckDateTimeFrom;
+        [DataMember]
+		public DateTime SecondCheckDateTimeTo;
+        [DataMember]
+		public string SecondeCheckMemo;
 
 	}
      
@@ -3667,17 +5270,17 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySetSpeicalDrugRecordModel
     {
         [DataMember]
-		public Guid DrugInventoryId{ get; set; }
+		public Guid DrugInventoryId;
         [DataMember]
-        public int MaintainDuetimeFrom { get; set; }
+		public int MaintainDuetimeFrom;
         [DataMember]
-        public int MaintainDuetimeTo { get; set; }
+		public int MaintainDuetimeTo;
         [DataMember]
-		public string Reason{ get; set; }
+		public string Reason;
         [DataMember]
-		public string MaintainEmphasis{ get; set; }
+		public string MaintainEmphasis;
         [DataMember]
-		public string Memo{ get; set; }
+		public string Memo;
 
 	}
      
@@ -3688,13 +5291,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySpecialDrugCategoryModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -3707,25 +5310,72 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryStoreModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string Address{ get; set; }
+		public string Address;
         [DataMember]
-		public string Tel{ get; set; }
+		public string Tel;
         [DataMember]
-		public string Head{ get; set; }
+		public string Head;
         [DataMember]
-        public int StoreTypeValueFrom = 0;
+		public int StoreTypeValueFrom;
         [DataMember]
-        public int StoreTypeValueTo = 5;
+		public int StoreTypeValueTo;
+
+	}
+     
+	/// <summary>
+    /// 首营药材供货人管理服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QuerySupplyPersonModel
+    {
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public string IDFile;
+        [DataMember]
+		public string IDNumber;
+        [DataMember]
+		public string Tel;
+        [DataMember]
+		public string Address;
+        [DataMember]
+		public DateTime BirthdayFrom;
+        [DataMember]
+		public DateTime BirthdayTo;
+        [DataMember]
+		public string Gender;
+        [DataMember]
+		public Guid CreateUserId;
+        [DataMember]
+		public Guid UpdateUserId;
+        [DataMember]
+		public DateTime CreateTimeFrom;
+        [DataMember]
+		public DateTime CreateTimeTo;
+        [DataMember]
+		public DateTime UpdateTimeFrom;
+        [DataMember]
+		public DateTime UpdateTimeTo;
+        [DataMember]
+		public bool Valid;
+        [DataMember]
+		public bool QueryValid=false;
+        [DataMember]
+		public bool Enabled;
+        [DataMember]
+		public bool QueryEnabled=false;
+        [DataMember]
+		public Guid StoreId;
 
 	}
      
@@ -3736,197 +5386,287 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySupplyUnitModel
     {
         [DataMember]
-		public bool IsQualityAgreementOut{ get; set; }
+		public string DocNumber;
+        [DataMember]
+		public string PinyinCode;
+        [DataMember]
+		public string QualityAgreementDetail;
+        [DataMember]
+		public bool IsQualityAgreementOut;
         [DataMember]
 		public bool QueryIsQualityAgreementOut=false;
         [DataMember]
-		public Guid QualityAgreementFile{ get; set; }
+		public Guid QualityAgreementFile;
         [DataMember]
-		public DateTime QualityAgreementOutDateFrom{ get; set; }
+		public DateTime QualityAgreemenStartdateFrom;
         [DataMember]
-		public DateTime QualityAgreementOutDateTo{ get; set; }
+		public DateTime QualityAgreemenStartdateTo;
         [DataMember]
-		public bool IsAttorneyAattorneyOut{ get; set; }
+		public DateTime QualityAgreementOutdateFrom;
+        [DataMember]
+		public DateTime QualityAgreementOutdateTo;
+        [DataMember]
+		public bool IsAttorneyAattorneyOut;
         [DataMember]
 		public bool QueryIsAttorneyAattorneyOut=false;
         [DataMember]
-		public Guid AttorneyAattorneyFile{ get; set; }
+		public string AttorneyAattorneyDetail;
         [DataMember]
-		public DateTime AttorneyAattorneyOutDateFrom{ get; set; }
+		public Guid AttorneyAattorneyFile;
         [DataMember]
-		public DateTime AttorneyAattorneyOutDateTo{ get; set; }
+		public DateTime AttorneyAattorneyOutdateFrom;
         [DataMember]
-		public string SupplyProductClass{ get; set; }
+		public DateTime AttorneyAattorneyOutdateTo;
         [DataMember]
-		public string QualityCharger{ get; set; }
+		public DateTime AttorneyAattorneyStartdateFrom;
         [DataMember]
-		public Guid SealFile{ get; set; }
+		public DateTime AttorneyAattorneyStartdateTo;
         [DataMember]
-		public Guid SingleTicketFile{ get; set; }
+		public string SupplyProductClass;
         [DataMember]
-		public Guid ProofFile{ get; set; }
+		public string QualityCharger;
         [DataMember]
-		public string BankAccountName{ get; set; }
+		public bool IsAnnualAudit;
         [DataMember]
-		public string Bank{ get; set; }
+		public bool QueryIsAnnualAudit=false;
         [DataMember]
-		public string BankAccount{ get; set; }
+		public bool IsSealFile;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool QueryIsSealFile=false;
+        [DataMember]
+		public Guid SealFile;
+        [DataMember]
+		public Guid SingleTicketFile;
+        [DataMember]
+		public bool IsSingleTicketFile;
+        [DataMember]
+		public bool QueryIsSingleTicketFile=false;
+        [DataMember]
+		public Guid ProofFile;
+        [DataMember]
+		public string BankAccountName;
+        [DataMember]
+		public string Bank;
+        [DataMember]
+		public string BankAccount;
+        [DataMember]
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-		public string ValidRemark{ get; set; }
+		public string Name;
         [DataMember]
-		public bool IsLock{ get; set; }
+		public string Code;
         [DataMember]
-		public bool QueryIsLock=false;
+		public string ContactName;
         [DataMember]
-		public string LockRemark{ get; set; }
+		public string ContactTel;
         [DataMember]
-		public Guid FlowID{ get; set; }
+		public string Description;
         [DataMember]
-		public string Name{ get; set; }
+		public string LegalPerson;
         [DataMember]
-		public string Code{ get; set; }
+		public string Header;
         [DataMember]
-		public string PinyinCode{ get; set; }
+		public string BusinessScope;
         [DataMember]
-		public string ContactName{ get; set; }
+		public string SalesAmount;
         [DataMember]
-		public string ContactTel{ get; set; }
+		public string Fax;
         [DataMember]
-		public string Description{ get; set; }
+		public string Email;
         [DataMember]
-		public string LegalPerson{ get; set; }
+		public string WebAddress;
         [DataMember]
-		public string Header{ get; set; }
+		public string ReceiveAddress;
         [DataMember]
-		public string BusinessScope{ get; set; }
+		public string DetailedAddress;
         [DataMember]
-		public string SalesAmount{ get; set; }
-        [DataMember]
-		public string Fax{ get; set; }
-        [DataMember]
-		public string Email{ get; set; }
-        [DataMember]
-		public string WebAddress{ get; set; }
-        [DataMember]
-		public bool IsOutDate{ get; set; }
+		public bool IsOutDate;
         [DataMember]
 		public bool QueryIsOutDate=false;
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public Guid GSPLicenseId{ get; set; }
+		public Guid GSPLicenseId;
         [DataMember]
-		public bool IsGSPLicenseOutDate{ get; set; }
+		public bool IsGSPLicenseOutDate;
         [DataMember]
 		public bool QueryIsGSPLicenseOutDate=false;
         [DataMember]
-		public DateTime GSPLicenseOutDateFrom{ get; set; }
+		public DateTime GSPLicenseOutDateFrom;
         [DataMember]
-		public DateTime GSPLicenseOutDateTo{ get; set; }
+		public DateTime GSPLicenseOutDateTo;
         [DataMember]
-		public Guid GMPLicenseId{ get; set; }
+		public Guid GMPLicenseId;
         [DataMember]
-		public bool IsGMPLicenseOutDate{ get; set; }
+		public bool IsGMPLicenseOutDate;
         [DataMember]
 		public bool QueryIsGMPLicenseOutDate=false;
         [DataMember]
-		public DateTime GMPLicenseOutDateFrom{ get; set; }
+		public DateTime GMPLicenseOutDateFrom;
         [DataMember]
-		public DateTime GMPLicenseOutDateTo{ get; set; }
+		public DateTime GMPLicenseOutDateTo;
         [DataMember]
-		public Guid BusinessLicenseId{ get; set; }
+		public Guid BusinessLicenseId;
         [DataMember]
-		public bool IsBusinessLicenseOutDate{ get; set; }
+		public bool IsBusinessLicenseOutDate;
         [DataMember]
 		public bool QueryIsBusinessLicenseOutDate=false;
         [DataMember]
-		public DateTime BusinessLicenseeOutDateFrom{ get; set; }
+		public DateTime BusinessLicenseeOutDateFrom;
         [DataMember]
-		public DateTime BusinessLicenseeOutDateTo{ get; set; }
+		public DateTime BusinessLicenseeOutDateTo;
         [DataMember]
-		public Guid MedicineProductionLicenseId{ get; set; }
+		public Guid MedicineProductionLicenseId;
         [DataMember]
-		public bool IsMedicineProductionLicenseOutDate{ get; set; }
+		public bool IsMedicineProductionLicenseOutDate;
         [DataMember]
 		public bool QueryIsMedicineProductionLicenseOutDate=false;
         [DataMember]
-		public DateTime MedicineProductionLicenseOutDateFrom{ get; set; }
+		public DateTime MedicineProductionLicenseOutDateFrom;
         [DataMember]
-		public DateTime MedicineProductionLicenseOutDateTo{ get; set; }
+		public DateTime MedicineProductionLicenseOutDateTo;
         [DataMember]
-		public Guid MedicineBusinessLicenseId{ get; set; }
+		public Guid MedicineBusinessLicenseId;
         [DataMember]
-		public bool IsMedicineBusinessLicenseOutDate{ get; set; }
+		public bool IsMedicineBusinessLicenseOutDate;
         [DataMember]
 		public bool QueryIsMedicineBusinessLicenseOutDate=false;
         [DataMember]
-		public DateTime MedicineBusinessLicenseOutDateFrom{ get; set; }
+		public DateTime MedicineBusinessLicenseOutDateFrom;
         [DataMember]
-		public DateTime MedicineBusinessLicenseOutDateTo{ get; set; }
+		public DateTime MedicineBusinessLicenseOutDateTo;
         [DataMember]
-		public Guid InstrumentsProductionLicenseId{ get; set; }
+		public Guid InstrumentsProductionLicenseId;
         [DataMember]
-		public bool IsInstrumentsProductionLicenseOutDate{ get; set; }
+		public bool IsInstrumentsProductionLicenseOutDate;
         [DataMember]
 		public bool QueryIsInstrumentsProductionLicenseOutDate=false;
         [DataMember]
-		public DateTime InstrumentsProductionLicenseOutDateFrom{ get; set; }
+		public DateTime InstrumentsProductionLicenseOutDateFrom;
         [DataMember]
-		public DateTime InstrumentsProductionLicenseOutDateTo{ get; set; }
+		public DateTime InstrumentsProductionLicenseOutDateTo;
         [DataMember]
-		public Guid InstrumentsBusinessLicenseId{ get; set; }
+		public Guid InstrumentsBusinessLicenseId;
         [DataMember]
-		public bool IsInstrumentsBusinessLicenseOutDate{ get; set; }
+		public bool IsInstrumentsBusinessLicenseOutDate;
         [DataMember]
 		public bool QueryIsInstrumentsBusinessLicenseOutDate=false;
         [DataMember]
-		public DateTime InstrumentsBusinessLicenseOutDateFrom{ get; set; }
+		public DateTime InstrumentsBusinessLicenseOutDateFrom;
         [DataMember]
-		public DateTime InstrumentsBusinessLicenseOutDateTo{ get; set; }
+		public DateTime InstrumentsBusinessLicenseOutDateTo;
         [DataMember]
-		public string TaxRegistrationCode{ get; set; }
+		public Guid HealthLicenseId;
         [DataMember]
-		public Guid TaxRegistrationFile{ get; set; }
+		public bool IsHealthLicenseOutDate;
         [DataMember]
-		public Guid AnnualFile{ get; set; }
+		public bool QueryIsHealthLicenseOutDate=false;
+        [DataMember]
+		public DateTime HealthLicenseOutDateFrom;
+        [DataMember]
+		public DateTime HealthLicenseOutDateTo;
+        [DataMember]
+		public Guid TaxRegisterLicenseId;
+        [DataMember]
+		public bool IsTaxRegisterLicenseOutDate;
+        [DataMember]
+		public bool QueryIsTaxRegisterLicenseOutDate=false;
+        [DataMember]
+		public DateTime TaxRegisterLicenseOutDateFrom;
+        [DataMember]
+		public DateTime TaxRegisterLicenseOutDateTo;
+        [DataMember]
+		public Guid OrganizationCodeLicenseId;
+        [DataMember]
+		public bool IsOrganizationCodeLicenseOutDate;
+        [DataMember]
+		public bool QueryIsOrganizationCodeLicenseOutDate=false;
+        [DataMember]
+		public DateTime OrganizationCodeLicenseOutDateFrom;
+        [DataMember]
+		public DateTime OrganizationCodeLicenseOutDateTo;
+        [DataMember]
+		public Guid FoodCirculateLicenseId;
+        [DataMember]
+		public bool IsFoodCirculateLicenseOutDate;
+        [DataMember]
+		public bool QueryIsFoodCirculateLicenseOutDate=false;
+        [DataMember]
+		public DateTime FoodCirculateLicenseOutDateFrom;
+        [DataMember]
+		public DateTime FoodCirculateLicenseOutDateTo;
+        [DataMember]
+		public Guid MmedicalInstitutionPermitId;
+        [DataMember]
+		public bool IsMmedicalInstitutionPermitOutDate;
+        [DataMember]
+		public bool QueryIsMmedicalInstitutionPermitOutDate=false;
+        [DataMember]
+		public DateTime MmedicalInstitutionPermitOutDateFrom;
+        [DataMember]
+		public DateTime MmedicalInstitutionPermitOutDateTo;
+        [DataMember]
+		public Guid LnstitutionLegalPersonLicenseId;
+        [DataMember]
+		public bool IsLnstitutionLegalPersonLicenseOutDate;
+        [DataMember]
+		public bool QueryIsLnstitutionLegalPersonLicenseOutDate=false;
+        [DataMember]
+		public DateTime LnstitutionLegalPersonLicenseOutDateFrom;
+        [DataMember]
+		public DateTime LnstitutionLegalPersonLicenseOutDateTo;
+        [DataMember]
+		public string TaxRegistrationCode;
+        [DataMember]
+		public Guid TaxRegistrationFile;
+        [DataMember]
+		public Guid AnnualFile;
         [DataMember]
 		public DateTime LastAnnualDteFrom;
         [DataMember]
 		public DateTime LastAnnualDteTo;
         [DataMember]
-		public bool IsApproval{ get; set; }
+		public bool IsApproval;
         [DataMember]
 		public bool QueryIsApproval=false;
         [DataMember]
-		public int ApprovalStatusValueFrom=0;
+		public int ApprovalStatusValueFrom;
         [DataMember]
-		public int ApprovalStatusValueTo=100;
+		public int ApprovalStatusValueTo;
         [DataMember]
-		public Guid UnitTypeId{ get; set; }
+		public Guid UnitTypeId;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
+        [DataMember]
+		public Guid FlowID;
+        [DataMember]
+		public string ValidRemark;
+        [DataMember]
+		public bool IsLock;
+        [DataMember]
+		public bool QueryIsLock=false;
+        [DataMember]
+		public string LockRemark;
 
 	}
      
@@ -3937,67 +5677,69 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QuerySupplyUnitSalesmanModel
     {
         [DataMember]
-		public DateTime OutDateFrom{ get; set; }
+		public DateTime OutDateFrom;
         [DataMember]
-		public DateTime OutDateTo{ get; set; }
+		public DateTime OutDateTo;
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public Guid IDFile{ get; set; }
+		public Guid IDFile;
         [DataMember]
-		public string IDNumber{ get; set; }
+		public string IDNumber;
         [DataMember]
-		public string Tel{ get; set; }
+		public string Tel;
         [DataMember]
-		public string Address{ get; set; }
+		public string Address;
         [DataMember]
-        public DateTime BirthdayFrom { get; set; }
+		public DateTime BirthdayFrom;
         [DataMember]
-        public DateTime BirthdayTo { get; set; }
+		public DateTime BirthdayTo;
         [DataMember]
-		public string Gender{ get; set; }
+		public string Gender;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public bool Valid{ get; set; }
+		public bool Valid;
         [DataMember]
 		public bool QueryValid=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public bool IsOutDate{ get; set; }
+		public bool IsOutDate;
         [DataMember]
 		public bool QueryIsOutDate=false;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid AuthorizedDistrictId{ get; set; }
+		public Guid AuthorizedDistrictId;
         [DataMember]
-		public string BusinessScopes{ get; set; }
+		public string BusinessScopes;
         [DataMember]
-		public bool IsChecked{ get; set; }
+		public string BusinessScopesMemo;
+        [DataMember]
+		public bool IsChecked;
         [DataMember]
 		public bool QueryIsChecked=false;
         [DataMember]
-		public string IDCheckType{ get; set; }
+		public string IDCheckType;
         [DataMember]
-		public Guid IDCheckUserId{ get; set; }
+		public Guid IDCheckUserId;
         [DataMember]
-		public Guid AuthorizationDocId{ get; set; }
+		public Guid AuthorizationDocId;
         [DataMember]
-		public Guid SupplyUnitId{ get; set; }
+		public Guid SupplyUnitId;
 
 	}
      
@@ -4008,11 +5750,11 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryTaxRateModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
 
@@ -4025,15 +5767,15 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryUnitTypeModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public string Decription{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
 
 	}
      
@@ -4044,7 +5786,7 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryUploadRecordModel
     {
         [DataMember]
-		public string TableName{ get; set; }
+		public string TableName;
         [DataMember]
 		public int IndexFrom;
         [DataMember]
@@ -4059,29 +5801,35 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryUserModel
     {
         [DataMember]
-		public string Account{ get; set; }
+		public string Account;
         [DataMember]
-		public string Pwd{ get; set; }
+		public string Pwd;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public bool IsSpecialPriceAuth;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public bool QueryIsSpecialPriceAuth=false;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public string SpecialPriceAuth;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public DateTime CreateTimeTo;
+        [DataMember]
+		public DateTime UpdateTimeFrom;
+        [DataMember]
+		public DateTime UpdateTimeTo;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid EmployeeId{ get; set; }
+		public Guid EmployeeId;
 
 	}
      
@@ -4092,21 +5840,21 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryUserLogModel
     {
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public string Content{ get; set; }
+		public string Content;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -4117,31 +5865,43 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryVehicleModel
     {
         [DataMember]
-		public string Type{ get; set; }
+		public string Type;
         [DataMember]
 		public int VehicleCategoryValueFrom;
         [DataMember]
 		public int VehicleCategoryValueTo;
         [DataMember]
-		public string Cubage{ get; set; }
+		public string Cubage;
         [DataMember]
-		public string LicensePlate{ get; set; }
+		public string LicensePlate;
         [DataMember]
-		public string Rule{ get; set; }
+		public string Rule;
         [DataMember]
-		public string Other{ get; set; }
+		public string Other;
         [DataMember]
-		public string Driver{ get; set; }
+		public string Driver;
         [DataMember]
-		public bool Status{ get; set; }
+		public bool Status;
         [DataMember]
 		public bool QueryStatus=false;
         [DataMember]
-		public bool IsOutCheck{ get; set; }
+		public bool IsOutCheck;
         [DataMember]
 		public bool QueryIsOutCheck=false;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public string DelegateMan;
+        [DataMember]
+		public string DelegateCompany;
+        [DataMember]
+		public string DelegateTel;
+        [DataMember]
+		public string LiscenceCode;
+        [DataMember]
+		public string DelegateAddr;
+        [DataMember]
+		public string DelegateScope;
+        [DataMember]
+		public Guid StoreId;
 
 	}
      
@@ -4152,59 +5912,55 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryWarehouseModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public string MnemonicCode{ get; set; }
+		public string MnemonicCode;
         [DataMember]
-		public string Address{ get; set; }
+		public string Address;
         [DataMember]
-		public string ManagementCompany{ get; set; }
+		public string ManagementCompany;
         [DataMember]
-		public string Phone{ get; set; }
+		public string Phone;
         [DataMember]
-		public string RentCompany{ get; set; }
+		public string Area;
         [DataMember]
-		public string RentYear{ get; set; }
+		public string ShadeArea;
         [DataMember]
-		public string Area{ get; set; }
+		public string NormalArea;
         [DataMember]
-		public string ShadeArea{ get; set; }
+		public string ColdArea;
         [DataMember]
-		public string NormalArea{ get; set; }
+		public string YPFZArea;
         [DataMember]
-		public string ColdArea{ get; set; }
+		public string YHYSSArea;
         [DataMember]
-		public string YPFZArea{ get; set; }
+		public string PHCArea;
         [DataMember]
-		public string YHYSSArea{ get; set; }
+		public string TYZQArea;
         [DataMember]
-		public string PHCArea{ get; set; }
+		public string DWArea;
         [DataMember]
-		public string TYZQArea{ get; set; }
+		public string Decription;
         [DataMember]
-		public string DWArea{ get; set; }
-        [DataMember]
-		public string Decription{ get; set; }
-        [DataMember]
-		public bool Enabled{ get; set; }
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -4215,43 +5971,88 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryWarehouseZoneModel
     {
         [DataMember]
-		public string Name{ get; set; }
+		public int PIndexFrom;
         [DataMember]
-		public string Decription{ get; set; }
+		public int PIndexTo;
         [DataMember]
-		public string Code{ get; set; }
+		public string Name;
         [DataMember]
-		public string MnemonicCode{ get; set; }
+		public string Decription;
         [DataMember]
-		public string Area{ get; set; }
+		public string Code;
         [DataMember]
-		public bool Enabled{ get; set; }
+		public string MnemonicCode;
+        [DataMember]
+		public string Area;
+        [DataMember]
+		public bool Enabled;
         [DataMember]
 		public bool QueryEnabled=false;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-        public int WarehouseZoneTypeValueFrom = 0;
+		public int WarehouseZoneTypeValueFrom;
         [DataMember]
-		public int WarehouseZoneTypeValueTo=3;
+		public int WarehouseZoneTypeValueTo;
         [DataMember]
-		public Guid WarehouseId{ get; set; }
+		public Guid WarehouseId;
         [DataMember]
-		public Guid DictionaryStorageTypeId{ get; set; }
+		public Guid DictionaryStorageTypeId;
         [DataMember]
-		public Guid DictionaryMeasurementUnitId{ get; set; }
+		public Guid DictionaryMeasurementUnitId;
+
+	}
+     
+	/// <summary>
+    /// 服务查询实体
+    /// </summary>
+	[DataContract]
+    public partial class QueryWarehouseZonePositionModel
+    {
+        [DataMember]
+		public int PIndexFrom;
+        [DataMember]
+		public int PIndexTo;
+        [DataMember]
+		public int PIndex2From;
+        [DataMember]
+		public int PIndex2To;
+        [DataMember]
+		public string Name;
+        [DataMember]
+		public decimal CapacityFrom;
+        [DataMember]
+		public decimal CapacityTo;
+        [DataMember]
+		public string RowCol;
+        [DataMember]
+		public string Memo;
+        [DataMember]
+		public Guid WareHouseZoneId;
+        [DataMember]
+		public DateTime CreateTimeFrom;
+        [DataMember]
+		public DateTime CreateTimeTo;
+        [DataMember]
+		public Guid CreateUserId;
+        [DataMember]
+		public DateTime UpdateTimeFrom;
+        [DataMember]
+		public DateTime UpdateTimeTo;
+        [DataMember]
+		public Guid UpdateUserId;
 
 	}
      
@@ -4262,13 +6063,13 @@ namespace BugsBox.Pharmacy.Service.Models
     public partial class QueryWaringSetModel
     {
         [DataMember]
-		public string Code{ get; set; }
+		public string Code;
         [DataMember]
-		public string Name{ get; set; }
+		public string Name;
         [DataMember]
-		public string SetValue{ get; set; }
+		public string SetValue;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
 
 	}
      
@@ -4283,31 +6084,31 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public int IndexTo;
         [DataMember]
-		public Guid CreateUserId{ get; set; }
+		public Guid CreateUserId;
         [DataMember]
-		public Guid UpdateUserId{ get; set; }
+		public Guid UpdateUserId;
         [DataMember]
-		public DateTime CreateTimeFrom{ get; set; }
+		public DateTime CreateTimeFrom;
         [DataMember]
-		public DateTime CreateTimeTo{ get; set; }
+		public DateTime CreateTimeTo;
         [DataMember]
-		public DateTime UpdateTimeFrom{ get; set; }
+		public DateTime UpdateTimeFrom;
         [DataMember]
-		public DateTime UpdateTimeTo{ get; set; }
+		public DateTime UpdateTimeTo;
         [DataMember]
-		public string productName{ get; set; }
+		public string productName;
         [DataMember]
-		public string productCode{ get; set; }
+		public string productCode;
         [DataMember]
-		public string DictionaryDosageCode{ get; set; }
+		public string DictionaryDosageCode;
         [DataMember]
-		public string Origin{ get; set; }
+		public string Origin;
         [DataMember]
-		public string BatchNumber{ get; set; }
+		public string BatchNumber;
         [DataMember]
-		public int AmountFrom;
+		public decimal AmountFrom;
         [DataMember]
-		public int AmountTo;
+		public decimal AmountTo;
         [DataMember]
 		public decimal UnitPriceFrom;
         [DataMember]
@@ -4321,451 +6122,51 @@ namespace BugsBox.Pharmacy.Service.Models
         [DataMember]
 		public decimal PriceTo;
         [DataMember]
-		public string MeasurementUnit{ get; set; }
+		public string MeasurementUnit;
         [DataMember]
-		public string SpecificationCode{ get; set; }
+		public string SpecificationCode;
         [DataMember]
-        public DateTime PruductDateFrom { get; set; }
+		public DateTime PruductDateFrom;
         [DataMember]
-        public DateTime PruductDateTo { get; set; }
+		public DateTime PruductDateTo;
         [DataMember]
-        public DateTime OutValidDateFrom { get; set; }
+		public DateTime OutValidDateFrom;
         [DataMember]
-        public DateTime OutValidDateTo { get; set; }
+		public DateTime OutValidDateTo;
         [DataMember]
-		public string FactoryName{ get; set; }
+		public string FactoryName;
         [DataMember]
-		public string Description{ get; set; }
+		public string Description;
         [DataMember]
-		public int OutAmountFrom;
+		public decimal OutAmountFrom;
         [DataMember]
-		public int OutAmountTo;
+		public decimal OutAmountTo;
         [DataMember]
-		public string WarehouseCode{ get; set; }
+		public string WarehouseCode;
         [DataMember]
-		public string WarehouseName{ get; set; }
+		public string WarehouseName;
         [DataMember]
-		public string WarehouseZoneCode{ get; set; }
+		public string WarehouseZoneCode;
         [DataMember]
-		public string WarehouseZoneName{ get; set; }
+		public string WarehouseZoneName;
         [DataMember]
-		public int CanSaleNumFrom;
+		public decimal CanSaleNumFrom;
         [DataMember]
-		public int CanSaleNumTo;
+		public decimal CanSaleNumTo;
         [DataMember]
-		public Guid StoreId{ get; set; }
+		public Guid StoreId;
         [DataMember]
-		public Guid SalesOrderId{ get; set; }
+		public Guid SalesOrderId;
         [DataMember]
-		public Guid SalesOrderDetailId{ get; set; }
+		public Guid SalesOrderDetailId;
         [DataMember]
-		public Guid SalesOrderReturnId{ get; set; }
+		public Guid SalesOrderReturnId;
         [DataMember]
-		public Guid SalesOrderDetailReturnId{ get; set; }
+		public Guid SalesOrderDetailReturnId;
         [DataMember]
-		public Guid DrugInventoryRecordID{ get; set; }
+		public Guid DrugInventoryRecordID;
         [DataMember]
-		public Guid SalesOutInventoryID{ get; set; }
-
-	}
-
-    	/// <summary>
-    /// 组织机构代码证服务查询实体
-    /// </summary>
-	[DataContract]
-    public partial class QueryOrganizationCodeLicenseModel
-    {
-        [DataMember]
-		public string OrgnizationType{ get; set; }
-        [DataMember]
-		public string LicenseNo{ get; set; }
-        [DataMember]
-		public string RegisterNo{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
-        [DataMember]
-		public string IssuanceOrg{ get; set; }
-        [DataMember]
-		public bool isCheck{ get; set; }
-        [DataMember]
-		public bool QueryisCheck=false;
-        [DataMember]
-		public DateTime YearCheckDateFrom{ get; set; }
-        [DataMember]
-		public DateTime YearCheckDateTo{ get; set; }
-        [DataMember]
-		public string DocNumber{ get; set; }
-        [DataMember]
-		public string memo{ get; set; }
-        [DataMember]
-		public string Name{ get; set; }
-        [DataMember]
-		public string Decription{ get; set; }
-        [DataMember]
-		public string Code{ get; set; }
-        [DataMember]
-		public bool Enabled{ get; set; }
-        [DataMember]
-		public bool QueryEnabled=false;
-        [DataMember]
-		public string UnitName{ get; set; }
-        [DataMember]
-		public string RegAddress{ get; set; }
-        [DataMember]
-		public string LicenseCode{ get; set; }
-        [DataMember]
-		public DateTime StartDateFrom{ get; set; }
-        [DataMember]
-		public DateTime StartDateTo{ get; set; }
-        [DataMember]
-		public DateTime OutDateFrom{ get; set; }
-        [DataMember]
-		public DateTime OutDateTo{ get; set; }
-        [DataMember]
-		public bool Valid{ get; set; }
-        [DataMember]
-		public bool QueryValid=false;
-        [DataMember]
-		public int LicenseTypeValueFrom{ get; set; }
-        [DataMember]
-		public int LicenseTypeValueTo{ get; set; }
-        [DataMember]
-		public Guid StoreId{ get; set; }
-        [DataMember]
-		public Guid PharmacyFileId{ get; set; }
-
-	}
-     
-	/// <summary>
-    /// 食品流通许可证服务查询实体
-    /// </summary>
-	[DataContract]
-    public partial class QueryFoodCirculateLicenseModel
-    {
-        [DataMember]
-		public string OrgType{ get; set; }
-        [DataMember]
-		public string RegAddress{ get; set; }
-        [DataMember]
-		public string LicenseNo{ get; set; }
-        [DataMember]
-		public string Header{ get; set; }
-        [DataMember]
-		public DateTime LicenseRangeFrom{ get; set; }
-        [DataMember]
-		public DateTime LicenseRangeTo{ get; set; }
-        [DataMember]
-		public string IssuanceOrg{ get; set; }
-        [DataMember]
-		public string DocNumber{ get; set; }
-        [DataMember]
-		public string memo{ get; set; }
-        [DataMember]
-		public string Name{ get; set; }
-        [DataMember]
-		public string Decription{ get; set; }
-        [DataMember]
-		public string Code{ get; set; }
-        [DataMember]
-		public bool Enabled{ get; set; }
-        [DataMember]
-		public bool QueryEnabled=false;
-        [DataMember]
-		public string UnitName{ get; set; }
-        [DataMember]
-		public string LicenseCode{ get; set; }
-        [DataMember]
-		public DateTime StartDateFrom{ get; set; }
-        [DataMember]
-		public DateTime StartDateTo{ get; set; }
-        [DataMember]
-		public DateTime OutDateFrom{ get; set; }
-        [DataMember]
-		public DateTime OutDateTo{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
-        [DataMember]
-		public bool Valid{ get; set; }
-        [DataMember]
-		public bool QueryValid=false;
-        [DataMember]
-		public int LicenseTypeValueFrom{ get; set; }
-        [DataMember]
-		public int LicenseTypeValueTo{ get; set; }
-        [DataMember]
-		public Guid StoreId{ get; set; }
-        [DataMember]
-		public Guid PharmacyFileId{ get; set; }
-
-	}
-     
-	/// <summary>
-    /// 卫生许可证服务查询实体
-    /// </summary>
-	[DataContract]
-    public partial class QueryHealthLicenseModel
-    {
-        [DataMember]
-		public string HealthLicenseType{ get; set; }
-        [DataMember]
-		public string Header{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
-        [DataMember]
-		public string IssuanceOrg{ get; set; }
-        [DataMember]
-		public string LicenseContent{ get; set; }
-        [DataMember]
-		public string DocNumber{ get; set; }
-        [DataMember]
-		public string memo{ get; set; }
-        [DataMember]
-		public string Name{ get; set; }
-        [DataMember]
-		public string Decription{ get; set; }
-        [DataMember]
-		public string Code{ get; set; }
-        [DataMember]
-		public bool Enabled{ get; set; }
-        [DataMember]
-		public bool QueryEnabled=false;
-        [DataMember]
-		public string UnitName{ get; set; }
-        [DataMember]
-		public string RegAddress{ get; set; }
-        [DataMember]
-		public string LicenseCode{ get; set; }
-        [DataMember]
-		public DateTime StartDateFrom{ get; set; }
-        [DataMember]
-		public DateTime StartDateTo{ get; set; }
-        [DataMember]
-		public DateTime OutDateFrom{ get; set; }
-        [DataMember]
-		public DateTime OutDateTo{ get; set; }
-        [DataMember]
-		public bool Valid{ get; set; }
-        [DataMember]
-        public bool QueryValid = false;
-        [DataMember]
-		public int LicenseTypeValueFrom{ get; set; }
-        [DataMember]
-		public int LicenseTypeValueTo{ get; set; }
-        [DataMember]
-		public Guid StoreId{ get; set; }
-        [DataMember]
-		public Guid PharmacyFileId{ get; set; }
-
-	}
-     
-	/// <summary>
-    /// 税务登记证服务查询实体
-    /// </summary>
-	[DataContract]
-    public partial class QueryTaxRegisterLicenseModel
-    {
-        [DataMember]
-		public string TaxRegisterLicenseType{ get; set; }
-        [DataMember]
-		public string taxpayerName{ get; set; }
-        [DataMember]
-		public string taxpayerNumber{ get; set; }
-        [DataMember]
-		public string LegalPerson{ get; set; }
-        [DataMember]
-		public string Address{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
-        [DataMember]
-		public string IssuanceOrg{ get; set; }
-        [DataMember]
-		public string BusinessScope{ get; set; }
-        [DataMember]
-		public string DocNumber{ get; set; }
-        [DataMember]
-		public string memo{ get; set; }
-        [DataMember]
-		public string Name{ get; set; }
-        [DataMember]
-		public string Decription{ get; set; }
-        [DataMember]
-		public string Code{ get; set; }
-        [DataMember]
-		public bool Enabled{ get; set; }
-        [DataMember]
-		public bool QueryEnabled=false;
-        [DataMember]
-		public string UnitName{ get; set; }
-        [DataMember]
-		public string RegAddress{ get; set; }
-        [DataMember]
-		public string LicenseCode{ get; set; }
-        [DataMember]
-		public DateTime StartDateFrom{ get; set; }
-        [DataMember]
-		public DateTime StartDateTo{ get; set; }
-        [DataMember]
-		public DateTime OutDateFrom{ get; set; }
-        [DataMember]
-		public DateTime OutDateTo{ get; set; }
-        [DataMember]
-		public bool Valid{ get; set; }
-        [DataMember]
-		public bool QueryValid=false;
-        [DataMember]
-		public int LicenseTypeValueFrom{ get; set; }
-        [DataMember]
-		public int LicenseTypeValueTo{ get; set; }
-        [DataMember]
-		public Guid StoreId{ get; set; }
-        [DataMember]
-		public Guid PharmacyFileId{ get; set; }
-
-	}
-     
-	/// <summary>
-    /// 事业单位法人证服务查询实体
-    /// </summary>
-	[DataContract]
-    public partial class QueryLnstitutionLegalPersonLicenseModel
-    {
-        [DataMember]
-		public string Name{ get; set; }
-        [DataMember]
-		public string CertificateName{ get; set; }
-        [DataMember]
-		public string BussinessRange{ get; set; }
-        [DataMember]
-		public string LegalPerson{ get; set; }
-        [DataMember]
-		public string FundsSource{ get; set; }
-        [DataMember]
-		public string InitiaFund{ get; set; }
-        [DataMember]
-		public string Address{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
-        [DataMember]
-		public string IssuanceOrg{ get; set; }
-        [DataMember]
-		public string ManageOrg{ get; set; }
-        [DataMember]
-		public string UseMedicalScope{ get; set; }
-        [DataMember]
-		public DateTime OutDateFrom{ get; set; }
-        [DataMember]
-		public DateTime OutDateTo{ get; set; }
-        [DataMember]
-		public string DocNumber{ get; set; }
-        [DataMember]
-		public string memo{ get; set; }
-        [DataMember]
-		public string Decription{ get; set; }
-        [DataMember]
-		public string Code{ get; set; }
-        [DataMember]
-		public bool Enabled{ get; set; }
-        [DataMember]
-		public bool QueryEnabled=false;
-        [DataMember]
-		public string UnitName{ get; set; }
-        [DataMember]
-		public string RegAddress{ get; set; }
-        [DataMember]
-		public string LicenseCode{ get; set; }
-        [DataMember]
-		public DateTime StartDateFrom{ get; set; }
-        [DataMember]
-		public DateTime StartDateTo{ get; set; }
-        [DataMember]
-		public bool Valid{ get; set; }
-        [DataMember]
-		public bool QueryValid=false;
-        [DataMember]
-		public int LicenseTypeValueFrom{ get; set; }
-        [DataMember]
-		public int LicenseTypeValueTo{ get; set; }
-        [DataMember]
-		public Guid StoreId{ get; set; }
-        [DataMember]
-		public Guid PharmacyFileId{ get; set; }
-
-	}
-     
-	/// <summary>
-    /// 医疗机构执业许可证服务查询实体
-    /// </summary>
-	[DataContract]
-    public partial class QueryMmedicalInstitutionPermitModel
-    {
-        [DataMember]
-		public string Name{ get; set; }
-        [DataMember]
-		public string CertificateName{ get; set; }
-        [DataMember]
-		public string OgnTpye{ get; set; }
-        [DataMember]
-		public string LegalPerson{ get; set; }
-        [DataMember]
-		public string RegisterAddress{ get; set; }
-        [DataMember]
-		public string WarehouseAddress{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateFrom{ get; set; }
-        [DataMember]
-		public DateTime IssuanceDateTo{ get; set; }
-        [DataMember]
-		public string IssuanceOrg{ get; set; }
-        [DataMember]
-		public string UseMedicalScope{ get; set; }
-        [DataMember]
-		public DateTime OutDateFrom{ get; set; }
-        [DataMember]
-		public DateTime OutDateTo{ get; set; }
-        [DataMember]
-		public string DocNumber{ get; set; }
-        [DataMember]
-		public string memo{ get; set; }
-        [DataMember]
-		public string Decription{ get; set; }
-        [DataMember]
-		public string Code{ get; set; }
-        [DataMember]
-		public bool Enabled{ get; set; }
-        [DataMember]
-		public bool QueryEnabled=false;
-        [DataMember]
-		public string UnitName{ get; set; }
-        [DataMember]
-		public string RegAddress{ get; set; }
-        [DataMember]
-		public string LicenseCode{ get; set; }
-        [DataMember]
-		public DateTime StartDateFrom{ get; set; }
-        [DataMember]
-		public DateTime StartDateTo{ get; set; }
-        [DataMember]
-		public bool Valid{ get; set; }
-        [DataMember]
-		public bool QueryValid=false;
-        [DataMember]
-		public int LicenseTypeValueFrom{ get; set; }
-        [DataMember]
-		public int LicenseTypeValueTo{ get; set; }
-        [DataMember]
-		public Guid StoreId{ get; set; }
-        [DataMember]
-		public Guid PharmacyFileId{ get; set; }
+		public Guid SalesOutInventoryID;
 
 	}
    

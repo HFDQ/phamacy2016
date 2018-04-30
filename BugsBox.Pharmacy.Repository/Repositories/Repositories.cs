@@ -239,10 +239,10 @@ namespace BugsBox.Pharmacy.Repository
 	/// <summary>
     /// 不合格药品仓储实现
     /// </summary>
-    public partial class drugsUnqualicationRepository :CFRepository<drugsUnqualication>,IdrugsUnqualicationRepository
+    public partial class DrugsUnqualicationRepository :CFRepository<DrugsUnqualication>,IDrugsUnqualicationRepository
     { 
 		 public RepositoryProvider RepositoryProvider { get; set; }
-		 public drugsUnqualicationRepository(Db db)
+		 public DrugsUnqualicationRepository(Db db)
             : base(db)
         { 
         }
@@ -1439,10 +1439,10 @@ namespace BugsBox.Pharmacy.Repository
 	/// <summary>
     /// 仓储实现
     /// </summary>
-    public partial class WareHouseZonePositionRepository :CFRepository<WareHouseZonePosition>,IWareHouseZonePositionRepository
+    public partial class WarehouseZonePositionRepository :CFRepository<WarehouseZonePosition>,IWarehouseZonePositionRepository
     { 
 		 public RepositoryProvider RepositoryProvider { get; set; }
-		 public WareHouseZonePositionRepository(Db db)
+		 public WarehouseZonePositionRepository(Db db)
             : base(db)
         { 
         }

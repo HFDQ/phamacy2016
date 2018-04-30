@@ -31,14 +31,14 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {
-                var c = RepositoryProvider.Db.drugsUnqualications.Where(r => r.DocumentNumber == value.UnqualificationDocumentNumber);
+                var c = RepositoryProvider.Db.DrugsUnqualications.Where(r => r.DocumentNumber == value.UnqualificationDocumentNumber);
                 var d = c.FirstOrDefault();
                 d.unqualificationType = 2;
                 d.Specific = value.Specific;
                 value.createTime = DateTime.Now;
                 value.updateTime = DateTime.Now;
                 this.Add(value);
-                BusinessHandlerFactory.DrugsUnqualificationHandler.Save(d);
+                BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Save(d);
 
                 value.DocumentNumber = new BillDocumentCodeBusinessHandler(BusinessHandlerFactory.RepositoryProvider, null).GenerateBillDocumentCodeByTypeValue((int)BillDocumentType.DrugBreakage).Code;
 

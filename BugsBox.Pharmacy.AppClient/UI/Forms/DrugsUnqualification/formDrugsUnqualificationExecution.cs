@@ -23,8 +23,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
         DataTable dt = null;
         private bool flag;
         
-        BindingList<drugsUnqualication> bList = new BindingList<drugsUnqualication>();
-        List<drugsUnqualication> list = new List<drugsUnqualication>();
+        BindingList<DrugsUnqualication> bList = new BindingList<DrugsUnqualication>();
+        List<DrugsUnqualication> list = new List<DrugsUnqualication>();
         string msg = string.Empty;
         double pageNum = 0.0;
         double pageSize=30.0;
@@ -88,7 +88,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
 
             this.bList.Clear();
             DataRow dr = null;
-            foreach (drugsUnqualication ar in list)
+            foreach (DrugsUnqualication ar in list)
             {
                 dr = dt.NewRow();
                 dr["drugName"] = ar.drugName;
@@ -140,7 +140,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
         {
             if (e.RowIndex < 0 ||e.ColumnIndex<0) return;
             int rIdx = e.RowIndex;
-            drugsUnqualication item = bList[e.RowIndex];
+            DrugsUnqualication item = bList[e.RowIndex];
 
             if (this.dgvDrugDetailList.Columns[e.ColumnIndex].Name != this.Column9.Name)
             {
@@ -267,14 +267,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
             this.dgvDrugDetailList.EndEdit();
-            List<drugsUnqualication> s = new List<drugsUnqualication>();
+            List<DrugsUnqualication> s = new List<DrugsUnqualication>();
             if (MessageBox.Show("需要提交选中的记录吗？", "提示", MessageBoxButtons.OKCancel) == DialogResult.Cancel) return;
             foreach (DataGridViewRow r in this.dgvDrugDetailList.Rows)
             {
                 if (!Convert.ToBoolean(r.Cells[0].EditedFormattedValue))
                     continue;
                 int rdx = r.Index;
-                drugsUnqualication d = bList[rdx];
+                DrugsUnqualication d = bList[rdx];
                 DrugsBreakage db = sumbitToBreak(rdx);
                 
                 if (!this.PharmacyDatabaseService.AddDrugsBreakageByFlowID(db, Guid.Parse(comboBox1.SelectedValue.ToString()), "新增报损审批", out msg))
@@ -311,7 +311,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
                 MessageBox.Show("请选择要提交报损处理的不合格药品记录！");
                 return;
             }
-            drugsUnqualication u = bList[this.dgvDrugDetailList.CurrentRow.Index];
+            DrugsUnqualication u = bList[this.dgvDrugDetailList.CurrentRow.Index];
             if (MessageBox.Show("需要提交报损审批吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 int rdx = this.dgvDrugDetailList.CurrentRow.Index;
@@ -328,7 +328,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUnqualification
 
         private DrugsBreakage sumbitToBreak(int rdx)
         {
-            drugsUnqualication d = bList[rdx];
+            DrugsUnqualication d = bList[rdx];
             DrugsBreakage db = new DrugsBreakage();
             db.ApprovalStatus = ApprovalStatus.Waitting;
             db.batchNo = d.batchNo;

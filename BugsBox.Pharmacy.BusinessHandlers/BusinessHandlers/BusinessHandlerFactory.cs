@@ -265,6 +265,266 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 			}
 		}
       
+	    private ChinaDistrictBusinessHandler _ChinaDistrictBusinessHandler=null;
+		/// <summary> 
+		/// 行政区域划分(ChinaDistrict)对象
+        /// </summary>
+		public ChinaDistrictBusinessHandler ChinaDistrictBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_ChinaDistrictBusinessHandler==null)
+					{
+						_ChinaDistrictBusinessHandler=new ChinaDistrictBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_ChinaDistrictBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _ChinaDistrictBusinessHandler;
+			}
+		}
+      
+	    private DirectSalesOrderBusinessHandler _DirectSalesOrderBusinessHandler=null;
+		/// <summary> 
+		/// (DirectSalesOrder)对象
+        /// </summary>
+		public DirectSalesOrderBusinessHandler DirectSalesOrderBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DirectSalesOrderBusinessHandler==null)
+					{
+						_DirectSalesOrderBusinessHandler=new DirectSalesOrderBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DirectSalesOrderBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DirectSalesOrderBusinessHandler;
+			}
+		}
+      
+	    private DirectSalesOrderDetailBusinessHandler _DirectSalesOrderDetailBusinessHandler=null;
+		/// <summary> 
+		/// (DirectSalesOrderDetail)对象
+        /// </summary>
+		public DirectSalesOrderDetailBusinessHandler DirectSalesOrderDetailBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DirectSalesOrderDetailBusinessHandler==null)
+					{
+						_DirectSalesOrderDetailBusinessHandler=new DirectSalesOrderDetailBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DirectSalesOrderDetailBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DirectSalesOrderDetailBusinessHandler;
+			}
+		}
+      
+	    private DocumentRefuseBusinessHandler _DocumentRefuseBusinessHandler=null;
+		/// <summary> 
+		/// 收货拒收单(DocumentRefuse)对象
+        /// </summary>
+		public DocumentRefuseBusinessHandler DocumentRefuseBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DocumentRefuseBusinessHandler==null)
+					{
+						_DocumentRefuseBusinessHandler=new DocumentRefuseBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DocumentRefuseBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DocumentRefuseBusinessHandler;
+			}
+		}
+      
+	    private DrugInventoryRecordHisBusinessHandler _DrugInventoryRecordHisBusinessHandler=null;
+		/// <summary> 
+		/// 药物库存变动历史(DrugInventoryRecordHis)对象
+        /// </summary>
+		public DrugInventoryRecordHisBusinessHandler DrugInventoryRecordHisBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DrugInventoryRecordHisBusinessHandler==null)
+					{
+						_DrugInventoryRecordHisBusinessHandler=new DrugInventoryRecordHisBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DrugInventoryRecordHisBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DrugInventoryRecordHisBusinessHandler;
+			}
+		}
+      
+	    private DrugMaintenanceRecordBusinessHandler _DrugMaintenanceRecordBusinessHandler=null;
+		/// <summary> 
+		/// 药品养护记录(DrugMaintenanceRecord)对象
+        /// </summary>
+		public DrugMaintenanceRecordBusinessHandler DrugMaintenanceRecordBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DrugMaintenanceRecordBusinessHandler==null)
+					{
+						_DrugMaintenanceRecordBusinessHandler=new DrugMaintenanceRecordBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DrugMaintenanceRecordBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DrugMaintenanceRecordBusinessHandler;
+			}
+		}
+      
+	    private DrugsBreakageBusinessHandler _DrugsBreakageBusinessHandler=null;
+		/// <summary> 
+		/// 报损药品(DrugsBreakage)对象
+        /// </summary>
+		public DrugsBreakageBusinessHandler DrugsBreakageBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DrugsBreakageBusinessHandler==null)
+					{
+						_DrugsBreakageBusinessHandler=new DrugsBreakageBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DrugsBreakageBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DrugsBreakageBusinessHandler;
+			}
+		}
+      
+	    private DrugsInventoryMoveBusinessHandler _DrugsInventoryMoveBusinessHandler=null;
+		/// <summary> 
+		/// 移库(DrugsInventoryMove)对象
+        /// </summary>
+		public DrugsInventoryMoveBusinessHandler DrugsInventoryMoveBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DrugsInventoryMoveBusinessHandler==null)
+					{
+						_DrugsInventoryMoveBusinessHandler=new DrugsInventoryMoveBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DrugsInventoryMoveBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DrugsInventoryMoveBusinessHandler;
+			}
+		}
+      
+	    private DrugsUndeterminateBusinessHandler _DrugsUndeterminateBusinessHandler=null;
+		/// <summary> 
+		/// 待处理药品(DrugsUndeterminate)对象
+        /// </summary>
+		public DrugsUndeterminateBusinessHandler DrugsUndeterminateBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DrugsUndeterminateBusinessHandler==null)
+					{
+						_DrugsUndeterminateBusinessHandler=new DrugsUndeterminateBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DrugsUndeterminateBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DrugsUndeterminateBusinessHandler;
+			}
+		}
+      
+	    private DrugsUnqualicationBusinessHandler _DrugsUnqualicationBusinessHandler=null;
+		/// <summary> 
+		/// 不合格药品(DrugsUnqualication)对象
+        /// </summary>
+		public DrugsUnqualicationBusinessHandler DrugsUnqualicationBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DrugsUnqualicationBusinessHandler==null)
+					{
+						_DrugsUnqualicationBusinessHandler=new DrugsUnqualicationBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DrugsUnqualicationBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DrugsUnqualicationBusinessHandler;
+			}
+		}
+      
+	    private DrugsUnqualificationDestroyBusinessHandler _DrugsUnqualificationDestroyBusinessHandler=null;
+		/// <summary> 
+		/// 不合格药品销毁情况(DrugsUnqualificationDestroy)对象
+        /// </summary>
+		public DrugsUnqualificationDestroyBusinessHandler DrugsUnqualificationDestroyBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_DrugsUnqualificationDestroyBusinessHandler==null)
+					{
+						_DrugsUnqualificationDestroyBusinessHandler=new DrugsUnqualificationDestroyBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_DrugsUnqualificationDestroyBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _DrugsUnqualificationDestroyBusinessHandler;
+			}
+		}
+      
+	    private EduDetailsBusinessHandler _EduDetailsBusinessHandler=null;
+		/// <summary> 
+		/// 培训档案细节(EduDetails)对象
+        /// </summary>
+		public EduDetailsBusinessHandler EduDetailsBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_EduDetailsBusinessHandler==null)
+					{
+						_EduDetailsBusinessHandler=new EduDetailsBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_EduDetailsBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _EduDetailsBusinessHandler;
+			}
+		}
+      
+	    private EduDocumentBusinessHandler _EduDocumentBusinessHandler=null;
+		/// <summary> 
+		/// 培训档案(EduDocument)对象
+        /// </summary>
+		public EduDocumentBusinessHandler EduDocumentBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_EduDocumentBusinessHandler==null)
+					{
+						_EduDocumentBusinessHandler=new EduDocumentBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_EduDocumentBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _EduDocumentBusinessHandler;
+			}
+		}
+      
 	    private GoodsAdditionalPropertyBusinessHandler _GoodsAdditionalPropertyBusinessHandler=null;
 		/// <summary> 
 		/// 商品附加属性(GoodsAdditionalProperty)对象
@@ -282,6 +542,46 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 					}
 				}
 				return _GoodsAdditionalPropertyBusinessHandler;
+			}
+		}
+      
+	    private HealthCheckDetailBusinessHandler _HealthCheckDetailBusinessHandler=null;
+		/// <summary> 
+		/// 体检档案细节(HealthCheckDetail)对象
+        /// </summary>
+		public HealthCheckDetailBusinessHandler HealthCheckDetailBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_HealthCheckDetailBusinessHandler==null)
+					{
+						_HealthCheckDetailBusinessHandler=new HealthCheckDetailBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_HealthCheckDetailBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _HealthCheckDetailBusinessHandler;
+			}
+		}
+      
+	    private HealthCheckDocumentBusinessHandler _HealthCheckDocumentBusinessHandler=null;
+		/// <summary> 
+		/// 体检档案(HealthCheckDocument)对象
+        /// </summary>
+		public HealthCheckDocumentBusinessHandler HealthCheckDocumentBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_HealthCheckDocumentBusinessHandler==null)
+					{
+						_HealthCheckDocumentBusinessHandler=new HealthCheckDocumentBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_HealthCheckDocumentBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _HealthCheckDocumentBusinessHandler;
 			}
 		}
       
@@ -827,7 +1127,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
       
 	    private GSPLicenseBusinessHandler _GSPLicenseBusinessHandler=null;
 		/// <summary> 
-		/// GSP证书(GSPLicense)对象
+		/// 药品经营许可证(GSPLicense)对象
         /// </summary>
 		public GSPLicenseBusinessHandler GSPLicenseBusinessHandler 
 		{
@@ -907,7 +1207,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
       
 	    private MedicineBusinessLicenseBusinessHandler _MedicineBusinessLicenseBusinessHandler=null;
 		/// <summary> 
-		/// 药品经营许可证(MedicineBusinessLicense)对象
+		/// GSP证书(MedicineBusinessLicense)对象
         /// </summary>
 		public MedicineBusinessLicenseBusinessHandler MedicineBusinessLicenseBusinessHandler 
 		{
@@ -962,6 +1262,146 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 					}
 				}
 				return _InstrumentsProductionLicenseBusinessHandler;
+			}
+		}
+      
+	    private OrganizationCodeLicenseBusinessHandler _OrganizationCodeLicenseBusinessHandler=null;
+		/// <summary> 
+		/// 组织机构代码证(OrganizationCodeLicense)对象
+        /// </summary>
+		public OrganizationCodeLicenseBusinessHandler OrganizationCodeLicenseBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_OrganizationCodeLicenseBusinessHandler==null)
+					{
+						_OrganizationCodeLicenseBusinessHandler=new OrganizationCodeLicenseBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_OrganizationCodeLicenseBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _OrganizationCodeLicenseBusinessHandler;
+			}
+		}
+      
+	    private FoodCirculateLicenseBusinessHandler _FoodCirculateLicenseBusinessHandler=null;
+		/// <summary> 
+		/// 食品流通许可证(FoodCirculateLicense)对象
+        /// </summary>
+		public FoodCirculateLicenseBusinessHandler FoodCirculateLicenseBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_FoodCirculateLicenseBusinessHandler==null)
+					{
+						_FoodCirculateLicenseBusinessHandler=new FoodCirculateLicenseBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_FoodCirculateLicenseBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _FoodCirculateLicenseBusinessHandler;
+			}
+		}
+      
+	    private HealthLicenseBusinessHandler _HealthLicenseBusinessHandler=null;
+		/// <summary> 
+		/// 卫生许可证(HealthLicense)对象
+        /// </summary>
+		public HealthLicenseBusinessHandler HealthLicenseBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_HealthLicenseBusinessHandler==null)
+					{
+						_HealthLicenseBusinessHandler=new HealthLicenseBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_HealthLicenseBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _HealthLicenseBusinessHandler;
+			}
+		}
+      
+	    private TaxRegisterLicenseBusinessHandler _TaxRegisterLicenseBusinessHandler=null;
+		/// <summary> 
+		/// 税务登记证(TaxRegisterLicense)对象
+        /// </summary>
+		public TaxRegisterLicenseBusinessHandler TaxRegisterLicenseBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_TaxRegisterLicenseBusinessHandler==null)
+					{
+						_TaxRegisterLicenseBusinessHandler=new TaxRegisterLicenseBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_TaxRegisterLicenseBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _TaxRegisterLicenseBusinessHandler;
+			}
+		}
+      
+	    private LnstitutionLegalPersonLicenseBusinessHandler _LnstitutionLegalPersonLicenseBusinessHandler=null;
+		/// <summary> 
+		/// 事业单位法人证(LnstitutionLegalPersonLicense)对象
+        /// </summary>
+		public LnstitutionLegalPersonLicenseBusinessHandler LnstitutionLegalPersonLicenseBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_LnstitutionLegalPersonLicenseBusinessHandler==null)
+					{
+						_LnstitutionLegalPersonLicenseBusinessHandler=new LnstitutionLegalPersonLicenseBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_LnstitutionLegalPersonLicenseBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _LnstitutionLegalPersonLicenseBusinessHandler;
+			}
+		}
+      
+	    private MmedicalInstitutionPermitBusinessHandler _MmedicalInstitutionPermitBusinessHandler=null;
+		/// <summary> 
+		/// 医疗机构执业许可证(MmedicalInstitutionPermit)对象
+        /// </summary>
+		public MmedicalInstitutionPermitBusinessHandler MmedicalInstitutionPermitBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_MmedicalInstitutionPermitBusinessHandler==null)
+					{
+						_MmedicalInstitutionPermitBusinessHandler=new MmedicalInstitutionPermitBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_MmedicalInstitutionPermitBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _MmedicalInstitutionPermitBusinessHandler;
+			}
+		}
+      
+	    private IndustoryProductCertificateBusinessHandler _IndustoryProductCertificateBusinessHandler=null;
+		/// <summary> 
+		/// 全国工业产品生产许可证(IndustoryProductCertificate)对象
+        /// </summary>
+		public IndustoryProductCertificateBusinessHandler IndustoryProductCertificateBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_IndustoryProductCertificateBusinessHandler==null)
+					{
+						_IndustoryProductCertificateBusinessHandler=new IndustoryProductCertificateBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_IndustoryProductCertificateBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _IndustoryProductCertificateBusinessHandler;
 			}
 		}
       
@@ -1785,6 +2225,26 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 			}
 		}
       
+	    private SupplyPersonBusinessHandler _SupplyPersonBusinessHandler=null;
+		/// <summary> 
+		/// 首营药材供货人管理(SupplyPerson)对象
+        /// </summary>
+		public SupplyPersonBusinessHandler SupplyPersonBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_SupplyPersonBusinessHandler==null)
+					{
+						_SupplyPersonBusinessHandler=new SupplyPersonBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_SupplyPersonBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _SupplyPersonBusinessHandler;
+			}
+		}
+      
 	    private SupplyUnitBusinessHandler _SupplyUnitBusinessHandler=null;
 		/// <summary> 
 		/// 供货单位(SupplyUnit)对象
@@ -1985,6 +2445,26 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 			}
 		}
       
+	    private WarehouseZonePositionBusinessHandler _WarehouseZonePositionBusinessHandler=null;
+		/// <summary> 
+		/// (WarehouseZonePosition)对象
+        /// </summary>
+		public WarehouseZonePositionBusinessHandler WarehouseZonePositionBusinessHandler 
+		{
+			get
+			{
+				lock(this)
+				{
+				    if(_WarehouseZonePositionBusinessHandler==null)
+					{
+						_WarehouseZonePositionBusinessHandler=new WarehouseZonePositionBusinessHandler(RepositoryProvider,ConnectedInfoProvider);
+						_WarehouseZonePositionBusinessHandler.SetBusinessHandlerFactory(this);
+					}
+				}
+				return _WarehouseZonePositionBusinessHandler;
+			}
+		}
+      
 	    private WaringSetBusinessHandler _WaringSetBusinessHandler=null;
 		/// <summary> 
 		/// 报警设置(WaringSet)对象
@@ -2024,416 +2504,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 				return _OutInventoryDetailBusinessHandler;
 			}
 		}
-
-       //wfz
-        private SupplyPersonBusinessHandler _SupplyPersonBusinessHandler = null;
-        /// <summary> 
-        /// 购货单位提货人员(SupplyPerson)对象
-        /// </summary>
-        public SupplyPersonBusinessHandler SupplyPersonBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_SupplyPersonBusinessHandler == null)
-                    {
-                        _SupplyPersonBusinessHandler = new SupplyPersonBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _SupplyPersonBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _SupplyPersonBusinessHandler;
-            }
-        }
-       //end wfz
-
-        //modi 20131226
-        private DrugsUnqualificationHandler _DrugsUnqualificationHandler = null;
-        /// <summary> 
-        /// 不合格药品对象
-        /// </summary>
-        public DrugsUnqualificationHandler DrugsUnqualificationHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DrugsUnqualificationHandler == null)
-                    {
-                        _DrugsUnqualificationHandler = new DrugsUnqualificationHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DrugsUnqualificationHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DrugsUnqualificationHandler;
-            }
-        }
-        //end
-
-        private OrganizationCodeLicenseHandler _OrganizationCodeLicenseHandler = null;
-        /// <summary> 
-        /// 组织机构代码证对象
-        /// </summary>
-        public OrganizationCodeLicenseHandler OrganizationCodeLicenseHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_OrganizationCodeLicenseHandler == null)
-                    {
-                        _OrganizationCodeLicenseHandler = new OrganizationCodeLicenseHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _OrganizationCodeLicenseHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _OrganizationCodeLicenseHandler;
-            }
-        }
-
-        private HealthLicenseHandler _HealthLicenseHandler = null;
-        /// <summary> 
-        /// 卫生许可证对象
-        /// </summary>
-        public HealthLicenseHandler HealthLicenseHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_HealthLicenseHandler == null)
-                    {
-                        _HealthLicenseHandler = new HealthLicenseHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _HealthLicenseHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _HealthLicenseHandler;
-            }
-        }
-
-        private FoodCirculateLicenseHandler _FoodCirculateLicenseHandler = null;
-        /// <summary> 
-        /// 食品流通许可证对象
-        /// </summary>
-        public FoodCirculateLicenseHandler FoodCirculateLicenseHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_FoodCirculateLicenseHandler == null)
-                    {
-                        _FoodCirculateLicenseHandler = new FoodCirculateLicenseHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _FoodCirculateLicenseHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _FoodCirculateLicenseHandler;
-            }
-        }
-
-        private TaxRegisterLicenseHandler _TaxRegisterLicenseHandler = null;
-        /// <summary> 
-        /// 税务登记证对象
-        /// </summary>
-        public TaxRegisterLicenseHandler TaxRegisterLicenseHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_TaxRegisterLicenseHandler == null)
-                    {
-                        _TaxRegisterLicenseHandler = new TaxRegisterLicenseHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _TaxRegisterLicenseHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _TaxRegisterLicenseHandler;
-            }
-        }
       
-        #region 不合格药品销毁bussinessHandler注册 20140-2-11
-        private DrugsUnqualificationDestroyHandler _DrugsUnqualificationDestroyHandler = null;
-        public DrugsUnqualificationDestroyHandler DrugsUnqualificationDestroyHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DrugsUnqualificationDestroyHandler == null)
-                    {
-                        _DrugsUnqualificationDestroyHandler = new DrugsUnqualificationDestroyHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DrugsUnqualificationDestroyHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DrugsUnqualificationDestroyHandler;
-            }
-        }
-        #endregion
 
-        #region 待处理药品bussinessHandler注册 2014-3-9
-        private DrugsUndeterminateHandler _DrugsUndeterminateHandler = null;
-        public DrugsUndeterminateHandler DrugsUndeterminateHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DrugsUndeterminateHandler == null)
-                    {
-                        _DrugsUndeterminateHandler = new DrugsUndeterminateHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DrugsUndeterminateHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DrugsUndeterminateHandler;
-            }
-        }
-        #endregion
-
-        #region 拒收单bussinessHandler注册 2014-3-9
-        private DocumentRefuseHandler _DocumentRefuseHandler = null;
-        public DocumentRefuseHandler DocumentRefuseHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DocumentRefuseHandler == null)
-                    {
-                        _DocumentRefuseHandler = new DocumentRefuseHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DocumentRefuseHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DocumentRefuseHandler;
-            }
-        }
-        #endregion
-
-        #region EduDocumentbusinessHandler注册 2014-3-12
-       
-        private EduDocumentHandler _EduDocumentHandler = null;
-        public EduDocumentHandler EduDocumentHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_EduDocumentHandler == null)
-                    {
-                        _EduDocumentHandler = new EduDocumentHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _EduDocumentHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _EduDocumentHandler;
-            }
-        }
-        #endregion
-
-        #region EduDetailsbussinessHandler注册 2014-3-9
-        private EduDetailslHandler _EduDetailslHandler = null;
-        public EduDetailslHandler EduDetailslHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_EduDetailslHandler == null)
-                    {
-                        _EduDetailslHandler = new EduDetailslHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _EduDetailslHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _EduDetailslHandler;
-            }
-        }
-        #endregion
-
-        #region 体检档案bussinessHandler注册 2014-3-9
-        private HealthCheckDocumentHandler _HealthCheckDocumentHandler = null;
-        public HealthCheckDocumentHandler HealthCheckDocumentHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_HealthCheckDocumentHandler == null)
-                    {
-                        _HealthCheckDocumentHandler = new HealthCheckDocumentHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _HealthCheckDocumentHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _HealthCheckDocumentHandler;
-            }
-        }
-        #endregion
-
-        #region 体检档案细节bussinessHandler注册 2014-3-9
-        private HealthCheckDetailHandler _HealthCheckDetailHandler = null;
-        public HealthCheckDetailHandler HealthCheckDetailHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_HealthCheckDetailHandler == null)
-                    {
-                        _HealthCheckDetailHandler = new HealthCheckDetailHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _HealthCheckDetailHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _HealthCheckDetailHandler;
-            }
-        }
-        #endregion
-
-       
-
-        private DrugsBreakageBusinessHandler _DrugsBreakageBusinessHandler = null;
-        /// <summary> 
-        /// 报损(DrugsBreakage)对象
-        /// </summary>
-        public DrugsBreakageBusinessHandler DrugsBreakageBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DrugsBreakageBusinessHandler == null)
-                    {
-                        _DrugsBreakageBusinessHandler = new DrugsBreakageBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DrugsBreakageBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DrugsBreakageBusinessHandler;
-            }
-        }
-
-        private DrugsInventoryMoveBusinessHandler _DrugsInventoryMoveBusinessHandler = null;
-        /// <summary> 
-        /// 报损(DrugsBreakage)对象
-        /// </summary>
-        public DrugsInventoryMoveBusinessHandler DrugsInventoryMoveBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DrugsInventoryMoveBusinessHandler == null)
-                    {
-                        _DrugsInventoryMoveBusinessHandler = new DrugsInventoryMoveBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DrugsInventoryMoveBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DrugsInventoryMoveBusinessHandler;
-            }
-        }
-       
-        private LnstitutionLegalPersonLicenseBusinessHandler _LnstitutionLegalPersonLicenseBusinessHandler = null;
-        /// <summary> 
-        /// 报损(DrugsBreakage)对象
-        /// </summary>
-        public LnstitutionLegalPersonLicenseBusinessHandler LnstitutionLegalPersonLicenseBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_LnstitutionLegalPersonLicenseBusinessHandler == null)
-                    {
-                        _LnstitutionLegalPersonLicenseBusinessHandler = new LnstitutionLegalPersonLicenseBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _LnstitutionLegalPersonLicenseBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _LnstitutionLegalPersonLicenseBusinessHandler;
-            }
-        }
-
-        private MmedicalInstitutionPermitBusinessHandler _MmedicalInstitutionPermitBusinessHandler = null;
-        /// <summary> 
-        /// 报损(DrugsBreakage)对象
-        /// </summary>
-        public MmedicalInstitutionPermitBusinessHandler MmedicalInstitutionPermitBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_MmedicalInstitutionPermitBusinessHandler == null)
-                    {
-                        _MmedicalInstitutionPermitBusinessHandler = new MmedicalInstitutionPermitBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _MmedicalInstitutionPermitBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _MmedicalInstitutionPermitBusinessHandler;
-            }
-        }
-
-        private DirectSalesOrderBusinessHandler _DirectSalesOrderBusinessHandler = null;
-        public DirectSalesOrderBusinessHandler DirectSalesOrderBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DirectSalesOrderBusinessHandler == null)
-                    {
-                        _DirectSalesOrderBusinessHandler = new DirectSalesOrderBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DirectSalesOrderBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DirectSalesOrderBusinessHandler;
-            }
-        }
-
-        private DirectSalesOrderDetailBusinessHandler _DirectSalesOrderDetailBusinessHandler = null;
-        public DirectSalesOrderDetailBusinessHandler DirectSalesOrderDetailBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_DirectSalesOrderDetailBusinessHandler == null)
-                    {
-                        _DirectSalesOrderDetailBusinessHandler = new DirectSalesOrderDetailBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _DirectSalesOrderDetailBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                }
-                return _DirectSalesOrderDetailBusinessHandler;
-            }
-        }
-
-        private WareHouseZonePostionBusinessHandler _WareHouseZonePostionBusinessHandler = null;
-        public WareHouseZonePostionBusinessHandler WareHouseZonePostionBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_WareHouseZonePostionBusinessHandler == null)
-                    {
-                        _WareHouseZonePostionBusinessHandler = new WareHouseZonePostionBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _WareHouseZonePostionBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                    return _WareHouseZonePostionBusinessHandler;
-                }
-            }
-        }
-
-        private IndustoryProductCertificateBusinessHandler _IndustoryProductCertificateBusinessHandler = null;
-        public IndustoryProductCertificateBusinessHandler IndustoryProductCertificateBusinessHandler
-        {
-            get
-            {
-                lock (this)
-                {
-                    if (_IndustoryProductCertificateBusinessHandler == null)
-                    {
-                        _IndustoryProductCertificateBusinessHandler = new IndustoryProductCertificateBusinessHandler(RepositoryProvider, ConnectedInfoProvider);
-                        _IndustoryProductCertificateBusinessHandler.SetBusinessHandlerFactory(this);
-                    }
-                    return _IndustoryProductCertificateBusinessHandler;
-                }
-            }
-        }
-
-        public void Dispose()
+		public void Dispose()
 		{
 			
 			 
@@ -2482,9 +2555,84 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 				_BusinessTypeManageCategoryDetailBusinessHandler.Dispose();
 			} 
 			 
+			if(_ChinaDistrictBusinessHandler!=null)
+			{
+				_ChinaDistrictBusinessHandler.Dispose();
+			} 
+			 
+			if(_DirectSalesOrderBusinessHandler!=null)
+			{
+				_DirectSalesOrderBusinessHandler.Dispose();
+			} 
+			 
+			if(_DirectSalesOrderDetailBusinessHandler!=null)
+			{
+				_DirectSalesOrderDetailBusinessHandler.Dispose();
+			} 
+			 
+			if(_DocumentRefuseBusinessHandler!=null)
+			{
+				_DocumentRefuseBusinessHandler.Dispose();
+			} 
+			 
+			if(_DrugInventoryRecordHisBusinessHandler!=null)
+			{
+				_DrugInventoryRecordHisBusinessHandler.Dispose();
+			} 
+			 
+			if(_DrugMaintenanceRecordBusinessHandler!=null)
+			{
+				_DrugMaintenanceRecordBusinessHandler.Dispose();
+			} 
+			 
+			if(_DrugsBreakageBusinessHandler!=null)
+			{
+				_DrugsBreakageBusinessHandler.Dispose();
+			} 
+			 
+			if(_DrugsInventoryMoveBusinessHandler!=null)
+			{
+				_DrugsInventoryMoveBusinessHandler.Dispose();
+			} 
+			 
+			if(_DrugsUndeterminateBusinessHandler!=null)
+			{
+				_DrugsUndeterminateBusinessHandler.Dispose();
+			} 
+			 
+			if(_DrugsUnqualicationBusinessHandler!=null)
+			{
+				_DrugsUnqualicationBusinessHandler.Dispose();
+			} 
+			 
+			if(_DrugsUnqualificationDestroyBusinessHandler!=null)
+			{
+				_DrugsUnqualificationDestroyBusinessHandler.Dispose();
+			} 
+			 
+			if(_EduDetailsBusinessHandler!=null)
+			{
+				_EduDetailsBusinessHandler.Dispose();
+			} 
+			 
+			if(_EduDocumentBusinessHandler!=null)
+			{
+				_EduDocumentBusinessHandler.Dispose();
+			} 
+			 
 			if(_GoodsAdditionalPropertyBusinessHandler!=null)
 			{
 				_GoodsAdditionalPropertyBusinessHandler.Dispose();
+			} 
+			 
+			if(_HealthCheckDetailBusinessHandler!=null)
+			{
+				_HealthCheckDetailBusinessHandler.Dispose();
+			} 
+			 
+			if(_HealthCheckDocumentBusinessHandler!=null)
+			{
+				_HealthCheckDocumentBusinessHandler.Dispose();
 			} 
 			 
 			if(_PurchaseCashOrderBusinessHandler!=null)
@@ -2655,6 +2803,41 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 			if(_InstrumentsProductionLicenseBusinessHandler!=null)
 			{
 				_InstrumentsProductionLicenseBusinessHandler.Dispose();
+			} 
+			 
+			if(_OrganizationCodeLicenseBusinessHandler!=null)
+			{
+				_OrganizationCodeLicenseBusinessHandler.Dispose();
+			} 
+			 
+			if(_FoodCirculateLicenseBusinessHandler!=null)
+			{
+				_FoodCirculateLicenseBusinessHandler.Dispose();
+			} 
+			 
+			if(_HealthLicenseBusinessHandler!=null)
+			{
+				_HealthLicenseBusinessHandler.Dispose();
+			} 
+			 
+			if(_TaxRegisterLicenseBusinessHandler!=null)
+			{
+				_TaxRegisterLicenseBusinessHandler.Dispose();
+			} 
+			 
+			if(_LnstitutionLegalPersonLicenseBusinessHandler!=null)
+			{
+				_LnstitutionLegalPersonLicenseBusinessHandler.Dispose();
+			} 
+			 
+			if(_MmedicalInstitutionPermitBusinessHandler!=null)
+			{
+				_MmedicalInstitutionPermitBusinessHandler.Dispose();
+			} 
+			 
+			if(_IndustoryProductCertificateBusinessHandler!=null)
+			{
+				_IndustoryProductCertificateBusinessHandler.Dispose();
 			} 
 			 
 			if(_MedicalCategoryBusinessHandler!=null)
@@ -2862,6 +3045,11 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 				_StoreBusinessHandler.Dispose();
 			} 
 			 
+			if(_SupplyPersonBusinessHandler!=null)
+			{
+				_SupplyPersonBusinessHandler.Dispose();
+			} 
+			 
 			if(_SupplyUnitBusinessHandler!=null)
 			{
 				_SupplyUnitBusinessHandler.Dispose();
@@ -2912,6 +3100,11 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 				_WarehouseZoneBusinessHandler.Dispose();
 			} 
 			 
+			if(_WarehouseZonePositionBusinessHandler!=null)
+			{
+				_WarehouseZonePositionBusinessHandler.Dispose();
+			} 
+			 
 			if(_WaringSetBusinessHandler!=null)
 			{
 				_WaringSetBusinessHandler.Dispose();
@@ -2921,69 +3114,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 			{
 				_OutInventoryDetailBusinessHandler.Dispose();
 			} 
-
-			if(_DrugsUnqualificationHandler!=null)
-			{
-                _DrugsUnqualificationHandler.Dispose();
-			}
-
-            if (_DrugsUnqualificationDestroyHandler != null)
-            {
-                _DrugsUnqualificationDestroyHandler.Dispose();
-            }
-
-            if (_DrugsUndeterminateHandler != null)
-            {
-                _DrugsUndeterminateHandler.Dispose();
-            }
-            if (_DocumentRefuseHandler != null)
-            {
-                _DocumentRefuseHandler.Dispose();
-            }
-            if (_EduDetailslHandler != null)
-            {
-                _EduDetailslHandler.Dispose();
-            }
-
-            if (_EduDocumentHandler != null)
-            {
-                _EduDocumentHandler.Dispose();
-            }
-            if (_HealthCheckDetailHandler != null)
-            {
-                _HealthCheckDetailHandler.Dispose();
-            }
-            if (_HealthCheckDocumentHandler != null)
-            {
-                _HealthCheckDocumentHandler.Dispose();
-            }
-
-            
-            if (_LnstitutionLegalPersonLicenseBusinessHandler != null)
-            {
-                _LnstitutionLegalPersonLicenseBusinessHandler.Dispose();
-            }
-            if (_MmedicalInstitutionPermitBusinessHandler != null)
-            {
-                _MmedicalInstitutionPermitBusinessHandler.Dispose();
-            }
-            if (_DirectSalesOrderBusinessHandler != null)
-            {
-                _DirectSalesOrderBusinessHandler.Dispose();
-            }
-            if (_DirectSalesOrderDetailBusinessHandler != null)
-            {
-                _DirectSalesOrderDetailBusinessHandler.Dispose();
-            }
-            if (_WareHouseZonePostionBusinessHandler != null)
-            {
-                _WareHouseZonePostionBusinessHandler.Dispose();
-            }
-            if (_IndustoryProductCertificateBusinessHandler != null)
-            {
-                _IndustoryProductCertificateBusinessHandler.Dispose();
-            }
+			  
 		}
-
 	}
 }

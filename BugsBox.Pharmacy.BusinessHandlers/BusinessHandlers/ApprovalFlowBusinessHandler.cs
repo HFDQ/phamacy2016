@@ -296,8 +296,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                         }
                         break;
                     case (int)ApprovalType.drugsUnqualityApproval:
-                        drugsUnqualication du = (drugsUnqualication)GetObjectEntityInstance(flowTypeIndex, flowId, status);
-                        BusinessHandlerFactory.DrugsUnqualificationHandler.Save(du);  
+                        DrugsUnqualication du = (DrugsUnqualication)GetObjectEntityInstance(flowTypeIndex, flowId, status);
+                        BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Save(du);  
                         break;
                     case (int)ApprovalType.drugsBreakageApproval:
                         DrugsBreakage db = (DrugsBreakage)GetObjectEntityInstance(flowTypeIndex, flowId, status);
@@ -380,7 +380,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     dc.FlowID = flowid;
                     dc.dtFrom = DateTime.MinValue;
                     dc.dtTo = DateTime.MaxValue;
-                    drugsUnqualication du = BusinessHandlerFactory.DrugsUnqualificationHandler.GetDrugsUnqualificationByCondition(dc).FirstOrDefault();
+                    DrugsUnqualication du = BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.GetDrugsUnqualificationByCondition(dc).FirstOrDefault();
                     if (du != null)
                     {
                         du.ApprovalStatus = action;
@@ -394,11 +394,11 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                         db.ApprovalStatus = action;
                         if (action == ApprovalStatus.Reject)
                         {
-                            var c=BusinessHandlerFactory.DrugsUnqualificationHandler.Get(db.DrugUnqualityId);
+                            var c=BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Get(db.DrugUnqualityId);
                             if (c != null)
                             {
                                 c.unqualificationType = 0;
-                                BusinessHandlerFactory.DrugsUnqualificationHandler.Save(c);
+                                BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.Save(c);
                             }
                         }
 

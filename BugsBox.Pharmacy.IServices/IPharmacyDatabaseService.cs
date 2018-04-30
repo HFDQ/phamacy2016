@@ -657,6 +657,929 @@ namespace BugsBox.Pharmacy.IServices
 
 		#endregion 经营方式的管理要求分类详细 
 		   
+		#region 行政区域划分
+
+		/// <summary>
+        /// 获取实体行政区域划分
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        ChinaDistrict GetChinaDistrict(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加行政区域划分
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddChinaDistrict(ChinaDistrict value,out string msg);
+
+        /// <summary>
+        /// 删除行政区域划分
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteChinaDistrict(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存行政区域划分
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveChinaDistrict(ChinaDistrict value, out string msg);  
+
+		/// <summary>
+        /// 所有记录行政区域划分
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<ChinaDistrict> AllChinaDistricts(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<ChinaDistrict> QueryChinaDistricts(string name,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<ChinaDistrict> QueryPagedChinaDistricts(string name,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<ChinaDistrict> SearchChinaDistrictsByQueryModel(QueryChinaDistrictModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<ChinaDistrict> SearchPagedChinaDistrictsByQueryModel(QueryChinaDistrictModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 行政区域划分 
+		   
+		#region 
+
+		/// <summary>
+        /// 获取实体
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DirectSalesOrder GetDirectSalesOrder(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDirectSalesOrder(DirectSalesOrder value,out string msg);
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDirectSalesOrder(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDirectSalesOrder(DirectSalesOrder value, out string msg);  
+
+		/// <summary>
+        /// 所有记录
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrder> AllDirectSalesOrders(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrder> QueryDirectSalesOrders(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string documentnumber,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime approvaldatetimefrom,DateTime approvaldatetimeto,string checkusername,DateTime checktimefrom,DateTime checktimeto,string checkaddress,string checkresulty,int checkstatusvaluefrom,int checkstatusvalueto,string memo,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrder> QueryPagedDirectSalesOrders(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string documentnumber,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime approvaldatetimefrom,DateTime approvaldatetimeto,string checkusername,DateTime checktimefrom,DateTime checktimeto,string checkaddress,string checkresulty,int checkstatusvaluefrom,int checkstatusvalueto,string memo,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrder> SearchDirectSalesOrdersByQueryModel(QueryDirectSalesOrderModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrder> SearchPagedDirectSalesOrdersByQueryModel(QueryDirectSalesOrderModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion  
+		   
+		#region 
+
+		/// <summary>
+        /// 获取实体
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DirectSalesOrderDetail GetDirectSalesOrderDetail(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDirectSalesOrderDetail(DirectSalesOrderDetail value,out string msg);
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDirectSalesOrderDetail(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDirectSalesOrderDetail(DirectSalesOrderDetail value, out string msg);  
+
+		/// <summary>
+        /// 所有记录
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrderDetail> AllDirectSalesOrderDetails(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrderDetail> QueryDirectSalesOrderDetails(decimal amountfrom,decimal amountto,string batchnumber,string origin,DateTime productdatefrom,DateTime productdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,decimal qualityamountfrom,decimal qualityamountto,string qualitymemo,decimal unqualityamountfrom,decimal unqualityamountto,string unqualitymemo,string checkmethod,decimal supplypricefrom,decimal supplypriceto,decimal salepricefrom,decimal salepriceto,decimal directsaledifffrom,decimal directsalediffto,int squencefrom,int squenceto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrderDetail> QueryPagedDirectSalesOrderDetails(decimal amountfrom,decimal amountto,string batchnumber,string origin,DateTime productdatefrom,DateTime productdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,decimal qualityamountfrom,decimal qualityamountto,string qualitymemo,decimal unqualityamountfrom,decimal unqualityamountto,string unqualitymemo,string checkmethod,decimal supplypricefrom,decimal supplypriceto,decimal salepricefrom,decimal salepriceto,decimal directsaledifffrom,decimal directsalediffto,int squencefrom,int squenceto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrderDetail> SearchDirectSalesOrderDetailsByQueryModel(QueryDirectSalesOrderDetailModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DirectSalesOrderDetail> SearchPagedDirectSalesOrderDetailsByQueryModel(QueryDirectSalesOrderDetailModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion  
+		   
+		#region 收货拒收单
+
+		/// <summary>
+        /// 获取实体收货拒收单
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DocumentRefuse GetDocumentRefuse(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加收货拒收单
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDocumentRefuse(DocumentRefuse value,out string msg);
+
+        /// <summary>
+        /// 删除收货拒收单
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDocumentRefuse(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存收货拒收单
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDocumentRefuse(DocumentRefuse value, out string msg);  
+
+		/// <summary>
+        /// 所有记录收货拒收单
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DocumentRefuse> AllDocumentRefuses(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DocumentRefuse> QueryDocumentRefuses(string orderdocumentid,DateTime createtimefrom,DateTime createtimeto,string creator,DateTime updatetimefrom,DateTime updatetimeto,string source,string drugname,string documentnumber,decimal quantityfrom,decimal quantityto,string batchnumber,string rsn,string conclusion,DateTime conclusionsigndatefrom,DateTime conclusionsigndateto,string conclusionsigner,int procfrom,int procto,decimal refusequantityfrom,decimal refusequantityto,decimal receivequantityfrom,decimal receivequantityto,decimal purchasepricefrom,decimal purchasepriceto,string purchaseunitname,string specific,string dosagetype,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DocumentRefuse> QueryPagedDocumentRefuses(string orderdocumentid,DateTime createtimefrom,DateTime createtimeto,string creator,DateTime updatetimefrom,DateTime updatetimeto,string source,string drugname,string documentnumber,decimal quantityfrom,decimal quantityto,string batchnumber,string rsn,string conclusion,DateTime conclusionsigndatefrom,DateTime conclusionsigndateto,string conclusionsigner,int procfrom,int procto,decimal refusequantityfrom,decimal refusequantityto,decimal receivequantityfrom,decimal receivequantityto,decimal purchasepricefrom,decimal purchasepriceto,string purchaseunitname,string specific,string dosagetype,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DocumentRefuse> SearchDocumentRefusesByQueryModel(QueryDocumentRefuseModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DocumentRefuse> SearchPagedDocumentRefusesByQueryModel(QueryDocumentRefuseModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 收货拒收单 
+		   
+		#region 药物库存变动历史
+
+		/// <summary>
+        /// 获取实体药物库存变动历史
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DrugInventoryRecordHis GetDrugInventoryRecordHis(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加药物库存变动历史
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDrugInventoryRecordHis(DrugInventoryRecordHis value,out string msg);
+
+        /// <summary>
+        /// 删除药物库存变动历史
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDrugInventoryRecordHis(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存药物库存变动历史
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDrugInventoryRecordHis(DrugInventoryRecordHis value, out string msg);  
+
+		/// <summary>
+        /// 所有记录药物库存变动历史
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugInventoryRecordHis> AllDrugInventoryRecordHiss(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugInventoryRecordHis> QueryDrugInventoryRecordHiss(string operatorname,DateTime createdatefrom,DateTime createdateto,decimal purchasepriccefrom,decimal purchasepricceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,bool isoutvaliddate,bool queryisoutvaliddate,decimal ininventorycountfrom,decimal ininventorycountto,decimal salescountfrom,decimal salescountto,decimal onsalesordercountfrom,decimal onsalesordercountto,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal retailcountfrom,decimal retailcountto,decimal dismantingamountfrom,decimal dismantingamountto,decimal changeamountfrom,decimal changeamountto,decimal retaildismantingamountfrom,decimal retaildismantingamountto,decimal onretailcountfrom,decimal onretailcountto,string decription,decimal cansalenumfrom,decimal cansalenumto,bool valid,bool queryvalid,decimal durginventorytypevaluefrom,decimal durginventorytypevalueto,decimal purchasereturnnumberfrom,decimal purchasereturnnumberto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugInventoryRecordHis> QueryPagedDrugInventoryRecordHiss(string operatorname,DateTime createdatefrom,DateTime createdateto,decimal purchasepriccefrom,decimal purchasepricceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,bool isoutvaliddate,bool queryisoutvaliddate,decimal ininventorycountfrom,decimal ininventorycountto,decimal salescountfrom,decimal salescountto,decimal onsalesordercountfrom,decimal onsalesordercountto,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal retailcountfrom,decimal retailcountto,decimal dismantingamountfrom,decimal dismantingamountto,decimal changeamountfrom,decimal changeamountto,decimal retaildismantingamountfrom,decimal retaildismantingamountto,decimal onretailcountfrom,decimal onretailcountto,string decription,decimal cansalenumfrom,decimal cansalenumto,bool valid,bool queryvalid,decimal durginventorytypevaluefrom,decimal durginventorytypevalueto,decimal purchasereturnnumberfrom,decimal purchasereturnnumberto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugInventoryRecordHis> SearchDrugInventoryRecordHissByQueryModel(QueryDrugInventoryRecordHisModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugInventoryRecordHis> SearchPagedDrugInventoryRecordHissByQueryModel(QueryDrugInventoryRecordHisModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 药物库存变动历史 
+		   
+		#region 药品养护记录
+
+		/// <summary>
+        /// 获取实体药品养护记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DrugMaintenanceRecord GetDrugMaintenanceRecord(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加药品养护记录
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDrugMaintenanceRecord(DrugMaintenanceRecord value,out string msg);
+
+        /// <summary>
+        /// 删除药品养护记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDrugMaintenanceRecord(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存药品养护记录
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDrugMaintenanceRecord(DrugMaintenanceRecord value, out string msg);  
+
+		/// <summary>
+        /// 所有记录药品养护记录
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugMaintenanceRecord> AllDrugMaintenanceRecords(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugMaintenanceRecord> QueryDrugMaintenanceRecords(DateTime maintenancetimefrom,DateTime maintenancetimeto,DateTime lastmaintenancetimefrom,DateTime lastmaintenancetimeto,string memo,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugMaintenanceRecord> QueryPagedDrugMaintenanceRecords(DateTime maintenancetimefrom,DateTime maintenancetimeto,DateTime lastmaintenancetimefrom,DateTime lastmaintenancetimeto,string memo,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugMaintenanceRecord> SearchDrugMaintenanceRecordsByQueryModel(QueryDrugMaintenanceRecordModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugMaintenanceRecord> SearchPagedDrugMaintenanceRecordsByQueryModel(QueryDrugMaintenanceRecordModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 药品养护记录 
+		   
+		#region 报损药品
+
+		/// <summary>
+        /// 获取实体报损药品
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DrugsBreakage GetDrugsBreakage(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加报损药品
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDrugsBreakage(DrugsBreakage value,out string msg);
+
+        /// <summary>
+        /// 删除报损药品
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDrugsBreakage(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存报损药品
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDrugsBreakage(DrugsBreakage value, out string msg);  
+
+		/// <summary>
+        /// 所有记录报损药品
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsBreakage> AllDrugsBreakages(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsBreakage> QueryDrugsBreakages(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int approvalstatusvaluefrom,int approvalstatusvalueto,string description,int unqualificationtypefrom,int unqualificationtypeto,decimal quantityfrom,decimal quantityto,string drugname,string batchno,string documentnumber,string unqualificationdocumentnumber,string source,string specific,string dosagetype,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,string origin,decimal purchasepricefrom,decimal purchasepriceto,string factoryname,string supplyer,string purchaseorderdocumentnumber,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsBreakage> QueryPagedDrugsBreakages(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int approvalstatusvaluefrom,int approvalstatusvalueto,string description,int unqualificationtypefrom,int unqualificationtypeto,decimal quantityfrom,decimal quantityto,string drugname,string batchno,string documentnumber,string unqualificationdocumentnumber,string source,string specific,string dosagetype,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,string origin,decimal purchasepricefrom,decimal purchasepriceto,string factoryname,string supplyer,string purchaseorderdocumentnumber,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsBreakage> SearchDrugsBreakagesByQueryModel(QueryDrugsBreakageModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsBreakage> SearchPagedDrugsBreakagesByQueryModel(QueryDrugsBreakageModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 报损药品 
+		   
+		#region 移库
+
+		/// <summary>
+        /// 获取实体移库
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DrugsInventoryMove GetDrugsInventoryMove(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加移库
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDrugsInventoryMove(DrugsInventoryMove value,out string msg);
+
+        /// <summary>
+        /// 删除移库
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDrugsInventoryMove(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存移库
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDrugsInventoryMove(DrugsInventoryMove value, out string msg);  
+
+		/// <summary>
+        /// 所有记录移库
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsInventoryMove> AllDrugsInventoryMoves(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsInventoryMove> QueryDrugsInventoryMoves(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int approvalstatusvaluefrom,int approvalstatusvalueto,string description,decimal quantityfrom,decimal quantityto,string drugname,string batchno,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsInventoryMove> QueryPagedDrugsInventoryMoves(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int approvalstatusvaluefrom,int approvalstatusvalueto,string description,decimal quantityfrom,decimal quantityto,string drugname,string batchno,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsInventoryMove> SearchDrugsInventoryMovesByQueryModel(QueryDrugsInventoryMoveModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsInventoryMove> SearchPagedDrugsInventoryMovesByQueryModel(QueryDrugsInventoryMoveModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 移库 
+		   
+		#region 待处理药品
+
+		/// <summary>
+        /// 获取实体待处理药品
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DrugsUndeterminate GetDrugsUndeterminate(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加待处理药品
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDrugsUndeterminate(DrugsUndeterminate value,out string msg);
+
+        /// <summary>
+        /// 删除待处理药品
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDrugsUndeterminate(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存待处理药品
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDrugsUndeterminate(DrugsUndeterminate value, out string msg);  
+
+		/// <summary>
+        /// 所有记录待处理药品
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUndeterminate> AllDrugsUndeterminates(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUndeterminate> QueryDrugsUndeterminates(string orderdocumentid,DateTime createtimefrom,DateTime createtimeto,string creater,DateTime updatetimefrom,DateTime updatetimeto,string source,string documentnumber,decimal quantityfrom,decimal quantityto,string drugname,string batchnumber,string warehouse,string rsn,string sta,string stasigner,DateTime stasigndatefrom,DateTime stasigndateto,string conclusion,string conclusionsigner,DateTime conclusiondatefrom,DateTime conclusiondateto,int procfrom,int procto,decimal qualificationquantityfrom,decimal qualificationquantityto,decimal unqualificationquantityfrom,decimal unqualificationquantityto,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,string supplyer,decimal purchasepricefrom,decimal purchasepriceto,string specific,string dosagetype,string origin,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUndeterminate> QueryPagedDrugsUndeterminates(string orderdocumentid,DateTime createtimefrom,DateTime createtimeto,string creater,DateTime updatetimefrom,DateTime updatetimeto,string source,string documentnumber,decimal quantityfrom,decimal quantityto,string drugname,string batchnumber,string warehouse,string rsn,string sta,string stasigner,DateTime stasigndatefrom,DateTime stasigndateto,string conclusion,string conclusionsigner,DateTime conclusiondatefrom,DateTime conclusiondateto,int procfrom,int procto,decimal qualificationquantityfrom,decimal qualificationquantityto,decimal unqualificationquantityfrom,decimal unqualificationquantityto,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,string supplyer,decimal purchasepricefrom,decimal purchasepriceto,string specific,string dosagetype,string origin,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUndeterminate> SearchDrugsUndeterminatesByQueryModel(QueryDrugsUndeterminateModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUndeterminate> SearchPagedDrugsUndeterminatesByQueryModel(QueryDrugsUndeterminateModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 待处理药品 
+		   
+		#region 不合格药品
+
+		/// <summary>
+        /// 获取实体不合格药品
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DrugsUnqualication GetDrugsUnqualication(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加不合格药品
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDrugsUnqualication(DrugsUnqualication value,out string msg);
+
+        /// <summary>
+        /// 删除不合格药品
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDrugsUnqualication(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存不合格药品
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDrugsUnqualication(DrugsUnqualication value, out string msg);  
+
+		/// <summary>
+        /// 所有记录不合格药品
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualication> AllDrugsUnqualications(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualication> QueryDrugsUnqualications(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int approvalstatusvaluefrom,int approvalstatusvalueto,string description,int unqualificationtypefrom,int unqualificationtypeto,decimal quantityfrom,decimal quantityto,string drugname,string batchno,string documentnumber,string checkdocumentnumber,string source,string specific,string dosagetype,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,decimal purchasepricefrom,decimal purchasepriceto,string factoryname,string origin,string supplyer,string purchaseorderdocumentnumber,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualication> QueryPagedDrugsUnqualications(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int approvalstatusvaluefrom,int approvalstatusvalueto,string description,int unqualificationtypefrom,int unqualificationtypeto,decimal quantityfrom,decimal quantityto,string drugname,string batchno,string documentnumber,string checkdocumentnumber,string source,string specific,string dosagetype,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,decimal purchasepricefrom,decimal purchasepriceto,string factoryname,string origin,string supplyer,string purchaseorderdocumentnumber,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualication> SearchDrugsUnqualicationsByQueryModel(QueryDrugsUnqualicationModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualication> SearchPagedDrugsUnqualicationsByQueryModel(QueryDrugsUnqualicationModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 不合格药品 
+		   
+		#region 不合格药品销毁情况
+
+		/// <summary>
+        /// 获取实体不合格药品销毁情况
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        DrugsUnqualificationDestroy GetDrugsUnqualificationDestroy(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加不合格药品销毁情况
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddDrugsUnqualificationDestroy(DrugsUnqualificationDestroy value,out string msg);
+
+        /// <summary>
+        /// 删除不合格药品销毁情况
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteDrugsUnqualificationDestroy(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存不合格药品销毁情况
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveDrugsUnqualificationDestroy(DrugsUnqualificationDestroy value, out string msg);  
+
+		/// <summary>
+        /// 所有记录不合格药品销毁情况
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualificationDestroy> AllDrugsUnqualificationDestroys(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualificationDestroy> QueryDrugsUnqualificationDestroys(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string drugname,string batchno,string factoryname,decimal pricefrom,decimal priceto,string warehousezone,string destroymethod,string destroyreason,string destroyplace,DateTime destroytimefrom,DateTime destroytimeto,string destroycargo,string destroyman,string destroyer,string destroystate,string supervisoropinion,string specific,string dosagetype,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,string origin,decimal purchasepricefrom,decimal purchasepriceto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualificationDestroy> QueryPagedDrugsUnqualificationDestroys(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string drugname,string batchno,string factoryname,decimal pricefrom,decimal priceto,string warehousezone,string destroymethod,string destroyreason,string destroyplace,DateTime destroytimefrom,DateTime destroytimeto,string destroycargo,string destroyman,string destroyer,string destroystate,string supervisoropinion,string specific,string dosagetype,DateTime producedatefrom,DateTime producedateto,DateTime expiredatefrom,DateTime expiredateto,string origin,decimal purchasepricefrom,decimal purchasepriceto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualificationDestroy> SearchDrugsUnqualificationDestroysByQueryModel(QueryDrugsUnqualificationDestroyModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<DrugsUnqualificationDestroy> SearchPagedDrugsUnqualificationDestroysByQueryModel(QueryDrugsUnqualificationDestroyModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 不合格药品销毁情况 
+		   
+		#region 培训档案细节
+
+		/// <summary>
+        /// 获取实体培训档案细节
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        EduDetails GetEduDetails(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加培训档案细节
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddEduDetails(EduDetails value,out string msg);
+
+        /// <summary>
+        /// 删除培训档案细节
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteEduDetails(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存培训档案细节
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveEduDetails(EduDetails value, out string msg);  
+
+		/// <summary>
+        /// 所有记录培训档案细节
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDetails> AllEduDetailss(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDetails> QueryEduDetailss(bool isedupass,bool queryisedupass,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDetails> QueryPagedEduDetailss(bool isedupass,bool queryisedupass,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDetails> SearchEduDetailssByQueryModel(QueryEduDetailsModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDetails> SearchPagedEduDetailssByQueryModel(QueryEduDetailsModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 培训档案细节 
+		   
+		#region 培训档案
+
+		/// <summary>
+        /// 获取实体培训档案
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        EduDocument GetEduDocument(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加培训档案
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddEduDocument(EduDocument value,out string msg);
+
+        /// <summary>
+        /// 删除培训档案
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteEduDocument(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存培训档案
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveEduDocument(EduDocument value, out string msg);  
+
+		/// <summary>
+        /// 所有记录培训档案
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDocument> AllEduDocuments(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDocument> QueryEduDocuments(string edudocumentnumber,string edudocumentname,DateTime edutimestartfrom,DateTime edutimestartto,DateTime edutimeendfrom,DateTime edutimeendto,string educontext,string eduorganize,string eduteacher,string eduadress,string edueployees,decimal edueployeessumfrom,decimal edueployeessumto,decimal edueployeespassnumberfrom,decimal edueployeespassnumberto,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDocument> QueryPagedEduDocuments(string edudocumentnumber,string edudocumentname,DateTime edutimestartfrom,DateTime edutimestartto,DateTime edutimeendfrom,DateTime edutimeendto,string educontext,string eduorganize,string eduteacher,string eduadress,string edueployees,decimal edueployeessumfrom,decimal edueployeessumto,decimal edueployeespassnumberfrom,decimal edueployeespassnumberto,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDocument> SearchEduDocumentsByQueryModel(QueryEduDocumentModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<EduDocument> SearchPagedEduDocumentsByQueryModel(QueryEduDocumentModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 培训档案 
+		   
 		#region 商品附加属性
 
 		/// <summary>
@@ -727,6 +1650,148 @@ namespace BugsBox.Pharmacy.IServices
         List<GoodsAdditionalProperty> SearchPagedGoodsAdditionalPropertysByQueryModel(QueryGoodsAdditionalPropertyModel qModel,int index,int size,out PagerInfo pager); 
 
 		#endregion 商品附加属性 
+		   
+		#region 体检档案细节
+
+		/// <summary>
+        /// 获取实体体检档案细节
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        HealthCheckDetail GetHealthCheckDetail(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加体检档案细节
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddHealthCheckDetail(HealthCheckDetail value,out string msg);
+
+        /// <summary>
+        /// 删除体检档案细节
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteHealthCheckDetail(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存体检档案细节
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveHealthCheckDetail(HealthCheckDetail value, out string msg);  
+
+		/// <summary>
+        /// 所有记录体检档案细节
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDetail> AllHealthCheckDetails(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDetail> QueryHealthCheckDetails(string checkyear,string medicine,string skin,string xcheck,string hepatitis,string optometry,string checkresult,string memo,bool ischeckpass,bool queryischeckpass,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDetail> QueryPagedHealthCheckDetails(string checkyear,string medicine,string skin,string xcheck,string hepatitis,string optometry,string checkresult,string memo,bool ischeckpass,bool queryischeckpass,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDetail> SearchHealthCheckDetailsByQueryModel(QueryHealthCheckDetailModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDetail> SearchPagedHealthCheckDetailsByQueryModel(QueryHealthCheckDetailModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 体检档案细节 
+		   
+		#region 体检档案
+
+		/// <summary>
+        /// 获取实体体检档案
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        HealthCheckDocument GetHealthCheckDocument(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加体检档案
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddHealthCheckDocument(HealthCheckDocument value,out string msg);
+
+        /// <summary>
+        /// 删除体检档案
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteHealthCheckDocument(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存体检档案
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveHealthCheckDocument(HealthCheckDocument value, out string msg);  
+
+		/// <summary>
+        /// 所有记录体检档案
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDocument> AllHealthCheckDocuments(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDocument> QueryHealthCheckDocuments(string documentnumber,string documentname,DateTime checktimefrom,DateTime checktimeto,string checkcontext,string checkorganize,string checkadress,string medicinedoctor,string skindoctor,string xcheckdoctor,string hepatitisdoctor,string optometrydoctor,string chargedoctor,string issuanceorg,string checkeployees,decimal checkeployeessumfrom,decimal checkeployeessumto,decimal checkpassnumberfrom,decimal checkpassnumberto,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDocument> QueryPagedHealthCheckDocuments(string documentnumber,string documentname,DateTime checktimefrom,DateTime checktimeto,string checkcontext,string checkorganize,string checkadress,string medicinedoctor,string skindoctor,string xcheckdoctor,string hepatitisdoctor,string optometrydoctor,string chargedoctor,string issuanceorg,string checkeployees,decimal checkeployeessumfrom,decimal checkeployeessumto,decimal checkpassnumberfrom,decimal checkpassnumberto,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime f1from,DateTime f1to,decimal f2from,decimal f2to,decimal f3from,decimal f3to,string f4,string f5,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDocument> SearchHealthCheckDocumentsByQueryModel(QueryHealthCheckDocumentModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthCheckDocument> SearchPagedHealthCheckDocumentsByQueryModel(QueryHealthCheckDocumentModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 体检档案 
 		   
 		#region 采购结算单
 
@@ -853,12 +1918,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Delivery> QueryDeliverys(DateTime deliverytimefrom,DateTime deliverytimeto,string shippingaddress,string deliveryaddress,string manifestnumber,int drugscountfrom,int drugscountto,int deliverymethodvaluefrom,int deliverymethodvalueto,int transportmethodvaluefrom,int transportmethodvalueto,string principal,string principalphone,string transportcompany,string vehicleinfo,int deliverystatusvaluefrom,int deliverystatusvalueto,string memo,bool isover,bool queryisover,DateTime reservationtimefrom,DateTime reservationtimeto,string reservationno,DateTime acceptedtimefrom,DateTime acceptedtimeto,string acceptedno,DateTime canceledtimefrom,DateTime canceledtimeto,string canceledno,DateTime outedtimefrom,DateTime outedtimeto,string outedno,DateTime signedtimefrom,DateTime signedtimeto,string signedno,DateTime returntimefrom,DateTime returntimeto,string returnno,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,out string msg);
+        List<Delivery> QueryDeliverys(DateTime deliverytimefrom,DateTime deliverytimeto,string shippingaddress,string deliveryaddress,string manifestnumber,decimal drugscountfrom,decimal drugscountto,int deliverymethodvaluefrom,int deliverymethodvalueto,int transportmethodvaluefrom,int transportmethodvalueto,string principal,string principalphone,string transportcompany,string vehicleinfo,int deliverystatusvaluefrom,int deliverystatusvalueto,string memo,bool isover,bool queryisover,DateTime reservationtimefrom,DateTime reservationtimeto,string reservationno,DateTime acceptedtimefrom,DateTime acceptedtimeto,string acceptedno,DateTime canceledtimefrom,DateTime canceledtimeto,string canceledno,DateTime outedtimefrom,DateTime outedtimeto,string outedno,DateTime signedtimefrom,DateTime signedtimeto,string signedno,DateTime returntimefrom,DateTime returntimeto,string returnno,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Delivery> QueryPagedDeliverys(DateTime deliverytimefrom,DateTime deliverytimeto,string shippingaddress,string deliveryaddress,string manifestnumber,int drugscountfrom,int drugscountto,int deliverymethodvaluefrom,int deliverymethodvalueto,int transportmethodvaluefrom,int transportmethodvalueto,string principal,string principalphone,string transportcompany,string vehicleinfo,int deliverystatusvaluefrom,int deliverystatusvalueto,string memo,bool isover,bool queryisover,DateTime reservationtimefrom,DateTime reservationtimeto,string reservationno,DateTime acceptedtimefrom,DateTime acceptedtimeto,string acceptedno,DateTime canceledtimefrom,DateTime canceledtimeto,string canceledno,DateTime outedtimefrom,DateTime outedtimeto,string outedno,DateTime signedtimefrom,DateTime signedtimeto,string signedno,DateTime returntimefrom,DateTime returntimeto,string returnno,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int index,int size,out PagerInfo pager); 
+        List<Delivery> QueryPagedDeliverys(DateTime deliverytimefrom,DateTime deliverytimeto,string shippingaddress,string deliveryaddress,string manifestnumber,decimal drugscountfrom,decimal drugscountto,int deliverymethodvaluefrom,int deliverymethodvalueto,int transportmethodvaluefrom,int transportmethodvalueto,string principal,string principalphone,string transportcompany,string vehicleinfo,int deliverystatusvaluefrom,int deliverystatusvalueto,string memo,bool isover,bool queryisover,DateTime reservationtimefrom,DateTime reservationtimeto,string reservationno,DateTime acceptedtimefrom,DateTime acceptedtimeto,string acceptedno,DateTime canceledtimefrom,DateTime canceledtimeto,string canceledno,DateTime outedtimefrom,DateTime outedtimeto,string outedno,DateTime signedtimefrom,DateTime signedtimeto,string signedno,DateTime returntimefrom,DateTime returntimeto,string returnno,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -1377,18 +2442,7 @@ namespace BugsBox.Pharmacy.IServices
         /// <returns></returns>
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugInfo GetDrugInfo(Guid id,out string message);
-
-        ///// <summary>WFZ modified
-        ///// 获取实体药品信息
-        ///// </summary>
-        ///// <param name="id"></param>
-        ///// <param name="message"></param>
-        ///// <returns></returns>
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //DrugInfo GetGoodsInfoByFlowID(Guid id, out string message); 
-        //  //WFZ m end
+        DrugInfo GetDrugInfo(Guid id,out string message);   
 
 		/// <summary>
         /// 添加药品信息
@@ -1432,12 +2486,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<DrugInfo> QueryDrugInfos(string permitlicensecode,DateTime permitdatefrom,DateTime permitdateto,DateTime permitoutdatefrom,DateTime permitoutdateto,string code,string description,string barcode,string standardcode,string productname,string productenglishname,string productgeneralname,string productothername,string factoryname,string factorynameabbreviation,string piecemealspecification,int piecemealnumberfrom,int piecemealnumberto,decimal pricefrom,decimal priceto,decimal nationalsalepricefrom,decimal nationalsalepriceto,decimal purchasepricefrom,decimal purchasepriceto,decimal salepricefrom,decimal salepriceto,decimal wholesalepricefrom,decimal wholesalepriceto,decimal retailpricefrom,decimal retailpriceto,decimal tagpricefrom,decimal tagpriceto,decimal lowsalepricefrom,decimal lowsalepriceto,decimal limitedlowpricefrom,decimal limitedlowpriceto,decimal limiteduppricefrom,decimal limiteduppriceto,bool ismedicalinsurance,bool queryismedicalinsurance,bool isprescription,bool queryisprescription,bool isimport,bool queryisimport,bool ismainmaintenance,bool queryismainmaintenance,bool isspecialdrugcategory,bool queryisspecialdrugcategory,string specialdrugcategorycode,int validperiodfrom,int validperiodto,string licensepermissionnumber,string performancestandards,string package,int packageamountfrom,int packageamountto,bool isapproval,bool queryisapproval,DateTime approvaldatefrom,DateTime approvaldateto,int maxinventorycountfrom,int maxinventorycountto,int mininventorycountfrom,int mininventorycountto,string origin,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,bool enabled,bool queryenabled,string businessscopecode,string purchasemanagecategorydetailcode,string drugcategorycode,string medicalcategorydetailcode,string drugclinicalcategorycode,string dictionaryuserdefinedtypecode,string drugstoragetypecode,string dictionarymeasurementunitcode,string dictionarydosagecode,string dictionaryspecificationcode,string dictionarypiecemealunitcode,int goodstypevaluefrom,int goodstypevalueto,int approvalstatusvaluefrom,int approvalstatusvalueto,out string msg);
+        List<DrugInfo> QueryDrugInfos(string permitlicensecode,string code,string doccode,string pinyin,string description,string barcode,string standardcode,string productname,string productenglishname,string productgeneralname,string productothername,string factoryname,string factorynameabbreviation,string piecemealspecification,int piecemealnumberfrom,int piecemealnumberto,decimal pricefrom,decimal priceto,decimal nationalsalepricefrom,decimal nationalsalepriceto,decimal purchasepricefrom,decimal purchasepriceto,decimal salepricefrom,decimal salepriceto,decimal wholesalepricefrom,decimal wholesalepriceto,decimal retailpricefrom,decimal retailpriceto,decimal tagpricefrom,decimal tagpriceto,decimal lowsalepricefrom,decimal lowsalepriceto,decimal limitedlowpricefrom,decimal limitedlowpriceto,decimal limiteduppricefrom,decimal limiteduppriceto,bool ismedicalinsurance,bool queryismedicalinsurance,bool isprescription,bool queryisprescription,bool isimport,bool queryisimport,bool ismainmaintenance,bool queryismainmaintenance,bool isspecialdrugcategory,bool queryisspecialdrugcategory,string specialdrugcategorycode,int validperiodfrom,int validperiodto,string licensepermissionnumber,string performancestandards,string package,int packageamountfrom,int packageamountto,string warehousezones,decimal bigpackagefrom,decimal bigpackageto,decimal middlepackagefrom,decimal middlepackageto,int smallpackagefrom,int smallpackageto,bool isapproval,bool queryisapproval,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,bool enabled,bool queryenabled,string lockremark,DateTime permitdatefrom,DateTime permitdateto,DateTime permitoutdatefrom,DateTime permitoutdateto,DateTime approvaldatefrom,DateTime approvaldateto,int maxinventorycountfrom,int maxinventorycountto,int mininventorycountfrom,int mininventorycountto,string origin,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string businessscopecode,string purchasemanagecategorydetailcode,string drugcategorycode,string medicalcategorydetailcode,string drugclinicalcategorycode,string dictionaryuserdefinedtypecode,string drugstoragetypecode,string dictionarymeasurementunitcode,string dictionarydosagecode,string dictionaryspecificationcode,string dictionarypiecemealunitcode,int goodstypevaluefrom,int goodstypevalueto,int approvalstatusvaluefrom,int approvalstatusvalueto,string function,string ingredient,string commendeduser,string instentproductliscencepermitnumber,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<DrugInfo> QueryPagedDrugInfos(string permitlicensecode,DateTime permitdatefrom,DateTime permitdateto,DateTime permitoutdatefrom,DateTime permitoutdateto,string code,string description,string barcode,string standardcode,string productname,string productenglishname,string productgeneralname,string productothername,string factoryname,string factorynameabbreviation,string piecemealspecification,int piecemealnumberfrom,int piecemealnumberto,decimal pricefrom,decimal priceto,decimal nationalsalepricefrom,decimal nationalsalepriceto,decimal purchasepricefrom,decimal purchasepriceto,decimal salepricefrom,decimal salepriceto,decimal wholesalepricefrom,decimal wholesalepriceto,decimal retailpricefrom,decimal retailpriceto,decimal tagpricefrom,decimal tagpriceto,decimal lowsalepricefrom,decimal lowsalepriceto,decimal limitedlowpricefrom,decimal limitedlowpriceto,decimal limiteduppricefrom,decimal limiteduppriceto,bool ismedicalinsurance,bool queryismedicalinsurance,bool isprescription,bool queryisprescription,bool isimport,bool queryisimport,bool ismainmaintenance,bool queryismainmaintenance,bool isspecialdrugcategory,bool queryisspecialdrugcategory,string specialdrugcategorycode,int validperiodfrom,int validperiodto,string licensepermissionnumber,string performancestandards,string package,int packageamountfrom,int packageamountto,bool isapproval,bool queryisapproval,DateTime approvaldatefrom,DateTime approvaldateto,int maxinventorycountfrom,int maxinventorycountto,int mininventorycountfrom,int mininventorycountto,string origin,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,bool enabled,bool queryenabled,string businessscopecode,string purchasemanagecategorydetailcode,string drugcategorycode,string medicalcategorydetailcode,string drugclinicalcategorycode,string dictionaryuserdefinedtypecode,string drugstoragetypecode,string dictionarymeasurementunitcode,string dictionarydosagecode,string dictionaryspecificationcode,string dictionarypiecemealunitcode,int goodstypevaluefrom,int goodstypevalueto,int approvalstatusvaluefrom,int approvalstatusvalueto,int index,int size,out PagerInfo pager); 
+        List<DrugInfo> QueryPagedDrugInfos(string permitlicensecode,string code,string doccode,string pinyin,string description,string barcode,string standardcode,string productname,string productenglishname,string productgeneralname,string productothername,string factoryname,string factorynameabbreviation,string piecemealspecification,int piecemealnumberfrom,int piecemealnumberto,decimal pricefrom,decimal priceto,decimal nationalsalepricefrom,decimal nationalsalepriceto,decimal purchasepricefrom,decimal purchasepriceto,decimal salepricefrom,decimal salepriceto,decimal wholesalepricefrom,decimal wholesalepriceto,decimal retailpricefrom,decimal retailpriceto,decimal tagpricefrom,decimal tagpriceto,decimal lowsalepricefrom,decimal lowsalepriceto,decimal limitedlowpricefrom,decimal limitedlowpriceto,decimal limiteduppricefrom,decimal limiteduppriceto,bool ismedicalinsurance,bool queryismedicalinsurance,bool isprescription,bool queryisprescription,bool isimport,bool queryisimport,bool ismainmaintenance,bool queryismainmaintenance,bool isspecialdrugcategory,bool queryisspecialdrugcategory,string specialdrugcategorycode,int validperiodfrom,int validperiodto,string licensepermissionnumber,string performancestandards,string package,int packageamountfrom,int packageamountto,string warehousezones,decimal bigpackagefrom,decimal bigpackageto,decimal middlepackagefrom,decimal middlepackageto,int smallpackagefrom,int smallpackageto,bool isapproval,bool queryisapproval,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,bool enabled,bool queryenabled,string lockremark,DateTime permitdatefrom,DateTime permitdateto,DateTime permitoutdatefrom,DateTime permitoutdateto,DateTime approvaldatefrom,DateTime approvaldateto,int maxinventorycountfrom,int maxinventorycountto,int mininventorycountfrom,int mininventorycountto,string origin,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string businessscopecode,string purchasemanagecategorydetailcode,string drugcategorycode,string medicalcategorydetailcode,string drugclinicalcategorycode,string dictionaryuserdefinedtypecode,string drugstoragetypecode,string dictionarymeasurementunitcode,string dictionarydosagecode,string dictionaryspecificationcode,string dictionarypiecemealunitcode,int goodstypevaluefrom,int goodstypevalueto,int approvalstatusvaluefrom,int approvalstatusvalueto,string function,string ingredient,string commendeduser,string instentproductliscencepermitnumber,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -1503,12 +2557,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<DrugInventoryRecord> QueryDrugInventoryRecords(decimal purchasepriccefrom,decimal purchasepricceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,bool isoutvaliddate,bool queryisoutvaliddate,int ininventorycountfrom,int ininventorycountto,int salescountfrom,int salescountto,int onsalesordercountfrom,int onsalesordercountto,int currentinventorycountfrom,int currentinventorycountto,int retailcountfrom,int retailcountto,int dismantingamountfrom,int dismantingamountto,int retaildismantingamountfrom,int retaildismantingamountto,int onretailcountfrom,int onretailcountto,string decription,int cansalenumfrom,int cansalenumto,bool valid,bool queryvalid,int durginventorytypevaluefrom,int durginventorytypevalueto,out string msg);
+        List<DrugInventoryRecord> QueryDrugInventoryRecords(decimal purchasepriccefrom,decimal purchasepricceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,bool isoutvaliddate,bool queryisoutvaliddate,decimal ininventorycountfrom,decimal ininventorycountto,decimal salescountfrom,decimal salescountto,decimal onsalesordercountfrom,decimal onsalesordercountto,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal retailcountfrom,decimal retailcountto,decimal dismantingamountfrom,decimal dismantingamountto,decimal retaildismantingamountfrom,decimal retaildismantingamountto,decimal onretailcountfrom,decimal onretailcountto,string decription,decimal cansalenumfrom,decimal cansalenumto,bool valid,bool queryvalid,decimal durginventorytypevaluefrom,decimal durginventorytypevalueto,decimal drugsunqualicationnumfrom,decimal drugsunqualicationnumto,decimal purchasereturnnumberfrom,decimal purchasereturnnumberto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<DrugInventoryRecord> QueryPagedDrugInventoryRecords(decimal purchasepriccefrom,decimal purchasepricceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,bool isoutvaliddate,bool queryisoutvaliddate,int ininventorycountfrom,int ininventorycountto,int salescountfrom,int salescountto,int onsalesordercountfrom,int onsalesordercountto,int currentinventorycountfrom,int currentinventorycountto,int retailcountfrom,int retailcountto,int dismantingamountfrom,int dismantingamountto,int retaildismantingamountfrom,int retaildismantingamountto,int onretailcountfrom,int onretailcountto,string decription,int cansalenumfrom,int cansalenumto,bool valid,bool queryvalid,int durginventorytypevaluefrom,int durginventorytypevalueto,int index,int size,out PagerInfo pager); 
+        List<DrugInventoryRecord> QueryPagedDrugInventoryRecords(decimal purchasepriccefrom,decimal purchasepricceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,bool isoutvaliddate,bool queryisoutvaliddate,decimal ininventorycountfrom,decimal ininventorycountto,decimal salescountfrom,decimal salescountto,decimal onsalesordercountfrom,decimal onsalesordercountto,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal retailcountfrom,decimal retailcountto,decimal dismantingamountfrom,decimal dismantingamountto,decimal retaildismantingamountfrom,decimal retaildismantingamountto,decimal onretailcountfrom,decimal onretailcountto,string decription,decimal cansalenumfrom,decimal cansalenumto,bool valid,bool queryvalid,decimal durginventorytypevaluefrom,decimal durginventorytypevalueto,decimal drugsunqualicationnumfrom,decimal drugsunqualicationnumto,decimal purchasereturnnumberfrom,decimal purchasereturnnumberto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -1645,12 +2699,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<DrugMaintainRecordDetail> QueryDrugMaintainRecordDetails(string billdocumentno,string productname,string dictionarydosagecode,string dictionaryspecificationcode,int currentinventorycountfrom,int currentinventorycountto,int maintaincountfrom,int maintaincountto,decimal pricefrom,decimal priceto,string origin,string licensepermissionnumber,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string manufacturer,string checkqualifiednumber,string checkresult,out string msg);
+        List<DrugMaintainRecordDetail> QueryDrugMaintainRecordDetails(string billdocumentno,string productname,string dictionarydosagecode,string dictionaryspecificationcode,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal maintaincountfrom,decimal maintaincountto,decimal pricefrom,decimal priceto,string origin,string licensepermissionnumber,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string manufacturer,string dictionarymeasurementunitcode,string qualitysituation,string maintainresult,string checkqualifiednumber,string checkresult,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<DrugMaintainRecordDetail> QueryPagedDrugMaintainRecordDetails(string billdocumentno,string productname,string dictionarydosagecode,string dictionaryspecificationcode,int currentinventorycountfrom,int currentinventorycountto,int maintaincountfrom,int maintaincountto,decimal pricefrom,decimal priceto,string origin,string licensepermissionnumber,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string manufacturer,string checkqualifiednumber,string checkresult,int index,int size,out PagerInfo pager); 
+        List<DrugMaintainRecordDetail> QueryPagedDrugMaintainRecordDetails(string billdocumentno,string productname,string dictionarydosagecode,string dictionaryspecificationcode,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal maintaincountfrom,decimal maintaincountto,decimal pricefrom,decimal priceto,string origin,string licensepermissionnumber,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string manufacturer,string dictionarymeasurementunitcode,string qualitysituation,string maintainresult,string checkqualifiednumber,string checkresult,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -2213,12 +3267,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Employee> QueryEmployees(DateTime outdatefrom,DateTime outdateto,string number,string name,string pinyin,string gender,string identityno,string phone,string email,string address,string rank,string education,string duty,string specility,int employstatusvaluefrom,int employstatusvalueto,bool enabled,bool queryenabled,int pharmaciststitletypevaluefrom,int pharmaciststitletypevalueto,string cardno,int pharmacistsqualificationvaluefrom,int pharmacistsqualificationvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,out string msg);
+        List<Employee> QueryEmployees(string number,string name,string pinyin,string gender,string identityno,string phone,string email,string address,string rank,string education,string specility,string duty,DateTime outdatefrom,DateTime outdateto,int employstatusvaluefrom,int employstatusvalueto,int pharmaciststitletypevaluefrom,int pharmaciststitletypevalueto,string cardno,DateTime carddatefrom,DateTime carddateto,int pharmacistsqualificationvaluefrom,int pharmacistsqualificationvalueto,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool pro_work_exam,bool querypro_work_exam,DateTime pro_work_exam_datefrom,DateTime pro_work_exam_dateto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Employee> QueryPagedEmployees(DateTime outdatefrom,DateTime outdateto,string number,string name,string pinyin,string gender,string identityno,string phone,string email,string address,string rank,string education,string duty,string specility,int employstatusvaluefrom,int employstatusvalueto,bool enabled,bool queryenabled,int pharmaciststitletypevaluefrom,int pharmaciststitletypevalueto,string cardno,int pharmacistsqualificationvaluefrom,int pharmacistsqualificationvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int index,int size,out PagerInfo pager); 
+        List<Employee> QueryPagedEmployees(string number,string name,string pinyin,string gender,string identityno,string phone,string email,string address,string rank,string education,string specility,string duty,DateTime outdatefrom,DateTime outdateto,int employstatusvaluefrom,int employstatusvalueto,int pharmaciststitletypevaluefrom,int pharmaciststitletypevalueto,string cardno,DateTime carddatefrom,DateTime carddateto,int pharmacistsqualificationvaluefrom,int pharmacistsqualificationvalueto,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool pro_work_exam,bool querypro_work_exam,DateTime pro_work_exam_datefrom,DateTime pro_work_exam_dateto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -2355,12 +3409,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<InventoryRecord> QueryInventoryRecords(int maxinventorycountfrom,int maxinventorycountto,int mininventorycountfrom,int mininventorycountto,int currentinventorycountfrom,int currentinventorycountto,int salescountfrom,int salescountto,int onsalesordercountfrom,int onsalesordercountto,int retailcountfrom,int retailcountto,int onretailcountfrom,int onretailcountto,int dismantingamountfrom,int dismantingamountto,int retaildismantingamountfrom,int retaildismantingamountto,string druginfocode,out string msg);
+        List<InventoryRecord> QueryInventoryRecords(decimal maxinventorycountfrom,decimal maxinventorycountto,decimal mininventorycountfrom,decimal mininventorycountto,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal salescountfrom,decimal salescountto,decimal onsalesordercountfrom,decimal onsalesordercountto,decimal retailcountfrom,decimal retailcountto,decimal onretailcountfrom,decimal onretailcountto,decimal dismantingamountfrom,decimal dismantingamountto,decimal retaildismantingamountfrom,decimal retaildismantingamountto,string druginfocode,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<InventoryRecord> QueryPagedInventoryRecords(int maxinventorycountfrom,int maxinventorycountto,int mininventorycountfrom,int mininventorycountto,int currentinventorycountfrom,int currentinventorycountto,int salescountfrom,int salescountto,int onsalesordercountfrom,int onsalesordercountto,int retailcountfrom,int retailcountto,int onretailcountfrom,int onretailcountto,int dismantingamountfrom,int dismantingamountto,int retaildismantingamountfrom,int retaildismantingamountto,string druginfocode,int index,int size,out PagerInfo pager); 
+        List<InventoryRecord> QueryPagedInventoryRecords(decimal maxinventorycountfrom,decimal maxinventorycountto,decimal mininventorycountfrom,decimal mininventorycountto,decimal currentinventorycountfrom,decimal currentinventorycountto,decimal salescountfrom,decimal salescountto,decimal onsalesordercountfrom,decimal onsalesordercountto,decimal retailcountfrom,decimal retailcountto,decimal onretailcountfrom,decimal onretailcountto,decimal dismantingamountfrom,decimal dismantingamountto,decimal retaildismantingamountfrom,decimal retaildismantingamountto,string druginfocode,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -2656,10 +3710,10 @@ namespace BugsBox.Pharmacy.IServices
 
 		#endregion 付款方式 
 		   
-		#region GSP证书
+		#region 药品经营许可证
 
 		/// <summary>
-        /// 获取实体GSP证书
+        /// 获取实体药品经营许可证
         /// </summary>
         /// <param name="id"></param>
         /// <param name="message"></param>
@@ -2669,7 +3723,7 @@ namespace BugsBox.Pharmacy.IServices
         GSPLicense GetGSPLicense(Guid id,out string message);   
 
 		/// <summary>
-        /// 添加GSP证书
+        /// 添加药品经营许可证
         /// </summary>
         /// <param name="value"></param>
         /// <param name="msg"></param>
@@ -2679,7 +3733,7 @@ namespace BugsBox.Pharmacy.IServices
         bool AddGSPLicense(GSPLicense value,out string msg);
 
         /// <summary>
-        /// 删除GSP证书
+        /// 删除药品经营许可证
         /// </summary>
         /// <param name="id"></param>
         /// <param name="msg"></param>
@@ -2689,7 +3743,7 @@ namespace BugsBox.Pharmacy.IServices
         bool DeleteGSPLicense(Guid id, out string msg);
 
         /// <summary>
-        /// 保存GSP证书
+        /// 保存药品经营许可证
         /// </summary>
         /// <param name="value"></param>
         /// <param name="msg"></param>
@@ -2699,7 +3753,7 @@ namespace BugsBox.Pharmacy.IServices
         bool SaveGSPLicense(GSPLicense value, out string msg);  
 
 		/// <summary>
-        /// 所有记录GSP证书
+        /// 所有记录药品经营许可证
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>
@@ -2710,12 +3764,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<GSPLicense> QueryGSPLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+        List<GSPLicense> QueryGSPLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string changerecord,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string docnumber,string memo,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<GSPLicense> QueryPagedGSPLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+        List<GSPLicense> QueryPagedGSPLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string changerecord,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string docnumber,string memo,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -2725,7 +3779,7 @@ namespace BugsBox.Pharmacy.IServices
 	    [FaultContract(typeof(ServiceExceptionDetail))]
         List<GSPLicense> SearchPagedGSPLicensesByQueryModel(QueryGSPLicenseModel qModel,int index,int size,out PagerInfo pager); 
 
-		#endregion GSP证书 
+		#endregion 药品经营许可证 
 		   
 		#region GMP证书
 
@@ -2781,12 +3835,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<GMPLicense> QueryGMPLicenses(string certificationscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+        List<GMPLicense> QueryGMPLicenses(string certificationscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string docnumber,string memo,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<GMPLicense> QueryPagedGMPLicenses(string certificationscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+        List<GMPLicense> QueryPagedGMPLicenses(string certificationscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string docnumber,string memo,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -2852,12 +3906,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<BusinessLicense> QueryBusinessLicenses(int registeredcapitalfrom,int registeredcapitalto,int paidincapitalfrom,int paidincapitalto,string corporatenature,string businessscope,DateTime establishmentdatefrom,DateTime establishmentdateto,string inspectiondate,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+        List<BusinessLicense> QueryBusinessLicenses(int registeredcapitalfrom,int registeredcapitalto,int paidincapitalfrom,int paidincapitalto,string corporatenature,string businessscope,DateTime establishmentdatefrom,DateTime establishmentdateto,string inspectiondate,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<BusinessLicense> QueryPagedBusinessLicenses(int registeredcapitalfrom,int registeredcapitalto,int paidincapitalfrom,int paidincapitalto,string corporatenature,string businessscope,DateTime establishmentdatefrom,DateTime establishmentdateto,string inspectiondate,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+        List<BusinessLicense> QueryPagedBusinessLicenses(int registeredcapitalfrom,int registeredcapitalto,int paidincapitalfrom,int paidincapitalto,string corporatenature,string businessscope,DateTime establishmentdatefrom,DateTime establishmentdateto,string inspectiondate,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -2923,12 +3977,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<MedicineProductionLicense> QueryMedicineProductionLicenses(string legalperson,string header,string productaddress,string corporatenature,string categorycode,string productscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+        List<MedicineProductionLicense> QueryMedicineProductionLicenses(string legalperson,string header,string productaddress,string corporatenature,string categorycode,string productscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<MedicineProductionLicense> QueryPagedMedicineProductionLicenses(string legalperson,string header,string productaddress,string corporatenature,string categorycode,string productscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+        List<MedicineProductionLicense> QueryPagedMedicineProductionLicenses(string legalperson,string header,string productaddress,string corporatenature,string categorycode,string productscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -2940,10 +3994,10 @@ namespace BugsBox.Pharmacy.IServices
 
 		#endregion 药品生产许可证 
 		   
-		#region 药品经营许可证
+		#region GSP证书
 
 		/// <summary>
-        /// 获取实体药品经营许可证
+        /// 获取实体GSP证书
         /// </summary>
         /// <param name="id"></param>
         /// <param name="message"></param>
@@ -2953,7 +4007,7 @@ namespace BugsBox.Pharmacy.IServices
         MedicineBusinessLicense GetMedicineBusinessLicense(Guid id,out string message);   
 
 		/// <summary>
-        /// 添加药品经营许可证
+        /// 添加GSP证书
         /// </summary>
         /// <param name="value"></param>
         /// <param name="msg"></param>
@@ -2963,7 +4017,7 @@ namespace BugsBox.Pharmacy.IServices
         bool AddMedicineBusinessLicense(MedicineBusinessLicense value,out string msg);
 
         /// <summary>
-        /// 删除药品经营许可证
+        /// 删除GSP证书
         /// </summary>
         /// <param name="id"></param>
         /// <param name="msg"></param>
@@ -2973,7 +4027,7 @@ namespace BugsBox.Pharmacy.IServices
         bool DeleteMedicineBusinessLicense(Guid id, out string msg);
 
         /// <summary>
-        /// 保存药品经营许可证
+        /// 保存GSP证书
         /// </summary>
         /// <param name="value"></param>
         /// <param name="msg"></param>
@@ -2983,7 +4037,7 @@ namespace BugsBox.Pharmacy.IServices
         bool SaveMedicineBusinessLicense(MedicineBusinessLicense value, out string msg);  
 
 		/// <summary>
-        /// 所有记录药品经营许可证
+        /// 所有记录GSP证书
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>
@@ -2994,12 +4048,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<MedicineBusinessLicense> QueryMedicineBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+        List<MedicineBusinessLicense> QueryMedicineBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string licensecontain,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<MedicineBusinessLicense> QueryPagedMedicineBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+        List<MedicineBusinessLicense> QueryPagedMedicineBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string licensecontain,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -3009,7 +4063,7 @@ namespace BugsBox.Pharmacy.IServices
 	    [FaultContract(typeof(ServiceExceptionDetail))]
         List<MedicineBusinessLicense> SearchPagedMedicineBusinessLicensesByQueryModel(QueryMedicineBusinessLicenseModel qModel,int index,int size,out PagerInfo pager); 
 
-		#endregion 药品经营许可证 
+		#endregion GSP证书 
 		   
 		#region 器械经营许可证
 
@@ -3065,12 +4119,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<InstrumentsBusinessLicense> QueryInstrumentsBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+        List<InstrumentsBusinessLicense> QueryInstrumentsBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<InstrumentsBusinessLicense> QueryPagedInstrumentsBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+        List<InstrumentsBusinessLicense> QueryPagedInstrumentsBusinessLicenses(string legalperson,string header,string qualityheader,string warehouseaddress,string businessscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -3136,12 +4190,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<InstrumentsProductionLicense> QueryInstrumentsProductionLicenses(string legalperson,string header,string productaddress,string productscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+        List<InstrumentsProductionLicense> QueryInstrumentsProductionLicenses(string legalperson,string header,string productaddress,string productscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<InstrumentsProductionLicense> QueryPagedInstrumentsProductionLicenses(string legalperson,string header,string productaddress,string productscope,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+        List<InstrumentsProductionLicense> QueryPagedInstrumentsProductionLicenses(string legalperson,string header,string productaddress,string productscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -3152,6 +4206,503 @@ namespace BugsBox.Pharmacy.IServices
         List<InstrumentsProductionLicense> SearchPagedInstrumentsProductionLicensesByQueryModel(QueryInstrumentsProductionLicenseModel qModel,int index,int size,out PagerInfo pager); 
 
 		#endregion 器械生产许可证 
+		   
+		#region 组织机构代码证
+
+		/// <summary>
+        /// 获取实体组织机构代码证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        OrganizationCodeLicense GetOrganizationCodeLicense(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加组织机构代码证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddOrganizationCodeLicense(OrganizationCodeLicense value,out string msg);
+
+        /// <summary>
+        /// 删除组织机构代码证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteOrganizationCodeLicense(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存组织机构代码证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveOrganizationCodeLicense(OrganizationCodeLicense value, out string msg);  
+
+		/// <summary>
+        /// 所有记录组织机构代码证
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<OrganizationCodeLicense> AllOrganizationCodeLicenses(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<OrganizationCodeLicense> QueryOrganizationCodeLicenses(string orgnizationtype,string licenseno,string registerno,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool ischeck,bool queryischeck,DateTime yearcheckdatefrom,DateTime yearcheckdateto,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<OrganizationCodeLicense> QueryPagedOrganizationCodeLicenses(string orgnizationtype,string licenseno,string registerno,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,bool ischeck,bool queryischeck,DateTime yearcheckdatefrom,DateTime yearcheckdateto,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<OrganizationCodeLicense> SearchOrganizationCodeLicensesByQueryModel(QueryOrganizationCodeLicenseModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<OrganizationCodeLicense> SearchPagedOrganizationCodeLicensesByQueryModel(QueryOrganizationCodeLicenseModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 组织机构代码证 
+		   
+		#region 食品流通许可证
+
+		/// <summary>
+        /// 获取实体食品流通许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        FoodCirculateLicense GetFoodCirculateLicense(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加食品流通许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddFoodCirculateLicense(FoodCirculateLicense value,out string msg);
+
+        /// <summary>
+        /// 删除食品流通许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteFoodCirculateLicense(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存食品流通许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveFoodCirculateLicense(FoodCirculateLicense value, out string msg);  
+
+		/// <summary>
+        /// 所有记录食品流通许可证
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<FoodCirculateLicense> AllFoodCirculateLicenses(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<FoodCirculateLicense> QueryFoodCirculateLicenses(string orgtype,string regaddress,string licenseno,string header,DateTime licenserangefrom,DateTime licenserangeto,string issuanceorg,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<FoodCirculateLicense> QueryPagedFoodCirculateLicenses(string orgtype,string regaddress,string licenseno,string header,DateTime licenserangefrom,DateTime licenserangeto,string issuanceorg,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<FoodCirculateLicense> SearchFoodCirculateLicensesByQueryModel(QueryFoodCirculateLicenseModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<FoodCirculateLicense> SearchPagedFoodCirculateLicensesByQueryModel(QueryFoodCirculateLicenseModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 食品流通许可证 
+		   
+		#region 卫生许可证
+
+		/// <summary>
+        /// 获取实体卫生许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        HealthLicense GetHealthLicense(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加卫生许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddHealthLicense(HealthLicense value,out string msg);
+
+        /// <summary>
+        /// 删除卫生许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteHealthLicense(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存卫生许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveHealthLicense(HealthLicense value, out string msg);  
+
+		/// <summary>
+        /// 所有记录卫生许可证
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthLicense> AllHealthLicenses(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthLicense> QueryHealthLicenses(string healthlicensetype,string header,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string licensecontent,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthLicense> QueryPagedHealthLicenses(string healthlicensetype,string header,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string licensecontent,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthLicense> SearchHealthLicensesByQueryModel(QueryHealthLicenseModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<HealthLicense> SearchPagedHealthLicensesByQueryModel(QueryHealthLicenseModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 卫生许可证 
+		   
+		#region 税务登记证
+
+		/// <summary>
+        /// 获取实体税务登记证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        TaxRegisterLicense GetTaxRegisterLicense(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加税务登记证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddTaxRegisterLicense(TaxRegisterLicense value,out string msg);
+
+        /// <summary>
+        /// 删除税务登记证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteTaxRegisterLicense(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存税务登记证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveTaxRegisterLicense(TaxRegisterLicense value, out string msg);  
+
+		/// <summary>
+        /// 所有记录税务登记证
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<TaxRegisterLicense> AllTaxRegisterLicenses(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<TaxRegisterLicense> QueryTaxRegisterLicenses(string taxregisterlicensetype,string taxpayername,string taxpayernumber,string legalperson,string address,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string businessscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<TaxRegisterLicense> QueryPagedTaxRegisterLicenses(string taxregisterlicensetype,string taxpayername,string taxpayernumber,string legalperson,string address,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string businessscope,string docnumber,string memo,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<TaxRegisterLicense> SearchTaxRegisterLicensesByQueryModel(QueryTaxRegisterLicenseModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<TaxRegisterLicense> SearchPagedTaxRegisterLicensesByQueryModel(QueryTaxRegisterLicenseModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 税务登记证 
+		   
+		#region 事业单位法人证
+
+		/// <summary>
+        /// 获取实体事业单位法人证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        LnstitutionLegalPersonLicense GetLnstitutionLegalPersonLicense(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加事业单位法人证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value,out string msg);
+
+        /// <summary>
+        /// 删除事业单位法人证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteLnstitutionLegalPersonLicense(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存事业单位法人证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value, out string msg);  
+
+		/// <summary>
+        /// 所有记录事业单位法人证
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<LnstitutionLegalPersonLicense> AllLnstitutionLegalPersonLicenses(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<LnstitutionLegalPersonLicense> QueryLnstitutionLegalPersonLicenses(string name,string certificatename,string bussinessrange,string legalperson,string fundssource,string initiafund,string address,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string manageorg,string usemedicalscope,DateTime outdatefrom,DateTime outdateto,string docnumber,string memo,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<LnstitutionLegalPersonLicense> QueryPagedLnstitutionLegalPersonLicenses(string name,string certificatename,string bussinessrange,string legalperson,string fundssource,string initiafund,string address,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string manageorg,string usemedicalscope,DateTime outdatefrom,DateTime outdateto,string docnumber,string memo,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<LnstitutionLegalPersonLicense> SearchLnstitutionLegalPersonLicensesByQueryModel(QueryLnstitutionLegalPersonLicenseModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<LnstitutionLegalPersonLicense> SearchPagedLnstitutionLegalPersonLicensesByQueryModel(QueryLnstitutionLegalPersonLicenseModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 事业单位法人证 
+		   
+		#region 医疗机构执业许可证
+
+		/// <summary>
+        /// 获取实体医疗机构执业许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        MmedicalInstitutionPermit GetMmedicalInstitutionPermit(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加医疗机构执业许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddMmedicalInstitutionPermit(MmedicalInstitutionPermit value,out string msg);
+
+        /// <summary>
+        /// 删除医疗机构执业许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteMmedicalInstitutionPermit(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存医疗机构执业许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string msg);  
+
+		/// <summary>
+        /// 所有记录医疗机构执业许可证
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<MmedicalInstitutionPermit> AllMmedicalInstitutionPermits(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<MmedicalInstitutionPermit> QueryMmedicalInstitutionPermits(string name,string certificatename,string ogntpye,string legalperson,string registeraddress,string warehouseaddress,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string usemedicalscope,DateTime outdatefrom,DateTime outdateto,string docnumber,string memo,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<MmedicalInstitutionPermit> QueryPagedMmedicalInstitutionPermits(string name,string certificatename,string ogntpye,string legalperson,string registeraddress,string warehouseaddress,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string usemedicalscope,DateTime outdatefrom,DateTime outdateto,string docnumber,string memo,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<MmedicalInstitutionPermit> SearchMmedicalInstitutionPermitsByQueryModel(QueryMmedicalInstitutionPermitModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<MmedicalInstitutionPermit> SearchPagedMmedicalInstitutionPermitsByQueryModel(QueryMmedicalInstitutionPermitModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 医疗机构执业许可证 
+		   
+		#region 全国工业产品生产许可证
+
+		/// <summary>
+        /// 获取实体全国工业产品生产许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        IndustoryProductCertificate GetIndustoryProductCertificate(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加全国工业产品生产许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddIndustoryProductCertificate(IndustoryProductCertificate value,out string msg);
+
+        /// <summary>
+        /// 删除全国工业产品生产许可证
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteIndustoryProductCertificate(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存全国工业产品生产许可证
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveIndustoryProductCertificate(IndustoryProductCertificate value, out string msg);  
+
+		/// <summary>
+        /// 所有记录全国工业产品生产许可证
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<IndustoryProductCertificate> AllIndustoryProductCertificates(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<IndustoryProductCertificate> QueryIndustoryProductCertificates(string productaddress,string checkmethod,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string docnumber,string memo,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<IndustoryProductCertificate> QueryPagedIndustoryProductCertificates(string productaddress,string checkmethod,string name,string decription,string code,bool enabled,bool queryenabled,string unitname,string regaddress,string licensecode,DateTime startdatefrom,DateTime startdateto,DateTime outdatefrom,DateTime outdateto,DateTime issuancedatefrom,DateTime issuancedateto,string issuanceorg,string docnumber,string memo,bool valid,bool queryvalid,int licensetypevaluefrom,int licensetypevalueto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<IndustoryProductCertificate> SearchIndustoryProductCertificatesByQueryModel(QueryIndustoryProductCertificateModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<IndustoryProductCertificate> SearchPagedIndustoryProductCertificatesByQueryModel(QueryIndustoryProductCertificateModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 全国工业产品生产许可证 
 		   
 		#region 医疗分类
 
@@ -3704,12 +5255,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseCheckingOrder> QueryPurchaseCheckingOrders(string documentnumber,DateTime operatetimefrom,DateTime operatetimeto,int orderstatusvaluefrom,int orderstatusvalueto,string decription,string relatedorderdocumentnumber,int relatedordertypevaluefrom,int relatedordertypevalueto,out string msg);
+        List<PurchaseCheckingOrder> QueryPurchaseCheckingOrders(string documentnumber,DateTime operatetimefrom,DateTime operatetimeto,string secondcheckmemo,string secondcheckername,int orderstatusvaluefrom,int orderstatusvalueto,string decription,string relatedorderdocumentnumber,int relatedordertypevaluefrom,int relatedordertypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseCheckingOrder> QueryPagedPurchaseCheckingOrders(string documentnumber,DateTime operatetimefrom,DateTime operatetimeto,int orderstatusvaluefrom,int orderstatusvalueto,string decription,string relatedorderdocumentnumber,int relatedordertypevaluefrom,int relatedordertypevalueto,int index,int size,out PagerInfo pager); 
+        List<PurchaseCheckingOrder> QueryPagedPurchaseCheckingOrders(string documentnumber,DateTime operatetimefrom,DateTime operatetimeto,string secondcheckmemo,string secondcheckername,int orderstatusvaluefrom,int orderstatusvalueto,string decription,string relatedorderdocumentnumber,int relatedordertypevaluefrom,int relatedordertypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -3775,12 +5326,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseCheckingOrderDetail> QueryPurchaseCheckingOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,int arrivalamountfrom,int arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,int qualifiedamountfrom,int qualifiedamountto,int checkresultfrom,int checkresultto,string decription,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,out string msg);
+        List<PurchaseCheckingOrderDetail> QueryPurchaseCheckingOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,decimal arrivalamountfrom,decimal arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,decimal receivedamountfrom,decimal receivedamountto,decimal qualifiedamountfrom,decimal qualifiedamountto,decimal unqualifiedamountfrom,decimal unqualifiedamountto,int checkresultfrom,int checkresultto,string decription,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseCheckingOrderDetail> QueryPagedPurchaseCheckingOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,int arrivalamountfrom,int arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,int qualifiedamountfrom,int qualifiedamountto,int checkresultfrom,int checkresultto,string decription,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,int index,int size,out PagerInfo pager); 
+        List<PurchaseCheckingOrderDetail> QueryPagedPurchaseCheckingOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,decimal arrivalamountfrom,decimal arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,decimal receivedamountfrom,decimal receivedamountto,decimal qualifiedamountfrom,decimal qualifiedamountto,decimal unqualifiedamountfrom,decimal unqualifiedamountto,int checkresultfrom,int checkresultto,string decription,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -3917,12 +5468,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseInInventeryOrderDetail> QueryPurchaseInInventeryOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,int arrivalamountfrom,int arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,string decription,out string msg);
+        List<PurchaseInInventeryOrderDetail> QueryPurchaseInInventeryOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,decimal arrivalamountfrom,decimal arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,string decription,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseInInventeryOrderDetail> QueryPagedPurchaseInInventeryOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,int arrivalamountfrom,int arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,string decription,int index,int size,out PagerInfo pager); 
+        List<PurchaseInInventeryOrderDetail> QueryPagedPurchaseInInventeryOrderDetails(decimal purchasepricefrom,decimal purchasepriceto,string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,decimal arrivalamountfrom,decimal arrivalamountto,DateTime arrivaldatetimefrom,DateTime arrivaldatetimeto,string decription,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -4201,12 +5752,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseOrderDetail> QueryPurchaseOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int amountfrom,int amountto,decimal purchasepricefrom,decimal purchasepriceto,decimal amountoftaxfrom,decimal amountoftaxto,out string msg);
+        List<PurchaseOrderDetail> QueryPurchaseOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,decimal amountfrom,decimal amountto,decimal purchasepricefrom,decimal purchasepriceto,decimal amountoftaxfrom,decimal amountoftaxto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseOrderDetail> QueryPagedPurchaseOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int amountfrom,int amountto,decimal purchasepricefrom,decimal purchasepriceto,decimal amountoftaxfrom,decimal amountoftaxto,int index,int size,out PagerInfo pager); 
+        List<PurchaseOrderDetail> QueryPagedPurchaseOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,decimal amountfrom,decimal amountto,decimal purchasepricefrom,decimal purchasepriceto,decimal amountoftaxfrom,decimal amountoftaxto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -4343,12 +5894,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseOrderReturnDetail> QueryPurchaseOrderReturnDetails(string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,int returnamountfrom,int returnamountto,decimal purchasepricefrom,decimal purchasepriceto,string returnreason,bool isreissue,bool queryisreissue,int reissueamountfrom,int reissueamountto,int purchasereturnsourcevaluefrom,int purchasereturnsourcevalueto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string decription,out string msg);
+        List<PurchaseOrderReturnDetail> QueryPurchaseOrderReturnDetails(string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,decimal returnamountfrom,decimal returnamountto,decimal purchasepricefrom,decimal purchasepriceto,string returnreason,bool isreissue,bool queryisreissue,decimal reissueamountfrom,decimal reissueamountto,int purchasereturnsourcevaluefrom,int purchasereturnsourcevalueto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string decription,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseOrderReturnDetail> QueryPagedPurchaseOrderReturnDetails(string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,int returnamountfrom,int returnamountto,decimal purchasepricefrom,decimal purchasepriceto,string returnreason,bool isreissue,bool queryisreissue,int reissueamountfrom,int reissueamountto,int purchasereturnsourcevaluefrom,int purchasereturnsourcevalueto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string decription,int index,int size,out PagerInfo pager); 
+        List<PurchaseOrderReturnDetail> QueryPagedPurchaseOrderReturnDetails(string batchnumber,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,decimal returnamountfrom,decimal returnamountto,decimal purchasepricefrom,decimal purchasepriceto,string returnreason,bool isreissue,bool queryisreissue,decimal reissueamountfrom,decimal reissueamountto,int purchasereturnsourcevaluefrom,int purchasereturnsourcevalueto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string decription,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -4485,12 +6036,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseReceivingOrderDetail> QueryPurchaseReceivingOrderDetails(int amountfrom,int amountto,decimal purchasepricefrom,decimal purchasepriceto,int actualamountfrom,int actualamountto,int receiveamountfrom,int receiveamountto,int rejectamountfrom,int rejectamountto,string rejectreason,string rejecttrace,bool iscompanypurchase,bool queryiscompanypurchase,string transportmethod,bool istransportmethod,bool queryistransportmethod,string transporttemperature,string temperaturestatus,bool istransporttemperature,bool queryistransporttemperature,int checkresultfrom,int checkresultto,string decription,out string msg);
+        List<PurchaseReceivingOrderDetail> QueryPurchaseReceivingOrderDetails(decimal amountfrom,decimal amountto,decimal purchasepricefrom,decimal purchasepriceto,decimal actualamountfrom,decimal actualamountto,decimal receiveamountfrom,decimal receiveamountto,decimal rejectamountfrom,decimal rejectamountto,string rejectreason,string rejecttrace,bool iscompanypurchase,bool queryiscompanypurchase,string transportmethod,bool istransportmethod,bool queryistransportmethod,string transporttemperature,string temperaturestatus,bool istransporttemperature,bool queryistransporttemperature,int checkresultfrom,int checkresultto,string decription,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseReceivingOrderDetail> QueryPagedPurchaseReceivingOrderDetails(int amountfrom,int amountto,decimal purchasepricefrom,decimal purchasepriceto,int actualamountfrom,int actualamountto,int receiveamountfrom,int receiveamountto,int rejectamountfrom,int rejectamountto,string rejectreason,string rejecttrace,bool iscompanypurchase,bool queryiscompanypurchase,string transportmethod,bool istransportmethod,bool queryistransportmethod,string transporttemperature,string temperaturestatus,bool istransporttemperature,bool queryistransporttemperature,int checkresultfrom,int checkresultto,string decription,int index,int size,out PagerInfo pager); 
+        List<PurchaseReceivingOrderDetail> QueryPagedPurchaseReceivingOrderDetails(decimal amountfrom,decimal amountto,decimal purchasepricefrom,decimal purchasepriceto,decimal actualamountfrom,decimal actualamountto,decimal receiveamountfrom,decimal receiveamountto,decimal rejectamountfrom,decimal rejectamountto,string rejectreason,string rejecttrace,bool iscompanypurchase,bool queryiscompanypurchase,string transportmethod,bool istransportmethod,bool queryistransportmethod,string transporttemperature,string temperaturestatus,bool istransporttemperature,bool queryistransporttemperature,int checkresultfrom,int checkresultto,string decription,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -4556,12 +6107,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseUnit> QueryPurchaseUnits(bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,string receiveaddress,string name,string code,string pinyincode,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,out string msg);
+        List<PurchaseUnit> QueryPurchaseUnits(string docnumber,string pinyincode,string qualityagreementdetail,bool isqualityagreementout,bool queryisqualityagreementout,DateTime qualityagreemenstartdatefrom,DateTime qualityagreemenstartdateto,DateTime qualityagreementoutdatefrom,DateTime qualityagreementoutdateto,string qualitycharger,string attorneyaattorneydetail,string purchasedelegater,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,string receiveaddress,string detailedaddress,string bank,string name,string code,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,bool ishealthlicenseoutdate,bool queryishealthlicenseoutdate,DateTime healthlicenseoutdatefrom,DateTime healthlicenseoutdateto,bool istaxregisterlicenseoutdate,bool queryistaxregisterlicenseoutdate,DateTime taxregisterlicenseoutdatefrom,DateTime taxregisterlicenseoutdateto,bool isorganizationcodelicenseoutdate,bool queryisorganizationcodelicenseoutdate,DateTime organizationcodelicenseoutdatefrom,DateTime organizationcodelicenseoutdateto,bool isfoodcirculatelicenseoutdate,bool queryisfoodcirculatelicenseoutdate,DateTime foodcirculatelicenseoutdatefrom,DateTime foodcirculatelicenseoutdateto,bool ismmedicalinstitutionpermitoutdate,bool queryismmedicalinstitutionpermitoutdate,DateTime mmedicalinstitutionpermitoutdatefrom,DateTime mmedicalinstitutionpermitoutdateto,bool islnstitutionlegalpersonlicenseoutdate,bool queryislnstitutionlegalpersonlicenseoutdate,DateTime lnstitutionlegalpersonlicenseoutdatefrom,DateTime lnstitutionlegalpersonlicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchaseUnit> QueryPagedPurchaseUnits(bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,string receiveaddress,string name,string code,string pinyincode,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,int index,int size,out PagerInfo pager); 
+        List<PurchaseUnit> QueryPagedPurchaseUnits(string docnumber,string pinyincode,string qualityagreementdetail,bool isqualityagreementout,bool queryisqualityagreementout,DateTime qualityagreemenstartdatefrom,DateTime qualityagreemenstartdateto,DateTime qualityagreementoutdatefrom,DateTime qualityagreementoutdateto,string qualitycharger,string attorneyaattorneydetail,string purchasedelegater,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,string receiveaddress,string detailedaddress,string bank,string name,string code,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,bool ishealthlicenseoutdate,bool queryishealthlicenseoutdate,DateTime healthlicenseoutdatefrom,DateTime healthlicenseoutdateto,bool istaxregisterlicenseoutdate,bool queryistaxregisterlicenseoutdate,DateTime taxregisterlicenseoutdatefrom,DateTime taxregisterlicenseoutdateto,bool isorganizationcodelicenseoutdate,bool queryisorganizationcodelicenseoutdate,DateTime organizationcodelicenseoutdatefrom,DateTime organizationcodelicenseoutdateto,bool isfoodcirculatelicenseoutdate,bool queryisfoodcirculatelicenseoutdate,DateTime foodcirculatelicenseoutdatefrom,DateTime foodcirculatelicenseoutdateto,bool ismmedicalinstitutionpermitoutdate,bool queryismmedicalinstitutionpermitoutdate,DateTime mmedicalinstitutionpermitoutdatefrom,DateTime mmedicalinstitutionpermitoutdateto,bool islnstitutionlegalpersonlicenseoutdate,bool queryislnstitutionlegalpersonlicenseoutdate,DateTime lnstitutionlegalpersonlicenseoutdatefrom,DateTime lnstitutionlegalpersonlicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -4840,12 +6391,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchasingPlan> QueryPurchasingPlans(out string msg);
+        List<PurchasingPlan> QueryPurchasingPlans(string documentnumber,decimal totalmoneyfrom,decimal totalmoneyto,decimal paymentforgoodsmoneyfrom,decimal paymentforgoodsmoneyto,decimal amountoftaxmoneyfrom,decimal amountoftaxmoneyto,int invaliddaysfrom,int invaliddaysto,DateTime purchaseddatefrom,DateTime purchaseddateto,DateTime createtimefrom,DateTime createtimeto,string decription,string approvaldecription,string amountapprovaldecription,int orderstatusvaluefrom,int orderstatusvalueto,DateTime updatetimefrom,DateTime updatetimeto,bool directmarketing,bool querydirectmarketing,string shippingmethod,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<PurchasingPlan> QueryPagedPurchasingPlans(int index,int size,out PagerInfo pager); 
+        List<PurchasingPlan> QueryPagedPurchasingPlans(string documentnumber,decimal totalmoneyfrom,decimal totalmoneyto,decimal paymentforgoodsmoneyfrom,decimal paymentforgoodsmoneyto,decimal amountoftaxmoneyfrom,decimal amountoftaxmoneyto,int invaliddaysfrom,int invaliddaysto,DateTime purchaseddatefrom,DateTime purchaseddateto,DateTime createtimefrom,DateTime createtimeto,string decription,string approvaldecription,string amountapprovaldecription,int orderstatusvaluefrom,int orderstatusvalueto,DateTime updatetimefrom,DateTime updatetimeto,bool directmarketing,bool querydirectmarketing,string shippingmethod,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -5195,12 +6746,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<RetailOrderDetail> QueryRetailOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int indexfrom,int indexto,string productname,string productcode,string batchnumber,int amountfrom,int amountto,int returnamountfrom,int returnamountto,bool isdismanting,bool queryisdismanting,int dismantingamountfrom,int dismantingamountto,decimal unitpricefrom,decimal unitpriceto,decimal dismantingunitpricefrom,decimal dismantingunitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal actualdismantingunitpricefrom,decimal actualdismantingunitpriceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,bool isdiscount,bool queryisdiscount,int discountfrom,int discountto,int discountpricefrom,int discountpriceto,decimal totalmoneyfrom,decimal totalmoneyto,out string msg);
+        List<RetailOrderDetail> QueryRetailOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int indexfrom,int indexto,string productname,string productcode,string batchnumber,decimal amountfrom,decimal amountto,decimal returnamountfrom,decimal returnamountto,bool isdismanting,bool queryisdismanting,decimal dismantingamountfrom,decimal dismantingamountto,decimal unitpricefrom,decimal unitpriceto,decimal dismantingunitpricefrom,decimal dismantingunitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal actualdismantingunitpricefrom,decimal actualdismantingunitpriceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,bool isdiscount,bool queryisdiscount,decimal discountfrom,decimal discountto,decimal discountpricefrom,decimal discountpriceto,decimal totalmoneyfrom,decimal totalmoneyto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<RetailOrderDetail> QueryPagedRetailOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int indexfrom,int indexto,string productname,string productcode,string batchnumber,int amountfrom,int amountto,int returnamountfrom,int returnamountto,bool isdismanting,bool queryisdismanting,int dismantingamountfrom,int dismantingamountto,decimal unitpricefrom,decimal unitpriceto,decimal dismantingunitpricefrom,decimal dismantingunitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal actualdismantingunitpricefrom,decimal actualdismantingunitpriceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,bool isdiscount,bool queryisdiscount,int discountfrom,int discountto,int discountpricefrom,int discountpriceto,decimal totalmoneyfrom,decimal totalmoneyto,int index,int size,out PagerInfo pager); 
+        List<RetailOrderDetail> QueryPagedRetailOrderDetails(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int indexfrom,int indexto,string productname,string productcode,string batchnumber,decimal amountfrom,decimal amountto,decimal returnamountfrom,decimal returnamountto,bool isdismanting,bool queryisdismanting,decimal dismantingamountfrom,decimal dismantingamountto,decimal unitpricefrom,decimal unitpriceto,decimal dismantingunitpricefrom,decimal dismantingunitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal actualdismantingunitpricefrom,decimal actualdismantingunitpriceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,bool isdiscount,bool queryisdiscount,decimal discountfrom,decimal discountto,decimal discountpricefrom,decimal discountpriceto,decimal totalmoneyfrom,decimal totalmoneyto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -5403,17 +6954,17 @@ namespace BugsBox.Pharmacy.IServices
         /// <returns></returns>
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<SalesOrder> AllSalesOrders(out string message);  
+        List<SalesOrder> AllSalesOrders(out string message);  
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SalesOrder> QuerySalesOrders(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string salername,DateTime saledatefrom,DateTime saledateto,string description,decimal totalmoneyfrom,decimal totalmoneyto,string ordercode,bool alldelivered,bool queryalldelivered,int salesdrugtypevaluefrom,int salesdrugtypevalueto,int pickupgoodtypevaluefrom,int pickupgoodtypevalueto,string pickupman,string purchaseunitman,int orderstatusvaluefrom,int orderstatusvalueto,string cancelreason,string ordercancelcode,string orderbalancecode,string balancereason,string orderoutinventorycode,string orderoutinventorycheckcode,string orderreturncode,string orderreturnreason,string orderreturncancelcode,string orderreturncancelreason,string orderreturncheckcode,string orderreturnininventorycode,string orderdirectreturncode,out string msg);
+        List<SalesOrder> QuerySalesOrders(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string salername,DateTime saledatefrom,DateTime saledateto,string description,decimal totalmoneyfrom,decimal totalmoneyto,string ordercode,bool alldelivered,bool queryalldelivered,int salesdrugtypevaluefrom,int salesdrugtypevalueto,int pickupgoodtypevaluefrom,int pickupgoodtypevalueto,string pickupman,string purchaseunitman,int orderstatusvaluefrom,int orderstatusvalueto,string cancelreason,string ordercancelcode,string orderbalancecode,string balancereason,string orderoutinventorycode,string orderoutinventorycheckcode,string orderreturncode,string orderreturnreason,string orderreturncancelcode,string orderreturncancelreason,string orderreturncheckcode,string orderreturnininventorycode,string orderdirectreturncode,string vatcode,string vatnumber,decimal vatratefrom,decimal vatrateto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SalesOrder> QueryPagedSalesOrders(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string salername,DateTime saledatefrom,DateTime saledateto,string description,decimal totalmoneyfrom,decimal totalmoneyto,string ordercode,bool alldelivered,bool queryalldelivered,int salesdrugtypevaluefrom,int salesdrugtypevalueto,int pickupgoodtypevaluefrom,int pickupgoodtypevalueto,string pickupman,string purchaseunitman,int orderstatusvaluefrom,int orderstatusvalueto,string cancelreason,string ordercancelcode,string orderbalancecode,string balancereason,string orderoutinventorycode,string orderoutinventorycheckcode,string orderreturncode,string orderreturnreason,string orderreturncancelcode,string orderreturncancelreason,string orderreturncheckcode,string orderreturnininventorycode,string orderdirectreturncode,int index,int size,out PagerInfo pager); 
+        List<SalesOrder> QueryPagedSalesOrders(DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string salername,DateTime saledatefrom,DateTime saledateto,string description,decimal totalmoneyfrom,decimal totalmoneyto,string ordercode,bool alldelivered,bool queryalldelivered,int salesdrugtypevaluefrom,int salesdrugtypevalueto,int pickupgoodtypevaluefrom,int pickupgoodtypevalueto,string pickupman,string purchaseunitman,int orderstatusvaluefrom,int orderstatusvalueto,string cancelreason,string ordercancelcode,string orderbalancecode,string balancereason,string orderoutinventorycode,string orderoutinventorycheckcode,string orderreturncode,string orderreturnreason,string orderreturncancelcode,string orderreturncancelreason,string orderreturncheckcode,string orderreturnininventorycode,string orderdirectreturncode,string vatcode,string vatnumber,decimal vatratefrom,decimal vatrateto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -5621,12 +7172,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SalesOrderDetail> QuerySalesOrderDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,int amountfrom,int amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,string dictionarydosagecode,string origin,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,int returnamountfrom,int returnamountto,int changeamountfrom,int changeamountto,int outamountfrom,int outamountto,out string msg);
+        List<SalesOrderDetail> QuerySalesOrderDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,decimal amountfrom,decimal amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,string dictionarydosagecode,string origin,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,decimal discountfrom,decimal discountto,string description,decimal returnamountfrom,decimal returnamountto,decimal changeamountfrom,decimal changeamountto,decimal outamountfrom,decimal outamountto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SalesOrderDetail> QueryPagedSalesOrderDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,int amountfrom,int amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,string dictionarydosagecode,string origin,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,int returnamountfrom,int returnamountto,int changeamountfrom,int changeamountto,int outamountfrom,int outamountto,int index,int size,out PagerInfo pager); 
+        List<SalesOrderDetail> QueryPagedSalesOrderDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,decimal amountfrom,decimal amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,string dictionarydosagecode,string origin,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,decimal discountfrom,decimal discountto,string description,decimal returnamountfrom,decimal returnamountto,decimal changeamountfrom,decimal changeamountto,decimal outamountfrom,decimal outamountto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -5763,12 +7314,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SalesOrderReturnDetail> QuerySalesOrderReturnDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,int orderamountfrom,int orderamountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,int returnamountfrom,int returnamountto,int returnreasonvaluefrom,int returnreasonvalueto,string returnreasonmemo,int caninamountfrom,int caninamountto,int cannotinamountfrom,int cannotinamountto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string returnhandledmethodmemo,bool isreissue,bool queryisreissue,int reissueamountfrom,int reissueamountto,string dictionarydosagecode,string origin,out string msg);
+        List<SalesOrderReturnDetail> QuerySalesOrderReturnDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,decimal orderamountfrom,decimal orderamountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,decimal returnamountfrom,decimal returnamountto,int returnreasonvaluefrom,int returnreasonvalueto,string returnreasonmemo,decimal caninamountfrom,decimal caninamountto,decimal cannotinamountfrom,decimal cannotinamountto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string returnhandledmethodmemo,bool isreissue,bool queryisreissue,decimal reissueamountfrom,decimal reissueamountto,string dictionarydosagecode,string origin,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SalesOrderReturnDetail> QueryPagedSalesOrderReturnDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,int orderamountfrom,int orderamountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,int returnamountfrom,int returnamountto,int returnreasonvaluefrom,int returnreasonvalueto,string returnreasonmemo,int caninamountfrom,int caninamountto,int cannotinamountfrom,int cannotinamountto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string returnhandledmethodmemo,bool isreissue,bool queryisreissue,int reissueamountfrom,int reissueamountto,string dictionarydosagecode,string origin,int index,int size,out PagerInfo pager); 
+        List<SalesOrderReturnDetail> QueryPagedSalesOrderReturnDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string batchnumber,decimal orderamountfrom,decimal orderamountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,decimal returnamountfrom,decimal returnamountto,int returnreasonvaluefrom,int returnreasonvalueto,string returnreasonmemo,decimal caninamountfrom,decimal caninamountto,decimal cannotinamountfrom,decimal cannotinamountto,int returnhandledmethodvaluefrom,int returnhandledmethodvalueto,string returnhandledmethodmemo,bool isreissue,bool queryisreissue,decimal reissueamountfrom,decimal reissueamountto,string dictionarydosagecode,string origin,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -5834,12 +7385,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<OutInventory> QueryOutInventorys(string outinventorynumber,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime outinventorydatefrom,DateTime outinventorydateto,string description,string orderoutinventorychecknumber,decimal totalmoneyfrom,decimal totalmoneyto,decimal totaltaxfrom,decimal totaltaxto,int outinventorytypevaluefrom,int outinventorytypevalueto,int outinventorystatusvaluefrom,int outinventorystatusvalueto,string ordercode,out string msg);
+        List<OutInventory> QueryOutInventorys(string outinventorynumber,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime outinventorydatefrom,DateTime outinventorydateto,string description,string orderoutinventorychecknumber,decimal totalmoneyfrom,decimal totalmoneyto,decimal totaltaxfrom,decimal totaltaxto,int outinventorytypevaluefrom,int outinventorytypevalueto,int outinventorystatusvaluefrom,int outinventorystatusvalueto,string ordercode,DateTime secondcheckdatetimefrom,DateTime secondcheckdatetimeto,string secondecheckmemo,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<OutInventory> QueryPagedOutInventorys(string outinventorynumber,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime outinventorydatefrom,DateTime outinventorydateto,string description,string orderoutinventorychecknumber,decimal totalmoneyfrom,decimal totalmoneyto,decimal totaltaxfrom,decimal totaltaxto,int outinventorytypevaluefrom,int outinventorytypevalueto,int outinventorystatusvaluefrom,int outinventorystatusvalueto,string ordercode,int index,int size,out PagerInfo pager); 
+        List<OutInventory> QueryPagedOutInventorys(string outinventorynumber,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,DateTime outinventorydatefrom,DateTime outinventorydateto,string description,string orderoutinventorychecknumber,decimal totalmoneyfrom,decimal totalmoneyto,decimal totaltaxfrom,decimal totaltaxto,int outinventorytypevaluefrom,int outinventorytypevalueto,int outinventorystatusvaluefrom,int outinventorystatusvalueto,string ordercode,DateTime secondcheckdatetimefrom,DateTime secondcheckdatetimeto,string secondecheckmemo,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6064,6 +7615,77 @@ namespace BugsBox.Pharmacy.IServices
 
 		#endregion 门店 
 		   
+		#region 首营药材供货人管理
+
+		/// <summary>
+        /// 获取实体首营药材供货人管理
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        SupplyPerson GetSupplyPerson(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加首营药材供货人管理
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddSupplyPerson(SupplyPerson value,out string msg);
+
+        /// <summary>
+        /// 删除首营药材供货人管理
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteSupplyPerson(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存首营药材供货人管理
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveSupplyPerson(SupplyPerson value, out string msg);  
+
+		/// <summary>
+        /// 所有记录首营药材供货人管理
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<SupplyPerson> AllSupplyPersons(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<SupplyPerson> QuerySupplyPersons(string name,string idfile,string idnumber,string tel,string address,DateTime birthdayfrom,DateTime birthdayto,string gender,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool valid,bool queryvalid,bool enabled,bool queryenabled,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<SupplyPerson> QueryPagedSupplyPersons(string name,string idfile,string idnumber,string tel,string address,DateTime birthdayfrom,DateTime birthdayto,string gender,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool valid,bool queryvalid,bool enabled,bool queryenabled,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<SupplyPerson> SearchSupplyPersonsByQueryModel(QuerySupplyPersonModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<SupplyPerson> SearchPagedSupplyPersonsByQueryModel(QuerySupplyPersonModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion 首营药材供货人管理 
+		   
 		#region 供货单位
 
 		/// <summary>
@@ -6118,12 +7740,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SupplyUnit> QuerySupplyUnits(bool isqualityagreementout,bool queryisqualityagreementout,DateTime qualityagreementoutdatefrom,DateTime qualityagreementoutdateto,bool isattorneyaattorneyout,bool queryisattorneyaattorneyout,DateTime attorneyaattorneyoutdatefrom,DateTime attorneyaattorneyoutdateto,string supplyproductclass,string qualitycharger,string bankaccountname,string bank,string bankaccount,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,string name,string code,string pinyincode,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,out string msg);
+        List<SupplyUnit> QuerySupplyUnits(string docnumber,string pinyincode,string qualityagreementdetail,bool isqualityagreementout,bool queryisqualityagreementout,DateTime qualityagreemenstartdatefrom,DateTime qualityagreemenstartdateto,DateTime qualityagreementoutdatefrom,DateTime qualityagreementoutdateto,bool isattorneyaattorneyout,bool queryisattorneyaattorneyout,string attorneyaattorneydetail,DateTime attorneyaattorneyoutdatefrom,DateTime attorneyaattorneyoutdateto,DateTime attorneyaattorneystartdatefrom,DateTime attorneyaattorneystartdateto,string supplyproductclass,string qualitycharger,bool isannualaudit,bool queryisannualaudit,bool issealfile,bool queryissealfile,bool issingleticketfile,bool queryissingleticketfile,string bankaccountname,string bank,string bankaccount,bool valid,bool queryvalid,string name,string code,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,string receiveaddress,string detailedaddress,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,bool ishealthlicenseoutdate,bool queryishealthlicenseoutdate,DateTime healthlicenseoutdatefrom,DateTime healthlicenseoutdateto,bool istaxregisterlicenseoutdate,bool queryistaxregisterlicenseoutdate,DateTime taxregisterlicenseoutdatefrom,DateTime taxregisterlicenseoutdateto,bool isorganizationcodelicenseoutdate,bool queryisorganizationcodelicenseoutdate,DateTime organizationcodelicenseoutdatefrom,DateTime organizationcodelicenseoutdateto,bool isfoodcirculatelicenseoutdate,bool queryisfoodcirculatelicenseoutdate,DateTime foodcirculatelicenseoutdatefrom,DateTime foodcirculatelicenseoutdateto,bool ismmedicalinstitutionpermitoutdate,bool queryismmedicalinstitutionpermitoutdate,DateTime mmedicalinstitutionpermitoutdatefrom,DateTime mmedicalinstitutionpermitoutdateto,bool islnstitutionlegalpersonlicenseoutdate,bool queryislnstitutionlegalpersonlicenseoutdate,DateTime lnstitutionlegalpersonlicenseoutdatefrom,DateTime lnstitutionlegalpersonlicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,string validremark,bool islock,bool queryislock,string lockremark,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SupplyUnit> QueryPagedSupplyUnits(bool isqualityagreementout,bool queryisqualityagreementout,DateTime qualityagreementoutdatefrom,DateTime qualityagreementoutdateto,bool isattorneyaattorneyout,bool queryisattorneyaattorneyout,DateTime attorneyaattorneyoutdatefrom,DateTime attorneyaattorneyoutdateto,string supplyproductclass,string qualitycharger,string bankaccountname,string bank,string bankaccount,bool valid,bool queryvalid,string validremark,bool islock,bool queryislock,string lockremark,string name,string code,string pinyincode,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,int index,int size,out PagerInfo pager); 
+        List<SupplyUnit> QueryPagedSupplyUnits(string docnumber,string pinyincode,string qualityagreementdetail,bool isqualityagreementout,bool queryisqualityagreementout,DateTime qualityagreemenstartdatefrom,DateTime qualityagreemenstartdateto,DateTime qualityagreementoutdatefrom,DateTime qualityagreementoutdateto,bool isattorneyaattorneyout,bool queryisattorneyaattorneyout,string attorneyaattorneydetail,DateTime attorneyaattorneyoutdatefrom,DateTime attorneyaattorneyoutdateto,DateTime attorneyaattorneystartdatefrom,DateTime attorneyaattorneystartdateto,string supplyproductclass,string qualitycharger,bool isannualaudit,bool queryisannualaudit,bool issealfile,bool queryissealfile,bool issingleticketfile,bool queryissingleticketfile,string bankaccountname,string bank,string bankaccount,bool valid,bool queryvalid,string name,string code,string contactname,string contacttel,string description,string legalperson,string header,string businessscope,string salesamount,string fax,string email,string webaddress,string receiveaddress,string detailedaddress,bool isoutdate,bool queryisoutdate,DateTime outdatefrom,DateTime outdateto,bool isgsplicenseoutdate,bool queryisgsplicenseoutdate,DateTime gsplicenseoutdatefrom,DateTime gsplicenseoutdateto,bool isgmplicenseoutdate,bool queryisgmplicenseoutdate,DateTime gmplicenseoutdatefrom,DateTime gmplicenseoutdateto,bool isbusinesslicenseoutdate,bool queryisbusinesslicenseoutdate,DateTime businesslicenseeoutdatefrom,DateTime businesslicenseeoutdateto,bool ismedicineproductionlicenseoutdate,bool queryismedicineproductionlicenseoutdate,DateTime medicineproductionlicenseoutdatefrom,DateTime medicineproductionlicenseoutdateto,bool ismedicinebusinesslicenseoutdate,bool queryismedicinebusinesslicenseoutdate,DateTime medicinebusinesslicenseoutdatefrom,DateTime medicinebusinesslicenseoutdateto,bool isinstrumentsproductionlicenseoutdate,bool queryisinstrumentsproductionlicenseoutdate,DateTime instrumentsproductionlicenseoutdatefrom,DateTime instrumentsproductionlicenseoutdateto,bool isinstrumentsbusinesslicenseoutdate,bool queryisinstrumentsbusinesslicenseoutdate,DateTime instrumentsbusinesslicenseoutdatefrom,DateTime instrumentsbusinesslicenseoutdateto,bool ishealthlicenseoutdate,bool queryishealthlicenseoutdate,DateTime healthlicenseoutdatefrom,DateTime healthlicenseoutdateto,bool istaxregisterlicenseoutdate,bool queryistaxregisterlicenseoutdate,DateTime taxregisterlicenseoutdatefrom,DateTime taxregisterlicenseoutdateto,bool isorganizationcodelicenseoutdate,bool queryisorganizationcodelicenseoutdate,DateTime organizationcodelicenseoutdatefrom,DateTime organizationcodelicenseoutdateto,bool isfoodcirculatelicenseoutdate,bool queryisfoodcirculatelicenseoutdate,DateTime foodcirculatelicenseoutdatefrom,DateTime foodcirculatelicenseoutdateto,bool ismmedicalinstitutionpermitoutdate,bool queryismmedicalinstitutionpermitoutdate,DateTime mmedicalinstitutionpermitoutdatefrom,DateTime mmedicalinstitutionpermitoutdateto,bool islnstitutionlegalpersonlicenseoutdate,bool queryislnstitutionlegalpersonlicenseoutdate,DateTime lnstitutionlegalpersonlicenseoutdatefrom,DateTime lnstitutionlegalpersonlicenseoutdateto,string taxregistrationcode,DateTime lastannualdtefrom,DateTime lastannualdteto,bool isapproval,bool queryisapproval,int approvalstatusvaluefrom,int approvalstatusvalueto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,string validremark,bool islock,bool queryislock,string lockremark,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6189,12 +7811,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SupplyUnitSalesman> QuerySupplyUnitSalesmans(DateTime outdatefrom,DateTime outdateto,string name,string idnumber,string tel,string address,DateTime birthdayfrom,DateTime birthdayto,string gender,bool enabled,bool queryenabled,bool valid,bool queryvalid,bool isoutdate,bool queryisoutdate,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string businessscopes,bool ischecked,bool queryischecked,string idchecktype,out string msg);
+        List<SupplyUnitSalesman> QuerySupplyUnitSalesmans(DateTime outdatefrom,DateTime outdateto,string name,string idnumber,string tel,string address,DateTime birthdayfrom,DateTime birthdayto,string gender,bool enabled,bool queryenabled,bool valid,bool queryvalid,bool isoutdate,bool queryisoutdate,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string businessscopes,string businessscopesmemo,bool ischecked,bool queryischecked,string idchecktype,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SupplyUnitSalesman> QueryPagedSupplyUnitSalesmans(DateTime outdatefrom,DateTime outdateto,string name,string idnumber,string tel,string address,DateTime birthdayfrom,DateTime birthdayto,string gender,bool enabled,bool queryenabled,bool valid,bool queryvalid,bool isoutdate,bool queryisoutdate,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string businessscopes,bool ischecked,bool queryischecked,string idchecktype,int index,int size,out PagerInfo pager); 
+        List<SupplyUnitSalesman> QueryPagedSupplyUnitSalesmans(DateTime outdatefrom,DateTime outdateto,string name,string idnumber,string tel,string address,DateTime birthdayfrom,DateTime birthdayto,string gender,bool enabled,bool queryenabled,bool valid,bool queryvalid,bool isoutdate,bool queryisoutdate,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string businessscopes,string businessscopesmemo,bool ischecked,bool queryischecked,string idchecktype,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6473,12 +8095,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<User> QueryUsers(string account,string pwd,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,out string msg);
+        List<User> QueryUsers(string account,string pwd,bool isspecialpriceauth,bool queryisspecialpriceauth,string specialpriceauth,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<User> QueryPagedUsers(string account,string pwd,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,int index,int size,out PagerInfo pager); 
+        List<User> QueryPagedUsers(string account,string pwd,bool isspecialpriceauth,bool queryisspecialpriceauth,string specialpriceauth,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,bool enabled,bool queryenabled,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6615,12 +8237,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Vehicle> QueryVehicles(string type,int vehiclecategoryvaluefrom,int vehiclecategoryvalueto,string cubage,string licenseplate,string rule,string other,string driver,bool status,bool querystatus,bool isoutcheck,bool queryisoutcheck,out string msg);
+        List<Vehicle> QueryVehicles(string type,int vehiclecategoryvaluefrom,int vehiclecategoryvalueto,string cubage,string licenseplate,string rule,string other,string driver,bool status,bool querystatus,bool isoutcheck,bool queryisoutcheck,string delegateman,string delegatecompany,string delegatetel,string liscencecode,string delegateaddr,string delegatescope,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Vehicle> QueryPagedVehicles(string type,int vehiclecategoryvaluefrom,int vehiclecategoryvalueto,string cubage,string licenseplate,string rule,string other,string driver,bool status,bool querystatus,bool isoutcheck,bool queryisoutcheck,int index,int size,out PagerInfo pager); 
+        List<Vehicle> QueryPagedVehicles(string type,int vehiclecategoryvaluefrom,int vehiclecategoryvalueto,string cubage,string licenseplate,string rule,string other,string driver,bool status,bool querystatus,bool isoutcheck,bool queryisoutcheck,string delegateman,string delegatecompany,string delegatetel,string liscencecode,string delegateaddr,string delegatescope,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6686,12 +8308,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Warehouse> QueryWarehouses(string name,string code,string mnemoniccode,string address,string managementcompany,string phone,string rentcompany,string rentyear,string area,string shadearea,string normalarea,string coldarea,string ypfzarea,string yhyssarea,string phcarea,string tyzqarea,string dwarea,string decription,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,out string msg);
+        List<Warehouse> QueryWarehouses(string name,string code,string mnemoniccode,string address,string managementcompany,string phone,string area,string shadearea,string normalarea,string coldarea,string ypfzarea,string yhyssarea,string phcarea,string tyzqarea,string dwarea,string decription,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Warehouse> QueryPagedWarehouses(string name,string code,string mnemoniccode,string address,string managementcompany,string phone,string rentcompany,string rentyear,string area,string shadearea,string normalarea,string coldarea,string ypfzarea,string yhyssarea,string phcarea,string tyzqarea,string dwarea,string decription,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int index,int size,out PagerInfo pager); 
+        List<Warehouse> QueryPagedWarehouses(string name,string code,string mnemoniccode,string address,string managementcompany,string phone,string area,string shadearea,string normalarea,string coldarea,string ypfzarea,string yhyssarea,string phcarea,string tyzqarea,string dwarea,string decription,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6757,12 +8379,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<WarehouseZone> QueryWarehouseZones(string name,string decription,string code,string mnemoniccode,string area,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int warehousezonetypevaluefrom,int warehousezonetypevalueto,out string msg);
+        List<WarehouseZone> QueryWarehouseZones(int pindexfrom,int pindexto,string name,string decription,string code,string mnemoniccode,string area,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int warehousezonetypevaluefrom,int warehousezonetypevalueto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<WarehouseZone> QueryPagedWarehouseZones(string name,string decription,string code,string mnemoniccode,string area,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int warehousezonetypevaluefrom,int warehousezonetypevalueto,int index,int size,out PagerInfo pager); 
+        List<WarehouseZone> QueryPagedWarehouseZones(int pindexfrom,int pindexto,string name,string decription,string code,string mnemoniccode,string area,bool enabled,bool queryenabled,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int warehousezonetypevaluefrom,int warehousezonetypevalueto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6773,6 +8395,77 @@ namespace BugsBox.Pharmacy.IServices
         List<WarehouseZone> SearchPagedWarehouseZonesByQueryModel(QueryWarehouseZoneModel qModel,int index,int size,out PagerInfo pager); 
 
 		#endregion 库区 
+		   
+		#region 
+
+		/// <summary>
+        /// 获取实体
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        WarehouseZonePosition GetWarehouseZonePosition(Guid id,out string message);   
+
+		/// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool AddWarehouseZonePosition(WarehouseZonePosition value,out string msg);
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool DeleteWarehouseZonePosition(Guid id, out string msg);
+
+        /// <summary>
+        /// 保存
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        bool SaveWarehouseZonePosition(WarehouseZonePosition value, out string msg);  
+
+		/// <summary>
+        /// 所有记录
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<WarehouseZonePosition> AllWarehouseZonePositions(out string message);  
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<WarehouseZonePosition> QueryWarehouseZonePositions(int pindexfrom,int pindexto,int pindex2from,int pindex2to,string name,decimal capacityfrom,decimal capacityto,string rowcol,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,out string msg);
+
+		
+        [OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<WarehouseZonePosition> QueryPagedWarehouseZonePositions(int pindexfrom,int pindexto,int pindex2from,int pindex2to,string name,decimal capacityfrom,decimal capacityto,string rowcol,string memo,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,int index,int size,out PagerInfo pager); 
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<WarehouseZonePosition> SearchWarehouseZonePositionsByQueryModel(QueryWarehouseZonePositionModel qModel,out string message);  
+
+		[OperationContract]
+	    [FaultContract(typeof(ServiceExceptionDetail))]
+        List<WarehouseZonePosition> SearchPagedWarehouseZonePositionsByQueryModel(QueryWarehouseZonePositionModel qModel,int index,int size,out PagerInfo pager); 
+
+		#endregion  
 		   
 		#region 报警设置
 
@@ -6899,12 +8592,12 @@ namespace BugsBox.Pharmacy.IServices
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<OutInventoryDetail> QueryOutInventoryDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string dictionarydosagecode,string origin,string batchnumber,int amountfrom,int amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,int outamountfrom,int outamountto,string warehousecode,string warehousename,string warehousezonecode,string warehousezonename,int cansalenumfrom,int cansalenumto,out string msg);
+        List<OutInventoryDetail> QueryOutInventoryDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string dictionarydosagecode,string origin,string batchnumber,decimal amountfrom,decimal amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,decimal outamountfrom,decimal outamountto,string warehousecode,string warehousename,string warehousezonecode,string warehousezonename,decimal cansalenumfrom,decimal cansalenumto,out string msg);
 
 		
         [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        List<OutInventoryDetail> QueryPagedOutInventoryDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string dictionarydosagecode,string origin,string batchnumber,int amountfrom,int amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,int outamountfrom,int outamountto,string warehousecode,string warehousename,string warehousezonecode,string warehousezonename,int cansalenumfrom,int cansalenumto,int index,int size,out PagerInfo pager); 
+        List<OutInventoryDetail> QueryPagedOutInventoryDetails(int indexfrom,int indexto,DateTime createtimefrom,DateTime createtimeto,DateTime updatetimefrom,DateTime updatetimeto,string productname,string productcode,string dictionarydosagecode,string origin,string batchnumber,decimal amountfrom,decimal amountto,decimal unitpricefrom,decimal unitpriceto,decimal actualunitpricefrom,decimal actualunitpriceto,decimal pricefrom,decimal priceto,string measurementunit,string specificationcode,DateTime pruductdatefrom,DateTime pruductdateto,DateTime outvaliddatefrom,DateTime outvaliddateto,string factoryname,string description,decimal outamountfrom,decimal outamountto,string warehousecode,string warehousename,string warehousezonecode,string warehousezonename,decimal cansalenumfrom,decimal cansalenumto,int index,int size,out PagerInfo pager); 
 
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
@@ -6915,513 +8608,5 @@ namespace BugsBox.Pharmacy.IServices
         List<OutInventoryDetail> SearchPagedOutInventoryDetailsByQueryModel(QueryOutInventoryDetailModel qModel,int index,int size,out PagerInfo pager); 
 
 		#endregion 销售出库单 
-
-        #region 首营供货个人
-
-        /// <summary>
-        /// 获取实体首营供货个人
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        SupplyPerson GetSupplyPerson(Guid id, out string message);
-
-        /// <summary>
-        /// 添加购货单位提货人员
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="msg"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddSupplyPerson(SupplyPerson value, out string msg);
-
-        /// <summary>
-        /// 删除购货单位提货人员
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="msg"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteSupplyPerson(Guid id, out string msg);
-
-        /// <summary>
-        /// 保存购货单位提货人员
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="msg"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveSupplyPerson(SupplyPerson value, out string msg);
-
-        /// <summary>
-        /// 所有记录购货单位提货人员
-        /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SupplyPerson> AllSupplyPersons(out string message);
-
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //List<SupplyPerson> QuerySupplyPersons(string name, string idfile, string idnumber, string tel, string address, DateTime birthdayfrom, DateTime birthdayto, string gender, DateTime createtimefrom, DateTime createtimeto, DateTime updatetimefrom, DateTime updatetimeto, bool valid, bool queryvalid, bool enabled, bool queryenabled, out string msg);
-
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //List<SupplyPerson> QueryPagedSupplyPersons(string name, string idfile, string idnumber, string tel, string address, DateTime birthdayfrom, DateTime birthdayto, string gender, DateTime createtimefrom, DateTime createtimeto, DateTime updatetimefrom, DateTime updatetimeto, bool valid, bool queryvalid, bool enabled, bool queryenabled, int index, int size, out PagerInfo pager);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<SupplyPerson> SearchSupplyPersonsByQueryModel(QuerySupplyPersonModel qModel, out string message);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //List<SupplyPerson> SearchPagedSupplyPersonsByQueryModel(QuerySupplyPersonModel qModel, int index, int size, out PagerInfo pager);
-
-        #endregion 购货单位提货人员 
-
-        #region 不合格药品信息，实体新增，更新，删除
-        /// <summary>
-        /// 添加药品不合格
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="msg"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDrugsUnqualification(drugsUnqualication value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDrugsUnqualification(drugsUnqualication value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDrugsUnqualification(Guid ItemID, out string msg);
-        #endregion
-
-
-        #region 组织机构代码证
-
-        /// <summary>
-        /// 获取实体组织机构代码证
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        OrganizationCodeLicense GetOrganizationCodeLicense(Guid id, out string message);
-
-        /// <summary>
-        /// 添加组织机构代码证
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="msg"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddOrganizationCodeLicense(OrganizationCodeLicense value, out string msg);
-
-        /// <summary>
-        /// 删除组织机构代码证
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="msg"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteOrganizationCodeLicense(Guid id, out string msg);
-
-        /// <summary>
-        /// 保存组织机构代码证
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="msg"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveOrganizationCodeLicense(OrganizationCodeLicense value, out string msg);
-
-        /// <summary>
-        /// 所有记录组织机构代码证
-        /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<OrganizationCodeLicense> AllOrganizationCodeLicenses(out string message);
-
-        #endregion 组织机构代码证
-
-
-
-
-//update 2014-2-11
-        #region 不合格药品销毁信息，实体新增，更新，删除
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDrugsUnqualificationDestroy(DrugsUnqualificationDestroy value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDrugsUnqualificationDestroy(DrugsUnqualificationDestroy value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDrugsUnqualificationDestroy(Guid ItemID, out string msg);
-        #endregion
-
-
-          //update 2014-3-9
-          #region 待处理药品存储过程，实体新增，更新，删除
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDrugsUndeterminate(DrugsUndeterminate value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDrugsUndeterminate(DrugsUndeterminate value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDrugsUndeterminate(Guid ItemID, out string msg);  
-          #endregion
-
-        //update 2014-3-9
-        #region 拒收单存储过程，实体新增，更新，删除
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDocumentRefuse(DocumentRefuse value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDocumentRefuse(DocumentRefuse value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDocumentRefuse(Guid ItemID, out string msg);
-        #endregion
-
-        //update 2014-3-12
-        #region 体检档案存储过程，实体新增，更新，删除
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddHealthCheckDocument(HealthCheckDocument value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveHealthCheckDocument(HealthCheckDocument value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteHealthCheckDocument(Guid ItemID, out string msg);
-        #endregion
-
-        //update 2014-3-12
-        #region 体检档案细节存储过程，实体新增，更新，删除
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddHealthCheckDetail(HealthCheckDetail value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveHealthCheckDetail(HealthCheckDetail value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteHealthCheckDetail(Guid ItemID, out string msg);
-        #endregion
-
-        //update 2014-3-12
-        #region 培训档案存储过程，实体新增，更新，删除
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddEduDocument(EduDocument value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveEduDocument(EduDocument value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteEduDocument(Guid ItemID, out string msg);
-        #endregion
-
-        //update 2014-3-12
-        #region 培训档案细节存储过程，实体新增，更新，删除
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddEduDetails(EduDetails value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveEduDetails(EduDetails value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteEduDetails(Guid ItemID, out string msg);
-        #endregion
-
-        /// <summary>
-        /// 所有健康档案记录
-        /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<HealthCheckDocument> AllHealthCheckDocuments(out string message);
-
-        /// <summary>
-        /// 所有健康档案细节记录
-        /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<HealthCheckDetail> AllHealthCheckDetails(out string message);
-
-        /// <summary>
-        /// 所有教育档案细节记录
-        /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<EduDetails> AllEduDetailss(out string message);
-
-        /// <summary>
-        /// 所有教育档案记录
-        /// </summary>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<EduDocument> AllEduDocuments(out string message); 
-
-        
-
-        #region 卫生许可证
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        HealthLicense GetHealthLicense(Guid id, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddHealthLicense(HealthLicense value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteHealthLicense(Guid id, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveHealthLicense(HealthLicense value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<HealthLicense> AllHealthLicenses(out string message);
-        #endregion
-
-        #region 税务登记证
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        TaxRegisterLicense GetTaxRegisterLicense(Guid id, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddTaxRegisterLicense(TaxRegisterLicense value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteTaxRegisterLicense(Guid id, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveTaxRegisterLicense(TaxRegisterLicense value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<TaxRegisterLicense> AllTaxRegisterLicenses(out string message);
-        #endregion
-
-        #region 食品流通许可证
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        FoodCirculateLicense GetFoodCirculateLicense(Guid id, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddFoodCirculateLicense(FoodCirculateLicense value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteFoodCirculateLicense(Guid id, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveFoodCirculateLicense(FoodCirculateLicense value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<FoodCirculateLicense> AllFoodCirculateLicenses(out string message);
-        #endregion
-
-          #region 报损
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugsBreakage GetDrugsBreakage(Guid id, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDrugsBreakage(DrugsBreakage value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDrugsBreakage(Guid id, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDrugsBreakage(DrugsBreakage value, out string msg);
-
-          #endregion
-
-        #region 移库
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugsInventoryMove GetDrugsInventoryMove(Guid id, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDrugsInventoryMove(DrugsInventoryMove value, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDrugsInventoryMove(Guid id, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDrugsInventoryMove(DrugsInventoryMove value, out string msg);
-
-        #endregion
-
-        //
-        #region 医疗机构执业许可证
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool OpMmedicalInstitutionPermit(MmedicalInstitutionPermit value, int op,out string message);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //MmedicalInstitutionPermit GetDrugsBreakage(Guid id, out string message);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //bool AddMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string msg);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //bool DeleteMmedicalInstitutionPermit(Guid id, out string msg);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //bool SaveMmedicalInstitutionPermit(DrugsBreakage value, out string msg);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //List<MmedicalInstitutionPermit> AllMmedicalInstitutionPermits(out string message);
-
-        #endregion
-
-        #region 事业单位法人证书
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        LnstitutionLegalPersonLicense[] GetLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool OpLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value,int op, out string message);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //bool AddLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value, out string msg);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //bool DeleteLnstitutionLegalPersonLicense(Guid id, out string msg);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //bool SaveLnstitutionLegalPersonLicense(DrugsBreakage value, out string msg);
-
-        //[OperationContract]
-        //[FaultContract(typeof(ServiceExceptionDetail))]
-        //List<LnstitutionLegalPersonLicense> AllLnstitutionLegalPersonLicenses(out string message);
-        #endregion
-
-        #region 调用直调销售主表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        BugsBox.Pharmacy.Models.DirectSalesOrder GetDirectSalesOrder(System.Guid id, out string message);
-        #endregion
-
-        #region 新增直调销售主表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDirectSalesOrder(BugsBox.Pharmacy.Models.DirectSalesOrder value, out string message);
-        #endregion
-
-        #region 删除直调销售主表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDirectSalesOrder(System.Guid id, out string message);
-        #endregion
-
-        #region 保存直调销售主表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDirectSalesOrder(BugsBox.Pharmacy.Models.DirectSalesOrder value, out string message);
-        #endregion
-
-        #region 调用直调销售细节表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        BugsBox.Pharmacy.Models.DirectSalesOrderDetail GetDirectSalesOrderDetail(System.Guid id, out string message);
-        #endregion
-
-        #region 新增直调销售细节表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDirectSalesOrderDetail(BugsBox.Pharmacy.Models.DirectSalesOrderDetail value, out string message);
-        #endregion
-
-        #region 删除直调销售细节表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteDirectSalesOrderDetail(System.Guid id, out string message);
-        #endregion
-
-        #region 保存直调销售细节表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDirectSalesOrderDetail(BugsBox.Pharmacy.Models.DirectSalesOrderDetail value, out string message);
-        #endregion
-
-      }
-
+			}
 }

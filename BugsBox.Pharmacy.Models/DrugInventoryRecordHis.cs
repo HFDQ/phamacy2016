@@ -30,7 +30,7 @@ namespace BugsBox.Pharmacy.Models
         public Guid OperatorId { get; set; }
 
 
-        public string Operator { get; set; }
+        public string OperatorName { get; set; }
 
         public DateTime CreateDate { get; set; }
 

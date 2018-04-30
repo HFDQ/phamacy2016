@@ -9,7 +9,7 @@ using BugsBox.Pharmacy.Models.Config;
 
 namespace BugsBox.Pharmacy.Models
 {
-    public class WareHouseZonePosition:Entity,ILEntity
+    public class WarehouseZonePosition:Entity,ILEntity
     {
         /// <summary>
         /// 货位顺序号

@@ -101,7 +101,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetWarehouseZonePositionById", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetWarehouseZonePositionByIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetWarehouseZonePositionByIdServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        Models.WareHouseZonePosition GetWarehouseZonePositionById(System.Guid Id, out string message);
+        Models.WarehouseZonePosition GetWarehouseZonePositionById(System.Guid Id, out string message);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetWarehouseZonePositionOutInventories", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetWarehouseZonePositionOutInventoriesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetWarehouseZonePositionOutInventoriesServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
@@ -117,11 +117,11 @@ namespace BugsBox.Pharmacy.AppClient.PS
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/SaveWareHouseZonePosition", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/SaveWareHouseZonePositionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/SaveWareHouseZonePositionServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        bool SaveWareHouseZonePosition(System.Collections.Generic.IEnumerable<Models.WareHouseZonePosition> ListWareHouseZonePositions, out string message);
+        bool SaveWareHouseZonePosition(System.Collections.Generic.IEnumerable<Models.WarehouseZonePosition> ListWareHouseZonePositions, out string message);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/AddWareHouseZonePositions", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/AddWareHouseZonePositionsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/AddWareHouseZonePositionsServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        bool AddWareHouseZonePositions(System.Collections.Generic.IEnumerable<Models.WareHouseZonePosition> ListWareHouseZonePositions, out string message);
+        bool AddWareHouseZonePositions(System.Collections.Generic.IEnumerable<Models.WarehouseZonePosition> ListWareHouseZonePositions, out string message);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetInstrumentsByCondition", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetInstrumentsByConditionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetInstrumentsByConditionServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
@@ -730,26 +730,26 @@ namespace BugsBox.Pharmacy.AppClient.PS
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsUnqualificationByID", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsUnqualificationByIDResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsUnqualificationByIDServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        BugsBox.Pharmacy.Models.drugsUnqualication GetDrugsUnqualificationByID(out string message, System.Guid ItemID);
+        BugsBox.Pharmacy.Models.DrugsUnqualication GetDrugsUnqualificationByID(out string message, System.Guid ItemID);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsUnqualificationByCondition", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsUnqualificationByConditionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsUnqualificationByConditionServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        BugsBox.Pharmacy.Models.drugsUnqualication[] GetDrugsUnqualificationByCondition(out string message, BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition Condition);
+        BugsBox.Pharmacy.Models.DrugsUnqualication[] GetDrugsUnqualificationByCondition(out string message, BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition Condition);
 
         //AddDrugsUnqualification
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/AddDrugsUnqualification", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/AddDrugsUnqualificationResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/AddDrugsUnqualificationServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        bool AddDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.drugsUnqualication value);
+        bool AddDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.DrugsUnqualication value);
 
         //addDrugsUnqualityApproval
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/addDrugsUnqualityApproval", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/addDrugsUnqualityApprovalResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/addDrugsUnqualityApprovalServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        bool addDrugsUnqualityApproval(BugsBox.Pharmacy.Models.drugsUnqualication value, System.Guid approvalFlowTypeID, System.Guid userID, string changeNote, out string message);
+        bool addDrugsUnqualityApproval(BugsBox.Pharmacy.Models.DrugsUnqualication value, System.Guid approvalFlowTypeID, System.Guid userID, string changeNote, out string message);
 
         //EditDrugUnqualification
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/EditDrugUnqualification", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/EditDrugUnqualificationResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/EditDrugUnqualificationServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        bool EditDrugUnqualification(Models.drugsUnqualication du, int flag, out string message);
+        bool EditDrugUnqualification(Models.DrugsUnqualication du, int flag, out string message);
 
         //addDrugsUnqualityApproval
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/getDrugsUnqualificationQueryByFlowID", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/getDrugsUnqualificationQueryByFlowIDResponse")]
@@ -759,7 +759,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
         //SaveDrugsUnqualification
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/SaveDrugsUnqualification", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/SaveDrugsUnqualificationResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/SaveDrugsUnqualificationServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        bool SaveDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.drugsUnqualication value);
+        bool SaveDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.DrugsUnqualication value);
 
         //DeleteDrugsUnqualification
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/DeleteDrugsUnqualification", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/DeleteDrugsUnqualificationResponse")]
@@ -18693,26 +18693,26 @@ namespace BugsBox.Pharmacy.AppClient.PS
         {
             return base.Channel.GetDrugsUnqualification(out message, UID);
         }
-        public BugsBox.Pharmacy.Models.drugsUnqualication GetDrugsUnqualificationByID(out string message, System.Guid ItemID)
+        public BugsBox.Pharmacy.Models.DrugsUnqualication GetDrugsUnqualificationByID(out string message, System.Guid ItemID)
         {
             return base.Channel.GetDrugsUnqualificationByID(out message, ItemID);
         }
-        public BugsBox.Pharmacy.Models.drugsUnqualication[] GetDrugsUnqualificationByCondition(out string message, BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition Condition)
+        public BugsBox.Pharmacy.Models.DrugsUnqualication[] GetDrugsUnqualificationByCondition(out string message, BugsBox.Pharmacy.Business.Models.drugsUnqualificationCondition Condition)
         {
             return base.Channel.GetDrugsUnqualificationByCondition(out message, Condition);
         }
 
-        public bool AddDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.drugsUnqualication value)
+        public bool AddDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.DrugsUnqualication value)
         {
             return base.Channel.AddDrugsUnqualification(out msg, value);
         }
 
-        public bool addDrugsUnqualityApproval(BugsBox.Pharmacy.Models.drugsUnqualication value, System.Guid approvalFlowTypeID, System.Guid userID, string changeNote, out string message)
+        public bool addDrugsUnqualityApproval(BugsBox.Pharmacy.Models.DrugsUnqualication value, System.Guid approvalFlowTypeID, System.Guid userID, string changeNote, out string message)
         {
             return base.Channel.addDrugsUnqualityApproval(value, approvalFlowTypeID, userID, changeNote, out message);
         }
 
-        public bool EditDrugUnqualification(Models.drugsUnqualication du, int flag, out string message)
+        public bool EditDrugUnqualification(Models.DrugsUnqualication du, int flag, out string message)
         {
             return base.Channel.EditDrugUnqualification(du, flag, out message);
         }
@@ -18722,7 +18722,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
             return base.Channel.getDrugsUnqualificationQueryByFlowID(FlowID, out message);
         }
 
-        public bool SaveDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.drugsUnqualication value)
+        public bool SaveDrugsUnqualification(out string msg, BugsBox.Pharmacy.Models.DrugsUnqualication value)
         {
             return base.Channel.SaveDrugsUnqualification(out msg, value);
         }
@@ -19405,12 +19405,12 @@ namespace BugsBox.Pharmacy.AppClient.PS
             return base.Channel.GetInstrumentsByCondition(keys, index, size, out pager, ValidCondition);
         }
 
-        public bool AddWareHouseZonePositions(System.Collections.Generic.IEnumerable<Models.WareHouseZonePosition> ListWareHouseZonePositions, out string message)
+        public bool AddWareHouseZonePositions(System.Collections.Generic.IEnumerable<Models.WarehouseZonePosition> ListWareHouseZonePositions, out string message)
         {
             return base.Channel.AddWareHouseZonePositions(ListWareHouseZonePositions, out message);
         }
 
-        public bool SaveWareHouseZonePosition(System.Collections.Generic.IEnumerable<Models.WareHouseZonePosition> ListWareHouseZonePositions, out string message)
+        public bool SaveWareHouseZonePosition(System.Collections.Generic.IEnumerable<Models.WarehouseZonePosition> ListWareHouseZonePositions, out string message)
         {
             return base.Channel.SaveWareHouseZonePosition(ListWareHouseZonePositions, out message);
         }
@@ -19430,7 +19430,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
             return base.Channel.GetWarehouseZonePositionOutInventories(SalesOrderId, out message);
         }
 
-        public Models.WareHouseZonePosition GetWarehouseZonePositionById(System.Guid Id, out string message)
+        public Models.WarehouseZonePosition GetWarehouseZonePositionById(System.Guid Id, out string message)
         {
             return base.Channel.GetWarehouseZonePositionById(Id, out message);
         }

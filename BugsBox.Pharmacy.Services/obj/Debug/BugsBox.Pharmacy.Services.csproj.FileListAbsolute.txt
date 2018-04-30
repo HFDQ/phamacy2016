@@ -10,11 +10,11 @@ D:\DQ\phamacy2016\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.
 D:\DQ\phamacy2016\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.csproj.CopyComplete
 D:\DQ\phamacy2016\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.dll
 D:\DQ\phamacy2016\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.pdb
-D:\DQ\药品经营系统\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.csprojResolveAssemblyReference.cache
-D:\DQ\药品经营系统\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.csproj.CoreCompileInputs.cache
 D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.Services\BugsBox.Pharmacy.Services.dll.config
 D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.Services\BugsBox.Pharmacy.Services.dll
 D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.Services\BugsBox.Pharmacy.Services.pdb
+D:\DQ\药品经营系统\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.csprojResolveAssemblyReference.cache
+D:\DQ\药品经营系统\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.csproj.CoreCompileInputs.cache
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Services\obj\Debug\BugsBox.Pharmacy.Services.pdb

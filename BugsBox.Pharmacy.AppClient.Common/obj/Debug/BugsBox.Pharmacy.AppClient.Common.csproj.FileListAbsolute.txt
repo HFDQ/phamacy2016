@@ -10,6 +10,7 @@ D:\DQ\phamacy2016\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.A
 D:\DQ\phamacy2016\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.AppClient.Common.csproj.CopyComplete
 D:\DQ\phamacy2016\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.AppClient.Common.dll
 D:\DQ\phamacy2016\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.AppClient.Common.pdb
+D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.AppClient.Common\BugsBox.Pharmacy.AppClient.Common.dll.config
 D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.AppClient.Common\BugsBox.Pharmacy.AppClient.Common.dll
 D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.AppClient.Common\BugsBox.Pharmacy.AppClient.Common.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.AppClient.Common.csprojResolveAssemblyReference.cache
@@ -17,4 +18,3 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pha
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.AppClient.Common.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.AppClient.Common.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient.Common\obj\Debug\BugsBox.Pharmacy.AppClient.Common.pdb
-D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.AppClient.Common\BugsBox.Pharmacy.AppClient.Common.dll.config

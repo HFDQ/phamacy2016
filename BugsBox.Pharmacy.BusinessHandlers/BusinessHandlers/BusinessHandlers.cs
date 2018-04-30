@@ -145,6 +145,188 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 	
     		
 	/// <summary>
+	/// 行政区域划分的业务逻辑处理 
+	/// </summary>
+	[Description("行政区域划分的业务逻辑处理")]
+	public partial class ChinaDistrictBusinessHandler : BaseBusinessHandler<ChinaDistrict>
+    {   
+        public ChinaDistrictBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.ChinaDistrictRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 的业务逻辑处理 
+	/// </summary>
+	[Description("的业务逻辑处理")]
+	public partial class DirectSalesOrderBusinessHandler : BaseBusinessHandler<DirectSalesOrder>
+    {   
+        public DirectSalesOrderBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DirectSalesOrderRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 的业务逻辑处理 
+	/// </summary>
+	[Description("的业务逻辑处理")]
+	public partial class DirectSalesOrderDetailBusinessHandler : BaseBusinessHandler<DirectSalesOrderDetail>
+    {   
+        public DirectSalesOrderDetailBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DirectSalesOrderDetailRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 收货拒收单的业务逻辑处理 
+	/// </summary>
+	[Description("收货拒收单的业务逻辑处理")]
+	public partial class DocumentRefuseBusinessHandler : BaseBusinessHandler<DocumentRefuse>
+    {   
+        public DocumentRefuseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DocumentRefuseRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 药物库存变动历史的业务逻辑处理 
+	/// </summary>
+	[Description("药物库存变动历史的业务逻辑处理")]
+	public partial class DrugInventoryRecordHisBusinessHandler : BaseBusinessHandler<DrugInventoryRecordHis>
+    {   
+        public DrugInventoryRecordHisBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DrugInventoryRecordHisRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 药品养护记录的业务逻辑处理 
+	/// </summary>
+	[Description("药品养护记录的业务逻辑处理")]
+	public partial class DrugMaintenanceRecordBusinessHandler : BaseBusinessHandler<DrugMaintenanceRecord>
+    {   
+        public DrugMaintenanceRecordBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DrugMaintenanceRecordRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 报损药品的业务逻辑处理 
+	/// </summary>
+	[Description("报损药品的业务逻辑处理")]
+	public partial class DrugsBreakageBusinessHandler : BaseBusinessHandler<DrugsBreakage>
+    {   
+        public DrugsBreakageBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DrugsBreakageRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 移库的业务逻辑处理 
+	/// </summary>
+	[Description("移库的业务逻辑处理")]
+	public partial class DrugsInventoryMoveBusinessHandler : BaseBusinessHandler<DrugsInventoryMove>
+    {   
+        public DrugsInventoryMoveBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DrugsInventoryMoveRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 待处理药品的业务逻辑处理 
+	/// </summary>
+	[Description("待处理药品的业务逻辑处理")]
+	public partial class DrugsUndeterminateBusinessHandler : BaseBusinessHandler<DrugsUndeterminate>
+    {   
+        public DrugsUndeterminateBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DrugsUndeterminateRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 不合格药品的业务逻辑处理 
+	/// </summary>
+	[Description("不合格药品的业务逻辑处理")]
+	public partial class DrugsUnqualicationBusinessHandler : BaseBusinessHandler<DrugsUnqualication>
+    {   
+        public DrugsUnqualicationBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DrugsUnqualicationRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 不合格药品销毁情况的业务逻辑处理 
+	/// </summary>
+	[Description("不合格药品销毁情况的业务逻辑处理")]
+	public partial class DrugsUnqualificationDestroyBusinessHandler : BaseBusinessHandler<DrugsUnqualificationDestroy>
+    {   
+        public DrugsUnqualificationDestroyBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.DrugsUnqualificationDestroyRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 培训档案细节的业务逻辑处理 
+	/// </summary>
+	[Description("培训档案细节的业务逻辑处理")]
+	public partial class EduDetailsBusinessHandler : BaseBusinessHandler<EduDetails>
+    {   
+        public EduDetailsBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.EduDetailsRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 培训档案的业务逻辑处理 
+	/// </summary>
+	[Description("培训档案的业务逻辑处理")]
+	public partial class EduDocumentBusinessHandler : BaseBusinessHandler<EduDocument>
+    {   
+        public EduDocumentBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.EduDocumentRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
 	/// 商品附加属性的业务逻辑处理 
 	/// </summary>
 	[Description("商品附加属性的业务逻辑处理")]
@@ -152,6 +334,34 @@ namespace BugsBox.Pharmacy.BusinessHandlers
     {   
         public GoodsAdditionalPropertyBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
             : base(repositoryProvider.GoodsAdditionalPropertyRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 体检档案细节的业务逻辑处理 
+	/// </summary>
+	[Description("体检档案细节的业务逻辑处理")]
+	public partial class HealthCheckDetailBusinessHandler : BaseBusinessHandler<HealthCheckDetail>
+    {   
+        public HealthCheckDetailBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.HealthCheckDetailRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 体检档案的业务逻辑处理 
+	/// </summary>
+	[Description("体检档案的业务逻辑处理")]
+	public partial class HealthCheckDocumentBusinessHandler : BaseBusinessHandler<HealthCheckDocument>
+    {   
+        public HealthCheckDocumentBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.HealthCheckDocumentRepository,repositoryProvider,connectedInfoProvider)
         {
 		    
         }
@@ -537,9 +747,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 	
     		
 	/// <summary>
-	/// GSP证书的业务逻辑处理 
+	/// 药品经营许可证的业务逻辑处理 
 	/// </summary>
-	[Description("GSP证书的业务逻辑处理")]
+	[Description("药品经营许可证的业务逻辑处理")]
 	public partial class GSPLicenseBusinessHandler : BaseBusinessHandler<GSPLicense>
     {   
         public GSPLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
@@ -593,9 +803,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 	
     		
 	/// <summary>
-	/// 药品经营许可证的业务逻辑处理 
+	/// GSP证书的业务逻辑处理 
 	/// </summary>
-	[Description("药品经营许可证的业务逻辑处理")]
+	[Description("GSP证书的业务逻辑处理")]
 	public partial class MedicineBusinessLicenseBusinessHandler : BaseBusinessHandler<MedicineBusinessLicense>
     {   
         public MedicineBusinessLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
@@ -628,6 +838,104 @@ namespace BugsBox.Pharmacy.BusinessHandlers
     {   
         public InstrumentsProductionLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
             : base(repositoryProvider.InstrumentsProductionLicenseRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 组织机构代码证的业务逻辑处理 
+	/// </summary>
+	[Description("组织机构代码证的业务逻辑处理")]
+	public partial class OrganizationCodeLicenseBusinessHandler : BaseBusinessHandler<OrganizationCodeLicense>
+    {   
+        public OrganizationCodeLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.OrganizationCodeLicenseRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 食品流通许可证的业务逻辑处理 
+	/// </summary>
+	[Description("食品流通许可证的业务逻辑处理")]
+	public partial class FoodCirculateLicenseBusinessHandler : BaseBusinessHandler<FoodCirculateLicense>
+    {   
+        public FoodCirculateLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.FoodCirculateLicenseRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 卫生许可证的业务逻辑处理 
+	/// </summary>
+	[Description("卫生许可证的业务逻辑处理")]
+	public partial class HealthLicenseBusinessHandler : BaseBusinessHandler<HealthLicense>
+    {   
+        public HealthLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.HealthLicenseRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 税务登记证的业务逻辑处理 
+	/// </summary>
+	[Description("税务登记证的业务逻辑处理")]
+	public partial class TaxRegisterLicenseBusinessHandler : BaseBusinessHandler<TaxRegisterLicense>
+    {   
+        public TaxRegisterLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.TaxRegisterLicenseRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 事业单位法人证的业务逻辑处理 
+	/// </summary>
+	[Description("事业单位法人证的业务逻辑处理")]
+	public partial class LnstitutionLegalPersonLicenseBusinessHandler : BaseBusinessHandler<LnstitutionLegalPersonLicense>
+    {   
+        public LnstitutionLegalPersonLicenseBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.LnstitutionLegalPersonLicenseRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 医疗机构执业许可证的业务逻辑处理 
+	/// </summary>
+	[Description("医疗机构执业许可证的业务逻辑处理")]
+	public partial class MmedicalInstitutionPermitBusinessHandler : BaseBusinessHandler<MmedicalInstitutionPermit>
+    {   
+        public MmedicalInstitutionPermitBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.MmedicalInstitutionPermitRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
+	/// 全国工业产品生产许可证的业务逻辑处理 
+	/// </summary>
+	[Description("全国工业产品生产许可证的业务逻辑处理")]
+	public partial class IndustoryProductCertificateBusinessHandler : BaseBusinessHandler<IndustoryProductCertificate>
+    {   
+        public IndustoryProductCertificateBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.IndustoryProductCertificateRepository,repositoryProvider,connectedInfoProvider)
         {
 		    
         }
@@ -1209,6 +1517,20 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 	
     		
 	/// <summary>
+	/// 首营药材供货人管理的业务逻辑处理 
+	/// </summary>
+	[Description("首营药材供货人管理的业务逻辑处理")]
+	public partial class SupplyPersonBusinessHandler : BaseBusinessHandler<SupplyPerson>
+    {   
+        public SupplyPersonBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.SupplyPersonRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
 	/// 供货单位的业务逻辑处理 
 	/// </summary>
 	[Description("供货单位的业务逻辑处理")]
@@ -1349,6 +1671,20 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 	
     		
 	/// <summary>
+	/// 的业务逻辑处理 
+	/// </summary>
+	[Description("的业务逻辑处理")]
+	public partial class WarehouseZonePositionBusinessHandler : BaseBusinessHandler<WarehouseZonePosition>
+    {   
+        public WarehouseZonePositionBusinessHandler(RepositoryProvider repositoryProvider,IConnectedInfoProvider connectedInfoProvider)
+            : base(repositoryProvider.WarehouseZonePositionRepository,repositoryProvider,connectedInfoProvider)
+        {
+		    
+        }
+    }
+	
+    		
+	/// <summary>
 	/// 报警设置的业务逻辑处理 
 	/// </summary>
 	[Description("报警设置的业务逻辑处理")]
@@ -1374,267 +1710,5 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 		    
         }
     }
-
-    //wfz
-    /// <summary>
-    /// 中药材供应人的业务逻辑处理 
-    /// </summary>
-    [Description("中药材供应人的业务逻辑处理")]
-    public partial class SupplyPersonBusinessHandler : BaseBusinessHandler<SupplyPerson>
-    {
-        public SupplyPersonBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.SupplyPersonRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
+	
     }
-    //end
-
-    /// <summary>
-    /// 药品不合格的业务逻辑处理 
-    /// </summary>
-    [Description("药品不合格的业务逻辑处理")]
-    public partial class DrugsUnqualificationHandler : BaseBusinessHandler<drugsUnqualication>
-    {
-        public DrugsUnqualificationHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.drugsUnqualicationRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    /// <summary>
-    /// 组织机构代码证的业务逻辑处理 
-    /// </summary>
-    [Description("组织机构代码证的业务逻辑处理")]
-    public partial class OrganizationCodeLicenseHandler : BaseBusinessHandler<OrganizationCodeLicense>
-    {
-        public OrganizationCodeLicenseHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.OrganizationCodeLicenseRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    /// <summary>
-    /// 卫生许可证的业务逻辑处理 
-    /// </summary>
-    [Description("卫生许可证的业务逻辑处理")]
-    public partial class HealthLicenseHandler : BaseBusinessHandler<HealthLicense>
-    {
-        public HealthLicenseHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.HealthLicenseRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    /// <summary>
-    /// 食品流通许可证的业务逻辑处理 
-    /// </summary>
-    [Description("食品流通许可证的业务逻辑处理")]
-    public partial class FoodCirculateLicenseHandler : BaseBusinessHandler<FoodCirculateLicense>
-    {
-        public FoodCirculateLicenseHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.FoodCirculateLicenseRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    /// <summary>
-    /// 税务登记证的业务逻辑处理 
-    /// </summary>
-    [Description("税务登记证的业务逻辑处理")]
-    public partial class TaxRegisterLicenseHandler : BaseBusinessHandler<TaxRegisterLicense>
-    {
-        public TaxRegisterLicenseHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.TaxRegisterLicenseRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    /// <summary>
-    /// 不合格药品销毁的业务逻辑处理 
-    /// </summary>
-    [Description("不合格药品销毁的业务逻辑处理")]
-    public partial class DrugsUnqualificationDestroyHandler : BaseBusinessHandler<DrugsUnqualificationDestroy>
-    {
-        public DrugsUnqualificationDestroyHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.DrugsUnqualificationDestroyRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    /// <summary>
-    /// update 2013-3-9 
-    /// </summary>
-    #region 待处理药品的业务逻辑处理
-    [Description("待处理药品的业务逻辑处理")]
-    public partial class DrugsUndeterminateHandler : BaseBusinessHandler<DrugsUndeterminate>
-    {
-        public DrugsUndeterminateHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.DrugsUndeterminateRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    #endregion
-
-    /// <summary>
-    /// update 2013-3-9 
-    /// </summary>
-    #region 拒收单的业务逻辑处理
-    [Description("拒收单的业务逻辑处理")]
-    public partial class DocumentRefuseHandler : BaseBusinessHandler<DocumentRefuse>
-    {
-        public DocumentRefuseHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.DocumentRefuseRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    #endregion
-
-    /// <summary>
-    /// update 2013-3-9 
-    /// </summary>
-    #region 体检档案的业务逻辑处理
-    [Description("体检档案的业务逻辑处理")]
-    public partial class HealthCheckDocumentHandler : BaseBusinessHandler<HealthCheckDocument>
-    {
-        public HealthCheckDocumentHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.HealthCheckDocumentRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    #endregion
-
-    /// <summary>
-    /// update 2013-3-9 
-    /// </summary>
-    #region 体检档案细节的业务逻辑处理
-    [Description("体检档案细节的业务逻辑处理")]
-    public partial class HealthCheckDetailHandler : BaseBusinessHandler<HealthCheckDetail>
-    {
-        public HealthCheckDetailHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.HealthCheckDetailRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    #endregion
-
-    /// <summary>
-    /// update 2013-3-9 
-    /// </summary>
-    #region 培训档案的业务逻辑处理
-    [Description("培训档案的业务逻辑处理")]
-    public partial class EduDocumentHandler : BaseBusinessHandler<EduDocument>
-    {
-        public EduDocumentHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.EduDocumentRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    #endregion
-
-    /// <summary>
-    /// update 2013-3-9 
-    /// </summary>
-    #region 培训档案细节的业务逻辑处理
-    [Description("培训档案细节的业务逻辑处理")]
-    public partial class EduDetailslHandler : BaseBusinessHandler<EduDetails>
-    {
-        public EduDetailslHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.EduDetailsRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    #endregion
-
-    
-
-    /// <summary>
-    /// 报损的业务逻辑处理 
-    /// </summary>
-    [Description("报损的业务逻辑处理")]
-    public partial class DrugsBreakageBusinessHandler : BaseBusinessHandler<DrugsBreakage>
-    {
-        public DrugsBreakageBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.DrugsBreakageRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    /// <summary>
-    /// 移库的业务逻辑处理 
-    /// </summary>
-    [Description("移库的业务逻辑处理")]
-    public partial class DrugsInventoryMoveBusinessHandler : BaseBusinessHandler<DrugsInventoryMove>
-    {
-        public DrugsInventoryMoveBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.DrugsInventoryMoveRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    public partial class LnstitutionLegalPersonLicenseBusinessHandler : BaseBusinessHandler<LnstitutionLegalPersonLicense>
-    {
-        public LnstitutionLegalPersonLicenseBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.LnstitutionLegalPersonLicenseRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    public partial class MmedicalInstitutionPermitBusinessHandler : BaseBusinessHandler<MmedicalInstitutionPermit>
-    {
-        public MmedicalInstitutionPermitBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.MmedicalInstitutionPermitRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    public partial class DirectSalesOrderBusinessHandler : BaseBusinessHandler<DirectSalesOrder>
-    {
-        public DirectSalesOrderBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.DirectSalesOrderRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-    public partial class DirectSalesOrderDetailBusinessHandler : BaseBusinessHandler<DirectSalesOrderDetail>
-    {
-        public DirectSalesOrderDetailBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.DirectSalesOrderDetailRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    public partial class WareHouseZonePostionBusinessHandler : BaseBusinessHandler<WareHouseZonePosition>
-    {
-        public WareHouseZonePostionBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.WareHouseZonePositionRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-
-    public partial class IndustoryProductCertificateBusinessHandler : BaseBusinessHandler<IndustoryProductCertificate>
-    {
-        public IndustoryProductCertificateBusinessHandler(RepositoryProvider repositoryProvider, IConnectedInfoProvider connectedInfoProvider)
-            : base(repositoryProvider.IndustoryProductCertificateRepository, repositoryProvider, connectedInfoProvider)
-        {
-
-        }
-    }
-}

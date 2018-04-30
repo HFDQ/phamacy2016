@@ -166,7 +166,7 @@ namespace BugsBox.Pharmacy.Repository
 	/// <summary>
     /// 不合格药品仓储接口
     /// </summary>
-    public partial interface IdrugsUnqualicationRepository : IRepository<drugsUnqualication> 
+    public partial interface IDrugsUnqualicationRepository : IRepository<DrugsUnqualication> 
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}
@@ -966,7 +966,7 @@ namespace BugsBox.Pharmacy.Repository
 	/// <summary>
     /// 仓储接口
     /// </summary>
-    public partial interface IWareHouseZonePositionRepository : IRepository<WareHouseZonePosition> 
+    public partial interface IWarehouseZonePositionRepository : IRepository<WarehouseZonePosition> 
     { 
 		 RepositoryProvider RepositoryProvider { get; set; }
 	}

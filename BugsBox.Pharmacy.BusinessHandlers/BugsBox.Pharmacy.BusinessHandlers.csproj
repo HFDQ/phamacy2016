@@ -143,7 +143,7 @@
     <Compile Include="BusinessHandlers\DeliveryBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\DepartmentBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\DirectSalesOrderBusinessHandler.cs" />
-    <Compile Include="BusinessHandlers\DocumentRefuseBussinessHandler.cs" />
+    <Compile Include="BusinessHandlers\DocumentRefuseBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\DoubtDrugBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\DrugDosageBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\DrugInventoryRecordBusinessHandler.cs" />
@@ -161,8 +161,8 @@
     <Compile Include="BusinessHandlers\DrugTypeBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\DrugUserDefinedTypeBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\DrugMaintainSetBusinessHandler.cs" />
-    <Compile Include="BusinessHandlers\EduDetailslHandler.cs" />
-    <Compile Include="BusinessHandlers\EduDocumentHandler.cs" />
+    <Compile Include="BusinessHandlers\EduDetailsBusinesslHandler.cs" />
+    <Compile Include="BusinessHandlers\EduDocumentBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\EmployeeBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\GMPLicenseBusinessHandler.cs" />
     <Compile Include="BusinessHandlers\GMSPLicenseBusinessScopeBusinessHandler.cs" />

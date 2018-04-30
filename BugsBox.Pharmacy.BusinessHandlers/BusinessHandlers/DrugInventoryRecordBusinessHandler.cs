@@ -578,7 +578,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             if (c.Count() <= 0) return null;
 
             var re = from i in c
-                     join d in RepositoryProvider.Db.drugsUnqualications on
+                     join d in RepositoryProvider.Db.DrugsUnqualications on
                      i.Id equals d.DrugInventoryRecordID
                      join pid in RepositoryProvider.Db.PurchaseInInventeryOrderDetails.Where(r => !r.Deleted)
                      on i.PurchaseInInventeryOrderDetailId equals pid.Id

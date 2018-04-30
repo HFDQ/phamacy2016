@@ -11,7 +11,7 @@ using BugsBox.Pharmacy.Repository;
 
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
-    partial class DocumentRefuseHandler
+    partial class DocumentRefuseBusinessHandler
     {
         protected override IQueryable<DocumentRefuse> IncludeNavigationProperties(IQueryable<DocumentRefuse> queryable)
         {

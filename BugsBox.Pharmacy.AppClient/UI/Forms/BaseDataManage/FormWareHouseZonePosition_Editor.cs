@@ -84,15 +84,15 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                     return;
                 }
 
-                List<Models.WareHouseZonePosition> ListPositions = new List<Models.WareHouseZonePosition>();
-                Models.WareHouseZonePosition p = null;
+                List<Models.WarehouseZonePosition> ListPositions = new List<Models.WarehouseZonePosition>();
+                Models.WarehouseZonePosition p = null;
                 int count = 0;
                 for (int i = 0; i < prc.Row; i++)
                 {
                     for (int j = 0; j < prc.Col; j++)
                     {
                         count++;
-                        p = new Models.WareHouseZonePosition
+                        p = new Models.WarehouseZonePosition
                         {
                             Id = Guid.NewGuid(),
                             Capacity = prc.Capacity,

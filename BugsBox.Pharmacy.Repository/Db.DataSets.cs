@@ -114,7 +114,7 @@ namespace BugsBox.Pharmacy.Repository
 		/// <summary>
         /// 不合格药品s
         /// </summary>
-		public DbSet<drugsUnqualication> drugsUnqualications { get; set; }
+		public DbSet<DrugsUnqualication> DrugsUnqualications { get; set; }
 	 
 		/// <summary>
         /// 不合格药品销毁情况s
@@ -614,7 +614,7 @@ namespace BugsBox.Pharmacy.Repository
 		/// <summary>
         /// s
         /// </summary>
-		public DbSet<WareHouseZonePosition> WarehouseZonePositions { get; set; }
+		public DbSet<WarehouseZonePosition> WarehouseZonePositions { get; set; }
 	 
 		/// <summary>
         /// 报警设置s

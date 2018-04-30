@@ -130,7 +130,183 @@ namespace BugsBox.Pharmacy.IServices
 			 
 		#endregion 
 		 
+		#region 行政区域划分(ChinaDistrictBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region (DirectSalesOrderBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddDirectSalesOrderAndDetail(DirectSalesOrder dso,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool DeleteDirectSalesOrderAndDetail(Guid Id,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveDirectSalesOrderAndDetail(DirectSalesOrder dso,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DirectSalesModel[] GetDirectSalesModelByApprovalStatus(DirectSalesQueryModel dsq,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DirectSalesOrderDetailModel> GetDirectSalesOrderDetailModelByDirectSalesModel(Guid DirectSalesId,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddDirectSaleApproval(DirectSalesOrder value,Guid approvalFlowTypeID,Guid userID,String changeNote,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DirectSalesOrder GetDirectSalesOrderByFlowId(Guid FlowId,out string message);
+			 
+		#endregion 
+		 
+		#region (DirectSalesOrderDetailBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 收货拒收单(DocumentRefuseBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DocumentRefuse[] QueryRefuseDocument(String source,int proc,String keyword,out String msg,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool RefuseNextProc(DocumentRefuse value,Guid UserID,out String msg,out string message);
+			 
+		#endregion 
+		 
+		#region 药物库存变动历史(DrugInventoryRecordHisBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 药品养护记录(DrugMaintenanceRecordBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 报损药品(DrugsBreakageBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddDrugsBreakageByFlowID(DrugsBreakage value,Guid flowTypeID,String changeNote,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugsBreakage GetDrugsBreakageByFlowID(Guid flowID,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugsBreakage[] GetDrugsBreakagesPassed(DrugsBreakage db,out string message);
+			 
+		#endregion 
+		 
+		#region 移库(DrugsInventoryMoveBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddDrugsInventoryMoveByFlowID(DrugsInventoryMove value,Guid flowTypeID,String changeNote,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugsInventoryMove GetDrugsInventoryMoveByFlowID(Guid flowID,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DrugsInventoryMoveRecordModel> GetMoveRecords(DrugsInventoryMove dm,out string message);
+			 
+		#endregion 
+		 
+		#region 待处理药品(DrugsUndeterminateBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugsUndeterminate[] AllDrugsUndeterminate(int state,String source,String keyword,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveToNextProc(DrugsUndeterminate value,Guid userID,out string message);
+			 
+		#endregion 
+		 
+		#region 不合格药品(DrugsUnqualicationBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugsUnqualication GetDrugsUnqualificationByID(Guid ItemGUID,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		drugsUnqualificationQuery getDrugsUnqualificationQueryByFlowID(Guid flowID,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<drugsUnqualificationQuery> GetDrugsUnqualificationQuery(Guid createUID,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<DrugsUnqualication> GetDrugsUnqualificationByCondition(drugsUnqualificationCondition Condition,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		void addDrugsUnqualityApproval(DrugsUnqualication value,Guid approvalFlowTypeID,Guid userID,String changeNote,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool EditDrugUnqualification(DrugsUnqualication du,int flag,out string message);
+			 
+		#endregion 
+		 
+		#region 不合格药品销毁情况(DrugsUnqualificationDestroyBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugsUnqualificationDestroy[] getDrugsUnqualificationDestroysByCondition(DateTime dtFrom,DateTime dtTo,String keyword,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool CreateDestroyByDrugsBreakage(DrugsBreakage[] dbs,DrugsUnqualificationDestroy d,out string message);
+			 
+		#endregion 
+		 
+		#region 培训档案细节(EduDetailsBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<EduDetails> SearchPagedEduDetailsByAllStrings(String keys,int index,int size,out PagerInfo pager,out string message);
+			 
+		#endregion 
+		 
+		#region 培训档案(EduDocumentBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<EduDocument> SearchPagedEduDocumentByAllStrings(String keys,int index,int size,out PagerInfo pager,out string message);
+			 
+		#endregion 
+		 
 		#region 商品附加属性(GoodsAdditionalPropertyBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 体检档案细节(HealthCheckDetailBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<HealthCheckDetail> SearchPagedHealthCheckDetailByAllStrings(String keys,int index,int size,out PagerInfo pager,out string message);
+			 
+		#endregion 
+		 
+		#region 体检档案(HealthCheckDocumentBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<HealthCheckDocument> SearchPagedHealthCheckDocumentByAllStrings(String keys,int index,int size,out PagerInfo pager,out string message);
 			 
 		#endregion 
 		 
@@ -167,6 +343,10 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		IEnumerable<Delivery> GetDeliveryPaged(DeliveryIndexInput deliveryIndexInput,out PagerInfo pager,int pageindex,int pageSize,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DeliveryTrasactionModel> GetDeliveryTransactionPaged(DeliveryIndexInput deliveryIndexInput,out PagerInfo pager,int pageindex,int pageSize,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
@@ -254,17 +434,15 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-            IEnumerable<LackDrugModel> GetDrugInfoForOutofStock(out string message, int stockLower);
+		IEnumerable<LackDrugModel> GetDrugInfoForOutofStock(int stockLower,Nullable<DateTime> begindate,Nullable<DateTime> enddate,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		DrugInfo GetDrugInfoByFlowID(Guid flowId,out string message);
-
-        //WFZ modified
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            DrugInfo GetGoodsInfoByFlowID(Guid flowId, out string message);
-        //WFZ end
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugInfo GetGoodsInfoByFlowID(Guid flowId,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
@@ -288,7 +466,27 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-		List<DrugInfo> SearchPagedDrugInfosByAllStrings(out PagerInfo pager,out string message,String keys,int index,int size);
+		List<DrugInfo> SearchPagedDrugInfosByAllStrings(String keys,int index,int size,out PagerInfo pager,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DrugInfoModel> GetDrugInfoByCondition(String keys,int index,int size,out PagerInfo pager,bool ValidCondition,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<InstrumentsModel> GetInstrumentsByCondition(String keys,int index,int size,out PagerInfo pager,bool ValidCondition,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<FoodModel> GetFoodByCondition(String keys,int index,int size,out PagerInfo pager,bool ValidCondition,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		int GetDrugInfoCount(String BusinessScopeType,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugInfo[] GetDrugInfoByKeyword(DirectSalesQueryModel m,out string message);
 			 
 		#endregion 
 		 
@@ -309,6 +507,30 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		List<InventeryModel> StorageQuery(String ProductGeneralName,String StandardCode,String BatchNumber,Guid[] WarehouseZones,int index,int size,List<Object> searchConditions,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DrugInventoryRecord> GetDrugInventoryRecordPL(String kw,int type,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DrugInventoryNearExpiration> GetDrugInventoryRecordNearExpirationDate(int Month,String keyword,int MaintainType,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool CheckSpecial(OutInventory oi,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DrugInventoryRecord> GetDrugInventoryRecordBySalesOrderId(Guid SoId,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<InventeryModel> GetDrugsInventoryRecordToUnqualification(bool IsOutDate,String DrugPY,String BatchNumber,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DrugQualityTraceModel> GetAllDrugUnqualityTrace(Guid DrugInfoId,out string message);
 			 
 		#endregion 
 		 
@@ -328,7 +550,15 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveDrugMaintainDetailAndUndeterminate(DrugMaintainRecordDetail[] dmrds,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
 		List<DrugMaintainRecordDetail> GetDrugMaintainRecordDetailByCondition(String BillDocumentNo,Nullable<DateTime> CheckDate,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddMaintainDetails(IEnumerable<DrugMaintainRecordDetail> details,out string message);
 			 
 		#endregion 
 		 
@@ -400,7 +630,7 @@ namespace BugsBox.Pharmacy.IServices
 			 
 		#endregion 
 		 
-		#region GSP证书(GSPLicenseBusinessHandler)的自定义逻辑
+		#region 药品经营许可证(GSPLicenseBusinessHandler)的自定义逻辑
 			 
 		#endregion 
 		 
@@ -420,7 +650,7 @@ namespace BugsBox.Pharmacy.IServices
 			 
 		#endregion 
 		 
-		#region 药品经营许可证(MedicineBusinessLicenseBusinessHandler)的自定义逻辑
+		#region GSP证书(MedicineBusinessLicenseBusinessHandler)的自定义逻辑
 			 
 		#endregion 
 		 
@@ -429,6 +659,38 @@ namespace BugsBox.Pharmacy.IServices
 		#endregion 
 		 
 		#region 器械生产许可证(InstrumentsProductionLicenseBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 组织机构代码证(OrganizationCodeLicenseBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 食品流通许可证(FoodCirculateLicenseBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 卫生许可证(HealthLicenseBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 税务登记证(TaxRegisterLicenseBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 事业单位法人证(LnstitutionLegalPersonLicenseBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 医疗机构执业许可证(MmedicalInstitutionPermitBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 全国工业产品生产许可证(IndustoryProductCertificateBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddIndustoryProductCertification(IndustoryProductCertificate entity,out string message);
 			 
 		#endregion 
 		 
@@ -485,6 +747,22 @@ namespace BugsBox.Pharmacy.IServices
 		#endregion 
 		 
 		#region 库存记录(PurchaseInInventeryOrderBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		ReturnPurchaseOrderList[] GetInventeryOrderListByReturn(String keyword,String supplyUnitName,String DrugName,String Batch,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		PurchaseOrderReturnDetailEntity[] getPurchaseInventoryDetatilEntity(Guid id,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool saveDrugInventeryNumberByFinnanceApproval(PurchaseOrderReturnDetail[] prd,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		PurchaseInInventeryOrderDetail[] GetLastInInventoryDetail(Guid[] DrugInfoIds,out string message);
 			 
 		#endregion 
 		 
@@ -560,7 +838,7 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-            String CreatePurchaseCheckingOrderByEnity(PurchaseCommonEntity order, List<PurchaseCheckingOrderDetailEntity> orderDetails, List<DrugsUndeterminate> ListUndeterminate, out string message);
+		String CreatePurchaseCheckingOrderByEnity(PurchaseCommonEntity order,List<PurchaseCheckingOrderDetailEntity> orderDetails,List<DrugsUndeterminate> ListUndeterminate,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
@@ -616,6 +894,14 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<PurchaseOrderReturnModel> GetPReturnOrderByQureyModel(PurchaseOrderReturnQueryModel q,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool CancelPurchaseReturnOrder(Guid PurchaseReturnOrderId,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
 		List<PurchaseCommonEntity> GetPurchaseCashOrdersByPurchaseOrderId(Guid purchaseOrderId,out string message);
 			  
 			[OperationContract]
@@ -629,6 +915,34 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		List<PurchaseCommonEntity> GetPurchaseCashOrders(String documentNumber,DateTime startTime,DateTime endTime,Int32[] orderStatusValue,Guid[] purchaseUnits,int index,int size,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<HistoryPurchase> GetPurchaseHistoryByInInventoryPurchaseID(Guid id,int GType,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<PurchaseTaxReturn> GetPurchaseTaxReturn(Guid SuId,DateTime dtF,DateTime dtT,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SavePurchaseOrdersByPurchaseTaxReturn(PurchaseTaxReturn[] list,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<SupplyUnitHistoryDrugList> GetSupplyUnitHistoryDrugList(String Keyword,String DrugName,Guid SUId,DateTime dtf,DateTime dtt,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<PurchaseOrderImpt> CheckForPurchaseOrderDetails(IEnumerable<PurchaseOrderImpt> List,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<DrugInfoForPurchaseSelectorModel> GetDrugInfoForpurchaseSelector(DrugInfoForPurchaseSelectorQueryModel q,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		LastPurchaseUnitPrice[] GetLastPurchaseUnitPrice(Guid[] DrugInfoIds,out string message);
 			 
 		#endregion 
 		 
@@ -688,6 +1002,10 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
+		PurchaseUnit[] GetPurchaseUnitsByKeywords(String keyword,bool isAccurate,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
 		bool UpdatePurchaseUnitByName(String name,PurchaseUnit item,out string message);
 			  
 			[OperationContract]
@@ -717,6 +1035,10 @@ namespace BugsBox.Pharmacy.IServices
 		#endregion 
 		 
 		#region 购货单位采购人员(PurchaseUnitBuyerBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<PurchaseUnitBuyer> GetPurchaseUnitBuyersByPurchaseUnitId(Guid PId,out string message);
 			 
 		#endregion 
 		 
@@ -729,6 +1051,14 @@ namespace BugsBox.Pharmacy.IServices
 		#endregion 
 		 
 		#region (PurchasingPlanBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SubmitRefunds(PurchasingPlan[] pps,int flag,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<PurchasingPlan> GetPurchaseRefunds(Object[] objs,out string message);
 			 
 		#endregion 
 		 
@@ -777,6 +1107,14 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		IEnumerable<RoleWithUser> GetRoleWithUserInfo(Guid UserID,Guid RoleId,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<RoleWithModuleModel> GetRolewithModule(out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<RoleWithUserModel> GetRolewithUser(out string message);
 			 
 		#endregion 
 		 
@@ -789,11 +1127,7 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		void AddSalesOrderAndDetails(SalesOrder so,out string message);
-
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            System.Collections.Generic.IEnumerable<DrugInventoryRecord> GetDrugInventoryRecordBySalesOrderId(Guid SoId, out string message);
-
+			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		void ModifySalesOrderAndDetails(SalesOrder so,out string message);
@@ -816,15 +1150,15 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-		IEnumerable<Business.Models.SaleOrderModel> GetSalesOrderBalanceCodePaged(SalesCodeSearchInput searchInput,out string message);
+		IEnumerable<SaleOrderModel> GetSalesOrderBalanceCodePaged(SalesCodeSearchInput searchInput,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-            System.Collections.Generic.IEnumerable<Business.Models.SaleOrderModel> GetSalesOrderCodePaged(Business.Models.SalesCodeSearchInput searchInput,out string message);
+		IEnumerable<SaleOrderModel> GetSalesOrderCodePaged(SalesCodeSearchInput searchInput,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-            IEnumerable<Business.Models.SaleOrderModel> GetSalesOrderCancelCodePaged(out string message,SalesCodeSearchInput searchInput);
+		IEnumerable<SaleOrderModel> GetSalesOrderCancelCodePaged(SalesCodeSearchInput searchInput,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
@@ -845,6 +1179,70 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		void CancelSalesOrder(SalesOrder so,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		SalesOrder[] GetSaleOrderByPurchaseUnitID(Guid id,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<DrugPath> GetDrugPath(QueryModelForDrugPath m,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<SalesTaxRate> GetSalesTaxRate(Guid Pid,Guid Uid,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<SalerTaxManage> GetSalerTaxManage(DateTime dtF,DateTime DtT,Guid purchaseUnitId,String SalerName,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveSaleOrderTaxRate(List<SalerTaxManage> ListST,int locker,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<SaleOrderModel> GetSaleRefundHistory(SalesCodeSearchInput searchInput,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveSaleRefund(SalesOrder so,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<SalesOrderModelForSalesOrderReturn> GetSalesOrderByOrderModel(SalesOrderQueryModel m,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveSalePriceControlRules(SalePriceControlRulesModel m,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		SalePriceControlRulesModel GetSalePriceControlRules(out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<Model_IdName> GetSalesCheckers(String keyword,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<Model_IdName> GetInventoryKeepers(String keyword,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		SalesOrderForVATModel[] GetVATModelsbyQueryModel(SalesOrderForVATQueryModel q,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveVATCode(Guid Id,String VATCode,String VATNumber,decimal VATRate,String Bank,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		SalesOrderDetailForVATModel[] GetSalesOrderDetailForVATModels(Guid SalesOrderId,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveVATForSalesOrderDetails(SalesOrderDetailForVATModel[] list,out string message);
 			 
 		#endregion 
 		 
@@ -896,7 +1294,7 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-            IEnumerable<Business.Models.SalesOrderReturnModel> GetReturnOrderCheckCodePaged(SalesCodeSearchInput searchInput, out string message);
+		IEnumerable<SalesOrderReturnModel> GetReturnOrderCheckCodePaged(SalesCodeSearchInput searchInput,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
@@ -904,7 +1302,7 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
-		IEnumerable<Business.Models.SalesOrderReturnModel> GetReturnOrderCancelCodePaged(SalesCodeSearchInput searchInput,out string message);
+		IEnumerable<SalesOrderReturnModel> GetReturnOrderCancelCodePaged(SalesCodeSearchInput searchInput,out string message);
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
@@ -925,6 +1323,18 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		List<User> GetSalesReturnCancelUser(out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		Dictionary<Int32,Decimal> GetSalesReturnSummary(SalesOrder[] so,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		SalesOrderReturn[] GetSalesOrderReturnByCreateTime(DateTime dtFrom,DateTime dtTo,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		SalesOrderReturnDetailModel[] GetSalesOrderReturnDetailModels(SalesOrderReturnDetailQueryModel q,out string message);
 			 
 		#endregion 
 		 
@@ -960,6 +1370,10 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<SalesOrderOutInventoryModel> GetWaitingOutInventoryList(SalesOrderOutInventoryQueryModel q,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
 		List<OutInventory> GetAllNotApprovalOutInventory(out string message);
 			  
 			[OperationContract]
@@ -976,7 +1390,23 @@ namespace BugsBox.Pharmacy.IServices
 			  
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveDeliveryByPurchaseReturn(PurchaseOrderReturn por,Guid createUid,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
 		List<OutInventoryDetail> GetOutInventoryDetailFromOrderDetail(Guid orderID,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<OutInventoryMode> GetOutInventorySpecialDrugs(OutInventory outInve,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<WarehouseZonePositionOutInventoryModel> GetWarehouseZonePositionOutInventories(Guid SalesOrderId,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		DrugOutInventoryCheckModel[] GetDrugOutInventoryChecksByQueryModel(DrugOutInventoryCheckQueryModel q,out string message);
 			 
 		#endregion 
 		 
@@ -997,6 +1427,10 @@ namespace BugsBox.Pharmacy.IServices
 		#endregion 
 		 
 		#region 门店(StoreBusinessHandler)的自定义逻辑
+			 
+		#endregion 
+		 
+		#region 首营药材供货人管理(SupplyPersonBusinessHandler)的自定义逻辑
 			 
 		#endregion 
 		 
@@ -1057,10 +1491,22 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		int GetLockSupplyUnitCount(out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		SupplyUnit[] GetSupplyUnitsByKeywords(String Keyword,bool IsAccurate,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<Model_IdName> GetSuplyUnitIdNamesByQueryModel(BaseQueryModel q,out string message);
 			 
 		#endregion 
 		 
 		#region 供货商销售人员(SupplyUnitSalesmanBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<SupplyUnitSalesman> GetSalesManBySupplyUnitID(Guid SupplyUnitID,out string message);
 			 
 		#endregion 
 		 
@@ -1097,6 +1543,18 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		Employee GetEmployeeByUserId(Guid userId,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<AllTax> GetAllTax(DateTime dtF,DateTime dtT,Guid salerID,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<User> GetUserByPosition(String roleName,String account,String pwd,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<Model_IdName> GetUserIdNamesByQueryModel(BaseQueryModel q,out string message);
 			 
 		#endregion 
 		 
@@ -1105,10 +1563,42 @@ namespace BugsBox.Pharmacy.IServices
 			[OperationContract]
 	 [FaultContract(typeof(ServiceExceptionDetail))]
 		void LogUserLog(UserLog log,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		void WriteLog(Guid Uid,String Content,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<UserLogModel> GetPagedUserLogs(QueryBusinessUserLogModel m,out PagerInfo pagerInfo,int PageIndex,int PageSize,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		ServerInfo GetServerInfo(out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<UpdateFiles> GetUpdateFiles(String FileName,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveClientFile(out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		List<QualityFilesWarningModel> GetQualifyFilesCount(NearExpireDateQualifiedFiles WarningDate,out string message);
 			 
 		#endregion 
 		 
 		#region 车辆(VehicleBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddVehicleToApprovalByFlowID(Vehicle value,Guid flowTypeID,String ChangeNote,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		Vehicle GetVehicleByFlowID(Guid flowId,out string message);
 			 
 		#endregion 
 		 
@@ -1120,6 +1610,30 @@ namespace BugsBox.Pharmacy.IServices
 			 
 		#endregion 
 		 
+		#region (WarehouseZonePositionBusinessHandler)的自定义逻辑
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool AddWareHouseZonePositions(IEnumerable<WarehouseZonePosition> ListWareHouseZonePositions,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool SaveWareHouseZonePosition(IEnumerable<WarehouseZonePosition> ListWareHouseZonePositions,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		bool DeleteWareHouseZonePostion(IEnumerable<Guid> Ids,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		IEnumerable<WareHouseZonePositionModel> GetWareHouseZonePositionById(WareHouseZonePositionQueryModel q,out string message);
+			  
+			[OperationContract]
+	 [FaultContract(typeof(ServiceExceptionDetail))]
+		WarehouseZonePosition GetWarehouseZonePositionById(Guid Id,out string message);
+			 
+		#endregion 
+		 
 		#region 报警设置(WaringSetBusinessHandler)的自定义逻辑
 			 
 		#endregion 
@@ -1127,587 +1641,5 @@ namespace BugsBox.Pharmacy.IServices
 		#region 销售出库单(OutInventoryDetailBusinessHandler)的自定义逻辑
 			 
 		#endregion 
-
-        #region 不合格药品处理
-            /// <summary>
-            /// 添加药品不合格
-            /// </summary>
-            /// <param name="value"></param>
-            /// <param name="msg"></param>
-            /// <returns></returns>
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            drugsUnqualication GetDrugsUnqualificationByID(Guid ItemID, out string message);
-
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            List<Business.Models.drugsUnqualificationQuery> GetDrugsUnqualification(out string message, Guid UID);
-
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            List<drugsUnqualication> GetDrugsUnqualificationByCondition(drugsUnqualificationCondition Condition, out string message);
-
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            bool addDrugsUnqualityApproval(drugsUnqualication value, Guid approvalFlowTypeID, Guid userID, string changeNote, out string message);
-
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            Business.Models.drugsUnqualificationQuery getDrugsUnqualificationQueryByFlowID(Guid FlowID, out string message);
-
-            [OperationContract]
-            [FaultContract(typeof(ServiceExceptionDetail))]
-            bool EditDrugUnqualification(Models.drugsUnqualication du, int flag,out string message);
-
-            #endregion
-
-        #region salesman实体方法        
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Models.SupplyUnitSalesman> GetSalesManBySupplyUnitID(Guid SupplyUnitID, out string message);
-        #endregion
-
-        #region 不合格药品销毁查询接口2014-2-11
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugsUnqualificationDestroy[] getDrugsUnqualificationDestroysByCondition(DateTime dtFrom,DateTime dtTo,string keyword, out string msg);
-        #endregion
-
-        #region 待处理药品按状态查询接口2014-2-11
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugsUndeterminate[] GetDrugsUndeterminate(int state, string source, string keyword, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveToNextProc(DrugsUndeterminate value, Guid userID, out string msg);
-        #endregion
-
-        #region 拒收单查询接口
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DocumentRefuse[] QueryRefuseDocument(string source, int proc, string keyword, out string msg);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool RefuseNextProc(DocumentRefuse value,Guid UserID, out string msg);
-        #endregion
-
-        #region 健康，培训关键字查询处理逻辑接口
-        
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<HealthCheckDocument> SearchPagedHealthCheckDocumentByAllStrings(String keys, int index, int size, out PagerInfo pager, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<HealthCheckDetail> SearchPagedHealthCheckDetailByAllStrings(String keys, int index, int size, out PagerInfo pager, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<EduDocument> SearchPagedEduDocumentByAllStrings(String keys, int index, int size, out PagerInfo pager, out string message);
-
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<EduDetails> SearchPagedEduDetailsByAllStrings(String keys, int index, int size, out PagerInfo pager, out string message);
-
-        #endregion
-
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDrugsBreakageByFlowID(Models.DrugsBreakage value, Guid flowTypeID, string changeNote, out string message);
-        #endregion
-        
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugsBreakage GetDrugsBreakageByFlowID(Guid flowID, out string message);
-        #endregion
-
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDrugsInventoryMoveByFlowID(Models.DrugsInventoryMove value, Guid flowTypeID, string changeNote, out string message);
-        #endregion
-
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugsInventoryMove GetDrugsInventoryMoveByFlowID(Guid flowID, out string message);
-        #endregion
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugsBreakage[] GetDrugsBreakagesPassed(DrugsBreakage db,out string message);
-        #endregion
-
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        ReturnPurchaseOrderList[] GetInventeryOrderListByReturn(string keyword, string supplyUnitName, string DrugName, string Batch , out string message);
-        #endregion
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        PurchaseOrderReturnDetailEntity[] getPurchaseInventoryDetatilEntity(Guid id, out string message);
-        #endregion
-
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        SalesOrder[] GetSaleOrderByPurchaseUnitID(Guid id, out string message);
-        #endregion
-
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDrugMaintainDetailAndUndeterminate(Models.DrugMaintainRecordDetail[] dmrds,out string message);
-        #endregion
-        #region 获取销售单退货统计
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Dictionary<int, decimal> GetSalesReturnSummary(SalesOrder[] so, out string message);
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        SalesOrderReturn[] GetSalesOrderReturnByCreateTime(DateTime dtFrom, DateTime dtTo, out string message);
-        #endregion
-
-        #region 销毁报告写入
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool CreateDestroyByDrugsBreakage(Models.DrugsBreakage[] dbs,Models.DrugsUnqualificationDestroy d,out string message);
-        #endregion
-
-        #region 冲差价单处理方法
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SubmitRefunds(PurchasingPlan[] pps, int flag,out string message);
-        #endregion
-
-        #region 获取冲差价单
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<PurchasingPlan> GetPurchaseRefunds(object[] objs, out string message);
-        #endregion
-
-        #region 采退配送
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDeliveryByPurchaseReturn(Models.PurchaseOrderReturn por, System.Guid createUid,out string message);
-        #endregion
-
-        #region 药品流向
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Business.Models.DrugPath> GetDrugPath(Business.Models.QueryModelForDrugPath m, out string message);
-        #endregion
-
-        #region 销售开票时查看供货商
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.List<HistoryPurchase> GetPurchaseHistoryByInInventoryPurchaseID(System.Guid id,int type,out string message);
-        #endregion
-
-        #region 库存损益读取
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<DrugInventoryRecord> GetDrugInventoryRecordPL(string kw, int type, out string message);
-        #endregion
-
-        #region 库存近效期读取
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<BugsBox.Pharmacy.Business.Models.DrugInventoryNearExpiration> GetDrugInventoryRecordNearExpirationDate(int Month, string keyword, int MaintainType, out string message);
-        #endregion
-
-        #region 记录日志信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        void WriteLog(System.Guid Uid, string Content);
-        #endregion
-
-        #region 移库记录查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.DrugsInventoryMoveRecordModel> GetMoveRecords(Models.DrugsInventoryMove dm, out string message);
-        #endregion
-
-        #region 采购税票查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.PurchaseTaxReturn> GetPurchaseTaxReturn(System.Guid SuId, DateTime dtF, DateTime dtT,out string message);
-        #endregion
-
-        #region 采购单合并
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SavePurchaseOrdersByPurchaseTaxReturn(Business.Models.PurchaseTaxReturn[] list, out string message);
-        #endregion
-
-        #region 销售税率查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.SalesTaxRate> GetSalesTaxRate(System.Guid Pid, System.Guid Uid,out string message);
-        #endregion
-
-        #region 销售税费查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<Business.Models.SalerTaxManage> GetSalerTaxManage(System.DateTime dtF, System.DateTime DtT, Guid purchaseUnitId, string SalerName, out string message);
-        #endregion
-
-        #region 保存销售税费
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveSaleOrderTaxRate(List<Business.Models.SalerTaxManage> ListST,int locker,out string message);
-        #endregion
-
-        #region
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<Business.Models.AllTax> GetAllTax(System.DateTime dtF, System.DateTime dtT, Guid salerID,out string message);
-        #endregion
-
-        #region 车辆审批新增
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddVehicleToApprovalByFlowID(Models.Vehicle value, System.Guid flowTypeID, string ChangeNote,out string message);
-        #endregion
-
-        #region 从审批ID获取车辆信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Vehicle GetVehicleByFlowID(System.Guid flowId, out string message);
-        #endregion
-
-        #region 采购退货查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.PurchaseOrderReturnModel> GetPReturnOrderByQureyModel(Business.Models.PurchaseOrderReturnQueryModel q,out string message);
-        #endregion
-        
-        #region 查询历史销售冲差单
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<Business.Models.SaleOrderModel> GetSaleRefundHistory(SalesCodeSearchInput searchInput,out string message);
-        #endregion
-
-        #region 保存销售冲差单
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveSaleRefund(SalesOrder so,out string message);
-        #endregion
-
-        #region 获取出库复核特殊药品信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.OutInventoryMode> GetOutInventorySpecialDrugs(Models.OutInventory outInve, out string message);
-        #endregion
-
-        #region 分页药品基础信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.DrugInfoModel> GetDrugInfoByCondition(string keys, int index, int size, out PagerInfo pager, bool ValidCondition, out string message);
-        #endregion
-
-        #region 根据供应商查询供货药品
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.SupplyUnitHistoryDrugList> GetSupplyUnitHistoryDrugList(string Keyword, string DrugName, Guid SUId, DateTime dtf, DateTime dtt,out string message);
-        #endregion
-
-        #region 采购退货取消
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool CancelPurchaseReturnOrder(System.Guid PurchaseReturnOrderId,out string message);
-        #endregion
-
-        #region 获取服务器信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Business.Models.ServerInfo GetServerInfo(out string message);
-        #endregion
-
-        #region 获取服务器更新文件
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.UpdateFiles> GetUpdateFiles(string FileName);
-        #endregion
-
-        #region 获取角色权限分配表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.RoleWithModuleModel> GetRolewithModule();
-        #endregion
-
-        #region 获取用户权限分配表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.RoleWithUserModel> GetRolewithUser();
-        #endregion
-
-        #region 分经营范围获取品种数量
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        int GetDrugInfoCount(string BusinessScopeType);
-        #endregion
-
-        #region 根据用户岗位、账户密码返回用户
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<User> GetUserByPosition(string roleName, string account, string pwd);
-#endregion
-
-        #region 最近采购入库记录细节
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Models.PurchaseInInventeryOrderDetail[] GetLastInInventoryDetail(System.Guid[] DrugInfoIds);
-        #endregion
-
-        #region 查询配送单
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.DeliveryTrasactionModel> GetDeliveryTransactionPaged(Business.Models.DeliveryIndexInput deliveryIndexInput, out BugsBox.Application.Core.PagerInfo pager, int pageindex, int pageSize);
-        #endregion
-
-       #region 新增直调销售表（事务）
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDirectSalesOrderAndDetail(Models.DirectSalesOrder dso, out string message);
-        #endregion
-
-        #region 调用根据关键字查找客户
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        PurchaseUnit[] GetPurchaseUnitsByKeywords(string keyword, bool isAccurate, out string message);
-        #endregion
-
-        #region 调用根据关键字查找供货商
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Models.SupplyUnit[] GetSupplyUnitsByKeywords(string Keyword, bool IsAccurate, out string message);
-        #endregion
-
-        #region 调用直调药品选择
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Models.DrugInfo[] GetDrugInfoByKeyword(Business.Models.DirectSalesQueryModel m, out string message);
-        #endregion
-
-        #region 调用根据审核状态获取销售直调单据
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Business.Models.DirectSalesModel[] GetDirectSalesModelByApprovalStatus(Business.Models.DirectSalesQueryModel dsq, out string message);
-        #endregion
-
-        #region 调用根据直调单ID获取直调细节信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<DirectSalesOrderDetailModel> GetDirectSalesOrderDetailModelByDirectSalesModel(System.Guid DirectSalesId, out string message);
-        #endregion
-
-        #region 调用修改直调销售表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveDirectSalesOrderAndDetail(Models.DirectSalesOrder dso, out string message);
-        #endregion
-
-        #region 调用增加直调销售审批
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddDirectSaleApproval(Models.DirectSalesOrder value, System.Guid approvalFlowTypeID, System.Guid userID, string changeNote, out string message);
-        #endregion
-
-        #region 调用从FLOWID获取直调销售单
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Models.DirectSalesOrder GetDirectSalesOrderByFlowId(System.Guid FlowId, out string message);
-        #endregion
-
-        #region 调用根据Business.Models.SalesOrderQueryModelM关键字查询销售单
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.SalesOrderModelForSalesOrderReturn> GetSalesOrderByOrderModel(Business.Models.SalesOrderQueryModel m, out string message);
-        #endregion
-
-        #region 调用过期药品不合格查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.InventeryModel> GetDrugsInventoryRecordToUnqualification(bool IsOutDate,string DrugPY,string BatchNumber, out string message);
-        #endregion
-
-        #region 调用质量追溯查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.DrugQualityTraceModel> GetAllDrugUnqualityTrace(Guid DrugInfoId, out string message);
-        #endregion
-
-        #region 医疗器械查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<Business.Models.InstrumentsModel> GetInstrumentsByCondition(string keys, int index, int size, out PagerInfo pager, bool ValidCondition);
-        #endregion
-
-        #region 调用新增货位信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool AddWareHouseZonePositions(IEnumerable<WareHouseZonePosition> ListWareHouseZonePositions, out string message);
-        #endregion
-
-        #region 调用修改增货位信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveWareHouseZonePosition(IEnumerable<WareHouseZonePosition> ListWareHouseZonePositions, out string message);
-        #endregion
-
-        #region 调用修改增货位信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool DeleteWareHouseZonePostion(System.Collections.Generic.IEnumerable<Guid> Ids, out string message);
-        #endregion
-
-        #region 调用货位信息综合查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<WareHouseZonePositionModel> GetWareHouseZonePositionById(WareHouseZonePositionQueryModel q, out string message);
-        #endregion
-
-        #region 调用电子标签点亮显示
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.WarehouseZonePositionOutInventoryModel> GetWarehouseZonePositionOutInventories(System.Guid SalesOrderId, out string message);
-        #endregion
-
-        #region 调用根据ID获取货位记录
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Models.WareHouseZonePosition GetWarehouseZonePositionById(Guid Id, out string message);
-        #endregion
-
-        #region 调用获得供货企业和销售客户资质的近效期预警信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        List<Business.Models.QualityFilesWarningModel> GetQualifyFilesCount(Business.Models.NearExpireDateQualifiedFiles WarningDate, out string message);
-        #endregion
-
-        #region 重写的日志查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.UserLogModel> GetPagedUserLogs(Business.Models.QueryBusinessUserLogModel m, out BugsBox.Application.Core.PagerInfo pagerInfo, int PageIndex, int PageSize, out string message);
-        #endregion
-
-        #region 调用保存销售控制规则
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveSalePriceControlRules(SalePriceControlRulesModel m, out string message);
-        #endregion
-
-        #region 调用获取销售控制规则
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        SalePriceControlRulesModel GetSalePriceControlRules(out string message);
-        #endregion
-
-
-        #region 调用获取客户单位提货人
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        IEnumerable<PurchaseUnitBuyer> GetPurchaseUnitBuyersByPurchaseUnitId(Guid PId, out string message);
-        #endregion
-
-        #region 调用分页获取保健食品
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.FoodModel> GetFoodByCondition(string keys, int index, int size, out BugsBox.Application.Core.PagerInfo pager, bool ValidCondition, out string message);
-        #endregion
-
-        #region 调用检查excel提交的采购单列表
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.PurchaseOrderImpt> CheckForPurchaseOrderDetails(System.Collections.Generic.IEnumerable<Business.Models.PurchaseOrderImpt> List, out string message);
-        #endregion
-
-        #region 调用获取供货单位id和名称
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.Model_IdName> GetSuplyUnitIdNamesByQueryModel(Business.Models.BaseQueryModel q, out string message);
-        #endregion
-
-
-        #region 调用获取用户id和姓名
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.Model_IdName> GetUserIdNamesByQueryModel(Business.Models.BaseQueryModel q, out string message);
-        #endregion
-
-
-        #region 调用用于采购时选择药品
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.DrugInfoForPurchaseSelectorModel> GetDrugInfoForpurchaseSelector(DrugInfoForPurchaseSelectorQueryModel q, out string message);
-        #endregion
-
-        #region 调用获取品种最近一次采购价格
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Business.Models.LastPurchaseUnitPrice[] GetLastPurchaseUnitPrice(System.Guid[] DrugInfoIds, out string message);
-        #endregion
-
-
-        #region 调用检索系统所有启用的复核员
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.Model_IdName> GetSalesCheckers(string keyword, out string message);
-        #endregion
-        
-        #region 调用根据OutInventory表中的OutInventoryStatus字段状态，读取出库表，用于拣货、复核等操作
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.SalesOrderOutInventoryModel> GetWaitingOutInventoryList(Business.Models.SalesOrderOutInventoryQueryModel q, out string message);
-        #endregion
-
-        #region 调用查询药品出库复核结果
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        DrugOutInventoryCheckModel[] GetDrugOutInventoryChecksByQueryModel(Business.Models.DrugOutInventoryCheckQueryModel q, out string message);
-        #endregion
-
-        #region 调用检索仓库保管员信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        System.Collections.Generic.IEnumerable<Business.Models.Model_IdName> GetInventoryKeepers(string keyword, out string message);
-        #endregion
-
-        #region 调用获取销售单For劳务清单
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Business.Models.SalesOrderForVATModel[] GetVATModelsbyQueryModel(Business.Models.SalesOrderForVATQueryModel q, out string message);
-        #endregion
-
-        #region 调用保存发票代码和号码
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveVATCode(Guid Id, string VATCode, string VATNumber, decimal VATRate,string Bank, out string message);
-        #endregion
-
-        #region 调用根据销售单ID获取VAT劳务清单的细节信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Business.Models.SalesOrderDetailForVATModel[] GetSalesOrderDetailForVATModels(System.Guid SalesOrderId, out string message);
-        #endregion
-
-        #region 调用销退细节查询
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        Business.Models.SalesOrderReturnDetailModel[] GetSalesOrderReturnDetailModels(Business.Models.SalesOrderReturnDetailQueryModel q, out string message);
-        #endregion
-
-        #region 调用保存VAT折扣信息
-        [OperationContract]
-        [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveVATForSalesOrderDetails(Business.Models.SalesOrderDetailForVATModel[] list, out string message);
-        #endregion
-    }
-
+			}
 }

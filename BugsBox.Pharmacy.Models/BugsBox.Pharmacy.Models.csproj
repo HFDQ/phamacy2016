@@ -84,9 +84,9 @@
     <Compile Include="DrugsBreakage.cs" />
     <Compile Include="DrugsInventoryMove.cs" />
     <Compile Include="DrugsUndeterminate.cs" />
-    <Compile Include="drugsUnqualication.cs" />
+    <Compile Include="DrugsUnqualication.cs" />
     <Compile Include="DrugsUnqualificationDestroy.cs" />
-    <Compile Include="drugsUnqualificationQuery.cs" />
+    <Compile Include="DrugsUnqualificationQuery.cs" />
     <Compile Include="EduDetails.cs" />
     <Compile Include="EduDocument.cs" />
     <Compile Include="GoodsAdditionalProperty.cs" />
@@ -180,7 +180,7 @@
     <Compile Include="Vehicle.cs" />
     <Compile Include="Warehouse.cs" />
     <Compile Include="WarehouseZone.cs" />
-    <Compile Include="WareHouseZonePosition.cs" />
+    <Compile Include="WarehouseZonePosition.cs" />
     <Compile Include="WaringSet.cs" />
     <Compile Include="OutInventoryDetail.cs" />
   </ItemGroup>

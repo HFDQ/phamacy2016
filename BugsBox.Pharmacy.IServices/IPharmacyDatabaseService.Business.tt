@@ -1,10 +1,10 @@
 ﻿<#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ include file="EF.Utility.CS.ttinclude"#> 
-<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Common.dll" #>  
-<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Application.Core.dll" #>  
-<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
-<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.Repository\\BugsBox.Pharmacy.Repository.dll" #>  
-<#@ assembly name="$(SolutionDir)..\\_output\\_temp\\BugsBox.Pharmacy.BusinessHandlers\\BugsBox.Pharmacy.BusinessHandlers.dll" #> 
+<#@ assembly name="$(SolutionDir)\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Common.dll" #>  
+<#@ assembly name="$(SolutionDir)\\_output\\_temp\\BugsBox.Application.Core\\BugsBox.Application.Core.dll" #>  
+<#@ assembly name="$(SolutionDir)\\_output\\_temp\\BugsBox.Pharmacy.Models\\BugsBox.Pharmacy.Models.dll" #> 
+<#@ assembly name="$(SolutionDir)\\_output\\_temp\\BugsBox.Pharmacy.Repository\\BugsBox.Pharmacy.Repository.dll" #>  
+<#@ assembly name="$(SolutionDir)\\_output\\_temp\\BugsBox.Pharmacy.BusinessHandlers\\BugsBox.Pharmacy.BusinessHandlers.dll" #> 
 <#@ import namespace="System.IO" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
 <#@ import namespace="System.Reflection" #>

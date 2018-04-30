@@ -84,6 +84,7 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Busine
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Models.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Repository.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.dll
+D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.SqlServer.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Common.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Autofac.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Omu.ValueInjecter.dll
@@ -93,11 +94,13 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Newtonsoft.Json.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Application.Core.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Business.Models.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.BusinessHandlers.pdb
+D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.BusinessHandlers.dll.config
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Models.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Models.dll.config
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Repository.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Repository.dll.config
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.xml
+D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.SqlServer.xml
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Common.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Autofac.xml
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Omu.ValueInjecter.xml
@@ -109,6 +112,3 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.WebService.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.WebService.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.WebService.pdb
-D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.BusinessHandlers.dll.config
-D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.SqlServer.dll
-D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.SqlServer.xml

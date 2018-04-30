@@ -37,7 +37,7 @@ namespace BugsBox.Pharmacy.Commands
                 Id = Guid.NewGuid(),
                 ChangeAmount = Diff,
                 OperatorId = OperatorID,
-                Operator = Operator,
+                OperatorName = Operator,
                 DrugInventoryRecordId = DrugInventoryRecord.Id,
                 BatchNumber = DrugInventoryRecord.BatchNumber,
                 DrugInfoId = DrugInventoryRecord.DrugInfoId,

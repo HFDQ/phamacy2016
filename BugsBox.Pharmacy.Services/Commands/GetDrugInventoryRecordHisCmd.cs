@@ -37,7 +37,7 @@ namespace BugsBox.Pharmacy.Commands
                          ChangeAmount = m.ChangeAmount,
                          CanSaleNum = m.CanSaleNum,
                          CreateDate = m.CreateDate,
-                         Operator = m.Operator
+                         Operator = m.OperatorName
                      }).ToArray();
 
             return q;

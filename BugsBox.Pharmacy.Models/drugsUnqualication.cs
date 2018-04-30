@@ -11,7 +11,7 @@ namespace BugsBox.Pharmacy.Models
 {
     [Description("不合格药品")]
     [DataContract]
-    public class drugsUnqualication:Entity
+    public class DrugsUnqualication:Entity
     {
         
         /// <summary>

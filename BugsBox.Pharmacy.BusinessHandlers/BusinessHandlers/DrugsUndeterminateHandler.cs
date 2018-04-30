@@ -11,7 +11,7 @@ using BugsBox.Pharmacy.Repository;
 
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
-    partial class DrugsUndeterminateHandler
+    partial class DrugsUndeterminateBusinessHandler
     {
         protected override IQueryable<DrugsUndeterminate> IncludeNavigationProperties(IQueryable<DrugsUndeterminate> queryable)
         {
@@ -108,7 +108,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 //如果不合格药品填写数量不为0，则将其写入不合格药品审批流程
                 if (value.UnqualificationQuantity > 0)
                 {
-                    drugsUnqualication du = new drugsUnqualication();
+                    DrugsUnqualication du = new DrugsUnqualication();
                     du.Id = Guid.NewGuid();
                     du.createTime = DateTime.Now;
                     du.createUID = userID;
@@ -136,7 +136,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     du.Supplyer = value.supplyer;
                     du.PurchaseOrderId = value.PurchaseOrderID==null?Guid.Empty:(Guid)value.PurchaseOrderID;
                     du.PurchaseOrderDocumentNumber = value.OrderDocumentID;
-                    BusinessHandlerFactory.DrugsUnqualificationHandler.EditDrugUnqualification(du,0);
+                    BusinessHandlerFactory.DrugsUnqualicationBusinessHandler.EditDrugUnqualification(du,0);
                 }
 
                 this.Save(value);

@@ -20233,7 +20233,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
         //end
         #region 不合格药品信息处理
             ////药品不合格处理
-            public bool AddDrugsUnqualification(out String msg, drugsUnqualication value)
+            public bool AddDrugsUnqualification(out String msg, DrugsUnqualication value)
             {
                 //Log.Warning(string.Format("开始调用服务方法:drugsUnqualication....."));
                 try
@@ -20251,7 +20251,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
                 }
             }
 
-            public bool SaveDrugsUnqualification(out String msg, drugsUnqualication value)
+            public bool SaveDrugsUnqualification(out String msg, DrugsUnqualication value)
             {
                 //Log.Warning(string.Format("开始调用服务方法:SaveDrugsUnqualification....."));
                 try
@@ -20304,7 +20304,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
                     //Log.Warning(string.Format("结束调用服务方法:GetDrugMaintainSet."));
                 }
             }
-            public BugsBox.Pharmacy.Models.drugsUnqualication GetDrugsUnqualificationByID(out String msg, System.Guid value)
+            public BugsBox.Pharmacy.Models.DrugsUnqualication GetDrugsUnqualificationByID(out String msg, System.Guid value)
             {
                 //Log.Warning(string.Format("开始调用服务方法:drugsUnqualication....."));
                 try
@@ -20321,7 +20321,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
                     //Log.Warning(string.Format("结束调用服务方法:GetDrugsUnqualificationByID."));
                 }
             }
-            public BugsBox.Pharmacy.Models.drugsUnqualication[] GetDrugsUnqualificationByCondition(out String msg, drugsUnqualificationCondition Condition)
+            public BugsBox.Pharmacy.Models.DrugsUnqualication[] GetDrugsUnqualificationByCondition(out String msg, drugsUnqualificationCondition Condition)
             {
                 //Log.Warning(string.Format("开始调用服务方法:drugsUnqualication....."));
                 try
@@ -20339,7 +20339,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
                 }
             }
 
-            public bool addDrugsUnqualityApproval(drugsUnqualication value, Guid approvalFlowTypeID, Guid userID, string changeNote, out string message)
+            public bool addDrugsUnqualityApproval(DrugsUnqualication value, Guid approvalFlowTypeID, Guid userID, string changeNote, out string message)
             {
                 try
                 {
@@ -20356,7 +20356,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
                 }
             }
         
-            public bool EditDrugUnqualification(Models.drugsUnqualication du, int flag,out string message)
+            public bool EditDrugUnqualification(Models.DrugsUnqualication du, int flag,out string message)
             {
                 try
                 {
@@ -22809,7 +22809,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
             }
         }
 
-        public bool AddWareHouseZonePositions(System.Collections.Generic.IEnumerable<Models.WareHouseZonePosition> ListWareHouseZonePositions, out string message)
+        public bool AddWareHouseZonePositions(System.Collections.Generic.IEnumerable<Models.WarehouseZonePosition> ListWareHouseZonePositions, out string message)
         {
             try
             {
@@ -22826,7 +22826,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
             }
         }
 
-        public bool SaveWareHouseZonePosition(System.Collections.Generic.IEnumerable<Models.WareHouseZonePosition> ListWareHouseZonePositions, out string message)
+        public bool SaveWareHouseZonePosition(System.Collections.Generic.IEnumerable<Models.WarehouseZonePosition> ListWareHouseZonePositions, out string message)
         {
             try
             {
@@ -22894,7 +22894,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
             }
         }
 
-        public Models.WareHouseZonePosition GetWarehouseZonePositionById(System.Guid Id, out string message)
+        public Models.WarehouseZonePosition GetWarehouseZonePositionById(System.Guid Id, out string message)
         {
             try
             {

@@ -95,7 +95,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                 du.updateTime = DateTime.Now;
                                 du.wareHouse = RepositoryProvider.Db.WarehouseZones.Where(r => r.Id == dir.WarehouseZoneId).First().Name;
                                 du.Origin = dir.Decription;
-                                BusinessHandlerFactory.DrugsUndeterminateHandler.Add(du);
+                                BusinessHandlerFactory.DrugsUndeterminateBusinessHandler.Add(du);
                                 decimal cansaleNum = dir.CanSaleNum;
 
                                 dir.drugsUnqualicationNum += UndeNum;//库存记录中加上质量复查数量，然后保存。
