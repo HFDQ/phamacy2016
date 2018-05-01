@@ -54,3 +54,7 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Phar
 D:\DQ\药品经营系统\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.exe
 D:\DQ\药品经营系统\BugsBox.Pharmacy.ServiceHost\obj\x86\Debug\BugsBox.Pharmacy.ServiceHost.pdb
+D:\DQ\药品经营系统\_output\服务宿主\ApprovalFiles\供货单位.doc
+D:\DQ\药品经营系统\_output\服务宿主\ApprovalFiles\保健食品.doc
+D:\DQ\药品经营系统\_output\服务宿主\ApprovalFiles\医疗器械.doc
+D:\DQ\药品经营系统\_output\服务宿主\ApprovalFiles\药品.doc

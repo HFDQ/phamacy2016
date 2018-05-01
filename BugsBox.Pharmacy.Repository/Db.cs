@@ -105,9 +105,12 @@ namespace BugsBox.Pharmacy.Repository
                 modelBuilder.Entity<Models.DrugInfo>().Property(p => p.WholeSalePrice),
                 modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.DirectSaleDiff),
                 modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.SupplyPrice),
-                modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.SalePrice),
+                modelBuilder.Entity<Models.DirectSalesOrderDetail>().Property(p=>p.SalePrice)
+        };
 
-            };
+            modelBuilder.Entity<Models.DrugInfo>().HasOptional(s => s.GoodsAdditionalProperty).WithRequired(ad => ad.DrugInfo);
+            modelBuilder.Entity<Models.GoodsAdditionalProperty>().HasKey(o => o.DrugInfoId);
+
 
             properties.ToList().ForEach(property =>
             {

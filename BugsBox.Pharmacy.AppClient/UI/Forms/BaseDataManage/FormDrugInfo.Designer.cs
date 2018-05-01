@@ -1,5 +1,5 @@
 ﻿namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
-{ 
+{
     partial class FormDrugInfo
     {
         /// <summary>
@@ -631,7 +631,7 @@
             goodsAdditionalProperty1.Deleted = false;
             goodsAdditionalProperty1.DeleteTime = null;
             goodsAdditionalProperty1.DrugInfo = null;
-            goodsAdditionalProperty1.DrugInfoId = new System.Guid("00000000-0000-0000-0000-000000000000");
+            // goodsAdditionalProperty1.DrugInfoId = new System.Guid("00000000-0000-0000-0000-000000000000");
             goodsAdditionalProperty1.FactoryAddress = null;
             goodsAdditionalProperty1.FactoryAddressEnglish = null;
             goodsAdditionalProperty1.FactoryNameEnglish = null;

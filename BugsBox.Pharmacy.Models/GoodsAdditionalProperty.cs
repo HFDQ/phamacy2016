@@ -163,13 +163,14 @@ namespace BugsBox.Pharmacy.Models
 
         #region 
 
-        [ForeignKey("DrugInfoId")]
+
         public virtual DrugInfo DrugInfo { get; set; }
 
         /// <summary>
         /// 药品编号 
         /// </summary>
         [DataMember]
+        [ForeignKey("DrugInfo")]
         public Guid DrugInfoId { get; set; }
 
 
@@ -187,7 +188,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 商品类型
         /// </summary>
-        public GoodsType GoodsType{get;set;}
+        public GoodsType GoodsType { get; set; }
 
         public GoodsAdditionalPropertyBelong()
         {

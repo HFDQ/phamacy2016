@@ -74,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IRepositories.tt</DependentUpon>
     </Compile>
+    <Compile Include="Mapping\DrugInfoMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repositories.cs">

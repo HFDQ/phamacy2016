@@ -27,7 +27,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
         private PagerInfo pageInfo = new PagerInfo();
         private string _searchKeyword = string.Empty;
         public List<DateTime> _outDateList = new List<DateTime>();
-        public List<WarehouseZone> WarehouseZones=new List<WarehouseZone>();
+        public List<WarehouseZone> WarehouseZones = new List<WarehouseZone>();
         private GoodsAdditionalProperty _goodsAdd = null;
         public Guid FlowTypeID { get; set; }
         private string msg = string.Empty;
@@ -39,7 +39,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             //BindDrugInfo();
             if (!DesignMode)
             {
-                this.RunMode = runMode; 
+                this.RunMode = runMode;
             }
             DataReady = false;
             InitRequiredControl();
@@ -50,10 +50,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
         public ucGoodsInfo()
             : this(FormRunMode.Add)
         {
-            
+
         }
 
-        public ucGoodsInfo(DrugInfo di,bool isFlowCenterBrowse=false)
+        public ucGoodsInfo(DrugInfo di, bool isFlowCenterBrowse = false)
         {
             InitializeComponent();
             string msg = string.Empty;
@@ -92,7 +92,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             set { _goodsAdd = value; }
         }
         [Browsable(false)]
-        public bool DataReady { get;private set; }
+        public bool DataReady { get; private set; }
 
         private FormRunMode runMode;
 
@@ -130,16 +130,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
         /// <summary>
         /// 当前药物信息
         /// </summary>
-        [Browsable(false)] 
+        [Browsable(false)]
         public DrugInfo DrugInfo
         {
             get { return drugInfo; }
-            set 
-            {  
+            set
+            {
                 drugInfo = value;
                 if (drugInfo == null) drugInfo = new Models.DrugInfo();
                 InitData();
-                InitControlsStatus(); 
+                InitControlsStatus();
                 BindDrugInfo();
             }
         }
@@ -266,7 +266,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
         /// </summary>
         private void BindDictionaries()
         {
-            string msg=string.Empty;
+            string msg = string.Empty;
             //商品类型  
             if (comboBoxGoodsType != null)
             {
@@ -277,13 +277,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 {
                     if (operationType == OperateType.Browse)
                     {
-                        if ( GoodsTypeList != null)
+                        if (GoodsTypeList != null)
                             comboBoxGoodsType.SelectedIndex = drugInfo.GoodsTypeValue;
                     }
                     else
                         comboBoxGoodsType.SelectedIndex = 0;
                 }
-                
+
             }
             //包装 
             if (comboBoxPackage != null)
@@ -296,12 +296,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     if (operationType == OperateType.Browse)
                     {
                         PackagingUnit listitem = PackagingUnits.Where(d => d.Name == drugInfo.Package).FirstOrDefault();
-                        if(listitem!=null)
+                        if (listitem != null)
                             comboBoxPackage.SelectedItem = listitem;
                     }
                     else
                         comboBoxPackage.SelectedIndex = 0;
-                } 
+                }
             }
             //特殊管理类型
             if (SpecialDrugCategories != null)
@@ -319,7 +319,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     }
                     else
                         comboBoxSpecialDrugCategoryCode.SelectedIndex = 0;
-                }  
+                }
             }
             //存储方式
             if (DictionaryStorageTypes != null)
@@ -342,12 +342,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                             comboBoxDrugStorageTypeCode.SelectedIndex = 0;
                         }
                     }
-                } 
+                }
             }
             //经营范围
             if (BusinessScopes != null)
             {
-                comboBoxBusinessScopeCode.DataSource = BusinessScopes.OrderBy(r=>r.Code).ToList();
+                comboBoxBusinessScopeCode.DataSource = BusinessScopes.OrderBy(r => r.Code).ToList();
                 comboBoxBusinessScopeCode.DisplayMember = "Name";
                 comboBoxBusinessScopeCode.ValueMember = "Name";
                 if (comboBoxBusinessScopeCode.Items.Count > 0)
@@ -355,12 +355,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     if (operationType == OperateType.Browse)
                     {
                         BusinessScope listitem = BusinessScopes.Where(d => d.Name == drugInfo.BusinessScopeCode).FirstOrDefault();
-                        if(listitem!=null)
+                        if (listitem != null)
                             comboBoxBusinessScopeCode.SelectedItem = listitem;
                     }
                     else
                         comboBoxBusinessScopeCode.SelectedIndex = 0;
-                } 
+                }
 
             }
             //管理分类
@@ -374,12 +374,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     if (operationType == OperateType.Browse)
                     {
                         PurchaseManageCategoryDetail listitem = PurchaseManageCategoryDetails.Where(d => d.Name == drugInfo.PurchaseManageCategoryDetailCode).FirstOrDefault();
-                        if(listitem!=null)
+                        if (listitem != null)
                             comboBoxPurchaseManageCategoryDetailCode.SelectedItem = listitem;
                     }
                     else
                         comboBoxPurchaseManageCategoryDetailCode.SelectedIndex = 0;
-                } 
+                }
             }
             //药品分类
             if (DrugCategories != null)
@@ -397,7 +397,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     }
                     else
                         comboBoxDrugCategoryCode.SelectedIndex = 0;
-                } 
+                }
             }
             //医疗分类
             if (MedicalCategoryDetails != null)
@@ -415,7 +415,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     }
                     else
                         comboBoxMedicalCategoryDetailCode.SelectedIndex = 0;
-                } 
+                }
             }
             //临床分类//2014-2
             if (DrugClinicalCategories != null)
@@ -433,7 +433,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     }
                     else
                         comboBoxDrugClinicalCategoryCode.SelectedIndex = 0;
-                } 
+                }
             }
             //自主分类//2014-2
             if (DictionaryUserDefinedTypes != null)
@@ -443,7 +443,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 comboBoxDictionaryUserDefinedTypeCode.ValueMember = "Name";
                 if (comboBoxDictionaryUserDefinedTypeCode.Items.Count > 0)
                 {
-                    if (operationType==OperateType.Browse)
+                    if (operationType == OperateType.Browse)
                     {
                         DictionaryUserDefinedType listitem = DictionaryUserDefinedTypes.Where(d => d.Name == drugInfo.DictionaryUserDefinedTypeCode).FirstOrDefault();
                         if (listitem != null)
@@ -540,7 +540,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 {
                     if (operationType == OperateType.Browse)
                     {
-                        var _listAF=this.PharmacyDatabaseService.GetApproveFlowsByFlowID(out msg,drugInfo.FlowID);
+                        var _listAF = this.PharmacyDatabaseService.GetApproveFlowsByFlowID(out msg, drugInfo.FlowID);
 
                         //ApprovalFlow _listAF = PharmacyDatabaseService.AllApprovalFlows(out msg).Where(c => c.FlowId == drugInfo.FlowID).FirstOrDefault();
                         ApprovalFlowType listitem = ApprovalFlowTypes.Where(d => d.Id == _listAF.ApprovalFlowTypeId).FirstOrDefault();
@@ -558,7 +558,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 comboBoxWarehouse.DataSource = Warehouse;
                 comboBoxWarehouse.DisplayMember = "Name";
                 comboBoxWarehouse.ValueMember = "Id";
-                if (comboBoxWarehouse.Items.Count > 0 )
+                if (comboBoxWarehouse.Items.Count > 0)
                 {
                     if (operationType == OperateType.Browse)
                     {
@@ -571,14 +571,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     }
                     else
                     {
-                        if(Warehouse.Count>0)
+                        if (Warehouse.Count > 0)
                             comboBoxWarehouse.SelectedIndex = 0;
                     }
                 }
-                
+
             }
             //库区类型
-            if (WarehouseZone != null )
+            if (WarehouseZone != null)
             {
                 comboBoxWarehouseZone.DataSource = WarehouseZone;
                 comboBoxWarehouseZone.DisplayMember = "Name";
@@ -662,9 +662,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             this.labelValidRemark.Text = drugInfo.ValidRemark;
             this.checkBoxIsLock.Checked = drugInfo.IsLock;
             this.labelLockRemark.Text = drugInfo.LockRemark;
-                        
+
             this.comboBoxWarehouse.SelectedValue = drugInfo.WareHouses;
-            
+
             this.labelCreateTime.Text = drugInfo.CreateTime.ToString();
             this.labelCreateUserId.Text = PharmacyDatabaseService.GetUser(out message, drugInfo.CreateUserId).Employee.Name;
 
@@ -672,19 +672,19 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             this.labelUpdateUserId.Text = PharmacyDatabaseService.GetUser(out message, drugInfo.UpdateUserId).Employee.Name;
             //几个状态处理
             this.comboBoxSpecialDrugCategoryCode.Enabled = drugInfo.IsSpecialDrugCategory;
-            
+
             switch (runMode)
             {
                 case FormRunMode.Edit:
-                    
+
                 case FormRunMode.Browse:
                     GoodsAdditional = this.PharmacyDatabaseService.GetGoodsAdditionalProperty(out message, drugInfo.Id);
                     break;
                 case FormRunMode.Add:
                     GoodsAdditional = new GoodsAdditionalProperty();
                     GoodsAdditional.Id = drugInfo.Id;
-                    GoodsAdditional.DrugInfoId = drugInfo.Id;
-                    GoodsAdditional.LicensePermissionDate = DateTime.Now; 
+                    // GoodsAdditional.DrugInfoId = drugInfo.Id;
+                    GoodsAdditional.LicensePermissionDate = DateTime.Now;
                     GoodsAdditional.PutOnRecordDate = DateTime.Now;
                     break;
                 case FormRunMode.Search:
@@ -803,7 +803,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 if (DictionaryDosages == null)
                 {
                     DictionaryDosages = PharmacyDatabaseService.AllDictionaryDosages(out message)
-                        .OrderBy(t =>t.Name)
+                        .OrderBy(t => t.Name)
                         .ToList();
                 }
 
@@ -880,7 +880,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     drugInfo.DictionarySpecificationCode = "无";
                     drugInfo.ValidPeriod = 36;
                     //动态加载审批流程类型:新增
-                    ApprovalFlowTypes=this.PharmacyDatabaseService.AllApprovalFlowTypes(out msg).Where(r => r.ApprovalType == ApprovalType.DrugInfoApproval).ToList();
+                    ApprovalFlowTypes = this.PharmacyDatabaseService.AllApprovalFlowTypes(out msg).Where(r => r.ApprovalType == ApprovalType.DrugInfoApproval).ToList();
                     this.comboBoxFlowID.DataSource = ApprovalFlowTypes;
                     this.comboBoxFlowID.SelectedIndex = 0;
                     break;
@@ -905,17 +905,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                             this.comboBoxFlowID.Enabled = false;
                         }
                     }
-                    
+
                     break;
                 case FormRunMode.Search:
                     //查询状态
                     ApprovalFlow af2 = this.PharmacyDatabaseService.GetApproveFlowsByFlowID(out msg, drugInfo.FlowID);
-                        if (af2 != null)
-                        {
-                            this.comboBoxFlowID.DataSource = this.PharmacyDatabaseService.AllApprovalFlowTypes(out msg).ToList();
-                            this.comboBoxFlowID.SelectedValue = af2.ApprovalFlowTypeId;
-                            this.comboBoxFlowID.Enabled = false;
-                        }
+                    if (af2 != null)
+                    {
+                        this.comboBoxFlowID.DataSource = this.PharmacyDatabaseService.AllApprovalFlowTypes(out msg).ToList();
+                        this.comboBoxFlowID.SelectedValue = af2.ApprovalFlowTypeId;
+                        this.comboBoxFlowID.Enabled = false;
+                    }
                     break;
             }
             this.comboBoxFlowID.DisplayMember = "Name";
@@ -932,7 +932,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
         private void InitControlsStatus()
         {
             this.comboBoxGoodsType.Enabled = RunMode == FormRunMode.Add;
-           // this.buttonEditGoodsAdditional.Enabled = this.comboBoxGoodsType.Enabled;
+            // this.buttonEditGoodsAdditional.Enabled = this.comboBoxGoodsType.Enabled;
             this.Enabled = RunMode != FormRunMode.Browse;
         }
 
@@ -943,9 +943,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
         private void checkBoxIsSpecialDrugCategory_CheckedChanged(object sender, EventArgs e)
         {
             comboBoxSpecialDrugCategoryCode.Enabled = this.checkBoxIsSpecialDrugCategory.Checked;
-            if (drugInfo!=null)
+            if (drugInfo != null)
             {
-                comboBoxSpecialDrugCategoryCode.SelectedValue =drugInfo.SpecialDrugCategoryCode;
+                comboBoxSpecialDrugCategoryCode.SelectedValue = drugInfo.SpecialDrugCategoryCode;
             }
         }
 
@@ -970,7 +970,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 //if(operationType!= OperateType.Browse)
                 BindDictionaries();
                 InitData();
-                comboBoxGoodsType.SelectedIndexChanged+=new EventHandler(comboBoxGoodsType_SelectedIndexChanged);
+                comboBoxGoodsType.SelectedIndexChanged += new EventHandler(comboBoxGoodsType_SelectedIndexChanged);
                 comboBoxWarehouse.SelectedValueChanged += new EventHandler(comboBoxWarehouse_SelectedValueChanged);
                 getDrugInfoCount();
             }
@@ -1000,7 +1000,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 drugInfo.DocCode = this.textBoxProductDocument.Text.Trim();
                 drugInfo.FactoryName = this.textBoxFactoryName.Text.Trim();
                 drugInfo.Origin = this.Origin.Text.Trim();
-                drugInfo.ValidPeriod = int.Parse( this.numericUpDownValidPeriod.Text.Trim());
+                drugInfo.ValidPeriod = int.Parse(this.numericUpDownValidPeriod.Text.Trim());
                 drugInfo.LicensePermissionNumber = this.textBoxLicensePermissionNumber.Text.Trim();
                 drugInfo.PerformanceStandards = this.textBoxPerformanceStandards.Text.Trim();
                 drugInfo.Description = this.textBoxDescription.Text;
@@ -1041,9 +1041,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 drugInfo.PackageAmount = (int)numericUpDownPackageAmount.Value;
                 drugInfo.PermitLicenseCode = this.textBoxPermitLicenseCode.Text.Trim();
                 drugInfo.Pinyin = this.textBoxPinyinCode.Text.Trim();
-                                
+
                 DateTime inputPermitOutDate = DateTime.ParseExact(this.dateTimePickerPermitOutDate.Text, "yyyyMMdd", format);
-                
+
                 drugInfo.PermitOutDate = inputPermitOutDate;
                 drugInfo.WareHouses = (Guid)this.comboBoxWarehouse.SelectedValue;
                 string msg = "";
@@ -1059,8 +1059,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 drugInfo.BigPackage = int.Parse(textBox1.Text.Trim());
                 drugInfo.MiddlePackage = int.Parse(textBox2.Text.Trim());
                 drugInfo.SmallPackage = int.Parse(textBox3.Text.Trim());
-                
-                if(false)
+
+                if (false)
                 {
                     //已经审批通过不要选流程了
                     drugInfo.IsApproval = true;
@@ -1069,10 +1069,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 else
                 {
                     //没有审批通过应该选择流程 
-                    if (this.comboBoxFlowID.SelectedValue==null)
+                    if (this.comboBoxFlowID.SelectedValue == null)
                     {
                         DataReady = false;
-                        MessageBox.Show(this.Text+"请选择审批流程!","提示" , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show(this.Text + "请选择审批流程!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         return;
                     }
                 }
@@ -1081,21 +1081,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             catch (Exception ex)
             {
                 ex = new Exception("收集药物信息失败", ex);
-                DataReady=false;
-                MessageBox.Show(this.Text+ex.Message,"错误" , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                DataReady = false;
+                MessageBox.Show(this.Text + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
         #endregion 控件到数据
 
-     
+
 
         private void buttonEditGoodsAdditional_Click(object sender, EventArgs e)
         {
             try
             {
-                
-                FormGoodsAdditionalProperty form = new FormGoodsAdditionalProperty(this.runMode, this.DrugInfo, this.GoodsAdditional); 
+
+                FormGoodsAdditionalProperty form = new FormGoodsAdditionalProperty(this.runMode, this.DrugInfo, this.GoodsAdditional);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     this.GoodsAdditional = form.GoodsAdditional;
@@ -1104,10 +1104,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             catch (Exception ex)
             {
                 Log.Error(ex);
-                MessageBox.Show(this.Text+ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-           
-            
+
+
         }
 
         /// <summary>
@@ -1212,11 +1212,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             this.labelValidRemark.Text = drugInfo.ValidRemark;
             this.checkBoxIsLock.Checked = drugInfo.IsLock;
             this.labelLockRemark.Text = drugInfo.LockRemark;
-                        
+
             this.comboBoxFlowID.SelectedValue = drugInfo.FlowID;
             this.comboBoxFlowID.Enabled = true;
 
-            
+
             this.labelCreateTime.Text = drugInfo.CreateTime.ToString();
             this.labelCreateUserId.Text = PharmacyDatabaseService.GetUser(out message, drugInfo.CreateUserId).Employee.Name;
 
@@ -1232,7 +1232,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 case FormRunMode.Edit:
                     GoodsAdditional = new GoodsAdditionalProperty();
                     GoodsAdditional.Id = drugInfo.Id;
-                    GoodsAdditional.DrugInfoId = drugInfo.Id;
+                    // GoodsAdditional.DrugInfoId = drugInfo.Id;
                     GoodsAdditional.LicensePermissionDate = DateTime.Now;
                     GoodsAdditional.PutOnRecordDate = DateTime.Now;
                     break;
@@ -1243,7 +1243,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 case FormRunMode.Add:
                     GoodsAdditional = new GoodsAdditionalProperty();
                     GoodsAdditional.Id = drugInfo.Id;
-                    GoodsAdditional.DrugInfoId = drugInfo.Id;
+                   // GoodsAdditional.DrugInfoId = drugInfo.Id;
                     GoodsAdditional.LicensePermissionDate = DateTime.Now;
                     GoodsAdditional.PutOnRecordDate = DateTime.Now;
                     break;
@@ -1332,7 +1332,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 this.comboBoxWarehouseZone.DisplayMember = "name";
                 try
                 {
-                    string message=null;
+                    string message = null;
                     WarehouseZones = d.ToList();
                     if (WarehouseZones != null && string.IsNullOrWhiteSpace(message))
                     {
@@ -1351,7 +1351,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                         this.checkedListBox1.DisplayMember = "Name";
                         this.checkedListBox1.ValueMember = "Id";
                         this.checkedListBox1.Items.AddRange(WarehouseZones.Cast<object>().ToArray());
-                        for(int i=0;i<=WarehouseZones.Count-1;i++)
+                        for (int i = 0; i <= WarehouseZones.Count - 1; i++)
                         {
                             this.checkedListBox1.SetItemChecked(i, true);
                         }
@@ -1401,10 +1401,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                     foreach (var i in warehouseZones)
                     {
                         this.checkedListBox1.Items.Add(i);
-                        this.checkedListBox1.SetItemChecked(this.checkedListBox1.Items.Count-1,true);
+                        this.checkedListBox1.SetItemChecked(this.checkedListBox1.Items.Count - 1, true);
                     }
                     this.checkedListBox1.Enabled = false;
-                    
+
                 }
             }
         }
@@ -1480,7 +1480,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             }
             catch (Exception ex)
             {
-                MessageBox.Show("请输入正确日期","提示");
+                MessageBox.Show("请输入正确日期", "提示");
                 this.dateTimePickerPermitOutDate.Focus();
                 this.dateTimePickerPermitOutDate.Text = null;
             }
@@ -1511,9 +1511,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             if (runMode == FormRunMode.Add)
             {
                 string msg = string.Empty;
-                
+
                 int _count = PharmacyDatabaseService.GetDrugInfoCount(string.Empty);
-                textBoxCode.Text = "SPBH" + _count.ToString().PadLeft(6,'0');
+                textBoxCode.Text = "SPBH" + _count.ToString().PadLeft(6, '0');
             }
         }
 
@@ -1528,7 +1528,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 }
                 else if (runMode == FormRunMode.Add)
                 {
-                    MessageBox.Show("请在\"品种质量档案维护\"版块内进行上传图片"); 
+                    MessageBox.Show("请在\"品种质量档案维护\"版块内进行上传图片");
                     return;
                 }
                 else

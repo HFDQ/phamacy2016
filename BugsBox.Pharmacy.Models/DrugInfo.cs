@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -583,7 +582,6 @@ namespace BugsBox.Pharmacy.Models
         }
 
         [DataMember]
-        [NotMapped]
         public virtual GoodsAdditionalProperty GoodsAdditionalProperty
         {
             get;
@@ -615,6 +613,8 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public string InstEntProductLiscencePermitNumber { get; set; }
+
+
     }
 }
 

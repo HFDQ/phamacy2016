@@ -209,7 +209,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                         this.ucGoodsInfo1.DrugInfo = entity;
                         this.ucGoodsInfo1.GoodsAdditional = new GoodsAdditionalProperty();
                         this.ucGoodsInfo1.GoodsAdditional.Id = entity.Id;
-                        this.ucGoodsInfo1.GoodsAdditional.DrugInfoId = entity.Id;
+                        // this.ucGoodsInfo1.GoodsAdditional.DrugInfoId = entity.Id;
                         this.ucGoodsInfo1.GoodsAdditional.PutOnRecordDate = DateTime.Now;
                         this.ucGoodsInfo1.GoodsAdditional.LicensePermissionDate = DateTime.Now;
                         this.ucGoodsInfo1.getDrugInfoCount();
@@ -366,7 +366,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                 this.ucGoodsInfo1.DrugInfo = entity;
                 this.ucGoodsInfo1.GoodsAdditional = new GoodsAdditionalProperty();
                 this.ucGoodsInfo1.GoodsAdditional.Id = entity.Id;
-                this.ucGoodsInfo1.GoodsAdditional.DrugInfoId = entity.Id;
+                // this.ucGoodsInfo1.GoodsAdditional.DrugInfoId = entity.Id;
                 this.ucGoodsInfo1.GoodsAdditional.PutOnRecordDate = DateTime.Now;
                 this.ucGoodsInfo1.GoodsAdditional.LicensePermissionDate = DateTime.Now;
                 this.ucGoodsInfo1.getDrugInfoCount();
@@ -461,7 +461,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                 goodsAdditional = new GoodsAdditionalProperty();
                 this.ucGoodsInfo1.GoodsAdditional = new GoodsAdditionalProperty();
                 this.ucGoodsInfo1.GoodsAdditional.Id = entity.Id;
-                this.ucGoodsInfo1.GoodsAdditional.DrugInfoId = entity.Id;
+                // this.ucGoodsInfo1.GoodsAdditional.DrugInfoId = entity.Id;
                 this.ucGoodsInfo1.GoodsAdditional.PutOnRecordDate = DateTime.Now;
                 this.ucGoodsInfo1.GoodsAdditional.LicensePermissionDate = DateTime.Now;
             }

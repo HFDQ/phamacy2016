@@ -9431,9 +9431,9 @@ namespace BugsBox.Pharmacy.Services
                 if(!string.IsNullOrEmpty(qModel.FactoryAddressEnglish)){//非null且非empty参与like条件
                     queryBuilder.Like(a => a.FactoryAddressEnglish, qModel.FactoryAddressEnglish);
                 }
-                if(qModel.DrugInfoId!=default(Guid)){//非null且非empty参与like条件
-                    queryBuilder.Equals(a => a.DrugInfoId, qModel.DrugInfoId);
-                }
+                //if(qModel.DrugInfoId!=default(Guid)){//非null且非empty参与like条件
+                //    queryBuilder.Equals(a => a.DrugInfoId, qModel.DrugInfoId);
+                //}
 
                 return HandlerFactory.GoodsAdditionalPropertyBusinessHandler.Fetch(queryBuilder.Expression, order).ToList();
             }
@@ -9520,9 +9520,9 @@ namespace BugsBox.Pharmacy.Services
                 if(!string.IsNullOrEmpty(qModel.FactoryAddressEnglish)){//非null且非empty参与like条件
                     queryBuilder.Like(a => a.FactoryAddressEnglish, qModel.FactoryAddressEnglish);
                 }
-                if(qModel.DrugInfoId!=default(Guid)){//非null且非empty参与like条件
-                    queryBuilder.Equals(a => a.DrugInfoId, qModel.DrugInfoId);
-                }
+                //if(qModel.DrugInfoId!=default(Guid)){//非null且非empty参与like条件
+                //    queryBuilder.Equals(a => a.DrugInfoId, qModel.DrugInfoId);
+                //}
 
                 return HandlerFactory.GoodsAdditionalPropertyBusinessHandler.Fetch(queryBuilder.Expression, order, pager).ToList();
             }

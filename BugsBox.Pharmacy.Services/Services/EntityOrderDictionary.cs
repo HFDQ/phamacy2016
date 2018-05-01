@@ -29,7 +29,7 @@ namespace BugsBox.Pharmacy.Services
         }
 
         public static void AddOrder<T>(object order)
-            where T:Entity,new()
+            where T : Entity, new()
         {
             if (order == null)
             {
@@ -39,13 +39,13 @@ namespace BugsBox.Pharmacy.Services
         }
 
         public static Action<Orderable<T>> GetOrder<T>()
-            where T : Entity, new()
+            where T : Entity, IEntity, new()
         {
-            if (!entityOrderDictionary.ContainsKey(typeof (T)))
+            if (!entityOrderDictionary.ContainsKey(typeof(T)))
             {
                 AddOrder<T>(new Action<Orderable<T>>(o => o.Desc(t => t.Id)));
             }
             return entityOrderDictionary[typeof(T)] as Action<Orderable<T>>;
-        } 
+        }
     }
 }
