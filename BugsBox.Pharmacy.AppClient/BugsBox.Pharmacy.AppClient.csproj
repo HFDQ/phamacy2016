@@ -596,6 +596,12 @@
     <Compile Include="UI\Forms\BaseDataManage\Form_WarningListShow.Designer.cs">
       <DependentUpon>Form_WarningListShow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\TaxSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseDataManage\TaxSetting.Designer.cs">
+      <DependentUpon>TaxSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\BaseForm\BasicInfoRightMenu.cs" />
     <Compile Include="UI\Forms\BaseForm\FormDZJGM.cs">
       <SubType>Form</SubType>
@@ -2035,6 +2041,9 @@
     <EmbeddedResource Include="UI\Forms\BaseDataManage\Form_WarningListShow.resx">
       <DependentUpon>Form_WarningListShow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseDataManage\TaxSetting.resx">
+      <DependentUpon>TaxSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\BaseForm\FormDZJGM.resx">
       <DependentUpon>FormDZJGM.cs</DependentUpon>
     </EmbeddedResource>
@@ -2362,6 +2371,9 @@
     <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrderImpt.resx">
       <DependentUpon>Form_PurchaseOrderImpt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_PurchaseOrder_Set.resx">
+      <DependentUpon>Form_PurchaseOrder_Set.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\PurchaseBusiness\Form_PurchaseRefund.resx">
       <DependentUpon>Form_PurchaseRefund.cs</DependentUpon>
     </EmbeddedResource>
@@ -2421,6 +2433,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\SalesBusiness\FormPurchaseUnitLock.resx">
       <DependentUpon>FormPurchaseUnitLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormRewardList.resx">
+      <DependentUpon>FormRewardList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SalesBusiness\FormRewardListDetails.resx">
+      <DependentUpon>FormRewardListDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\SalesBusiness\FormSaleOrderApproval.resx">
       <DependentUpon>FormSaleOrderApproval.cs</DependentUpon>
@@ -2718,10 +2736,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BugsBox.Pharmacy.AppClient.Menu.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="Resources\Add.png" />
     <None Include="Resources\Cancel.png" />
     <None Include="Resources\Delete.png" />

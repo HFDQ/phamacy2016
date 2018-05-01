@@ -45,6 +45,12 @@ namespace BugsBox.Pharmacy.Business.Models
         /// </summary>
         public PurchaseOrderTaxRate PurchaseOrderDefaultTaxRate { get; set; }
 
+
+        /// <summary>
+        /// 销售税率
+        /// </summary>
+        public SalesOrderTaxRate SalesOrderDefaultTaxRate { get; set; }
+
         /// <summary>
         /// 验收员信息
         /// </summary>
@@ -108,7 +114,14 @@ namespace BugsBox.Pharmacy.Business.Models
     {
         public decimal DefaultTaxRate { get; set; }
     }
-
+    /// <summary>
+    /// 销售开票时，自动定义的税点
+    /// </summary>
+    [Serializable]
+    public class SalesOrderTaxRate
+    {
+        public decimal DefaultTaxRate { get; set; }
+    }
     /// <summary>
     /// 设置复核员，系统
     /// </summary>

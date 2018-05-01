@@ -109,6 +109,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
         }
 
-        
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

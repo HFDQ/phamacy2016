@@ -368,7 +368,35 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     wholeSales = c.Sum(n => n.InInventoryCount) - c.Sum(n => n.CanSaleNum),
                 });
 
+                if (begindate.HasValue && enddate.HasValue)
+                {
 
+                    var realtimeq = (from order in RepositoryProvider.Db.SalesOrders
+                                     join orderDetail in RepositoryProvider.Db.SalesOrderDetails on order.Id equals orderDetail.SalesOrderID
+                                     join inventoryRecord in RepositoryProvider.Db.DrugInventoryRecords on orderDetail.DrugInventoryRecordID equals inventoryRecord.Id
+                                     where order.CreateTime >= begindate && order.CreateTime <= enddate.Value && !order.Deleted
+                                     select new
+                                     {
+                                         drugInfoId = inventoryRecord.DrugInfoId,
+                                         orderDetail.Amount
+                                     }).GroupBy(c => c.drugInfoId).Select(o => new
+                                     {
+                                         drugInfoId = o.Key,
+                                         Amount = o.Sum(c => c.Amount)
+                                     });
+
+                    queryInventory = from m in queryInventory
+                                     join q in realtimeq on m.drugInfoId equals q.drugInfoId
+                                     select new
+                                     {
+                                         drugInfoId = m.drugInfoId,
+                                         inventoryNum = m.inventoryNum,
+                                         canSaleNum = m.canSaleNum,
+                                         wholePrice = m.wholePrice,
+                                         wholeSales = q.Amount
+                                     };
+
+                }
 
 
 

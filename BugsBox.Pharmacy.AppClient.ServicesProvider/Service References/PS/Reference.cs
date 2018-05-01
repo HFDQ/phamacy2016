@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+
 namespace BugsBox.Pharmacy.AppClient.PS
 {
 
@@ -10430,7 +10432,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
             "ugInfoForOutofStockResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDr" +
             "ugInfoForOutofStockServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        BugsBox.Pharmacy.Business.Models.LackDrugModel[] GetDrugInfoForOutofStock(out string message, int stockLower);
+        BugsBox.Pharmacy.Business.Models.LackDrugModel[] GetDrugInfoForOutofStock(int stockLower, Nullable<DateTime> begindate, Nullable<DateTime> enddate, out string message);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDr" +
             "ugInfoByFlowID", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDr" +
@@ -18423,9 +18425,9 @@ namespace BugsBox.Pharmacy.AppClient.PS
             return base.Channel.GetDrugInfoForSupplyUnitWithQueryParas(out message, supplyUnitId, generalName, code, standardCode);
         }
 
-        public BugsBox.Pharmacy.Business.Models.LackDrugModel[] GetDrugInfoForOutofStock(out string message, int stockLower)
+        public BugsBox.Pharmacy.Business.Models.LackDrugModel[] GetDrugInfoForOutofStock(int stockLower, Nullable<DateTime> begindate, Nullable<DateTime> enddate, out string message)
         {
-            return base.Channel.GetDrugInfoForOutofStock(out message, stockLower);
+            return base.Channel.GetDrugInfoForOutofStock(stockLower, begindate, enddate, out message);
         }
 
         public BugsBox.Pharmacy.Models.DrugInfo GetDrugInfoByFlowID(out string message, System.Guid flowId)

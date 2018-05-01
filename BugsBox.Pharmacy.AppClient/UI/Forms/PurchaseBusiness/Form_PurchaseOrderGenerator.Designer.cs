@@ -178,6 +178,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(108, 28);
             this.toolStripButton5.Text = "设置默认税率";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // groupBox1
             // 

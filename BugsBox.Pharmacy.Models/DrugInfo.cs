@@ -119,6 +119,20 @@ namespace BugsBox.Pharmacy.Models
         [DataMember]
         public decimal Price { get; set; }
 
+
+        /// <summary>
+        /// 销售税率
+        /// </summary>
+        [DataMember]
+        public decimal SaleTax { get; set; }
+
+
+        /// <summary>
+        /// 采购税率
+        /// </summary>
+        [DataMember]
+        public decimal PurchaseTax { get; set; }
+
         /// <summary>
         /// 国家零售价，指导售价
         /// </summary>

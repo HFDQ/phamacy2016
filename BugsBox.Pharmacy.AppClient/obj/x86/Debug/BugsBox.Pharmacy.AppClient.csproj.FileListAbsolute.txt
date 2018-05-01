@@ -760,7 +760,6 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharma
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.csproj.GenerateResource.cache
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.csproj.CoreCompileInputs.cache
 D:\DQ\药品经营系统\_output\应用客户端\DockPanel.config
-D:\DQ\药品经营系统\_output\应用客户端\BugsBox.Pharmacy.AppClient.Menu.xml
 D:\DQ\药品经营系统\_output\应用客户端\BugsBox.Pharmacy.AppClient.Menu_new.xml
 D:\DQ\药品经营系统\_output\应用客户端\BugsBox.Pharmacy.AppClient.Warn.xml
 D:\DQ\药品经营系统\_output\应用客户端\BugsBox.Pharmacy.AppClient.SalePriceType.xml
@@ -790,3 +789,7 @@ D:\DQ\药品经营系统\_output\应用客户端\BugsBox.Pharmacy.AppClient.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.exe
 D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.pdb
+D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness.FormRewardList.resources
+D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness.FormRewardListDetails.resources
+D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness.Form_PurchaseOrder_Set.resources
+D:\DQ\药品经营系统\BugsBox.Pharmacy.AppClient\obj\x86\Debug\BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage.TaxSetting.resources

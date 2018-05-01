@@ -22,5 +22,3 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.pdb
-D:\DQ\药品经营系统\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.Migrations.AddCity.resources
-D:\DQ\药品经营系统\BugsBox.Pharmacy.Repository\obj\Debug\BugsBox.Pharmacy.Repository.csproj.GenerateResource.cache

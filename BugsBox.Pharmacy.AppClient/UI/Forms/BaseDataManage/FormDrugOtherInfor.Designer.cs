@@ -38,12 +38,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDrugOtherInfor));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnSearch = new System.Windows.Forms.ToolStripButton();
-            this.btnModify = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.btnCancel = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pagerControl1 = new PagerControl.PagerControl();
@@ -60,12 +58,15 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LowSalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -82,14 +83,11 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnRefresh,
             this.btnSearch,
-            this.btnModify,
-            this.btnSave,
-            this.btnCancel,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1322, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(881, 31);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -98,7 +96,7 @@
             this.btnRefresh.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Refresh;
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(74, 28);
+            this.btnRefresh.Size = new System.Drawing.Size(60, 28);
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -107,42 +105,17 @@
             this.btnSearch.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Search;
             this.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(74, 28);
+            this.btnSearch.Size = new System.Drawing.Size(60, 28);
             this.btnSearch.Text = "查询";
             this.btnSearch.ToolTipText = "查询";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnModify
-            // 
-            this.btnModify.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Edit;
-            this.btnModify.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(74, 28);
-            this.btnModify.Text = "修改";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Save1;
-            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(74, 28);
-            this.btnSave.Text = "保存";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Cancel;
-            this.btnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(74, 28);
-            this.btnCancel.Text = "取消";
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Compile;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(218, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(156, 28);
             this.toolStripButton1.Text = "设置销售流程控制规则";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -150,21 +123,20 @@
             // 
             this.panel1.Controls.Add(this.pagerControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 618);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(0, 412);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1322, 56);
+            this.panel1.Size = new System.Drawing.Size(881, 37);
             this.panel1.TabIndex = 2;
             // 
             // pagerControl1
             // 
-            this.pagerControl1.Location = new System.Drawing.Point(462, 0);
-            this.pagerControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.pagerControl1.Location = new System.Drawing.Point(308, 0);
+            this.pagerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.pagerControl1.Name = "pagerControl1";
             this.pagerControl1.PageIndex = 1;
             this.pagerControl1.PageSize = 20;
             this.pagerControl1.RecordCount = 0;
-            this.pagerControl1.Size = new System.Drawing.Size(798, 68);
+            this.pagerControl1.Size = new System.Drawing.Size(532, 45);
             this.pagerControl1.TabIndex = 0;
             this.pagerControl1.DataPaging += new PagerControl.PagerControl.Paging(this.pagerControl1_DataPaging);
             // 
@@ -173,7 +145,6 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 31);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -186,19 +157,17 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1322, 587);
+            this.splitContainer1.Size = new System.Drawing.Size(881, 381);
             this.splitContainer1.SplitterDistance = 56;
-            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Search;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(402, 28);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(268, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 34);
+            this.button1.Size = new System.Drawing.Size(67, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "查询";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,20 +176,18 @@
             // 
             // txtSearchKeyword
             // 
-            this.txtSearchKeyword.Location = new System.Drawing.Point(180, 32);
-            this.txtSearchKeyword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchKeyword.Location = new System.Drawing.Point(120, 21);
             this.txtSearchKeyword.Name = "txtSearchKeyword";
-            this.txtSearchKeyword.Size = new System.Drawing.Size(188, 28);
+            this.txtSearchKeyword.Size = new System.Drawing.Size(127, 21);
             this.txtSearchKeyword.TabIndex = 1;
             this.txtSearchKeyword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchKeyword_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(25, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
+            this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "按照关键字查询";
             // 
@@ -237,6 +204,8 @@
             this.Column13,
             this.Column12,
             this.Column4,
+            this.Column15,
+            this.Column14,
             this.Column10,
             this.Column5,
             this.Column6,
@@ -245,10 +214,9 @@
             this.LowSalePrice});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1322, 525);
+            this.dataGridView1.Size = new System.Drawing.Size(881, 321);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValidated);
@@ -259,7 +227,7 @@
             this.Column1.HeaderText = "商品名称";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 116;
+            this.Column1.Width = 78;
             // 
             // Column2
             // 
@@ -267,21 +235,21 @@
             this.Column2.HeaderText = "生产厂家";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 116;
+            this.Column2.Width = 78;
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "DictionarySpecificationCode";
             this.Column7.HeaderText = "规格";
             this.Column7.Name = "Column7";
-            this.Column7.Width = 80;
+            this.Column7.Width = 54;
             // 
             // Column9
             // 
             this.Column9.DataPropertyName = "DictionaryDosageCode";
             this.Column9.HeaderText = "剂型";
             this.Column9.Name = "Column9";
-            this.Column9.Width = 80;
+            this.Column9.Width = 54;
             // 
             // Column3
             // 
@@ -290,7 +258,7 @@
             this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column3.HeaderText = "批准文号";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 116;
+            this.Column3.Width = 78;
             // 
             // Column13
             // 
@@ -299,7 +267,7 @@
             this.Column13.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column13.HeaderText = "产地";
             this.Column13.Name = "Column13";
-            this.Column13.Width = 80;
+            this.Column13.Width = 54;
             // 
             // Column12
             // 
@@ -308,7 +276,7 @@
             this.Column12.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column12.HeaderText = "执行标准";
             this.Column12.Name = "Column12";
-            this.Column12.Width = 116;
+            this.Column12.Width = 78;
             // 
             // Column4
             // 
@@ -317,7 +285,21 @@
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "有效期";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 98;
+            this.Column4.Width = 66;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "PurchaseTax";
+            this.Column15.HeaderText = "采购税率";
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 78;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "SaleTax";
+            this.Column14.HeaderText = "销售税率";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 78;
             // 
             // Column10
             // 
@@ -326,7 +308,7 @@
             this.Column10.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column10.HeaderText = "拼音码";
             this.Column10.Name = "Column10";
-            this.Column10.Width = 98;
+            this.Column10.Width = 66;
             // 
             // Column5
             // 
@@ -335,7 +317,7 @@
             this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column5.HeaderText = "库存上限";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 116;
+            this.Column5.Width = 78;
             // 
             // Column6
             // 
@@ -344,7 +326,7 @@
             this.Column6.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column6.HeaderText = "库存下限";
             this.Column6.Name = "Column6";
-            this.Column6.Width = 116;
+            this.Column6.Width = 78;
             // 
             // Column11
             // 
@@ -353,7 +335,7 @@
             this.Column11.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column11.HeaderText = "经营范围";
             this.Column11.Name = "Column11";
-            this.Column11.Width = 116;
+            this.Column11.Width = 78;
             // 
             // Column8
             // 
@@ -362,7 +344,7 @@
             this.Column8.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column8.HeaderText = "销售价格";
             this.Column8.Name = "Column8";
-            this.Column8.Width = 116;
+            this.Column8.Width = 78;
             // 
             // LowSalePrice
             // 
@@ -371,17 +353,27 @@
             this.LowSalePrice.DefaultCellStyle = dataGridViewCellStyle10;
             this.LowSalePrice.HeaderText = "最低限价";
             this.LowSalePrice.Name = "LowSalePrice";
-            this.LowSalePrice.Width = 116;
+            this.LowSalePrice.Width = 78;
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(60, 28);
+            this.toolStripButton2.Text = "税率设置";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // FormDrugOtherInfor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 674);
+            this.ClientSize = new System.Drawing.Size(881, 449);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDrugOtherInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "商品其他信息设置";
@@ -412,9 +404,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.ToolStripButton btnSearch;
-        private System.Windows.Forms.ToolStripButton btnModify;
-        private System.Windows.Forms.ToolStripButton btnSave;
-        private System.Windows.Forms.ToolStripButton btnCancel;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -424,12 +413,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn LowSalePrice;
-
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

@@ -1,4 +1,5 @@
-﻿using BugsBox.Pharmacy.Business.Models;
+﻿using BugsBox.Pharmacy.AppClient.Common;
+using BugsBox.Pharmacy.Business.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         //    ReshowDelay = 500,
         //    ToolTipTitle = "使用提示",
         //    ToolTipIcon = ToolTipIcon.Info,
-             
+
         //}; 
         #endregion
 
@@ -40,6 +41,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
             this.textBox2.Text = purchaseunit.Bank;
 
+            var setting = AppClientContext.GetCurrentSalePriceControlRulesModel();
+            if (setting != null)
+            {
+                textBox1.Text = setting.SalesOrderDefaultTaxRate.DefaultTaxRate.ToString();
+            }
+
+
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowPostPaint += (s, e) => DataGridViewOperator.SetRowNumber(this.dataGridView1, e);
             this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -47,9 +55,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             this.toolStripButton3.Enabled = false;
 
             var cellstyle = new DataGridViewCellStyle
-                {
-                    BackColor = Color.Yellow,
-                };
+            {
+                BackColor = Color.Yellow,
+            };
             Action RefreshData = () =>
             {
                 var u = this.PharmacyDatabaseService.GetSalesOrderDetailForVATModels(m.Id, out msg);
@@ -76,12 +84,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     return;
                 }
                 string bank = this.textBox2.Text.Trim();
-                if (string.IsNullOrEmpty(bank))
-                {
-                    MessageBox.Show("请填写银行账号！");
-                    this.textBox2.Focus();
-                    return;
-                }
+
 
                 var b = this.PharmacyDatabaseService.SaveVATCode(m.Id, string.Empty, string.Empty, vatrate, bank, out msg);
                 MessageBox.Show(b ? "保存成功！" : msg);
@@ -128,12 +131,15 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 }
             };
 
-            this.Shown += (s,e) =>
+            this.Shown += (s, e) =>
             {
-                
+
             };
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

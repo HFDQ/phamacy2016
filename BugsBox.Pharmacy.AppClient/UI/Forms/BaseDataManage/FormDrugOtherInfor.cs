@@ -26,16 +26,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
         private List<DrugInfo> _listDrugInfo = new List<DrugInfo>();
 
         BugsBox.Pharmacy.UI.Common.BaseRightMenu brm = null;
-        
-        private PagerInfo pageInfo = new PagerInfo();     
-   
+
+        private PagerInfo pageInfo = new PagerInfo();
+
         public FormDrugOtherInfor()
         {
             InitializeComponent();
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             brm = new Pharmacy.UI.Common.BaseRightMenu(this.dataGridView1);
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,10 +44,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             int pageIndex = 1;
             int pageSize = this.pagerControl1.PageSize;
             GetListDrugInfo(pageIndex, pageSize);
-            
+
             this.pagerControl1.RecordCount = pageInfo.RecordCount;
             this.pagerControl1.PageIndex = 1;
-            
+
         }
 
         private void GetListDrugInfo(int pageIndex, int pageSize)
@@ -66,21 +66,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             }
         }
 
-        
+
 
         private void FormDrugOtherInfor_Load(object sender, EventArgs e)
         {
             GetListDrugInfo(1, this.pagerControl1.PageSize);
             this.pagerControl1.RecordCount = pageInfo.RecordCount;
             this.pagerControl1.PageIndex = 1;
-            
+
         }
 
         private void pagerControl1_DataPaging()
         {
             int pageIndex = this.pagerControl1.PageIndex;
             int pageSize = this.pagerControl1.PageSize;
-            GetListDrugInfo(pageIndex, pageSize);            
+            GetListDrugInfo(pageIndex, pageSize);
         }
 
         private void txtSearchKeyword_KeyPress(object sender, KeyPressEventArgs e)
@@ -90,7 +90,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                 _searchKeyword = txtSearchKeyword.Text.Trim();
                 int pageIndex = 1;
                 int pageSize = this.pagerControl1.PageSize;
-                GetListDrugInfo(pageIndex, pageSize);                
+                GetListDrugInfo(pageIndex, pageSize);
                 this.pagerControl1.RecordCount = pageInfo.RecordCount;
                 this.pagerControl1.PageIndex = 1;
             }
@@ -106,16 +106,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             try
             {
                 string msg = string.Empty;
-                DrugInfo drg=_listDrugInfo[dataGridView1.CurrentRow.Index];
-                
-                if(this.PharmacyDatabaseService.SaveDrugInfo(out msg,drg))
-                    this.PharmacyDatabaseService.WriteLog(BugsBox.Pharmacy.AppClient.Common.AppClientContext.currentUser.Id, "修改药品一般信息成功,药品名称"+drg.ProductGeneralName);
+                DrugInfo drg = _listDrugInfo[dataGridView1.CurrentRow.Index];
+
+                if (this.PharmacyDatabaseService.SaveDrugInfo(out msg, drg))
+                    this.PharmacyDatabaseService.WriteLog(BugsBox.Pharmacy.AppClient.Common.AppClientContext.currentUser.Id, "修改药品一般信息成功,药品名称" + drg.ProductGeneralName);
                 else
                     this.PharmacyDatabaseService.WriteLog(BugsBox.Pharmacy.AppClient.Common.AppClientContext.currentUser.Id, "修改药品一般信息失败,药品名称" + drg.ProductGeneralName);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("网络异常，请稍后再提交！\n"+ex.Message);
+                MessageBox.Show("网络异常，请稍后再提交！\n" + ex.Message);
             }
         }
 
@@ -129,7 +129,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             _searchKeyword = "";
             int pageIndex = 1;
             int pageSize = this.pagerControl1.PageSize;
-            GetListDrugInfo(pageIndex, pageSize);            
+            GetListDrugInfo(pageIndex, pageSize);
             this.pagerControl1.RecordCount = pageInfo.RecordCount;
             this.pagerControl1.PageIndex = 1;
         }
@@ -139,7 +139,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             _searchKeyword = txtSearchKeyword.Text.Trim();
             int pageIndex = 1;
             int pageSize = this.pagerControl1.PageSize;
-            GetListDrugInfo(pageIndex, pageSize);            
+            GetListDrugInfo(pageIndex, pageSize);
             this.pagerControl1.RecordCount = pageInfo.RecordCount;
             this.pagerControl1.PageIndex = 1;
         }
@@ -151,6 +151,22 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
                 frm.StartPosition = FormStartPosition.CenterParent;
                 frm.ShowDialog();
             }
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            TaxSetting setting = new TaxSetting();
+            setting.ShowDialog();
         }
     }
 }

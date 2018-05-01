@@ -75,6 +75,7 @@
             this.colPLNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProcess = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chkshowZeo = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,6 +84,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkshowZeo);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button5);
@@ -107,7 +109,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(707, 31);
+            this.button6.Location = new System.Drawing.Point(717, 31);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(92, 23);
             this.button6.TabIndex = 22;
@@ -124,7 +126,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(538, 31);
+            this.button5.Location = new System.Drawing.Point(548, 31);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(79, 24);
             this.button5.TabIndex = 19;
@@ -135,7 +137,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(624, 31);
+            this.button4.Location = new System.Drawing.Point(634, 31);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(65, 24);
             this.button4.TabIndex = 19;
@@ -146,7 +148,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(460, 31);
+            this.button3.Location = new System.Drawing.Point(470, 31);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
@@ -156,7 +158,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(538, 5);
+            this.button2.Location = new System.Drawing.Point(548, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 23);
             this.button2.TabIndex = 16;
@@ -176,7 +178,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(460, 5);
+            this.button1.Location = new System.Drawing.Point(470, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 23);
             this.button1.TabIndex = 16;
@@ -490,6 +492,16 @@
             this.panel3.Size = new System.Drawing.Size(887, 322);
             this.panel3.TabIndex = 14;
             // 
+            // chkshowZeo
+            // 
+            this.chkshowZeo.AutoSize = true;
+            this.chkshowZeo.Location = new System.Drawing.Point(382, 10);
+            this.chkshowZeo.Name = "chkshowZeo";
+            this.chkshowZeo.Size = new System.Drawing.Size(84, 16);
+            this.chkshowZeo.TabIndex = 23;
+            this.chkshowZeo.Text = "显示零库存";
+            this.chkshowZeo.UseVisualStyleBackColor = true;
+            // 
             // StorageQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -553,5 +565,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPLNum;
         private System.Windows.Forms.DataGridViewButtonColumn colProcess;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.CheckBox chkshowZeo;
     }
 }

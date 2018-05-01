@@ -57,7 +57,7 @@
             this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1209, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(806, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -66,7 +66,7 @@
             this.toolStripButton1.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Refresh;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(74, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 28);
             this.toolStripButton1.Text = "刷新";
             // 
             // toolStripSeparator2
@@ -79,7 +79,7 @@
             this.toolStripButton3.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Ok;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(110, 28);
+            this.toolStripButton3.Size = new System.Drawing.Size(84, 28);
             this.toolStripButton3.Text = "保存清单";
             // 
             // toolStripSeparator3
@@ -92,7 +92,7 @@
             this.toolStripButton4.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Rss_Download;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(117, 28);
+            this.toolStripButton4.Size = new System.Drawing.Size(89, 28);
             this.toolStripButton4.Text = "导出Excel";
             // 
             // groupBox1
@@ -104,52 +104,60 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 31);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1209, 110);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(806, 73);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "设置";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(495, 29);
+            this.textBox2.Location = new System.Drawing.Point(330, 19);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(393, 65);
+            this.textBox2.Size = new System.Drawing.Size(263, 23);
             this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 29);
+            this.textBox1.Location = new System.Drawing.Point(109, 19);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 28);
+            this.textBox1.Size = new System.Drawing.Size(112, 21);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "0.17";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(354, 34);
+            this.label2.Location = new System.Drawing.Point(236, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 18);
+            this.label2.Size = new System.Drawing.Size(89, 12);
             this.label2.TabIndex = 0;
             this.label2.Text = "购方银行账号：";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(906, 29);
+            this.button1.Location = new System.Drawing.Point(604, 19);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 34);
+            this.button1.Size = new System.Drawing.Size(65, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "保 存";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 34);
+            this.label1.Location = new System.Drawing.Point(15, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
+            this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "设置清单税率：";
             // 
@@ -157,20 +165,22 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 141);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 104);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(1209, 588);
+            this.dataGridView1.Size = new System.Drawing.Size(806, 382);
             this.dataGridView1.TabIndex = 2;
             // 
             // FormRewardListDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 729);
+            this.ClientSize = new System.Drawing.Size(806, 486);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRewardListDetails";
             this.Text = "发票明细清单";
             this.toolStrip1.ResumeLayout(false);

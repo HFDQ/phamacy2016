@@ -286,6 +286,13 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 {
                     druginfo = druginfo.Where(r => r.FactoryName.Contains(StandardCode));
                 }
+
+                if (searchConditions.Count == 2 && Convert.ToBoolean(searchConditions[1]))
+                {
+                    drugInventoryRecords = drugInventoryRecords.Where(o => o.CanSaleNum >= 0);
+                }
+
+
                 var query = from i in drugInventoryRecords
                             join d in druginfo on i.DrugInfoId equals d.Id
                             join w in BusinessHandlerFactory.RepositoryProvider.Db.WarehouseZones on i.WarehouseZoneId equals w.Id
@@ -350,13 +357,13 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     combine = Convert.ToBoolean(searchConditions.First());
 
                     //批次锁定查询
-                    if (searchConditions.Count == 2)
-                    {
-                        if (isValid = Convert.ToBoolean(searchConditions[1]))
-                        {
-                            outRecord = outRecord.Where(r => r.CanSaleNum > 0 && !r.isValid).ToList();
-                        }
-                    }
+                    //if (searchConditions.Count == 2)
+                    //{
+                    //    if (isValid = Convert.ToBoolean(searchConditions[1]))
+                    //    {
+                    //        outRecord = outRecord.Where(r => r.CanSaleNum > 0 && !r.isValid).ToList();
+                    //    }
+                    //}
                 }
                 if (combine)
                 {

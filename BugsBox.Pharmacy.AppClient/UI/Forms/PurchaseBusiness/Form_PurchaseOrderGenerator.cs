@@ -509,5 +509,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         {
 
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

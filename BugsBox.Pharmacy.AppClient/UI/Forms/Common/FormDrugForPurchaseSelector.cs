@@ -23,6 +23,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
         public FormDrugForPurchaseSelector()
         {
             InitializeComponent();
+            beginDate.Value = DateTime.Now.AddDays(-7);
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             Search();
@@ -30,7 +31,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
 
         public FormDrugForPurchaseSelector(string type) : this()
         {
-            //InitializeComponent();
             BindComboBoxWarehouseZones();
             this.dataGridView1.AutoGenerateColumns = false;
         }
@@ -55,7 +55,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                     _listLackDrugRecords = _listLackDrugRecords.Where(p => p.pinyin != null && p.pinyin.ToUpper().Contains(this.txtGeneralName.Text.Trim().ToUpper())).ToList();
                 else
                     _listLackDrugRecords = PharmacyDatabaseService.GetDrugInfoForOutofStock(
-   out msg, int.Parse(txtStockLower.Text)).OrderBy(r => r.ProductGeneralName).ToList();
+  int.Parse(txtStockLower.Text), beginDate.Value, endDate.Value, out msg).OrderBy(r => r.ProductGeneralName).ToList();
 
                 if (this.cmbWareHouse.SelectedValue != null && this.cmbWareHouse.SelectedValue.ToString() != Guid.Empty.ToString())
                 {

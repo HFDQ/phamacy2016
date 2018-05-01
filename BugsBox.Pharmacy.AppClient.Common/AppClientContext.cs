@@ -6,6 +6,7 @@ using BugsBox.Application.Core;
 using BugsBox.Pharmacy.AppClient.PS;
 using BugsBox.Pharmacy.Models;
 using BugsBox.Common;
+using BugsBox.Pharmacy.Business.Models;
 
 namespace BugsBox.Pharmacy.AppClient.Common
 {
@@ -16,6 +17,14 @@ namespace BugsBox.Pharmacy.AppClient.Common
     {
 
         public static User currentUser = null;
+
+
+        public static SalePriceControlRulesModel GetCurrentSalePriceControlRulesModel()
+        {
+            string message = string.Empty;
+            var sets = ServicesProvider.Instance.PharmacyDatabaseService.GetSalePriceControlRules(out message);
+            return sets;
+        }
 
         /// <summary>
         /// 当前用户
@@ -32,7 +41,7 @@ namespace BugsBox.Pharmacy.AppClient.Common
                 if (currentUser != null)
                 {
                     ServicesProvider.Instance.RegisterPharmacyNotificationChannel();
-                    ServicesProvider.Instance.PharmacyNotificationChannel.RegisterClientNotification(currentUser); 
+                    ServicesProvider.Instance.PharmacyNotificationChannel.RegisterClientNotification(currentUser);
                     //设置权限
                     try
                     {
@@ -41,9 +50,9 @@ namespace BugsBox.Pharmacy.AppClient.Common
                         authorityKeys = ServicesProvider.Instance.PharmacyDatabaseService
                             .GetAuthorityKeys(out message, value.Id)
                             .ToList();
-                        
-                            ServicesProvider.Instance.PharmacyNotificationCallback.AuthorityChanged -= new EventHandler<EventArgs>(PharmacyNotificationCallback_AuthorityChanged);
-                      
+
+                        ServicesProvider.Instance.PharmacyNotificationCallback.AuthorityChanged -= new EventHandler<EventArgs>(PharmacyNotificationCallback_AuthorityChanged);
+
                         PharmacyAuthorize.SetAuthorityKeys(authorityKeys);
                         ServicesProvider.Instance.PharmacyNotificationCallback.AuthorityChanged += new EventHandler<EventArgs>(PharmacyNotificationCallback_AuthorityChanged);
                     }
@@ -67,7 +76,7 @@ namespace BugsBox.Pharmacy.AppClient.Common
                 List<string> authorityKeys = null;
                 string message;
                 //
-               // LoggerHelper.Instance.Warning("接受到权限变更通知");
+                // LoggerHelper.Instance.Warning("接受到权限变更通知");
                 authorityKeys = ServicesProvider.Instance.PharmacyDatabaseService
                     .GetAuthorityKeys(out message, currentUser.Id)
                     .ToList();
@@ -79,7 +88,7 @@ namespace BugsBox.Pharmacy.AppClient.Common
                 ex = new Exception("接受到权限变更通知处理失败");
                 LoggerHelper.Instance.Error(ex);
             }
-           
+
         }
 
         /// <summary>
@@ -114,6 +123,6 @@ namespace BugsBox.Pharmacy.AppClient.Common
                 return AppConfig.Config;
             }
         }
- 
+
     }
 }

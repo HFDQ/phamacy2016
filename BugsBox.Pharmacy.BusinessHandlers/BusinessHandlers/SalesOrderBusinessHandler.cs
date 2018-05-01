@@ -557,7 +557,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                     SaleNum = p.Sum(r => r.saleNum),
                                     ReturnSaleNum = p.Sum(r => r.returnSaleNum),
                                     SaleNumSum = p.Sum(r => r.saleNum) - p.Sum(r => r.returnSaleNum),
-                                    Supplier=p.FirstOrDefault().supplier
+                                    Supplier = p.FirstOrDefault().supplier
                                 }).ToList();
 
                     return result.ToList();
@@ -1933,6 +1933,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             return SearialiserHelper<SalePriceControlRulesModel>.DeSerializeFileToObj("SalePriceControlRulesModel.bin");
         }
 
+
         #region 复核员检索
         /// <summary>
         /// 检索系统所有启用的复核员
@@ -2042,9 +2043,24 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             string addressAndTel = purchaseUnit.DetailedAddress + "  " + purchaseUnit.ContactTel;
             string bankAccount = purchaseUnit.Bank;
 
+
+            //全局销售税率
+            decimal globaldefaultsaleTax = 0;
+
+            var rules = this.BusinessHandlerFactory.SalesOrderBusinessHandler.GetSalePriceControlRules();
+            if (rules != null)
+            {
+                globaldefaultsaleTax = rules.SalesOrderDefaultTaxRate.DefaultTaxRate;
+            }
+
+
+
+
             BusinessLicense BusinessLicense = RepositoryProvider.BusinessLicenseRepository.Get(purchaseUnit.BusinessLicenseId);
 
-            var re = from i in a.SalesOrderDetails.OrderBy(r => r.Index)//依据开单顺序排序                     
+            var re = from i in a.SalesOrderDetails.OrderBy(r => r.Index)//依据开单顺序排序 
+                     join invent in this.RepositoryProvider.DrugInventoryRecordRepository.Queryable on i.DrugInventoryRecordID equals invent.Id
+                     join d in this.RepositoryProvider.DrugInfoRepository.Queryable on invent.DrugInfoId equals d.Id
                      select new Business.Models.SalesOrderDetailForVATModel
                      {
                          Amount = i.Amount,
@@ -2054,7 +2070,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                          SalesOrderId = a.Id,
                          SpecificName = i.SpecificationCode,
                          UnitPrice = i.ActualUnitPrice,
-                         VATRate = a.VATRate == 0m ? 0.17m : a.VATRate,
+                         VATRate = a.VATRate == 0m ? (d.SaleTax == decimal.Zero ? globaldefaultsaleTax : d.SaleTax) : a.VATRate,
                          Discount = i.Discount,
                          PurchaseUnitName = purchaseUnit.Name,
                          OrderCode = a.OrderCode,

@@ -64,6 +64,10 @@
             this.arrivaldatetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesSort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.beginDate = new System.Windows.Forms.DateTimePicker();
+            this.endDate = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -137,6 +141,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.endDate);
+            this.groupBox1.Controls.Add(this.beginDate);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtStockLower);
             this.groupBox1.Controls.Add(this.button1);
@@ -157,7 +165,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(490, 35);
+            this.label4.Location = new System.Drawing.Point(302, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 14;
@@ -165,7 +173,7 @@
             // 
             // txtStockLower
             // 
-            this.txtStockLower.Location = new System.Drawing.Point(562, 32);
+            this.txtStockLower.Location = new System.Drawing.Point(374, 17);
             this.txtStockLower.Name = "txtStockLower";
             this.txtStockLower.Size = new System.Drawing.Size(100, 21);
             this.txtStockLower.TabIndex = 13;
@@ -176,16 +184,16 @@
             this.button1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.button1.Location = new System.Drawing.Point(9, 29);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(37, 23);
             this.button1.TabIndex = 12;
-            this.button1.Text = "全部选择";
+            this.button1.Text = "全选";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbWareHouse
             // 
             this.cmbWareHouse.FormattingEnabled = true;
-            this.cmbWareHouse.Location = new System.Drawing.Point(367, 29);
+            this.cmbWareHouse.Location = new System.Drawing.Point(141, 44);
             this.cmbWareHouse.Name = "cmbWareHouse";
             this.cmbWareHouse.Size = new System.Drawing.Size(121, 20);
             this.cmbWareHouse.TabIndex = 11;
@@ -213,7 +221,7 @@
             // 
             // txtGeneralName
             // 
-            this.txtGeneralName.Location = new System.Drawing.Point(173, 29);
+            this.txtGeneralName.Location = new System.Drawing.Point(145, 17);
             this.txtGeneralName.Name = "txtGeneralName";
             this.txtGeneralName.Size = new System.Drawing.Size(117, 21);
             this.txtGeneralName.TabIndex = 8;
@@ -222,7 +230,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 32);
+            this.label3.Location = new System.Drawing.Point(82, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 1;
@@ -231,7 +239,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 32);
+            this.label2.Location = new System.Drawing.Point(67, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 12);
             this.label2.TabIndex = 1;
@@ -399,6 +407,38 @@
             this.dataGridViewCheckBoxColumn1.Visible = false;
             this.dataGridViewCheckBoxColumn1.Width = 60;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(302, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "开始日期：";
+            // 
+            // beginDate
+            // 
+            this.beginDate.Location = new System.Drawing.Point(363, 40);
+            this.beginDate.Name = "beginDate";
+            this.beginDate.Size = new System.Drawing.Size(111, 21);
+            this.beginDate.TabIndex = 17;
+            // 
+            // endDate
+            // 
+            this.endDate.Location = new System.Drawing.Point(545, 40);
+            this.endDate.Name = "endDate";
+            this.endDate.Size = new System.Drawing.Size(121, 21);
+            this.endDate.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(480, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "结束日期：";
+            // 
             // FormDrugForPurchaseSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -457,5 +497,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtStockLower;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker beginDate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker endDate;
     }
 }
