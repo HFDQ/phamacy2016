@@ -20,7 +20,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
             InitializeComponent();
 
             sets = this.PharmacyDatabaseService.GetSalePriceControlRules(out message);
-            textBox1.Text = sets.PurchaseOrderDefaultTaxRate.DefaultTaxRate.ToString();
+            if (sets.PurchaseOrderDefaultTaxRate != null)
+            {
+                textBox1.Text = sets.PurchaseOrderDefaultTaxRate.DefaultTaxRate.ToString();
+            }
+
             if (sets.SalesOrderDefaultTaxRate != null)
             {
 
@@ -32,6 +36,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
         {
             try
             {
+                if (sets.PurchaseOrderDefaultTaxRate == null)
+                {
+                    sets.PurchaseOrderDefaultTaxRate = new PurchaseOrderTaxRate();
+                }
                 sets.PurchaseOrderDefaultTaxRate.DefaultTaxRate = decimal.Parse(textBox1.Text);
                 if (sets.SalesOrderDefaultTaxRate == null)
                 {
