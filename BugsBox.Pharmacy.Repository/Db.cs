@@ -110,7 +110,7 @@ namespace BugsBox.Pharmacy.Repository
 
             modelBuilder.Entity<Models.DrugInfo>().HasOptional(s => s.GoodsAdditionalProperty).WithRequired(ad => ad.DrugInfo);
             modelBuilder.Entity<Models.GoodsAdditionalProperty>().HasKey(o => o.DrugInfoId);
-
+            //modelBuilder.Entity<Models.SalesOrder>().Property(o=>o.OrderStatus).
 
             properties.ToList().ForEach(property =>
             {

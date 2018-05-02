@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -49,7 +50,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public int ApprovalStatusValue { get; set; }
-
+        [NotMapped]
         public ApprovalStatus ApprovalStatus
         {
             get { return (ApprovalStatus)ApprovalStatusValue; }

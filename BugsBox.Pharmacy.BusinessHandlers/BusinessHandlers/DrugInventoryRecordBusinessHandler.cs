@@ -275,7 +275,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             {
                 var queryBuilder = QueryBuilder.Create<DrugInventoryRecord>()
                    .Like(c => c.BatchNumber, BatchNumber)
-                   .In(c => c.WarehouseZoneId, WarehouseZones);
+                   .In(c => c.WarehouseZoneId, WarehouseZones)
+                    .GreaterThan(c => c.CanSaleNum, 0);
                 var drugInventoryRecords = BusinessHandlerFactory.RepositoryProvider.Db.DrugInventoryRecords.Where(queryBuilder.Expression);
                 var druginfo = BusinessHandlerFactory.RepositoryProvider.Db.DrugInfos.Where(r => r.Deleted == false);
                 if (!string.IsNullOrEmpty(ProductGeneralName))
@@ -287,16 +288,11 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     druginfo = druginfo.Where(r => r.FactoryName.Contains(StandardCode));
                 }
 
-                if (searchConditions.Count == 2 && Convert.ToBoolean(searchConditions[1]))
-                {
-                    drugInventoryRecords = drugInventoryRecords.Where(o => o.CanSaleNum >= 0);
-                }
 
 
                 var query = from i in drugInventoryRecords
                             join d in druginfo on i.DrugInfoId equals d.Id
                             join w in BusinessHandlerFactory.RepositoryProvider.Db.WarehouseZones on i.WarehouseZoneId equals w.Id
-
 
                             join pid in BusinessHandlerFactory.RepositoryProvider.Db.PurchaseInInventeryOrderDetails.Where(r => !r.Deleted) on i.PurchaseInInventeryOrderDetailId equals pid.Id into left
                             from l in left.DefaultIfEmpty()

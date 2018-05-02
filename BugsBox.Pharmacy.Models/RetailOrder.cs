@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -122,6 +123,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 付款方式
         /// </summary>
+        [NotMapped]
         public RetailCustomerType RetailCustomerType
         {
             get { return (RetailCustomerType)RetailCustomerTypeValue; }
@@ -137,6 +139,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 付款方式
         /// </summary>
+        [NotMapped]
         public RetailPaymentMethod RetailPaymentMethod
         {
             get { return (RetailPaymentMethod)RetailPaymentMethodValue; }

@@ -170,7 +170,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
                 string msg = String.Empty;
 
                 bool combine = BatchCombineCheck.Checked;
-                bool showZeo = chkshowZeo.Checked;
+                bool showZeo = false;
 
                 storage = PharmacyDatabaseService.StorageQuery(out msg, this.textBox1.Text.Trim(), this.textBox2.Text.Trim(), this.textBox3.Text.Trim(), warehouseZonesIds, this.pagerControl1.PageIndex, this.pagerControl1.PageSize, new object[] { combine, showZeo }).OrderBy(o => o.ProductGeneralName).ToList();
                 storage.ForEach(r => r.PruductDate = r.PruductDate.Date);

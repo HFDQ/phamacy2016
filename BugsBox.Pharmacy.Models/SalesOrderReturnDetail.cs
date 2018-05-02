@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -147,10 +148,11 @@ namespace BugsBox.Pharmacy.Models
         //退货理由
         [DataMember]
         public int ReturnReasonValue { get; set; }
-        
+
         /// <summary>
         /// 销退处理状态
         /// </summary>
+        [NotMapped]
         public OrderReturnReason ReturnReason
         {
             get
@@ -188,6 +190,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 销退处理状态
         /// </summary>
+        [NotMapped]
         public ReturnHandledMethod ReturnHandledMethod
         {
             get

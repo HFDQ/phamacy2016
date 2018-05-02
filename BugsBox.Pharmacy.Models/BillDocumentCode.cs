@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -61,6 +62,8 @@ namespace BugsBox.Pharmacy.Models
         [DataMember]
         public int BillDocumentTypeValue { get; set; }
 
+
+        [NotMapped]
         [IgnoreDataMember]
         public BillDocumentType BillDocumentType
         {

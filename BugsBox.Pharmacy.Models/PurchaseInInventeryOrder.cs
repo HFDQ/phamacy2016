@@ -5,6 +5,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BugsBox.Pharmacy.Models
 {
@@ -42,6 +43,8 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 订单状态
         /// </summary>
+        /// 
+        [NotMapped]
         public OrderStatus OrderStatus
         {
             get { return (OrderStatus)OrderStatusValue; }
@@ -81,6 +84,7 @@ namespace BugsBox.Pharmacy.Models
         public string RelatedOrderDocumentNumber { get; set; }
         [DataMember]
         public int RelatedOrderTypeValue { get; set; }
+        [NotMapped]
         public OrderType RelatedOrderType
         {
             get { return (OrderType)RelatedOrderTypeValue; }

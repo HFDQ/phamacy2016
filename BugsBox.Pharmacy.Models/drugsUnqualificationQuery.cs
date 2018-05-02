@@ -5,6 +5,7 @@ using System.Text;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BugsBox.Pharmacy.Models
 {
@@ -92,6 +93,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [Display(Name = "不合格类型")]
         [DataMember]
+        [NotMapped]
         public drugsUnqualificationType unqualificationType
         {
             get;

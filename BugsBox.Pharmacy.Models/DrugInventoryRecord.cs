@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -199,7 +200,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public decimal DurgInventoryTypeValue { get; set; }
-
+        [NotMapped]
         /// <summary>
         /// 入库类型
         /// </summary>

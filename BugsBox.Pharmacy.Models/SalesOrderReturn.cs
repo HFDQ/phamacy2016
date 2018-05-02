@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -100,6 +101,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 销退处理状态
         /// </summary>
+        [NotMapped]
         public OrderReturnStatus OrderReturnStatus
         {
             get

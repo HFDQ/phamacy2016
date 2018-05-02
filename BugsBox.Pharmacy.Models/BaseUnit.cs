@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
@@ -154,7 +155,7 @@ namespace BugsBox.Pharmacy.Models
         public bool IsGSPLicenseOutDate
         {
             get { return GSPLicenseId != Guid.Empty && DateTime.Now.Date > GSPLicenseOutDate; }
-            set { value = GSPLicenseId != Guid.Empty&&DateTime.Now.Date > GSPLicenseOutDate; } 
+            set { value = GSPLicenseId != Guid.Empty && DateTime.Now.Date > GSPLicenseOutDate; }
         }
 
         /// <summary>
@@ -179,7 +180,7 @@ namespace BugsBox.Pharmacy.Models
         public bool IsGMPLicenseOutDate
         {
             get { return GMPLicenseId != Guid.Empty && DateTime.Now.Date > GMPLicenseOutDate; }
-            set { value = GMPLicenseId != Guid.Empty&&DateTime.Now.Date > GMPLicenseOutDate; } 
+            set { value = GMPLicenseId != Guid.Empty && DateTime.Now.Date > GMPLicenseOutDate; }
         }
 
         /// <summary>
@@ -202,7 +203,7 @@ namespace BugsBox.Pharmacy.Models
         public bool IsBusinessLicenseOutDate
         {
             get { return BusinessLicenseId != Guid.Empty && DateTime.Now.Date > BusinessLicenseeOutDate; }
-            set { value = BusinessLicenseId != Guid.Empty && DateTime.Now.Date > BusinessLicenseeOutDate; } 
+            set { value = BusinessLicenseId != Guid.Empty && DateTime.Now.Date > BusinessLicenseeOutDate; }
         }
 
         /// <summary>
@@ -230,7 +231,7 @@ namespace BugsBox.Pharmacy.Models
         public bool IsMedicineProductionLicenseOutDate
         {
             get { return MedicineProductionLicenseId != Guid.Empty && DateTime.Now.Date > MedicineProductionLicenseOutDate; }
-            set { value = MedicineProductionLicenseId != Guid.Empty && DateTime.Now.Date > MedicineProductionLicenseOutDate; } 
+            set { value = MedicineProductionLicenseId != Guid.Empty && DateTime.Now.Date > MedicineProductionLicenseOutDate; }
         }
 
         /// <summary>
@@ -307,7 +308,7 @@ namespace BugsBox.Pharmacy.Models
         [DataMember]
         public bool IsInstrumentsBusinessLicenseOutDate
         {
-            get { return InstrumentsBusinessLicenseId != Guid.Empty&&DateTime.Now.Date > InstrumentsBusinessLicenseOutDate; }
+            get { return InstrumentsBusinessLicenseId != Guid.Empty && DateTime.Now.Date > InstrumentsBusinessLicenseOutDate; }
             set { value = InstrumentsBusinessLicenseId != Guid.Empty && DateTime.Now.Date > InstrumentsBusinessLicenseOutDate; }
         }
 
@@ -487,10 +488,22 @@ namespace BugsBox.Pharmacy.Models
 
         #region 审批状态
 
+        [DataMember(Order = 30)]
+        public int ApprovalStatusValue { get; set; }
+
+        [NotMapped]
+        [DataMember(Order = 31)]
+        public ApprovalStatus ApprovalStatus
+        {
+            get { return (ApprovalStatus)ApprovalStatusValue; }
+            set { ApprovalStatusValue = (int)value; }
+        }
+
+
         /// <summary>
         /// 是否审批通过
         /// </summary>
-        [DataMember(Order = 30)]
+        [DataMember(Order = 32)]
         public bool IsApproval
         {
             get
@@ -499,18 +512,12 @@ namespace BugsBox.Pharmacy.Models
             }
             set
             {
-                value = this.ApprovalStatus.Equals(ApprovalStatus.Approvaled); 
+                value = this.ApprovalStatus.Equals(ApprovalStatus.Approvaled);
             }
         }
 
-        [DataMember]
-        public int ApprovalStatusValue { get; set; }
 
-        public ApprovalStatus ApprovalStatus
-        {
-            get { return (ApprovalStatus)ApprovalStatusValue; }
-            set { ApprovalStatusValue = (int)value; }
-        }
+
 
         #endregion
 
@@ -583,33 +590,33 @@ namespace BugsBox.Pharmacy.Models
                     || IsGSPLicenseOutDate
                     || IsGMPLicenseOutDate
                     || IsBusinessLicenseOutDate
-                    || IsMedicineProductionLicenseOutDate 
+                    || IsMedicineProductionLicenseOutDate
                     || IsMedicineBusinessLicenseOutDate
-                    || IsInstrumentsProductionLicenseOutDate 
-                    || IsInstrumentsBusinessLicenseOutDate 
+                    || IsInstrumentsProductionLicenseOutDate
+                    || IsInstrumentsBusinessLicenseOutDate
                     || IsFoodCirculateLicenseOutDate
                     || IsHealthLicenseOutDate
                     || IsOrganizationCodeLicenseOutDate
-                    ||IsLnstitutionLegalPersonLicenseOutDate
-                    ||IsTaxRegisterLicenseOutDate
-                    ||IsMmedicalInstitutionPermitOutDate
+                    || IsLnstitutionLegalPersonLicenseOutDate
+                    || IsTaxRegisterLicenseOutDate
+                    || IsMmedicalInstitutionPermitOutDate
                     );
             }
             set
             {
-                value = !(!IsApproval || IsOutDate || IsLock 
-                    || IsGSPLicenseOutDate 
-                    || IsGMPLicenseOutDate 
-                    ||IsBusinessLicenseOutDate 
-                    || IsMedicineProductionLicenseOutDate 
-                    || IsMedicineBusinessLicenseOutDate 
-                    || IsInstrumentsProductionLicenseOutDate 
-                    || IsInstrumentsBusinessLicenseOutDate 
+                value = !(!IsApproval || IsOutDate || IsLock
+                    || IsGSPLicenseOutDate
+                    || IsGMPLicenseOutDate
+                    || IsBusinessLicenseOutDate
+                    || IsMedicineProductionLicenseOutDate
+                    || IsMedicineBusinessLicenseOutDate
+                    || IsInstrumentsProductionLicenseOutDate
+                    || IsInstrumentsBusinessLicenseOutDate
                     || IsFoodCirculateLicenseOutDate
-                    || IsHealthLicenseOutDate 
-                    || IsOrganizationCodeLicenseOutDate 
-                    || IsLnstitutionLegalPersonLicenseOutDate 
-                    || IsTaxRegisterLicenseOutDate 
+                    || IsHealthLicenseOutDate
+                    || IsOrganizationCodeLicenseOutDate
+                    || IsLnstitutionLegalPersonLicenseOutDate
+                    || IsTaxRegisterLicenseOutDate
                     || IsMmedicalInstitutionPermitOutDate
                     );
                 if (value)
@@ -657,7 +664,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public bool IsLock { get; set; }
-         
+
 
         /// <summary>
         /// Lock说明

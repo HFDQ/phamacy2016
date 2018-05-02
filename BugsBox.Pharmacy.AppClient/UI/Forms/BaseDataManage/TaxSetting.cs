@@ -26,8 +26,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
 
                 textBox2.Text = sets.SalesOrderDefaultTaxRate.DefaultTaxRate.ToString();
             }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)

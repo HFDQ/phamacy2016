@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -117,6 +118,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 在职状态
         /// </summary> 
+        [NotMapped]
         public EmployStatus EmployStatus
         {
             get { return (EmployStatus)EmployStatusValue; }
@@ -130,6 +132,7 @@ namespace BugsBox.Pharmacy.Models
         [DataMember(Order = 16)]
         public int PharmacistsTitleTypeValue { get; set; }
 
+        [NotMapped]
         /// <summary>
         /// 药师职称
         /// </summary> 
@@ -161,6 +164,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 从业资格
         /// </summary> 
+        [NotMapped]
         public PharmacistsQualification PharmacistsQualification
         {
             get { return (PharmacistsQualification)PharmacistsQualificationValue; }

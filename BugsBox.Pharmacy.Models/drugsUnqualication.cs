@@ -50,7 +50,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public int ApprovalStatusValue { get; set; }
-
+        [NotMapped]
         public ApprovalStatus ApprovalStatus
         {
             get { return (ApprovalStatus)ApprovalStatusValue; }

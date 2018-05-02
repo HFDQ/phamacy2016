@@ -55,6 +55,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 会员类型
         /// </summary>
+        [NotMapped]
         public RetailCustomerType RetailCustomerType
         {
             get

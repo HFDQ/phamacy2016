@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -84,7 +85,7 @@ namespace BugsBox.Pharmacy.Models
         [DataMember(Order = 11)]
         public int WarehouseZoneTypeValue { get; set; }
 
-
+        [NotMapped]
         public WarehouseZoneType WarehouseZoneType
         {
             get { return (WarehouseZoneType)WarehouseZoneTypeValue; }

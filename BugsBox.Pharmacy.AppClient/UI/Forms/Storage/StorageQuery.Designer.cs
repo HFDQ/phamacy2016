@@ -75,7 +75,6 @@
             this.colPLNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProcess = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chkshowZeo = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,7 +83,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.chkshowZeo);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button5);
@@ -492,16 +490,6 @@
             this.panel3.Size = new System.Drawing.Size(887, 322);
             this.panel3.TabIndex = 14;
             // 
-            // chkshowZeo
-            // 
-            this.chkshowZeo.AutoSize = true;
-            this.chkshowZeo.Location = new System.Drawing.Point(382, 10);
-            this.chkshowZeo.Name = "chkshowZeo";
-            this.chkshowZeo.Size = new System.Drawing.Size(84, 16);
-            this.chkshowZeo.TabIndex = 23;
-            this.chkshowZeo.Text = "显示零库存";
-            this.chkshowZeo.UseVisualStyleBackColor = true;
-            // 
             // StorageQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -565,6 +553,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPLNum;
         private System.Windows.Forms.DataGridViewButtonColumn colProcess;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.CheckBox chkshowZeo;
     }
 }

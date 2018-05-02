@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -76,6 +77,7 @@ namespace BugsBox.Pharmacy.Models
         /// 门店类型
         /// 不参与序列化
         /// </summary> 
+        [NotMapped]
         public StoreType StoreType
         {
             get { return (StoreType)StoreTypeValue; }
