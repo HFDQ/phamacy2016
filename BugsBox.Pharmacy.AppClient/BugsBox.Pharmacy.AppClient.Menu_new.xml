@@ -115,9 +115,7 @@
         <Menu id="090202" Title="采购记录查询" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="CGJL" DockState="" ModuleKey="采购记录[窗体]"></Menu>
         <Menu id="090203" Title="中药材采购记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="ZYCCGJL" DockState="" ModuleKey="中药材采购记录[窗体]"></Menu>
         <Menu id="090204" Title="中药饮片采购记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="ZYYPCGJL" DockState="" ModuleKey="中药饮片采购记录[窗体]"></Menu>
-
         <Menu id="090204" Title="医疗器械采购记录" Hotkeys="" Name="UI.Forms.BaseForm.PurchaseRecordList" Image="" Params="YLQXCGJL" DockState="" ModuleKey="采购记录[窗体]"></Menu>
-
         <Menu id="090206" Title="采购退货记录查询" Hotkeys="" Name="UI.Forms.PurchaseBusiness.FormOrderReturnIndex" Image="" Params="" DockState="" ModuleKey="退货记录查询[窗体]"></Menu>
       </Menu>
       <Menu id="0903" Title="收货与验收记录" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">

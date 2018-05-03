@@ -88,7 +88,6 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.SqlServ
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Common.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Autofac.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Omu.ValueInjecter.dll
-D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\log4net.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Common.Security.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Newtonsoft.Json.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Application.Core.pdb
@@ -104,7 +103,6 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\EntityFramework.SqlServ
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Common.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Autofac.xml
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Omu.ValueInjecter.xml
-D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\log4net.xml
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Common.Security.pdb
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\Newtonsoft.Json.xml
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.WebService.csprojResolveAssemblyReference.cache
@@ -112,3 +110,5 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.WebService.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.WebService.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\obj\Debug\BugsBox.Pharmacy.WebService.pdb
+D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Application.Core.dll.config
+D:\DQ\药品经营系统\BugsBox.Pharmacy.WebService\bin\BugsBox.Pharmacy.Business.Models.dll.config

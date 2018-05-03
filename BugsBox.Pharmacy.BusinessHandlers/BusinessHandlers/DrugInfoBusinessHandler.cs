@@ -386,14 +386,15 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                      });
 
                     queryInventory = from m in queryInventory
-                                     join q in realtimeq on m.drugInfoId equals q.drugInfoId
+                                     join q in realtimeq on m.drugInfoId equals q.drugInfoId into n
+                                     from b in n.DefaultIfEmpty()
                                      select new
                                      {
                                          drugInfoId = m.drugInfoId,
                                          inventoryNum = m.inventoryNum,
                                          canSaleNum = m.canSaleNum,
                                          wholePrice = m.wholePrice,
-                                         wholeSales = q.Amount
+                                         wholeSales = b == null ? 0 : b.Amount
                                      };
 
                 }

@@ -35,6 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -56,6 +58,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.clmDrugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSupplyUnitId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +77,6 @@
             this.WarehouseZoneName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPLNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProcess = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -321,6 +323,15 @@
             this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 59);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(887, 322);
+            this.panel3.TabIndex = 14;
+            // 
             // clmDrugName
             // 
             this.clmDrugName.DataPropertyName = "ProductGeneralName";
@@ -373,6 +384,9 @@
             // CanSaleNum
             // 
             this.CanSaleNum.DataPropertyName = "CanSaleNum";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.CanSaleNum.DefaultCellStyle = dataGridViewCellStyle2;
             this.CanSaleNum.HeaderText = "可用库存";
             this.CanSaleNum.Name = "CanSaleNum";
             this.CanSaleNum.ReadOnly = true;
@@ -381,8 +395,10 @@
             // CurrentInventoryCount
             // 
             this.CurrentInventoryCount.DataPropertyName = "CurrentInventoryCount";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.CurrentInventoryCount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.CurrentInventoryCount.DefaultCellStyle = dataGridViewCellStyle3;
             this.CurrentInventoryCount.HeaderText = "现有库存";
             this.CurrentInventoryCount.Name = "CurrentInventoryCount";
             this.CurrentInventoryCount.ReadOnly = true;
@@ -399,8 +415,8 @@
             // OutValidDate
             // 
             this.OutValidDate.DataPropertyName = "OutValidDateStr";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.OutValidDate.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.OutValidDate.DefaultCellStyle = dataGridViewCellStyle4;
             this.OutValidDate.HeaderText = "有效期至";
             this.OutValidDate.Name = "OutValidDate";
             this.OutValidDate.ReadOnly = true;
@@ -409,8 +425,10 @@
             // PurchasePrice
             // 
             this.PurchasePrice.DataPropertyName = "PurchasePrice";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PurchasePrice.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.PurchasePrice.DefaultCellStyle = dataGridViewCellStyle5;
             this.PurchasePrice.HeaderText = "采购价";
             this.PurchasePrice.Name = "PurchasePrice";
             this.PurchasePrice.ReadOnly = true;
@@ -419,8 +437,8 @@
             // BatchNumber
             // 
             this.BatchNumber.DataPropertyName = "BatchNumber";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.BatchNumber.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BatchNumber.DefaultCellStyle = dataGridViewCellStyle6;
             this.BatchNumber.HeaderText = "生产批号";
             this.BatchNumber.Name = "BatchNumber";
             this.BatchNumber.ReadOnly = true;
@@ -437,6 +455,9 @@
             // PriceCount
             // 
             this.PriceCount.DataPropertyName = "PriceCount";
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.PriceCount.DefaultCellStyle = dataGridViewCellStyle7;
             this.PriceCount.HeaderText = "金额";
             this.PriceCount.Name = "PriceCount";
             this.PriceCount.ReadOnly = true;
@@ -462,8 +483,10 @@
             // colPLNum
             // 
             this.colPLNum.DataPropertyName = "DismantingAmount";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.colPLNum.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.colPLNum.DefaultCellStyle = dataGridViewCellStyle8;
             this.colPLNum.HeaderText = "损益数量";
             this.colPLNum.Name = "colPLNum";
             this.colPLNum.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -473,22 +496,13 @@
             // 
             // colProcess
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.NullValue = "申报";
-            this.colProcess.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.NullValue = "申报";
+            this.colProcess.DefaultCellStyle = dataGridViewCellStyle9;
             this.colProcess.HeaderText = "损益申报";
             this.colProcess.Name = "colProcess";
             this.colProcess.Visible = false;
             this.colProcess.Width = 59;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 59);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(887, 322);
-            this.panel3.TabIndex = 14;
             // 
             // StorageQuery
             // 
@@ -534,6 +548,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private PagerControl.PagerControl pagerControl1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDrugName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSupplyUnitId;
@@ -552,6 +567,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn WarehouseZoneName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPLNum;
         private System.Windows.Forms.DataGridViewButtonColumn colProcess;
-        private System.Windows.Forms.Button button6;
     }
 }

@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripbtnSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripbtnOutput = new System.Windows.Forms.ToolStripButton();
@@ -38,6 +42,10 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.endDate = new System.Windows.Forms.DateTimePicker();
+            this.beginDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtStockLower = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -64,10 +72,6 @@
             this.arrivaldatetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesSort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.beginDate = new System.Windows.Forms.DateTimePicker();
-            this.endDate = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -161,6 +165,38 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询条件";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(480, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 12);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "订单结束日期：";
+            // 
+            // endDate
+            // 
+            this.endDate.Location = new System.Drawing.Point(573, 40);
+            this.endDate.Name = "endDate";
+            this.endDate.Size = new System.Drawing.Size(121, 21);
+            this.endDate.TabIndex = 18;
+            // 
+            // beginDate
+            // 
+            this.beginDate.Location = new System.Drawing.Point(363, 40);
+            this.beginDate.Name = "beginDate";
+            this.beginDate.Size = new System.Drawing.Size(111, 21);
+            this.beginDate.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(272, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 12);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "订单开始日期：";
             // 
             // label4
             // 
@@ -260,14 +296,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Choice,
@@ -284,25 +320,25 @@
             this.wareHouse,
             this.arrivaldatetime,
             this.salesSort});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridView1.Size = new System.Drawing.Size(1006, 333);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridView1_CurrentCellDirtyStateChanged);
@@ -331,6 +367,9 @@
             // CurrentInventoryCount
             // 
             this.CurrentInventoryCount.DataPropertyName = "CurrentInventoryCount";
+            dataGridViewCellStyle30.Format = "N2";
+            dataGridViewCellStyle30.NullValue = null;
+            this.CurrentInventoryCount.DefaultCellStyle = dataGridViewCellStyle30;
             this.CurrentInventoryCount.HeaderText = "库存数量";
             this.CurrentInventoryCount.Name = "CurrentInventoryCount";
             this.CurrentInventoryCount.ReadOnly = true;
@@ -339,6 +378,9 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "CurrentCanSaleCount";
+            dataGridViewCellStyle31.Format = "N2";
+            dataGridViewCellStyle31.NullValue = null;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle31;
             this.Column2.HeaderText = "可售库存";
             this.Column2.Name = "Column2";
             // 
@@ -351,6 +393,9 @@
             // PurchasePrice
             // 
             this.PurchasePrice.DataPropertyName = "PurchasePrice";
+            dataGridViewCellStyle32.Format = "N2";
+            dataGridViewCellStyle32.NullValue = null;
+            this.PurchasePrice.DefaultCellStyle = dataGridViewCellStyle32;
             this.PurchasePrice.HeaderText = "采购价";
             this.PurchasePrice.Name = "PurchasePrice";
             // 
@@ -395,6 +440,9 @@
             // salesSort
             // 
             this.salesSort.DataPropertyName = "wholeSales";
+            dataGridViewCellStyle33.Format = "N2";
+            dataGridViewCellStyle33.NullValue = null;
+            this.salesSort.DefaultCellStyle = dataGridViewCellStyle33;
             this.salesSort.HeaderText = "销量排行";
             this.salesSort.Name = "salesSort";
             // 
@@ -406,38 +454,6 @@
             this.dataGridViewCheckBoxColumn1.TrueValue = "True";
             this.dataGridViewCheckBoxColumn1.Visible = false;
             this.dataGridViewCheckBoxColumn1.Width = 60;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(302, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "开始日期：";
-            // 
-            // beginDate
-            // 
-            this.beginDate.Location = new System.Drawing.Point(363, 40);
-            this.beginDate.Name = "beginDate";
-            this.beginDate.Size = new System.Drawing.Size(111, 21);
-            this.beginDate.TabIndex = 17;
-            // 
-            // endDate
-            // 
-            this.endDate.Location = new System.Drawing.Point(545, 40);
-            this.endDate.Name = "endDate";
-            this.endDate.Size = new System.Drawing.Size(121, 21);
-            this.endDate.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(480, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 12);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "结束日期：";
             // 
             // FormDrugForPurchaseSelector
             // 
@@ -479,6 +495,14 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cmbWareHouse;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtStockLower;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker beginDate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker endDate;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Choice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductGeneralName;
@@ -493,13 +517,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn wareHouse;
         private System.Windows.Forms.DataGridViewTextBoxColumn arrivaldatetime;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesSort;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtStockLower;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker beginDate;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker endDate;
     }
 }
