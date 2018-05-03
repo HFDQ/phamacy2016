@@ -1939,16 +1939,16 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         /// <returns></returns>
         public System.Collections.Generic.IEnumerable<Business.Models.Model_IdName> GetSalesCheckers(string keyword)
         {
-            var allusers = base.RepositoryProvider.Db.Users.Where(r => r.Deleted == false && r.Enabled);
 
             var roles = RepositoryProvider.Db.Roles.Where(r => r.Name.Contains("复核员"));
 
             var re = from i in roles
                      join j in RepositoryProvider.Db.RoleWithUsers on i.Id equals j.RoleId
-                     where j.User.Enabled
+                     join user in RepositoryProvider.Db.Users on j.UserId equals user.Id
+                     where user.Enabled && !user.Deleted
                      select new Business.Models.Model_IdName
                      {
-                         Name = j.User.Employee.Name,
+                         Name = user.Employee.Name,
                          Id = j.UserId
                      };
             return re.OrderBy(r => r.Name);
