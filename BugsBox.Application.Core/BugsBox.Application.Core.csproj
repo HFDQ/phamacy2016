@@ -47,9 +47,6 @@
     <Reference Include="EntityFramework">
       <HintPath>..\lib\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\lib\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -120,6 +117,7 @@
     <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

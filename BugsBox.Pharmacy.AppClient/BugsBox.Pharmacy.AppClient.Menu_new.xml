@@ -71,7 +71,6 @@
       <Menu id="050605" Title="配送受理" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryCenter" Image="" Params="Reservation" DockState="" ModuleKey="配送受理[窗体]"></Menu>
       <Menu id="050606" Title="配送出库" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryCenter" Image="" Params="Accepted" DockState="" ModuleKey="配送出库[窗体]"></Menu>
       <Menu id="050607" Title="配送签收" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryCenter" Image="" Params="Outed" DockState="" ModuleKey="配送签收[窗体]"></Menu>
-
       <Menu id="050612" Title="销退出入库处理" Hotkeys="" Name="UI.Forms.SalesBusiness.FormOrderReturnCenter" Image="" Params="" DockState="" ModuleKey="销退出入库处理[窗体]"></Menu>
       <Menu id="0505" Title="配送查询" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryIndex" Image="" Params="" DockState="" ModuleKey="配送查询[窗体]"></Menu>
       <Menu id="05061666" Title="库存盘点" Hotkeys="" Name="UI.Forms.Storage.FormStorageChecking" Image="" Params="" DockState="" ModuleKey="库存盘点[窗体]"></Menu>
@@ -92,7 +91,6 @@
         <Menu id="010404" Title="品种质量档案维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormDrugInfo" Image="" Params="2" DockState="" ModuleKey="药品信息查询[窗体]"></Menu>
         <Menu id="010404" Title="医疗器械质量档案维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormInstrumentsQuery" Image="" Params="" DockState="" ModuleKey="药品信息查询[窗体]"></Menu>
         <Menu id="010405" Title="保健食品质量档案维护" Hotkeys="" Name="UI.Forms.BaseDataManage.FormFoodQuery" Image="" Params="" DockState="" ModuleKey="药品信息查询[窗体]"></Menu>
-
       </Menu>
       <Menu id="060612" Title="验收与质量审核" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
         <Menu id="0304" Title="验收管理" Hotkeys="" Name="UI.Forms.BaseForm.FormOrderList" Image="" Params="PurchaseReceivingOrder" DockState="" ModuleKey="采购收货单[窗体]"></Menu>

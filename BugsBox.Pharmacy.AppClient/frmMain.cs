@@ -20,9 +20,9 @@ using Amib.Threading;
 
 namespace BugsBox.Pharmacy.AppClient
 {
-    public partial class frmMain : Form    
+    public partial class frmMain : Form
     {
-        string msg = string.Empty;   
+        string msg = string.Empty;
 
         private bool m_bSaveLayout = true;
         public Menu menu;
@@ -32,10 +32,10 @@ namespace BugsBox.Pharmacy.AppClient
         List<Business.Models.QualityFilesWarningModel> ListWarningModel = null;
 
         readonly static SmartThreadPool smartThreadPool = new SmartThreadPool();
-        
+
         //存放登陆用户信息
         private User _user = new User();
-        
+
         public void ShowForm(DockContent form, DockState? state)
         {
 
@@ -50,8 +50,8 @@ namespace BugsBox.Pharmacy.AppClient
                 sffm(form);
             }
 
-            
-        } 
+
+        }
         /// <summary>
         /// 设置Styles
         /// </summary>
@@ -68,9 +68,9 @@ namespace BugsBox.Pharmacy.AppClient
         public frmMain(User user)
         {
             InitializeComponent();
-            
+
             _user = user;
-            
+
             if (!DesignMode)
             {
                 SetStyles();
@@ -86,7 +86,7 @@ namespace BugsBox.Pharmacy.AppClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show("窗体加载"+ex.Message,"提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("窗体加载" + ex.Message, "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.WindowState = FormWindowState.Maximized;
@@ -95,12 +95,12 @@ namespace BugsBox.Pharmacy.AppClient
 
         void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = MessageBox.Show(this.Text+"您确定关闭吗?", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK; 
+            e.Cancel = MessageBox.Show(this.Text + "您确定关闭吗?", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-                        
+
             string configFile = Path.Combine(Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath), "DockPanel.config");
             if (File.Exists(configFile))
             {
@@ -119,7 +119,7 @@ namespace BugsBox.Pharmacy.AppClient
             this.tssbVersion.Text = string.Format("Version:{0}", AssemblyInfoHelper.AssemblyVersion);
             this.ssMain.Items.Insert(5, new ToolStripSeparator());
             ShowForm(new Welcome());
-            
+
             dcMainPanel.Left = 20;
 
             #region 状态栏时间刷新
@@ -145,14 +145,14 @@ namespace BugsBox.Pharmacy.AppClient
             #region 预警资质
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer
             {
-                Interval=40,
-                 Enabled=true
+                Interval = 40,
+                Enabled = true
             };
             timer.Tick += (s, ex) =>
             {
-                
-                this.linkLabel5.Left = this.linkLabel5.Left >= this.panel1.Width ? -this.linkLabel5.Width-this.linkLabel1.Width-10 : this.linkLabel5.Left + 1;
-                this.linkLabel1.Left = this.linkLabel5.Left+this.linkLabel5.Width + 10;
+
+                this.linkLabel5.Left = this.linkLabel5.Left >= this.panel1.Width ? -this.linkLabel5.Width - this.linkLabel1.Width - 10 : this.linkLabel5.Left + 1;
+                this.linkLabel1.Left = this.linkLabel5.Left + this.linkLabel5.Width + 10;
             };
 
             this.linkLabel5.MouseEnter += (s, ex) =>
@@ -194,7 +194,7 @@ namespace BugsBox.Pharmacy.AppClient
         {
             UI.Forms.DrugMaintain.SignDrugAsSpecial frm = new UI.Forms.DrugMaintain.SignDrugAsSpecial();
             frm.ShowDialog();
-            
+
         }
 
         void frm_WarningSetupChanged()
@@ -213,14 +213,14 @@ namespace BugsBox.Pharmacy.AppClient
                 this.ListWarningModel = c;
                 int SupplyQualityFiles = c.Where(r => r.QualityFileWarningTypeValue == (int)Business.Models.QualityFileWarningType.供货单位).Count();
                 int PurchaseQualityFiles = c.Where(r => r.QualityFileWarningTypeValue == (int)Business.Models.QualityFileWarningType.客户单位).Count();
-                int DrugQualityFiles=c.Where(r => r.QualityFileWarningTypeValue == (int)Business.Models.QualityFileWarningType.品种许可有效期).Count();
-                
-                this.linkLabel5.Text = string.Format("预警信息：有{0}个供货单位,{1}客户单位,{2}个品种资质即将到期！双击查看", SupplyQualityFiles,PurchaseQualityFiles,DrugQualityFiles);
+                int DrugQualityFiles = c.Where(r => r.QualityFileWarningTypeValue == (int)Business.Models.QualityFileWarningType.品种许可有效期).Count();
 
-                int DrugInventoryNear=c.Where(r=>r.QualityFileWarningTypeValue == (int)Business.Models.QualityFileWarningType.库存品种近效期).Count();
+                this.linkLabel5.Text = string.Format("预警信息：有{0}个供货单位,{1}客户单位,{2}个品种资质即将到期！双击查看", SupplyQualityFiles, PurchaseQualityFiles, DrugQualityFiles);
+
+                int DrugInventoryNear = c.Where(r => r.QualityFileWarningTypeValue == (int)Business.Models.QualityFileWarningType.库存品种近效期).Count();
                 this.linkLabel1.Text = string.Format("库存品种预警信息：{0}个品种即将到期！", DrugInventoryNear);
                 this.linkLabel1.Left = this.linkLabel5.Left + this.linkLabel5.Width + 2;
-                
+
             }
         }
 
@@ -229,13 +229,13 @@ namespace BugsBox.Pharmacy.AppClient
             try
             {
 
-                this.tssbBlank.Text = string.Format("员工[{0}]以[{1}]用户上线.", e.Value.Employee.Name,e.Value.Account);
+                this.tssbBlank.Text = string.Format("员工[{0}]以[{1}]用户上线.", e.Value.Employee.Name, e.Value.Account);
             }
             catch (Exception ex)
             {
                 LoggerHelper.Instance.Error(ex);
             }
-           
+
         }
 
         /// <summary>
@@ -249,11 +249,12 @@ namespace BugsBox.Pharmacy.AppClient
             {
                 smartThreadPool
                     .QueueWorkItem(
-                    () =>{ 
-                            this.tssbTime.Text = "当前时间： " + string.Format("{0:F}", DateTime.Now); 
-                         }
+                    () =>
+                    {
+                        this.tssbTime.Text = "当前时间： " + string.Format("{0:F}", DateTime.Now);
+                    }
                     );//线程通知
-               
+
             }
             catch (Exception ex)
             {
@@ -280,7 +281,7 @@ namespace BugsBox.Pharmacy.AppClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show("窗体加载"+ex.Message,"错误" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("窗体加载" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -305,7 +306,7 @@ namespace BugsBox.Pharmacy.AppClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show("窗体加载"+ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("窗体加载" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -362,7 +363,7 @@ namespace BugsBox.Pharmacy.AppClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show("窗体关闭"+ex.Message,"错误" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("窗体关闭" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -371,11 +372,11 @@ namespace BugsBox.Pharmacy.AppClient
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             string msg = string.Empty;
-            
-            var c =new BugsBox.Pharmacy.AppClient.UI.BaseFunctionForm().PharmacyDatabaseService.GetServerInfo(out msg);
+
+            var c = new BugsBox.Pharmacy.AppClient.UI.BaseFunctionForm().PharmacyDatabaseService.GetServerInfo(out msg);
             if (!c.ServerVersion.Equals(AssemblyInfoHelper.AssemblyVersion.ToString()))
             {
-                MessageBox.Show("您当前版本号为：" + AssemblyInfoHelper.AssemblyVersion.ToString()+"\r\n"+"请稍候，系统将更新到最新版本："+c.ServerVersion);
+                MessageBox.Show("您当前版本号为：" + AssemblyInfoHelper.AssemblyVersion.ToString() + "\r\n" + "请稍候，系统将更新到最新版本：" + c.ServerVersion);
                 (new BugsBox.Pharmacy.AppClient.UI.BaseFunctionForm()).PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "执行系统升级操作，版本号：" + c.ServerVersion);
                 System.Diagnostics.Process.Start("UpdateBugBox.exe");
             }
@@ -386,7 +387,7 @@ namespace BugsBox.Pharmacy.AppClient
             else if (File.Exists(configFile))
                 File.Delete(configFile);
             ServicesProvider.Instance.DisconnectServer();
-            
+
             smartThreadPool.Shutdown();
             System.Windows.Forms.Application.Exit();
 
@@ -414,7 +415,7 @@ namespace BugsBox.Pharmacy.AppClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show("窗体加载"+ex.Message,"错误" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("窗体加载" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -522,7 +523,7 @@ namespace BugsBox.Pharmacy.AppClient
         {
             this.FormClosing += new FormClosingEventHandler(frmMain_FormClosing);
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -548,12 +549,12 @@ namespace BugsBox.Pharmacy.AppClient
                 if (ListUpdateFiles.Count > 0)
                 {
                     if (System.IO.Directory.Exists("Reports"))
-                        System.IO.Directory.Delete("Reports",true);
+                        System.IO.Directory.Delete("Reports", true);
                 }
-                
+
                 {
-                 //   if (!System.IO.Directory.Exists("Reports"))
-                        System.IO.Directory.CreateDirectory("Reports");
+                    //   if (!System.IO.Directory.Exists("Reports"))
+                    System.IO.Directory.CreateDirectory("Reports");
                 }
 
                 foreach (var l in ListUpdateFiles)

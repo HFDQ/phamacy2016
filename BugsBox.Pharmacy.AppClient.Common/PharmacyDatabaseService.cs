@@ -21682,7 +21682,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
             }
         }
 
-        public MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string message)
+        public MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(Guid value, out string message)
         {
             //Log.Warning(string.Format("开始调用服务方法:drugsUnqualicationDestroy....."));
             try

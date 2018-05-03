@@ -612,7 +612,7 @@ namespace BugsBox.Pharmacy.AppClient
             if (id == Guid.Empty) return;
             Models.MmedicalInstitutionPermit mp = new Models.MmedicalInstitutionPermit();
             mp.Id = id;
-            var c = baseform.PharmacyDatabaseService.GetMmedicalInstitutionPermit(mp, out msg).FirstOrDefault();
+            var c = baseform.PharmacyDatabaseService.GetMmedicalInstitutionPermit(id, out msg).FirstOrDefault();
             if (c == null) return;
             oDoc.Bookmarks["JG1"].Select();
             oDoc.Bookmarks["JG1"].Range.Text = c.Name;

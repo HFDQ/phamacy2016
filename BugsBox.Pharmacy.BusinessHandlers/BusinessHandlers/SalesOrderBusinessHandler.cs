@@ -944,7 +944,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             try
             {
                 #region 销售定单状态列表(条件)
-                IList<ListItem> lis = new List<ListItem>();
+                // IList<ListItem> lis = new List<ListItem>();
+                Dictionary<int, string> dic = new Dictionary<int, string>();
+
                 foreach (var i in typeof(OrderStatus).GetFields())
                 {
                     var attr = i.GetCustomAttributes(false);
@@ -952,17 +954,12 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     {
                         var v = typeof(OrderStatus).InvokeMember(i.Name, System.Reflection.BindingFlags.GetField, null, null, null);
                         var n = (attr[0] as System.ComponentModel.DataAnnotations.DisplayAttribute).Name;
-                        var li = new ListItem();
-                        li.Name = n;
-                        li.stateValue = (Int32)v;
-                        lis.Add(li);
+                        //var li = new ListItem();
+                        //li.Name = n;
+                        //li.stateValue = (Int32)v;
+                        //lis.Add(li);
+                        dic.Add((Int32)v, n);
                     }
-                }
-                var c = from i in lis select i;
-
-                if (searchInput.OrderStatusValue != null)
-                {
-                    c = c.Where(r => r.stateValue == searchInput.OrderStatusValue);
                 }
                 #endregion
 
@@ -998,6 +995,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                  SecondCheckUsr = k.Employee.Name,
                                  StoreKeeper = k.Employee.Name
                              };
+
                 if (searchInput.purchaseKeyword == null) searchInput.purchaseKeyword = string.Empty;
 
                 //销售客户精确查询
@@ -1011,43 +1009,43 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     purchase = purchase.Where(r => r.Name.Contains(searchInput.purchaseKeyword) || (r.PinyinCode != null && r.PinyinCode.ToUpper().Contains(searchInput.purchaseKeyword.ToUpper())));
                 }
 
-                var result = from l in lis
-                             join i in varOrderCodeBalance on l.stateValue equals i.OrderStatusValue
-                             join k in usr on i.BalanceUserID equals k.Id
-                             join k1 in usr on i.CreateUserId equals k1.Id
-                             join pay in RepositoryProvider.Db.PaymentMethods on i.payMentMethodID equals pay.Id
-                             join m in purchase on i.PurchaseUnitId equals m.Id
-                             join p in outInv on i.Id equals p.saleorderid into left
-                             from b in left.DefaultIfEmpty()
-                             select new Business.Models.SaleOrderModel
-                             {
-                                 Id = i.Id,
-                                 Creater = k1.Employee.Name,
-                                 CreateTime = i.CreateTime,
-                                 SaleOrderDocumentNumber = i.OrderCode,
+                var result = (from i in varOrderCodeBalance
+                              join k in usr on i.BalanceUserID equals k.Id
+                              join k1 in usr on i.CreateUserId equals k1.Id
+                              join pay in RepositoryProvider.Db.PaymentMethods on i.payMentMethodID equals pay.Id
+                              join m in purchase on i.PurchaseUnitId equals m.Id
+                              join p in outInv on i.Id equals p.saleorderid into left
+                              from b in left.DefaultIfEmpty()
+                              select new Business.Models.SaleOrderModel
+                              {
+                                  Id = i.Id,
+                                  Creater = k1.Employee.Name,
+                                  CreateTime = i.CreateTime,
+                                  SaleOrderDocumentNumber = i.OrderCode,
+                                  Saler = i.SalerName,
+                                  OrderStatusValue = i.OrderStatusValue,
+                                  SaleOrderBalanceDocumentNumber = i.OrderBalanceCode,
+                                  BalanceTime = i.BalanceTime,
+                                  BalanceUserName = k.Employee.Name,
+                                  PaymentMethod = pay.Name,
+                                  PickCode = b == null ? "" : b.p.OutInventoryNumber,
+                                  PickTime = b == null ? i.BalanceTime : b.p.OutInventoryDate,
+                                  PickUserName = b == null ? "" : b.StoreKeeper,
+                                  CheckCode = b == null ? "" : b.p.OrderOutInventoryCheckNumber,
+                                  CheckTime = b == null ? i.BalanceTime : b.p.OrderOutInventoryCheckTime,
+                                  CheckUserName = b == null ? "" : b.CheckUsr,
+                                  CheckUserName2 = b == null ? "" : b.SecondCheckUsr,
+                                  TotalPrice = i.SalesOrderDetails.Where(r => r.Deleted == false).Sum(r => r.Amount * r.ActualUnitPrice),
+                                  DrugNum = i.SalesOrderDetails.Sum(r => r.Amount),
+                                  PurchaseUnitName = m.Name,
+                                  PurchaseUnitPinYin = m.PinyinCode
+                              }).ToList();
 
-                                 Saler = i.SalerName,
-                                 OrderStatus = l.Name,
-
-                                 SaleOrderBalanceDocumentNumber = i.OrderBalanceCode,
-                                 BalanceTime = i.BalanceTime,
-                                 BalanceUserName = k.Employee.Name,
-                                 PaymentMethod = pay.Name,
-
-                                 PickCode = b == null ? "" : b.p.OutInventoryNumber,
-                                 PickTime = b == null ? i.BalanceTime : b.p.OutInventoryDate,
-                                 PickUserName = b == null ? "" : b.StoreKeeper,
-
-                                 CheckCode = b == null ? "" : b.p.OrderOutInventoryCheckNumber,
-                                 CheckTime = b == null ? i.BalanceTime : b.p.OrderOutInventoryCheckTime,
-                                 CheckUserName = b == null ? "" : b.CheckUsr,
-                                 CheckUserName2 = b == null ? "" : b.SecondCheckUsr,
-                                 TotalPrice = i.SalesOrderDetails.Where(r => r.Deleted == false).Sum(r => r.Amount * r.ActualUnitPrice),
-                                 DrugNum = i.SalesOrderDetails.Sum(r => r.Amount),
-                                 PurchaseUnitName = m.Name,
-                                 PurchaseUnitPinYin = m.PinyinCode
-                             };
-                return result.OrderBy(r => r.BalanceTime);
+                foreach (var item in result)
+                {
+                    item.OrderStatus = dic[item.OrderStatusValue];
+                }
+                return result;
             }
             catch (Exception ex)
             {

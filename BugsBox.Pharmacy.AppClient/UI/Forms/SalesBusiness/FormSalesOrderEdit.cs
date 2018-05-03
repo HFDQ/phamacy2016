@@ -330,15 +330,23 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                             }
                             if (this.SalePriceControlRuleModel.RuleType == (int)Models.SalePriceControlEnum.不低于采购价)
                             {
-                                sod.UnitPrice = drugInventoryRecord.DrugInfo.SalePrice;    //基础信息中的销售定价
-                                sod.ActualUnitPrice = drugInventoryRecord.PurchasePricce;  //库存进货实际价格
+                                if(drugInventoryRecord.DrugInfo.SalePrice< drugInventoryRecord.PurchasePricce)
+                                {
+                                    sod.UnitPrice = drugInventoryRecord.DrugInfo.PurchasePrice;    //基础信息中的销售定价
+                                    sod.ActualUnitPrice = drugInventoryRecord.DrugInfo.PurchasePrice;  //库存进货实际价格
+                                }
+                                else
+                                {
+                                    sod.UnitPrice = drugInventoryRecord.DrugInfo.SalePrice;    //基础信息中的销售定价
+                                    sod.ActualUnitPrice = drugInventoryRecord.DrugInfo.SalePrice;  //库存进货实际价格
+                                }
+                              
                                 sod.PurchasePrice = drugInventoryRecord.PurchasePricce;    //采购价
                                 if (sod.UnitPrice <= 0m) sod.UnitPrice = drugInventoryRecord.PurchasePricce;
                             }
 
                             if (this.SalePriceControlRuleModel.RuleType == (int)Models.SalePriceControlEnum.不高于最高定价)
                             {
-
                                 sod.UnitPrice = drugInventoryRecord.DrugInfo.SalePrice; //显示最高价
                                 sod.ActualUnitPrice = drugInventoryRecord.PurchasePricce * this.SalePriceControlRuleModel.RuleRate;  //实际价格
                                 sod.PurchasePrice = drugInventoryRecord.PurchasePricce * this.SalePriceControlRuleModel.RuleRate;    //采购价
@@ -874,7 +882,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                             sod.ActualUnitPrice = sod.UnitPrice;
                         }
 
-                        if (sod.UnitPrice > sod.ActualUnitPrice)
+                        if (sod.PurchasePrice > sod.ActualUnitPrice)
                         {
                             MessageBox.Show("您定义的价格低于采购价，是否填错了？");
                             sod.ActualUnitPrice = sod.UnitPrice;
@@ -1312,7 +1320,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         decimal unitPrice = detail.ActualUnitPrice;
                         decimal price = qty * unitPrice;
                         string Quanlity = detail.Description;
-                       
+
                         string PermitNumber = inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo.LicensePermissionNumber;
 
                         if (this.GoodsType == GoodsTypeClass.医疗器械)
@@ -1322,7 +1330,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                             PermitNumber += "^" + inr.Where(r => r.Id == detail.DrugInventoryRecordID).FirstOrDefault().DrugInfo.DrugStorageTypeCode;
                         }
 
-                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber,detail.PruductDate });
+                        OrderDetailTable.Rows.Add(new object[] { part, _partType, specialCode, productUnit, Origin, batchNumber, ValidDate, unit, qty, unitPrice, price, Quanlity, PermitNumber, detail.PruductDate });
                         OrderDetailTable.AcceptChanges();
                     }
                     ds.Tables.Add(OrderDetailTable);

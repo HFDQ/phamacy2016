@@ -9,6 +9,7 @@ using BugsBox.Common;
 using BugsBox.Pharmacy.AppClient.Common;
 using BugsBox.Pharmacy.AppClient.UI.Forms.Sys;
 using System.Configuration;
+
 namespace BugsBox.Pharmacy.AppClient
 {
     static class Program
@@ -19,6 +20,8 @@ namespace BugsBox.Pharmacy.AppClient
         [STAThread]
         static void Main(string[] args)
         {
+
+
 
             string mutextName = "qwaaaaaertyuiol,mnbvghyuk,";
 

@@ -42,7 +42,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             string message = string.Empty;
             try
             {
-                MmedicalInstitutionPermit = PharmacyDatabaseService.GetMmedicalInstitutionPermit(entity, out message).FirstOrDefault();
+                MmedicalInstitutionPermit = PharmacyDatabaseService.GetMmedicalInstitutionPermit(entity.Id, out message).FirstOrDefault();
                 if (MmedicalInstitutionPermit == null)
                 {
                     MmedicalInstitutionPermit = new MmedicalInstitutionPermit();
@@ -57,9 +57,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                     MmedicalInstitutionPermit.WarehouseAddress = WareHouseAddress;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("证书信息不存在或已被删除！","警告！");
+                MessageBox.Show("证书信息不存在或已被删除！", "警告！");
             }
 
         }
@@ -112,7 +112,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             {
                 Log.Error(ex);
                 //MessageBox.Show("设置证书信息到控件失败", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                MessageBox.Show(this.Text+"设置证书信息到控件失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + "设置证书信息到控件失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -132,7 +132,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                 if (MmedicalInstitutionPermit != null)
                 {
                     //基本信息
-                    MmedicalInstitutionPermit.Name =textBoxName.Text.Trim();
+                    MmedicalInstitutionPermit.Name = textBoxName.Text.Trim();
                     MmedicalInstitutionPermit.UnitName = textBoxUnitName.Text.Trim();
                     MmedicalInstitutionPermit.LicenseCode = textBoxLicenseCode.Text.Trim();
                     MmedicalInstitutionPermit.LegalPerson = textBoxLegalPerson.Text.Trim();
@@ -142,7 +142,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                     MmedicalInstitutionPermit.IssuanceOrg = textBoxIssuanceOrg.Text;
                     MmedicalInstitutionPermit.IssuanceDate = dateTimePickerIssuanceDate.Value;
                     MmedicalInstitutionPermit.OutDate = dateTimePickerOutDate.Value;
-                    MmedicalInstitutionPermit.UseMedicalScope= txtUseMedicalScope.Text.Trim();
+                    MmedicalInstitutionPermit.UseMedicalScope = txtUseMedicalScope.Text.Trim();
                     MmedicalInstitutionPermit.WarehouseAddress = txtWareHouseAddress.Text.Trim();
                     MmedicalInstitutionPermit.DocNumber = txtDocNumber.Text.Trim();
                     MmedicalInstitutionPermit.memo = txtMemo.Text.Trim();
@@ -155,7 +155,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                 DataReady = false;
                 Log.Error(ex);
                 //MessageBox.Show("从控件获取证书失败", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                MessageBox.Show(this.Text+"从控件获取证书失败","错误" , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + "从控件获取证书失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -194,9 +194,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                 {
                     string msg = string.Empty;
                     bool result = false;
-                    if (this.MmedicalInstitutionPermit.Id!=null && (!this.MmedicalInstitutionPermit.Id.Equals(Guid.Empty)))
+                    if (this.MmedicalInstitutionPermit.Id != null && (!this.MmedicalInstitutionPermit.Id.Equals(Guid.Empty)))
                     {
-                        result = PharmacyDatabaseService.OpMmedicalInstitutionPermit(this.MmedicalInstitutionPermit, 1,out msg );
+                        result = PharmacyDatabaseService.OpMmedicalInstitutionPermit(this.MmedicalInstitutionPermit, 1, out msg);
                     }
                     else
                     {
@@ -206,12 +206,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                     if (result && string.IsNullOrWhiteSpace(msg))
                     {
                         //MessageBox.Show("证书保证成功", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MessageBox.Show(this.Text+"证书保证成功","错误" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(this.Text + "证书保证成功", "错误", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         //MessageBox.Show("证书保存失败" + msg, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MessageBox.Show(this.Text+"证书保存失败" + msg, "错误", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(this.Text + "证书保存失败" + msg, "错误", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     this.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -221,7 +221,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             catch (Exception ex)
             {
                 //MessageBox.Show("证书保存失败" + ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                MessageBox.Show(this.Text+"证书保存失败" + ex.Message,"错误" , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + "证书保存失败" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -240,29 +240,29 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             BindInfo();
         }
 
-       /* private void buttonCommitFiles_Click(object sender, EventArgs e)
-        {
-            Button btnFile = sender as Button;
-            Guid fileId = Guid.Empty;
-            if (btnFile.Tag != null)
-            {
-                fileId = (Guid)btnFile.Tag;
-            }
-            string msg;
-            UserControlPharmacyFile form = new UserControlPharmacyFile(true);
-            form.Title = btnFile.Parent.Text;
-            form.OldPharmacyFile = PharmacyDatabaseService.GetPharmacyFile(out msg, fileId);
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                btnFile.Tag = form.PharmacyFile.Id;
-            }
-        }*/
+        /* private void buttonCommitFiles_Click(object sender, EventArgs e)
+         {
+             Button btnFile = sender as Button;
+             Guid fileId = Guid.Empty;
+             if (btnFile.Tag != null)
+             {
+                 fileId = (Guid)btnFile.Tag;
+             }
+             string msg;
+             UserControlPharmacyFile form = new UserControlPharmacyFile(true);
+             form.Title = btnFile.Parent.Text;
+             form.OldPharmacyFile = PharmacyDatabaseService.GetPharmacyFile(out msg, fileId);
+             if (form.ShowDialog() == DialogResult.OK)
+             {
+                 btnFile.Tag = form.PharmacyFile.Id;
+             }
+         }*/
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("确定要清除该资质吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel) return;
             clear = true;
-            this.PharmacyDatabaseService.OpMmedicalInstitutionPermit(this.MmedicalInstitutionPermit,2,out msg);
+            this.PharmacyDatabaseService.OpMmedicalInstitutionPermit(this.MmedicalInstitutionPermit, 2, out msg);
             this.MmedicalInstitutionPermit.Id = Guid.Empty;
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Dispose();
@@ -270,7 +270,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (this.MmedicalInstitutionPermit  == null) return;
+            if (this.MmedicalInstitutionPermit == null) return;
             UI.Forms.BaseDataManage.Form_Photo frm = new BaseDataManage.Form_Photo(1110, this.MmedicalInstitutionPermit.Id);
             if (!this.button1.Visible)
             {

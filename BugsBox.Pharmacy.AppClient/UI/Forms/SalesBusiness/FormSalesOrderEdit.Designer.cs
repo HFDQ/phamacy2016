@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSalesOrderEdit));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnSubmit = new System.Windows.Forms.ToolStripButton();
             this.tsbtnSave = new System.Windows.Forms.ToolStripButton();
@@ -152,8 +152,7 @@
             this.toolStripButton7});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1481, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(987, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -163,7 +162,7 @@
             this.tsbtnSubmit.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Ok;
             this.tsbtnSubmit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSubmit.Name = "tsbtnSubmit";
-            this.tsbtnSubmit.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnSubmit.Size = new System.Drawing.Size(60, 28);
             this.tsbtnSubmit.Text = "提交";
             this.tsbtnSubmit.Click += new System.EventHandler(this.tsbtnSubmit_Click);
             // 
@@ -172,7 +171,7 @@
             this.tsbtnSave.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Save1;
             this.tsbtnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSave.Name = "tsbtnSave";
-            this.tsbtnSave.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnSave.Size = new System.Drawing.Size(60, 28);
             this.tsbtnSave.Text = "保存";
             this.tsbtnSave.Click += new System.EventHandler(this.tsbtnSave_Click);
             // 
@@ -181,7 +180,7 @@
             this.tsbtnCancel.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Cancel;
             this.tsbtnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnCancel.Name = "tsbtnCancel";
-            this.tsbtnCancel.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnCancel.Size = new System.Drawing.Size(60, 28);
             this.tsbtnCancel.Text = "取消";
             this.tsbtnCancel.Click += new System.EventHandler(this.tsbtnCancel_Click);
             // 
@@ -190,7 +189,7 @@
             this.tsbtnAccept.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Lock;
             this.tsbtnAccept.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAccept.Name = "tsbtnAccept";
-            this.tsbtnAccept.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnAccept.Size = new System.Drawing.Size(60, 28);
             this.tsbtnAccept.Text = "审核";
             this.tsbtnAccept.Click += new System.EventHandler(this.tsbtnAccept_Click);
             // 
@@ -199,7 +198,7 @@
             this.tsbtnBalance.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Cart_Ok;
             this.tsbtnBalance.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnBalance.Name = "tsbtnBalance";
-            this.tsbtnBalance.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnBalance.Size = new System.Drawing.Size(60, 28);
             this.tsbtnBalance.Text = "结算";
             this.tsbtnBalance.Click += new System.EventHandler(this.tsbtnBalance_Click);
             // 
@@ -208,7 +207,7 @@
             this.tsbtnOutInventory.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Cart_Add;
             this.tsbtnOutInventory.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnOutInventory.Name = "tsbtnOutInventory";
-            this.tsbtnOutInventory.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnOutInventory.Size = new System.Drawing.Size(60, 28);
             this.tsbtnOutInventory.Text = "拣货";
             this.tsbtnOutInventory.Click += new System.EventHandler(this.tsbtnOutInventory_Click);
             // 
@@ -222,7 +221,7 @@
             this.tsbtnPrint.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
             this.tsbtnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnPrint.Name = "tsbtnPrint";
-            this.tsbtnPrint.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnPrint.Size = new System.Drawing.Size(60, 28);
             this.tsbtnPrint.Text = "打印";
             this.tsbtnPrint.Click += new System.EventHandler(this.tsbtnPrint_Click);
             // 
@@ -231,7 +230,7 @@
             this.toolStripButton4.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(128, 28);
+            this.toolStripButton4.Size = new System.Drawing.Size(96, 28);
             this.toolStripButton4.Text = "打印（中）";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -245,7 +244,7 @@
             this.toolStripButton1.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Save1;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(128, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(96, 28);
             this.toolStripButton1.Text = "保存冲差单";
             this.toolStripButton1.Visible = false;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
@@ -260,7 +259,7 @@
             this.toolStripButton2.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.data;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(128, 28);
+            this.toolStripButton2.Size = new System.Drawing.Size(96, 28);
             this.toolStripButton2.Text = "导出冲差单";
             this.toolStripButton2.Visible = false;
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
@@ -275,7 +274,7 @@
             this.toolStripButton3.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(128, 28);
+            this.toolStripButton3.Size = new System.Drawing.Size(96, 28);
             this.toolStripButton3.Text = "打印冲差单";
             this.toolStripButton3.Visible = false;
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
@@ -285,7 +284,7 @@
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(86, 28);
+            this.toolStripButton5.Size = new System.Drawing.Size(60, 28);
             this.toolStripButton5.Text = "重审申请";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -296,7 +295,7 @@
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(104, 28);
+            this.toolStripButton6.Size = new System.Drawing.Size(72, 28);
             this.toolStripButton6.Text = "导出销售单";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
@@ -304,10 +303,9 @@
             // 
             this.toolStripButton7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(122, 28);
+            this.toolStripButton7.Size = new System.Drawing.Size(84, 28);
             this.toolStripButton7.Text = "空白单据打印";
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
@@ -321,7 +319,6 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 31);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -367,17 +364,17 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1481, 674);
+            this.splitContainer1.Size = new System.Drawing.Size(987, 439);
             this.splitContainer1.SplitterDistance = 230;
-            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 5;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(506, 5);
+            this.checkBox2.Location = new System.Drawing.Point(337, 3);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(430, 22);
+            this.checkBox2.Size = new System.Drawing.Size(288, 16);
             this.checkBox2.TabIndex = 155;
             this.checkBox2.Text = "销售医疗器械（如需销售医疗器械，请勾选此处）";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -389,10 +386,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(1151, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(767, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 164);
+            this.label1.Size = new System.Drawing.Size(205, 110);
             this.label1.TabIndex = 154;
             this.label1.Text = "快捷键列表：\r\nF2 : 选择销售员 \r\nF5 : 查询选中药品来源\r\nF6 : 查询选中药品当前批次来源\r\nALT+D: 选中的药品当前批次销售记录\r\nALT+" +
     "F: 选中的药品历史销售记录\r\nALT+E: 按购货单位查询当前批次记录\r\nALT+S: 按购货单位查询历史销售记录\r\nSHIFT+S: 提交销售订单";
@@ -400,10 +396,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(339, 8);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Location = new System.Drawing.Point(226, 5);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(160, 22);
+            this.checkBox1.Size = new System.Drawing.Size(108, 16);
             this.checkBox1.TabIndex = 153;
             this.checkBox1.Text = "是否开具发票？";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -412,10 +407,9 @@
             // invoicer
             // 
             this.invoicer.AutoSize = true;
-            this.invoicer.Location = new System.Drawing.Point(904, 126);
-            this.invoicer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.invoicer.Location = new System.Drawing.Point(603, 84);
             this.invoicer.Name = "invoicer";
-            this.invoicer.Size = new System.Drawing.Size(62, 18);
+            this.invoicer.Size = new System.Drawing.Size(41, 12);
             this.invoicer.TabIndex = 152;
             this.invoicer.Text = "label1";
             this.invoicer.Visible = false;
@@ -425,10 +419,9 @@
             this.btnDetailAdd.AutoSize = true;
             this.btnDetailAdd.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnDetailAdd.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDetailAdd.Location = new System.Drawing.Point(772, 159);
-            this.btnDetailAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDetailAdd.Location = new System.Drawing.Point(515, 106);
             this.btnDetailAdd.Name = "btnDetailAdd";
-            this.btnDetailAdd.Size = new System.Drawing.Size(164, 54);
+            this.btnDetailAdd.Size = new System.Drawing.Size(109, 36);
             this.btnDetailAdd.TabIndex = 151;
             this.btnDetailAdd.Text = "增加药品";
             this.btnDetailAdd.UseVisualStyleBackColor = false;
@@ -437,38 +430,36 @@
             // cmbSalesType
             // 
             this.cmbSalesType.FormattingEnabled = true;
-            this.cmbSalesType.Location = new System.Drawing.Point(1173, 70);
-            this.cmbSalesType.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbSalesType.Location = new System.Drawing.Point(782, 47);
             this.cmbSalesType.Name = "cmbSalesType";
-            this.cmbSalesType.Size = new System.Drawing.Size(180, 26);
+            this.cmbSalesType.Size = new System.Drawing.Size(121, 20);
             this.cmbSalesType.TabIndex = 150;
             this.cmbSalesType.Visible = false;
             // 
             // lblSalesType
             // 
             this.lblSalesType.AutoSize = true;
-            this.lblSalesType.Location = new System.Drawing.Point(938, 73);
-            this.lblSalesType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSalesType.Location = new System.Drawing.Point(625, 49);
             this.lblSalesType.Name = "lblSalesType";
-            this.lblSalesType.Size = new System.Drawing.Size(134, 18);
+            this.lblSalesType.Size = new System.Drawing.Size(89, 12);
             this.lblSalesType.TabIndex = 149;
             this.lblSalesType.Text = "销售药品类型：";
             this.lblSalesType.Visible = false;
             // 
             // txtReceiverMan
             // 
-            this.txtReceiverMan.Location = new System.Drawing.Point(441, 126);
-            this.txtReceiverMan.Margin = new System.Windows.Forms.Padding(4);
+            this.txtReceiverMan.Location = new System.Drawing.Point(294, 84);
             this.txtReceiverMan.Name = "txtReceiverMan";
-            this.txtReceiverMan.Size = new System.Drawing.Size(240, 28);
+            this.txtReceiverMan.Size = new System.Drawing.Size(161, 21);
             this.txtReceiverMan.TabIndex = 148;
             // 
             // lblReceiver
             // 
             this.lblReceiver.AutoSize = true;
-            this.lblReceiver.Location = new System.Drawing.Point(336, 131);
+            this.lblReceiver.Location = new System.Drawing.Point(224, 87);
+            this.lblReceiver.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReceiver.Name = "lblReceiver";
-            this.lblReceiver.Size = new System.Drawing.Size(98, 18);
+            this.lblReceiver.Size = new System.Drawing.Size(65, 12);
             this.lblReceiver.TabIndex = 147;
             this.lblReceiver.Text = "提货人员：";
             // 
@@ -476,18 +467,18 @@
             // 
             this.cmbPickUpGoods.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPickUpGoods.FormattingEnabled = true;
-            this.cmbPickUpGoods.Location = new System.Drawing.Point(126, 127);
-            this.cmbPickUpGoods.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPickUpGoods.Location = new System.Drawing.Point(84, 85);
             this.cmbPickUpGoods.Name = "cmbPickUpGoods";
-            this.cmbPickUpGoods.Size = new System.Drawing.Size(196, 26);
+            this.cmbPickUpGoods.Size = new System.Drawing.Size(132, 20);
             this.cmbPickUpGoods.TabIndex = 146;
             // 
             // lblSendMethod
             // 
             this.lblSendMethod.AutoSize = true;
-            this.lblSendMethod.Location = new System.Drawing.Point(23, 131);
+            this.lblSendMethod.Location = new System.Drawing.Point(15, 87);
+            this.lblSendMethod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSendMethod.Name = "lblSendMethod";
-            this.lblSendMethod.Size = new System.Drawing.Size(98, 18);
+            this.lblSendMethod.Size = new System.Drawing.Size(65, 12);
             this.lblSendMethod.TabIndex = 145;
             this.lblSendMethod.Text = "提货方式：";
             // 
@@ -495,57 +486,57 @@
             // 
             this.cmbPurchaser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPurchaser.FormattingEnabled = true;
-            this.cmbPurchaser.Location = new System.Drawing.Point(126, 89);
-            this.cmbPurchaser.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPurchaser.Location = new System.Drawing.Point(84, 59);
             this.cmbPurchaser.Name = "cmbPurchaser";
-            this.cmbPurchaser.Size = new System.Drawing.Size(196, 26);
+            this.cmbPurchaser.Size = new System.Drawing.Size(132, 20);
             this.cmbPurchaser.TabIndex = 144;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 93);
+            this.label10.Location = new System.Drawing.Point(3, 62);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 18);
+            this.label10.Size = new System.Drawing.Size(77, 12);
             this.label10.TabIndex = 143;
             this.label10.Text = "客户采购员：";
             // 
             // cmbSalesMan
             // 
             this.cmbSalesMan.FormattingEnabled = true;
-            this.cmbSalesMan.Location = new System.Drawing.Point(441, 89);
-            this.cmbSalesMan.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbSalesMan.Location = new System.Drawing.Point(294, 59);
             this.cmbSalesMan.Name = "cmbSalesMan";
-            this.cmbSalesMan.Size = new System.Drawing.Size(178, 26);
+            this.cmbSalesMan.Size = new System.Drawing.Size(120, 20);
             this.cmbSalesMan.TabIndex = 142;
             this.cmbSalesMan.SelectedIndexChanged += new System.EventHandler(this.cmbSalesMan_SelectedIndexChanged);
             // 
             // lblCreater
             // 
             this.lblCreater.AutoSize = true;
-            this.lblCreater.Location = new System.Drawing.Point(891, 126);
+            this.lblCreater.Location = new System.Drawing.Point(594, 84);
+            this.lblCreater.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreater.Name = "lblCreater";
-            this.lblCreater.Size = new System.Drawing.Size(26, 18);
+            this.lblCreater.Size = new System.Drawing.Size(17, 12);
             this.lblCreater.TabIndex = 141;
             this.lblCreater.Text = "  ";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(802, 126);
+            this.label9.Location = new System.Drawing.Point(535, 84);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 18);
+            this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 140;
             this.label9.Text = "开票员：";
             // 
             // ucbcSalesOrderBalance
             // 
             this.ucbcSalesOrderBalance.BackColor = System.Drawing.Color.Transparent;
-            this.ucbcSalesOrderBalance.Location = new System.Drawing.Point(976, 153);
-            this.ucbcSalesOrderBalance.Margin = new System.Windows.Forms.Padding(6);
+            this.ucbcSalesOrderBalance.Location = new System.Drawing.Point(651, 102);
+            this.ucbcSalesOrderBalance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucbcSalesOrderBalance.Name = "ucbcSalesOrderBalance";
-            this.ucbcSalesOrderBalance.Size = new System.Drawing.Size(195, 30);
+            this.ucbcSalesOrderBalance.Size = new System.Drawing.Size(130, 20);
             this.ucbcSalesOrderBalance.TabIndex = 139;
             this.ucbcSalesOrderBalance.Type = BugsBox.Pharmacy.Models.BillDocumentType.SalesOrderCancel;
             this.ucbcSalesOrderBalance.ViewMode = false;
@@ -554,10 +545,10 @@
             // ucbcSalesOrderCancel
             // 
             this.ucbcSalesOrderCancel.BackColor = System.Drawing.Color.Transparent;
-            this.ucbcSalesOrderCancel.Location = new System.Drawing.Point(909, 35);
-            this.ucbcSalesOrderCancel.Margin = new System.Windows.Forms.Padding(6);
+            this.ucbcSalesOrderCancel.Location = new System.Drawing.Point(606, 23);
+            this.ucbcSalesOrderCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucbcSalesOrderCancel.Name = "ucbcSalesOrderCancel";
-            this.ucbcSalesOrderCancel.Size = new System.Drawing.Size(195, 30);
+            this.ucbcSalesOrderCancel.Size = new System.Drawing.Size(130, 20);
             this.ucbcSalesOrderCancel.TabIndex = 138;
             this.ucbcSalesOrderCancel.Type = BugsBox.Pharmacy.Models.BillDocumentType.SalesOrderCancel;
             this.ucbcSalesOrderCancel.ViewMode = false;
@@ -566,10 +557,10 @@
             // ucbcSalesOrder
             // 
             this.ucbcSalesOrder.BackColor = System.Drawing.Color.Transparent;
-            this.ucbcSalesOrder.Location = new System.Drawing.Point(976, 119);
-            this.ucbcSalesOrder.Margin = new System.Windows.Forms.Padding(6);
+            this.ucbcSalesOrder.Location = new System.Drawing.Point(651, 79);
+            this.ucbcSalesOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucbcSalesOrder.Name = "ucbcSalesOrder";
-            this.ucbcSalesOrder.Size = new System.Drawing.Size(314, 30);
+            this.ucbcSalesOrder.Size = new System.Drawing.Size(209, 20);
             this.ucbcSalesOrder.TabIndex = 121;
             this.ucbcSalesOrder.Type = BugsBox.Pharmacy.Models.BillDocumentType.SalesOrder;
             this.ucbcSalesOrder.ViewMode = false;
@@ -579,100 +570,103 @@
             // 
             this.txtTotalMoney.AcceptsReturn = true;
             this.txtTotalMoney.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtTotalMoney.Location = new System.Drawing.Point(1077, 182);
-            this.txtTotalMoney.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalMoney.Location = new System.Drawing.Point(718, 121);
             this.txtTotalMoney.Name = "txtTotalMoney";
             this.txtTotalMoney.ReadOnly = true;
-            this.txtTotalMoney.Size = new System.Drawing.Size(144, 40);
+            this.txtTotalMoney.Size = new System.Drawing.Size(97, 29);
             this.txtTotalMoney.TabIndex = 137;
             this.txtTotalMoney.Text = "0.0";
             // 
             // txtPurchaseName
             // 
-            this.txtPurchaseName.Location = new System.Drawing.Point(334, 42);
-            this.txtPurchaseName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPurchaseName.Location = new System.Drawing.Point(223, 28);
             this.txtPurchaseName.Name = "txtPurchaseName";
             this.txtPurchaseName.ReadOnly = true;
-            this.txtPurchaseName.Size = new System.Drawing.Size(434, 28);
+            this.txtPurchaseName.Size = new System.Drawing.Size(291, 21);
             this.txtPurchaseName.TabIndex = 136;
             // 
             // txtSalesManName
             // 
             this.txtSalesManName.AcceptsReturn = true;
-            this.txtSalesManName.Location = new System.Drawing.Point(630, 88);
-            this.txtSalesManName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSalesManName.Location = new System.Drawing.Point(420, 59);
             this.txtSalesManName.Name = "txtSalesManName";
             this.txtSalesManName.ReadOnly = true;
-            this.txtSalesManName.Size = new System.Drawing.Size(138, 28);
+            this.txtSalesManName.Size = new System.Drawing.Size(93, 21);
             this.txtSalesManName.TabIndex = 135;
             // 
             // lblOrderStatus
             // 
             this.lblOrderStatus.AutoSize = true;
-            this.lblOrderStatus.Location = new System.Drawing.Point(891, 98);
+            this.lblOrderStatus.Location = new System.Drawing.Point(594, 65);
+            this.lblOrderStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrderStatus.Name = "lblOrderStatus";
-            this.lblOrderStatus.Size = new System.Drawing.Size(62, 18);
+            this.lblOrderStatus.Size = new System.Drawing.Size(41, 12);
             this.lblOrderStatus.TabIndex = 134;
             this.lblOrderStatus.Text = "待审核";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(802, 98);
+            this.label12.Location = new System.Drawing.Point(535, 65);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 18);
+            this.label12.Size = new System.Drawing.Size(65, 12);
             this.label12.TabIndex = 133;
             this.label12.Text = "订单状态：";
             // 
             // lblCreateDate
             // 
             this.lblCreateDate.AutoSize = true;
-            this.lblCreateDate.Location = new System.Drawing.Point(891, 70);
+            this.lblCreateDate.Location = new System.Drawing.Point(594, 47);
+            this.lblCreateDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreateDate.Name = "lblCreateDate";
-            this.lblCreateDate.Size = new System.Drawing.Size(0, 18);
+            this.lblCreateDate.Size = new System.Drawing.Size(0, 12);
             this.lblCreateDate.TabIndex = 132;
             // 
             // lblOrderNo
             // 
             this.lblOrderNo.AutoSize = true;
-            this.lblOrderNo.Location = new System.Drawing.Point(891, 42);
+            this.lblOrderNo.Location = new System.Drawing.Point(594, 28);
+            this.lblOrderNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrderNo.Name = "lblOrderNo";
-            this.lblOrderNo.Size = new System.Drawing.Size(0, 18);
+            this.lblOrderNo.Size = new System.Drawing.Size(0, 12);
             this.lblOrderNo.TabIndex = 131;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(802, 70);
+            this.label8.Location = new System.Drawing.Point(535, 47);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 18);
+            this.label8.Size = new System.Drawing.Size(65, 12);
             this.label8.TabIndex = 130;
             this.label8.Text = "录入日期：";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(802, 42);
+            this.label7.Location = new System.Drawing.Point(535, 28);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 18);
+            this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 129;
             this.label7.Text = "单据编号：";
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(126, 159);
-            this.txtRemark.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRemark.Location = new System.Drawing.Point(84, 106);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(636, 54);
+            this.txtRemark.Size = new System.Drawing.Size(425, 37);
             this.txtRemark.TabIndex = 128;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 169);
+            this.label6.Location = new System.Drawing.Point(39, 113);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 18);
+            this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 127;
             this.label6.Text = "备注：";
             // 
@@ -680,18 +674,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(937, 190);
+            this.label5.Location = new System.Drawing.Point(625, 127);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 24);
+            this.label5.Size = new System.Drawing.Size(88, 16);
             this.label5.TabIndex = 126;
             this.label5.Text = "金额合计：";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(354, 93);
+            this.label4.Location = new System.Drawing.Point(236, 62);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 18);
+            this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 125;
             this.label4.Text = "销售员：";
             // 
@@ -699,10 +695,9 @@
             // 
             this.cmbPurchase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPurchase.FormattingEnabled = true;
-            this.cmbPurchase.Location = new System.Drawing.Point(127, 43);
-            this.cmbPurchase.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPurchase.Location = new System.Drawing.Point(85, 29);
             this.cmbPurchase.Name = "cmbPurchase";
-            this.cmbPurchase.Size = new System.Drawing.Size(196, 26);
+            this.cmbPurchase.Size = new System.Drawing.Size(132, 20);
             this.cmbPurchase.TabIndex = 124;
             this.cmbPurchase.DropDown += new System.EventHandler(this.cmbPurchase_DropDown);
             this.cmbPurchase.SelectedIndexChanged += new System.EventHandler(this.cmbPurchase_SelectedIndexChanged);
@@ -711,26 +706,27 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 47);
+            this.label3.Location = new System.Drawing.Point(15, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 18);
+            this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 123;
             this.label3.Text = "销售客户：";
             // 
             // dtSalesDate
             // 
-            this.dtSalesDate.Location = new System.Drawing.Point(126, 5);
-            this.dtSalesDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtSalesDate.Location = new System.Drawing.Point(84, 3);
             this.dtSalesDate.Name = "dtSalesDate";
-            this.dtSalesDate.Size = new System.Drawing.Size(196, 28);
+            this.dtSalesDate.Size = new System.Drawing.Size(132, 21);
             this.dtSalesDate.TabIndex = 120;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 11);
+            this.label2.Location = new System.Drawing.Point(39, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 122;
             this.label2.Text = "日期：";
             // 
@@ -739,9 +735,8 @@
             this.panel1.Controls.Add(this.dgvDrugDetailList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1481, 438);
+            this.panel1.Size = new System.Drawing.Size(987, 205);
             this.panel1.TabIndex = 7;
             // 
             // dgvDrugDetailList
@@ -772,11 +767,10 @@
             this.Column2});
             this.dgvDrugDetailList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDrugDetailList.Location = new System.Drawing.Point(0, 0);
-            this.dgvDrugDetailList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDrugDetailList.Name = "dgvDrugDetailList";
             this.dgvDrugDetailList.RowTemplate.Height = 23;
             this.dgvDrugDetailList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDrugDetailList.Size = new System.Drawing.Size(1481, 438);
+            this.dgvDrugDetailList.Size = new System.Drawing.Size(987, 205);
             this.dgvDrugDetailList.TabIndex = 7;
             this.dgvDrugDetailList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrugDetailList_CellContentClick);
             this.dgvDrugDetailList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrugDetailList_CellDoubleClick);
@@ -831,8 +825,8 @@
             // 规格
             // 
             this.规格.DataPropertyName = "SpecificationCode";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.规格.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.规格.DefaultCellStyle = dataGridViewCellStyle1;
             this.规格.HeaderText = "规格";
             this.规格.Name = "规格";
             this.规格.ReadOnly = true;
@@ -851,8 +845,8 @@
             // 生产厂商
             // 
             this.生产厂商.DataPropertyName = "FactoryName";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle2;
             this.生产厂商.HeaderText = "生产厂商";
             this.生产厂商.Name = "生产厂商";
             this.生产厂商.ReadOnly = true;
@@ -861,8 +855,8 @@
             // 单位
             // 
             this.单位.DataPropertyName = "MeasurementUnit";
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.单位.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.单位.DefaultCellStyle = dataGridViewCellStyle3;
             this.单位.HeaderText = "单位";
             this.单位.Name = "单位";
             this.单位.ReadOnly = true;
@@ -872,8 +866,8 @@
             // 数量
             // 
             this.数量.DataPropertyName = "Amount";
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Yellow;
-            this.数量.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow;
+            this.数量.DefaultCellStyle = dataGridViewCellStyle4;
             this.数量.HeaderText = "销售数量";
             this.数量.Name = "数量";
             this.数量.Visible = false;
@@ -881,8 +875,8 @@
             // 销售单价
             // 
             this.销售单价.DataPropertyName = "ActualUnitPrice";
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Yellow;
-            this.销售单价.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Yellow;
+            this.销售单价.DefaultCellStyle = dataGridViewCellStyle5;
             this.销售单价.HeaderText = "销售价格";
             this.销售单价.Name = "销售单价";
             this.销售单价.Visible = false;
@@ -897,9 +891,9 @@
             // 
             // 采购单价
             // 
-            this.采购单价.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.采购单价.DefaultCellStyle = dataGridViewCellStyle16;
+            this.采购单价.DataPropertyName = "PurchasePrice";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.采购单价.DefaultCellStyle = dataGridViewCellStyle6;
             this.采购单价.HeaderText = "采购单价";
             this.采购单价.Name = "采购单价";
             this.采购单价.ReadOnly = true;
@@ -925,8 +919,8 @@
             // 有效期至
             // 
             this.有效期至.DataPropertyName = "OutValidDate";
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.有效期至.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.有效期至.DefaultCellStyle = dataGridViewCellStyle7;
             this.有效期至.HeaderText = "有效期至";
             this.有效期至.Name = "有效期至";
             this.有效期至.ReadOnly = true;
@@ -935,8 +929,8 @@
             // 说明
             // 
             this.说明.DataPropertyName = "Description";
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Yellow;
-            this.说明.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Yellow;
+            this.说明.DefaultCellStyle = dataGridViewCellStyle8;
             this.说明.HeaderText = "说明";
             this.说明.Name = "说明";
             this.说明.ReadOnly = true;
@@ -946,8 +940,8 @@
             // 生产日期
             // 
             this.生产日期.DataPropertyName = "PruductDate";
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产日期.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产日期.DefaultCellStyle = dataGridViewCellStyle9;
             this.生产日期.HeaderText = "生产日期";
             this.生产日期.Name = "生产日期";
             this.生产日期.ReadOnly = true;
@@ -955,8 +949,8 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column1.Frozen = true;
             this.Column1.HeaderText = "付款单价";
             this.Column1.Name = "Column1";
@@ -981,12 +975,12 @@
             // 
             // FormSalesOrderEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1481, 705);
+            this.ClientSize = new System.Drawing.Size(987, 470);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormSalesOrderEdit";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1059,6 +1053,14 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.DataGridViewButtonColumn 删除;
         private System.Windows.Forms.DataGridViewTextBoxColumn 库存ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn 行号;
@@ -1080,13 +1082,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
     }
 }

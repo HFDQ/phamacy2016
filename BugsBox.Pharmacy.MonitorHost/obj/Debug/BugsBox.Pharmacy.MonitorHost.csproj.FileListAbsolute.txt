@@ -144,3 +144,6 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\obj\Debug\BugsBox.Pharmacy.MonitorHost.pdb
+D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Pharmacy.Business.Models.dll.config
+D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Pharmacy.Service.Models.dll.config
+D:\DQ\药品经营系统\BugsBox.Pharmacy.MonitorHost\bin\Debug\BugsBox.Application.Core.dll.config

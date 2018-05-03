@@ -425,7 +425,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
         //MmedicalInstitutionPermit事业单位法人证书
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetMmedicalInstitutionPermit", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetMmedicalInstitutionPermitResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetMmedicalInstitutionPermitServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        Models.MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(Models.MmedicalInstitutionPermit value, out string message);
+        Models.MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(Guid id, out string message);
 
         //MmedicalInstitutionPermit事业单位法人证书
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/OpMmedicalInstitutionPermit", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/OpMmedicalInstitutionPermitResponse")]
@@ -19087,9 +19087,9 @@ namespace BugsBox.Pharmacy.AppClient.PS
             return base.Channel.GetLnstitutionLegalPersonLicense(value, out message);
         }
 
-        public Models.MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(Models.MmedicalInstitutionPermit value, out string message)
+        public Models.MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(Guid id, out string message)
         {
-            return base.Channel.GetMmedicalInstitutionPermit(value, out message);
+            return base.Channel.GetMmedicalInstitutionPermit(id, out message);
         }
 
         public bool OpLnstitutionLegalPersonLicense(Models.LnstitutionLegalPersonLicense value, int op, out string message)

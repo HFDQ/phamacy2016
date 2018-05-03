@@ -39,6 +39,10 @@ namespace BugsBox.Pharmacy.Business.Models
         [DataMember]
         public string OrderStatus { get; set; }
 
+        [IgnoreDataMember]
+        [DisplayName("单据状态值")]
+        public int OrderStatusValue { get; set; }
+
 
         [DisplayName("取消单号")]
         [DataMember]

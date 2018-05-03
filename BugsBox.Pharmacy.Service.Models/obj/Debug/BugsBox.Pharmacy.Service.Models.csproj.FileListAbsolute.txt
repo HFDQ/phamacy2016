@@ -17,3 +17,4 @@ D:\DQ\药品经营系统\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharm
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.csproj.CopyComplete
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.dll
 D:\DQ\药品经营系统\BugsBox.Pharmacy.Service.Models\obj\Debug\BugsBox.Pharmacy.Service.Models.pdb
+D:\DQ\药品经营系统\_output\_temp\BugsBox.Pharmacy.Service.Models\BugsBox.Pharmacy.Service.Models.dll.config

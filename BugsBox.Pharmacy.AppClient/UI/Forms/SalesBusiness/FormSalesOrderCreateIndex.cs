@@ -72,7 +72,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 SalesCodeSearchInput scsi = InitSalesOrderSearchInput();
                 var c = PharmacyDatabaseService.GetSalesOrderCodePaged(scsi, out msg);
 
-                _salesOrderList = c.ToList();
+                _salesOrderList = c.OrderByDescending(o => o.BalanceTime).ToList();
             }
             catch (Exception ex)
             {

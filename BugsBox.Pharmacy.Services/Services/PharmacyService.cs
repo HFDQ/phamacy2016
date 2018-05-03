@@ -92,6 +92,7 @@ namespace BugsBox.Pharmacy.Services
             }
             if (ex is AppException)
             {
+                Log.Error(ex);
                 throw new FaultException<ServiceExceptionDetail>(new ServiceExceptionDetail(ex), new FaultReason(ex.Message));
             }
             else
