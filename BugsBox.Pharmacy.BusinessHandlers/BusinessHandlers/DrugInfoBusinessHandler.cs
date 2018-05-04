@@ -511,6 +511,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {
+                su.GoodsAdditionalProperty = null;
+              
                 //增加药品记录
                 this.Add(su);
                 if (su.GoodsType != GoodsType.DrugDomestic && su.GoodsType != GoodsType.DrugImport)
@@ -518,6 +520,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     if (su.GoodsAdditionalProperty != null)
                         RepositoryProvider.Db.GoodsAdditionalPropertys.Add(su.GoodsAdditionalProperty);
                 }
+
+
                 if (approvalFlowTypeID != Guid.Empty)
                 {
                     //增加审批流程
