@@ -330,7 +330,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                             }
                             if (this.SalePriceControlRuleModel.RuleType == (int)Models.SalePriceControlEnum.不低于采购价)
                             {
-                                if(drugInventoryRecord.DrugInfo.SalePrice< drugInventoryRecord.PurchasePricce)
+                                if (drugInventoryRecord.DrugInfo.SalePrice < drugInventoryRecord.PurchasePricce)
                                 {
                                     sod.UnitPrice = drugInventoryRecord.DrugInfo.PurchasePrice;    //基础信息中的销售定价
                                     sod.ActualUnitPrice = drugInventoryRecord.DrugInfo.PurchasePrice;  //库存进货实际价格
@@ -340,7 +340,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                                     sod.UnitPrice = drugInventoryRecord.DrugInfo.SalePrice;    //基础信息中的销售定价
                                     sod.ActualUnitPrice = drugInventoryRecord.DrugInfo.SalePrice;  //库存进货实际价格
                                 }
-                              
+
                                 sod.PurchasePrice = drugInventoryRecord.PurchasePricce;    //采购价
                                 if (sod.UnitPrice <= 0m) sod.UnitPrice = drugInventoryRecord.PurchasePricce;
                             }

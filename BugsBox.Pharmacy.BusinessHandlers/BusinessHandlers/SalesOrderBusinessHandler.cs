@@ -867,7 +867,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {
-                IList<ListItem> lis = new List<ListItem>();
+                // IList<ListItem> lis = new List<ListItem>();
+                Dictionary<int, string> dic = new Dictionary<int, string>();
+
                 foreach (var i in typeof(OrderStatus).GetFields())
                 {
                     var attr = i.GetCustomAttributes(false);
@@ -875,13 +877,14 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     {
                         var v = typeof(OrderStatus).InvokeMember(i.Name, System.Reflection.BindingFlags.GetField, null, null, null);
                         var n = (attr[0] as System.ComponentModel.DataAnnotations.DisplayAttribute).Name;
-                        var li = new ListItem();
-                        li.Name = n;
-                        li.stateValue = (Int32)v;
-                        lis.Add(li);
+                        //var li = new ListItem();
+                        //li.Name = n;
+                        //li.stateValue = (Int32)v;
+                        //lis.Add(li);
+                        dic.Add((Int32)v, n);
                     }
                 }
-                var c = from i in lis select i;
+                //var c = from i in lis select i;
 
                 var varOrderCodeBalance = this.Queryable.Where(r => r.BalanceTime != null);
                 if (searchInput.FromDate != null)
@@ -890,8 +893,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     varOrderCodeBalance = varOrderCodeBalance.Where(p => p.BalanceTime <= searchInput.ToDate);
                 if (searchInput.OperatorID != Guid.Empty)
                     varOrderCodeBalance = varOrderCodeBalance.Where(p => p.BalanceUserID == searchInput.OperatorID);
-                var result = from li in c
-                             join i in varOrderCodeBalance on li.stateValue equals i.OrderStatusValue
+                var result = from i in varOrderCodeBalance
                              join k in RepositoryProvider.Db.Users on i.BalanceUserID equals k.Id
                              join l in RepositoryProvider.Db.Employees on k.EmployeeId equals l.Id
                              join m in RepositoryProvider.Db.PurchaseUnits on i.PurchaseUnitId equals m.Id
@@ -914,14 +916,22 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
                                  PurchaseUnitName = m.Name,
                                  PurchaseUnitPinYin = m.PinyinCode,
-                                 OrderStatus = li.Name
+                                 OrderStatusValue = i.OrderStatusValue
                              };
+
+
 
                 if (!string.IsNullOrEmpty(searchInput.Code))
                 {
                     string q = searchInput.Code;
                     result = result.Where(r => r.SaleOrderDocumentNumber.Contains(q) || r.PurchaseUnitName.Contains(q) || r.PurchaseUnitPinYin.ToUpper().Contains(q.ToUpper()));
                 }
+
+                foreach (var item in result)
+                {
+                    item.OrderStatus = dic[item.OrderStatusValue];
+                }
+
                 return result;
             }
             catch (Exception ex)

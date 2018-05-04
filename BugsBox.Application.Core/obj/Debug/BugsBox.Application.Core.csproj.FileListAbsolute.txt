@@ -18,4 +18,3 @@ D:\DQ\药品经营系统\BugsBox.Application.Core\obj\Debug\BugsBox.Application.
 D:\DQ\药品经营系统\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.dll
 D:\DQ\药品经营系统\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.pdb
 D:\DQ\药品经营系统\_output\_temp\BugsBox.Application.Core\BugsBox.Application.Core.dll.config
-D:\DQ\药品经营系统\BugsBox.Application.Core\obj\Debug\BugsBox.Application.Core.csprojResolveAssemblyReference.cache

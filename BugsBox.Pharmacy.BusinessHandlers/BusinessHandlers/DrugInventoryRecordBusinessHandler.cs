@@ -501,11 +501,27 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             var c = BusinessHandlerFactory.SalesOrderBusinessHandler.Get(SoId);
             if (c == null) return null;
 
-            var result = from i in c.SalesOrderDetails.Where(r => !r.Deleted)
-                         join d in this.Queryable.Where(r => !r.Deleted)
-                         on i.DrugInventoryRecordID equals d.Id
-                         select d;
-            return result;
+            var results = (from salesorder in BusinessHandlerFactory.SalesOrderBusinessHandler.Queryable
+                           join i in BusinessHandlerFactory.SalesOrderDetailBusinessHandler.Queryable on salesorder.Id equals i.SalesOrderID
+                           join d in this.Queryable on i.DrugInventoryRecordID equals d.Id
+                           join drug in BusinessHandlerFactory.DrugInfoBusinessHandler.Queryable on d.DrugInfoId equals drug.Id
+                           where !salesorder.Deleted && !i.Deleted && !d.Deleted && salesorder.Id == SoId
+                           select new
+                           {
+                               DrugInfo = drug,
+                               Record = d
+                           });
+
+            List<DrugInventoryRecord> records = new List<DrugInventoryRecord>();
+            var record = new DrugInventoryRecord();
+            foreach (var result in results)
+            {
+                record = result.Record;
+                record.DrugInfo = result.DrugInfo;
+
+                records.Add(record);
+            }
+            return records;
         }
 
 
