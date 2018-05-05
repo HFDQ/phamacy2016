@@ -50,6 +50,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.btnSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
@@ -77,7 +78,6 @@
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bugsBoxFocusColorProvider1 = new BugsBox.Windows.Forms.BugsBoxFocusColorProvider(this.components);
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.ucGoodsInfo1 = new BugsBox.Pharmacy.AppClient.UI.UserControls.ucGoodsInfo();
             this.dataGridViewDisableCheckBoxColumn1 = new BugsBox.Pharmacy.AppClient.UI.Forms.DataGridViewDisableCheckBoxColumn();
             this.tabControl1.SuspendLayout();
@@ -107,7 +107,7 @@
             this.tabPageSearch.Controls.Add(this.pagerControl1);
             this.tabPageSearch.Location = new System.Drawing.Point(4, 22);
             this.tabPageSearch.Name = "tabPageSearch";
-            this.tabPageSearch.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageSearch.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSearch.Size = new System.Drawing.Size(1040, 525);
             this.tabPageSearch.TabIndex = 0;
             this.tabPageSearch.Text = "数据查询";
@@ -182,7 +182,7 @@
             this.bugsBoxFocusColorProvider1.SetFocusBackColor(this.txtSearchKeyword, System.Drawing.Color.MediumBlue);
             this.bugsBoxFocusColorProvider1.SetFocusForeColor(this.txtSearchKeyword, System.Drawing.Color.White);
             this.txtSearchKeyword.Location = new System.Drawing.Point(65, 22);
-            this.txtSearchKeyword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchKeyword.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchKeyword.Name = "txtSearchKeyword";
             this.txtSearchKeyword.Size = new System.Drawing.Size(135, 21);
             this.txtSearchKeyword.TabIndex = 1;
@@ -202,7 +202,7 @@
             // 
             this.pagerControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pagerControl1.Location = new System.Drawing.Point(3, 477);
-            this.pagerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pagerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.pagerControl1.Name = "pagerControl1";
             this.pagerControl1.PageIndex = 1;
             this.pagerControl1.PageSize = 20;
@@ -216,7 +216,7 @@
             this.tabPageEdit.Controls.Add(this.panel1);
             this.tabPageEdit.Location = new System.Drawing.Point(4, 22);
             this.tabPageEdit.Name = "tabPageEdit";
-            this.tabPageEdit.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageEdit.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageEdit.Size = new System.Drawing.Size(1040, 525);
             this.tabPageEdit.TabIndex = 1;
             this.tabPageEdit.Text = "编辑数据";
@@ -231,7 +231,7 @@
             this.panel1.Controls.Add(this.label34);
             this.panel1.Controls.Add(this.ucGoodsInfo1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(956, 639);
             this.panel1.TabIndex = 0;
@@ -304,6 +304,16 @@
             this.btnRefresh.Size = new System.Drawing.Size(60, 28);
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Web_info;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(84, 28);
+            this.toolStripButton2.Text = "查看明细";
+            this.toolStripButton2.ToolTipText = "查询";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // btnSearch
             // 
@@ -482,16 +492,6 @@
             this.dataGridViewTextBoxColumn16.HeaderText = "拆零单位";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Web_info;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(84, 28);
-            this.toolStripButton2.Text = "查看明细";
-            this.toolStripButton2.ToolTipText = "查询";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // ucGoodsInfo1
             // 
             this.ucGoodsInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -595,12 +595,22 @@
             0,
             0,
             0});
+            drugInfo1.PurchaseTax = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             drugInfo1.RetailPrice = new decimal(new int[] {
             0,
             0,
             0,
             0});
             drugInfo1.SalePrice = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            drugInfo1.SaleTax = new decimal(new int[] {
             0,
             0,
             0,
@@ -631,7 +641,7 @@
             goodsAdditionalProperty1.Deleted = false;
             goodsAdditionalProperty1.DeleteTime = null;
             goodsAdditionalProperty1.DrugInfo = null;
-            // goodsAdditionalProperty1.DrugInfoId = new System.Guid("00000000-0000-0000-0000-000000000000");
+            goodsAdditionalProperty1.DrugInfoId = new System.Guid("00000000-0000-0000-0000-000000000000");
             goodsAdditionalProperty1.FactoryAddress = null;
             goodsAdditionalProperty1.FactoryAddressEnglish = null;
             goodsAdditionalProperty1.FactoryNameEnglish = null;
@@ -678,7 +688,7 @@
             this.ClientSize = new System.Drawing.Size(1048, 582);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDrugInfo";
             this.Text = "药品信息管理";
             this.Load += new System.EventHandler(this.FormDrugInfo_Load);

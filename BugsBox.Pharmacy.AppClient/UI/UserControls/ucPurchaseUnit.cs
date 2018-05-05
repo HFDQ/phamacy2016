@@ -585,6 +585,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             {
                 try
                 {
+
                     sUnit.MmedicalInstitutionPermitOutDate = PharmacyDatabaseService.GetMmedicalInstitutionPermit(sUnit.MmedicalInstitutionPermitId, out message).First().OutDate;
 
                     _outDateList.Add(new OutDateDetail() { Content = "医疗执业许可证书", outDate = sUnit.MmedicalInstitutionPermitOutDate });

@@ -26782,16 +26782,16 @@ namespace BugsBox.Pharmacy.Services
         /// <param name="id"></param>
         /// <param name="message"></param>
         /// <returns></returns> 
-        public MmedicalInstitutionPermit GetMmedicalInstitutionPermit(Guid id,out string message)
+        public MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(Guid id,out string message)
 		{
 			message = string.Empty;
             try
             {
-                return HandlerFactory.MmedicalInstitutionPermitBusinessHandler.Get(id);
+                return new MmedicalInstitutionPermit[1] { HandlerFactory.MmedicalInstitutionPermitBusinessHandler.Get(id) };
             }
             catch (Exception ex)
             {
-			    return this.HandleException<MmedicalInstitutionPermit>("调用医疗机构执业许可证业务逻辑:根据编号获取实体(医疗机构执业许可证)失败", ex);
+			    return this.HandleException<MmedicalInstitutionPermit[]>("调用医疗机构执业许可证业务逻辑:根据编号获取实体(医疗机构执业许可证)失败", ex);
             }
 		} 
 

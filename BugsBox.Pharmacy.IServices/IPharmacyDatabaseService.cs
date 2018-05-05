@@ -4572,7 +4572,7 @@ namespace BugsBox.Pharmacy.IServices
         /// <returns></returns>
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        MmedicalInstitutionPermit GetMmedicalInstitutionPermit(Guid id,out string message);   
+        MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(Guid id,out string message);   
 
 		/// <summary>
         /// 添加医疗机构执业许可证
