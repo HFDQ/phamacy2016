@@ -370,7 +370,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Storage
             {
                 Guid InvID = storage[this.dataGridView1.SelectedCells[0].RowIndex].InventoryID;
                 DrugInventoryRecord diir = this.PharmacyDatabaseService.GetDrugInventoryRecord(out msg, InvID);
-                Guid pinId = diir.DrugInfoId;
+                Guid pinId = diir.PurchaseInInventeryOrderDetailId;
 
                 if (pinId != Guid.Empty)
                 {

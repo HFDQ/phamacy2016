@@ -8,3 +8,4 @@ TestResults
 .vs
 packages
 _output
+*.dll
