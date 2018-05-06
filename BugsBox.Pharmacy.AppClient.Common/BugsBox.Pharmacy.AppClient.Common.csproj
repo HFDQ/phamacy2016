@@ -59,6 +59,7 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AppClientContext.cs" />
+    <Compile Include="Commands\SaveMmedicalInstitutionPermitCmd.cs" />
     <Compile Include="Commands\GetDrugInventoryRecordHisCmd.cs" />
     <Compile Include="Commands\DrugInventoryRecordHisCmd.cs" />
     <Compile Include="Notification\PharmacyNotificationCallback.cs" />

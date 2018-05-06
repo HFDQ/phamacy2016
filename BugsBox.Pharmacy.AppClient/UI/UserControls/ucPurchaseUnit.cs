@@ -790,6 +790,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 this.btnLegalPerson.Tag = purchaseUnit.LnstitutionLegalPersonLicenseId;
                 this.buttontxtTaxRegistrationCode.Tag = purchaseUnit.TaxRegisterLicenseId;
                 this.buttonOrgnize.Tag = purchaseUnit.OrganizationCodeLicenseId;
+                //医疗机构许可证
                 this.buttonMedInst.Tag = purchaseUnit.MmedicalInstitutionPermitId;
                 this.buttonhygiene.Tag = purchaseUnit.HealthLicenseId;
                 this.buttonfood.Tag = purchaseUnit.FoodCirculateLicenseId;
@@ -1135,7 +1136,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 string msg = string.Empty;
                 _ListpurchaseUnit = PharmacyDatabaseService.AllPurchaseUnits(out msg).ToList();
 
-                 
+
                 int _count = _ListpurchaseUnit.Select(o => int.Parse(o.DocNumber.Replace("DA", ""))).Max();
 
                 //int _count = _ListpurchaseUnit.Count;

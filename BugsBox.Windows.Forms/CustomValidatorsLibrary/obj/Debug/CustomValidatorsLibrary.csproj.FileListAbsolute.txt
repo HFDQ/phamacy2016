@@ -15,3 +15,4 @@ D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\bin\Debug
 D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.csproj.CoreCompileInputs.cache
 D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.dll
 D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.pdb
+D:\DQ\药品经营系统\BugsBox.Windows.Forms\CustomValidatorsLibrary\obj\Debug\CustomValidatorsLibrary.csprojResolveAssemblyReference.cache

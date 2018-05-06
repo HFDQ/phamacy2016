@@ -430,7 +430,7 @@ namespace BugsBox.Pharmacy.AppClient.PS
         //MmedicalInstitutionPermit事业单位法人证书
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/OpMmedicalInstitutionPermit", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/OpMmedicalInstitutionPermitResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(BugsBox.Pharmacy.Service.Models.ServiceExceptionDetail), Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/OpMmedicalInstitutionPermitServiceExceptionDetailFault", Name = "ServiceExceptionDetail", Namespace = "http://schemas.datacontract.org/2004/07/BugsBox.Pharmacy.Service.Models")]
-        bool OpMmedicalInstitutionPermit(Models.MmedicalInstitutionPermit value, int op, out string message);
+        bool SaveMmedicalInstitutionPermit(Models.MmedicalInstitutionPermit value,out string message);
 
         //DrugsBreakage报损
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsBreakagesPassed", ReplyAction = "http://www.bugsbox.bugsbox/PharmacyDatabaseServcie/IPharmacyDatabaseService/GetDrugsBreakagesPassedResponse")]
@@ -19097,9 +19097,9 @@ namespace BugsBox.Pharmacy.AppClient.PS
             return base.Channel.OpLnstitutionLegalPersonLicense(value, op, out message);
         }
 
-        public bool OpMmedicalInstitutionPermit(Models.MmedicalInstitutionPermit value, int op, out string message)
+        public bool SaveMmedicalInstitutionPermit(Models.MmedicalInstitutionPermit value,out string message)
         {
-            return base.Channel.OpMmedicalInstitutionPermit(value, op, out message);
+            return base.Channel.SaveMmedicalInstitutionPermit(value,out message);
         }
 
         public Business.Models.ReturnPurchaseOrderList[] GetInventeryOrderListByReturn(string keyword, string supplyUnitName, string DrugName, string Batch, out string message)

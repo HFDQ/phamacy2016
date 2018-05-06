@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BugsBox.Pharmacy.UI.Common;
 using BugsBox.Pharmacy.Models;
+using BugsBox.Pharmacy.AppClient.Common.Commands;
 
 namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
 {
@@ -196,12 +197,18 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                     bool result = false;
                     if (this.MmedicalInstitutionPermit.Id != null && (!this.MmedicalInstitutionPermit.Id.Equals(Guid.Empty)))
                     {
-                        result = PharmacyDatabaseService.OpMmedicalInstitutionPermit(this.MmedicalInstitutionPermit, 1, out msg);
+                        SaveMmedicalInstitutionPermitCmd cmd = new SaveMmedicalInstitutionPermitCmd();
+                        cmd.MmedicalInstitutionPermit = this.MmedicalInstitutionPermit;
+                        cmd.IsAdd = false;
+                        result = (bool)cmd.Execute();
                     }
                     else
                     {
                         this.MmedicalInstitutionPermit.Id = Guid.NewGuid();
-                        result = PharmacyDatabaseService.OpMmedicalInstitutionPermit(this.MmedicalInstitutionPermit, 0, out msg);
+                        SaveMmedicalInstitutionPermitCmd cmd = new SaveMmedicalInstitutionPermitCmd();
+                        cmd.MmedicalInstitutionPermit = this.MmedicalInstitutionPermit;
+                        cmd.IsAdd = true;
+                        result = (bool)cmd.Execute();
                     }
                     if (result && string.IsNullOrWhiteSpace(msg))
                     {
@@ -262,7 +269,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
         {
             if (MessageBox.Show("确定要清除该资质吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel) return;
             clear = true;
-            this.PharmacyDatabaseService.OpMmedicalInstitutionPermit(this.MmedicalInstitutionPermit, 2, out msg);
+            this.PharmacyDatabaseService.SaveMmedicalInstitutionPermit(this.MmedicalInstitutionPermit, out msg);
             this.MmedicalInstitutionPermit.Id = Guid.Empty;
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Dispose();

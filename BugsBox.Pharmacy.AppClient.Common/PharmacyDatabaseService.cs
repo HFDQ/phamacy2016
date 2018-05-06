@@ -21717,12 +21717,12 @@ namespace BugsBox.Pharmacy.AppClient.PS
                 //Log.Warning(string.Format("结束调用服务方法:drugsUnqualicationDestroy."));
             }
         }
-        public bool OpMmedicalInstitutionPermit(MmedicalInstitutionPermit value, int op, out string message)
+        public bool SaveMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string message)
         {
             //Log.Warning(string.Format("开始调用服务方法:drugsUnqualicationDestroy....."));
             try
             {
-                return pharmacyServcie.OpMmedicalInstitutionPermit(value, op, out message);
+                return pharmacyServcie.SaveMmedicalInstitutionPermit(value, out message);
             }
             catch (Exception ex)
             {
