@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
 {
-    public partial class DrugMaintainRecord :BaseFunctionForm
+    public partial class DrugMaintainRecord : BaseFunctionForm
     {
         string msg = string.Empty;
         public DrugMaintainRecord()
         {
             InitializeComponent();
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
         }
 
         private void DrugMaintenanceRecord_Load(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
 
-            LoadData();  
+            LoadData();
         }
 
         private void LoadData()
@@ -57,7 +57,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
                 CompleteState = 0;
             }
             //类型
-            if (cmdDrugMaintainType.SelectedIndex ==1)
+            if (cmdDrugMaintainType.SelectedIndex == 1)
             {
                 DrugMaintainTypeValue = (int)DrugMaintainType.Normal;
             }
@@ -92,8 +92,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
                         CompleteState = Convert.ToBoolean(i.CompleteState) ? "已完成" : "未完成",
                         ExpirationDate = i.ExpirationDate.ToLongDateString(),
                         CreateTime = i.CreateTime,
-                        DrugMaintainType = i.DrugMaintainTypeValue == 0 ? "普通药品" : i.DrugMaintainTypeValue == 1 ? "重点养护药品":i.DrugMaintainTypeValue==2?"医疗器械":i.DrugMaintainTypeValue==3 ? "中药饮片":i.DrugMaintainTypeValue==4?"中药材":"保健食品",
-                         DrugMaintainTypeValue=i.DrugMaintainTypeValue
+                        DrugMaintainType = i.DrugMaintainTypeValue == 0 ? "普通药品" : i.DrugMaintainTypeValue == 1 ? "重点养护药品" : i.DrugMaintainTypeValue == 2 ? "医疗器械" : i.DrugMaintainTypeValue == 3 ? "中药饮片" : i.DrugMaintainTypeValue == 4 ? "中药材" : "保健食品",
+                        DrugMaintainTypeValue = i.DrugMaintainTypeValue
                     };
             dataGridView1.DataSource = c.ToList();
         }
@@ -101,14 +101,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0||e.ColumnIndex<0) return;
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
             if (!this.dataGridView1.CurrentCell.OwningColumn.Name.Contains(Column6.Name)) return;
-            var MaintainRecord=this.dataGridView1.CurrentRow.DataBoundItem as MaintainInfo;
+            var MaintainRecord = this.dataGridView1.CurrentRow.DataBoundItem as MaintainInfo;
 
             DrugMaintainRecordDetails frm = new DrugMaintainRecordDetails();
             frm.documentNumber = MaintainRecord.BillDocumentNo;
             frm.maintainTypeValue = MaintainRecord.DrugMaintainTypeValue;
-            
+
             if (this.dataGridView1.Rows[e.RowIndex].Cells[Column4.Name].Value.ToString().Contains("已完成"))
             {
                 frm.isComplete = true;
@@ -116,7 +116,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
 
             frm.ShowDialog();
             if (frm.DialogResult != DialogResult.OK) return;
-            
+
             this.LoadData();
         }
 
@@ -128,7 +128,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
             /// <summary>
             /// 单号
             /// </summary>
-            public string BillDocumentNo { get;set; }
+            public string BillDocumentNo { get; set; }
 
             /// <summary>
             /// 完成状态

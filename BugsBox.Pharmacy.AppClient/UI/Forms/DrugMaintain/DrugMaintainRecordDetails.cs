@@ -36,7 +36,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
         public DrugMaintainRecordDetails()
         {
             InitializeComponent();
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             allUser = this.PharmacyDatabaseService.AllUsers(out msg).ToList();
 
             this.dataGridView1.CellMouseClick += (sender, e) =>
@@ -76,7 +76,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
                 this.Text = "医疗器械养护记录明细";
             }
 
-            this.dataGridView1.CellFormatting+=dataGridView1_CellFormatting;
+            this.dataGridView1.CellFormatting += dataGridView1_CellFormatting;
         }
 
 
@@ -145,6 +145,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
             {
                 r.CheckResult = string.IsNullOrEmpty(r.CheckResult) ? "外观检验" : r.CheckResult;
                 r.MaintainResult = string.IsNullOrEmpty(r.MaintainResult) ? "正常" : r.MaintainResult;
+
+                User usr = allUser.Where(u => u.Id == r.UserId).FirstOrDefault();
+
+                if (usr != null)
+                {
+                    r.UserName = usr.Employee.Name;
+                }
             });
 
             dataGridView1.DataSource = new BindingCollection<DrugMaintainRecordDetail>(_detail);
@@ -163,23 +170,23 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugMaintain
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (this.dataGridView1.Columns[e.ColumnIndex].Name.Contains(this.Column11.Name))
-            {
-                Guid g = Guid.Parse(e.Value.ToString());
-                if (g != Guid.Empty)
-                {
-                    User usr = allUser.Where(r => r.Id == g).FirstOrDefault();
+            //if (this.dataGridView1.Columns[e.ColumnIndex].Name.Contains(this.Column11.Name))
+            //{
+            //    Guid g = Guid.Parse(e.Value.ToString());
+            //    if (g != Guid.Empty)
+            //    {
+            //        User usr = allUser.Where(r => r.Id == g).FirstOrDefault();
 
-                    if (usr != null)
-                    {
-                        e.Value = usr.Employee.Name;
-                    }
-                }
-                else
-                {
-                    e.Value = string.Empty;
-                }
-            }
+            //        if (usr != null)
+            //        {
+            //            e.Value = usr.Employee.Name;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        e.Value = string.Empty;
+            //    }
+            //}
 
         }
 
