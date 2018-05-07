@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
 namespace BugsBox.Pharmacy.Models
-{ 
+{
     /// <summary>
     /// 药品养护记录
     /// </summary>
     [Description("药品养护记录")]
     [DataContract]
     public class DrugMaintainRecord : Entity, ILEntity
-    {  
+    {
         //编号 截止日期  类型 （重点 普通）  完成状态  
 
 
@@ -56,7 +57,7 @@ namespace BugsBox.Pharmacy.Models
         ///// </summary> 
         //[DataMember(Order = 5)]
         //public DateTime LastMaintenanceTime { get; set; }
-         
+
         ///// <summary>
         ///// 备注
         ///// </summary> 
@@ -64,7 +65,7 @@ namespace BugsBox.Pharmacy.Models
         //[MaxLength(512)]
         //[DataMember(Order = 6)]
         //public string Memo { get; set; }
-          
+
         #region ILEntity
         [Required]
         [DataMember]
@@ -74,13 +75,19 @@ namespace BugsBox.Pharmacy.Models
         [DataMember]
         public Guid CreateUserId { get; set; }
 
+
+        [NotMapped]
+        [DataMember]
+        public string CreateUser { get; set; }
+
+
         [DataMember]
         public DateTime UpdateTime { get; set; }
-         
+
         [DataMember]
         public Guid UpdateUserId { get; set; }
 
         #endregion
-         
+
     }
 }

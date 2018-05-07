@@ -26237,18 +26237,124 @@ namespace BugsBox.Pharmacy.Services
         /// <param name="id"></param>
         /// <param name="message"></param>
         /// <returns></returns> 
-        public LnstitutionLegalPersonLicense GetLnstitutionLegalPersonLicense(Guid id,out string message)
-		{
-			message = string.Empty;
+  //      public LnstitutionLegalPersonLicense GetLnstitutionLegalPersonLicense(Guid id,out string message)
+		//{
+		//	message = string.Empty;
+  //          try
+  //          {
+  //              return HandlerFactory.LnstitutionLegalPersonLicenseBusinessHandler.Get(id);
+  //          }
+  //          catch (Exception ex)
+  //          {
+		//	    return this.HandleException<LnstitutionLegalPersonLicense>("调用事业单位法人证业务逻辑:根据编号获取实体(事业单位法人证)失败", ex);
+  //          }
+		//}
+        public LnstitutionLegalPersonLicense[] GetLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value, out string message)
+        {
+            message = string.Empty;
             try
             {
-                return HandlerFactory.LnstitutionLegalPersonLicenseBusinessHandler.Get(id);
+                var c = HandlerFactory.LnstitutionLegalPersonLicenseBusinessHandler.Queryable;
+                if (value.Id != null)
+                {
+                    c = c.Where(r => r.Id == value.Id);
+                }
+                if (value.Name != null && value.Name.Trim() != string.Empty)
+                {
+                    c = c.Where(r => r.Name.Contains(value.Name) || r.RegAddress.Contains(value.Name) || r.UnitName.Contains(value.Name));
+                }
+                return c.ToArray();
             }
             catch (Exception ex)
             {
-			    return this.HandleException<LnstitutionLegalPersonLicense>("调用事业单位法人证业务逻辑:根据编号获取实体(事业单位法人证)失败", ex);
+                message = ex.Message;
+                return null;
             }
-		} 
+            finally
+            {
+                this.Dispose();
+            }
+        }
+        public MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string message)
+        {
+            message = string.Empty;
+            try
+            {
+                var c = HandlerFactory.MmedicalInstitutionPermitBusinessHandler.Queryable;
+                c = c.Where(r => r.Id == value.Id);
+
+                return c.ToArray();
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                return null;
+            }
+            finally
+            {
+                this.Dispose();
+            }
+        }
+
+        public bool OpLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value, int op, out string message)
+        {
+            message = string.Empty;
+            try
+            {
+                if (op == 0)
+                {
+                    return HandlerFactory.LnstitutionLegalPersonLicenseBusinessHandler.Add(value, out message);
+                }
+                if (op == 1)
+                {
+                    return HandlerFactory.LnstitutionLegalPersonLicenseBusinessHandler.Save(value, out message);
+                }
+                if (op == 2)
+                {
+                    return HandlerFactory.LnstitutionLegalPersonLicenseBusinessHandler.Delete(value.Id, out message);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                return false;
+            }
+            finally
+            {
+                this.Dispose();
+            }
+        }
+
+        public bool OpMmedicalInstitutionPermit(MmedicalInstitutionPermit value, int op, out string message)
+        {
+            message = string.Empty;
+            try
+            {
+                if (op == 0)
+                {
+                    return HandlerFactory.MmedicalInstitutionPermitBusinessHandler.Add(value, out message);
+                }
+                if (op == 1)
+                {
+                    return HandlerFactory.MmedicalInstitutionPermitBusinessHandler.Save(value, out message);
+                }
+                if (op == 2)
+                {
+                    return HandlerFactory.MmedicalInstitutionPermitBusinessHandler.Delete(value.Id, out message);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                return false;
+            }
+            finally
+            {
+                this.Dispose();
+            }
+        }
 
         /// <summary>
         /// 统计事业单位法人证

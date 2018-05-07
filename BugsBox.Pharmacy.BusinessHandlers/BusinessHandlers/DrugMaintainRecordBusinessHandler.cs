@@ -24,7 +24,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             {
                 ex = new BusinessException(string.Format("[{0}]导航属性处理出错", EntityName), ex);
                 return HandleException<IQueryable<DrugMaintainRecord>>(ex.Message, ex);
-            } 
+            }
         }
 
         /// <summary>
@@ -41,10 +41,12 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             {
 
                 var all = this.Queryable;
-                List<DrugMaintainRecord> list = all.Where(r => r.CreateTime >= StartDate && r.CreateTime <= EndDate).ToList();
-                if(CompleteState!=null)
+
+
+                List <DrugMaintainRecord> list = all.Where(r => r.CreateTime >= StartDate && r.CreateTime <= EndDate).ToList();
+                if (CompleteState != null)
                 {
-                    int intCompleteState = Convert.ToInt16( CompleteState);
+                    int intCompleteState = Convert.ToInt16(CompleteState);
                     list = list.Where(r => r.CompleteState == intCompleteState).ToList();
                 }
                 if (DrugMaintainType != null)
@@ -54,7 +56,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
                 foreach (var c in list)
                 {
-                    int count = RepositoryProvider.Db.DrugMaintainRecordDetails.Where(r => r.BillDocumentNo == c.BillDocumentNo && c.Deleted!=true).ToList().Count;
+                    int count = RepositoryProvider.Db.DrugMaintainRecordDetails.Where(r => r.BillDocumentNo == c.BillDocumentNo && c.Deleted != true).ToList().Count;
                     if (count == 0)
                     {
                         BusinessHandlerFactory.DrugMaintainRecordBusinessHandler.Delete(c.Id);

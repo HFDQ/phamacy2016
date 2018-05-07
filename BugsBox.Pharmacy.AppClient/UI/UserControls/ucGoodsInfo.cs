@@ -1243,7 +1243,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 case FormRunMode.Add:
                     GoodsAdditional = new GoodsAdditionalProperty();
                     GoodsAdditional.Id = drugInfo.Id;
-                   // GoodsAdditional.DrugInfoId = drugInfo.Id;
+                    // GoodsAdditional.DrugInfoId = drugInfo.Id;
                     GoodsAdditional.LicensePermissionDate = DateTime.Now;
                     GoodsAdditional.PutOnRecordDate = DateTime.Now;
                     break;

@@ -4499,9 +4499,9 @@ namespace BugsBox.Pharmacy.IServices
         /// <param name="id"></param>
         /// <param name="message"></param>
         /// <returns></returns>
-		[OperationContract]
-	    [FaultContract(typeof(ServiceExceptionDetail))]
-        LnstitutionLegalPersonLicense GetLnstitutionLegalPersonLicense(Guid id,out string message);   
+		//[OperationContract]
+	 //   [FaultContract(typeof(ServiceExceptionDetail))]
+  //      LnstitutionLegalPersonLicense GetLnstitutionLegalPersonLicense(Guid id,out string message);   
 
 		/// <summary>
         /// 添加事业单位法人证
@@ -4584,6 +4584,15 @@ namespace BugsBox.Pharmacy.IServices
 	    [FaultContract(typeof(ServiceExceptionDetail))]
         bool AddMmedicalInstitutionPermit(MmedicalInstitutionPermit value,out string msg);
 
+
+        //[OperationContract]
+        //[FaultContract(typeof(ServiceExceptionDetail))]
+        //MmedicalInstitutionPermit[] GetMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string message);
+
+        [OperationContract]
+        [FaultContract(typeof(ServiceExceptionDetail))]
+        bool OpMmedicalInstitutionPermit(MmedicalInstitutionPermit value, int op, out string message);
+
         /// <summary>
         /// 删除医疗机构执业许可证
         /// </summary>
@@ -4602,14 +4611,22 @@ namespace BugsBox.Pharmacy.IServices
         /// <returns></returns>
 		[OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
-        bool SaveMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string msg);  
+        bool SaveMmedicalInstitutionPermit(MmedicalInstitutionPermit value, out string msg);
 
-		/// <summary>
+
+        [OperationContract]
+        [FaultContract(typeof(ServiceExceptionDetail))]
+        LnstitutionLegalPersonLicense[] GetLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value, out string message);
+
+        [OperationContract]
+        [FaultContract(typeof(ServiceExceptionDetail))]
+        bool OpLnstitutionLegalPersonLicense(LnstitutionLegalPersonLicense value, int op, out string message);
+        /// <summary>
         /// 所有记录医疗机构执业许可证
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>
-		[OperationContract]
+        [OperationContract]
 	    [FaultContract(typeof(ServiceExceptionDetail))]
         List<MmedicalInstitutionPermit> AllMmedicalInstitutionPermits(out string message);  
 
