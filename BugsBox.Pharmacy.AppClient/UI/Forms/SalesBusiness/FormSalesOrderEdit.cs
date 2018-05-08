@@ -1415,10 +1415,23 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             }
             ds.Tables.Add(OrderDetailTable);
 
-            using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListEmpty.rdlc", ds))
+
+            if (this.GoodsType == GoodsTypeClass.药品)
             {
-                printHelper.Print();
+                using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListEmpty.rdlc", ds))
+                {
+                    printHelper.Print();
+                }
             }
+            else
+            {
+                using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListEmptyYLQX.rdlc", ds))
+                {
+                    printHelper.Print();
+                }
+            }
+
+
         }
         private void txtTotalMoney_TextChanged(object sender, EventArgs e)
         {
