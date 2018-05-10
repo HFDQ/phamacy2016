@@ -164,7 +164,7 @@ namespace BugsBox.Pharmacy.Models
         [DataMember]
         public string Description { get; set; }
 
-        [NotMapped]
+        [DataMember]
         public decimal PurchasePrice { get; set; }
         #endregion
 

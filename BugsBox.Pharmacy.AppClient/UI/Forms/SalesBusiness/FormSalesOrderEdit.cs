@@ -89,7 +89,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         /// </summary>
         /// <param name="salesOrder"></param>
         public FormSalesOrderEdit(SalesOrder salesOrder)
-        {
+        { 
             InitializeComponent();
             this._salesOrder = salesOrder;
             _operation = FormOperation.Empty;

@@ -2570,6 +2570,7 @@
     <EmbeddedResource Include="UI\Reports\RptSalesOrderListCS.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderListEmpty.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderListYLQX.rdlc" />
+    <EmbeddedResource Include="UI\Reports\RptSalesOrderListYLQXEmpty.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderRecord.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderRefundList.rdlc" />
     <EmbeddedResource Include="UI\Reports\RptSalesOrderReturnApply.rdlc" />

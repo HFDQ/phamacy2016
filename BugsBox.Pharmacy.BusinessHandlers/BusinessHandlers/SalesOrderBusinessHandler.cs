@@ -125,7 +125,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                 sodetail.UnitPrice = sod.UnitPrice;
                                 sodetail.UpdateTime = DateTime.Now;
                                 sodetail.UpdateUserId = sod.CreateUserId;
-
+                                sodetail.PurchasePrice = sod.PurchasePrice;
                                 idx++;
                                 if (sodetail.Amount > 0)
                                     BusinessHandlerFactory.SalesOrderDetailBusinessHandler.Add(sodetail);
