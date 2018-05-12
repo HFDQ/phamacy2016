@@ -547,25 +547,34 @@ namespace BugsBox.Pharmacy.AppClient
             {
                 var ListUpdateFiles = uc.PharmacyDatabaseService.GetUpdateFiles("Reports").ToList();
 
-                if (!System.IO.Directory.Exists("Reports"))
-                    System.IO.Directory.CreateDirectory("Reports");
 
-
-                foreach (var l in ListUpdateFiles)
+                if (ListUpdateFiles.Count > 0)
                 {
-                    var filename = System.IO.Directory.GetCurrentDirectory() + "\\Reports\\" + l.FileName;
-                    if (File.Exists(filename))
-                    {
-                        File.Delete(filename);
-                    }
-                    using (System.IO.FileStream outstream = new System.IO.FileStream(filename, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.Write))
-                    {
-                        outstream.Write(l.bytes, 0, l.bytes.Length);
-                    }
+                    if (!System.IO.Directory.Exists("Reports"))
+                        System.IO.Directory.CreateDirectory("Reports");
 
 
+                    foreach (var l in ListUpdateFiles)
+                    {
+                        var filename = System.IO.Directory.GetCurrentDirectory() + "\\Reports\\" + l.FileName;
+                        if (File.Exists(filename))
+                        {
+                            File.Delete(filename);
+                        }
+                        using (System.IO.FileStream outstream = new System.IO.FileStream(filename, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.Write))
+                        {
+                            outstream.Write(l.bytes, 0, l.bytes.Length);
+                        }
+
+
+                    }
+                    MessageBox.Show("更新成功！");
                 }
-                MessageBox.Show("更新成功！");
+                else
+                {
+                    MessageBox.Show("没有可更新的报表！");
+                }
+
             }
         }
 
