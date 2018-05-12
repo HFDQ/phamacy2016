@@ -335,19 +335,26 @@ namespace BugsBox.Pharmacy.AppClient
             if (id == Guid.Empty) return;
             Models.GSPLicense gsp = baseform.PharmacyDatabaseService.GetGSPLicense(out msg, id);
             if (gsp == null) return;
-            oDoc.Bookmarks["GSP1"].Select();
-            oDoc.Bookmarks["GSP1"].Range.Text = gsp.Name;
-            oDoc.Bookmarks["GSP2"].Range.Text = gsp.LicenseCode;
-            oDoc.Bookmarks["GSP3"].Range.Text = gsp.UnitName;
-            oDoc.Bookmarks["GSP4"].Range.Text = gsp.IssuanceOrg;
-            oDoc.Bookmarks["GSP5"].Range.Text = gsp.RegAddress;
-            oDoc.Bookmarks["GSP6"].Range.Text = gsp.IssuanceDate.ToLongDateString();
-            oDoc.Bookmarks["GSP7"].Range.Text = gsp.OutDate.ToLongDateString();
 
-            oDoc.Bookmarks["GSP8"].Range.Text = baseform.PharmacyDatabaseService.GetBusinessType(out msg, gsp.BusinessTypeId).Name;
-            oDoc.Bookmarks["GSP9"].Range.Text = gsp.Header;
-            oDoc.Bookmarks["GSP10"].Range.Text = gsp.LegalPerson;
-            oDoc.Bookmarks["GSP11"].Range.Text = gsp.QualityHeader;
+
+            if (p.UnitType != "医疗机构")
+            {
+
+                oDoc.Bookmarks["GSP1"].Select();
+                oDoc.Bookmarks["GSP1"].Range.Text = gsp.Name;
+                oDoc.Bookmarks["GSP2"].Range.Text = gsp.LicenseCode;
+                oDoc.Bookmarks["GSP3"].Range.Text = gsp.UnitName;
+                oDoc.Bookmarks["GSP4"].Range.Text = gsp.IssuanceOrg;
+                oDoc.Bookmarks["GSP5"].Range.Text = gsp.RegAddress;
+
+                oDoc.Bookmarks["GSP6"].Range.Text = gsp.IssuanceDate.ToLongDateString();
+                oDoc.Bookmarks["GSP7"].Range.Text = gsp.OutDate.ToLongDateString();
+
+                oDoc.Bookmarks["GSP8"].Range.Text = baseform.PharmacyDatabaseService.GetBusinessType(out msg, gsp.BusinessTypeId).Name;
+                oDoc.Bookmarks["GSP9"].Range.Text = gsp.Header;
+                oDoc.Bookmarks["GSP10"].Range.Text = gsp.LegalPerson;
+                oDoc.Bookmarks["GSP11"].Range.Text = gsp.QualityHeader;
+            }
             oDoc.Bookmarks["GSP12"].Range.Text = gsp.WarehouseAddress;
             string[] Bscope = b == null ? baseform.PharmacyDatabaseService.GetBusinessScopeCodesByPurchaseUnitGuid(out msg, UnitId) : baseform.PharmacyDatabaseService.GetBusinessScopeCodesBySupplyUnitGuid(out msg, UnitId); ;
             oDoc.Bookmarks["GSP13"].Range.Text = string.Join(",", Bscope);

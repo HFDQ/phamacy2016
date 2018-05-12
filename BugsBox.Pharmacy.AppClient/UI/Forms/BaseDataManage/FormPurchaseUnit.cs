@@ -1019,7 +1019,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseDataManage
         {
             var u = this.dataGridView1.SelectedRows[0].DataBoundItem as PurchaseUnitShow;
             byte[] b = this.PharmacyDatabaseService.GetUpdateFiles("ApprovalFiles\\A0EAA274-889E-4B77-8C77-CC395FD991EF").FirstOrDefault().bytes;
-
+        
             using (System.IO.FileStream fs = new System.IO.FileStream("File", System.IO.FileMode.OpenOrCreate))
             {
                 fs.Write(b, 0, b.Length);

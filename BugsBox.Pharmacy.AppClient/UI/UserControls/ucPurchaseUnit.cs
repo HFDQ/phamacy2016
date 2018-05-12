@@ -905,7 +905,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             {
                 dicbussnessType.Add(bt.Id, bt.Name);
             }
-
         }
 
         /// <summary>
@@ -1161,7 +1160,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
             int indexItem = this.cmbUnitType.SelectedIndex;
             List<UnitType> listitem = _ListUnitType.OrderBy(d => d.Code).ToList();
             string str = listitem[indexItem].Name;
-            if (str == "批发企业" || str == "零售连锁" || str == "零售" || str == "经营企业")
+            if (str == "批发企业" || str == "零售连锁" || str == "零售" || str == "经营企业" || str.Contains("零售"))
             {
                 this.buttonGMPLicense.Visible = false;
                 this.buttonInstrumentsProductionLicense.Visible = false;
