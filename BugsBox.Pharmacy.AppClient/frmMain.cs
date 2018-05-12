@@ -546,25 +546,35 @@ namespace BugsBox.Pharmacy.AppClient
             using (Pharmacy.UI.Common.BaseFunctionUserControl uc = new Pharmacy.UI.Common.BaseFunctionUserControl())
             {
                 var ListUpdateFiles = uc.PharmacyDatabaseService.GetUpdateFiles("Reports").ToList();
+
+
                 if (ListUpdateFiles.Count > 0)
                 {
-                    if (System.IO.Directory.Exists("Reports"))
-                        System.IO.Directory.Delete("Reports", true);
-                }
+                    if (!System.IO.Directory.Exists("Reports"))
+                        System.IO.Directory.CreateDirectory("Reports");
 
-                {
-                    //   if (!System.IO.Directory.Exists("Reports"))
-                    System.IO.Directory.CreateDirectory("Reports");
-                }
 
-                foreach (var l in ListUpdateFiles)
-                {
-                    using (System.IO.FileStream outstream = new System.IO.FileStream(System.IO.Directory.GetCurrentDirectory() + "\\Reports\\" + l.FileName, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.Write))
+                    foreach (var l in ListUpdateFiles)
                     {
-                        outstream.Write(l.bytes, 0, l.bytes.Length);
+                        var filename = System.IO.Directory.GetCurrentDirectory() + "\\Reports\\" + l.FileName;
+                        if (File.Exists(filename))
+                        {
+                            File.Delete(filename);
+                        }
+                        using (System.IO.FileStream outstream = new System.IO.FileStream(filename, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.Write))
+                        {
+                            outstream.Write(l.bytes, 0, l.bytes.Length);
+                        }
+
+
                     }
+                    MessageBox.Show("更新成功！");
                 }
-                MessageBox.Show("更新成功！");
+                else
+                {
+                    MessageBox.Show("没有可更新的报表！");
+                }
+
             }
         }
 

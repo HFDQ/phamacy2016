@@ -149,6 +149,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             //        }
             //    }
             //}
+
+            this.dgvMain.Columns["DrugNum"].DefaultCellStyle.Format = "N2";
+            this.dgvMain.Columns["TotalPrice"].DefaultCellStyle.Format = "N2";
+            this.dgvMain.Columns["ReceivedMoney"].DefaultCellStyle.Format = "N2";
         }
         private void cmbOperator_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -165,6 +169,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             this.dgvMain.Columns["CancelTime"].Visible = false;
             this.dgvMain.Columns["CancelUserName"].Visible = false;
             this.dgvMain.Columns["CancelReason"].Visible = false;
+            this.dgvMain.Columns["OrderStatusValue"].Visible = false;
             //this.dgvMain.Columns["ReturnOrderCol"].Visible = false;
         }
 
