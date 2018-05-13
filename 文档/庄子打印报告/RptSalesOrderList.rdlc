@@ -82,7 +82,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>10.69803in</Width>
+              <Width>9.75011in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -100,10 +100,10 @@
                                 <Width>0.46094in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.96336in</Width>
+                                <Width>1.50796in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.98425in</Width>
+                                <Width>1.23993in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.51755in</Width>
@@ -112,28 +112,28 @@
                                 <Width>0.82279in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.15619in</Width>
+                                <Width>1.37088in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.90551in</Width>
+                                <Width>0.62734in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.86614in</Width>
+                                <Width>0.70903in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.43622in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.7874in</Width>
+                                <Width>0.58801in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.53431in</Width>
+                                <Width>0.43014in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.70866in</Width>
+                                <Width>0.60471in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.39523in</Width>
+                                <Width>0.3589in</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
@@ -596,7 +596,7 @@
                                                 <Value>=RowNumber(Nothing)</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>11pt</FontSize>
+                                                  <FontSize>12pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -660,6 +660,7 @@
                                                 <Value>=Fields!批准文号.Value</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
+                                                  <FontSize>9pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -677,6 +678,7 @@
                                           <PaddingBottom>2pt</PaddingBottom>
                                         </Style>
                                       </Textbox>
+                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell>
@@ -690,6 +692,7 @@
                                                 <Value>=Fields!剂型.Value</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -720,6 +723,7 @@
                                                 <Value>=Fields!规格.Value</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
+                                                  <FontSize>11pt</FontSize>
                                                   <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </TextRun>
@@ -749,6 +753,7 @@
                                                 <Value>=Fields!生产厂商.Value</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
+                                                  <FontSize>11pt</FontSize>
                                                   <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </TextRun>
@@ -778,7 +783,7 @@
                                                 <Value>=Fields!批号.Value</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>11pt</FontSize>
+                                                  <FontSize>9pt</FontSize>
                                                   <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </TextRun>
@@ -810,7 +815,7 @@
                                                 <Value>=FormatDateTime(Fields!有效期至.Value,2)</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>11pt</FontSize>
+                                                  <FontSize>9pt</FontSize>
                                                   <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </TextRun>
@@ -823,26 +828,6 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
                                           <PaddingLeft>1pt</PaddingLeft>
                                           <PaddingRight>1pt</PaddingRight>
                                           <PaddingTop>1pt</PaddingTop>
@@ -862,7 +847,7 @@
                                                 <Value>=Fields!单位.Value</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>12pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -874,26 +859,6 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -913,7 +878,7 @@
                                                 <Value>=round(Fields!数量.Value,2)</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>14pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                   <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </TextRun>
@@ -928,26 +893,6 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -967,7 +912,7 @@
                                                 <Value>=round(Fields!单价.Value,2)</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>12pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                   <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </TextRun>
@@ -982,26 +927,6 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -1035,26 +960,6 @@
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -1074,7 +979,6 @@
                                                 <Value>合格</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>12pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1155,24 +1059,17 @@
                                                 </Style>
                                               </TextRun>
                                               <TextRun>
-                                                <Value xml:space="preserve">                  </Value>
+                                                <Value>                  小写：￥</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
                                                   <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                               <TextRun>
-                                                <Value>小写：￥</Value>
-                                                <Style>
-                                                  <FontFamily>黑体</FontFamily>
-                                                  <FontSize>12pt</FontSize>
-                                                </Style>
-                                              </TextRun>
-                                              <TextRun>
                                                 <Value>=Round(Sum(Fields!金额.Value, "DsSalesOrder_table"),2)</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>12pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1191,7 +1088,6 @@
                                         </Style>
                                       </Textbox>
                                       <ColSpan>6</ColSpan>
-                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell />
@@ -1242,14 +1138,14 @@
                                                 <Value>￥</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>13pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                               <TextRun>
                                                 <Value>=Round(Sum(Fields!金额.Value),2)</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>13pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1312,10 +1208,9 @@
                             </TablixMembers>
                           </TablixRowHierarchy>
                           <DataSetName>DsSalesOrder_table</DataSetName>
-                          <Top>0.2cm</Top>
                           <Left>0.1cm</Left>
                           <Height>2.1cm</Height>
-                          <Width>26.76795cm</Width>
+                          <Width>24.57298cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1357,7 +1252,7 @@
         </TablixRowHierarchy>
         <DataSetName>DsSalesOrder_table</DataSetName>
         <Height>4.99999cm</Height>
-        <Width>27.173cm</Width>
+        <Width>24.76528cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1482,7 +1377,7 @@
    CNMoney= resultStr
   End If 
 End Function</Code>
-  <Width>27.173cm</Width>
+  <Width>24.76529cm</Width>
   <Page>
     <PageHeader>
       <Height>2.5cm</Height>
@@ -1557,7 +1452,7 @@ End Function</Code>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.11995cm</Top>
-          <Left>22.05535cm</Left>
+          <Left>19.83285cm</Left>
           <Height>1.04979cm</Height>
           <Width>4.84015cm</Width>
           <ZIndex>1</ZIndex>
