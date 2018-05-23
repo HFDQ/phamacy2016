@@ -89,7 +89,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         /// </summary>
         /// <param name="salesOrder"></param>
         public FormSalesOrderEdit(SalesOrder salesOrder)
-        { 
+        {
             InitializeComponent();
             this._salesOrder = salesOrder;
             _operation = FormOperation.Empty;
@@ -1348,6 +1348,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                                 printHelper.Print();
                             }
                     }
+                    else if (((ToolStripButton)sender).Name.Contains("茶"))
+                    {
+                        using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListHC.rdlc", ds))
+                        {
+                            printHelper.Print();
+                        }
+                    }
                     else
                     {
                         using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListCS.rdlc", ds))
@@ -1966,6 +1973,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             this.PrintEmpty();
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            this.tsbtnPrint_Click(sender, e);
         }
     }
 }
