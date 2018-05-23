@@ -1348,7 +1348,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                                 printHelper.Print();
                             }
                     }
-                    else if (((ToolStripButton)sender).Name.Contains("茶"))
+                    else if (((ToolStripButton)sender).Text.Contains("茶"))
                     {
                         using (PrintHelper printHelper = new PrintHelper("Reports\\RptSalesOrderListHC.rdlc", ds))
                         {
