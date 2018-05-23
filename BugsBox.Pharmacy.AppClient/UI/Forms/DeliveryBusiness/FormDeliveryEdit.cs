@@ -278,7 +278,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DeliveryBusiness
         /// <param name="e"></param>
         private void tsbtnOuted_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("确定要取消配送？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel) return;
+            if (MessageBox.Show("确定要配送出库吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel) return;
             try
             {
                 string msg = string.Empty;
