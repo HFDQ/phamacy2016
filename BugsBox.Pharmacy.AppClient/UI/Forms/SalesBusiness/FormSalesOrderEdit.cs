@@ -1315,6 +1315,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         string batchNumber = detail.BatchNumber;
 
                         string ValidDate = detail.OutValidDate.ToString();
+                        string PruductDate = detail.PruductDate.ToString();
+
                         string unit = detail.MeasurementUnit;
                         decimal qty = detail.Amount;
                         decimal unitPrice = detail.ActualUnitPrice;
