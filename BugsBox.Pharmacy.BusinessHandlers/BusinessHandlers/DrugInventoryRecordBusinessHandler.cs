@@ -55,6 +55,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 }
 
                 var diids = all.Select(p => p.Id);
+                
 
                 var result = this.Queryable.Where(p => p.CanSaleNum > 0 && p.Valid && diids.Contains(p.DrugInfoId));
 

@@ -34,7 +34,7 @@ namespace BugsBox.Pharmacy.Models
         /// 生产批号
         /// </summary>
         [Required]
-        
+
         [DataMember]
         public string BatchNumber { get; set; }
 
@@ -155,7 +155,7 @@ namespace BugsBox.Pharmacy.Models
         /// <summary>
         /// 描述即备注
         /// </summary>
-        
+
         [DataMember(Order = 7)]
         public string Decription { get; set; }
 
@@ -167,10 +167,10 @@ namespace BugsBox.Pharmacy.Models
         public decimal CanSaleNum
         {
             get
-            { return CurrentInventoryCount - OnSalesOrderCount - OnRetailCount - drugsUnqualicationNum-PurchaseReturnNumber; }
+            { return CurrentInventoryCount - OnSalesOrderCount - OnRetailCount - drugsUnqualicationNum - PurchaseReturnNumber; }
             set
             {
-                value = CurrentInventoryCount - OnSalesOrderCount - OnRetailCount - drugsUnqualicationNum-PurchaseReturnNumber ;
+                value = CurrentInventoryCount - OnSalesOrderCount - OnRetailCount - drugsUnqualicationNum - PurchaseReturnNumber;
                 //if (value <= 0) Valid = false;
             }
         }
@@ -239,7 +239,12 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [DataMember]
         public Guid WarehouseZoneId { get; set; }
-
+        /// <summary>
+        /// 库区编号
+        /// </summary>
+        [DataMember]
+        [NotMapped]
+        public string WarehouseName { get; set; }
         /// <summary>
         /// 库区
         /// </summary>

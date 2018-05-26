@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BugsBox.Pharmacy.AppClient.Common.Commands;
+using BugsBox.Pharmacy.Business.Models.DTO;
 using BugsBox.Pharmacy.Models;
 
 namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
@@ -52,16 +54,29 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             list.Clear();
             try
             {
-                drugInventoryRecord = this.PharmacyDatabaseService.GetDrugInventoryRecordForDrugInfoForSalesSelector(out msg, purchaseUnitGuid, txtTYM.Text, string.Empty, txtCode.Text).OrderBy(r => r.DrugInfo.ProductGeneralName).ToList();
-
-                foreach (var i in drugInventoryRecord)
+                GetDrugInventoryRecordSelectHisCmd cmd = new GetDrugInventoryRecordSelectHisCmd
                 {
-                    int IndexB = i.BatchNumber.LastIndexOf("(");
+                    bwm = string.Empty,
+                    code = txtCode.Text,
+                    tym = txtTYM.Text,
+                    purchaseUnitGuid = purchaseUnitGuid
+                };
+                var recorditems = cmd.Execute() as InventoryRecordItem[];
+
+                //drugInventoryRecord = this.PharmacyDatabaseService.GetDrugInventoryRecordForDrugInfoForSalesSelector(out msg, purchaseUnitGuid, txtTYM.Text, string.Empty, txtCode.Text).OrderBy(r => r.DrugInfo.ProductGeneralName).ToList();
+
+                foreach (var i in recorditems)
+                {
+                    int IndexB = i.Record.BatchNumber.LastIndexOf("(");
                     if (IndexB > 1)
                     {
-                        i.BatchNumber = i.BatchNumber.Substring(0, IndexB).Trim();
+                        i.Record.BatchNumber = i.Record.BatchNumber.Substring(0, IndexB).Trim();
                     }
+                    i.Record.DrugInfo = i.DrugInfo;
+                    i.Record.WarehouseName = i.Warehouse.Name;
                 }
+
+                drugInventoryRecord = recorditems.Select(o => o.Record).ToList();
 
                 if (!string.IsNullOrWhiteSpace(msg))
                 {
@@ -78,32 +93,34 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                                  i.BatchNumber,
                                  i.DrugInfoId,
                                  i.Decription,
-                                 i.PurchasePricce
+                                 i.PurchasePricce,
+                                 i.WarehouseName
                              } into g
                              select new bindingDrugsForsale
-                      {
-                          ProductGeneralName = g.FirstOrDefault().DrugInfo.ProductGeneralName,
-                          ProductName = g.FirstOrDefault().DrugInfo.ProductName,
-                          Code = g.FirstOrDefault().DrugInfo.DictionaryDosageCode,
-                          specific = g.FirstOrDefault().DrugInfo.DictionarySpecificationCode,
-                          StandardCode = g.FirstOrDefault().DrugInfo.StandardCode,
-                          BatchNumber = g.FirstOrDefault().BatchNumber,
-                          OutValidDate = g.FirstOrDefault().OutValidDate,
-                          CanSaleNum = g.Sum(a => a.CanSaleNum),
-                          purchasePrice = g.FirstOrDefault().PurchasePricce,
-                          SalePrice = g.FirstOrDefault().DrugInfo.SalePrice,
-                          FactoryName = g.FirstOrDefault().DrugInfo.FactoryName,
-                          Id = g.FirstOrDefault().Id,
-                          PY = g.FirstOrDefault().DrugInfo.Pinyin,
-                          saleNum = 0,
-                          measurement = g.FirstOrDefault().DrugInfo.DictionaryMeasurementUnitCode,
-                          purchaseInInventoryID = g.FirstOrDefault().PurchaseInInventeryOrderDetailId,
-                          druginfoId = g.FirstOrDefault().DrugInfoId,
-                          BusinessScopeCode = g.FirstOrDefault().DrugInfo.BusinessScopeCode,
-                          Decription = g.FirstOrDefault().Decription,
-                          ProductDate = g.FirstOrDefault().PruductDate,
-                          DrugInfo = g.FirstOrDefault().DrugInfo
-                      }).OrderBy(r => r.ProductName).ThenBy(r => r.OutValidDate).ToList();
+                             {
+                                 ProductGeneralName = g.FirstOrDefault().DrugInfo.ProductGeneralName,
+                                 ProductName = g.FirstOrDefault().DrugInfo.ProductName,
+                                 Code = g.FirstOrDefault().DrugInfo.DictionaryDosageCode,
+                                 specific = g.FirstOrDefault().DrugInfo.DictionarySpecificationCode,
+                                 StandardCode = g.FirstOrDefault().DrugInfo.StandardCode,
+                                 BatchNumber = g.FirstOrDefault().BatchNumber,
+                                 OutValidDate = g.FirstOrDefault().OutValidDate,
+                                 CanSaleNum = g.Sum(a => a.CanSaleNum),
+                                 WarehouseName = g.Key.WarehouseName,
+                                 purchasePrice = g.FirstOrDefault().PurchasePricce,
+                                 SalePrice = g.FirstOrDefault().DrugInfo.SalePrice,
+                                 FactoryName = g.FirstOrDefault().DrugInfo.FactoryName,
+                                 Id = g.FirstOrDefault().Id,
+                                 PY = g.FirstOrDefault().DrugInfo.Pinyin,
+                                 saleNum = 0,
+                                 measurement = g.FirstOrDefault().DrugInfo.DictionaryMeasurementUnitCode,
+                                 purchaseInInventoryID = g.FirstOrDefault().PurchaseInInventeryOrderDetailId,
+                                 druginfoId = g.FirstOrDefault().DrugInfoId,
+                                 BusinessScopeCode = g.FirstOrDefault().DrugInfo.BusinessScopeCode,
+                                 Decription = g.FirstOrDefault().Decription,
+                                 ProductDate = g.FirstOrDefault().PruductDate,
+                                 DrugInfo = g.FirstOrDefault().DrugInfo
+                             }).OrderBy(r => r.ProductGeneralName).ThenBy(r => r.OutValidDate).ToList();
 
 
 
@@ -494,6 +511,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
         public decimal SalePrice { get; set; }
         public DateTime OutValidDate { get; set; }
         public decimal CanSaleNum { get; set; }
+        public string WarehouseName { get; set; }
         public string FactoryName { get; set; }
         public System.Guid Id { get; set; }
         public string PY { get; set; }

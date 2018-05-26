@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSalesOrderEdit));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnSubmit = new System.Windows.Forms.ToolStripButton();
             this.tsbtnSave = new System.Windows.Forms.ToolStripButton();
@@ -49,6 +52,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnPrint = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -119,7 +123,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -236,6 +239,15 @@
             this.toolStripButton4.Text = "打印（中）";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(96, 28);
+            this.toolStripButton8.Text = "打印（茶）";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -297,7 +309,7 @@
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(72, 21);
+            this.toolStripButton6.Size = new System.Drawing.Size(72, 28);
             this.toolStripButton6.Text = "导出销售单";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
@@ -307,7 +319,7 @@
             this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(84, 21);
+            this.toolStripButton7.Size = new System.Drawing.Size(84, 28);
             this.toolStripButton7.Text = "空白单据打印";
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
@@ -827,8 +839,8 @@
             // 规格
             // 
             this.规格.DataPropertyName = "SpecificationCode";
-            dataGridViewCellStyle71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.规格.DefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.规格.DefaultCellStyle = dataGridViewCellStyle1;
             this.规格.HeaderText = "规格";
             this.规格.Name = "规格";
             this.规格.ReadOnly = true;
@@ -847,8 +859,8 @@
             // 生产厂商
             // 
             this.生产厂商.DataPropertyName = "FactoryName";
-            dataGridViewCellStyle72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle72;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle2;
             this.生产厂商.HeaderText = "生产厂商";
             this.生产厂商.Name = "生产厂商";
             this.生产厂商.ReadOnly = true;
@@ -857,8 +869,8 @@
             // 单位
             // 
             this.单位.DataPropertyName = "MeasurementUnit";
-            dataGridViewCellStyle73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.单位.DefaultCellStyle = dataGridViewCellStyle73;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.单位.DefaultCellStyle = dataGridViewCellStyle3;
             this.单位.HeaderText = "单位";
             this.单位.Name = "单位";
             this.单位.ReadOnly = true;
@@ -868,8 +880,10 @@
             // 数量
             // 
             this.数量.DataPropertyName = "Amount";
-            dataGridViewCellStyle74.BackColor = System.Drawing.Color.Yellow;
-            this.数量.DefaultCellStyle = dataGridViewCellStyle74;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.数量.DefaultCellStyle = dataGridViewCellStyle4;
             this.数量.HeaderText = "销售数量";
             this.数量.Name = "数量";
             this.数量.Visible = false;
@@ -877,8 +891,10 @@
             // 销售单价
             // 
             this.销售单价.DataPropertyName = "ActualUnitPrice";
-            dataGridViewCellStyle75.BackColor = System.Drawing.Color.Yellow;
-            this.销售单价.DefaultCellStyle = dataGridViewCellStyle75;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.销售单价.DefaultCellStyle = dataGridViewCellStyle5;
             this.销售单价.HeaderText = "销售价格";
             this.销售单价.Name = "销售单价";
             this.销售单价.Visible = false;
@@ -886,6 +902,9 @@
             // 金额
             // 
             this.金额.DataPropertyName = "Price";
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.金额.DefaultCellStyle = dataGridViewCellStyle6;
             this.金额.HeaderText = "金额";
             this.金额.Name = "金额";
             this.金额.ReadOnly = true;
@@ -894,8 +913,10 @@
             // 采购单价
             // 
             this.采购单价.DataPropertyName = "PurchasePrice";
-            dataGridViewCellStyle76.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.采购单价.DefaultCellStyle = dataGridViewCellStyle76;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.采购单价.DefaultCellStyle = dataGridViewCellStyle7;
             this.采购单价.HeaderText = "采购单价";
             this.采购单价.Name = "采购单价";
             this.采购单价.ReadOnly = true;
@@ -921,8 +942,8 @@
             // 有效期至
             // 
             this.有效期至.DataPropertyName = "OutValidDate";
-            dataGridViewCellStyle77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.有效期至.DefaultCellStyle = dataGridViewCellStyle77;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.有效期至.DefaultCellStyle = dataGridViewCellStyle8;
             this.有效期至.HeaderText = "有效期至";
             this.有效期至.Name = "有效期至";
             this.有效期至.ReadOnly = true;
@@ -931,8 +952,8 @@
             // 说明
             // 
             this.说明.DataPropertyName = "Description";
-            dataGridViewCellStyle78.BackColor = System.Drawing.Color.Yellow;
-            this.说明.DefaultCellStyle = dataGridViewCellStyle78;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Yellow;
+            this.说明.DefaultCellStyle = dataGridViewCellStyle9;
             this.说明.HeaderText = "说明";
             this.说明.Name = "说明";
             this.说明.ReadOnly = true;
@@ -942,8 +963,8 @@
             // 生产日期
             // 
             this.生产日期.DataPropertyName = "PruductDate";
-            dataGridViewCellStyle79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产日期.DefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产日期.DefaultCellStyle = dataGridViewCellStyle10;
             this.生产日期.HeaderText = "生产日期";
             this.生产日期.Name = "生产日期";
             this.生产日期.ReadOnly = true;
@@ -951,8 +972,10 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle11.Format = "N2";
+            dataGridViewCellStyle11.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column1.Frozen = true;
             this.Column1.HeaderText = "付款单价";
             this.Column1.Name = "Column1";
@@ -961,6 +984,9 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "changeamount";
+            dataGridViewCellStyle12.Format = "N2";
+            dataGridViewCellStyle12.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column3.Frozen = true;
             this.Column3.HeaderText = "单价差额";
             this.Column3.Name = "Column3";
@@ -969,20 +995,14 @@
             // 
             // Column2
             // 
+            dataGridViewCellStyle13.Format = "N2";
+            dataGridViewCellStyle13.NullValue = null;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column2.Frozen = true;
             this.Column2.HeaderText = "付款总额";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Visible = false;
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(96, 28);
-            this.toolStripButton8.Text = "打印（茶）";
-            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // FormSalesOrderEdit
             // 
@@ -1072,6 +1092,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.DataGridViewButtonColumn 删除;
         private System.Windows.Forms.DataGridViewTextBoxColumn 库存ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn 行号;
@@ -1093,6 +1114,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
     }
 }

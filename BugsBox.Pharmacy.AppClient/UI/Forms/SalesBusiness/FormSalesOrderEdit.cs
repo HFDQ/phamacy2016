@@ -258,7 +258,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     this.dgvDrugDetailList.DataSource = null;
                     this.dgvDrugDetailList.DataSource = newList;
                     decimal m = newList.Where(r => r.Deleted == false).Sum(r => r.ActualUnitPrice * r.Amount);
-                    txtTotalMoney.Text = m.ToString();
+                    txtTotalMoney.Text = m.ToString("0.00");
                 }
             }
             catch (Exception ex)
@@ -372,7 +372,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         this.dgvDrugDetailList.DataSource = null;
                         this.dgvDrugDetailList.DataSource = newList;
 
-                        txtTotalMoney.Text = newList.Where(r => r.Deleted == false).Sum(r => r.ActualUnitPrice * r.Amount).ToString();
+                        txtTotalMoney.Text = newList.Where(r => r.Deleted == false).Sum(r => r.ActualUnitPrice * r.Amount).ToString("0.00");
                     }
 
                     this.dgvDrugDetailList.Focus();
@@ -557,7 +557,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 this.cmbPurchase.SelectedText = _purchaseUnit.Code;
                 this.cmbPurchase.SelectedIndex = 0;
                 this.txtPurchaseName.Text = _purchaseUnit.Name;
-                this.txtTotalMoney.Text = _salesOrder.SalesOrderDetails.Where(r => r.Deleted == false).Sum(r => r.Amount * r.ActualUnitPrice).ToString();
+                this.txtTotalMoney.Text = _salesOrder.SalesOrderDetails.Where(r => r.Deleted == false).Sum(r => r.Amount * r.ActualUnitPrice).ToString("0.00");
                 this.dtSalesDate.Value = _salesOrder.SaleDate;
                 this.txtRemark.Text = _salesOrder.Description;
                 this.cmbPurchaser.Text = _salesOrder.PurchaseUnitMan;
@@ -905,7 +905,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     //dgvDrugDetailList.Rows[e.RowIndex].Cells["金额"].Value = price;
                     sod.Price = sod.ActualUnitPrice * sod.Amount;
 
-                    this.txtTotalMoney.Text = newList.Select(p => p.Price).Sum().ToString();
+                    this.txtTotalMoney.Text = newList.Select(p => p.Price).Sum().ToString("0.00");
 
                     break;
 
@@ -927,7 +927,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         newList[e.RowIndex].Amount = Convert.ToDecimal(cellVallue);
                         decimal currprice = newList[e.RowIndex].Amount * newList[e.RowIndex].ActualUnitPrice;
                         dgvDrugDetailList.Rows[e.RowIndex].Cells["金额"].Value = currprice;
-                        this.txtTotalMoney.Text = newList.Select(p => p.Price).Sum().ToString();
+                        this.txtTotalMoney.Text = newList.Select(p => p.Price).Sum().ToString("0.00");
                     }
                     else
                     {
@@ -1464,20 +1464,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
         }
 
-        private void cmbPickUpGoods_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (this.cmbPickUpGoods.SelectedValue != null)
-                {
-                    SetReceiverVisible(EnumHelper<PickUpGoodType>.Parse(cmbPickUpGoods.SelectedValue.ToString()));
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-        }
-
         private void SetReceiverVisible(PickUpGoodType pickUpGoodType)
         {
             if (pickUpGoodType == PickUpGoodType.GetBySelf)
@@ -1490,19 +1476,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 this.lblReceiver.Visible = false;
                 this.txtReceiverMan.Visible = false;
             }
-        }
-
-        private void cmbSalesType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                _salesDrugType = EnumHelper<SalesDrugType>.Parse(cmbSalesType.SelectedValue.ToString());
-                SetGridColumnVisible();
-                this.lblSalesType.Visible = false;
-                this.cmbSalesType.Visible = false;
-            }
-            catch (Exception ex)
-            { }
         }
 
         /// <summary>
