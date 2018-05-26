@@ -46,7 +46,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                         .Get(purchaseUnit.GSPLicenseId);
                     if (gSPLicense == null)
                         return new List<string>();
-                    
+
                     var ids = gSPLicense.GMSPLicenseBusinessScopes.Select(p => p.BusinessScopeId).AsQueryable();
                     var result = from i in BusinessHandlerFactory.BusinessScopeBusinessHandler.Queryable
                                  join j in ids on i.Id equals j
@@ -62,7 +62,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 {
                     return BusinessHandlerFactory.BusinessScopeBusinessHandler.Queryable.Select(p => p.Name).ToList();
                 }
-            
+
             }
             catch (Exception ex)
             {
@@ -101,9 +101,6 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {
-                //var gMSPLicense = BusinessHandlerFactory.GMSPLicenseBusinessHandler
-                //  .Get(purchaseUnit.GMSPLicenseId);
-                //return gMSPLicense.BusinessType.BusinessTypeManageCategoryDetails.Select(p => p.PurchaseManageCategoryDetail.Code).ToList();
                 if (purchaseUnit != null)
                 {
                     var gSPLicense = BusinessHandlerFactory.GSPLicenseBusinessHandler
@@ -123,7 +120,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 {
                     return BusinessHandlerFactory.PurchaseManageCategoryDetailBusinessHandler.Queryable.Select(p => p.Name).ToList();
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -218,11 +215,11 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             }
         }
 
-        public PurchaseUnit[] GetPurchaseUnitsByKeywords(string keyword,bool isAccurate)
+        public PurchaseUnit[] GetPurchaseUnitsByKeywords(string keyword, bool isAccurate)
         {
-            var c = isAccurate ? this.Queryable.AsEnumerable().Where(r => r.Valid && !r.Deleted && r.PinyinCode!=null).Where(r => r.PinyinCode.ToUpper() == (keyword.ToUpper()) || r.Name == keyword) : this.Queryable.AsEnumerable().Where(r => r.Valid && !r.Deleted && r.PinyinCode!=null).Where(r => r.PinyinCode.ToUpper().Contains(keyword.ToUpper()) || r.Name.Contains(keyword));
+            var c = isAccurate ? this.Queryable.AsEnumerable().Where(r => r.Valid && !r.Deleted && r.PinyinCode != null).Where(r => r.PinyinCode.ToUpper() == (keyword.ToUpper()) || r.Name == keyword) : this.Queryable.AsEnumerable().Where(r => r.Valid && !r.Deleted && r.PinyinCode != null).Where(r => r.PinyinCode.ToUpper().Contains(keyword.ToUpper()) || r.Name.Contains(keyword));
 
-            return c.OrderBy(r=>r.Name).ToArray();
+            return c.OrderBy(r => r.Name).ToArray();
         }
 
         /// <summary>
@@ -343,7 +340,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
         {
             try
             {
-                
+
 
                 if (changeNote.Contains("审批后修改"))
                 {
@@ -355,7 +352,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 if (changeNote.Contains("审批前修改"))
                 {
                     var c = BusinessHandlerFactory.ApprovalFlowBusinessHandler.GetApproveFlowsByFlowID(su.FlowID);
-                    if (c.ApprovalFlowTypeId != approvalFlowTypeID||c==null||c.ApprovalFlowTypeId==Guid.Empty)
+                    if (c.ApprovalFlowTypeId != approvalFlowTypeID || c == null || c.ApprovalFlowTypeId == Guid.Empty)
                     {
                         su.FlowID = Guid.NewGuid();
                         ApprovalFlow af = BusinessHandlerFactory.ApprovalFlowBusinessHandler.GetApproveFlowInstance(approvalFlowTypeID, su.FlowID, userID, changeNote);
@@ -411,8 +408,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
                 pageindex = pageindex - 1;
                 int skipCount = pageindex * pageSize;
-                var varPurchaseUnit = base.Queryable.Where(r=>r.Deleted==false).AsEnumerable();
-                varPurchaseUnit = varPurchaseUnit.Where(p => p.Valid==false ||p.Enabled==false);
+                var varPurchaseUnit = base.Queryable.Where(r => r.Deleted == false).AsEnumerable();
+                varPurchaseUnit = varPurchaseUnit.Where(p => p.Valid == false || p.Enabled == false);
                 pageInfo.RecordCount = varPurchaseUnit.Count();
                 pager = pageInfo;
                 varPurchaseUnit = varPurchaseUnit.OrderBy(o => o.CreateTime);

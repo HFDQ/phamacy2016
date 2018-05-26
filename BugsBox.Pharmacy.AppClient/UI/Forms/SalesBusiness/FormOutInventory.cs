@@ -54,7 +54,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         /// <param name="e"></param>
         private void FormOutInventory_Load(object sender, EventArgs e)
         {
-            
+
             //提交出库
             this.btnSubmit.Visible = this.Authorize(ModuleKeys.SubmitOutInventoryForOrder);
             //this.toolStripButton1.Visible = this.btnSubmit.Visible;
@@ -67,7 +67,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             tabContorl.TabPages.Clear();
 
             #region 电子标签控制
-             EleModel = SearialiserHelper<Ele_Lab>.DeSerializeFileToObj("EleSetup.bin");
+            EleModel = SearialiserHelper<Ele_Lab>.DeSerializeFileToObj("EleSetup.bin");
             if (EleModel.IsEnabled)
             {
                 this.toolStripButton1.Visible = true;//点亮按钮显示，配置标签后，可以显示
@@ -104,10 +104,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     {
                         tabTitle = "*新建拣货单";
                     }
-                    
+
                     InitTabPage(0, tabTitle, _salesOrder, item);
 
-                    
+
                 }
             }
             catch (Exception ex)
@@ -132,7 +132,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 if (Convert.ToDecimal(a.Cells["出库数量"].Value) == 0 || a.Cells["出库数量"].Value == null)
                 {
                     MessageBox.Show("请填写拣货数量！");
-                    this.currentUCOut.dgvDrugDetailList.CurrentCell=a.Cells["出库数量"];
+                    this.currentUCOut.dgvDrugDetailList.CurrentCell = a.Cells["出库数量"];
                     this.currentUCOut.dgvDrugDetailList.BeginEdit(true);
                     return;
                 }
@@ -151,7 +151,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             }
             catch (Exception ex)
             {
-                 Log.Error(ex);
+                Log.Error(ex);
                 MessageBox.Show("订单拣货提交失败！！！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -163,7 +163,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         /// <param name="e"></param>
         private void tsbtnAccept_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("确定提交拣货复核？","提示",MessageBoxButtons.OKCancel)==DialogResult.Cancel)return;
+            if (MessageBox.Show("确定提交拣货复核？", "提示", MessageBoxButtons.OKCancel) == DialogResult.Cancel) return;
             try
             {
                 if (this.currentUCOut != null)
@@ -174,10 +174,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             }
             catch (Exception ex)
             {
-                   Log.Error(ex);
+                Log.Error(ex);
                 MessageBox.Show("订单拣货审核失败！！！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
             this.Dispose();
         }
 
@@ -201,7 +201,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             }
             catch (Exception ex)
             {
-                       Log.Error(ex);
+                Log.Error(ex);
                 MessageBox.Show("拣货单切换失败！！！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -302,7 +302,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
         private void tsbtnPrint_Click(object sender, EventArgs e)
         {
-            string message=string.Empty;
+            string message = string.Empty;
             try
             {
                 if (this.currentUCOut.OutInventory != null)
@@ -315,12 +315,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
                     foreach (Models.OutInventoryDetail detail in this.currentUCOut.OutInventory.SalesOutInventoryDetails)
                     {
-                         orderList.Add(detail);
+                        orderList.Add(detail);
                     }
 
                     reportData.Add(orderList);
                     List<Microsoft.Reporting.WinForms.ReportParameter> ListPar = new List<Microsoft.Reporting.WinForms.ReportParameter>();
-                    using (PrintHelper printHelper = new PrintHelper("BugsBox.Pharmacy.AppClient.UI.Reports.RptSaleOutInventory.rdlc", reportData,ListPar))
+                    using (PrintHelper printHelper = new PrintHelper("BugsBox.Pharmacy.AppClient.UI.Reports.RptSaleOutInventory.rdlc", reportData, ListPar))
                     {
                         printHelper.Print();
                     }
@@ -349,12 +349,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             if (this._orderID == Guid.Empty || this._orderID == null) return;
-            var c=this.PharmacyDatabaseService.GetWarehouseZonePositionOutInventories(this._salesOrder.Id, out msg).ToList();
+            var c = this.PharmacyDatabaseService.GetWarehouseZonePositionOutInventories(this._salesOrder.Id, out msg).ToList();
 
             if (c.Count <= 0 || c == null) return;
 
             byte Port = byte.Parse(EleModel.PortName.Substring(3));
-            
+
             List<string> LabelId = new List<string>();
             List<string> LabelAddress = new List<string>();
             List<string> labelNumber = new List<string>();
@@ -364,7 +364,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 LabelAddress.Add(r.PIndex.ToString());
                 labelNumber.Add(r.OutAmount.ToString());
             }
-            string ordercode=c.First().OrderNumber;
+            string ordercode = c.First().OrderNumber;
             byte documentNumber = byte.Parse(ordercode.Substring(ordercode.Length - 2));
 
             elelab.pick.make_data(null, EleModel.PurchaseInInventoryLed, documentNumber, Port, LabelId.ToArray(), LabelAddress.ToArray(), labelNumber.ToArray());

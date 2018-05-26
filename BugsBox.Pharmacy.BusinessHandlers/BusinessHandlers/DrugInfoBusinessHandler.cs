@@ -55,9 +55,9 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                         throw new Exception("采购商被锁定");
                     }
 
-                    List<string> businessScope = BusinessHandlerFactory.PurchaseUnitBusinessHandler.GetBusinessScopeCodesByPurchaseUnit(purchaseUnit);
+                    //List<string> businessScope = BusinessHandlerFactory.PurchaseUnitBusinessHandler.GetBusinessScopeCodesByPurchaseUnit(purchaseUnit);
                     List<string> manageCategoryDetail = BusinessHandlerFactory.PurchaseUnitBusinessHandler.GetManageCategoryDetailByPurchaseUnit(purchaseUnit);
-                    var result = this.Fetch(p => p.Valid && p.Enabled);//庄子不控
+                    var result = this.Queryable.Where(p => p.Valid && p.Enabled);//庄子不控
                     //var result = this.Fetch(p => p.Valid && p.Enabled && businessScope.Contains(p.BusinessScopeCode));
                     if (manageCategoryDetail.Count() > 0)
                     {
@@ -512,7 +512,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
             try
             {
                 su.GoodsAdditionalProperty = null;
-              
+
                 //增加药品记录
                 this.Add(su);
                 if (su.GoodsType != GoodsType.DrugDomestic && su.GoodsType != GoodsType.DrugImport)

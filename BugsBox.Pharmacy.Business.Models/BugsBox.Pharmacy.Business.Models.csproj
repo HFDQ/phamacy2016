@@ -67,6 +67,7 @@
     <Compile Include="DrugsUndeterminateCondition.cs" />
     <Compile Include="drugsUnqualificationCondition.cs" />
     <Compile Include="drugsUnqualificationQuery.cs" />
+    <Compile Include="DTO\InventoryRecord.cs" />
     <Compile Include="EmployeeModel.cs" />
     <Compile Include="FoodModel.cs" />
     <Compile Include="GenericCommonClass.cs" />

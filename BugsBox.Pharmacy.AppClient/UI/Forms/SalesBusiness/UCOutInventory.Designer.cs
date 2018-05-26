@@ -36,6 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbOutType = new System.Windows.Forms.ComboBox();
             this.userControlBillDocumentCode1 = new BugsBox.Pharmacy.UI.Common.UserControls.UserControlBillDocumentCode();
@@ -116,29 +118,27 @@
             this.panel1.Controls.Add(this.txt金额合计);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(2, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1262, 236);
+            this.panel1.Size = new System.Drawing.Size(841, 157);
             this.panel1.TabIndex = 8;
             // 
             // cmbOutType
             // 
             this.cmbOutType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOutType.FormattingEnabled = true;
-            this.cmbOutType.Location = new System.Drawing.Point(140, 68);
-            this.cmbOutType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbOutType.Location = new System.Drawing.Point(93, 45);
             this.cmbOutType.Name = "cmbOutType";
-            this.cmbOutType.Size = new System.Drawing.Size(180, 26);
+            this.cmbOutType.Size = new System.Drawing.Size(121, 20);
             this.cmbOutType.TabIndex = 74;
             // 
             // userControlBillDocumentCode1
             // 
             this.userControlBillDocumentCode1.BackColor = System.Drawing.Color.Transparent;
-            this.userControlBillDocumentCode1.Location = new System.Drawing.Point(1044, 9);
-            this.userControlBillDocumentCode1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.userControlBillDocumentCode1.Location = new System.Drawing.Point(696, 6);
+            this.userControlBillDocumentCode1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControlBillDocumentCode1.Name = "userControlBillDocumentCode1";
-            this.userControlBillDocumentCode1.Size = new System.Drawing.Size(180, 30);
+            this.userControlBillDocumentCode1.Size = new System.Drawing.Size(130, 20);
             this.userControlBillDocumentCode1.TabIndex = 70;
             this.userControlBillDocumentCode1.Type = BugsBox.Pharmacy.Models.BillDocumentType.Test;
             this.userControlBillDocumentCode1.ViewMode = false;
@@ -146,66 +146,69 @@
             // 
             // txt税额合计
             // 
-            this.txt税额合计.Location = new System.Drawing.Point(688, 190);
-            this.txt税额合计.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt税额合计.Location = new System.Drawing.Point(459, 127);
             this.txt税额合计.Name = "txt税额合计";
             this.txt税额合计.ReadOnly = true;
-            this.txt税额合计.Size = new System.Drawing.Size(178, 28);
+            this.txt税额合计.Size = new System.Drawing.Size(120, 21);
             this.txt税额合计.TabIndex = 69;
             this.txt税额合计.Text = "0";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(597, 196);
+            this.label8.Location = new System.Drawing.Point(398, 131);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 18);
+            this.label8.Size = new System.Drawing.Size(65, 12);
             this.label8.TabIndex = 68;
             this.label8.Text = "税额合计：";
             // 
             // txt货款合计
             // 
-            this.txt货款合计.Location = new System.Drawing.Point(104, 190);
-            this.txt货款合计.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt货款合计.Location = new System.Drawing.Point(69, 127);
             this.txt货款合计.Name = "txt货款合计";
             this.txt货款合计.ReadOnly = true;
-            this.txt货款合计.Size = new System.Drawing.Size(156, 28);
+            this.txt货款合计.Size = new System.Drawing.Size(105, 21);
             this.txt货款合计.TabIndex = 67;
             this.txt货款合计.Text = "0";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 196);
+            this.label9.Location = new System.Drawing.Point(6, 131);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 18);
+            this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 65;
             this.label9.Text = "本单货款：";
             // 
             // lblOrderNo
             // 
             this.lblOrderNo.AutoSize = true;
-            this.lblOrderNo.Location = new System.Drawing.Point(896, 46);
+            this.lblOrderNo.Location = new System.Drawing.Point(597, 31);
+            this.lblOrderNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrderNo.Name = "lblOrderNo";
-            this.lblOrderNo.Size = new System.Drawing.Size(80, 18);
+            this.lblOrderNo.Size = new System.Drawing.Size(53, 12);
             this.lblOrderNo.TabIndex = 64;
             this.lblOrderNo.Text = "xxxxxxxx";
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(807, 46);
+            this.label.Location = new System.Drawing.Point(538, 31);
+            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(98, 18);
+            this.label.Size = new System.Drawing.Size(65, 12);
             this.label.TabIndex = 63;
             this.label.Text = "销售单号：";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1047, 195);
+            this.label10.Location = new System.Drawing.Point(698, 130);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 18);
+            this.label10.Size = new System.Drawing.Size(35, 12);
             this.label10.TabIndex = 62;
             this.label10.Text = "XXXXX";
             this.label10.Visible = false;
@@ -213,27 +216,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(897, 123);
+            this.label3.Location = new System.Drawing.Point(598, 82);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.Size = new System.Drawing.Size(35, 12);
             this.label3.TabIndex = 62;
             this.label3.Text = "XXXXX";
             // 
             // lblOutStatus
             // 
             this.lblOutStatus.AutoSize = true;
-            this.lblOutStatus.Location = new System.Drawing.Point(896, 96);
+            this.lblOutStatus.Location = new System.Drawing.Point(597, 64);
+            this.lblOutStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOutStatus.Name = "lblOutStatus";
-            this.lblOutStatus.Size = new System.Drawing.Size(62, 18);
+            this.lblOutStatus.Size = new System.Drawing.Size(41, 12);
             this.lblOutStatus.TabIndex = 62;
             this.lblOutStatus.Text = "待审核";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(936, 196);
+            this.label4.Location = new System.Drawing.Point(624, 131);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 18);
+            this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 61;
             this.label4.Text = "出库复核员：";
             this.label4.Visible = false;
@@ -241,73 +247,79 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(808, 123);
+            this.label1.Location = new System.Drawing.Point(539, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 61;
             this.label1.Text = "购货单位：";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(807, 96);
+            this.label33.Location = new System.Drawing.Point(538, 64);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(98, 18);
+            this.label33.Size = new System.Drawing.Size(65, 12);
             this.label33.TabIndex = 61;
             this.label33.Text = "出库状态：";
             // 
             // lblCreateDate
             // 
             this.lblCreateDate.AutoSize = true;
-            this.lblCreateDate.Location = new System.Drawing.Point(896, 72);
+            this.lblCreateDate.Location = new System.Drawing.Point(597, 48);
+            this.lblCreateDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreateDate.Name = "lblCreateDate";
-            this.lblCreateDate.Size = new System.Drawing.Size(116, 18);
+            this.lblCreateDate.Size = new System.Drawing.Size(77, 12);
             this.lblCreateDate.TabIndex = 59;
             this.lblCreateDate.Text = "2013年8月7日";
             // 
             // lblOutNo
             // 
             this.lblOutNo.AutoSize = true;
-            this.lblOutNo.Location = new System.Drawing.Point(896, 21);
+            this.lblOutNo.Location = new System.Drawing.Point(597, 14);
+            this.lblOutNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOutNo.Name = "lblOutNo";
-            this.lblOutNo.Size = new System.Drawing.Size(89, 18);
+            this.lblOutNo.Size = new System.Drawing.Size(59, 12);
             this.lblOutNo.TabIndex = 58;
             this.lblOutNo.Text = "*新增编号";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(807, 72);
+            this.label22.Location = new System.Drawing.Point(538, 48);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(98, 18);
+            this.label22.Size = new System.Drawing.Size(65, 12);
             this.label22.TabIndex = 57;
             this.label22.Text = "订单日期：";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(807, 21);
+            this.label7.Location = new System.Drawing.Point(538, 14);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 18);
+            this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 56;
             this.label7.Text = "单据编号：";
             // 
             // txt备注
             // 
-            this.txt备注.Location = new System.Drawing.Point(140, 111);
-            this.txt备注.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt备注.Location = new System.Drawing.Point(93, 74);
             this.txt备注.Multiline = true;
             this.txt备注.Name = "txt备注";
-            this.txt备注.Size = new System.Drawing.Size(658, 68);
+            this.txt备注.Size = new System.Drawing.Size(440, 47);
             this.txt备注.TabIndex = 55;
             this.txt备注.Text = "合格";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 132);
+            this.label6.Location = new System.Drawing.Point(6, 88);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 18);
+            this.label6.Size = new System.Drawing.Size(89, 12);
             this.label6.TabIndex = 54;
             this.label6.Text = "质量状况说明：";
             // 
@@ -317,38 +329,38 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTitle.Location = new System.Drawing.Point(357, 21);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(238, 14);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(200, 36);
+            this.lblTitle.Size = new System.Drawing.Size(135, 24);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "销售拣货单";
             // 
             // txt金额合计
             // 
-            this.txt金额合计.Location = new System.Drawing.Point(432, 190);
-            this.txt金额合计.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt金额合计.Location = new System.Drawing.Point(288, 127);
             this.txt金额合计.Name = "txt金额合计";
             this.txt金额合计.ReadOnly = true;
-            this.txt金额合计.Size = new System.Drawing.Size(152, 28);
+            this.txt金额合计.Size = new System.Drawing.Size(103, 21);
             this.txt金额合计.TabIndex = 53;
             this.txt金额合计.Tag = "0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(285, 196);
+            this.label5.Location = new System.Drawing.Point(190, 131);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 18);
+            this.label5.Size = new System.Drawing.Size(101, 12);
             this.label5.TabIndex = 52;
             this.label5.Text = "销售单总计金额：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 74);
+            this.label2.Location = new System.Drawing.Point(30, 49);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 45;
             this.label2.Text = "出库类型：";
             // 
@@ -383,13 +395,12 @@
             this.货架编号,
             this.货架名称,
             this.出库日期});
-            this.dgvDrugDetailList.Location = new System.Drawing.Point(0, 248);
-            this.dgvDrugDetailList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDrugDetailList.Location = new System.Drawing.Point(0, 165);
             this.dgvDrugDetailList.Name = "dgvDrugDetailList";
             this.dgvDrugDetailList.RowHeadersVisible = false;
             this.dgvDrugDetailList.RowTemplate.Height = 23;
             this.dgvDrugDetailList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDrugDetailList.Size = new System.Drawing.Size(1263, 408);
+            this.dgvDrugDetailList.Size = new System.Drawing.Size(842, 272);
             this.dgvDrugDetailList.TabIndex = 10;
             this.dgvDrugDetailList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrugDetailList_CellContentClick);
             this.dgvDrugDetailList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDrugDetailList_CellDoubleClick);
@@ -440,6 +451,9 @@
             // 数量
             // 
             this.数量.DataPropertyName = "Amount";
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.数量.DefaultCellStyle = dataGridViewCellStyle1;
             this.数量.HeaderText = "数量";
             this.数量.Name = "数量";
             this.数量.ReadOnly = true;
@@ -447,16 +461,18 @@
             // 出库数量
             // 
             this.出库数量.DataPropertyName = "OutAmount";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.出库数量.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.出库数量.DefaultCellStyle = dataGridViewCellStyle2;
             this.出库数量.HeaderText = "拣货数量";
             this.出库数量.Name = "出库数量";
             // 
             // 出库说明
             // 
             this.出库说明.DataPropertyName = "Description";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.出库说明.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.出库说明.DefaultCellStyle = dataGridViewCellStyle3;
             this.出库说明.HeaderText = "拣货说明";
             this.出库说明.Name = "出库说明";
             this.出库说明.Width = 200;
@@ -464,6 +480,9 @@
             // 金额
             // 
             this.金额.DataPropertyName = "Price";
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.金额.DefaultCellStyle = dataGridViewCellStyle4;
             this.金额.HeaderText = "金额";
             this.金额.Name = "金额";
             this.金额.ReadOnly = true;
@@ -471,8 +490,8 @@
             // 单位
             // 
             this.单位.DataPropertyName = "MeasurementUnit";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.单位.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.单位.DefaultCellStyle = dataGridViewCellStyle5;
             this.单位.HeaderText = "单位";
             this.单位.Name = "单位";
             this.单位.ReadOnly = true;
@@ -481,8 +500,8 @@
             // 规格
             // 
             this.规格.DataPropertyName = "SpecificationCode";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.规格.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.规格.DefaultCellStyle = dataGridViewCellStyle6;
             this.规格.HeaderText = "规格";
             this.规格.Name = "规格";
             this.规格.ReadOnly = true;
@@ -497,8 +516,8 @@
             // 生产厂商
             // 
             this.生产厂商.DataPropertyName = "FactoryName";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产厂商.DefaultCellStyle = dataGridViewCellStyle7;
             this.生产厂商.HeaderText = "生产厂商";
             this.生产厂商.Name = "生产厂商";
             this.生产厂商.ReadOnly = true;
@@ -512,8 +531,8 @@
             // 生产日期
             // 
             this.生产日期.DataPropertyName = "PruductDate";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.生产日期.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.生产日期.DefaultCellStyle = dataGridViewCellStyle8;
             this.生产日期.HeaderText = "生产日期";
             this.生产日期.Name = "生产日期";
             this.生产日期.ReadOnly = true;
@@ -521,17 +540,17 @@
             // 有效期至
             // 
             this.有效期至.DataPropertyName = "OutValidDate";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.有效期至.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.有效期至.DefaultCellStyle = dataGridViewCellStyle9;
             this.有效期至.HeaderText = "有效期至";
             this.有效期至.Name = "有效期至";
             this.有效期至.ReadOnly = true;
             // 
             // Column1
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle8.NullValue = "合格";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle10.NullValue = "合格";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column1.HeaderText = "质量状况";
             this.Column1.Name = "Column1";
             // 
@@ -571,13 +590,12 @@
             // 
             // UCOutInventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvDrugDetailList);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCOutInventory";
-            this.Size = new System.Drawing.Size(1263, 660);
+            this.Size = new System.Drawing.Size(842, 440);
             this.Load += new System.EventHandler(this.UCOutInventory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -288,6 +288,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     m.OrderOutInventoryCheckTime = DateTime.Now;
                     m.OrderOutInventoryTime = DateTime.Now;
                     m.OutInventoryDate = DateTime.Now;
+                    m.ReviewerId = entity.ReviewerId;
                     if (m.OutInventoryStatus == OutInventoryStatus.Outing)
                     {
                         m.OrderOutInventoryCheckTime = DateTime.Now;
@@ -446,18 +447,16 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
         public System.Collections.Generic.IEnumerable<Business.Models.OutInventoryMode> GetOutInventorySpecialDrugs(Models.OutInventory outInve)
         {
-            string specialDrug = string.Empty;
-            var c = from i in outInve.SalesOutInventoryDetails
-                    join j in RepositoryProvider.Db.DrugInventoryRecords
-                    on i.DrugInventoryRecordID equals j.Id
-                    join k in RepositoryProvider.Db.DrugInfos
-                    on j.DrugInfoId equals k.Id
-                    where k.IsSpecialDrugCategory
+            var c = from i in RepositoryProvider.OutInventoryRepository.Queryable
+                    join d in RepositoryProvider.OutInventoryDetailRepository.Queryable on i.Id equals d.SalesOutInventoryID
+                    join j in RepositoryProvider.Db.DrugInventoryRecords on d.DrugInventoryRecordID equals j.Id
+                    join k in RepositoryProvider.Db.DrugInfos on j.DrugInfoId equals k.Id
+                    where k.IsSpecialDrugCategory && i.Id == outInve.Id
                     select new Business.Models.OutInventoryMode
                     {
-                        productName = i.productName,
+                        productName = d.productName,
                         BatchNumber = j.BatchNumber,
-                        FactoryName = i.FactoryName,
+                        FactoryName = d.FactoryName,
                         SpecificationCode = k.DictionarySpecificationCode
                     };
             return c;
@@ -632,7 +631,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                          FirstCheckTime = (DateTime)i.SalesOutInventory.OrderOutInventoryCheckTime,
                          SecondCheckTime = le == null ? DateTime.Now : i.SalesOutInventory.SecondCheckDateTime,
                          LiscencePermitNumber = di.DrugInfo.LicensePermissionNumber,
-                         Amount=i.Amount
+                         Amount = i.Amount
                      };
 
             return re.OrderBy(r => r.ProductGeneralName).ToArray();

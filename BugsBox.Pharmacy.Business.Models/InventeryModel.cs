@@ -119,6 +119,9 @@ namespace BugsBox.Pharmacy.Business.Models
         public string PurchaseOrderDocumentNumber { get; set; }
 
         [DataMember]
+        public string WarehouseName { get; set; }
+
+        [DataMember]
         public Guid PurchaseOrderId { get; set; }
     }
 }

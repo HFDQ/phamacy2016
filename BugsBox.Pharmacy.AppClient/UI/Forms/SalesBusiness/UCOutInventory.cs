@@ -51,13 +51,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
             lblOrderNo.Text = order.OrderCode;
             lblCreateDate.Text = order.CreateTime.ToString("yyyy年MM月dd日");
-            lblOutStatus.Text="出库";
+            lblOutStatus.Text = "出库";
             string msg = string.Empty;
             var strPName = this.PharmacyDatabaseService.GetPurchaseUnit(out msg, order.PurchaseUnitId);
             label3.Text = strPName.Name;
             var FHY = this.PharmacyDatabaseService.GetUser(out msg, order.OrderOutInventoryCheckUserID);
-            
-            txt金额合计.Text = order.TotalMoney.ToString();
+
+            txt金额合计.Text = order.TotalMoney.ToString("0.00");
             txt备注.Text = entity.Description;
             this.lblTitle.Text = "销售出库拣货复核";
         }
@@ -86,7 +86,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     }
                 }
 
-                this.dgvDrugDetailList.DataSource = OutInventory.SalesOutInventoryDetails.OrderBy(r=>r.DictionaryDosageCode).ToList();
+                this.dgvDrugDetailList.DataSource = OutInventory.SalesOutInventoryDetails.OrderBy(r => r.DictionaryDosageCode).ToList();
 
                 foreach (var c in OutInventory.SalesOutInventoryDetails)
                 {
@@ -102,7 +102,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     }
                 }
 
-                this.txt货款合计.Text = OutInventory.SalesOutInventoryDetails.Sum(r => r.ActualUnitPrice * r.OutAmount).ToString();
+                this.txt货款合计.Text = OutInventory.SalesOutInventoryDetails.Sum(r => r.ActualUnitPrice * r.OutAmount).ToString("0.00");
             }
         }
 
@@ -144,7 +144,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             OutInventory.SalesOutInventoryDetails = list;
 
             PharmacyDatabaseService.SubmitOutInventory(OutInventory);
-            this.PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "成功提交销售拣货操作" );
+            this.PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "成功提交销售拣货操作");
             this.lblOutNo.Text = OutInventory.OutInventoryNumber;
             this.lblOutStatus.Text = Utility.getEnumTypeDisplayName<OrderStatus>((OrderStatus)OutInventory.OutInventoryStatusValue);
         }
@@ -153,7 +153,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
         /// 审核
         /// </summary>
         public void Accept()
-        {            
+        {
             if (OutInventory.Id != Guid.Empty)
             {
                 string msg = string.Empty;
@@ -168,11 +168,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                     tmpOutInventory.Description = this.txt备注.Text;
 
                     int SpecialDrugsCount = 0;
-                    bool isSecond=false;
+                    bool isSecond = false;
                     if (tmpOutInventory.OutInventoryStatusValue == (int)OutInventoryStatus.Outing)//首次复核
                     {
                         tmpOutInventory.ReviewerId = AppClientContext.CurrentUser.Id;
-                        
+
                         tmpOutInventory.OrderOutInventoryCheckUserID = AppClientContext.CurrentUser.Id;
 
                         var c = this.PharmacyDatabaseService.GetOutInventorySpecialDrugs(OutInventory, out msg);
@@ -184,7 +184,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         }
                         else
                         {
-                            tmpOutInventory.OutInventoryStatusValue = (int)OutInventoryStatus.Outed;                            
+                            tmpOutInventory.OutInventoryStatusValue = (int)OutInventoryStatus.Outed;
                         }
                     }
                     else//特殊药品复核
@@ -193,7 +193,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                         tmpOutInventory.OrderOutInventoryCheckUserID = AppClientContext.CurrentUser.Id;
                         isSecond = true;
                     }
-                    
+
                     PharmacyDatabaseService.AcceptOutInverntory(tmpOutInventory);
                     #region 写入日志
                     if (isSecond)
@@ -238,11 +238,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 {
                     detail.OutAmount = detail.Amount;
                 }
-                
+
                 detail.Price = detail.ActualUnitPrice * detail.OutAmount;
                 dgvDrugDetailList.Rows[e.RowIndex].Cells["金额"].Value = detail.Price;
 
-                this.txt货款合计.Text = OutInventory.SalesOutInventoryDetails.Sum(p => p.Price).ToString();
+                this.txt货款合计.Text = OutInventory.SalesOutInventoryDetails.Sum(p => p.Price).ToString("0.00");
                 //this.txt金额合计.Text = OutInventory.SalesOutInventoryDetails.Sum(p => p.Price).ToString();
                 this.txt税额合计.Text = "0";
             }
@@ -255,7 +255,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
         private void dgvDrugDetailList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
 
 
         }
@@ -267,7 +267,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
         private void dgvDrugDetailList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+
         }
 
         private void dgvDrugDetailList_DataError(object sender, DataGridViewDataErrorEventArgs e)

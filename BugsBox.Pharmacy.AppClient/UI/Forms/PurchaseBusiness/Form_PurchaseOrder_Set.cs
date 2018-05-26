@@ -21,7 +21,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             var sets = this.PharmacyDatabaseService.GetSalePriceControlRules(out message);
             this.CurrentTaxRateModel = sets.PurchaseOrderDefaultTaxRate ?? new PurchaseOrderTaxRate
             {
-                DefaultTaxRate = sets.PurchaseOrderDefaultTaxRate.DefaultTaxRate
+                DefaultTaxRate = decimal.Parse("0.16")
             };
 
             this.purchaseOrderTaxRateBindingSource.Add(this.CurrentTaxRateModel);
