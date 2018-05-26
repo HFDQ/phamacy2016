@@ -288,6 +288,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     m.OrderOutInventoryCheckTime = DateTime.Now;
                     m.OrderOutInventoryTime = DateTime.Now;
                     m.OutInventoryDate = DateTime.Now;
+                    m.ReviewerId = entity.ReviewerId;
                     if (m.OutInventoryStatus == OutInventoryStatus.Outing)
                     {
                         m.OrderOutInventoryCheckTime = DateTime.Now;
@@ -632,7 +633,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                          FirstCheckTime = (DateTime)i.SalesOutInventory.OrderOutInventoryCheckTime,
                          SecondCheckTime = le == null ? DateTime.Now : i.SalesOutInventory.SecondCheckDateTime,
                          LiscencePermitNumber = di.DrugInfo.LicensePermissionNumber,
-                         Amount=i.Amount
+                         Amount = i.Amount
                      };
 
             return re.OrderBy(r => r.ProductGeneralName).ToArray();

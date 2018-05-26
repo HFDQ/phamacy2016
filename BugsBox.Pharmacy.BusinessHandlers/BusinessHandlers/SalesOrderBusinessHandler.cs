@@ -1003,7 +1003,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                  PickUsr = u1.Employee.Name,
                                  CheckUsr = u2.Employee.Name,
                                  SecondCheckUsr = k.Employee.Name,
-                                 StoreKeeper = k.Employee.Name
+                                 StoreKeeper = u4.Employee.Name
                              };
 
                 if (searchInput.purchaseKeyword == null) searchInput.purchaseKeyword = string.Empty;

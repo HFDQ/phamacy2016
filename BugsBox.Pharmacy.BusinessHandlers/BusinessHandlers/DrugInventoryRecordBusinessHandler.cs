@@ -293,7 +293,6 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 var query = from i in drugInventoryRecords
                             join d in druginfo on i.DrugInfoId equals d.Id
                             join w in BusinessHandlerFactory.RepositoryProvider.Db.WarehouseZones on i.WarehouseZoneId equals w.Id
-
                             join pid in BusinessHandlerFactory.RepositoryProvider.Db.PurchaseInInventeryOrderDetails.Where(r => !r.Deleted) on i.PurchaseInInventeryOrderDetailId equals pid.Id into left
                             from l in left.DefaultIfEmpty()
                             join pi in RepositoryProvider.Db.PurchaseInInventeryOrders on l.PurchaseInInventeryOrderId equals pi.Id into left3
@@ -325,7 +324,8 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                 DrugInfoId = i.DrugInfoId,
                                 SupplyUnitName = l == null ? "前期库存，无入库信息" : l4.Name,
                                 PurchaseOrderDocumentNumber = l == null ? "前期库存，无入库信息" : l2.DocumentNumber,
-                                PurchaseOrderId = l == null ? Guid.Empty : l2.Id
+                                PurchaseOrderId = l == null ? Guid.Empty : l2.Id,
+                                WarehouseName = w.Warehouse.Name
                             };
                 var records = query.OrderByDescending(p => p.CurrentInventoryCount).OrderBy(r => r.OutValidDate).ToList();
                 List<InventeryModel> outRecord = new List<InventeryModel>();
