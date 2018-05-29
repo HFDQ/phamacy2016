@@ -112,10 +112,10 @@
                                 <Width>1.68089in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.90551in</Width>
+                                <Width>0.81436in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>0.54387in</Width>
+                                <Width>0.63502in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>0.43622in</Width>
@@ -683,7 +683,6 @@
                                                 <Value>=Fields!生产厂商.Value</Value>
                                                 <Style>
                                                   <FontFamily>黑体</FontFamily>
-                                                  <FontSize>11pt</FontSize>
                                                   <TextAlign>Center</TextAlign>
                                                 </Style>
                                               </TextRun>
@@ -934,7 +933,7 @@
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
-                                <Height>0.27559in</Height>
+                                <Height>0.22351in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -947,7 +946,7 @@
                                               <TextRun>
                                                 <Value>总计</Value>
                                                 <Style>
-                                                  <FontSize>12pt</FontSize>
+                                                  <FontSize>11pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1019,6 +1018,7 @@
                                         </Style>
                                       </Textbox>
                                       <ColSpan>5</ColSpan>
+                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                   <TablixCell />
@@ -1035,9 +1035,7 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>本页小计</Value>
-                                                <Style>
-                                                  <FontSize>13pt</FontSize>
-                                                </Style>
+                                                <Style />
                                               </TextRun>
                                             </TextRuns>
                                             <Style />
@@ -1138,8 +1136,8 @@
                           </TablixRowHierarchy>
                           <DataSetName>DsSalesOrder_table</DataSetName>
                           <Left>0.1cm</Left>
-                          <Height>2.1cm</Height>
-                          <Width>24.12263cm</Width>
+                          <Height>1.9677cm</Height>
+                          <Width>24.12265cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>

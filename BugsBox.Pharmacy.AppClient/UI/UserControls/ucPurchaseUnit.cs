@@ -1135,9 +1135,18 @@ namespace BugsBox.Pharmacy.AppClient.UI.UserControls
                 string msg = string.Empty;
                 _ListpurchaseUnit = PharmacyDatabaseService.AllPurchaseUnits(out msg).ToList();
 
+                int _count = 0;
 
-                int _count = _ListpurchaseUnit.Select(o => int.Parse(o.DocNumber.Replace("DA", ""))).Max();
+                try
+                {
+                    _count = _ListpurchaseUnit.Select(o => int.Parse(o.DocNumber.Replace("DA", ""))).Max();
 
+                }
+                catch (Exception)
+                {
+                    _count = _ListpurchaseUnit.Count;
+                }
+            
                 //int _count = _ListpurchaseUnit.Count;
                 int len = Convert.ToString(_count).Length;
                 string strCode = "GHDW" + DateTime.Now.ToString("yyMMdd");
