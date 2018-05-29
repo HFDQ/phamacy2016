@@ -41,11 +41,14 @@
       </Menu>
       <Menu id="0301" Title="销售管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
         <Menu id="0501" Title="销售订单" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderEdit" Image="" Params="" DockState="" ModuleKey="新建销售单[窗体]"></Menu>
+
         <!--<Menu id="05011" Title="销售订单（新）" Hotkeys="" Name="UI.Forms.SalesBusiness.Form_SalesOrder" Image="" Params="" DockState="" ModuleKey="新建销售单[窗体]"></Menu>-->
+
         <Menu id="050601" Title="销售审核" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Image="" Params="Waitting" DockState="" ModuleKey="销售审核[窗体]"></Menu>
         <Menu id="0502" Title="销售订单查询" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderIndex" Image="" Params="" DockState="" ModuleKey="销售订单查询[窗体]"></Menu>
         <Menu id="050602" Title="销售结算" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Image="" Params="Approved" DockState="" ModuleKey="销售结算[窗体]"></Menu>
         <Menu id="0506021" Title="销售货物或者提供应税劳务清单" Hotkeys="" Name="UI.Forms.SalesBusiness.FormRewardList" Image="" Params="" DockState="" ModuleKey="销售结算[窗体]"></Menu>
+
         <Menu id="050603" Title="销售退货结算" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderReturnBalance" Image="" Params="" DockState="" ModuleKey="销售退货结算[窗体]"></Menu>
         <Menu id="05021" Title="销售退货单" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSaleReturnEdit" Image="" Params="" DockState="" ModuleKey="销售退货单[窗体]"></Menu>
         <Menu id="0506022" Title="销售冲差价" Hotkeys="" Name="UI.Forms.SalesBusiness.Form_SaleOrderRefund" Image="" Params="" DockState="" ModuleKey="销售冲差价[窗体]"></Menu>
@@ -141,6 +144,7 @@
         <Menu id="090410" Title="配送查询" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliveryIndex" Image="" Params="" DockState="" ModuleKey="配送查询[窗体]"></Menu>
         <Menu id="090414" Title="配送销退记录查询" Hotkeys="" Name="UI.Forms.DeliveryBusiness.FormDeliverySearch" Image="" Params="Return" DockState="" ModuleKey="配送销退记录查询[窗体]"></Menu>
       </Menu>
+
     </Menu>
     <Menu id="08" Title="系统管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
       <Menu id="0802" Title="用户管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="User,Account" DockState="" ModuleKey="用户管理[窗体]"></Menu>
@@ -157,7 +161,9 @@
         <Menu id="0405000001" Title="运输工具管理" Hotkeys="" Name="UI.Forms.BaseDataManage.FormVehicle" Image="" Params="" DockState="" ModuleKey="运输工具[窗体]"></Menu>
         <Menu id="010601" Title="仓库管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="Warehouse" DockState="" ModuleKey="仓库管理[窗体]"></Menu>
         <Menu id="010602" Title="库区管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="WarehouseZone" DockState="" ModuleKey="库区管理[窗体]"></Menu>
+
         <Menu id="01060201" Title="货位管理" Hotkeys="" Name="UI.Forms.BaseDataManage.FormWareHouseZonePosition" Image="" Params="" DockState="" ModuleKey="库区管理[窗体]"></Menu>
+
         <Menu id="0805" Title="区域管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="District" DockState="" ModuleKey="区域管理[窗体]"></Menu>
         <Menu id="0806" Title="不常用字管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="Rareword,PinYin" DockState="" ModuleKey="不常用字管理[窗体]"></Menu>
         <Menu id="0815" Title="药品经营范围管理" Hotkeys="" Name="UI.Forms.BaseForm.CRUDForm" Image="" Params="BusinessScope,Name" DockState="" ModuleKey="药品经营范围管理[窗体]"></Menu>
