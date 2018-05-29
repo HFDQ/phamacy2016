@@ -17,6 +17,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
     using BugsBox.Pharmacy.Models;
     using BugsBox.Pharmacy.Business.Models;
     using BugsBox.Pharmacy.AppClient.UI.Report;
+    using BugsBox.Application.Core.Configuration;
+
     public partial class FormReturnOrder : BaseFunctionForm
     {
         /// <summary>
@@ -47,15 +49,18 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             if (!string.IsNullOrEmpty(returnOrderPageConfig.Field1))
             {
                 this.label12.Text = returnOrderPageConfig.Field1;
+                tsbtnQualityrApproved.Text = returnOrderPageConfig.Field1 + "审核";
             }
 
             if (!string.IsNullOrEmpty(returnOrderPageConfig.Field2))
             {
                 this.label19.Text = returnOrderPageConfig.Field2;
+                tsbtnGeneralManagerApproved.Text = returnOrderPageConfig.Field2 + "审核";
             }
             if (!string.IsNullOrEmpty(returnOrderPageConfig.Field3))
             {
                 this.label23.Text = returnOrderPageConfig.Field3;
+                tsbtnFinanceDepartmentApproved.Text = returnOrderPageConfig.Field3 + "审核";
             }
 
             CellDataValidBackColor = colProductGeneralName.DefaultCellStyle.BackColor;
@@ -76,7 +81,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             ReturnHandledMethodValue.DataSource = methodItems;
             ReturnHandledMethodValue.DisplayMember = "Name";
             ReturnHandledMethodValue.ValueMember = "Value";
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             this.Listuser = this.PharmacyDatabaseService.AllUsers(out msg).ToList();
         }
         //查询收货单
@@ -209,16 +214,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             if (_order.QualityUserId != null && _order.QualityUserId != Guid.Empty)
             {
                 groupBoxApprovedRecords.Visible = true;
-                this.dataGridView2.Rows.Add(_order.QualityEmployeeName, _order.QualityUpdateTime, EnumHelper<OrderReturnStatus>.GetDisplayValue((OrderReturnStatus)_order.OrderStatus), _order.QualitySuggest);
+                this.dataGridView2.Rows.Add(_order.QualityEmployeeName, _order.QualityUpdateTime, TransferName(_order.OrderStatus), _order.QualitySuggest);
             }
             if (_order.GeneralManagerUserId != null && _order.GeneralManagerUserId != Guid.Empty)
             {
-                this.dataGridView2.Rows.Add(_order.GeneralManagerEmployeeName, _order.GeneralManagerUpdateTime, EnumHelper<OrderReturnStatus>.GetDisplayValue((OrderReturnStatus)_order.OrderStatus), _order.GeneralManagerSuggest);
+                this.dataGridView2.Rows.Add(_order.GeneralManagerEmployeeName, _order.GeneralManagerUpdateTime, TransferName(_order.OrderStatus), _order.GeneralManagerSuggest);
             }
             if (_order.FinanceDepartmentUserId != null && _order.FinanceDepartmentUserId != Guid.Empty)
             {
                 groupBoxApprovedRecords.Visible = true;
-                this.dataGridView2.Rows.Add(_order.FinanceDepartmentEmployeeName, _order.FinanceDepartmentUpdateTime, EnumHelper<OrderReturnStatus>.GetDisplayValue((OrderReturnStatus)_order.OrderStatus), _order.FinanceDepartmentSuggest);
+                this.dataGridView2.Rows.Add(_order.FinanceDepartmentEmployeeName, _order.FinanceDepartmentUpdateTime, TransferName(_order.OrderStatus), _order.FinanceDepartmentSuggest);
             }
             if (tsbtnQualityrApproved.Visible == true)
             {
@@ -236,6 +241,26 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             {
                 toolStripButton1.Visible = this.Authorize(ModuleKeys.PurchaseReceiving);
             }
+        }
+
+        ReturnOrderPageName returnOrderPageConfig = BugsBoxApplication.Instance.Config.ReturnOrderPageConfig;
+
+        private string TransferName(int orderstatus)
+        {
+            var item = EnumHelper<OrderReturnStatus>.GetDisplayValue((OrderReturnStatus)orderstatus);
+            if (!string.IsNullOrEmpty(returnOrderPageConfig.Field1) && item == "质管部审核通过")
+            {
+                item = returnOrderPageConfig.Field1 + "审核通过";
+            }
+            if (!string.IsNullOrEmpty(returnOrderPageConfig.Field2) && item == "总经理审核通过")
+            {
+                item = returnOrderPageConfig.Field2 + "审核通过";
+            }
+            if (!string.IsNullOrEmpty(returnOrderPageConfig.Field3) && item == "财务部审核通过")
+            {
+                item = returnOrderPageConfig.Field3 + "审核通过";
+            }
+            return item;
         }
 
         //创建退货单
@@ -257,7 +282,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 r.ReturnHandledMethodValue = (int)ReturnHandledMethod.Other;
                 r.PurchaseReturnSourceValue = (int)PurchaseReturnSource.ReturnFromInInventery;
             }
-           
+
             this._orderDetails = orderDetails;
 
 
@@ -334,7 +359,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 lblCreateDate.Text = _order.OperateTime.ToString("yyyy年MM月dd日");
                 txtEmployee.Text = _order.EmployeeName;
                 lblOrderNo.Text = _order.DocumentNumber;
-                lblOrderStatus.Text = EnumHelper<OrderReturnStatus>.GetDisplayValue((OrderReturnStatus)_order.OrderStatus);
+                lblOrderStatus.Text = TransferName(_order.OrderStatus);
                 tsbtnSubmit.Visible = false;
                 this.dataGridView1.ReadOnly = true;
             }
@@ -350,7 +375,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         /// <param name="e"></param>
         private void tsbtnSubmit_Click(object sender, EventArgs e)
         {
-            this.dataGridView1.EndEdit();           
+            this.dataGridView1.EndEdit();
             try
             {
                 if (validInputInDataGridView())

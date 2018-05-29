@@ -27,7 +27,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         public FormPurchaseReturnOrderApproval(Guid orderId, OrderReturnStatus role)
         {
             InitializeComponent();
-            string msg=String.Empty;
+            string msg = String.Empty;
             _role = role;
             BindComboBox(role);
             _orderReturn = this.PharmacyDatabaseService.GetPurchaseOrderReturn(out msg, orderId);
@@ -76,7 +76,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                     _orderReturn.OrderStatusValue = status;
                     OrderStatusValue = status;
                     PharmacyDatabaseService.SavePurchaseOrderReturn(out msg, _orderReturn);
-                    
+
                     if (!string.IsNullOrEmpty(msg))
                     {
                         this.PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "执行采购退货单审核操作失败,单号：" + this._orderReturn.DocumentNumber);
@@ -99,14 +99,26 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private void BindComboBox(OrderReturnStatus role)
         {
+            var returnOrderPageConfig = BugsBoxApplication.Instance.Config.ReturnOrderPageConfig;
             this.cmbApprovalStatus.Items.Clear();
             this.cmbApprovalStatus.Items.Add(new ListItem(OrderReturnStatus.Rejected.GetHashCode().ToString(), "拒绝"));
             switch (role)
             {
                 case OrderReturnStatus.QualityApproved:
-                    this.cmbApprovalStatus.Items.Add(new ListItem(OrderReturnStatus.QualityApproved.GetHashCode().ToString(), "审核通过"));
+                    if (!string.IsNullOrEmpty(returnOrderPageConfig.Field1))
+                    {
+                       
+                        this.cmbApprovalStatus.Items.Add(new ListItem(OrderReturnStatus.QualityApproved.GetHashCode().ToString(), "审核通过"));
+                    }
+                    else
+                    {
+
+                        this.cmbApprovalStatus.Items.Add(new ListItem(OrderReturnStatus.QualityApproved.GetHashCode().ToString(), "审核通过"));
+                    }
+
                     break;
                 case OrderReturnStatus.GeneralManagerApproved:
+
                     this.cmbApprovalStatus.Items.Add(new ListItem(OrderReturnStatus.GeneralManagerApproved.GetHashCode().ToString(), "审核通过"));
                     break;
                 case OrderReturnStatus.FinanceDepartmentApproved:

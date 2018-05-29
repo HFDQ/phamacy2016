@@ -14,6 +14,7 @@ using BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness;
 using System.Reflection;
 using System.ComponentModel.DataAnnotations;
 using BugsBox.Pharmacy.Business.Models;
+using BugsBox.Application.Core.Configuration;
 
 namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
 {
@@ -27,7 +28,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
         private int returnState = -1;
         ContextMenuStrip cms = new ContextMenuStrip();
         string msg = string.Empty;
-
+        ReturnOrderPageName returnOrderPageConfig = BugsBoxApplication.Instance.Config.ReturnOrderPageConfig;
         public FormOrderList()
         {
             InitializeComponent();
@@ -46,9 +47,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
             {
                 try
                 {
-                   
+
                     this.dataGridView1.AutoGenerateColumns = false;
-                    
+
                     if (args != null && args.Length > 0)
                     {
                         string msg = string.Empty;
@@ -77,7 +78,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
                                     returnState = Convert.ToInt16(args[1]);
                                     break;
                             }
-                            
+
                             onlySearch = true;
                         }
                     }
@@ -88,6 +89,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
                     if (_orderType == OrderType.PurchaseOrderReturn)
                     {
                         _InitFieldValues.Add("OrderStatus", EnumHelper<OrderReturnStatus>.GetMapKeyValues());
+
+
                     }
                     else
                     {
@@ -105,35 +108,35 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
         }
 
         private void RightMenu()
-        {            
+        {
             cms.Items.Add("单元格操作");
             cms.Items[cms.Items.Count - 1].Enabled = false;
             cms.Items.Add("-");
-            cms.Items.Add("复制 Ctrl+C", null, delegate(object sender, EventArgs e) { this.RightMenuClick(0); });
+            cms.Items.Add("复制 Ctrl+C", null, delegate (object sender, EventArgs e) { this.RightMenuClick(0); });
             cms.Items.Add("-");
             cms.Items.Add("单据操作");
             cms.Items[cms.Items.Count - 1].Enabled = false;
             cms.Items.Add("-");
-            cms.Items.Add("打开验收单据", null, delegate(object sender, EventArgs e) { this.RightMenuClick(1); });
-            cms.Items.Add("刷新列表", null, delegate(object sender, EventArgs e) { this.RightMenuClick(2); });
+            cms.Items.Add("打开验收单据", null, delegate (object sender, EventArgs e) { this.RightMenuClick(1); });
+            cms.Items.Add("刷新列表", null, delegate (object sender, EventArgs e) { this.RightMenuClick(2); });
             cms.Items.Add("-");
             cms.Items.Add("查看操作");
             cms.Items[cms.Items.Count - 1].Enabled = false;
             cms.Items.Add("-");
-            cms.Items.Add("查询历史采购单", null, delegate(object sender, EventArgs e) { this.RightMenuClick(3); });
+            cms.Items.Add("查询历史采购单", null, delegate (object sender, EventArgs e) { this.RightMenuClick(3); });
             cms.Items.Add("-");
-            cms.Items.Add("打开采购订单", null, delegate(object sender, EventArgs e) { this.RightMenuClick(4); });
+            cms.Items.Add("打开采购订单", null, delegate (object sender, EventArgs e) { this.RightMenuClick(4); });
             cms.Items.Add("-");
-            cms.Items.Add("打开采购收货单", null, delegate(object sender, EventArgs e) { this.RightMenuClick(5); });
+            cms.Items.Add("打开采购收货单", null, delegate (object sender, EventArgs e) { this.RightMenuClick(5); });
             cms.Items.Add("-");
-            cms.Items.Add("打开采购入库单", null, delegate(object sender, EventArgs e) { this.RightMenuClick(6); });
+            cms.Items.Add("打开采购入库单", null, delegate (object sender, EventArgs e) { this.RightMenuClick(6); });
 
         }
         private void RightMenuClick(int type)
         {
             if (type == 0)
             {
-                Clipboard.SetData(DataFormats.Text,this.dataGridView1.CurrentCell.Value.ToString());
+                Clipboard.SetData(DataFormats.Text, this.dataGridView1.CurrentCell.Value.ToString());
             }
             if (type == 1)
             {
@@ -145,14 +148,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
             }
             if (type == 3)
             {
-                Guid sid=(this.dataGridView1.CurrentRow.DataBoundItem as PurchaseCommonEntity).SupplyUnitId;
+                Guid sid = (this.dataGridView1.CurrentRow.DataBoundItem as PurchaseCommonEntity).SupplyUnitId;
                 FormPurchaseHistoryBySupplyer frm = new FormPurchaseHistoryBySupplyer(string.Empty, sid, DateTime.Now.AddYears(-3).Date, DateTime.Now.AddDays(1).Date);
                 frm.Show(this);
             }
             if (type == 4)
             {
-                Guid pid=(this.dataGridView1.CurrentRow.DataBoundItem as PurchaseCommonEntity).PurchaseOrderId;
-                var po=this.PharmacyDatabaseService.GetPurchaseOrderEntity(out msg,pid);
+                Guid pid = (this.dataGridView1.CurrentRow.DataBoundItem as PurchaseCommonEntity).PurchaseOrderId;
+                var po = this.PharmacyDatabaseService.GetPurchaseOrderEntity(out msg, pid);
                 PurchaseBusiness.FormPurchaseOrderEdit frm = new FormPurchaseOrderEdit(po, false, true);
                 frm.Show(this);
             }
@@ -184,11 +187,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
         private void FormOrderList_Load(object sender, EventArgs e)
         {
             this.RightMenu();
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             btnSearch_Click(this, null);
         }
 
-        
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Search();
@@ -211,7 +214,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
         {
             Search();
         }
-                
+
 
         //绑定数据源
         private void BindDataSource()
@@ -241,7 +244,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
                 switch (_orderType)
                 {
                     case OrderType.PurchaseReceivingOrder:
-                        _listPurchaseCommonEntity = this.PharmacyDatabaseService.GetPurchaseReceivingOrders(out msg, orderNumber, startTime, endTime, new int[] { orderStatus}, supplyIds, this.pagerControl1.PageIndex, this.pagerControl1.PageSize).ToList();
+                        _listPurchaseCommonEntity = this.PharmacyDatabaseService.GetPurchaseReceivingOrders(out msg, orderNumber, startTime, endTime, new int[] { orderStatus }, supplyIds, this.pagerControl1.PageIndex, this.pagerControl1.PageSize).ToList();
                         break;
                     case OrderType.PurchaseCheckingOrder:
                         EmployeeName.HeaderText = "质检员";
@@ -319,11 +322,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
                     this.cmbOrderStatus.Items.Add(new ListItem(BugsBox.Pharmacy.Models.OrderReturnStatus.GeneralManagerApproved.GetHashCode().ToString(), EnumHelper<OrderReturnStatus>.GetDisplayValue(OrderReturnStatus.GeneralManagerApproved)));
                     this.cmbOrderStatus.Items.Add(new ListItem(BugsBox.Pharmacy.Models.OrderReturnStatus.FinanceDepartmentApproved.GetHashCode().ToString(), EnumHelper<OrderReturnStatus>.GetDisplayValue(OrderReturnStatus.FinanceDepartmentApproved)));
                     this.cmbOrderStatus.Items.Add(new ListItem(BugsBox.Pharmacy.Models.OrderReturnStatus.Over.GetHashCode().ToString(), EnumHelper<OrderReturnStatus>.GetDisplayValue(OrderReturnStatus.Over)));
-                        this.cmbOrderStatus.SelectedIndex = -1;
+                    this.cmbOrderStatus.SelectedIndex = -1;
                     break;
             }
 
-            
+
         }
 
         private void BindComboBoxSupply()
@@ -336,15 +339,31 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
 
             this.cmbSupply.SelectedIndex = -1;
         }
-
         private void dataGridView1_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             string columnName = this.dataGridView1.Columns[e.ColumnIndex].DataPropertyName;
             if (_InitFieldValues.ContainsKey(columnName))
             {
-                if (_InitFieldValues[columnName].Where(l =>e.Value!=null && l.ID == e.Value.ToString()).FirstOrDefault() != null)
+                var item = _InitFieldValues[columnName].FirstOrDefault(l => e.Value != null && l.ID == e.Value.ToString());
+
+                if (item != null)
                 {
-                    e.Value = _InitFieldValues[columnName].Where(l => l.ID == e.Value.ToString()).FirstOrDefault().Name;
+
+                    e.Value = item.Name;
+
+                    if (!string.IsNullOrEmpty(returnOrderPageConfig.Field1) && item.Name == "质管部审核通过")
+                    {
+                        e.Value = returnOrderPageConfig.Field1 + "审核通过";
+                    }
+                    if (!string.IsNullOrEmpty(returnOrderPageConfig.Field2) && item.Name == "总经理审核通过")
+                    {
+                        e.Value = returnOrderPageConfig.Field2 + "审核通过";
+                    }
+                    if (!string.IsNullOrEmpty(returnOrderPageConfig.Field3) && item.Name == "财务部审核通过")
+                    {
+                        e.Value = returnOrderPageConfig.Field3 + "审核通过";
+                    }
+
                 }
             }
         }
@@ -358,7 +377,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
         {
             try
             {
-                if (this.dataGridView1.CurrentRow.Index< 0)
+                if (this.dataGridView1.CurrentRow.Index < 0)
                 {
                     return;
                 }
