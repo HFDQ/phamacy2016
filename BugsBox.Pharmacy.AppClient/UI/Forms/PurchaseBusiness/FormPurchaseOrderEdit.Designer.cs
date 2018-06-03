@@ -127,7 +127,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 185);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1070, 440);
+            this.groupBox1.Size = new System.Drawing.Size(1070, 463);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "采购明细";
@@ -137,9 +137,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 54);
+            this.panel2.Location = new System.Drawing.Point(3, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1064, 280);
+            this.panel2.Size = new System.Drawing.Size(1064, 341);
             this.panel2.TabIndex = 7;
             // 
             // dataGridView1
@@ -166,7 +166,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1064, 280);
+            this.dataGridView1.Size = new System.Drawing.Size(1064, 341);
             this.dataGridView1.TabIndex = 4;
             // 
             // clmDrugId
@@ -184,21 +184,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.clmDrugName.DefaultCellStyle = dataGridViewCellStyle1;
             this.clmDrugName.HeaderText = "品名";
             this.clmDrugName.Name = "clmDrugName";
-            this.clmDrugName.Width = 79;
+            this.clmDrugName.Width = 56;
             // 
             // DictionaryDosageCode
             // 
             this.DictionaryDosageCode.DataPropertyName = "DictionaryDosageCode";
             this.DictionaryDosageCode.HeaderText = "剂型";
             this.DictionaryDosageCode.Name = "DictionaryDosageCode";
-            this.DictionaryDosageCode.Width = 79;
+            this.DictionaryDosageCode.Width = 56;
             // 
             // clmSupplyUnitId
             // 
             this.clmSupplyUnitId.DataPropertyName = "DictionarySpecificationCode";
             this.clmSupplyUnitId.HeaderText = "规格";
             this.clmSupplyUnitId.Name = "clmSupplyUnitId";
-            this.clmSupplyUnitId.Width = 79;
+            this.clmSupplyUnitId.Width = 56;
             // 
             // Column2
             // 
@@ -213,7 +213,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.LicensePermissionNumber.DataPropertyName = "LicensePermissionNumber";
             this.LicensePermissionNumber.HeaderText = "批准文号";
             this.LicensePermissionNumber.Name = "LicensePermissionNumber";
-            this.LicensePermissionNumber.Width = 113;
+            this.LicensePermissionNumber.Width = 80;
             // 
             // clmActualPrice
             // 
@@ -228,7 +228,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.Column1.DataPropertyName = "FactoryName";
             this.Column1.HeaderText = "生产厂商";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 113;
+            this.Column1.Width = 80;
             // 
             // clmSupplyName
             // 
@@ -237,7 +237,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.clmSupplyName.Name = "clmSupplyName";
             this.clmSupplyName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clmSupplyName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.clmSupplyName.Width = 49;
+            this.clmSupplyName.Width = 37;
             // 
             // clmDrugNumber
             // 
@@ -247,7 +247,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.clmDrugNumber.HeaderText = "数量";
             this.clmDrugNumber.Name = "clmDrugNumber";
             this.clmDrugNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmDrugNumber.Width = 79;
+            this.clmDrugNumber.Width = 56;
             // 
             // clmPurchasePrice
             // 
@@ -259,13 +259,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.clmPurchasePrice.HeaderText = "单价";
             this.clmPurchasePrice.Name = "clmPurchasePrice";
             this.clmPurchasePrice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmPurchasePrice.Width = 79;
+            this.clmPurchasePrice.Width = 56;
             // 
             // TotalMoney
             // 
             this.TotalMoney.HeaderText = "金额";
             this.TotalMoney.Name = "TotalMoney";
-            this.TotalMoney.Width = 79;
+            this.TotalMoney.Width = 56;
             // 
             // AmountOfTax
             // 
@@ -273,7 +273,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.AmountOfTax.HeaderText = "税率%";
             this.AmountOfTax.Name = "AmountOfTax";
             this.AmountOfTax.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.AmountOfTax.Width = 94;
+            this.AmountOfTax.Width = 64;
             // 
             // colmoneyofTax
             // 
@@ -286,7 +286,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // 
             this.panel4.Controls.Add(this.groupBoxApprovedRecords);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(3, 334);
+            this.panel4.Location = new System.Drawing.Point(3, 357);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1064, 103);
             this.panel4.TabIndex = 6;
@@ -294,10 +294,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // groupBoxApprovedRecords
             // 
             this.groupBoxApprovedRecords.Controls.Add(this.dataGridView2);
-            this.groupBoxApprovedRecords.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxApprovedRecords.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxApprovedRecords.Location = new System.Drawing.Point(0, 3);
             this.groupBoxApprovedRecords.Name = "groupBoxApprovedRecords";
-            this.groupBoxApprovedRecords.Size = new System.Drawing.Size(1064, 103);
+            this.groupBoxApprovedRecords.Size = new System.Drawing.Size(1064, 100);
             this.groupBoxApprovedRecords.TabIndex = 5;
             this.groupBoxApprovedRecords.TabStop = false;
             this.groupBoxApprovedRecords.Text = "审批记录";
@@ -314,11 +313,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.Column5,
             this.Column6});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 22);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1058, 78);
+            this.dataGridView2.Size = new System.Drawing.Size(1058, 81);
             this.dataGridView2.TabIndex = 0;
             // 
             // Column3
@@ -349,10 +348,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // 
             this.panel3.Controls.Add(this.btnDeleteDetail);
             this.panel3.Controls.Add(this.btnAddDetail);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 22);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 16);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1064, 32);
+            this.panel3.Size = new System.Drawing.Size(1064, 444);
             this.panel3.TabIndex = 4;
             this.panel3.Visible = false;
             // 
@@ -413,7 +412,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(418, 90);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 20);
+            this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 81;
             this.label16.Text = "label16";
             // 
@@ -424,7 +423,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(352, 90);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 20);
+            this.label15.Size = new System.Drawing.Size(67, 13);
             this.label15.TabIndex = 80;
             this.label15.Text = "收货地址：";
             // 
@@ -433,7 +432,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(80, 90);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 20);
+            this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 79;
             this.label11.Text = "label11";
             // 
@@ -442,7 +441,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(80, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 78;
             this.label5.Text = "label5";
             // 
@@ -460,7 +459,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             0});
             this.nudTotalMoney.Name = "nudTotalMoney";
             this.nudTotalMoney.ReadOnly = true;
-            this.nudTotalMoney.Size = new System.Drawing.Size(356, 26);
+            this.nudTotalMoney.Size = new System.Drawing.Size(356, 20);
             this.nudTotalMoney.TabIndex = 77;
             // 
             // label4
@@ -470,7 +469,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(352, 41);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 20);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 76;
             this.label4.Text = "订单总价：";
             // 
@@ -479,7 +478,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.txtEmployeeName.Location = new System.Drawing.Point(80, 63);
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.ReadOnly = true;
-            this.txtEmployeeName.Size = new System.Drawing.Size(141, 26);
+            this.txtEmployeeName.Size = new System.Drawing.Size(141, 20);
             this.txtEmployeeName.TabIndex = 74;
             // 
             // label14
@@ -487,7 +486,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(8, 90);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 20);
+            this.label14.Size = new System.Drawing.Size(67, 13);
             this.label14.TabIndex = 72;
             this.label14.Text = "收货单位：";
             // 
@@ -497,7 +496,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpAllReceiptedDate.Location = new System.Drawing.Point(421, 63);
             this.dtpAllReceiptedDate.Name = "dtpAllReceiptedDate";
-            this.dtpAllReceiptedDate.Size = new System.Drawing.Size(355, 26);
+            this.dtpAllReceiptedDate.Size = new System.Drawing.Size(355, 20);
             this.dtpAllReceiptedDate.TabIndex = 71;
             // 
             // label13
@@ -507,7 +506,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(352, 66);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 20);
+            this.label13.Size = new System.Drawing.Size(67, 13);
             this.label13.TabIndex = 70;
             this.label13.Text = "发货日期：";
             // 
@@ -517,7 +516,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(921, 102);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 20);
+            this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 64;
             this.label10.Text = "操作员";
             // 
@@ -527,7 +526,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(861, 102);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.Size = new System.Drawing.Size(67, 13);
             this.label9.TabIndex = 63;
             this.label9.Text = "操作人员：";
             // 
@@ -538,7 +537,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.lblOrderStatus.Location = new System.Drawing.Point(919, 79);
             this.lblOrderStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrderStatus.Name = "lblOrderStatus";
-            this.lblOrderStatus.Size = new System.Drawing.Size(60, 20);
+            this.lblOrderStatus.Size = new System.Drawing.Size(43, 13);
             this.lblOrderStatus.TabIndex = 62;
             this.lblOrderStatus.Text = "待审核";
             // 
@@ -549,7 +548,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label12.Location = new System.Drawing.Point(860, 79);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 20);
+            this.label12.Size = new System.Drawing.Size(67, 13);
             this.label12.TabIndex = 61;
             this.label12.Text = "订单状态：";
             // 
@@ -560,7 +559,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.lblCreateDate.Location = new System.Drawing.Point(919, 58);
             this.lblCreateDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreateDate.Name = "lblCreateDate";
-            this.lblCreateDate.Size = new System.Drawing.Size(114, 20);
+            this.lblCreateDate.Size = new System.Drawing.Size(79, 13);
             this.lblCreateDate.TabIndex = 59;
             this.lblCreateDate.Text = "2013年8月7日";
             // 
@@ -571,7 +570,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.lblOrderNo.Location = new System.Drawing.Point(919, 37);
             this.lblOrderNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrderNo.Name = "lblOrderNo";
-            this.lblOrderNo.Size = new System.Drawing.Size(83, 20);
+            this.lblOrderNo.Size = new System.Drawing.Size(59, 13);
             this.lblOrderNo.TabIndex = 58;
             this.lblOrderNo.Text = "*新增编号";
             // 
@@ -582,7 +581,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label8.Location = new System.Drawing.Point(860, 58);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 20);
+            this.label8.Size = new System.Drawing.Size(67, 13);
             this.label8.TabIndex = 57;
             this.label8.Text = "录入日期：";
             // 
@@ -593,7 +592,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label7.Location = new System.Drawing.Point(860, 37);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 20);
+            this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 56;
             this.label7.Text = "单据编号：";
             // 
@@ -611,7 +610,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label6.Location = new System.Drawing.Point(32, 115);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 54;
             this.label6.Text = "备注：";
             // 
@@ -623,7 +622,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label1.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(348, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 36);
+            this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "采购记录";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -634,7 +633,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label3.Location = new System.Drawing.Point(20, 66);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 20);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 46;
             this.label3.Text = "采购员：";
             // 
@@ -644,7 +643,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.label2.Location = new System.Drawing.Point(8, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 45;
             this.label2.Text = "供货单位：";
             // 
@@ -673,7 +672,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.btnAdd.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Edit;
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(110, 28);
+            this.btnAdd.Size = new System.Drawing.Size(84, 28);
             this.btnAdd.Text = "修改订单";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -682,7 +681,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.btnSubmit.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Save1;
             this.btnSubmit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(110, 28);
+            this.btnSubmit.Size = new System.Drawing.Size(84, 28);
             this.btnSubmit.Text = "保存修改";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -691,7 +690,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.tsbtnAccept.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Lock;
             this.tsbtnAccept.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAccept.Name = "tsbtnAccept";
-            this.tsbtnAccept.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnAccept.Size = new System.Drawing.Size(60, 28);
             this.tsbtnAccept.Text = "审核";
             this.tsbtnAccept.Click += new System.EventHandler(this.tsbtnAccept_Click);
             // 
@@ -700,7 +699,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.receivingButton.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Cart;
             this.receivingButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.receivingButton.Name = "receivingButton";
-            this.receivingButton.Size = new System.Drawing.Size(74, 28);
+            this.receivingButton.Size = new System.Drawing.Size(60, 28);
             this.receivingButton.Text = "收货";
             this.receivingButton.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -709,7 +708,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.btnCancel.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Cancel;
             this.btnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(74, 28);
+            this.btnCancel.Size = new System.Drawing.Size(60, 28);
             this.btnCancel.Text = "取消";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -718,7 +717,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.btnModifyPurchaseAmount.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Doc_Edit;
             this.btnModifyPurchaseAmount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModifyPurchaseAmount.Name = "btnModifyPurchaseAmount";
-            this.btnModifyPurchaseAmount.Size = new System.Drawing.Size(182, 28);
+            this.btnModifyPurchaseAmount.Size = new System.Drawing.Size(132, 28);
             this.btnModifyPurchaseAmount.Text = "申请修改采购数量";
             this.btnModifyPurchaseAmount.Visible = false;
             this.btnModifyPurchaseAmount.Click += new System.EventHandler(this.btnModifyPurchaseAmount_Click);
@@ -728,7 +727,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.tlbtn结算.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.Cart_Ok;
             this.tlbtn结算.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlbtn结算.Name = "tlbtn结算";
-            this.tlbtn结算.Size = new System.Drawing.Size(74, 28);
+            this.tlbtn结算.Size = new System.Drawing.Size(60, 28);
             this.tlbtn结算.Text = "结算";
             this.tlbtn结算.Visible = false;
             this.tlbtn结算.Click += new System.EventHandler(this.tlbtn结算_Click);
@@ -743,7 +742,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.tsbtnPrint.Image = global::BugsBox.Pharmacy.AppClient.Properties.Resources.PrintHS;
             this.tsbtnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnPrint.Name = "tsbtnPrint";
-            this.tsbtnPrint.Size = new System.Drawing.Size(74, 28);
+            this.tsbtnPrint.Size = new System.Drawing.Size(60, 28);
             this.tsbtnPrint.Text = "打印";
             this.tsbtnPrint.Click += new System.EventHandler(this.tsbtnPrint_Click);
             // 
@@ -754,7 +753,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(121, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(84, 28);
             this.toolStripButton1.Text = "导出为EXCEL";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -845,9 +844,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // 
             // FormPurchaseOrderEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 625);
+            this.ClientSize = new System.Drawing.Size(1070, 648);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);

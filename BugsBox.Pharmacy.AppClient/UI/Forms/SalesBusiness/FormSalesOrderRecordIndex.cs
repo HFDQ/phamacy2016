@@ -141,7 +141,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             dicGridViewTilte.Add("permitCode", "国药准字");
             dicGridViewTilte.Add("productCode", "规格");
             dicGridViewTilte.Add("drugType", "剂型");
-            dicGridViewTilte.Add("DictionaryMeasurmentUnitCode", "计量单位");
+            //dicGridViewTilte.Add("DictionaryMeasurmentUnitCode", "计量单位");
             dicGridViewTilte.Add("BatchNumber", "批号");
             dicGridViewTilte.Add("OutValidDate", "有效期");
             dicGridViewTilte.Add("FactoryName", "生产厂商");

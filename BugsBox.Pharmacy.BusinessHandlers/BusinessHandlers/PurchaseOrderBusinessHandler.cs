@@ -2077,7 +2077,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     where m.PinyinCode.ToUpper().Contains(q.SupplyUnitName.ToUpper()) || m.Name.Contains(q.SupplyUnitName)
                     join n in RepositoryProvider.Db.DrugInfos on l.DrugInfoId equals n.Id
                     join o in u on i.CheckerUserId equals o.Id
-                    where n.Pinyin.Contains(q.DrugName)
+                    where n.Pinyin.Contains(q.DrugName) || n.ProductGeneralName.Contains(q.DrugName)
                     select new Business.Models.PurchaseOrderReturnModel
                     {
                         id = i.Id,

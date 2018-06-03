@@ -182,14 +182,24 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
-            if (this.dataGridView1.Columns[e.ColumnIndex].Name != this.Column1.Name) return;
+            //if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+            //if (this.dataGridView1.Columns[e.ColumnIndex].Name != this.Column1.Name) return;
 
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             MyExcelUtls.DataGridview2Sheet(this.dataGridView1, "采购退货单查询结果");
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.queryDetails(0);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.queryDetails(0);
         }
     }
 }
