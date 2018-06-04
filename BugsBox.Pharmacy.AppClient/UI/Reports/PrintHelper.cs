@@ -12,7 +12,7 @@ using BugsBox.Pharmacy.Models;
 using System.Windows.Forms;
 using System.Xml;
 using BugsBox.Pharmacy.AppClient.Common;
-
+using FastReport;
 namespace BugsBox.Pharmacy.AppClient.UI.Report
 {
     /// <summary>
@@ -23,32 +23,44 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
         private LocalReport localReport = new LocalReport();
         private PrintDialog printDialog = new PrintDialog();
         private PrintDocument printDocument = new PrintDocument();
-        private PageSetupDialog PageSetupDialog=new System.Windows.Forms.PageSetupDialog();
+        private PageSetupDialog PageSetupDialog = new System.Windows.Forms.PageSetupDialog();
 
         private PrintPreviewDialog printPreview = new PrintPreviewDialog();
-        
+
 
         private int pageIndex = 0;
         private List<Stream> pageStreams = new List<Stream>();
 
         private bool disposed = false;
 
+        DataSet FDataSet = new DataSet();
+        private FastReport.Report report = new FastReport.Report();
+
         public PrintHelper(string reportName, DataSet reportData)
         {
             this.localReport = new LocalReport();
-            this.localReport.ReportPath =System.IO.Directory.GetCurrentDirectory()+"\\"+reportName;
+            this.localReport.ReportPath = System.IO.Directory.GetCurrentDirectory() + "\\" + reportName;
             if (reportData != null && reportData.ExtendedProperties.Count > 0)
             {
                 List<ReportParameter> rps = new List<ReportParameter>();
+                DataTable maindt = new DataTable();
 
+                foreach (string key in reportData.ExtendedProperties.Keys)
+                {
+                    maindt.Columns.Add(key);
+                }
+                var newrow = maindt.NewRow();
                 foreach (string key in reportData.ExtendedProperties.Keys)
                 {
                     ReportParameter rp = new ReportParameter(key, reportData.ExtendedProperties[key].ToString());
                     rps.Add(rp);
+
+                    newrow[key] = reportData.ExtendedProperties[key].ToString();
                 }
+                maindt.Rows.Add(newrow);
+                FDataSet.Tables.Add(maindt);
                 this.localReport.SetParameters(rps);
             }
-
             if (reportData != null && reportData.Tables.Count > 0)
             {
                 this.localReport.DataSources.Clear();
@@ -56,24 +68,24 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
                 string dsName = reportData.DataSetName;
 
                 foreach (DataTable table in reportData.Tables)
-                {  
+                {
                     ReportDataSource rds = new ReportDataSource(string.Format("{0}_{1}", dsName, table.TableName), table);
 
                     this.localReport.DataSources.Add(rds);
+                    FDataSet.Tables.Add(table);
                 }
             }
-
             this.localReport.Refresh();
             printDialog.Document = this.printDocument;
             this.printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
         }
 
-        public PrintHelper(string reportName, List<object> reportData,List<ReportParameter> Rps)
+        public PrintHelper(string reportName, List<object> reportData, List<ReportParameter> Rps)
         {
             this.localReport.ReportPath = System.IO.Directory.GetCurrentDirectory() + "\\" + reportName;
 
             string storeName = PharmacyClientConfig.Config.Store.Name;
-            ReportParameter rp = new ReportParameter("ReportTitle", storeName );
+            ReportParameter rp = new ReportParameter("ReportTitle", storeName);
             Rps.Add(rp);
 
             this.localReport.SetParameters(Rps);
@@ -87,7 +99,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
                 {
                     name = "DSOrderDetail";
                 }
-               
+
                 ReportDataSource rds = new ReportDataSource(name, data);
                 this.localReport.DataSources.Add(rds);
                 i++;
@@ -104,9 +116,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
             {
                 Pharmacy.UI.Common.BaseFunctionUserControl c = new Pharmacy.UI.Common.BaseFunctionUserControl();
                 this.localReport.ReportPath = System.IO.Directory.GetCurrentDirectory() + "\\" + reportName;
-                
-                string storeName = PharmacyClientConfig.Config.Store.Name;                
-                ReportParameter rp = new ReportParameter("ReportTitle", storeName);                
+
+                string storeName = PharmacyClientConfig.Config.Store.Name;
+                ReportParameter rp = new ReportParameter("ReportTitle", storeName);
                 rps.Add(rp);
                 this.localReport.SetParameters(rps);
                 this.localReport.DataSources.Clear();
@@ -192,7 +204,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
 
 
             ReportPageSettings rps = this.localReport.GetDefaultPageSettings();
-            
+
             float pageWidth = 0f;
             float pageHeight = 0f;
             float marginTop = rps.Margins.Top / 100f;
@@ -257,24 +269,24 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
             {
                 PageSetupDialog psd = new PageSetupDialog();
                 PrinterSettings printset = new PrinterSettings();
-            
-                XmlDocument doc = new XmlDocument();                
+
+                XmlDocument doc = new XmlDocument();
                 string xmlFile = AppDomain.CurrentDomain.BaseDirectory + "BugsBox.Pharmacy.AppClient.printSet.xml";
                 doc.Load(xmlFile);
-                string s=System.Environment.CurrentDirectory;
+                string s = System.Environment.CurrentDirectory;
 
-                XmlNodeList nodelist = doc.SelectNodes("/printsets/pageset");                
-            
+                XmlNodeList nodelist = doc.SelectNodes("/printsets/pageset");
+
                 int wt = Convert.ToInt16(nodelist[0].Attributes["width"].Value);
                 int ht = Convert.ToInt16(nodelist[1].Attributes["height"].Value);
                 PaperSize pse = new PaperSize("Custom", wt, ht);
-                PageSettings pageset = new PageSettings();                
+                PageSettings pageset = new PageSettings();
 
                 int Bottom = Convert.ToInt16(nodelist[2].Attributes["top"].Value);
                 int Top = Convert.ToInt16(nodelist[3].Attributes["left"].Value);
                 int Left = Convert.ToInt16(nodelist[4].Attributes["right"].Value);
                 int Right = Convert.ToInt16(nodelist[5].Attributes["bottom"].Value);
-                Margins margin = new Margins(Left,Right,Top,Bottom);
+                Margins margin = new Margins(Left, Right, Top, Bottom);
                 pageset.Margins = margin;
 
                 pageset.PaperSize = pse;
@@ -284,20 +296,20 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
                 psd.PageSettings = pageset;
                 psd.PageSettings.PaperSize = pse;
                 this.printDocument.PrinterSettings = psd.PrinterSettings;
-                
+
                 this.printPreview.Document = this.printDocument;
                 this.printPreview.ShowDialog();
                 //使用image输出到文件后，可能会改变应用程序默认路径，所以。。。。。。。。
-                if (System.Environment.CurrentDirectory!=s)
-                    System.Environment.CurrentDirectory = s ;
+                if (System.Environment.CurrentDirectory != s)
+                    System.Environment.CurrentDirectory = s;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("打印配置文件丢失，请检查！\n"+ex.Message);
+                MessageBox.Show("打印配置文件丢失，请检查！\n" + ex.Message);
             }
             return true;
         }
-    
+
 
         private void Dispose(bool disposing)
         {

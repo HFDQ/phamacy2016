@@ -9,6 +9,7 @@ using BugsBox.Common;
 using BugsBox.Pharmacy.AppClient.Common;
 using BugsBox.Pharmacy.AppClient.UI.Forms.Sys;
 using System.Configuration;
+using System.IO;
 
 namespace BugsBox.Pharmacy.AppClient
 {
@@ -86,7 +87,7 @@ namespace BugsBox.Pharmacy.AppClient
 
                 BugsBoxApplication.Instance.Init();
                 System.Windows.Forms.Application.Run(f);
-
+                InstallGAC();
             }
             catch (Exception err)
             {
@@ -97,7 +98,31 @@ namespace BugsBox.Pharmacy.AppClient
                 log.Information("结束DoStartup");
             }
         }
+        /// <summary>
+        /// 安装GAC程序集
+        /// </summary>
+        static void InstallGAC()
+        {
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lib");
 
+            path = Path.Combine(path, "FastReport");
+
+            var destDir = @"C:\Windows\Microsoft.NET\assembly\GAC_MSIL";
+            var destFile = "";
+            foreach (var file in Directory.GetFiles(path, "FastReport.*", SearchOption.AllDirectories))
+            {
+                destFile = file.Replace(path, destDir);
+                if (!Directory.Exists(Path.GetDirectoryName(destFile)))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(destFile));
+                }
+                if (!File.Exists(destFile))
+                {
+                    File.Copy(file, destFile, true);
+                }
+            }
+
+        }
         static void Application_ApplicationExit(object sender, EventArgs e)
         {
             ServicesProvider.Instance.DisconnectServer();

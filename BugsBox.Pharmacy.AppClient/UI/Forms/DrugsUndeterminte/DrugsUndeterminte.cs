@@ -35,7 +35,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
             this.cmbApprovalSelector.DataSource = list;
             this.cmbApprovalSelector.DisplayMember = "Name";
             this.cmbApprovalSelector.ValueMember = "Id";
-            
+
         }
 
         public void search()
@@ -62,9 +62,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
         private void getData(int proc)
         {
             BList.Clear();
-            string msg=string.Empty;
-            string sourceStr=toolStripComboBox1.ComboBox.SelectedValue.ToString()=="全部"?string.Empty:toolStripComboBox1.ComboBox.SelectedValue.ToString();
-            var c=PharmacyDatabaseService.GetDrugsUndeterminate(proc, sourceStr,string.Empty, out msg).ToList();
+            string msg = string.Empty;
+            string sourceStr = toolStripComboBox1.ComboBox.SelectedValue.ToString() == "全部" ? string.Empty : toolStripComboBox1.ComboBox.SelectedValue.ToString();
+            var c = PharmacyDatabaseService.GetDrugsUndeterminate(proc, sourceStr, string.Empty, out msg).ToList();
             foreach (var i in c)
             {
                 BList.Add(i);
@@ -74,7 +74,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
             this.textBox1.ReadOnly = !(pro == 1);
             this.textBox2.ReadOnly = !(pro == 1);
             this.cmbApprovalSelector.Enabled = !(pro == 1);
-            
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -87,17 +87,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             BList.Clear();
             string msg = string.Empty;
-            string search=toolStripComboBox2.ComboBox.SelectedValue.ToString();
+            string search = toolStripComboBox2.ComboBox.SelectedValue.ToString();
             if (search.Contains("全部")) search = string.Empty;
-            string keyword=toolStripTextBox1.Text.Trim();
-            var c = PharmacyDatabaseService.GetDrugsUndeterminate(2, search,keyword, out msg).ToList();
+            string keyword = toolStripTextBox1.Text.Trim();
+            var c = PharmacyDatabaseService.GetDrugsUndeterminate(2, search, keyword, out msg).ToList();
             foreach (var i in c)
             {
                 BList.Add(i);
@@ -125,14 +125,14 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
                 return;
             }
 
-            if (currentRecord.proc==0)
-            {                
+            if (currentRecord.proc == 0)
+            {
                 currentRecord.sta = richTextBox2.Text.Trim();
                 currentRecord.staSignDate = DateTime.Now;
                 currentRecord.staSigner = PharmacyDatabaseService.GetEmployeeByUserId(out msg, userId).Name;
                 currentRecord.proc = 1;
             }
-            else 
+            else
             {
                 try
                 {
@@ -153,19 +153,19 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
                     MessageBox.Show("合格数量与不合格数量应填写为数字！");
                     textBox1.Focus();
                     return;
-                    
+
                 }
                 currentRecord.conclusion = richTextBox3.Text.Trim();
                 currentRecord.conclusionDate = DateTime.Now;
                 currentRecord.conclusionSigner = PharmacyDatabaseService.GetEmployeeByUserId(out msg, userId).Name;
                 currentRecord.proc = 2;
             }
-            
-            if (PharmacyDatabaseService.SaveToNextProc(currentRecord,userId,out msg))
+
+            if (PharmacyDatabaseService.SaveToNextProc(currentRecord, userId, out msg))
             {
                 MessageBox.Show("提交成功！");
                 this.PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "提交质量复查报告成功！");
-                currentRecord=null;
+                currentRecord = null;
                 this.getData(pro);
                 this.textBox1.Text = "0";
                 this.textBox2.Text = "0";
@@ -178,7 +178,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex<0||e.ColumnIndex<0)return;
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
             var c = BList[e.RowIndex];
             currentRecord = BList[e.RowIndex];
             t1.Text = c.DrugInfo.ProductGeneralName;
@@ -195,11 +195,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
 
             richTextBox2.Text = c.sta;
             c3.Text = c.staSigner;
-            c4.Text = c.staSignDate==c.createTime?"":c.staSignDate.ToLongDateString();
+            c4.Text = c.staSignDate == c.createTime ? "" : c.staSignDate.ToLongDateString();
 
             richTextBox3.Text = c.conclusion;
             c5.Text = c.conclusionSigner;
-            c6.Text = c.conclusionDate==c.createTime?"":c.conclusionDate.ToLongDateString();
+            c6.Text = c.conclusionDate == c.createTime ? "" : c.conclusionDate.ToLongDateString();
 
             textBox1.Text = 0.ToString();
             textBox2.Text = c.UnqualificationQuantity.ToString();
@@ -209,7 +209,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
         {
             foreach (Control c in this.Controls)
             {
-                if (c.Name.Contains("c")||c.Name.Contains("t"))
+                if (c.Name.Contains("c") || c.Name.Contains("t"))
                 {
                     c.Text = string.Empty;
                 }
@@ -231,11 +231,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
 
             List<object> reportData = new List<object>();
             List<object> orderList = new List<object>();
-            
+
             orderList.Add(currentRecord);
             reportData.Add(orderList);
             List<Microsoft.Reporting.WinForms.ReportParameter> ListPar = new List<Microsoft.Reporting.WinForms.ReportParameter>();
-            using (PrintHelper printHelper = new PrintHelper("BugsBox.Pharmacy.AppClient.UI.Reports.RptUndeterminate.rdlc", reportData,ListPar))
+            using (PrintHelper printHelper = new PrintHelper("BugsBox.Pharmacy.AppClient.UI.Reports.RptUndeterminate.rdlc", reportData, ListPar))
             {
                 printHelper.Print();
             }
@@ -257,7 +257,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.DrugsUndeterminte
             catch (Exception ex)
             {
                 textBox2.Text = "0";
-                MessageBox.Show("不合格药品数量填写有误，请检查！\n"+ex.Message);
+                MessageBox.Show("不合格药品数量填写有误，请检查！\n" + ex.Message);
                 textBox2.Focus();
                 return;
             }
