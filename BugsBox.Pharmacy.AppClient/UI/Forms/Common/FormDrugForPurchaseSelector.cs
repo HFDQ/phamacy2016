@@ -51,11 +51,25 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             {
                 string msg = string.Empty;
 
-                if (this.txtGeneralName.Text != "")
-                    _listLackDrugRecords = _listLackDrugRecords.Where(p => p.pinyin != null && p.pinyin.ToUpper().Contains(this.txtGeneralName.Text.Trim().ToUpper())).ToList();
+                string stocklower = "";
+                if (checkBox2.Checked)
+                {
+                    stocklower = "-1";
+                }
                 else
-                    _listLackDrugRecords = PharmacyDatabaseService.GetDrugInfoForOutofStock(
-  int.Parse(txtStockLower.Text), beginDate.Value, endDate.Value, out msg).OrderBy(r => r.ProductGeneralName).ToList();
+                {
+                    stocklower = txtStockLower.Text;
+                }
+
+
+                _listLackDrugRecords = PharmacyDatabaseService.GetDrugInfoForOutofStock(int.Parse(stocklower), beginDate.Value, endDate.Value, out msg).OrderBy(r => r.ProductGeneralName).ToList();
+
+
+                if (this.txtGeneralName.Text != "")
+                    _listLackDrugRecords = _listLackDrugRecords.Where(p => p.pinyin != null && p.pinyin.ToUpper().Contains(this.txtGeneralName.Text.Trim().ToUpper()) || p.ProductGeneralName.Contains(this.txtGeneralName.Text)).ToList();
+
+
+
 
                 if (this.cmbWareHouse.SelectedValue != null && this.cmbWareHouse.SelectedValue.ToString() != Guid.Empty.ToString())
                 {
@@ -200,6 +214,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
 
             NPOIHelper.DataTableToExcel(dt, "", sflg.FileName);
             MessageBox.Show("导出成功！");
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
