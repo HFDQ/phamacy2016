@@ -12,7 +12,6 @@ using BugsBox.Pharmacy.Models;
 using System.Windows.Forms;
 using System.Xml;
 using BugsBox.Pharmacy.AppClient.Common;
-using FastReport;
 namespace BugsBox.Pharmacy.AppClient.UI.Report
 {
     /// <summary>
@@ -33,8 +32,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
 
         private bool disposed = false;
 
-        DataSet FDataSet = new DataSet();
-        private FastReport.Report report = new FastReport.Report();
+        //DataSet FDataSet = new DataSet();
+        //private FastReport.Report report = new FastReport.Report();
 
         public PrintHelper(string reportName, DataSet reportData)
         {
@@ -58,7 +57,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
                     newrow[key] = reportData.ExtendedProperties[key].ToString();
                 }
                 maindt.Rows.Add(newrow);
-                FDataSet.Tables.Add(maindt);
+               // FDataSet.Tables.Add(maindt);
                 this.localReport.SetParameters(rps);
             }
             if (reportData != null && reportData.Tables.Count > 0)
@@ -72,7 +71,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Report
                     ReportDataSource rds = new ReportDataSource(string.Format("{0}_{1}", dsName, table.TableName), table);
 
                     this.localReport.DataSources.Add(rds);
-                    FDataSet.Tables.Add(table);
+                    //FDataSet.Tables.Add(table);
                 }
             }
             this.localReport.Refresh();

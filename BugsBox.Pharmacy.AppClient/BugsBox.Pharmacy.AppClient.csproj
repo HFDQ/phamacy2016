@@ -75,18 +75,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport, Version=2014.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net\FastReport.dll</HintPath>
-    </Reference>
-    <Reference Include="FastReport.Bars, Version=2014.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net\FastReport.Bars.dll</HintPath>
-    </Reference>
-    <Reference Include="FastReport.Editor, Version=2014.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net\FastReport.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -2779,15 +2767,6 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Resources\backPic1.jpg" />
-    <Content Include="Lib\FastReport\FastReport.Bars\v4.0_2014.2.3.0__db7e5ce63278458c\FastReport.Bars.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Lib\FastReport\FastReport.Editor\v4.0_2014.2.3.0__db7e5ce63278458c\FastReport.Editor.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Lib\FastReport\FastReport\v4.0_2014.2.3.0__db7e5ce63278458c\FastReport.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\backPic.jpg" />
     <Content Include="Resources\mxplayer1.png" />
     <None Include="Resources\Png\Add.png" />
