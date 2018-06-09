@@ -11,13 +11,13 @@ using BugsBox.Pharmacy.Models;
 
 namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
 {
-   
+
     public partial class FormDrugsForSupplyUnitSelector : BaseFunctionForm
     {
         public Common.GoodsTypeClass GoogsTypeClass { get; set; }
 
         private Guid _supplyUnitGuid;
-        
+
         private string msg = string.Empty;
 
         private List<DrugInfo> _listDrugInfo = new List<DrugInfo>();
@@ -34,13 +34,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             _supplyUnitGuid = supplyUnitGuid;
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
 
             this.dataGridView1.CellMouseDoubleClick += (s, e) =>
             {
                 if (OnDrugSelected != null)
                 {
-                    Guid drugId=Guid.Parse(this.dataGridView1.CurrentRow.Cells[5].Value.ToString());
+                    Guid drugId = Guid.Parse(this.dataGridView1.CurrentRow.Cells[5].Value.ToString());
                     var selectedOne = this._listDrugInfo.FirstOrDefault(r => r.Id == drugId);
                     this.dinfos.Clear();
                     this.dinfos.Add(selectedOne);
@@ -54,12 +54,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
         {
             try
             {
-                _listDrugInfo = this.PharmacyDatabaseService.GetDrugInfoForSupplyUnitWithQueryParas(out msg, _supplyUnitGuid,txtTYM.Text.Trim(), txtCode.Text.Trim(),txtBWM.Text.Trim()).ToList();
+                _listDrugInfo = this.PharmacyDatabaseService.GetDrugInfoForSupplyUnitWithQueryParas(out msg, _supplyUnitGuid, txtTYM.Text.Trim(), txtCode.Text.Trim(), txtBWM.Text.Trim()).ToList();
 
                 if (_listDrugInfo != null)
                 {
                     #region 品种类型过滤
-                    if (this.GoogsTypeClass==GoodsTypeClass.医疗器械)
+                    if (this.GoogsTypeClass == GoodsTypeClass.医疗器械)
                         this._listDrugInfo = this._listDrugInfo.Where(r => r.BusinessScopeCode.Contains(Common.GoodsTypeClass.医疗器械.ToString())).ToList();
                     if (this.GoogsTypeClass == GoodsTypeClass.药品)
                         this._listDrugInfo = this._listDrugInfo.Where(r => !r.BusinessScopeCode.Contains(Common.GoodsTypeClass.医疗器械.ToString())).ToList();
@@ -67,15 +67,15 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
 
                     var rows = _listDrugInfo.OrderBy(p => p.ProductName).Select(p => new
                     {
-                        selected=false,
+                        selected = false,
                         ProductGeneralName = p.ProductGeneralName,
                         ProductName = p.ProductName,
                         Code = p.Code,
                         StandardCode = p.StandardCode,
                         Id = p.Id,
-                        factoryName=p.FactoryName,
-                        dosage=p.DictionaryDosageCode,
-                        specific=p.DictionarySpecificationCode
+                        factoryName = p.FactoryName,
+                        dosage = p.DictionaryDosageCode,
+                        specific = p.DictionarySpecificationCode
                     });
 
                     dataGridView1.DataSource = rows.ToList();
@@ -112,15 +112,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
                 DataGridViewCheckBoxCell cb = dr.Cells[0] as DataGridViewCheckBoxCell;
                 if (Convert.ToBoolean(cb.FormattedValue))
                 {
-                    dinfos.Add(_listDrugInfo.Find(r=>r.Id==Guid.Parse(dr.Cells[5].Value.ToString())));
+                    dinfos.Add(_listDrugInfo.Find(r => r.Id == Guid.Parse(dr.Cells[5].Value.ToString())));
                     listRows.Add(dr);
                 }
-                
+
             }
             if (this.OnDrugSelected != null)
             {
                 OnDrugSelected(this.dinfos);
             }
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
         private void FormDrugsForSupplyUnitSelector_Activated(object sender, EventArgs e)

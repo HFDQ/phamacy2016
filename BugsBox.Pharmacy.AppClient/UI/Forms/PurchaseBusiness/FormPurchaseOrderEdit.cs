@@ -41,7 +41,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.dataGridView1.CellEndEdit += new DataGridViewCellEventHandler(dataGridView1_CellEndEdit);
             this.dataGridView1.CellFormatting += new DataGridViewCellFormattingEventHandler(dataGridView1_CellFormatting);
             this.dataGridView1.DataError += new DataGridViewDataErrorEventHandler(dataGridView1_DataError);
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
             this.btnAddDetail.Click += new EventHandler(btnAddDetail_Click);
             this.btnDeleteDetail.Click += new EventHandler(btnDeleteDetail_Click);
             this.dataGridView1.CellMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_CellMouseClick);
@@ -443,6 +443,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         {
             this.dataGridView1.ReadOnly = false;
             btnSubmit.Enabled = true;
+            btnAddDetail.Visible = false;
+            btnDeleteDetail.Visible = false;
         }
 
 
@@ -709,6 +711,73 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             MyExcelUtls.DataGridview2Sheet(this.dataGridView1, "采购订单" + s);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormDrugsForSupplyUnitSelector selector = new FormDrugsForSupplyUnitSelector(_purchaseOrder.SupplyUnitId);
+                selector.GoogsTypeClass = this.GoogsTypeClass;
 
+                selector.ShowDialog();
+
+                if (selector.DialogResult == System.Windows.Forms.DialogResult.OK)
+                {
+                    //先判断选中的药物在现在的list中是否存在
+                    List<DrugInfo> drugsSelected = selector.dinfos;
+                    foreach (var drugSelected in drugsSelected)
+                    {
+                        if (_listPurchaseOrderDetail.Find(r => r.DrugInfoId == drugSelected.Id && r.isdeleted == false) != null)
+                        {
+                            MessageBox.Show(drugSelected.ProductName + "已存在,不可重复增加!");
+                            continue;
+                        }
+
+                        PurchaseOrderDetailEntity newDetail = new PurchaseOrderDetailEntity();
+                        #region create new PurchaseOrderDetail record
+                        newDetail.Id = Guid.NewGuid();
+                        newDetail.PurchaseOrderId = _purchaseOrder.Id;
+                        newDetail.DrugInfoId = drugSelected.Id;
+                        newDetail.PurchasePrice = drugSelected.PurchasePrice;
+                        newDetail.Amount = 1;
+                        newDetail.AmountOfTax = 17.0m;
+                        newDetail.Price = drugSelected.Price;
+                        newDetail.ProductGeneralName = drugSelected.ProductGeneralName;
+                        newDetail.FactoryName = drugSelected.FactoryName;
+                        newDetail.DictionarySpecificationCode = drugSelected.DictionarySpecificationCode;
+                        newDetail.DictionaryMeasurementUnitCode = drugSelected.DictionaryMeasurementUnitCode;
+                        newDetail.DictionaryDosageCode = drugSelected.DictionaryDosageCode;
+                        newDetail.LicensePermissionNumber = drugSelected.LicensePermissionNumber;
+                        newDetail.sequence = this._listPurchaseOrderDetail.Count;
+                        _listPurchaseOrderDetail.Add(newDetail);
+
+                        this.dataGridView1.DataSource = null;
+                        var c = this._listPurchaseOrderDetail.Where(r => r.isdeleted == false).ToList();
+                        this.dataGridView1.DataSource = c;
+                        this.dataGridView1.ReadOnly = false;
+                        #endregion
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK);
+                Log.Error(ex);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.dataGridView1.CurrentRow != null)
+            {
+                if (MessageBox.Show("确定要删除此条记录吗？", "提示", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No) return;
+                var c = this.dataGridView1.CurrentRow.DataBoundItem as PurchaseOrderDetailEntity;
+                {
+                    string msg = string.Empty;
+                    c.isdeleted = true;
+                    this.dataGridView1.DataSource = this._listPurchaseOrderDetail.Where(r => r.isdeleted == false).ToList();
+                }
+            }
+        }
     }
 }

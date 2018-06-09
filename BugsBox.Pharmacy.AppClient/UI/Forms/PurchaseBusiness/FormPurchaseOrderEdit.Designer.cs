@@ -29,9 +29,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPurchaseOrderEdit));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -113,7 +113,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.panel4.SuspendLayout();
             this.groupBoxApprovedRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalMoney)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -175,13 +174,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.clmDrugId.HeaderText = "DrugId";
             this.clmDrugId.Name = "clmDrugId";
             this.clmDrugId.Visible = false;
-            this.clmDrugId.Width = 84;
+            this.clmDrugId.Width = 64;
             // 
             // clmDrugName
             // 
             this.clmDrugName.DataPropertyName = "ProductGeneralName";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.clmDrugName.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.clmDrugName.DefaultCellStyle = dataGridViewCellStyle13;
             this.clmDrugName.HeaderText = "品名";
             this.clmDrugName.Name = "clmDrugName";
             this.clmDrugName.Width = 56;
@@ -206,7 +205,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.Column2.HeaderText = "产地";
             this.Column2.Name = "Column2";
             this.Column2.Visible = false;
-            this.Column2.Width = 68;
+            this.Column2.Width = 56;
             // 
             // LicensePermissionNumber
             // 
@@ -221,7 +220,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.clmActualPrice.HeaderText = "实际价";
             this.clmActualPrice.Name = "clmActualPrice";
             this.clmActualPrice.Visible = false;
-            this.clmActualPrice.Width = 85;
+            this.clmActualPrice.Width = 68;
             // 
             // Column1
             // 
@@ -242,8 +241,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // clmDrugNumber
             // 
             this.clmDrugNumber.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
-            this.clmDrugNumber.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Yellow;
+            this.clmDrugNumber.DefaultCellStyle = dataGridViewCellStyle14;
             this.clmDrugNumber.HeaderText = "数量";
             this.clmDrugNumber.Name = "clmDrugNumber";
             this.clmDrugNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -252,10 +251,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // clmPurchasePrice
             // 
             this.clmPurchasePrice.DataPropertyName = "PurchasePrice";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle3.Format = "N4";
-            dataGridViewCellStyle3.NullValue = null;
-            this.clmPurchasePrice.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle15.Format = "N4";
+            dataGridViewCellStyle15.NullValue = null;
+            this.clmPurchasePrice.DefaultCellStyle = dataGridViewCellStyle15;
             this.clmPurchasePrice.HeaderText = "单价";
             this.clmPurchasePrice.Name = "clmPurchasePrice";
             this.clmPurchasePrice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -280,7 +279,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.colmoneyofTax.HeaderText = "含税金额";
             this.colmoneyofTax.Name = "colmoneyofTax";
             this.colmoneyofTax.Visible = false;
-            this.colmoneyofTax.Width = 102;
+            this.colmoneyofTax.Width = 80;
             // 
             // panel4
             // 
@@ -346,8 +345,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnDeleteDetail);
-            this.panel3.Controls.Add(this.btnAddDetail);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 16);
             this.panel3.Name = "panel3";
@@ -357,7 +354,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // 
             // btnDeleteDetail
             // 
-            this.btnDeleteDetail.Location = new System.Drawing.Point(182, 3);
+            this.btnDeleteDetail.Location = new System.Drawing.Point(700, 117);
             this.btnDeleteDetail.Name = "btnDeleteDetail";
             this.btnDeleteDetail.Size = new System.Drawing.Size(75, 25);
             this.btnDeleteDetail.TabIndex = 2;
@@ -366,7 +363,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // 
             // btnAddDetail
             // 
-            this.btnAddDetail.Location = new System.Drawing.Point(62, 3);
+            this.btnAddDetail.Location = new System.Drawing.Point(580, 117);
             this.btnAddDetail.Name = "btnAddDetail";
             this.btnAddDetail.Size = new System.Drawing.Size(75, 25);
             this.btnAddDetail.TabIndex = 1;
@@ -376,7 +373,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.btnDeleteDetail);
             this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.btnAddDetail);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label5);
@@ -862,7 +861,6 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.panel4.ResumeLayout(false);
             this.groupBoxApprovedRecords.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTotalMoney)).EndInit();
