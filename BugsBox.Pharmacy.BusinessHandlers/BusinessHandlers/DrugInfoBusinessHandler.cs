@@ -8,6 +8,7 @@ using BugsBox.Pharmacy.Business.Models;
 using System.Linq.Expressions;
 using BugsBox.Pharmacy.Repository;
 using System.Data.Entity;
+using System.Data.Entity.SqlServer;
 
 namespace BugsBox.Pharmacy.BusinessHandlers
 {
@@ -365,6 +366,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     inventoryNum = c.Sum(n => n.CurrentInventoryCount),
                     canSaleNum = c.Sum(n => n.CanSaleNum),
                     wholePrice = c.Sum(n => n.CurrentInventoryCount * n.PurchasePricce),
+                    lastsaleDate = "",
                     wholeSales = c.Sum(n => n.InInventoryCount) - c.Sum(n => n.CanSaleNum),
                 });
 
@@ -374,15 +376,18 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                     var realtimeq = (from order in RepositoryProvider.Db.SalesOrders
                                      join orderDetail in RepositoryProvider.Db.SalesOrderDetails on order.Id equals orderDetail.SalesOrderID
                                      join inventoryRecord in RepositoryProvider.Db.DrugInventoryRecords on orderDetail.DrugInventoryRecordID equals inventoryRecord.Id
+                                     orderby order.SaleDate descending
                                      where order.CreateTime >= begindate && order.CreateTime <= enddate.Value && !order.Deleted
                                      select new
                                      {
                                          drugInfoId = inventoryRecord.DrugInfoId,
-                                         orderDetail.Amount
+                                         orderDetail.Amount,
+                                         order.SaleDate
                                      }).GroupBy(c => c.drugInfoId).Select(o => new
                                      {
                                          drugInfoId = o.Key,
-                                         Amount = o.Sum(c => c.Amount)
+                                         Amount = o.Sum(c => c.Amount),
+                                         o.FirstOrDefault().SaleDate
                                      });
 
                     queryInventory = from m in queryInventory
@@ -394,6 +399,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                          inventoryNum = m.inventoryNum,
                                          canSaleNum = m.canSaleNum,
                                          wholePrice = m.wholePrice,
+                                         lastsaleDate = b == null ? "" : SqlFunctions.DateName("yyyy", b.SaleDate) + "-" + SqlFunctions.DateName("mm", b.SaleDate) + "-" + SqlFunctions.DateName("dd", b.SaleDate),
                                          wholeSales = b == null ? 0 : b.Amount
                                      };
 
@@ -406,8 +412,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 {
                     drugInfoId = c.Key,
                     purchasePrice = c.FirstOrDefault().PurchasePrice,
-                    lastPurchaseDate = c.FirstOrDefault().ArrivalDateTime,
-
+                    lastPurchaseDate = c.FirstOrDefault().ArrivalDateTime
                 });
 
                 var listWarehouseZone = RepositoryProvider.Db.WarehouseZones.Where(w => !w.Deleted);
@@ -437,6 +442,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                                   CurrentInventoryCount = i.inventoryNum,
                                   PurchasePrice = k.purchasePrice,
                                   dtime = k.lastPurchaseDate,
+                                  lastsaledate = i.lastsaleDate,
                                   wholeSales = i.wholeSales,
                                   wareHouse = w.Name
                               });
@@ -451,7 +457,7 @@ namespace BugsBox.Pharmacy.BusinessHandlers
                 }
 
 
-                return result;
+                return result.ToList();
 
             }
             catch (Exception ex)

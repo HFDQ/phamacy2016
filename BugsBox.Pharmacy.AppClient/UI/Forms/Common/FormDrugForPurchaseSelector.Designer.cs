@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripbtnSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripbtnOutput = new System.Windows.Forms.ToolStripButton();
@@ -42,6 +42,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.endDate = new System.Windows.Forms.DateTimePicker();
             this.beginDate = new System.Windows.Forms.DateTimePicker();
@@ -57,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Choice = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductGeneralName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,9 +72,8 @@
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wareHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.arrivaldatetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesSort = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -167,6 +168,17 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询条件";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(482, 20);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(132, 16);
+            this.checkBox2.TabIndex = 20;
+            this.checkBox2.Text = "使用自定义库存下限";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label6
             // 
@@ -298,14 +310,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Choice,
@@ -321,33 +333,44 @@
             this.Code,
             this.wareHouse,
             this.arrivaldatetime,
+            this.Column3,
             this.salesSort});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.Size = new System.Drawing.Size(1006, 333);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridView1_CurrentCellDirtyStateChanged);
             // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.FalseValue = "False";
+            this.dataGridViewCheckBoxColumn1.HeaderText = " 选择";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.TrueValue = "True";
+            this.dataGridViewCheckBoxColumn1.Visible = false;
+            this.dataGridViewCheckBoxColumn1.Width = 60;
+            // 
             // Choice
             // 
             this.Choice.FalseValue = "False";
+            this.Choice.FillWeight = 103.5533F;
             this.Choice.HeaderText = " 选择";
             this.Choice.Name = "Choice";
             this.Choice.TrueValue = "True";
@@ -362,6 +385,7 @@
             // ProductGeneralName
             // 
             this.ProductGeneralName.DataPropertyName = "ProductGeneralName";
+            this.ProductGeneralName.FillWeight = 103.5533F;
             this.ProductGeneralName.HeaderText = "药品通用名";
             this.ProductGeneralName.Name = "ProductGeneralName";
             this.ProductGeneralName.ReadOnly = true;
@@ -369,9 +393,9 @@
             // CurrentInventoryCount
             // 
             this.CurrentInventoryCount.DataPropertyName = "CurrentInventoryCount";
-            dataGridViewCellStyle16.Format = "N2";
-            dataGridViewCellStyle16.NullValue = null;
-            this.CurrentInventoryCount.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.CurrentInventoryCount.DefaultCellStyle = dataGridViewCellStyle2;
             this.CurrentInventoryCount.HeaderText = "库存数量";
             this.CurrentInventoryCount.Name = "CurrentInventoryCount";
             this.CurrentInventoryCount.ReadOnly = true;
@@ -380,42 +404,48 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "CurrentCanSaleCount";
-            dataGridViewCellStyle17.Format = "N2";
-            dataGridViewCellStyle17.NullValue = null;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.FillWeight = 60.91371F;
             this.Column2.HeaderText = "可售库存";
             this.Column2.Name = "Column2";
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MinInventoryCount";
+            this.Column1.FillWeight = 103.5533F;
             this.Column1.HeaderText = "库存下限";
             this.Column1.Name = "Column1";
             // 
             // PurchasePrice
             // 
             this.PurchasePrice.DataPropertyName = "PurchasePrice";
-            dataGridViewCellStyle18.Format = "N2";
-            dataGridViewCellStyle18.NullValue = null;
-            this.PurchasePrice.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.PurchasePrice.DefaultCellStyle = dataGridViewCellStyle4;
+            this.PurchasePrice.FillWeight = 103.5533F;
             this.PurchasePrice.HeaderText = "采购价";
             this.PurchasePrice.Name = "PurchasePrice";
             // 
             // DictionarySpecificationCode
             // 
             this.DictionarySpecificationCode.DataPropertyName = "DictionarySpecificationCode";
+            this.DictionarySpecificationCode.FillWeight = 103.5533F;
             this.DictionarySpecificationCode.HeaderText = "规格";
             this.DictionarySpecificationCode.Name = "DictionarySpecificationCode";
             // 
             // DictionaryMeasurementUnitCode
             // 
             this.DictionaryMeasurementUnitCode.DataPropertyName = "DictionaryMeasurementUnitCode";
+            this.DictionaryMeasurementUnitCode.FillWeight = 103.5533F;
             this.DictionaryMeasurementUnitCode.HeaderText = "单位";
             this.DictionaryMeasurementUnitCode.Name = "DictionaryMeasurementUnitCode";
             // 
             // FactoryName
             // 
             this.FactoryName.DataPropertyName = "FactoryName";
+            this.FactoryName.FillWeight = 103.5533F;
             this.FactoryName.HeaderText = "厂家全称";
             this.FactoryName.Name = "FactoryName";
             // 
@@ -430,43 +460,33 @@
             // wareHouse
             // 
             this.wareHouse.DataPropertyName = "wareHouse";
+            this.wareHouse.FillWeight = 103.5533F;
             this.wareHouse.HeaderText = "所在仓库";
             this.wareHouse.Name = "wareHouse";
             // 
             // arrivaldatetime
             // 
             this.arrivaldatetime.DataPropertyName = "dtime";
+            this.arrivaldatetime.FillWeight = 103.5533F;
             this.arrivaldatetime.HeaderText = "最近采购时间";
             this.arrivaldatetime.Name = "arrivaldatetime";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "lastsaledate";
+            this.Column3.FillWeight = 103.5533F;
+            this.Column3.HeaderText = "最近销售时间";
+            this.Column3.Name = "Column3";
             // 
             // salesSort
             // 
             this.salesSort.DataPropertyName = "wholeSales";
-            dataGridViewCellStyle19.Format = "N2";
-            dataGridViewCellStyle19.NullValue = null;
-            this.salesSort.DefaultCellStyle = dataGridViewCellStyle19;
-            this.salesSort.HeaderText = "销量排行";
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.salesSort.DefaultCellStyle = dataGridViewCellStyle5;
+            this.salesSort.FillWeight = 103.5533F;
+            this.salesSort.HeaderText = "销量";
             this.salesSort.Name = "salesSort";
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.FalseValue = "False";
-            this.dataGridViewCheckBoxColumn1.HeaderText = " 选择";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.TrueValue = "True";
-            this.dataGridViewCheckBoxColumn1.Visible = false;
-            this.dataGridViewCheckBoxColumn1.Width = 60;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(482, 20);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(132, 16);
-            this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "使用自定义库存下限";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // FormDrugForPurchaseSelector
             // 
@@ -516,6 +536,7 @@
         private System.Windows.Forms.DateTimePicker beginDate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker endDate;
+        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Choice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductGeneralName;
@@ -529,7 +550,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn wareHouse;
         private System.Windows.Forms.DataGridViewTextBoxColumn arrivaldatetime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesSort;
-        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

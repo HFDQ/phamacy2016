@@ -96,6 +96,12 @@ namespace BugsBox.Pharmacy.Business.Models
         /// </summary>
         [DataMember]
         public DateTime dtime { get; set; }
+        /// <summary>
+        /// 最近销售时间
+        /// </summary>
+        [DataMember]
+        public string lastsaledate { get; set; }
+
 
 
         /// <summary>
