@@ -66,11 +66,11 @@ namespace BugsBox.Pharmacy.Repository
                 BuildWarehouses(context);
                 BuildApprovalFlowType(context);
 
-                 BuildDrugInfo(context);
+                BuildDrugInfo(context);
                 //BuildInventoryRecord(context);
                 BuildDistrict(context);
                 //BuildPurchaseunit(context);
-          
+
 
                 BuildSupplyUnit(context);
                 //BuildPurchaseOrder(context);
@@ -119,7 +119,7 @@ namespace BugsBox.Pharmacy.Repository
             context.Commit();
             //医疗分类详细
             List<MedicalCategoryDetail> details = new List<MedicalCategoryDetail>();
-         
+
             details.Add(new MedicalCategoryDetail
             {
                 Code = "-1",
@@ -131,7 +131,7 @@ namespace BugsBox.Pharmacy.Repository
 
             string pCode = string.Empty;
             pCode = "01";
- 
+
             //01	01	空
             details.Add(new MedicalCategoryDetail
             {
@@ -195,7 +195,7 @@ namespace BugsBox.Pharmacy.Repository
                 Deleted = false,
                 Enabled = true
             });
-            pCode = "02"; 
+            pCode = "02";
             details.Add(new MedicalCategoryDetail
             {
                 Code = "01",
@@ -664,9 +664,11 @@ namespace BugsBox.Pharmacy.Repository
             {
                 context.TaxRates.Add(new TaxRate
                 {
-                   Name=string.Format("9{0}%",i)
-                   ,Code=string.Format("9{0}%",i)
-                   ,Enabled=true
+                    Name = string.Format("9{0}%", i)
+                   ,
+                    Code = string.Format("9{0}%", i)
+                   ,
+                    Enabled = true
                 });
             }
             context.Commit();
@@ -676,16 +678,23 @@ namespace BugsBox.Pharmacy.Repository
         {
             for (int i = 0; i < 10; i++)
             {
-                context.Vehicles.Add(new Vehicle 
-                { 
-                    Cubage="1000"
-                    ,Driver="司机"+(char)(i+'A')
-                    ,Id=Guid.NewGuid()
-                    ,LicensePlate="苏B."+i.ToString().PadLeft(5,'0')
-                    ,Other="暂无"
-                    ,Rule="ABCD"
-                    ,Status=true 
-                    ,Type="大小中车"
+                context.Vehicles.Add(new Vehicle
+                {
+                    Cubage = "1000"
+                    ,
+                    Driver = "司机" + (char)(i + 'A')
+                    ,
+                    Id = Guid.NewGuid()
+                    ,
+                    LicensePlate = "苏B." + i.ToString().PadLeft(5, '0')
+                    ,
+                    Other = "暂无"
+                    ,
+                    Rule = "ABCD"
+                    ,
+                    Status = true
+                    ,
+                    Type = "大小中车"
                 });
             }
             context.Commit();
@@ -696,16 +705,16 @@ namespace BugsBox.Pharmacy.Repository
             List<string> specifications = new List<string>();
             for (int i = 0; i < 26; i++)
             {
-                specifications.Add(string.Format("国药准字号{0}",(char)(i+'A'))); 
+                specifications.Add(string.Format("国药准字号{0}", (char)(i + 'A')));
                 //国食健字G
                 specifications.Add(string.Format("国食健字{0}", (char)(i + 'A')));
-                specifications.Add(string.Format("国药管械（进）{0}", (char)(i + 'A'))); 
+                specifications.Add(string.Format("国药管械（进）{0}", (char)(i + 'A')));
             }
             foreach (var spec in specifications)
             {
-                context.DrugApprovalNumbers.Add(new DrugApprovalNumber { Name = spec ,Enabled=true});
+                context.DrugApprovalNumbers.Add(new DrugApprovalNumber { Name = spec, Enabled = true });
             }
-            context.Commit();;
+            context.Commit(); ;
         }
 
         private void BuildDictionaryUserDefinedTypes(Db context)
@@ -718,7 +727,7 @@ namespace BugsBox.Pharmacy.Repository
             type.Id = Guid.NewGuid();
             context.DictionaryUserDefinedTypes.Add(type);
             context.Commit();
-        } 
+        }
         private void BuildBusinessScopeCategorys(Db context)
         {
             EnityImporter<BusinessScopeCategory> importer = new EnityImporter<BusinessScopeCategory>(new BusinessScopeCategoryRepository(context));
@@ -1094,21 +1103,21 @@ namespace BugsBox.Pharmacy.Repository
                 Enabled = true
             });
             details.Add(new PurchaseManageCategoryDetail
-                {
-                    Code = "01",
-                    Name = "处方药",
-                    PurchaseManageCategoryId = context.PurchaseManageCategorys.FirstOrDefault(c => c.Code == "01").Id,
-                    Deleted = false,
-                    Enabled = true
-                });
+            {
+                Code = "01",
+                Name = "处方药",
+                PurchaseManageCategoryId = context.PurchaseManageCategorys.FirstOrDefault(c => c.Code == "01").Id,
+                Deleted = false,
+                Enabled = true
+            });
             details.Add(new PurchaseManageCategoryDetail
-                {
-                    Code = "02",
-                    Name = "甲类非处方药",
-                    PurchaseManageCategoryId = context.PurchaseManageCategorys.FirstOrDefault(c => c.Code == "02").Id,
-                    Deleted = false,
-                    Enabled = true
-                });
+            {
+                Code = "02",
+                Name = "甲类非处方药",
+                PurchaseManageCategoryId = context.PurchaseManageCategorys.FirstOrDefault(c => c.Code == "02").Id,
+                Deleted = false,
+                Enabled = true
+            });
             details.Add(new PurchaseManageCategoryDetail
             {
                 Code = "03",
@@ -1440,17 +1449,17 @@ namespace BugsBox.Pharmacy.Repository
             specifications.Add("无");
             for (int i = 1; i < 50; i++)
             {
-                specifications.Add(string.Format("0.0{0}g*36s",i));
-                specifications.Add(string.Format("0.0{0}g*100s",i));
+                specifications.Add(string.Format("0.0{0}g*36s", i));
+                specifications.Add(string.Format("0.0{0}g*100s", i));
                 specifications.Add(string.Format("0.{0}*10片", i));
                 specifications.Add(string.Format("0.{0}*24片", i));
-                specifications.Add(string.Format("0.1{0}g*6片*2板", i)); 
+                specifications.Add(string.Format("0.1{0}g*6片*2板", i));
             }
             for (int i = 0; i < specifications.Count; i++)
-			{
-			  context.DictionarySpecifications.Add(new DictionarySpecification {Name= specifications[i],Code=i.ToString().PadLeft(3,'0')});
-            } 
-            context.Commit();;
+            {
+                context.DictionarySpecifications.Add(new DictionarySpecification { Name = specifications[i], Code = i.ToString().PadLeft(3, '0') });
+            }
+            context.Commit(); ;
         }
 
         private void BuildDictionaryStorageTypes(Db context)
@@ -1575,7 +1584,7 @@ namespace BugsBox.Pharmacy.Repository
             context.Commit();
             importer.Backup();
 
-        } 
+        }
 
         private void BuildEmployees(Db context)
         {
@@ -1673,7 +1682,7 @@ namespace BugsBox.Pharmacy.Repository
                     dbModule.Add(module);
                 }
             }
-            context.Commit(); ; 
+            context.Commit(); ;
 
         }
 
@@ -1903,31 +1912,31 @@ namespace BugsBox.Pharmacy.Repository
         private void BuildUsers(Db context)
         {
             User user = new User
-                {
-                    Account = "Administrator",
-                    CreateTime = Now,
-                    CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    Pwd =  EncodeHelper.Base64Encode("Administrator!@#$%"),
-                    StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    UpdateTime = Now,
-                    UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    Id = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    EmployeeId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    Enabled = true
-                };
+            {
+                Account = "Administrator",
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                Pwd = EncodeHelper.Base64Encode("Administrator!@#$%"),
+                StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = sysAdminID,
+                EmployeeId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                Enabled = true
+            };
             RoleWithUser roleWithUser = new RoleWithUser
-                {
-                    CreateTime = Now,
-                    CreateUserId = user.Id,
-                    Id = user.Id,
-                    RoleId = sysRoleID,
-                    StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    UpdateTime = Now,
-                    UpdateUserId = user.Id,
-                    UserId = user.Id,
+            {
+                CreateTime = Now,
+                CreateUserId = user.Id,
+                Id = user.Id,
+                RoleId = sysRoleID,
+                StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateTime = Now,
+                UpdateUserId = user.Id,
+                UserId = user.Id,
 
 
-                };
+            };
             context.Set<User>().Add(user);
             context.Set<RoleWithUser>().Add(roleWithUser);
             context.Commit();
@@ -1936,22 +1945,22 @@ namespace BugsBox.Pharmacy.Repository
         private void BuildDrupDictionary(Db context)
         {
             string[] dw = { "无", "盒", "瓶", "包", "袋", "副", "个", "公升", "罐", "罐桶", "把", "克", "米", "片", "板", "千克", "台", "条", "桶", "张", "支", "只" };//计量单位
-            string[] type = {"无", "化妆品", "日化用品", "生物制品", "食品", "消字号", "药品", "医疗器械", "中药", "其它" }; //药物分类
-            string[] cldw = { "无","片", "粒", "板", "袋", "支", "卷", "瓶" };//拆零单位
+            string[] type = { "无", "化妆品", "日化用品", "生物制品", "食品", "消字号", "药品", "医疗器械", "中药", "其它" }; //药物分类
+            string[] cldw = { "无", "片", "粒", "板", "袋", "支", "卷", "瓶" };//拆零单位
             for (int i = 0; i < dw.Length; i++)
             {
                 context.Set<DictionaryMeasurementUnit>().Add(new DictionaryMeasurementUnit { Code = i.ToString().PadLeft(2, '0'), Id = Guid.NewGuid(), Name = dw[i], Enabled = true, Deleted = false });
-            } 
-            context.Commit();; 
-           
+            }
+            context.Commit(); ;
+
             for (int i = 0; i < type.Length; i++)
             {
-                context.Set<DrugCategory>().Add(new DrugCategory {  Code = i.ToString().PadLeft(2, '0'),Id = Guid.NewGuid(), Name =type[i], Enabled = true, Deleted = false });
+                context.Set<DrugCategory>().Add(new DrugCategory { Code = i.ToString().PadLeft(2, '0'), Id = Guid.NewGuid(), Name = type[i], Enabled = true, Deleted = false });
             }
             context.Commit();
             for (int i = 0; i < cldw.Length; i++)
             {
-                 context.Set<DictionaryPiecemealUnit>().Add(new DictionaryPiecemealUnit { Code = i.ToString().PadLeft(2, '0'),Id = Guid.NewGuid(), Name =cldw[i], Enabled = true, Deleted = false });
+                context.Set<DictionaryPiecemealUnit>().Add(new DictionaryPiecemealUnit { Code = i.ToString().PadLeft(2, '0'), Id = Guid.NewGuid(), Name = cldw[i], Enabled = true, Deleted = false });
             }
             context.Commit();
 
@@ -1960,21 +1969,21 @@ namespace BugsBox.Pharmacy.Repository
         {
             DbSet<Role> dbset = context.Set<Role>();
             Role role = new Role
-                {
-                    Id = sysRoleID
+            {
+                Id = sysRoleID
                     ,
-                    Code = "000000"
+                Code = "000000"
                     ,
-                    CreateTime = Now
+                CreateTime = Now
 
                     ,
-                    CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    Name = "SystemRole"
+                CreateUserId = sysAdminID,
+                Name = "SystemRole"
                     ,
-                    Description = "SystemRole请不删除",
-                    StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    UpdateTime = Now
-                };
+                Description = "SystemRole请不删除",
+                StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateTime = Now
+            };
             dbset.Add(role);
             //给SYSTEMROLE加入所有权限
             var models = context.Modules.ToList();
@@ -1986,7 +1995,7 @@ namespace BugsBox.Pharmacy.Repository
                     ,
                     CreateTime = Now
                     ,
-                    CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id
+                    CreateUserId = sysAdminID
                     ,
                     Deleted = false
                     ,
@@ -1998,7 +2007,7 @@ namespace BugsBox.Pharmacy.Repository
                     ,
                     UpdateTime = Now
                     ,
-                    UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id
+                    UpdateUserId = sysAdminID
                     ,
                 });
 
@@ -2013,7 +2022,7 @@ namespace BugsBox.Pharmacy.Repository
                 CreateTime = Now
 
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "adminRole"
                 ,
                 Description = "adminRole请不删除",
@@ -2031,7 +2040,7 @@ namespace BugsBox.Pharmacy.Repository
                 CreateTime = Now
 
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "OperRole"
                 ,
                 Description = "OperRole请不删除",
@@ -2052,12 +2061,12 @@ namespace BugsBox.Pharmacy.Repository
                     Id = r.Key,
                     Code = r.Value.Split('|')[0],
                     CreateTime = Now,
-                    CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                    CreateUserId = sysAdminID,
                     Name = r.Value.Split('|')[1],
                     Description = string.Format("{0}角色请不删除", r.Value.Split('|')[1]),
                     StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
                     UpdateTime = Now,
-                    UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id
+                    UpdateUserId = sysAdminID
                 };
                 dbset.Add(role);
             }
@@ -2070,7 +2079,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "业务员"
                 ,
                 Description = "业务员请不删除",
@@ -2088,7 +2097,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "收银员"
                 ,
                 Description = "收银员请不删除",
@@ -2105,7 +2114,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "质量管理员"
                 ,
                 Description = "质量管理员请不删除",
@@ -2123,7 +2132,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "质量验收员"
                 ,
                 Description = "质量管理员请不删除",
@@ -2141,7 +2150,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "疫苗验收员"
                 ,
                 Description = "疫苗验收员请不删除",
@@ -2159,7 +2168,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "养护员"
                 ,
                 Description = "养护员请不删除",
@@ -2177,7 +2186,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "疫苗养护员"
                 ,
                 Description = "疫苗养护员请不删除",
@@ -2195,7 +2204,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "计量员"
                 ,
                 Description = "计量员请不删除",
@@ -2213,7 +2222,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "保管员"
                 ,
                 Description = "保管员请不删除",
@@ -2231,7 +2240,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "复核员"
                 ,
                 Description = "复核员请不删除",
@@ -2248,7 +2257,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "驾驶员"
                 ,
                 Description = "驾驶员请不删除",
@@ -2266,7 +2275,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "会计员"
                 ,
                 Description = "会计员请不删除",
@@ -2284,7 +2293,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "文员"
                 ,
                 Description = "文员请不删除",
@@ -2302,7 +2311,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "内勤"
                 ,
                 Description = "内勤请不删除",
@@ -2320,7 +2329,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "质量管理部长"
                 ,
                 Description = "质量管理部长请不删除",
@@ -2338,7 +2347,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "储运部长"
                 ,
                 Description = "储运部长请不删除",
@@ -2356,7 +2365,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "财务部长"
                 ,
                 Description = "财务部长请不删除",
@@ -2374,7 +2383,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "行政部长"
                 ,
                 Description = "行政部长请不删除",
@@ -2392,7 +2401,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "业务部长"
                 ,
                 Description = "业务部长请不删除",
@@ -2410,7 +2419,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "质量副总经理"
                 ,
                 Description = "质量副总经理请不删除",
@@ -2428,7 +2437,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "业务副总经理"
                 ,
                 Description = "业务副总经理请不删除",
@@ -2446,7 +2455,7 @@ namespace BugsBox.Pharmacy.Repository
                 ,
                 CreateTime = Now
                 ,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 Name = "总经理"
                 ,
                 Description = "总经理请不删除",
@@ -2471,19 +2480,19 @@ namespace BugsBox.Pharmacy.Repository
         {
             var nowTime = Now;
             context.Set<UserLog>().Add(new UserLog
-                {
+            {
 
 
-                    CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
-                    CreateTime = nowTime
+                CreateUserId = sysAdminID,
+                UpdateUserId = sysAdminID,
+                CreateTime = nowTime
                     ,
-                    UpdateTime = nowTime
+                UpdateTime = nowTime
                     ,
-                    Content = string.Format("系统自动创建数据库{0}", nowTime)
+                Content = string.Format("系统自动创建数据库{0}", nowTime)
                   ,
-                    StoreId = PharmacyServiceConfig.Config.CurrentStore.Id
-                });
+                StoreId = PharmacyServiceConfig.Config.CurrentStore.Id
+            });
             context.Commit();
         }
 
@@ -2492,7 +2501,7 @@ namespace BugsBox.Pharmacy.Repository
             DbSet<Department> dbset = context.Set<Department>();
             Department department = null;
             department = new Department();
-            department.Id = PharmacyServiceConfig.Config.CurrentStore.Id;
+            department.Id = sysDepartmentID;
             department.DepartmentId = Guid.Empty;
             department.Code = "QYGBM";
             department.Name = "药品经营企业名称";
@@ -2520,13 +2529,14 @@ namespace BugsBox.Pharmacy.Repository
         private Guid sysRoleID = Guid.NewGuid();
         private Guid adminRoleID = Guid.NewGuid();
         private Guid operatorRoleID = Guid.NewGuid();
-
+        private Guid sysAdminID = Guid.NewGuid();
+        private Guid sysDepartmentID = Guid.NewGuid();
         private void BuildApprovalFlowType(Db context)
         {
             ApprovalFlowType type = new ApprovalFlowType
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
                 UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
                 Id = Guid.NewGuid(),
@@ -2541,9 +2551,9 @@ namespace BugsBox.Pharmacy.Repository
             var node = new ApprovalFlowNode
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Decription = "供应商审批A流程节点一",
                 Name = "供应商审批A流程节点一",
@@ -2555,9 +2565,9 @@ namespace BugsBox.Pharmacy.Repository
             node = new ApprovalFlowNode
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Decription = "供应商审批A流程节点二",
                 Name = "供应商审批A流程节点二",
@@ -2570,9 +2580,9 @@ namespace BugsBox.Pharmacy.Repository
             type = new ApprovalFlowType
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Name = "供应商审批B流程",
                 ApprovalTypeValue = 1,
@@ -2581,12 +2591,28 @@ namespace BugsBox.Pharmacy.Repository
             };
             context.Set<ApprovalFlowType>().Add(type);
 
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "供应商审批B流程一",
+                Name = "供应商审批B流程一",
+                Order = 2,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
             type = new ApprovalFlowType
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Name = "采购商审批A流程",
                 ApprovalTypeValue = 2,
@@ -2595,12 +2621,27 @@ namespace BugsBox.Pharmacy.Repository
             };
             context.Set<ApprovalFlowType>().Add(type);
 
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "采购商审批A流程一",
+                Name = "采购商审批A流程一",
+                Order = 2,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
             type = new ApprovalFlowType
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Name = "采购商审批B流程",
                 ApprovalTypeValue = 2,
@@ -2608,13 +2649,27 @@ namespace BugsBox.Pharmacy.Repository
                 Deleted = false
             };
             context.Set<ApprovalFlowType>().Add(type);
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "采购商审批B流程一",
+                Name = "采购商审批B流程一",
+                Order = 2,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
 
             type = new ApprovalFlowType
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Name = "药品审批A流程",
                 ApprovalTypeValue = 3,
@@ -2627,9 +2682,9 @@ namespace BugsBox.Pharmacy.Repository
             node = new ApprovalFlowNode
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Decription = "药品审批A流程节点一",
                 Name = "药品审批A流程节点一",
@@ -2641,9 +2696,9 @@ namespace BugsBox.Pharmacy.Repository
             node = new ApprovalFlowNode
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Decription = "药品审批A流程节点二",
                 Name = "药品审批A流程节点二",
@@ -2656,12 +2711,12 @@ namespace BugsBox.Pharmacy.Repository
 
 
 
-             type = new ApprovalFlowType
+            type = new ApprovalFlowType
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Name = "供应商审批A流程解锁",
                 ApprovalTypeValue = 4,
@@ -2671,12 +2726,12 @@ namespace BugsBox.Pharmacy.Repository
             };
             context.Set<ApprovalFlowType>().Add(type);
 
-             node = new ApprovalFlowNode
+            node = new ApprovalFlowNode
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Decription = "供应商审批A流程解锁",
                 Name = "供应商审批A流程解锁节点一",
@@ -2688,9 +2743,9 @@ namespace BugsBox.Pharmacy.Repository
             node = new ApprovalFlowNode
             {
                 CreateTime = Now,
-                CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Decription = "供应商审批A流程解锁节点二",
                 Name = "供应商审批A流程解锁节点二",
@@ -2701,7 +2756,318 @@ namespace BugsBox.Pharmacy.Repository
             context.Set<ApprovalFlowNode>().Add(node);
 
 
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "客户解锁审批",
+                ApprovalTypeValue = 5,
+                Decription = "客户解锁审批",
+                Deleted = false
 
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "客户解锁审批节点一",
+                Name = "客户解锁审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "供货商解锁审批",
+                ApprovalTypeValue = 6,
+                Decription = "供货商解锁审批",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "供货商解锁审批节点一",
+                Name = "供货商解锁审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "药品修改审批",
+                ApprovalTypeValue = 7,
+                Decription = "药品修改审批",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "药品修改审批节点一",
+                Name = "药品修改审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "客户修改审批",
+                ApprovalTypeValue = 8,
+                Decription = "客户修改审批",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "客户修改审批节点一",
+                Name = "客户修改审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
+
+
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "供货商修改审批",
+                ApprovalTypeValue = 9,
+                Decription = "供货商修改审批",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "供货商修改审批节点一",
+                Name = "供货商修改审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
+
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "不合格药品审批",
+                ApprovalTypeValue = 10,
+                Decription = "不合格药品审批",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "不合格药品审批节点一",
+                Name = "不合格药品审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "药品报损审批",
+                ApprovalTypeValue = 11,
+                Decription = "药品报损审批",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "药品报损审批节点一",
+                Name = "药品报损审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
+
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "移库审批",
+                ApprovalTypeValue = 12,
+                Decription = "移库审批",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "移库审批节点一",
+                Name = "移库审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "委托车辆",
+                ApprovalTypeValue = 13,
+                Decription = "委托车辆",
+                Deleted = false
+
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "委托车辆节点一",
+                Name = "委托车辆节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
+
+
+            type = new ApprovalFlowType
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Name = "直调审批",
+                ApprovalTypeValue = 14,
+                Decription = "直调审批",
+                Deleted = false
+            };
+            context.Set<ApprovalFlowType>().Add(type);
+
+            node = new ApprovalFlowNode
+            {
+                CreateTime = Now,
+                CreateUserId = sysAdminID,
+                UpdateTime = Now,
+                UpdateUserId = sysAdminID,
+                Id = Guid.NewGuid(),
+                Decription = "直调审批节点一",
+                Name = "直调审批节点一",
+                Order = 1,
+                ApprovalFlowTypeId = type.Id,
+                RoleId = sysRoleID
+            };
+            context.Set<ApprovalFlowNode>().Add(node);
 
             #region 报警设置
 
@@ -2730,7 +3096,7 @@ namespace BugsBox.Pharmacy.Repository
 
             #endregion
 
-            context.Commit();;
+            context.Commit(); ;
         }
 
 
@@ -2740,7 +3106,7 @@ namespace BugsBox.Pharmacy.Repository
             List<BusinessScope> businessScopes = context.BusinessScopes.ToList();
             List<DrugCategory> drugCategories = context.DrugCategorys.ToList();
             List<DictionaryStorageType> dictionaryStorageTypes = context.DictionaryStorageTypes.ToList();
-            List<DictionaryMeasurementUnit> dictionaryMeasurementUnits=context.DictionaryMeasurementUnits.ToList();
+            List<DictionaryMeasurementUnit> dictionaryMeasurementUnits = context.DictionaryMeasurementUnits.ToList();
             List<DictionaryDosage> dictionaryDosages = context.DictionaryDosages.ToList();
             List<DictionarySpecification> dictionarySpecifications = context.DictionarySpecifications.ToList();
             List<SpecialDrugCategory> specialDrugCategorys = context.SpecialDrugCategorys.ToList();
@@ -2779,42 +3145,42 @@ namespace BugsBox.Pharmacy.Repository
                     SpecialDrugCategoryCode = specialDrugCategorys[j % specialDrugCategorys.Count].Name,
                     PurchaseManageCategoryDetailCode = purchaseManageCategoryDetails[j % purchaseManageCategoryDetails.Count].Name,
                     MedicalCategoryDetailCode = medicalCategoryDetails[j % medicalCategoryDetails.Count].Name,
-                    DictionaryPiecemealUnitCode = dictionaryPiecemealUnits[j % dictionaryPiecemealUnits.Count].Name, 
-                    Enabled = true, 
-                    IsLock=false,
-                    ApprovalStatus=Models.ApprovalStatus.Approvaled,
+                    DictionaryPiecemealUnitCode = dictionaryPiecemealUnits[j % dictionaryPiecemealUnits.Count].Name,
+                    Enabled = true,
+                    IsLock = false,
+                    ApprovalStatus = Models.ApprovalStatus.Approvaled,
                     UpdateTime = DateTime.Now,
-                    UpdateUserId= PharmacyServiceConfig.Config.CurrentStore.Id,
+                    UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
                     ApprovalDate = DateTime.Now,
                     GoodsType = GoodsType.DrugDomestic,
                     Package = packagingUnits[j % packagingUnits.Count].Name,
-                    WholeSalePrice=j,
-                    ValidRemark="无",
-                    ValidPeriod=12,
-                    TagPrice=13,
-                    SalePrice=j,
-                    RetailPrice=j,
-                    MinInventoryCount=1,
-                    MaxInventoryCount=10000,
-                    LowSalePrice=1,
-                    LockRemark="无",
-                    LimitedLowPrice=1,
-                    LimitedUpPrice=1,
-                    DictionaryUserDefinedTypeCode="无",
-                    DrugClinicalCategoryCode = drugClinicalCategorys[j % drugClinicalCategorys.Count].Name, 
-                    Origin="",
-                    PackageAmount=10,
+                    WholeSalePrice = j,
+                    ValidRemark = "无",
+                    ValidPeriod = 12,
+                    TagPrice = 13,
+                    SalePrice = j,
+                    RetailPrice = j,
+                    MinInventoryCount = 1,
+                    MaxInventoryCount = 10000,
+                    LowSalePrice = 1,
+                    LockRemark = "无",
+                    LimitedLowPrice = 1,
+                    LimitedUpPrice = 1,
+                    DictionaryUserDefinedTypeCode = "无",
+                    DrugClinicalCategoryCode = drugClinicalCategorys[j % drugClinicalCategorys.Count].Name,
+                    Origin = "",
+                    PackageAmount = 10,
                     PermitLicenseCode = "PermitCode",
-                    PermitOutDate=Now.AddYears(5),
-                    PermitDate=Now.AddYears(-2)
-               
+                    PermitOutDate = Now.AddYears(5),
+                    PermitDate = Now.AddYears(-2)
+
                 };
                 if (item.BusinessScopeCode == "中药饮片" || item.BusinessScopeCode == "中药材")
                 {
                     item.DictionaryDosageCode = "";
                     item.Origin = "合肥";
                 }
-                dbset.Add(item); 
+                dbset.Add(item);
             }
             context.Commit();
         }
@@ -2874,6 +3240,18 @@ namespace BugsBox.Pharmacy.Repository
             item.StoreId = Guid.NewGuid();
 
             dbset.Add(item);
+
+
+            item = new District();
+            item.Id = Guid.NewGuid();
+            item.Name = "安徽";
+            item.Decription = "安徽";
+            item.Code = "0003";
+            item.Enabled = true;
+            item.StoreId = Guid.NewGuid();
+
+            dbset.Add(item);
+
             context.Commit();
 
         }
@@ -2885,7 +3263,7 @@ namespace BugsBox.Pharmacy.Repository
             Guid DistrictId = d.Fetch(r => 1 == 1).First().Id;
 
             UnitTypeRepository u = new UnitTypeRepository(context);
-            Guid UnitTypeId =u.Fetch(r => 1 == 1).First().Id;
+            Guid UnitTypeId = u.Fetch(r => 1 == 1).First().Id;
 
             DbSet<PurchaseUnit> dbset = context.Set<PurchaseUnit>();
             PurchaseUnit item = null;
@@ -2923,7 +3301,7 @@ namespace BugsBox.Pharmacy.Repository
                 item.IsInstrumentsProductionLicenseOutDate = false;
                 item.IsInstrumentsBusinessLicenseOutDate = false;
 
-                item.IsOutDate = false; 
+                item.IsOutDate = false;
                 item.ApprovalStatus = ApprovalStatus.Approvaled;
                 item.IsApproval = true;
                 item.Enabled = true;
@@ -3107,9 +3485,9 @@ namespace BugsBox.Pharmacy.Repository
                 item.PurchaseInInventeryOrderDetailId = Guid.Parse("56bd1155-b95f-46fe-9f0e-1cbf6a24bfd2");
                 //item.PurchaseDeliveryRecordId = PurchaseDeliveryRecordId; 
                 dbset.Add(item);
-            } 
+            }
             context.Commit();
-            
+
         }
 
 
@@ -3126,7 +3504,7 @@ namespace BugsBox.Pharmacy.Repository
             {
                 item = new DrugMaintainRecord();
                 item.Id = Guid.NewGuid();
-                item.BillDocumentNo = "00000"+j;
+                item.BillDocumentNo = "00000" + j;
                 item.ExpirationDate = DateTime.Now;
                 item.DrugMaintainTypeValue = 0;
                 item.CompleteState = 0;
@@ -3134,14 +3512,14 @@ namespace BugsBox.Pharmacy.Repository
                 item.UpdateTime = DateTime.Now;
                 item.CreateUserId = Guid.NewGuid();
                 item.UpdateUserId = Guid.NewGuid();
-                item.Deleted = false; 
+                item.Deleted = false;
                 dbset.Add(item);
 
 
                 for (int i = 0; i < 3 + j; i++)
                 {
                     detail = new DrugMaintainRecordDetail();
-                    detail.Id = Guid.NewGuid(); 
+                    detail.Id = Guid.NewGuid();
                     detail.BillDocumentNo = item.BillDocumentNo;
 
                     DrugInventoryRecord dir = d.Fetch(r => 1 == 1).OrderBy(r => r.Id).Take(i + 1).OrderByDescending(r => r.Id).FirstOrDefault();
@@ -3151,15 +3529,15 @@ namespace BugsBox.Pharmacy.Repository
                     detail.OutValidDate = DateTime.Now;
                     detail.CurrentInventoryCount = 500;
                     detail.MaintainCount = 200;
-                    detail.Deleted = false; 
+                    detail.Deleted = false;
                     detail.Price = i * 100;
                     detail.PruductDate = DateTime.Now;
-                    detail.OutValidDate = DateTime.Now; 
+                    detail.OutValidDate = DateTime.Now;
 
                     dbset2.Add(detail);
                 }
             }
-           
+
             context.Commit();
 
         }
