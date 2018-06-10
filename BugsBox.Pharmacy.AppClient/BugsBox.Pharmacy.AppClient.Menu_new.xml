@@ -41,9 +41,6 @@
       </Menu>
       <Menu id="0301" Title="销售管理" Hotkeys="" Name="" Image="" Params="" DockState="" ModuleKey="">
         <Menu id="0501" Title="销售订单" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderEdit" Image="" Params="" DockState="" ModuleKey="新建销售单[窗体]"></Menu>
-
-        <!--<Menu id="05011" Title="销售订单（新）" Hotkeys="" Name="UI.Forms.SalesBusiness.Form_SalesOrder" Image="" Params="" DockState="" ModuleKey="新建销售单[窗体]"></Menu>-->
-
         <Menu id="050601" Title="销售审核" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Image="" Params="Waitting" DockState="" ModuleKey="销售审核[窗体]"></Menu>
         <Menu id="0502" Title="销售订单查询" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderIndex" Image="" Params="" DockState="" ModuleKey="销售订单查询[窗体]"></Menu>
         <Menu id="050602" Title="销售结算" Hotkeys="" Name="UI.Forms.SalesBusiness.FormSalesOrderCenter" Image="" Params="Approved" DockState="" ModuleKey="销售结算[窗体]"></Menu>

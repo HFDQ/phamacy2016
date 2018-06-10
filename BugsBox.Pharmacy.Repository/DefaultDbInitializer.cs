@@ -2463,6 +2463,25 @@ namespace BugsBox.Pharmacy.Repository
                 UpdateTime = Now
             };
             dbset.Add(role);
+
+            //33	总经理
+            role = new Role
+            {
+                Id = Guid.NewGuid()
+                ,
+                Code = "3004"
+                ,
+                CreateTime = Now
+                ,
+                CreateUserId = sysAdminID,
+                Name = "销售员"
+                ,
+                Description = "总经理请不删除",
+                StoreId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateTime = Now
+            };
+            dbset.Add(role);
+
             context.Commit();
 
         }

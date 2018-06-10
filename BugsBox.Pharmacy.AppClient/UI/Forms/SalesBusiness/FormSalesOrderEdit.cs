@@ -470,7 +470,13 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
             SetGridColumnVisible();
             string msg = string.Empty;
             userList = PharmacyDatabaseService.GetAllUsers(out msg).ToList();
-            Guid roleGuid = this.PharmacyDatabaseService.AllRoles(out msg).Where(r => r.Name.Contains(_salerRoleName)).FirstOrDefault().Id;
+            var role = this.PharmacyDatabaseService.AllRoles(out msg).Where(r => r.Name.Contains(_salerRoleName)).FirstOrDefault();
+            if (role == null)
+            {
+                MessageBox.Show("请添加销售员角色"); return;
+
+            }
+            Guid roleGuid = role.Id;
             List<RoleWithUser> RoleWList = PharmacyDatabaseService.AllRoleWithUsers(out msg).Where(r => r.RoleId.Equals(roleGuid)).ToList();
             var u = from i in RoleWList join k in userList on i.UserId equals k.Id select k;
             userList = u.ToList();
