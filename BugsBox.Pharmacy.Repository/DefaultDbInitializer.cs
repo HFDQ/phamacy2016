@@ -1597,8 +1597,8 @@ namespace BugsBox.Pharmacy.Repository
             employee.CardDate = Now.AddYears(+5);
             employee.CardNo = "CardNo";
             employee.CreateTime = Now;
-            employee.CreateUserId = PharmacyServiceConfig.Config.CurrentStore.Id;
-            employee.DepartmentId = PharmacyServiceConfig.Config.CurrentStore.Id;
+            employee.CreateUserId = sysAdminID;
+            employee.DepartmentId = sysDepartmentID;
             employee.Duty = "系统管理员";
             employee.Education = "Education";
             employee.Email = "Email";
@@ -1613,7 +1613,7 @@ namespace BugsBox.Pharmacy.Repository
             employee.Specility = "Specility";
             employee.StoreId = PharmacyServiceConfig.Config.CurrentStore.Id;
             employee.UpdateTime = Now;
-            employee.UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id;
+            employee.UpdateUserId = sysAdminID;
             employee.WorkTime = Now;
             employee.Enabled = true;
             employee.OutDate = Now.AddYears(50);
@@ -2538,7 +2538,7 @@ namespace BugsBox.Pharmacy.Repository
                 CreateTime = Now,
                 CreateUserId = sysAdminID,
                 UpdateTime = Now,
-                UpdateUserId = PharmacyServiceConfig.Config.CurrentStore.Id,
+                UpdateUserId = sysAdminID,
                 Id = Guid.NewGuid(),
                 Name = "供应商审批A流程",
                 ApprovalTypeValue = 1,
