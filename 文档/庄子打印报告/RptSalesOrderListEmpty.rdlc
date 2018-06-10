@@ -1829,7 +1829,7 @@ End Function</Code>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>地址：</Value>
+                  <Value>地址：安徽省蒙城县双涧镇工业功能区</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>黑体</FontFamily>
@@ -1865,7 +1865,7 @@ End Function</Code>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>电话：</Value>
+                  <Value>电话：0558-7067205</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>黑体</FontFamily>
@@ -2245,7 +2245,7 @@ End Function</Code>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>投诉电话：
+                  <Value>投诉电话:0558-7067205
 </Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
