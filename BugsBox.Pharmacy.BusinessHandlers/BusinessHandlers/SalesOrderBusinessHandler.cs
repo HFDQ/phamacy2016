@@ -2066,9 +2066,10 @@ namespace BugsBox.Pharmacy.BusinessHandlers
 
             BusinessLicense BusinessLicense = RepositoryProvider.BusinessLicenseRepository.Get(purchaseUnit.BusinessLicenseId);
 
-            var re = from i in a.SalesOrderDetails.OrderBy(r => r.Index)//依据开单顺序排序 
+            var re = from i in a.SalesOrderDetails.Where(o => !o.Deleted).OrderBy(r => r.Index)//依据开单顺序排序 
                      join invent in this.RepositoryProvider.DrugInventoryRecordRepository.Queryable on i.DrugInventoryRecordID equals invent.Id
                      join d in this.RepositoryProvider.DrugInfoRepository.Queryable on invent.DrugInfoId equals d.Id
+                     where !i.Deleted && !d.Deleted
                      select new Business.Models.SalesOrderDetailForVATModel
                      {
                          Amount = i.Amount,

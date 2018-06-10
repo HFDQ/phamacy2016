@@ -27,10 +27,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
             {
                 Initial(args);
             }
-            
+
         }
 
-        private void Initial(object[] args=null)
+        private void Initial(object[] args = null)
         {
             if (!DesignMode)
             {
@@ -56,7 +56,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
                             {
                                 searchFields.Add("Name");
                             }
-                           
+
                         }
                         else
                         {
@@ -65,7 +65,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.BaseForm
                         if (args.Length > 2)
                         {
                             operationActions = args[2].ToString().Split('|').ToList();
-                            foreach(var o in operationActions)
+                            foreach (var o in operationActions)
                             {
                                 if (!(o == "Add" || o == "Edit" || o == "Search"))
                                 {
