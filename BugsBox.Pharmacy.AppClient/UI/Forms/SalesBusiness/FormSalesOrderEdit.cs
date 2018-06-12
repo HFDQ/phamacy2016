@@ -253,7 +253,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
                 if (e.RowIndex < 0) return;
                 if ("删除".Equals(this.dgvDrugDetailList.Columns[e.ColumnIndex].Name))
                 {
-                    newList.RemoveAt(e.RowIndex);
+                    SalesOrderDetail detail = this.dgvDrugDetailList.CurrentRow.DataBoundItem as SalesOrderDetail;
+
+                    newList.Remove(detail);
+
                     _drugInventoryRecordlList.RemoveAt(e.RowIndex);
                     this.dgvDrugDetailList.DataSource = null;
                     this.dgvDrugDetailList.DataSource = newList;
