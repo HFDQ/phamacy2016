@@ -257,7 +257,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.SalesBusiness
 
                     newList.Remove(detail);
 
-                    _drugInventoryRecordlList.RemoveAt(e.RowIndex);
+                    _drugInventoryRecordlList.Remove(_drugInventoryRecordlList.FirstOrDefault(o => o.Id == detail.DrugInventoryRecordID));
+
                     this.dgvDrugDetailList.DataSource = null;
                     this.dgvDrugDetailList.DataSource = newList;
                     decimal m = newList.Where(r => r.Deleted == false).Sum(r => r.ActualUnitPrice * r.Amount);
