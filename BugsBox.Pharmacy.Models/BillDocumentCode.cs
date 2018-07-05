@@ -54,7 +54,7 @@ namespace BugsBox.Pharmacy.Models
         /// </summary>
         [Required]
         [DataMember]
-        [MaxLength(20)]
+        [MaxLength(30)]
         [MinLength(1)]
         public string Code { get; set; }
 
