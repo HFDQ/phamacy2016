@@ -57,7 +57,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private PurchaseCommonEntity _receivingOrder;
         string msg = string.Empty;
-        bool isCreate = true;       
+        bool isCreate = true;
         List<User> Listuser = new List<User>();
         BaseForm.BasicInfoRightMenu Bcms = null;
 
@@ -65,7 +65,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         bool isSpecialDrug = false;
 
         bool IsUploadPic = false;
-        
+
         #endregion  私有属性定义
 
         #region 数据初始化
@@ -86,7 +86,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 ex = new Exception("初始化控件数据出错" + ex.Message, ex);
                 Log.Error(ex);
                 //MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                MessageBox.Show(this.Text+ex.Message,"错误" , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -95,7 +95,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         /// </summary>
         private void InitControl()
         {
-                this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoGenerateColumns = false;
         }
 
         #endregion
@@ -111,7 +111,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             System.Xml.XmlNodeList xmlNode = xmlDocument.SelectNodes("/SalePriceType/SupplyDrugType");
             SupplyDrugType = xmlNode.Count <= 0 ? 0 : Convert.ToInt16(xmlNode[0].Attributes[0].Value);
             System.Xml.XmlNodeList xmlNode2 = xmlDocument.SelectNodes("/SalePriceType/IsChineseDrugNeedOutValidDate");
-            this.IsChineseDrugNeedOutValidDate = xmlNode2.Count <= 0 ? false : Convert.ToInt16(xmlNode2[0].Attributes[0].Value)==1;
+            this.IsChineseDrugNeedOutValidDate = xmlNode2.Count <= 0 ? false : Convert.ToInt16(xmlNode2[0].Attributes[0].Value) == 1;
 
             CellDataValidBackColor = Decription.DefaultCellStyle.BackColor;
             InitControlData();
@@ -123,21 +123,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.Bcms.InsertSupplyUnitBasicInfo();
 
             this.dataGridView1.CellMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_CellMouseClick);
-            this.dataGridView1.CellEndEdit+=dataGridView1_CellEndEdit;
-            
-            this.dataGridView1.RowPostPaint += delegate(object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
+            this.dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
+
+            this.dataGridView1.RowPostPaint += delegate (object o, DataGridViewRowPostPaintEventArgs ex) { DataGridViewOperator.SetRowNumber((DataGridView)o, ex); };
         }
 
         void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
-            var c=this.dataGridView1.Rows[e.RowIndex].DataBoundItem;
+            var c = this.dataGridView1.Rows[e.RowIndex].DataBoundItem;
             if (c is PurchaseCheckingOrderDetailEntity)
             {
                 PurchaseCheckingOrderDetailEntity pcod = c as PurchaseCheckingOrderDetailEntity;
                 this.Bcms.DrugId = pcod.DrugInfoId;
             }
-            else if(c is PurchaseReceivingOrderDetailEntity)
+            else if (c is PurchaseReceivingOrderDetailEntity)
             {
                 PurchaseReceivingOrderDetailEntity prod = c as PurchaseReceivingOrderDetailEntity;
                 this.Bcms.DrugId = prod.DrugInfoId;
@@ -146,7 +146,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private void RecordOperation(int type)
         {
-            
+
         }
 
         //查询验收单
@@ -154,17 +154,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             : this()
         {
             isCreate = false;
-             PurchaseCommonEntity = order;
-             PurchaseCheckingOrderDetails = this.PharmacyDatabaseService.GetPurchaseCheckingOrderDetails(out msg, order.Id).ToList();
+            PurchaseCommonEntity = order;
+            PurchaseCheckingOrderDetails = this.PharmacyDatabaseService.GetPurchaseCheckingOrderDetails(out msg, order.Id).ToList();
 
-             if (this.PurchaseCheckingOrderDetails.Count(r => r.BusinessScopeCode.Contains("医疗器械")) == this.PurchaseCheckingOrderDetails.Count)
-             {
-                 this.GoogsTypeClass = Common.GoodsTypeClass.医疗器械;
-                 this.LicensePermissionNumber.HeaderText = "注册证或备案凭证编号";
-                 this.Decription.Visible = false;
-             }
+            if (this.PurchaseCheckingOrderDetails.Count(r => r.BusinessScopeCode.Contains("医疗器械")) == this.PurchaseCheckingOrderDetails.Count)
+            {
+                this.GoogsTypeClass = Common.GoodsTypeClass.医疗器械;
+                this.LicensePermissionNumber.HeaderText = "注册证或备案凭证编号";
+                this.Decription.Visible = false;
+            }
 
-             tsbtnInInventory.Visible = this.Authorize(ModuleKeys.PurchaseInInventory);
+            tsbtnInInventory.Visible = this.Authorize(ModuleKeys.PurchaseInInventory);
             if (PurchaseCommonEntity.OrderStatus != OrderStatus.PurchaseCheck.GetHashCode())
             {
                 tsbtnInInventory.Visible = false;
@@ -179,7 +179,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AllowUserToAddRows = false;
-            
+
             colAmount.DataPropertyName = "ArrivalAmount";
             this.dataGridView1.Rows.Clear();
             this.dataGridView1.DataSource = PurchaseCheckingOrderDetails.ToList();
@@ -236,15 +236,15 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             }
             if (tsbtnAccept.Visible == true)
             {
-                tsbtnAccept.Visible = this.Authorize(ModuleKeys.PurchaseChecking);                
+                tsbtnAccept.Visible = this.Authorize(ModuleKeys.PurchaseChecking);
                 button2.Visible = this.Authorize(ModuleKeys.PurchaseChecking);
             }
             if (tsbtnInInventory.Visible == true)
             {
-                tsbtnInInventory.Visible = this.Authorize(ModuleKeys.PurchaseInInventory);                
+                tsbtnInInventory.Visible = this.Authorize(ModuleKeys.PurchaseInInventory);
                 button2.Visible = false;
             }
-            
+
             button2.Visible = false;
             btnAccept.Visible = false;
         }
@@ -257,7 +257,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         /// <param name="receivingOrderDetails">收货单详细</param>
         public FormCheckOrder(PurchaseCommonEntity order, List<PurchaseReceivingOrderDetailEntity> receivingOrderDetails)
             : this()
-        { 
+        {
             if (order == null)
             {
                 var ex = new ArgumentNullException("采购单对象不为空");
@@ -288,7 +288,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             {
                 //this.Bcms.InserMenu("一键提取产地信息", () =>
                 //{
-                   
+
                 //});
             }
 
@@ -320,7 +320,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             this.lblOrderCode.Text = this.PurchaseCommonEntity.DocumentNumber;
             //订单明细绑定
             bList = new BindingList<PurchaseReceivingOrderDetailEntity>(PurchaseReceivingOrderDetailEntitys);
-            bList.ForEach(r => { r.QualifiedAmount = r.ReceiveAmount;});
+            bList.ForEach(r => { r.QualifiedAmount = r.ReceiveAmount; });
 
             if (this.bList.Count(r => r.BusinessScopeCode.Contains("医疗器械")) == this.bList.Count)
             {
@@ -331,8 +331,8 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
             this.dataGridView1.DataSource = bList;
 
-            
-                
+
+
             foreach (DataGridViewRow r in dataGridView1.Rows)
             {
                 r.Cells[colQualifiedAmount.Name].Value = r.Cells[ReceiveAmount.Name].Value;
@@ -366,10 +366,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 r.Cells[this.colArrivalDateTime.Name].Value = this._receivingOrder.OperateTime;
             }
         }
-            
-        
 
-        
+
+
+
         /// <summary>
         /// 收集控件数据与构建数据
         /// </summary>
@@ -378,7 +378,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             try
             {
                 bool validResult = true;
-                
+
                 PurchaseCommonEntity.Description = this.textBoxPurchaseCheckingOrderDescription.Text;
                 PurchaseCommonEntity.OperateUserId = AppClientContext.CurrentUser.Id;
                 PurchaseCommonEntity.OperateTime = DateTime.Now;
@@ -389,16 +389,17 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 PurchaseReceivingOrderDetailEntity purchaseOrderDetailEntity = null;
 
                 if (rows.Count > 0)
-                {                   
+                {
                     foreach (DataGridViewRow row in rows)
                     {
                         DateTime inputOutValidDate;
                         DateTime inputPruductDate;
 
                         var cellPruductDate = row.Cells[colPruductDate.Name] as DataGridViewTextBoxCell;
-                        var cellOutValidDate = row.Cells[colOutValidDate.Name] as DataGridViewTextBoxCell;        
-                                        
-                        cellOutValidDate.Value =this.isChineseDrug && (!this.IsChineseDrugNeedOutValidDate) ? "20501231":cellOutValidDate.Value;
+                        var cellOutValidDate = row.Cells[colOutValidDate.Name] as DataGridViewTextBoxCell;
+                        var Origin = row.Cells[Decription.Name] as DataGridViewTextBoxCell;
+
+                        cellOutValidDate.Value = this.isChineseDrug && (!this.IsChineseDrugNeedOutValidDate) ? "20501231" : cellOutValidDate.Value;
 
                         if (cellOutValidDate.Value == null)
                         {
@@ -412,24 +413,24 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                             }
                             return false;
                         }
-                        
-                        bool bOutValidDate = DateTime.TryParseExact(cellOutValidDate.Value.ToString(), "yyyyMMdd", null,System.Globalization.DateTimeStyles.None,out inputOutValidDate);
+
+                        bool bOutValidDate = DateTime.TryParseExact(cellOutValidDate.Value.ToString(), "yyyyMMdd", null, System.Globalization.DateTimeStyles.None, out inputOutValidDate);
 
                         if (!bOutValidDate)
                         {
                             MessageBox.Show("请填写完整八位码效期，如：20140101"); return false;
                         }
 
-                        Guid drugInfoID=bList[row.Index].DrugInfoId;
+                        Guid drugInfoID = bList[row.Index].DrugInfoId;
                         int validMonth = bList[row.Index].ValidMonth;
 
-                        inputPruductDate =this.isChineseDrug?DateTime.Now.Date.AddMonths(-1): inputOutValidDate.AddMonths(-validMonth);
+                        inputPruductDate = this.isChineseDrug ? DateTime.Now.Date.AddMonths(-1) : inputOutValidDate.AddMonths(-validMonth);
 
 
 
                         if (inputPruductDate > DateTime.Now.Date)
                         {
-                            if (MessageBox.Show(bList[row.Index].ProductGeneralName + "：药品有效期为" + validMonth.ToString() + "月,您输入的效期截至为：" + inputOutValidDate.Date + "生产日期超出当前日期，需要修改效期截至日吗？", "提示", MessageBoxButtons.OKCancel)==System.Windows.Forms.DialogResult.OK)
+                            if (MessageBox.Show(bList[row.Index].ProductGeneralName + "：药品有效期为" + validMonth.ToString() + "月,您输入的效期截至为：" + inputOutValidDate.Date + "生产日期超出当前日期，需要修改效期截至日吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                             {
                                 return false;
                             }
@@ -473,8 +474,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                             var cellAmount = row.Cells[colAmount.Name];
                             decimal inputAmount = Decimal.Parse(cellAmount.Value.ToString());
                             purchaseCheckingOrderDetail.ArrivalAmount = inputAmount;
-                            purchaseCheckingOrderDetail.ReceiveAmount=Convert.ToDecimal(row.Cells[ReceiveAmount.Name].Value);
-                            purchaseCheckingOrderDetail.UnQualifiedAmount = Convert.ToDecimal(row.Cells[ UnqualificationNum.Name ].Value);
+                            purchaseCheckingOrderDetail.ReceiveAmount = Convert.ToDecimal(row.Cells[ReceiveAmount.Name].Value);
+                            purchaseCheckingOrderDetail.UnQualifiedAmount = Convert.ToDecimal(row.Cells[UnqualificationNum.Name].Value);
+                            purchaseCheckingOrderDetail.Origin = Origin.Value.ToString();
                             // 批号 
                             var cellBatchNumber = row.Cells[colBatchNumber.Name] as DataGridViewTextBoxCell;
                             string inputBacthNumber = cellBatchNumber.Value == null
@@ -498,12 +500,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                                 cellBatchNumber.Style.BackColor = CellDataValidBackColor;
                                 validResult = validResult & true;
                             }
-                           
+
                             // 描述
                             var cellDescription = row.Cells[Decription.Name] as DataGridViewTextBoxCell;
                             string inputDescription = cellDescription.Value == null
                                 ? string.Empty
-                                : cellDescription.Value.ToString(); 
+                                : cellDescription.Value.ToString();
                             purchaseCheckingOrderDetail.Decription = string.IsNullOrWhiteSpace(inputDescription)
                                 ? ""
                                 : inputDescription;
@@ -512,40 +514,40 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                             purchaseCheckingOrderDetail.DrugInfoId = purchaseOrderDetailEntity.DrugInfoId;
 
                             //生产日期与过期日期必须小于过期日期
-                            
-                            if ( cellOutValidDate == null)
+
+                            if (cellOutValidDate == null)
                             {
                                 cellOutValidDate.Style.BackColor = CellDataErrorBackColor;
                                 validResult = validResult & false;
                             }
                             else
                             {
-                                if ( inputOutValidDate <= Now)//过期日期小于不嫌
-                                {                                    
+                                if (inputOutValidDate <= Now)//过期日期小于不嫌
+                                {
                                     cellOutValidDate.Style.BackColor = CellDataErrorBackColor;
                                     validResult = validResult & false;
                                 }
                                 else
-                                {                                    
+                                {
                                     cellOutValidDate.Style.BackColor = CellDataValidBackColor;
                                     purchaseCheckingOrderDetail.PruductDate = inputPruductDate;
                                     purchaseCheckingOrderDetail.OutValidDate = inputOutValidDate;
                                     validResult = validResult & true;
                                 }
                             }
-                             
+
                             //验收合格数量处理
                             var cellQualifiedAmount = row.Cells[colQualifiedAmount.Name] as DataGridViewTextBoxCell;
-                            
+
                             decimal inputQualifiedAmount = Decimal.Parse(cellQualifiedAmount.FormattedValue.ToString());
-                            
+
                             purchaseCheckingOrderDetail.QualifiedAmount = inputQualifiedAmount;
                             cellQualifiedAmount.Style.BackColor = CellDataValidBackColor;
                             validResult = validResult & true;
 
                             PurchaseCheckingOrderDetails.Add(purchaseCheckingOrderDetail);
                             validResult = validResult & true;
-                            
+
                             if (inputQualifiedAmount == 0)
                             {
                                 var cellUnqualificationAmount = row.Cells[UnqualificationNum.Name] as DataGridViewTextBoxCell;
@@ -561,16 +563,16 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                                 drugUn.staSignDate = DateTime.Now;
                                 drugUn.conclusionDate = DateTime.Now;
                                 drugUn.Id = Guid.NewGuid();
-                                drugUn.creater =PharmacyDatabaseService.GetEmployeeByUserId(out msg, AppClientContext.CurrentUser.Id).Name;
+                                drugUn.creater = PharmacyDatabaseService.GetEmployeeByUserId(out msg, AppClientContext.CurrentUser.Id).Name;
                                 drugUn.proc = 0;
                                 drugUn.DocumentNumber = PharmacyDatabaseService.GenerateBillDocumentCodeByTypeValue(out msg, (int)BillDocumentType.DrugUndeterminate).Code;
                                 drugUn.OrderDocumentID = _receivingOrder.PurchaseOrderDocumentNumber;
-                                drugUn.DrugInfoID=bList[row.Index].DrugInfoId;
+                                drugUn.DrugInfoID = bList[row.Index].DrugInfoId;
                                 drugUn.produceDate = inputPruductDate;
                                 drugUn.ExpireDate = inputOutValidDate;
                                 drugUn.supplyer = _receivingOrder.SupplyUnitName;
                                 drugUn.wareHouse = "待处理药品库";
-                                drugUn.PurchasePrice=bList[row.Index].PurchasePrice;
+                                drugUn.PurchasePrice = bList[row.Index].PurchasePrice;
                                 drugUn.UnqualificationApprovalID = new Guid();
                                 drugUn.InventoryID = new Guid();
                                 drugUn.DosageType = bList[row.Index].DictionaryDosageCode;
@@ -580,9 +582,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                                 ListUndeterminate.Add(drugUn);
                             }
                         }
-                    }    
-                
-                    PurchaseCommonEntity.OrderStatus =_receivingOrder.OrderStatus==(int)Models.OrderStatus.purchaseMReceiving? _receivingOrder.OrderStatus:OrderStatus.PurchaseCheck.GetHashCode();
+                    }
+
+                    PurchaseCommonEntity.OrderStatus = _receivingOrder.OrderStatus == (int)Models.OrderStatus.purchaseMReceiving ? _receivingOrder.OrderStatus : OrderStatus.PurchaseCheck.GetHashCode();
                 }
                 return validResult;
             }
@@ -591,7 +593,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 ex = new Exception("收集控件数据与构建数据出错" + ex.Message, ex);
                 Log.Error(ex);
                 //MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                MessageBox.Show(this.Text+ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
         }
@@ -625,7 +627,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         /// </summary>
         /// <returns></returns>
         private bool IsUpLoadPicCheck()
-        {            
+        {
             if (SupplyDrugType == 0) return true; //节点不存在或者为0，则不检测，否则需要检测图片是否上传
 
             if (!this.IsUploadPic)
@@ -644,10 +646,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             //检测收货单图片是否上传
             if (!this.IsUpLoadPicCheck()) return;
 
-            btnAccept.Enabled=tsbtnAccept.Enabled = false;
+            btnAccept.Enabled = tsbtnAccept.Enabled = false;
             this.dataGridView1.EndEdit();
             this.ListUndeterminate.Clear();
-            
+
             if (this.dataGridView1.Rows.Count <= 0)
             {
                 MessageBox.Show("记录数量为0，无法提交验货单！请关闭本界面后再次进入！");
@@ -665,7 +667,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 if (CellectAndBuildData())
                 {
                     msg = string.Empty;
-                    
+
                     if (this.isSpecialDrug)
                     {
                         MessageBox.Show("本验收单包含特殊管理药品，需要双人验收，请第二验收人登陆验收！");
@@ -677,28 +679,28 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                             return;
                         }
                     }
-                    string resultCode = PharmacyDatabaseService.CreatePurchaseCheckingOrderByEnity(out msg, PurchaseCommonEntity,PurchaseCheckingOrderDetails.ToArray(),ListUndeterminate);
+                    string resultCode = PharmacyDatabaseService.CreatePurchaseCheckingOrderByEnity(out msg, PurchaseCommonEntity, PurchaseCheckingOrderDetails.ToArray(), ListUndeterminate);
 
                     if (!string.IsNullOrWhiteSpace(resultCode) && string.IsNullOrEmpty(msg))
                     {
                         lblOrderCode.Text = resultCode;
-                        lblOrderStatus.Text = EnumHelper<OrderStatus>.GetDisplayValue((OrderStatus)PurchaseCommonEntity.OrderStatus);                        
-                        MessageBox.Show(this.Text+"验收完成","提示" , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        this.PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "执行采购单入库前质量复核操作成功，采购单号："+ PurchaseCommonEntity.PurchaseOrderDocumentNumber);
+                        lblOrderStatus.Text = EnumHelper<OrderStatus>.GetDisplayValue((OrderStatus)PurchaseCommonEntity.OrderStatus);
+                        MessageBox.Show(this.Text + "验收完成", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "执行采购单入库前质量复核操作成功，采购单号：" + PurchaseCommonEntity.PurchaseOrderDocumentNumber);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show(this.Text+string.Format("验收失败{0}", msg),"错误" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(this.Text + string.Format("验收失败{0}", msg), "错误", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.PharmacyDatabaseService.WriteLog(AppClientContext.CurrentUser.Id, "执行采购单入库前质量复核操作失败，采购单号：" + PurchaseCommonEntity.PurchaseOrderDocumentNumber);
                         return;
                     }
                 }
                 else
                 {
-                    MessageBox.Show(this.Text+"您填的数据有误,你更正红色单元格内的数据", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    btnAccept.Enabled=tsbtnAccept.Enabled = true;
+                    MessageBox.Show(this.Text + "您填的数据有误,你更正红色单元格内的数据", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    btnAccept.Enabled = tsbtnAccept.Enabled = true;
                 }
 
             }
@@ -706,7 +708,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             {
                 ex = new Exception("验收失败,请联系管理员" + ex.Message, ex);
                 Log.Error(ex);
-                MessageBox.Show(this.Text+ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -714,7 +716,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
-            
+
         }
 
         private void tsbtnInInventory_Click(object sender, EventArgs e)
@@ -729,14 +731,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                     var pid = this.PharmacyDatabaseService.GetPurchaseInInventeryOrderDetails(out msg, c.Id);
                     foreach (var i in pid)
                     {
-                        var u=receivingOrderDetails.Where(r => r.DrugInfoId == i.DrugInfoId && r.ArrivalAmount == i.ArrivalAmount && r.BatchNumber==i.BatchNumber && r.ArrivalDateTime==i.ArrivalDateTime).FirstOrDefault();
+                        var originBatchNumber = i.BatchNumber;
+                        if (i.BatchNumber.IndexOf("(") > 0)
+                        {
+                            originBatchNumber = i.BatchNumber.Substring(0, i.BatchNumber.IndexOf("("));
+                        }
+
+
+                        var u = receivingOrderDetails.Where(r => r.DrugInfoId == i.DrugInfoId && r.ArrivalAmount == i.ArrivalAmount && r.BatchNumber == originBatchNumber && r.ArrivalDateTime == i.ArrivalDateTime).FirstOrDefault();
                         if (u != null)
                         {
                             receivingOrderDetails.Remove(u);
                         }
                     }
                 }
-                FormInInventory form = new FormInInventory(order, receivingOrderDetails.Where(r=>r.QualifiedAmount>0).ToList());
+                FormInInventory form = new FormInInventory(order, receivingOrderDetails.Where(r => r.QualifiedAmount > 0).ToList());
                 tsbtnInInventory.Enabled = (form.ShowDialog() != DialogResult.OK);
 
             }
@@ -744,7 +753,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             {
                 ex = new Exception("打开验收窗体失败" + ex.Message);
                 //MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                MessageBox.Show(this.Text+ex.Message,"错误" , MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(this.Text + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -801,7 +810,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                     catch (Exception ex)
                     {
                         ex = new Exception("打开退货窗体失败" + ex.Message);
-                        MessageBox.Show(this.Text+ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show(this.Text + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                 }
                 else
@@ -877,15 +886,15 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 }
             }
         }
-                
+
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (bList == null) return;            
+            if (bList == null) return;
             PurchaseReceivingOrderDetailEntity pd = this.dataGridView1.Rows[e.RowIndex].DataBoundItem as PurchaseReceivingOrderDetailEntity;
             #region 合格数量填写
             if (this.dataGridView1.Columns[e.ColumnIndex].Name == this.colQualifiedAmount.Name)
             {
-                if (pd.UnQualifiedAmount!=0)
+                if (pd.UnQualifiedAmount != 0)
                 {
                     MessageBox.Show("验收合格品种应与疑问品种需分行设定！");
                     pd.QualifiedAmount = 0;
@@ -895,7 +904,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 {
                     MessageBox.Show("合格数量小于零！"); return;
                 }
-                if (pd.QualifiedAmount < pd.ReceiveAmount && pd.QualifiedAmount>=0)
+                if (pd.QualifiedAmount < pd.ReceiveAmount && pd.QualifiedAmount >= 0)
                 {
                     if (MessageBox.Show("收货数量大于该验收数量，是否需要分行设定？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                     {
@@ -939,9 +948,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                     pd.UnQualifiedAmount = 0;
                     return;
                 }
-                if (pd.UnQualifiedAmount>0)
+                if (pd.UnQualifiedAmount > 0)
                 {
-                    if(pd.UnQualifiedAmount < pd.ReceiveAmount){
+                    if (pd.UnQualifiedAmount < pd.ReceiveAmount)
+                    {
                         MessageBox.Show("收货数量大于该疑问品种数量，是否需要分行设定？", "提示");
                         PurchaseReceivingOrderDetailEntity p = new PurchaseReceivingOrderDetailEntity();
                         p.ProductGeneralName = pd.ProductGeneralName;
@@ -974,11 +984,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                     this.dataGridView1.CurrentRow.Cells[this.apprvl.Name].Value = "质量复查流程";
                     this.dataGridView1.CurrentRow.Cells[this.UnqualificationType.Name].Value = "质量验收";
                     this.dataGridView1.CurrentRow.Cells[this.unqualificationRsn.Name].Value = frm.UndeterminateCheckMemo;
-                    
+
                 }
             }
             #endregion
-                       
+
             #region 效期、生产日期格式填写
             DataGridViewCell dtCell = this.dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
             this.CheckDate(dtCell);
@@ -987,10 +997,10 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         #region 日期检查
         private void CheckDate(DataGridViewCell dtCell)
         {
-            string dtstr = dtCell.Value==null?string.Empty:dtCell.Value.ToString().Trim();
+            string dtstr = dtCell.Value == null ? string.Empty : dtCell.Value.ToString().Trim();
             DateTime dt;
 
-            if (dtCell.OwningColumn.Name == colOutValidDate.Name||dtCell.OwningColumn.Name==colPruductDate.Name)
+            if (dtCell.OwningColumn.Name == colOutValidDate.Name || dtCell.OwningColumn.Name == colPruductDate.Name)
             {
                 if (!string.IsNullOrEmpty(dtstr))
                 {
@@ -1012,9 +1022,9 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
             if (PurchaseReceivingOrderDetailEntitys == null) return false;
             foreach (var i in PurchaseReceivingOrderDetailEntitys)
             {
-                if (i.UnQualifiedAmount +i.QualifiedAmount!=i.ReceiveAmount)
+                if (i.UnQualifiedAmount + i.QualifiedAmount != i.ReceiveAmount)
                 {
-                    MessageBox.Show("("+i.ProductGeneralName + ")验收合格＋疑问品种数量之和与收货数量不一致，请修改！");
+                    MessageBox.Show("(" + i.ProductGeneralName + ")验收合格＋疑问品种数量之和与收货数量不一致，请修改！");
                     return false;
                 }
             }
@@ -1023,21 +1033,21 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int rdx=this.dataGridView1.CurrentRow.Index;
-            
-            this.bList.Add(PurchaseReceivingOrderDetailEntitys[rdx]);            
+            int rdx = this.dataGridView1.CurrentRow.Index;
+
+            this.bList.Add(PurchaseReceivingOrderDetailEntitys[rdx]);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (this.dataGridView1.CurrentRow == null) return;
-            if(MessageBox.Show("确定要删除选当前行的记录吗？","提示",MessageBoxButtons.OKCancel)==System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("确定要删除选当前行的记录吗？", "提示", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 int idx = this.dataGridView1.CurrentRow.Index;
                 if (idx < 0) return;
                 Guid drugID = bList[idx].DrugInfoId;
-                
-                var c = bList.Where(r=>r.DrugInfoId==drugID);
+
+                var c = bList.Where(r => r.DrugInfoId == drugID);
                 if (c.Count() <= 1)
                 {
                     MessageBox.Show("该行无法删除！"); return;
@@ -1055,12 +1065,12 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 }
                 bList.RemoveAt(idx);
             }
-            
+
         }
 
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -1111,7 +1121,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 {
                     if (c.LicensePermissionNumber.IndexOf("国药准字") > -1)
                     {
-                        int index = c.LicensePermissionNumber.IndexOf("国药准字")+4;
+                        int index = c.LicensePermissionNumber.IndexOf("国药准字") + 4;
                         c.LicensePermissionNumber = c.LicensePermissionNumber.Substring(index, c.LicensePermissionNumber.Length - 4);
                     }
                     if (string.IsNullOrEmpty(c.LicensePermissionNumber)) c.LicensePermissionNumber = "无";
@@ -1140,11 +1150,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
         {
             bool b = this.PurchaseReceivingOrderDetailEntitys.Any(r => r.BusinessScopeCode.Contains("中药"));
 
-            this.isChineseDrug =b;
-            this.colOutValidDate.Visible = this.isChineseDrug==false || this.IsChineseDrugNeedOutValidDate;
+            this.isChineseDrug = b;
+            this.colOutValidDate.Visible = this.isChineseDrug == false || this.IsChineseDrugNeedOutValidDate;
             this.LicensePermissionNumber.Visible = !b;
             this.colPruductDate.Visible = true;
-            this.Decription.Visible=true;
+            this.Decription.Visible = true;
         }
 
         //判断是否特殊管理药品
@@ -1158,11 +1168,11 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            
+
             UI.Forms.BaseDataManage.Form_Photo frm = new BaseDataManage.Form_Photo(32, this.PurchaseCommonEntity.PurchaseOrderId);
-            
+
             User usr = BugsBox.Pharmacy.AppClient.Common.AppClientContext.CurrentUser;
-            
+
             //检查当前登录角色是否为管理员，管理员可以在任何时间内修改和上传图片
             var allRoles = this.PharmacyDatabaseService.AllRoles(out msg).Where(r => r.Name.Contains("SystemRole") || r.Name.Contains("adminRole"));
             var allrolew = from m in this.PharmacyDatabaseService.AllRoleWithUsers(out msg)
@@ -1188,7 +1198,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.PurchaseBusiness
                 this.PharmacyDatabaseService.WriteLog(usr.Id, "上传采购收货单图片成功！");
             }
 
-            
+
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)

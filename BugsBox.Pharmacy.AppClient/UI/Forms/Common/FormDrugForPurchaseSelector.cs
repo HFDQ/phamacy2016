@@ -81,7 +81,7 @@ namespace BugsBox.Pharmacy.AppClient.UI.Forms.Common
             }
             catch (Exception ex)
             {
-                MessageBox.Show("缺货查询失败，请联系管理员！");
+                MessageBox.Show("缺货查询失败，请联系管理员！" + ex.ToString());
             }
         }
 

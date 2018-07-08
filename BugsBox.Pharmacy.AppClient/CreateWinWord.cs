@@ -337,7 +337,7 @@ namespace BugsBox.Pharmacy.AppClient
             if (gsp == null) return;
 
 
-            if (p.UnitType != "医疗机构")
+            if (p != null && p.UnitType != "医疗机构")
             {
 
                 oDoc.Bookmarks["GSP1"].Select();
